@@ -1,57 +1,145 @@
-# Конфигурация Tender Intelligence & Bid Operations System — ISP Group
+# Конфигурация Tender Intelligence & Bid Operations System — ISP GROUP LLC
+# ВЕРСИЯ 2 (2026-08-10): три направления, License Intelligence, PARTNER REQUIRED.
 # Меняется без изменения кода.
 
+# ГЛАВНОЕ ПРАВИЛО: ISP GROUP LLC не имеет строительной лицензии.
+# Строительные тендеры НЕ отбрасываются автоматически — каждый проходит LICENSE CHECK
+# по документам конкретного solicitation. Лицензия обязательна → NO BID (топовые → PARTNER REQUIRED).
+COMPANY_LICENSES: []               # ISP не имеет contractor license. НЕ придумывать лицензии.
+AUTO_REJECT_CONSTRUCTION: false    # запрещено правило "construction = license = reject"
+
 TARGET_COUNTRIES: [US]
-TARGET_STATES: [FL, TX, CA, NY, NJ]      # приоритетные; расширение — добавить коды штатов
+TARGET_STATES: [FL, TX, CA, NY, NJ]
 
-PRODUCT_CATEGORIES:
-  construction_materials:
-    keywords: [crushed stone, granite, aggregate, gravel, sand, road base, fill material, construction aggregates, riprap, limestone]
-    naics: [212319, 212321]
-    psc: ["5610"]
-    nigp: ["750"]
-    unspsc_segments: ["11", "30"]
-  construction_equipment:
-    keywords: [crane truck, truck-mounted crane, manipulator, loader, excavator, skid steer, forklift, heavy equipment, construction machinery]
-    naics: [423810]
-    psc: ["3805", "3810"]
-    nigp: ["020", "545", "755", "760"]
-    unspsc_segments: ["22"]
-  hospitality_furniture:
-    keywords: [restaurant furniture, restaurant tables, restaurant chairs, bar furniture, hospitality furniture, hotel furniture, commercial furniture, outdoor furniture, cafeteria furniture]
-    naics: [337127]
-    psc: ["7105", "7110", "7125"]
-    nigp: ["420", "425"]
-    unspsc_segments: ["56"]
+# ─── ТРИ НАПРАВЛЕНИЯ ───────────────────────────────────────────────
+STRATEGY_DIRECTIONS:
+  construction_services:            # PIPELINE A — только после license check
+    enabled: true
+    priority: 1                     # приоритет №1 — то, что можно делать без лицензии прямо сейчас
+    categories:
+      painting: [painting, repainting, coating]
+      drywall: [drywall, gypsum board, sheetrock]
+      flooring: [flooring, floor installation, carpet, vinyl, epoxy floor]
+      tile: [tile, tiling, ceramic]
+      demolition: [demolition, selective demolition, interior demolition]
+      site_cleanup: [site cleanup, construction cleanup, post-construction cleaning]
+      debris_removal: [debris removal, junk removal, waste hauling]
+      pressure_washing: [pressure washing, power washing, exterior cleaning]
+      landscaping: [landscaping, grounds maintenance, mowing, tree trimming]
+      maintenance: [maintenance, facility maintenance, building maintenance]
+      minor_repairs: [minor repairs, handyman, general repairs]
+      installation: [installation, furniture installation, equipment installation, material installation]
+      janitorial: [janitorial, custodial, cleaning services, facility services]
+      moving_hauling: [moving, hauling, relocation, freight]
+      site_services: [site services, temporary services, jobsite support]
+      specialty: [specialty subcontracting, labor services, renovation support]
+  supply:                           # PIPELINE B — лицензия НЕ является автоматическим препятствием
+    enabled: true
+    priority: 2
+    categories:
+      construction_materials:
+        keywords: [aggregate, granite, crushed stone, gravel, sand, concrete materials, road materials, road base, fill material, building materials, finishing materials, riprap, limestone]
+        naics: [212319, 212321]
+        psc: ["5610"]
+        nigp: ["750"]
+        unspsc_segments: ["11", "30"]
+      construction_equipment:
+        keywords: [crane truck, knuckle boom crane, truck-mounted crane, excavator, loader, skid steer, forklift, heavy equipment, material handling equipment, specialized equipment, manipulator]
+        naics: [423810]
+        psc: ["3805", "3810"]
+        nigp: ["020", "545", "755", "760"]
+        unspsc_segments: ["22"]
+      furniture:
+        keywords: [restaurant furniture, commercial furniture, hospitality furniture, hotel furniture, tables, chairs, bar furniture, outdoor furniture, custom furniture, cafeteria furniture]
+        naics: [337127]
+        psc: ["7105", "7110", "7125"]
+        nigp: ["420", "425"]
+        unspsc_segments: ["56"]
+      general_supplies:
+        keywords: [supplies, general supplies, MRO supplies]
+        naics: []
+        nigp: []
+        unspsc_segments: []
+  subcontracting:                   # PIPELINE C — primes/GC outreach
+    enabled: true
+    priority: 3
+    target_prime_naics: ["236115", "236116", "236118", "236210", "236220", "237110", "237120", "237130", "237310", "237990", "238", "561210"]
+    isp_roles: [material_supply, equipment_supply, furniture_supply, non_licensed_subcontracting, installation, specialty_services]
+    sources: [sam_award_notices, usaspending_api, sba_subnet, dot_lettings, local_award_tabulations]
 
-MIN_TENDER_VALUE: 10000
+# ─── LICENSE INTELLIGENCE ──────────────────────────────────────────
+LICENSE_CHECK:
+  verdicts: [YES, NO, UNCLEAR]
+  actions:
+    YES: NO_BID                     # + оценка на PARTNER_REQUIRED, учёт в отчёте потерь
+    NO: QUALIFIED
+    UNCLEAR: MANUAL_REVIEW
+  require_source: true              # вердикт без ссылки на документ/правило недопустим
+  low_confidence_action: MANUAL_REVIEW
+  partner_required_min_score: 70    # лицензионные opportunities с score>=70 → PARTNER REQUIRED, не удалять
+
+# ─── SCORING v2 (0-100) ────────────────────────────────────────────
+SCORING:
+  weights:
+    product_service_fit: 20
+    license_feasibility: 20
+    margin_potential: 15
+    contract_value: 10
+    competition: 10
+    delivery_execution_feasibility: 10
+    buyer_quality: 5
+    deadline: 5
+    strategic_value: 5
+  license_feasibility_points:
+    not_required: 20
+    unclear_pending_review: 8
+    required_with_partner_potential: 4
+    required_no_partner: 0
+  grades:
+    A_plus: [90, 100]
+    A: [80, 89]
+    B: [70, 79]
+    C: [60, 69]
+    NO_PRIORITY: [0, 59]
+
+MIN_TENDER_VALUE: 5000
 MAX_TENDER_VALUE: 5000000
-MIN_SCORE: 55                # ниже — REJECT
-PRIORITY_SCORE: 85           # от этого значения — класс A (BID IMMEDIATELY)
+MIN_SCORE: 60
+PRIORITY_SCORE: 80
 MAX_DAYS_TO_DEADLINE: 60
-MIN_DAYS_TO_DEADLINE: 3      # меньше — нереалистично подать
+MIN_DAYS_TO_DEADLINE: 3
 
-EMAIL_MODE: DRAFT            # DRAFT | SEND (массовые отправки только с разрешения)
+# ─── РЕЖИМЫ И ОГРАНИЧЕНИЯ ──────────────────────────────────────────
+EMAIL_MODE: DRAFT
 REQUIRE_HUMAN_APPROVAL:
   official_bid_submission: true
   registration_legal_steps: true
   paid_subscriptions: true
   outreach_send: true
+  partner_agreements: true
+ALLOW_PAID_REGISTRATIONS: false    # решение пользователя 2026-08-10
 
-ALLOW_PAID_REGISTRATIONS: false   # решение пользователя 2026-08-10: только бесплатные ресурсы
-                                   # (отложены: Texas CMBL $70/год, платные пакеты BidNet,
-                                   # подписки DemandStar/S2G/BidPrime)
-
-PLATFORM_PRIORITY: [sam_gov, bidnet_direct, mfmp_vbs, tx_esbd_cmbl, tips, demandstar, buyboard, njstart, nyscr, cal_eprocure]
+PLATFORM_PRIORITY: [sam_gov, bidnet_direct, mfmp_vbs, tx_esbd_cmbl, tips, demandstar, buyboard, njstart, nyscr, cal_eprocure, sba_subnet, usaspending]
 
 MAX_DAILY_REVIEWS: 20
 
-DAILY_SCHEDULE:              # рабочие дни; время configurable
+# ─── DAILY OUTPUT v2 ───────────────────────────────────────────────
+DAILY_REPORT_SECTIONS:
+  - TOP_CONSTRUCTION_OPPORTUNITIES        # нелицензируемые / qualified
+  - TOP_SUPPLY_OPPORTUNITIES
+  - TOP_EQUIPMENT_OPPORTUNITIES
+  - TOP_FURNITURE_OPPORTUNITIES
+  - TOP_MATERIAL_OPPORTUNITIES
+  - TOP_SUBCONTRACTING_OPPORTUNITIES
+  - PARTNER_REQUIRED_OPPORTUNITIES
+  - LICENSE_REQUIRED_NO_BID               # что теряем из-за отсутствия лицензии
+
+DAILY_SCHEDULE:
   scan_platforms: "07:00"
   deduplicate: "08:00"
-  product_matching: "09:00"
+  license_check_and_matching: "09:00"
   scoring: "10:00"
-  analyze_a_priority: "11:00"
+  analyze_top_priority: "11:00"
   bid_no_bid_reports: "12:00"
   commercial_offers: "13:00"
   outreach_prep: "14:00"

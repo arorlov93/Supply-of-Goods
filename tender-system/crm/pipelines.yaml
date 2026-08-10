@@ -1,0 +1,56 @@
+# CRM: три независимых pipeline (архитектура v2, 2026-08-10)
+
+pipelines:
+  A_construction:
+    description: "Construction & facility services (только после LICENSE CHECK)"
+    stages:
+      - DISCOVERED
+      - LICENSE_CHECK
+      - QUALIFIED
+      - BID_NO_BID
+      - PRICING
+      - SUBMISSION
+      - AWAITING_RESULT
+      - WON
+      - LOST
+    side_statuses:
+      - MANUAL_REVIEW        # license_required = UNCLEAR или низкая confidence
+      - NO_BID               # license_required = YES (или иные stop-факторы)
+      - PARTNER_REQUIRED     # лицензия обязательна, но score >= 70 — ищем licensed partner
+
+  B_supply:
+    description: "Поставка товаров: материалы, техника, мебель, general supplies"
+    stages:
+      - DISCOVERED
+      - PRODUCT_MATCH
+      - SUPPLIER_SEARCH
+      - PRICING
+      - QUOTE
+      - SUBMISSION
+      - AWAITING_RESULT
+      - WON
+      - LOST
+    side_statuses:
+      - NO_BID
+
+  C_subcontracting:
+    description: "Outreach к prime/general contractors, получившим или получающим контракты"
+    stages:
+      - PRIME_FOUND
+      - CONTACT_FOUND
+      - OUTREACH
+      - RESPONSE
+      - RFQ_RECEIVED
+      - PRICING
+      - QUOTE
+      - NEGOTIATION
+      - WON
+      - LOST
+    side_statuses:
+      - NO_FIT
+
+priority_order:
+  1: "Выполнимо без лицензии прямо сейчас (A-qualified + B с высоким fit)"
+  2: "Supply opportunities (B)"
+  3: "Subcontracting opportunities (C)"
+  4: "PARTNER REQUIRED (лицензионные A с партнёрским потенциалом) — не удалять"
