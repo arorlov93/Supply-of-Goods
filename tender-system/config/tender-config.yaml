@@ -38,6 +38,10 @@ REQUIRE_HUMAN_APPROVAL:
   paid_subscriptions: true
   outreach_send: true
 
+ALLOW_PAID_REGISTRATIONS: false   # решение пользователя 2026-08-10: только бесплатные ресурсы
+                                   # (отложены: Texas CMBL $70/год, платные пакеты BidNet,
+                                   # подписки DemandStar/S2G/BidPrime)
+
 PLATFORM_PRIORITY: [sam_gov, bidnet_direct, mfmp_vbs, tx_esbd_cmbl, tips, demandstar, buyboard, njstart, nyscr, cal_eprocure]
 
 MAX_DAILY_REVIEWS: 20

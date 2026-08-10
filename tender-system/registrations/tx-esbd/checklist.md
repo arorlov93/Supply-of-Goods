@@ -1,5 +1,9 @@
 # Texas ESBD + CMBL — чек-лист
 
+> **СТАТУС 2026-08-10: CMBL ($70/год) ОТЛОЖЕН — пользователь запретил платные регистрации.**
+> ESBD мониторим бесплатно без аккаунта (просмотр открыт, CSV-экспорт доступен).
+> Вернуться к CMBL по отдельному разрешению пользователя.
+
 - ESBD (просмотр, бесплатно, без логина): https://www.txsmartbuy.gov/esbd
 - CMBL регистрация: https://comptroller.texas.gov/purchasing/vendor/cmbl/ — **$70/год**
 - Prerequisites: EIN; Texas Identification Number (TIN присваивается Comptroller при setup для платежей); out-of-state допускаются.

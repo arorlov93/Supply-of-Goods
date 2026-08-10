@@ -1,14 +1,13 @@
-# Профиль ISP Group для регистраций — vendor of record: ISP GROUP LLC (решение пользователя 2026-08-10)
+# Профиль ISP Group для регистраций — vendor of record: ISP GROUP LLC
+# Обновлено 2026-08-10: EIN подтверждён пользователем (единственный), телефон и email добавлены.
 # НЕ хранить здесь пароли/ключи.
 
 company:
   legal_name: "ISP GROUP LLC"
   dba: ""
-  entity_type: "LLC"
+  entity_type: "LLC (tax classification: S corporation)"
   state_of_incorporation: REQUIRED        # предположительно FL — подтвердить
-  ein: REQUIRED                            # EIN именно ISP GROUP LLC!
-                                           # (W-9 в наличии — на ISP Infrastructure Partners LLC,
-                                           # EIN 38-4380828 — для регистраций НЕ использовать)
+  ein: "38-4380828"                        # подтверждено пользователем (один EIN на компанию)
   uei: "WA46PAMTYMQ7"
   cage: "217F4"
   sam_registered: true
@@ -28,8 +27,8 @@ company:
 contact:
   name: "Aleksandr Orlov"
   title: "Managing Member"
-  email: "info@ispgroupc.com"              # подтвердить написание домена
-  phone: REQUIRED
+  email: "info@ispgroupgc.com"             # подтверждено пользователем
+  phone: "(929) 707-5551"
 
 codes:
   naics: [212319, 212321, 423810, 337127]
@@ -38,12 +37,20 @@ codes:
   unspsc_segments: ["11", "30", "22", "56"]
 
 documents:
-  w9_signed: false                         # ТРЕБУЕТСЯ НОВЫЙ W-9 на ISP GROUP LLC (с её EIN).
-                                           # Старый W-9 (ISP Infrastructure Partners LLC) не использовать.
-                                           # Хранить PDF в Google Drive /Tender Department/Company Documents/, не в git.
+  w9_signed: false                         # W-9 на ISP GROUP LLC подготовлен (бланк IRS 03-2024,
+                                           # EIN 38-4380828) и передан пользователю на подпись.
+                                           # После подписи — хранить в Google Drive
+                                           # /Tender Department/Company Documents/, не в git.
   nj_brc: false
 
-blockers:
-  - "EIN ISP GROUP LLC — нужен от пользователя"
-  - "Новый подписанный W-9 на ISP GROUP LLC (нужен для FL Substitute W-9 и ряда площадок)"
-  - "Телефон, сайт, описание компании (EN), сотрудники/выручка"
+policy:
+  paid_registrations: false                # решение пользователя 2026-08-10: платные ресурсы пока не регистрировать
+                                           # (Texas CMBL $70/год отложен; ESBD мониторим бесплатно;
+                                           # DemandStar/BidNet — только free-tier)
+
+remaining_from_user:
+  - "Подписанный W-9 (файл передан)"
+  - "Сайт компании"
+  - "Описание компании EN (могу составить черновик)"
+  - "Сотрудники / выручка (для SBA small business проверки)"
+  - "Штат инкорпорации"
