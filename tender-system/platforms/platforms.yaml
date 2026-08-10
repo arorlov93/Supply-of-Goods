@@ -1,0 +1,711 @@
+# Реестр procurement-площадок для ISP Group — результат PHASE 1 аудита (2026-08-10)
+# score: 0-100 по scoring-модели (см. docs/PHASE1-platform-audit-RU.md, раздел 1)
+# priority: A (90-100) | B (75-89) | C (60-74) | D (<60)
+# product_fit: A=construction materials, B=construction equipment, C=furniture
+# registration_status: not_registered | pending | registered | rejected
+# ВНИМАНИЕ: регистрации выполняются только после подтверждения пользователя.
+
+platforms:
+  - id: bidnet_direct
+    name: BidNet Direct (SOVRA)
+    url: https://www.bidnetdirect.com
+    category: state_local_aggregator
+    ownership: private
+    level: state_local
+    states: [FL, TX, CA, NY, NJ, ALL]
+    buyers: [cities, counties, school_districts, transit, state_agencies, housing_authorities]
+    product_fit: [A, B, C]
+    product_fit_verified: [A, B]   # живые тендеры: aggregates NY OGS, road base Waller County TX, crushed stone Danbury CT, loaders/forklifts
+    opportunity_types: [IFB, ITB, RFP, RFQ, term_contracts]
+    opportunity_volume: high
+    registration_required: true
+    free_tier: true
+    cost: "Free tier; платные statewide-пакеты (ориентир ~$9/штат/мес, проверить при регистрации)"
+    online_submission: true
+    email_alerts: true
+    alerts_by: nigp_codes
+    api: false
+    prerequisites: [company_info, nigp_codes]
+    score: 94
+    priority: A
+    registration_status: not_registered
+    recommended_wave: 1
+
+  - id: sam_gov
+    name: SAM.gov Contract Opportunities
+    url: https://sam.gov
+    category: federal
+    ownership: government
+    level: federal
+    states: [ALL]
+    buyers: [all_federal_agencies, army, usace, nps, usfs, va, gsa]
+    product_fit: [A, B, C]
+    product_fit_verified: [A]      # живые RFQ 2026: Fort Riley aggregates, Glacier NP gravel, Modoc NF base (NAICS 212321)
+    opportunity_types: [RFQ, RFP, IFB, sources_sought, combined_synopsis]
+    opportunity_volume: high
+    registration_required: true
+    free_tier: true
+    cost: "Бесплатно (UEI и CAGE выдаются бесплатно; остерегаться платных посредников)"
+    online_submission: partial     # подача по инструкции каждого solicitation
+    email_alerts: true
+    alerts_by: saved_searches
+    api: true
+    api_details: "Get Opportunities Public API v2 (open.gsa.gov), free API key"
+    prerequisites: [legal_entity, ein, address, bank_eft, annual_renewal]
+    notes: "Buy American (FAR 25); большинство aggregate-тендеров — small business set-aside; проверить SBA size standard"
+    score: 91
+    priority: A
+    registration_status: not_registered
+    recommended_wave: 1
+
+  - id: tx_esbd_cmbl
+    name: Texas SmartBuy / ESBD + CMBL
+    url: https://www.txsmartbuy.gov/esbd
+    category: state
+    ownership: government
+    level: state
+    states: [TX]
+    buyers: [state_agencies, txdot, universities, cities, counties, special_districts]
+    product_fit: [A, B, C]
+    opportunity_types: [IFB, RFP, RFQ, RFO]
+    opportunity_volume: high
+    registration_required: false   # просмотр открыт; CMBL для alerts
+    free_tier: true
+    cost: "Просмотр бесплатно; CMBL $70/год (alerts по NIGP)"
+    online_submission: partial
+    email_alerts: true
+    alerts_by: nigp_codes
+    api: false
+    open_data: "CSV-экспорт до 20 000 записей"
+    prerequisites: [texas_id_number_for_payment]
+    notes: "TxDOT переводит дорожные материалы в prequalified low-bid letting; отдельно: TxDOT Material Producer List"
+    score: 90
+    priority: A
+    registration_status: not_registered
+    recommended_wave: 1
+
+  - id: mfmp_vbs
+    name: MyFloridaMarketPlace (VIP) + Vendor Bid System
+    url: https://vendor.myfloridamarketplace.com
+    category: state
+    ownership: government
+    level: state
+    states: [FL]
+    buyers: [state_agencies, fdot, universities, local_governments]
+    product_fit: [A, B, C]
+    product_fit_verified: [A, B, C]  # FDOT официально закупает aggregates, heavy equipment, furniture через VBS
+    opportunity_types: [ITB, RFP, ITN, RFQ, eQuotes]
+    opportunity_volume: high
+    registration_required: true
+    free_tier: true
+    cost: "Регистрация бесплатна; 1% transaction fee с платежей штата (Rule 60A-1.031)"
+    online_submission: true
+    email_alerts: true
+    alerts_by: unspsc_codes
+    api: false
+    prerequisites: [fl_substitute_w9, unspsc_codes]
+    score: 90
+    priority: A
+    registration_status: not_registered
+    recommended_wave: 1
+
+  - id: tips
+    name: TIPS — The Interlocal Purchasing System
+    url: https://www.tips-usa.com
+    category: cooperative
+    ownership: government_coop
+    level: national
+    states: [ALL]
+    buyers: [k12, higher_ed, cities, counties, nonprofits]
+    product_fit: [B, C]
+    product_fit_partial: [A]       # через Trades/Labor/Materials контракты
+    opportunity_types: [cooperative_rfp_monthly]
+    opportunity_volume: medium_high
+    registration_required: true
+    free_tier: true
+    cost: "Бесплатно; ~2% admin fee с фактических продаж"
+    online_submission: true
+    email_alerts: true
+    alerts_by: commodity_selection
+    api: false
+    prerequisites: [edgar_compliance]
+    notes: "Solicitations каждый первый четверг месяца; множественные awards на категорию — самый доступный кооператив"
+    score: 85
+    priority: B
+    registration_status: not_registered
+    recommended_wave: 1
+
+  - id: demandstar
+    name: DemandStar (Euna OpenBid)
+    url: https://www.demandstar.com
+    category: state_local_aggregator
+    ownership: private
+    level: local
+    states: [FL]
+    buyers: [cities, counties, school_districts, airports, housing_authorities]
+    product_fit: [A, B, C]
+    opportunity_types: [IFB, RFP, RFQ]
+    opportunity_volume: medium     # high внутри Флориды
+    registration_required: true
+    free_tier: true
+    cost: "Free tier (1 агентство); FL state plan $100-1499/год; $5 за скачивание пакета без подписки; National $2699/год"
+    online_submission: true
+    email_alerts: true
+    alerts_by: commodity_codes
+    api: false
+    score: 82
+    priority: B
+    registration_status: not_registered
+    recommended_wave: 2
+
+  - id: buyboard
+    name: BuyBoard Purchasing Cooperative
+    url: https://www.buyboard.com
+    category: cooperative
+    ownership: government_coop
+    level: state_national
+    states: [TX, ALL]
+    buyers: [tx_school_districts, municipalities, counties, nonprofits]
+    product_fit: [B, C]
+    product_fit_partial: [A]       # asphalt/road base контракт
+    opportunity_types: [cooperative_rfp]
+    opportunity_volume: medium_high
+    registration_required: true
+    free_tier: true
+    cost: "Бесплатно; 2% service fee с PO"
+    online_submission: true
+    email_alerts: true
+    api: false
+    notes: "Ключевые контракты: 682 (стройтехника, форклифты), 667 (мебель школ/офисов); циклы ~3 года"
+    score: 79
+    priority: B
+    registration_status: not_registered
+    recommended_wave: 2
+
+  - id: periscope_s2g
+    name: Periscope S2G / SOVRA state ePro portals
+    url: https://www.periscopeholdings.com/s2g
+    category: aggregator_plus_state_portals
+    ownership: private
+    level: multi
+    states: [ALL]
+    buyers: [state_cpos, downstream_all]
+    product_fit: [A, B, C]
+    opportunity_types: [IFB, RFP, RFQ]
+    opportunity_volume: high
+    registration_required: true
+    free_tier: true
+    cost: "Гос-порталы (BuySpeed/BidBuy) бесплатны; S2G платно ~$109-274/мес (неофиц. Capterra) — сначала trial"
+    online_submission: true        # на гос-порталах
+    email_alerts: true
+    alerts_by: nigp_codes
+    api: false
+    notes: "Высокое пересечение с BidNet (общий владелец KKR/SOVRA)"
+    score: 78
+    priority: B
+    registration_status: not_registered
+    recommended_wave: 2
+
+  - id: njstart
+    name: NJSTART
+    url: https://www.njstart.gov
+    category: state
+    ownership: government
+    level: state
+    states: [NJ]
+    buyers: [state_agencies, coop_local_buyers]
+    product_fit: [A, B, C]
+    opportunity_types: [RFP, IFB, RFQ]
+    opportunity_volume: medium
+    registration_required: true
+    free_tier: true
+    cost: "Бесплатно"
+    online_submission: true
+    email_alerts: true
+    alerts_by: nigp_codes
+    api: false
+    prerequisites: [nj_brc_before_award]
+    notes: "Победа в штатном контракте открывает co-op продажи местным заказчикам NJ"
+    score: 78
+    priority: B
+    registration_status: not_registered
+    recommended_wave: 2
+
+  - id: sourcewell
+    name: Sourcewell
+    url: https://www.sourcewell-mn.gov
+    category: cooperative
+    ownership: government_coop
+    level: national
+    states: [ALL]
+    buyers: [government, k12, higher_ed, nonprofits]
+    product_fit: [B, C]
+    opportunity_types: [cooperative_rfp_4yr_cycles]
+    opportunity_volume: high       # для техники; циклы ~4 года
+    registration_required: true
+    free_tier: true
+    cost: "Бесплатно; admin fee (% предлагает сам поставщик) с продаж"
+    online_submission: true
+    email_alerts: true
+    api: false
+    notes: "Heavy Construction Equipment — флагман, но awards у OEM (CAT, Komatsu, Volvo); путь ISP — дилерство или подкатегория"
+    score: 76
+    priority: B
+    registration_status: not_registered
+    recommended_wave: 2
+
+  - id: unison_marketplace
+    name: Unison Marketplace (ex-FedBid)
+    url: https://www.unisonmarketplace.com
+    category: federal_marketplace
+    ownership: private
+    level: federal
+    states: [ALL]
+    buyers: [federal_buying_offices, dod, usda, epa]
+    product_fit: [B, C]
+    product_fit_partial: [A]
+    opportunity_types: [RFQ, reverse_auction]
+    opportunity_volume: medium
+    registration_required: true
+    free_tier: true
+    cost: "Бесплатно; ~3% transaction fee зашивается в цену бида"
+    online_submission: true
+    email_alerts: true
+    api: false
+    prerequisites: [sam_registration]
+    score: 75
+    priority: B
+    registration_status: not_registered
+    recommended_wave: 2
+
+  - id: planetbids
+    name: PlanetBids (per-agency porталы)
+    url: https://www.planetbids.com
+    category: local_epro
+    ownership: private
+    level: local
+    states: [CA]
+    buyers: [ca_cities, ca_counties, ca_schools, water_transit_agencies]
+    product_fit: [A, B, C]
+    opportunity_types: [IFB, RFP, RFQ]
+    opportunity_volume: high       # внутри CA
+    registration_required: true    # отдельно на каждом портале агентства
+    free_tier: true
+    cost: "Бесплатно per-agency"
+    online_submission: true
+    email_alerts: true             # только per-portal
+    api: false
+    notes: "Нет единой регистрации — брать пакетно 20-40 целевых агентств CA"
+    score: 75
+    priority: B
+    registration_status: not_registered
+    recommended_wave: 2
+
+  - id: nyscr
+    name: NYS Contract Reporter
+    url: https://www.nyscr.ny.gov
+    category: state
+    ownership: government
+    level: state
+    states: [NY]
+    buyers: [state_agencies, authorities, suny_cuny, voluntary_local]
+    product_fit: [A, B, C]
+    opportunity_types: [IFB, RFP, RFQ, award_notices]
+    opportunity_volume: medium_high
+    registration_required: true
+    free_tier: true
+    cost: "Бесплатно"
+    online_submission: false       # только объявления; подача каждому агентству
+    email_alerts: true
+    api: false
+    score: 75
+    priority: B
+    registration_status: not_registered
+    recommended_wave: 2
+
+  - id: bonfire
+    name: Bonfire / Euna Supplier Network
+    url: https://gobonfire.com
+    category: state_local_aggregator
+    ownership: private
+    level: local
+    states: [ALL]
+    buyers: [counties, cities, universities, school_boards]
+    product_fit: [A, B, C]
+    opportunity_types: [RFP, RFQ, IFB, ITB]
+    opportunity_volume: medium
+    registration_required: true
+    free_tier: true
+    cost: "Бесплатно; Pro от $50/год (рекомендации от 3000+ агентств)"
+    online_submission: true
+    email_alerts: true
+    api: false
+    notes: "Также движок подачи для PANYNJ"
+    score: 75
+    priority: B
+    registration_status: not_registered
+    recommended_wave: 2
+
+  - id: bidprime
+    name: BidPrime
+    url: https://www.bidprime.com
+    category: paid_aggregator
+    ownership: private
+    level: multi
+    states: [ALL]
+    buyers: [all_levels]
+    product_fit: [A, B, C]
+    opportunity_types: [aggregation_only]
+    opportunity_volume: high
+    registration_required: true
+    free_tier: false
+    cost: "30-дневный бесплатный trial; далее quote-based (Enhanced/Expert/Enterprise)"
+    online_submission: false
+    email_alerts: true
+    api: unknown
+    notes: "Стратегия: trial для замера фактического потока по нашим категориям в 5 штатах"
+    score: 75
+    priority: B
+    registration_status: not_registered
+    recommended_wave: 3
+
+  - id: gsa_ebuy
+    name: GSA eBuy (через GSA MAS)
+    url: https://www.ebuy.gsa.gov
+    category: federal
+    ownership: government
+    level: federal
+    states: [ALL]
+    buyers: [federal_agencies]
+    product_fit: [C]
+    opportunity_types: [RFQ, RFI]
+    opportunity_volume: high       # для мебели: ~$900M/год категория
+    registration_required: true    # только держатели MAS
+    free_tier: false
+    cost: "Без прямых сборов, но MAS-контракт = месяцы подготовки + 0.75% IFF с продаж + TAA compliance"
+    online_submission: true
+    email_alerts: true
+    api: false
+    notes: "Мониторинг; отдельное стратегическое решение по подаче на MAS для направления C"
+    score: 74
+    priority: C
+    registration_status: not_registered
+    recommended_wave: monitor
+
+  - id: nyc_passport
+    name: NYC PASSPort
+    url: https://www.nyc.gov/site/mocs/passport/about-passport.page
+    category: city
+    ownership: government
+    level: city
+    states: [NY]
+    buyers: [nyc_agencies, schools]
+    product_fit: [B, C]
+    opportunity_types: [RFx]
+    opportunity_volume: medium
+    registration_required: true
+    free_tier: true
+    cost: "Бесплатно (NYC.ID)"
+    online_submission: true
+    email_alerts: true
+    api: false
+    score: 74
+    priority: C
+    registration_status: not_registered
+    recommended_wave: 2
+
+  - id: govwin_iq
+    name: GovWin IQ (Deltek)
+    url: https://www.deltek.com/en/products/business-development/govwin
+    category: paid_intelligence
+    ownership: private
+    level: multi
+    states: [ALL]
+    buyers: [all_sled_federal]
+    product_fit: [A, B, C]
+    opportunity_types: [intelligence_only]
+    opportunity_volume: high
+    registration_required: true
+    free_tier: false
+    cost: "~$6-30k+/год (неофициально); quote-based"
+    online_submission: false
+    email_alerts: true
+    api: unknown
+    score: 74
+    priority: C
+    registration_status: rejected  # отклонено на текущем этапе по стоимости
+    recommended_wave: defer
+
+  - id: cal_eprocure
+    name: Cal eProcure (CSCR)
+    url: https://caleprocure.ca.gov
+    category: state
+    ownership: government
+    level: state
+    states: [CA]
+    buyers: [state_agencies_only]
+    product_fit: [A, B, C]
+    opportunity_types: [IFB, RFP, RFQ]
+    opportunity_volume: medium
+    registration_required: true
+    free_tier: true
+    cost: "Бесплатно"
+    online_submission: partial
+    email_alerts: true
+    alerts_by: unspsc_codes
+    api: false
+    notes: "Local CA не здесь (PlanetBids); Caltrans aggregates в стройподрядах; SB-преференция 5% недоступна out-of-state"
+    score: 73
+    priority: C
+    registration_status: not_registered
+    recommended_wave: 2
+
+  - id: opengov
+    name: OpenGov Procurement
+    url: https://procurement.opengov.com
+    category: state_local_aggregator
+    ownership: private
+    level: local
+    states: [CA, ALL]
+    buyers: [cities, counties, special_districts]
+    product_fit: [A, B, C]
+    opportunity_types: [RFP, IFB, RFQ]
+    opportunity_volume: medium
+    registration_required: true
+    free_tier: true
+    cost: "Бесплатно"
+    online_submission: true
+    email_alerts: true
+    api: false
+    score: 73
+    priority: C
+    registration_status: not_registered
+    recommended_wave: 2
+
+  - id: constructconnect
+    name: ConstructConnect
+    url: https://www.constructconnect.com
+    category: commercial_leads
+    ownership: private
+    level: commercial
+    states: [ALL]
+    buyers: [general_contractors, developers]
+    product_fit: [A]
+    opportunity_types: [project_bid_leads, itb]
+    opportunity_volume: high
+    registration_required: true
+    free_tier: false
+    cost: "~$129-199+/польз/мес (неофиц.), пакеты часто $1k+/мес; quote-based"
+    online_submission: false
+    email_alerts: true
+    api: unknown
+    score: 69
+    priority: C
+    registration_status: rejected  # отложено до активных продаж направления A
+    recommended_wave: defer
+
+  - id: dla_dibbs
+    name: DLA DIBBS
+    url: https://www.dibbs.bsm.dla.mil
+    category: federal_defense
+    ownership: government
+    level: federal
+    states: [ALL]
+    buyers: [dla_supply_chains]
+    product_fit: [A]
+    opportunity_types: [RFQ, RFP, IFB]
+    opportunity_volume: low_medium # в наших категориях
+    registration_required: true
+    free_tier: true
+    cost: "Бесплатно"
+    online_submission: true
+    email_alerts: unknown
+    api: false
+    open_data: "Ежедневные bulk-файлы solicitations"
+    prerequisites: [sam_registration, cage_code]
+    notes: "Техника через prime vendor программы (HEPP/MRO) — альтернативный путь: суб-поставки primes"
+    score: 66
+    priority: C
+    registration_status: not_registered
+    recommended_wave: 3
+
+  - id: usaspending
+    name: USASpending.gov
+    url: https://www.usaspending.gov
+    category: award_intelligence
+    ownership: government
+    level: federal
+    states: [ALL]
+    buyers: []
+    product_fit: [A, B, C]         # как источник разведданных
+    opportunity_types: [award_data_only]
+    opportunity_volume: n_a
+    registration_required: false
+    free_tier: true
+    cost: "Бесплатно, без аккаунта"
+    online_submission: false
+    email_alerts: false
+    api: true
+    api_details: "Free REST API без ключа (api.usaspending.gov) + bulk downloads"
+    notes: "Компонент Award Intelligence: история наград по NAICS/PSC, цены, конкуренты, покупатели"
+    score: 65
+    priority: C
+    registration_status: not_registered
+    recommended_wave: monitor
+
+  - id: eandi
+    name: E&I Cooperative Services
+    url: https://www.eandi.org
+    category: cooperative_education
+    ownership: nonprofit_coop
+    level: national
+    states: [ALL]
+    buyers: [higher_ed, k12]
+    product_fit: [C]
+    opportunity_types: [cooperative_rfp]
+    opportunity_volume: medium     # мебель вузов
+    registration_required: true
+    free_tier: true
+    cost: "Бесплатно (JAGGAER); admin fee UNKNOWN"
+    online_submission: true
+    email_alerts: true
+    api: false
+    notes: "Контракты у Steelcase/Global и др.; реалистичный вход — дилерство под контрактом производителя"
+    score: 63
+    priority: C
+    registration_status: not_registered
+    recommended_wave: monitor
+
+  - id: panynj
+    name: Port Authority of NY & NJ
+    url: https://www.panynj.gov/port-authority/en/business-opportunities.html
+    category: authority
+    ownership: government
+    level: authority
+    states: [NY, NJ]
+    buyers: [panynj_only]
+    product_fit: [A, B, C]         # эпизодически
+    opportunity_types: [bids, RFP, term_contracts]
+    opportunity_volume: low_medium
+    registration_required: true
+    free_tier: true
+    cost: "Бесплатно (+ Bonfire для подачи)"
+    online_submission: true
+    email_alerts: true
+    api: false
+    score: 63
+    priority: C
+    registration_status: not_registered
+    recommended_wave: 3
+
+  - id: omnia_partners
+    name: OMNIA Partners
+    url: https://www.omniapartners.com
+    category: cooperative
+    ownership: private
+    level: national
+    states: [ALL]
+    buyers: [public_sector, private_gpo]
+    product_fit: [C]
+    opportunity_types: [lead_agency_rfp]
+    opportunity_volume: high_but_inaccessible
+    registration_required: false   # нет vendor signup — только победа в RFP лид-агентства
+    free_tier: true
+    cost: "Участие в RFP бесплатно; admin fee UNKNOWN"
+    online_submission: false       # через системы лид-агентств
+    email_alerts: false
+    api: false
+    notes: "Мониторить Current Solicitations на мебельные пересолиситации Region 4 ESC"
+    score: 61
+    priority: C
+    registration_status: not_registered
+    recommended_wave: monitor
+
+  - id: public_purchase
+    name: Public Purchase
+    url: https://www.publicpurchase.com
+    category: state_local_aggregator
+    ownership: private
+    level: local
+    states: [UT]
+    buyers: [utah, mountain_west, scattered_national]
+    product_fit: [A, B, C]
+    opportunity_types: [IFB, RFP, RFQ, reverse_auctions]
+    opportunity_volume: low        # в целевых штатах
+    registration_required: true
+    free_tier: true
+    cost: "Free tier; Bid Syndication платно (цена UNKNOWN)"
+    online_submission: true
+    email_alerts: true
+    api: false
+    score: 58
+    priority: D
+    registration_status: rejected
+    recommended_wave: none
+
+  - id: thomasnet
+    name: Thomasnet
+    url: https://www.thomasnet.com
+    category: commercial_b2b
+    ownership: private
+    level: commercial
+    states: [ALL]
+    buyers: [industrial_buyers]
+    product_fit: [B, C]
+    opportunity_types: [inbound_rfq]
+    opportunity_volume: low_medium
+    registration_required: true
+    free_tier: true
+    cost: "Free листинг; платное продвижение quote-based"
+    online_submission: true
+    email_alerts: true
+    api: false
+    score: 53
+    priority: D
+    registration_status: rejected  # платный тир; free-листинг опционально
+    recommended_wave: optional
+
+  - id: sba_subnet
+    name: SBA SUBNet
+    url: https://subnet.sba.gov
+    category: federal_subcontracting
+    ownership: government
+    level: federal
+    states: [ALL]
+    buyers: [federal_prime_contractors]
+    product_fit: [A]
+    opportunity_types: [subcontracting_only]
+    opportunity_volume: low
+    registration_required: false   # просмотр открыт
+    free_tier: true
+    cost: "Бесплатно"
+    online_submission: false
+    email_alerts: unknown
+    api: false
+    score: 52
+    priority: D
+    registration_status: not_registered
+    recommended_wave: monitor
+
+  - id: bid_express
+    name: Bid Express (Infotech)
+    url: https://www.bidexpress.com
+    category: dot_contractor_bidding
+    ownership: private
+    level: state_dot
+    states: [FL, 44_dot_states]
+    buyers: [state_dots, county_highway]
+    product_fit: []                # прямая поставка отсутствует; лид-ген primes для направления A
+    opportunity_types: [sealed_dot_lettings]
+    opportunity_volume: low        # прямых supply-тендеров
+    registration_required: true
+    free_tier: false
+    cost: "$60/мес или pay-per-solicitation"
+    online_submission: true
+    email_alerts: true
+    api: false
+    notes: "Канал подрядчиков DOT; позже возможен как источник лидов 'кому продать щебень'"
+    score: 47
+    priority: D
+    registration_status: rejected
+    recommended_wave: defer
