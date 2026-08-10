@@ -37,11 +37,16 @@ codes:
   unspsc_segments: ["11", "30", "22", "56"]
 
 documents:
-  w9_signed: false                         # W-9 на ISP GROUP LLC подготовлен (бланк IRS 03-2024,
-                                           # EIN 38-4380828) и передан пользователю на подпись.
-                                           # После подписи — хранить в Google Drive
-                                           # /Tender Department/Company Documents/, не в git.
+  w9_signed: true                          # ПОДПИСАН 08.10.2026 (Aleksandr Orlov, Managing Member).
+                                           # Хранение: Google Drive /Tender Department/Company Documents/
+                                           # (folder id: 1iDpZ2tTvn78joo2ykm3prGZ9MC9vYRcd). В git не хранится.
   nj_brc: false
+
+google_drive:
+  root_folder: "Tender Department"
+  root_folder_id: "1SVi9GGH7Np5FL-u-vJM_8aJFJWcCG70B"
+  company_documents_id: "1iDpZ2tTvn78joo2ykm3prGZ9MC9vYRcd"
+  structure_created: "2026-08-10"          # 11 подпапок по архитектуре §19
 
 policy:
   paid_registrations: false                # решение пользователя 2026-08-10: платные ресурсы пока не регистрировать
@@ -49,7 +54,7 @@ policy:
                                            # DemandStar/BidNet — только free-tier)
 
 remaining_from_user:
-  - "Подписанный W-9 (файл передан)"
+  - "Загрузить подписанный W9_ISP_GROUP_LLC.pdf в Drive /Tender Department/Company Documents/"
   - "Сайт компании"
   - "Описание компании EN (могу составить черновик)"
   - "Сотрудники / выручка (для SBA small business проверки)"
