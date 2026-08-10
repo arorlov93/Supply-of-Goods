@@ -55,8 +55,9 @@ platforms:
     notes: "Buy American (FAR 25); большинство aggregate-тендеров — small business set-aside; проверить SBA size standard"
     score: 91
     priority: A
-    registration_status: not_registered
-    recommended_wave: 1
+    registration_status: registered   # подтверждено пользователем 2026-08-10
+    registration_todo: [verify_active_status, renewal_date, api_key, saved_searches, sba_size_check]
+    recommended_wave: done
 
   - id: tx_esbd_cmbl
     name: Texas SmartBuy / ESBD + CMBL

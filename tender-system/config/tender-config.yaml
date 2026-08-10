@@ -1,0 +1,56 @@
+# Конфигурация Tender Intelligence & Bid Operations System — ISP Group
+# Меняется без изменения кода.
+
+TARGET_COUNTRIES: [US]
+TARGET_STATES: [FL, TX, CA, NY, NJ]      # приоритетные; расширение — добавить коды штатов
+
+PRODUCT_CATEGORIES:
+  construction_materials:
+    keywords: [crushed stone, granite, aggregate, gravel, sand, road base, fill material, construction aggregates, riprap, limestone]
+    naics: [212319, 212321]
+    psc: ["5610"]
+    nigp: ["750"]
+    unspsc_segments: ["11", "30"]
+  construction_equipment:
+    keywords: [crane truck, truck-mounted crane, manipulator, loader, excavator, skid steer, forklift, heavy equipment, construction machinery]
+    naics: [423810]
+    psc: ["3805", "3810"]
+    nigp: ["020", "545", "755", "760"]
+    unspsc_segments: ["22"]
+  hospitality_furniture:
+    keywords: [restaurant furniture, restaurant tables, restaurant chairs, bar furniture, hospitality furniture, hotel furniture, commercial furniture, outdoor furniture, cafeteria furniture]
+    naics: [337127]
+    psc: ["7105", "7110", "7125"]
+    nigp: ["420", "425"]
+    unspsc_segments: ["56"]
+
+MIN_TENDER_VALUE: 10000
+MAX_TENDER_VALUE: 5000000
+MIN_SCORE: 55                # ниже — REJECT
+PRIORITY_SCORE: 85           # от этого значения — класс A (BID IMMEDIATELY)
+MAX_DAYS_TO_DEADLINE: 60
+MIN_DAYS_TO_DEADLINE: 3      # меньше — нереалистично подать
+
+EMAIL_MODE: DRAFT            # DRAFT | SEND (массовые отправки только с разрешения)
+REQUIRE_HUMAN_APPROVAL:
+  official_bid_submission: true
+  registration_legal_steps: true
+  paid_subscriptions: true
+  outreach_send: true
+
+PLATFORM_PRIORITY: [sam_gov, bidnet_direct, mfmp_vbs, tx_esbd_cmbl, tips, demandstar, buyboard, njstart, nyscr, cal_eprocure]
+
+MAX_DAILY_REVIEWS: 20
+
+DAILY_SCHEDULE:              # рабочие дни; время configurable
+  scan_platforms: "07:00"
+  deduplicate: "08:00"
+  product_matching: "09:00"
+  scoring: "10:00"
+  analyze_a_priority: "11:00"
+  bid_no_bid_reports: "12:00"
+  commercial_offers: "13:00"
+  outreach_prep: "14:00"
+  deadline_review: "15:00"
+  daily_report: "16:00"
+TIMEZONE: America/New_York

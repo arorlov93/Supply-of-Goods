@@ -1,0 +1,39 @@
+# Профиль ISP Group для регистраций — ЗАПОЛНИТЬ
+# НЕ хранить здесь пароли/ключи. Поля *_REQUIRED заполняет пользователь.
+
+company:
+  legal_name: REQUIRED
+  dba: ""
+  entity_type: REQUIRED            # LLC / Corp / ...
+  state_of_incorporation: REQUIRED
+  ein: REQUIRED
+  uei: REQUIRED                    # из SAM.gov
+  cage: REQUIRED                   # из SAM.gov
+  sam_registered: true
+  sam_renewal_date: REQUIRED       # проверить в SAM
+  address:
+    street: REQUIRED
+    city: REQUIRED
+    state: REQUIRED
+    zip: REQUIRED
+  website: REQUIRED
+  description_en: REQUIRED         # 2-3 предложения о компании как поставщике
+  employees: REQUIRED
+  annual_revenue_usd: REQUIRED
+  certifications: []               # SBE/MBE/WOSB/HUBZone/SDVOSB если есть
+
+contact:
+  name: REQUIRED
+  title: REQUIRED
+  email: REQUIRED                  # корпоративный Gmail для тендеров
+  phone: REQUIRED
+
+codes:
+  naics: [212319, 212321, 423810, 337127]
+  psc: ["5610", "3805", "3810", "7105", "7110", "7125"]
+  nigp: ["750", "020", "545", "755", "760", "420", "425"]
+  unspsc_segments: ["11", "30", "22", "56"]
+
+documents:
+  w9_signed: false                 # путь к PDF после получения
+  nj_brc: false                    # оформлять перед первым NJ award
