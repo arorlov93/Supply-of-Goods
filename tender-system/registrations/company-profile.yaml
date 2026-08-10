@@ -1,31 +1,37 @@
-# Профиль ISP Group для регистраций — ЗАПОЛНИТЬ
-# НЕ хранить здесь пароли/ключи. Поля *_REQUIRED заполняет пользователь.
+# Профиль ISP Group для регистраций — заполнен из SAM.gov (скриншот) и W-9 (2026-08-10)
+# НЕ хранить здесь пароли/ключи.
+#
+# !!! ОТКРЫТЫЙ ВОПРОС (блокирует регистрации): legal name в SAM = "ISP GROUP LLC",
+# а в W-9 = "ISP Infrastructure Partners LLC". Ждём решения пользователя, какое
+# юрлицо является vendor of record. EIN ниже относится к ISP Infrastructure Partners LLC,
+# UEI/CAGE — к ISP GROUP LLC.
 
 company:
-  legal_name: REQUIRED
+  legal_name: "CONFLICT: ISP GROUP LLC (SAM) vs ISP Infrastructure Partners LLC (W-9)"
   dba: ""
-  entity_type: REQUIRED            # LLC / Corp / ...
-  state_of_incorporation: REQUIRED
-  ein: REQUIRED
-  uei: REQUIRED                    # из SAM.gov
-  cage: REQUIRED                   # из SAM.gov
+  entity_type: "LLC (tax classification: S corporation)"   # из W-9
+  state_of_incorporation: REQUIRED                          # предположительно FL — подтвердить
+  ein: "38-4380828"                                         # W-9, ISP Infrastructure Partners LLC
+  uei: "WA46PAMTYMQ7"                                       # SAM, ISP GROUP LLC
+  cage: "217F4"                                             # SAM, ISP GROUP LLC
   sam_registered: true
-  sam_renewal_date: REQUIRED       # проверить в SAM
+  sam_status: "Active Registration, Purpose: All Awards"
+  sam_expiration_date: "2027-07-28"
   address:
-    street: REQUIRED
-    city: REQUIRED
-    state: REQUIRED
-    zip: REQUIRED
+    street: "16395 Biscayne Blvd Apt 818"
+    city: "Aventura"          # SAM; в W-9 указан North Miami Beach (тот же ZIP 33160)
+    state: "FL"
+    zip: "33160-5743"
   website: REQUIRED
-  description_en: REQUIRED         # 2-3 предложения о компании как поставщике
-  employees: REQUIRED
+  description_en: REQUIRED    # 2-3 предложения о компании как поставщике
+  employees: REQUIRED         # для SBA size standard
   annual_revenue_usd: REQUIRED
-  certifications: []               # SBE/MBE/WOSB/HUBZone/SDVOSB если есть
+  certifications: []
 
 contact:
-  name: REQUIRED
-  title: REQUIRED
-  email: REQUIRED                  # корпоративный Gmail для тендеров
+  name: "Aleksandr Orlov"
+  title: "Managing Member"
+  email: "info@ispgroupc.com"   # из W-9 — подтвердить написание домена
   phone: REQUIRED
 
 codes:
@@ -35,5 +41,7 @@ codes:
   unspsc_segments: ["11", "30", "22", "56"]
 
 documents:
-  w9_signed: false                 # путь к PDF после получения
-  nj_brc: false                    # оформлять перед первым NJ award
+  w9_signed: true             # подписан 2026-05-23; PDF получен от пользователя.
+                              # В git НЕ коммитим (EIN+подпись) — хранить в Google Drive
+                              # /Tender Department/Company Documents/
+  nj_brc: false
