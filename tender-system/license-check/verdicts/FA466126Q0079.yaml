@@ -1,0 +1,26 @@
+opportunity_id: "b74b6ecc7eda4adfb8dc99302fd333d1"
+solicitation: "FA466126Q0079"
+state: "TX"
+county: "Taylor"
+city: "Dyess AFB (Abilene)"
+agency: "USAF Global Strike Command, 7 BW"
+scope: "Репокраска двух статических музейных самолётов (F-84F, RB-66B): подготовка поверхности, обработка коррозии, покраска, стенсилы"
+trade: "painting (специализированная — реставрация авиатехники)"
+license_required: "NO"
+license_type: ""
+license_number_required: false
+qualifier_required: false
+bond_required: false
+insurance_required: "стандартные требования; база — пропускной режим (REAL ID)"
+notes: >
+  Contractor license не требуется: в RFQ и SOW нет таких требований; Техас не лицензирует
+  painting contractors; работы на федеральной территории (Dyess AFB).
+  НО критичный квалификационный барьер (не лицензия): Contract Manager обязан иметь
+  МИНИМУМ 10 ЛЕТ опыта aircraft restoration (SOW п. Contractor Qualifications);
+  оценка — best value с technical acceptability. Без подтверждённого опыта реставрации
+  самолётов заявка ISP технически неприемлема.
+  Рекомендация BID/NO BID: NO BID (qualification barrier), несмотря на QUALIFIED по лицензии.
+source: "02. Combined F-84F/RB-66B Repaint SOW, строки ~307-317 (Contract Manager: minimum ten years of aircraft restoration experience); RFQ - 7 BW, раздел EVALUATION OF OFFERS"
+confidence: "HIGH"
+checked_at: "2026-08-10"
+result: "QUALIFIED"

@@ -1,0 +1,24 @@
+opportunity_id: "03c30180aab8419699c55193c21829cd"
+solicitation: "1232SA26Q0977"
+state: "TX"
+county: "Kerr"
+city: "Kerrville"
+agency: "USDA ARS AFM APD"
+scope: "Grounds maintenance (mowing, механическое edging, blow-off дорожек) с 4 option years"
+trade: "landscaping / grounds maintenance"
+license_required: "NO"
+license_type: ""
+license_number_required: false
+qualifier_required: false
+bond_required: false
+insurance_required: "стандартные федеральные требования (FAR), спец. сумм не указано"
+notes: >
+  В SOW прямо указано: 'NO chemical edging permitted' — только механическая обработка,
+  значит лицензия TDA на применение пестицидов/гербицидов НЕ затрагивается.
+  В C04 (условия) нет требований contractor license. Техас не лицензирует mowing/grounds
+  maintenance на уровне штата. Set-aside: SBA total small business — ISP проходит.
+  Score после license check: 66 - 8 + 20 = 78 (B). Deadline 2026-08-28.
+source: "A04 SOW - Grounds Maint Kerrville 1232SA26Q0977.docx (раздел Edging: 'NO chemical edging permitted'); C04_1232SA26Q0977.pdf — отсутствие license-требований; TX Occupations Code — нет лицензии на grounds maintenance"
+confidence: "HIGH"
+checked_at: "2026-08-10"
+result: "QUALIFIED"

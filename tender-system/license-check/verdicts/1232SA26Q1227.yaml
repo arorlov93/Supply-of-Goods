@@ -1,0 +1,25 @@
+opportunity_id: "e84df04e622b4c9dbed260cb2ecd3620"
+solicitation: "1232SA26Q1227"
+state: "PA"
+county: "Montgomery"
+city: "Wyndmoor"
+agency: "USDA ARS — Eastern Regional Research Center (ERRC)"
+scope: "Наружная покраска здания Vehicle Service Building (CMU 40x55x14 ft): подготовка поверхности, ремонт ~45 lf трещин, праймер, покрасочная система"
+trade: "painting (exterior, коммерческое/федеральное здание)"
+license_required: "NO"
+license_type: ""
+license_number_required: false
+qualifier_required: false
+bond_required: false
+insurance_required: "стандартные (FAR); отдельных сумм не указано"
+notes: >
+  SF-1442 п.12a: performance/payment bonds НЕ требуются (отмечено NO).
+  52.228-15 (bonds) НЕ отмечен; отмечен 52.236-7 Permits and Responsibilities (пермиты — на подрядчике,
+  для покраски обычно не требуются). В SOW нет license-требований. Пенсильвания не лицензирует
+  коммерческую покраску на уровне штата (HICPA касается только residential home improvement).
+  Федеральный объект USDA. Простой, понятный объём — хороший стартовый federal bid.
+  Score после license check: 59 - 8 + 20 = 71 (B) — проходит MIN_SCORE. Deadline 2026-09-08 (28 дн).
+source: "SF-1442.pdf п.12a (bonds: NO) и чек-лист клаузул (52.228-15 не отмечен); Statement of Work.pdf разд.1.0-3.0 — отсутствие license-требований; PA HICPA 73 P.S. §517.1 — только residential"
+confidence: "HIGH"
+checked_at: "2026-08-10"
+result: "QUALIFIED"

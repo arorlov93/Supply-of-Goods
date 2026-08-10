@@ -1,0 +1,39 @@
+# База знаний License Intelligence — только verified-записи с источниками.
+# Подсказка первого приближения: каждый новый solicitation всё равно проверяется по своим документам.
+
+entries:
+  - key: "TX x grounds_maintenance_mechanical"
+    license_required: "NO"
+    note: "Техас не лицензирует mowing/grounds maintenance. Химобработка (гербициды) — отдельно: лицензия TDA, если она в объёме."
+    verified_from: "1232SA26Q0977 (2026-08-10)"
+
+  - key: "TX x painting"
+    license_required: "NO"
+    note: "Нет state-level painting contractor license в Техасе. Квалификационные требования агентства проверять отдельно."
+    verified_from: "FA466126Q0079 (2026-08-10)"
+
+  - key: "PA x painting_commercial"
+    license_required: "NO"
+    note: "PA HICPA (73 P.S. §517.1) охватывает только residential home improvement. Коммерческая/федеральная покраска — без лицензии штата. Lead paint в объёме меняет картину (EPA/OSHA сертификации)."
+    verified_from: "1232SA26Q1227, 140P4226Q0048 (2026-08-10)"
+
+  - key: "CA x herbicide_application"
+    license_required: "YES"
+    license_type: "CA DPR Qualified Applicator License / Pest Control Business License"
+    note: "Применение гербицидов/vegetation control в CA требует лицензирования DPR; федеральные SOW обычно прямо требуют 'licensed applicators'."
+    verified_from: "697DCK-26-R-00332 (2026-08-10)"
+
+  - key: "federal_enclave x general"
+    license_required: "UNCLEAR"
+    note: "На федеральной территории state licensing часто неприменим, но агентство вправе требовать лицензии/сертификации в SOW. Единственный источник истины — документы solicitation."
+    verified_from: "паттерн по 5 проверкам 2026-08-10"
+
+  - key: "lead_based_paint x any_state"
+    license_required: "YES"
+    license_type: "EPA/OSHA режимы (40 CFR 745, 29 CFR 1926.62) + hazwaste transport/disposal licensing"
+    note: "Если в объёме lead-based paint removal/disposal — нужны сертификации фирмы/персонала и лицензированные перевозчики отходов, независимо от штата."
+    verified_from: "140P4226Q0048 (2026-08-10)"
+
+eligibility_notes:
+  - "ISP GROUP LLC = small business (SBA total small business set-asides — проходим)."
+  - "НЕ проходим: 8(a), SDVOSB/SDVOSBC/SDVOSBS, WOSB, HUBZone — таких сертификаций у ISP нет; opportunities с этими set-aside → NO BID (eligibility), в отчётах помечать отдельно от license-фильтра."

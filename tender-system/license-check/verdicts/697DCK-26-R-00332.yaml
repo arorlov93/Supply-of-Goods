@@ -1,0 +1,25 @@
+opportunity_id: "1d1d4f443aa1458d9000e4cd1f87e0d3"
+solicitation: "697DCK-26-R-00332"
+state: "CA"
+county: "Sacramento / Alameda"
+city: "Mather / Fremont"
+agency: "FAA — Regional Acquisitions Svc (Northern California TRACON + Oakland ARTCC)"
+scope: "Grounds maintenance: mowing, edging, planting beds, weed control incl. herbicide application, perimeter vegetation control"
+trade: "landscaping / grounds maintenance"
+license_required: "YES"
+license_type: "CA pesticide applicator licensing (DPR): SOW требует, чтобы contractor был 'licensed by the applicable State agency to provide vegetation control'; работы с гербицидами — 'licensed applicators doing the work'"
+license_number_required: false
+qualifier_required: null
+bond_required: false
+insurance_required: "да — минимальные требования страхования перечислены в solicitation (раздел insurance)"
+notes: >
+  Это НЕ CSLB contractor license, а специализированная лицензия на применение гербицидов
+  (CA DPR Qualified Applicator / Pest Control Business). Требование явное, применение
+  гербицидов — обязательная часть SOW обоих объектов (ZOA ARTCC и NCT TRACON).
+  Потенциальный обход: субподряд licensed applicator только на химобработку — SOW
+  субподряд не запрещает, но ISP без опыта grounds maintenance вряд ли конкурентен.
+  Score после license check: 66 - 8 (unclear) + 0 (license required, score<70 => без partner track) = 58 → NO PRIORITY.
+source: "Attachment 1 - SOW Grounds Maintenance ZOA ARTCC (03.05.26), раздел 'Herbicides', стр.1; Attachment 2 - SOW NCT TRACON (08.05.26), Section IV п.2-3"
+confidence: "HIGH"
+checked_at: "2026-08-10"
+result: "NO_BID"

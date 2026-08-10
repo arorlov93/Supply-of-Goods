@@ -1,0 +1,26 @@
+opportunity_id: "0ad629929bf04107aa93c6418a1c441d"
+solicitation: "140P4226Q0048"
+state: "PA"
+county: "Philadelphia"
+city: "Philadelphia"
+agency: "NPS — Independence NHP (Merchants' Exchange building)"
+scope: "Наружная покраска и реставрация исторического здания; в объёме — lead-based paint testing, removal и disposal"
+trade: "painting / historic restoration + lead paint"
+license_required: "UNCLEAR"
+license_type: "Спец. режимы: обращение с lead-based paint (OSHA 29 CFR 1926.62; EPA 40 CFR 745 — сертификация фирмы для abatement-работ), hazardous waste transport licenses (спецификации, разд. FEES, PERMITS & LICENSES)"
+license_number_required: null
+qualifier_required: true
+bond_required: null
+insurance_required: "да (hazwaste transport — 'appropriate hazardous waste transport licenses and insurance')"
+notes: >
+  Contractor license штата не требуется (PA не лицензирует коммерческую покраску), но проект
+  содержит lead-based paint removal/disposal: требуются сертифицированный персонал/фирма
+  для работ со свинцом, лицензированные перевозчики и полигоны опасных отходов.
+  Плюс жёсткие квалификационные требования: Lead Restoration/Finish Carpenter, опыт
+  работ на исторических зданиях, 3 релевантных проекта за 5 лет.
+  Для ISP на текущем этапе — нереалистично как prime. Score 59 → NO PRIORITY.
+  Возможная роль: субпоставщик материалов/labor для победителя (Pipeline C).
+source: "B08 Attachment 1 Specifications (Rev 8.3.2026): Section 02 83 33 Lead-Based Paint Removal and Disposal; разд. FEES, PERMITS & LICENSES; 'appropriate hazardous waste transport licenses and insurance'; Sol_140P4226Q0048.pdf Sub-Factor B (квалификация персонала)"
+confidence: "MEDIUM"
+checked_at: "2026-08-10"
+result: "MANUAL_REVIEW"
