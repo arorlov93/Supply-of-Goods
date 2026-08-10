@@ -17,12 +17,12 @@ POC: Aleksandr Orlov, Managing Member · (929) 707-5551 · info@ispgroupgc.com
 
 | CLIN | Description | Period | Price |
 |---|---|---|---|
-| 0001 | Grounds Maintenance, Base Year | 12 months from award | **$34,500.00** |
-| 1001 | Option Year 1 | from 06/01/2027 | $35,535.00 |
-| 2001 | Option Year 2 | from 06/01/2028 | $36,601.00 |
-| 3001 | Option Year 3 | from 06/01/2029 | $37,699.00 |
-| 4001 | Option Year 4 | from 06/01/2030 | $38,830.00 |
-| | **Total (Base + 4 OY)** | | **$183,165.00** |
+| 0001 | Grounds Maintenance, Base Year | 12 months from award | **$39,600.00** |
+| 1001 | Option Year 1 | from 06/01/2027 | $40,788.00 |
+| 2001 | Option Year 2 | from 06/01/2028 | $42,012.00 |
+| 3001 | Option Year 3 | from 06/01/2029 | $43,272.00 |
+| 4001 | Option Year 4 | from 06/01/2030 | $44,570.00 |
+| | **Total (Base + 4 OY)** | | **$210,242.00** |
 
 Price includes all labor, equipment, materials, disposal, supervision, insurance, and full compliance with SCA Wage Determination 2015-5283 (Rev. 32) including Health & Welfare fringe benefits.
 

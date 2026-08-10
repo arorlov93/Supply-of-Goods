@@ -15,7 +15,14 @@ POC: Aleksandr Orlov, Managing Member · (929) 707-5551 · info@ispgroupgc.com
 
 ### Price
 
-**Firm Fixed Price: $12,600.00**
+**Firm Fixed Price: $29,000.00** (расчёт от стоимости за sq ft)
+
+| Line | Unit Price | Qty | Amount |
+|---|---|---|---|
+| Surface preparation + complete coating system (primer/block filler + 2 finish coats) | $9.50/SF | 2,600 SF | $24,700.00 |
+| Crack repair (routing, elastomeric patching) | $60.00/LF | 45 LF | $2,700.00 |
+| Mobilization, site protection, supervision, certified payroll administration | lump sum | — | $1,600.00 |
+| **Total FFP** | | | **$29,000.00** |
 
 Includes all labor, materials, equipment, supervision, mobilization, disposal; full Davis-Bacon compliance with WD PA20260099 Mod 1 (Montgomery County, Building) including weekly certified payrolls (WH-347). No performance/payment bonds required per SF-1442 Block 12a.
 
