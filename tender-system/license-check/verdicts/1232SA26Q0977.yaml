@@ -13,8 +13,11 @@ qualifier_required: false
 bond_required: false
 insurance_required: "стандартные федеральные требования (FAR), спец. сумм не указано"
 notes: >
-  В SOW прямо указано: 'NO chemical edging permitted' — только механическая обработка,
-  значит лицензия TDA на применение пестицидов/гербицидов НЕ затрагивается.
+  В SOW прямо указано: 'NO chemical edging permitted' — только механическая обработка.
+  УТОЧНЕНИЕ 2026-08-10 (второе чтение SOW): lawn fertilization = 'fertilizer/weed killer
+  combination' 2 раза в год — коммерческое применение гербицида в TX требует лицензию TDA
+  (Structural Pest Control, Lawn & Ornamental). Решение: эти 2 внесения выполняет
+  лицензированный субподрядчик (заложено в cost model). Contractor license не требуется.
   В C04 (условия) нет требований contractor license. Техас не лицензирует mowing/grounds
   maintenance на уровне штата. Set-aside: SBA total small business — ISP проходит.
   Score после license check: 66 - 8 + 20 = 78 (B). Deadline 2026-08-28.
