@@ -28,8 +28,10 @@ platforms:
     prerequisites: [company_info, nigp_codes]
     score: 94
     priority: A
-    registration_status: not_registered
-    recommended_wave: 1
+    registration_status: registered   # обнаружено 2026-08-10: аккаунт активен (info@ispgroupgc.com),
+                                      # идут solicitation-match/addenda/award уведомления (FL+CA, стройуслуги)
+    registration_todo: [add_supply_commodity_codes, add_TX_NY_NJ_groups, verify_profile_states]
+    recommended_wave: done
 
   - id: sam_gov
     name: SAM.gov Contract Opportunities
@@ -156,7 +158,8 @@ platforms:
     api: false
     score: 82
     priority: B
-    registration_status: not_registered
+    registration_status: in_progress  # регистрация начата 2026-05-23, не завершена
+                                      # (письмо "Finish your DemandStar registration" в ящике)
     recommended_wave: 2
 
   - id: buyboard
@@ -480,8 +483,32 @@ platforms:
     api: false
     score: 73
     priority: C
-    registration_status: not_registered
+    registration_status: invited      # приглашение от Central Florida Expressway Authority
+                                      # (активная ссылка activate-invited-user, письма 28.06-03.08)
     recommended_wave: 2
+
+  - id: highergov
+    name: HigherGov
+    url: https://www.highergov.com
+    category: paid_aggregator
+    ownership: private
+    level: multi
+    states: [ALL]
+    buyers: [federal, state, local, education]
+    product_fit: [A, B, C]
+    opportunity_types: [aggregation, awards, subcontracts]
+    opportunity_volume: high
+    registration_required: true
+    free_tier: false
+    cost: "ПЛАТНАЯ ПОДПИСКА УЖЕ АКТИВНА (чек #2816-0178 от 31.07.2026)"
+    online_submission: false
+    email_alerts: true                # ежедневные Federal + State/Local дайджесты на info@ispgroupgc.com
+    api: true                         # HigherGov предоставляет API — проверить доступность в тарифе
+    notes: "Обнаружен при аудите ящика 2026-08-10. Не входил в изначальный аудит. Дайджесты уже приходят — интегрировать в Discovery Engine (parsing писем + проверить API)"
+    score: 85
+    priority: B
+    registration_status: registered
+    recommended_wave: done
 
   - id: constructconnect
     name: ConstructConnect
