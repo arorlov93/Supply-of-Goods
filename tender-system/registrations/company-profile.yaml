@@ -1,37 +1,34 @@
-# Профиль ISP Group для регистраций — заполнен из SAM.gov (скриншот) и W-9 (2026-08-10)
+# Профиль ISP Group для регистраций — vendor of record: ISP GROUP LLC (решение пользователя 2026-08-10)
 # НЕ хранить здесь пароли/ключи.
-#
-# !!! ОТКРЫТЫЙ ВОПРОС (блокирует регистрации): legal name в SAM = "ISP GROUP LLC",
-# а в W-9 = "ISP Infrastructure Partners LLC". Ждём решения пользователя, какое
-# юрлицо является vendor of record. EIN ниже относится к ISP Infrastructure Partners LLC,
-# UEI/CAGE — к ISP GROUP LLC.
 
 company:
-  legal_name: "CONFLICT: ISP GROUP LLC (SAM) vs ISP Infrastructure Partners LLC (W-9)"
+  legal_name: "ISP GROUP LLC"
   dba: ""
-  entity_type: "LLC (tax classification: S corporation)"   # из W-9
-  state_of_incorporation: REQUIRED                          # предположительно FL — подтвердить
-  ein: "38-4380828"                                         # W-9, ISP Infrastructure Partners LLC
-  uei: "WA46PAMTYMQ7"                                       # SAM, ISP GROUP LLC
-  cage: "217F4"                                             # SAM, ISP GROUP LLC
+  entity_type: "LLC"
+  state_of_incorporation: REQUIRED        # предположительно FL — подтвердить
+  ein: REQUIRED                            # EIN именно ISP GROUP LLC!
+                                           # (W-9 в наличии — на ISP Infrastructure Partners LLC,
+                                           # EIN 38-4380828 — для регистраций НЕ использовать)
+  uei: "WA46PAMTYMQ7"
+  cage: "217F4"
   sam_registered: true
   sam_status: "Active Registration, Purpose: All Awards"
   sam_expiration_date: "2027-07-28"
   address:
     street: "16395 Biscayne Blvd Apt 818"
-    city: "Aventura"          # SAM; в W-9 указан North Miami Beach (тот же ZIP 33160)
+    city: "Aventura"
     state: "FL"
     zip: "33160-5743"
   website: REQUIRED
-  description_en: REQUIRED    # 2-3 предложения о компании как поставщике
-  employees: REQUIRED         # для SBA size standard
+  description_en: REQUIRED                 # 2-3 предложения о компании как поставщике
+  employees: REQUIRED                      # для SBA size standard
   annual_revenue_usd: REQUIRED
   certifications: []
 
 contact:
   name: "Aleksandr Orlov"
   title: "Managing Member"
-  email: "info@ispgroupc.com"   # из W-9 — подтвердить написание домена
+  email: "info@ispgroupc.com"              # подтвердить написание домена
   phone: REQUIRED
 
 codes:
@@ -41,7 +38,12 @@ codes:
   unspsc_segments: ["11", "30", "22", "56"]
 
 documents:
-  w9_signed: true             # подписан 2026-05-23; PDF получен от пользователя.
-                              # В git НЕ коммитим (EIN+подпись) — хранить в Google Drive
-                              # /Tender Department/Company Documents/
+  w9_signed: false                         # ТРЕБУЕТСЯ НОВЫЙ W-9 на ISP GROUP LLC (с её EIN).
+                                           # Старый W-9 (ISP Infrastructure Partners LLC) не использовать.
+                                           # Хранить PDF в Google Drive /Tender Department/Company Documents/, не в git.
   nj_brc: false
+
+blockers:
+  - "EIN ISP GROUP LLC — нужен от пользователя"
+  - "Новый подписанный W-9 на ISP GROUP LLC (нужен для FL Substitute W-9 и ряда площадок)"
+  - "Телефон, сайт, описание компании (EN), сотрудники/выручка"
