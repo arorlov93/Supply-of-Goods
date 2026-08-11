@@ -1,0 +1,5393 @@
+[
+ {
+  "contractor": "COASTLAND CONSTRUCTION MANAGEMENT INC",
+  "phone": "(305)669-1740",
+  "city": "Pinecrest",
+  "permits": 1,
+  "total_value": 73200000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "4383 Sw 75 Ave",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "NEW CONST- MIDRISE",
+    "val": 73200000.0,
+    "type": "NEW",
+    "date": "2026-08-07",
+    "sf": "587368"
+   }
+  ]
+ },
+ {
+  "contractor": "NV2A GROUP LLC",
+  "phone": "(786)233-5060",
+  "city": "Miami",
+  "permits": 2,
+  "total_value": 68125792,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "18600 Nw 25 Ave",
+    "use": "PAVING/OPEN LOTS",
+    "desc": "SITE IMPROVEMENTS",
+    "val": 65000000.0,
+    "type": "NEW",
+    "date": "2026-07-13",
+    "sf": "74000"
+   },
+   {
+    "addr": "9090 S Dadeland Blvd",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "PHASE 4",
+    "val": 3125792.0,
+    "type": "NEW",
+    "date": "2026-07-21",
+    "sf": "138821"
+   }
+  ]
+ },
+ {
+  "contractor": "BUILDING BLOCK REALTY LLC",
+  "phone": "(305)303-4855",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 61244580,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "3055 Ne 4 Ave",
+    "use": "HOTEL",
+    "desc": "NEW CONSTRUCTION",
+    "val": 61244580.0,
+    "type": "NEW",
+    "date": "2026-07-01",
+    "sf": "349969"
+   }
+  ]
+ },
+ {
+  "contractor": "A.G. CONTRACTORS CORP",
+  "phone": "(305)406-1312",
+  "city": "Hialeah",
+  "permits": 1,
+  "total_value": 43587436,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "151 Se 15 Rd",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "REMODELING/REPAIRS",
+    "val": 43587436.0,
+    "type": "REPAIR",
+    "date": "2026-07-27",
+    "sf": "36690"
+   }
+  ]
+ },
+ {
+  "contractor": "BRASFIELD & GORRIE L.L.C.",
+  "phone": "(407)562-4500",
+  "city": "Birmingham",
+  "permits": 1,
+  "total_value": 40500000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "827 Nw 65 Ave",
+    "use": "AUDITORIUM-THEATRE-RADIO-T.V. STUDIOS",
+    "desc": "REHEARSEL FACILITY",
+    "val": 40500000.0,
+    "type": "NEW",
+    "date": "2026-06-15",
+    "sf": "108000"
+   }
+  ]
+ },
+ {
+  "contractor": "Z ROOFING & WATERPROOFING INC",
+  "phone": "(305)623-7663",
+  "city": "Hialeah",
+  "permits": 2,
+  "total_value": 39736800,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "13830 Sw 250 St",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "FLAT ROOF",
+    "val": 24316800.0,
+    "type": "NEW",
+    "date": "2026-06-22",
+    "sf": "128035"
+   },
+   {
+    "addr": "2220 Nw 41 St",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "MULT FAM BLDG AF",
+    "val": 15420000.0,
+    "type": "NEW",
+    "date": "2026-07-28",
+    "sf": "85824"
+   }
+  ]
+ },
+ {
+  "contractor": "T & G CORPORATION DBA:T & G CONSTRUCTO",
+  "phone": "(407)352-4443",
+  "city": "Orlando",
+  "permits": 2,
+  "total_value": 32300000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "12875 Sw 248 St",
+    "use": "PARKING GARAGE/OPEN DECK",
+    "desc": "PARKING GARAGE",
+    "val": 1900000.0,
+    "type": "NEW",
+    "date": "2026-08-04",
+    "sf": "55600"
+   },
+   {
+    "addr": "12875 Sw 248 St",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "NEW MIXED USE BLDG",
+    "val": 30400000.0,
+    "type": "NEW",
+    "date": "2026-08-04",
+    "sf": "192875"
+   }
+  ]
+ },
+ {
+  "contractor": "ALL AMERICAN WINDOWS AND DOORS LLC",
+  "phone": "(954)786-8525",
+  "city": "Ft Lauderdale",
+  "permits": 1,
+  "total_value": 28000000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "11240 Biscayne Blvd",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "WINDOWS DOORSAPT W/",
+    "val": 28000000.0,
+    "type": "NEW",
+    "date": "2026-07-08",
+    "sf": "701391"
+   }
+  ]
+ },
+ {
+  "contractor": "KAST CONSTRUCTION COMPANY FLORIDA LLC",
+  "phone": "(561)689-2910",
+  "city": "West Palm Beach",
+  "permits": 1,
+  "total_value": 28000000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "11240 Biscayne Blvd",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "NEW 12 STORY APT W/",
+    "val": 28000000.0,
+    "type": "NEW",
+    "date": "2026-08-06",
+    "sf": "701391"
+   }
+  ]
+ },
+ {
+  "contractor": "R S CONSTRUCTION OF DADE INC",
+  "phone": "(305)377-8840",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 24316800,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "13830 Sw 250 St",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "APARTMENTS",
+    "val": 24316800.0,
+    "type": "NEW",
+    "date": "2026-07-23",
+    "sf": "128035"
+   }
+  ]
+ },
+ {
+  "contractor": "LANGERMAN CONSTRUCTION LLC",
+  "phone": "(321)303-4190",
+  "city": "Sanford",
+  "permits": 1,
+  "total_value": 18250000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "1251 Nw 20 St",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "MULTI FAMILY",
+    "val": 18250000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-20",
+    "sf": "208336"
+   }
+  ]
+ },
+ {
+  "contractor": "WINDOW WORKS IMPACT GLAZING INC",
+  "phone": "(786)957-8957",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 18000000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "1 Mia Replacement Bldg 3032",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "NEW OFFICES/BLDG",
+    "val": 18000000.0,
+    "type": "NEW",
+    "date": "2026-08-06",
+    "sf": "52000"
+   }
+  ]
+ },
+ {
+  "contractor": "INFINITE BUILDERS LLC",
+  "phone": "(954)924-4014",
+  "city": "Dania Beach",
+  "permits": 1,
+  "total_value": 17588610,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "19901 Sw 110 Ct",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "WNDWS/DOORS APT",
+    "val": 17588610.0,
+    "type": "NEW",
+    "date": "2026-06-25",
+    "sf": "130286"
+   }
+  ]
+ },
+ {
+  "contractor": "NEI GENERAL CONTRACTING, INC.",
+  "phone": "(781)356-7666",
+  "city": "Randolph",
+  "permits": 21,
+  "total_value": 16460046,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "1448 E Mowry Dr",
+    "use": "APT BUILDING 3-4 UNITS",
+    "desc": "INTERIOR RENO",
+    "val": 433516.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-07-02",
+    "sf": "0"
+   },
+   {
+    "addr": "1408 E Mowry Dr",
+    "use": "APT BUILDING 3-4 UNITS",
+    "desc": "INT/EXT RENO",
+    "val": 493418.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-02",
+    "sf": "0"
+   },
+   {
+    "addr": "1410 E Mowry Dr Bldg 6",
+    "use": "APT BUILDING 3-4 UNITS",
+    "desc": "INTER./EXT. RENO.",
+    "val": 433516.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-02",
+    "sf": "0"
+   }
+  ]
+ },
+ {
+  "contractor": "ELITE ROOFING AND CONTRACTING INC",
+  "phone": "(954)864-6591",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 16000000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "12400 Sw 152 St",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "ANIMAL HOSP/FENCE",
+    "val": 16000000.0,
+    "type": "NEW",
+    "date": "2026-08-06",
+    "sf": "22560"
+   }
+  ]
+ },
+ {
+  "contractor": "ALSTON CONSTRUCTION COMPANY INC",
+  "phone": "(404)921-2020",
+  "city": "Atlanta",
+  "permits": 4,
+  "total_value": 15402437,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "14100 Sw 136 St",
+    "use": "CLINIC/SANITARIUMS/HEALTH CENTERS",
+    "desc": "EXT DOOR /BLDG 3",
+    "val": 7587985.0,
+    "type": "NEW",
+    "date": "2026-06-19",
+    "sf": "67300"
+   },
+   {
+    "addr": "14130 Sw 136 St",
+    "use": "WAREHOUSE/STORAGE",
+    "desc": "NEW EXT DOOR",
+    "val": 2402862.0,
+    "type": "NEW",
+    "date": "2026-06-25",
+    "sf": "22000"
+   },
+   {
+    "addr": "14160 Sw 136 St",
+    "use": "CLINIC/SANITARIUMS/HEALTH CENTERS",
+    "desc": "NEW WAREHOUSE",
+    "val": 2705795.0,
+    "type": "NEW",
+    "date": "2026-06-25",
+    "sf": "24100"
+   }
+  ]
+ },
+ {
+  "contractor": "PEGASUS PAINTING & WATERPROOFING LLC",
+  "phone": "(954)755-4616",
+  "city": "Ft Lauderdale",
+  "permits": 1,
+  "total_value": 15000000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "9400 S Dadeland Blvd",
+    "use": "OFFICE - PROFESSIONAL BUILDINGS",
+    "desc": "CONVERT TO RESIDENT",
+    "val": 15000000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-21",
+    "sf": "13900"
+   }
+  ]
+ },
+ {
+  "contractor": "CMC CONTRACTORS LLC",
+  "phone": "(786)703-7786",
+  "city": "North Miami",
+  "permits": 1,
+  "total_value": 14000000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "120 Sw 8 St",
+    "use": "PAVING/OPEN LOTS",
+    "desc": "ABOVE GRADE",
+    "val": 14000000.0,
+    "type": "NEW",
+    "date": "2026-08-06",
+    "sf": "1363691"
+   }
+  ]
+ },
+ {
+  "contractor": "HITT CONTRACTING,INC",
+  "phone": "(786)368-4028",
+  "city": "Miami",
+  "permits": 5,
+  "total_value": 13998636,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "3611 Nw S River Dr",
+    "use": "WAREHOUSE",
+    "desc": "GARAGE DOORS      R",
+    "val": 3689298.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-17",
+    "sf": "22000"
+   },
+   {
+    "addr": "3611 Nw S River Dr",
+    "use": "WAREHOUSE",
+    "desc": "RENO FOR SRV CENTER",
+    "val": 3689298.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-21",
+    "sf": "22000"
+   },
+   {
+    "addr": "1450 Brickell Ave",
+    "use": "OFFICE USE ONLY",
+    "desc": "INT REM 3RD FLOOR",
+    "val": 444150.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-23",
+    "sf": "5076"
+   }
+  ]
+ },
+ {
+  "contractor": "QUALITY CONSTRUCTION PERFORMANCE INC",
+  "phone": "(305)592-6353",
+  "city": "Miami",
+  "permits": 3,
+  "total_value": 11800000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "1120 Caribbean Way",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "BULKHEAD CAP REHABI",
+    "val": 9000000.0,
+    "type": "REPAIR",
+    "date": "2026-06-16",
+    "sf": "700"
+   },
+   {
+    "addr": "12400 Sw 152 St",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "CLASS 1ANIMAL HOLD",
+    "val": 1800000.0,
+    "type": "NEW",
+    "date": "2026-06-26",
+    "sf": "1780"
+   },
+   {
+    "addr": "12400 Sw 152 St",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "NEW GIRAFFE FEEDING",
+    "val": 1000000.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-07-08",
+    "sf": "6000"
+   }
+  ]
+ },
+ {
+  "contractor": "DWM FACILITIES MAINTENANCE, INC.",
+  "phone": "(518)944-9400",
+  "city": "Longwood",
+  "permits": 1,
+  "total_value": 10568700,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "1776 Biscayne Blvd",
+    "use": "RETAIL SALES",
+    "desc": "REMODELING/REPAIRS",
+    "val": 10568700.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-21",
+    "sf": "833"
+   }
+  ]
+ },
+ {
+  "contractor": "DC CONSTRUCTION ASSOCIATES INC",
+  "phone": "(561)988-8505",
+  "city": "Boca Raton",
+  "permits": 1,
+  "total_value": 10500000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "9050 Sw 158 Ave",
+    "use": "WAREHOUSE/STORAGE",
+    "desc": "SITE ACCESS",
+    "val": 10500000.0,
+    "type": "NEW",
+    "date": "2026-06-16",
+    "sf": "132633"
+   }
+  ]
+ },
+ {
+  "contractor": "C & S ROOFING COMPANY",
+  "phone": "(352)427-9746",
+  "city": "Crystal River",
+  "permits": 1,
+  "total_value": 10100000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "18450 Nw 87 Ave",
+    "use": "RETAIL SALES",
+    "desc": "SHELL/RETAIL BLDG",
+    "val": 10100000.0,
+    "type": "NEW",
+    "date": "2026-06-26",
+    "sf": "126394"
+   }
+  ]
+ },
+ {
+  "contractor": "HAWKINS CONSTRUCTION, INC.",
+  "phone": "(727)938-9719",
+  "city": "Tarpon Springs",
+  "permits": 2,
+  "total_value": 8250000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "8264 Mills Dr",
+    "use": "RETAIL SALES",
+    "desc": "DEMO SHELL FACADE",
+    "val": 250000.0,
+    "type": "SHELL ONLY",
+    "date": "2026-06-18",
+    "sf": "4827"
+   },
+   {
+    "addr": "18496 Nw 67 Ave",
+    "use": "RETAIL SALES",
+    "desc": "NEW PUBLIX PROTOTYP",
+    "val": 8000000.0,
+    "type": "NEW",
+    "date": "2026-07-27",
+    "sf": "48055"
+   }
+  ]
+ },
+ {
+  "contractor": "STARK ROOFING & CONSTRUCTION GROUP INC",
+  "phone": "(786)317-6971",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 7600000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "6431 Nw 32 Ave",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "NEW ROOF",
+    "val": 7600000.0,
+    "type": "NEW",
+    "date": "2026-07-23",
+    "sf": "42522"
+   }
+  ]
+ },
+ {
+  "contractor": "OAK CONSTRUCTION CO INC",
+  "phone": "(305)821-6770",
+  "city": "Miami",
+  "permits": 4,
+  "total_value": 7000000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "8710 Sw 72 St",
+    "use": "RETAIL SALES",
+    "desc": "STOREFRONT WINDOWS",
+    "val": 1750000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-30",
+    "sf": "24525"
+   },
+   {
+    "addr": "6770 Bird Rd",
+    "use": "RETAIL SALES",
+    "desc": "TENANT IMPROVEMENT",
+    "val": 1750000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-28",
+    "sf": "26518"
+   },
+   {
+    "addr": "8710 Sw 72 St",
+    "use": "RETAIL SALES",
+    "desc": "ROLLING DOOR",
+    "val": 1750000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-08-05",
+    "sf": "24525"
+   }
+  ]
+ },
+ {
+  "contractor": "JOHN BELL CONSTRUCTION INC",
+  "phone": "(305)458-5666",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 5229513,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "1 Golden Beach Dr",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "WELLNESS COMM CENTE",
+    "val": 5229513.0,
+    "type": "NEW",
+    "date": "2026-06-26",
+    "sf": "10670"
+   }
+  ]
+ },
+ {
+  "contractor": "CAMCON GROUP LLC",
+  "phone": "(786)586-5306",
+  "city": "Coral Gables",
+  "permits": 2,
+  "total_value": 4960050,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "131 Nw 75 St",
+    "use": "OFFICE - PROFESSIONAL BUILDINGS",
+    "desc": "NEW CONSTRUCTION",
+    "val": 4760050.0,
+    "type": "NEW",
+    "date": "2026-07-07",
+    "sf": "26925"
+   },
+   {
+    "addr": "14150 Sw 136 St",
+    "use": "HOSPITALS",
+    "desc": "PAVEMENT/DRAINAGE",
+    "val": 200000.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-07-30",
+    "sf": "1"
+   }
+  ]
+ },
+ {
+  "contractor": "MILLER GLASS & GLAZING INC",
+  "phone": "(954)784-6601",
+  "city": "Pompano Beach",
+  "permits": 1,
+  "total_value": 4833885,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "12405 Sw 88 St",
+    "use": "RETAIL SALES",
+    "desc": "NEW CONSTRUCTION",
+    "val": 4833885.0,
+    "type": "NEW",
+    "date": "2026-07-06",
+    "sf": "50883"
+   }
+  ]
+ },
+ {
+  "contractor": "PORTER ROOFING CONTRACTORS INC",
+  "phone": "(931)668-2298",
+  "city": "Morrison",
+  "permits": 1,
+  "total_value": 4833885,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "12405 Sw 88 St",
+    "use": "RETAIL SALES",
+    "desc": "NEW CONSTRUCTION",
+    "val": 4833885.0,
+    "type": "NEW",
+    "date": "2026-07-22",
+    "sf": "50883"
+   }
+  ]
+ },
+ {
+  "contractor": "VISION SHUTTERS INC.",
+  "phone": "(305)231-0241",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 4693980,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "7801 Nw 71 St",
+    "use": "WAREHOUSE",
+    "desc": "WAREHOUSE/OFFICE",
+    "val": 4693980.0,
+    "type": "NEW",
+    "date": "2026-06-23",
+    "sf": "78233"
+   }
+  ]
+ },
+ {
+  "contractor": "DUFFEY CONSTRUCTION CO INC",
+  "phone": "(305)325-0001",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 4124949,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "444 Nw 79 Ave",
+    "use": "OFFICE - PROFESSIONAL BUILDINGS",
+    "desc": "REPL CHILLERS",
+    "val": 4124949.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-13",
+    "sf": "7700"
+   }
+  ]
+ },
+ {
+  "contractor": "MG3 DEVELOPER GROUP LLC",
+  "phone": "(954)929-5229",
+  "city": "Hollywood",
+  "permits": 1,
+  "total_value": 4000000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "9945 Sunset Dr",
+    "use": "OFFICE - PROFESSIONAL BUILDINGS",
+    "desc": "NEW WINDOWS   ILDIN",
+    "val": 4000000.0,
+    "type": "NEW",
+    "date": "2026-06-29",
+    "sf": "31401"
+   }
+  ]
+ },
+ {
+  "contractor": "ARCHITECTURAL DEV GROUP INC",
+  "phone": "(305)595-3095",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 4000000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "6902 Nw 77 Ct",
+    "use": "WAREHOUSE/STORAGE",
+    "desc": "NEW WAREHOUSE",
+    "val": 4000000.0,
+    "type": "NEW",
+    "date": "2026-07-01",
+    "sf": "35000"
+   }
+  ]
+ },
+ {
+  "contractor": "CEMAR BUILDERS LLC",
+  "phone": "(786)510-9574",
+  "city": "Live Oak",
+  "permits": 1,
+  "total_value": 4000000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "330 Sw 1 St",
+    "use": "PAVING/OPEN LOTS",
+    "desc": "NEW APT/ SITE PLAN",
+    "val": 4000000.0,
+    "type": "NEW",
+    "date": "2026-07-17",
+    "sf": "30751"
+   }
+  ]
+ },
+ {
+  "contractor": "LITECRETE INC",
+  "phone": "(305)500-9373",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 3546306,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "23300 Sw 88 Ave",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "MOD EXIST SUBSTATIO",
+    "val": 3546306.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-08-03",
+    "sf": "2185"
+   }
+  ]
+ },
+ {
+  "contractor": "LENNAR HOMES LLC",
+  "phone": "(305)559-1951",
+  "city": "Miami",
+  "permits": 10,
+  "total_value": 3450750,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "24001 Sw 127 Ave",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "APT BLDGS",
+    "val": 431100.0,
+    "type": "NEW",
+    "date": "2026-07-07",
+    "sf": "17244"
+   },
+   {
+    "addr": "24101 Sw 127 Ave",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "APT BLDGS",
+    "val": 431100.0,
+    "type": "NEW",
+    "date": "2026-07-07",
+    "sf": "17244"
+   },
+   {
+    "addr": "24189 Sw 127 Ave",
+    "use": "PAVING/OPEN LOTS",
+    "desc": "CONDO BLDG TYPE 6A",
+    "val": 258800.0,
+    "type": "NEW",
+    "date": "2026-07-30",
+    "sf": "10352"
+   }
+  ]
+ },
+ {
+  "contractor": "WATERPROOFING SYSTEMS OF MIAMI INC",
+  "phone": "(305)970-9574",
+  "city": "Miami",
+  "permits": 5,
+  "total_value": 3300000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "11451 Sw 216 St",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "FLAT ROOFILY BLDG",
+    "val": 1500000.0,
+    "type": "NEW",
+    "date": "2026-07-17",
+    "sf": "42611"
+   },
+   {
+    "addr": "19471 Sw 126 Ct",
+    "use": "APT BUILDING 3-4 UNITS",
+    "desc": "NEW TILE ROOF",
+    "val": 450000.0,
+    "type": "NEW",
+    "date": "2026-08-07",
+    "sf": "4558"
+   },
+   {
+    "addr": "19472 Sw 126 Ct",
+    "use": "PAVING/OPEN LOTS",
+    "desc": "NEW TILE ROOF",
+    "val": 450000.0,
+    "type": "NEW",
+    "date": "2026-08-07",
+    "sf": "4680"
+   }
+  ]
+ },
+ {
+  "contractor": "BUILDING UNLIMITED SERVICES INC",
+  "phone": "(786)367-7555",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 3000000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "30 Canal St",
+    "use": "PAVING/OPEN LOTS",
+    "desc": "MIX USE COMPLEX",
+    "val": 3000000.0,
+    "type": "NEW",
+    "date": "2026-06-29",
+    "sf": "19779"
+   }
+  ]
+ },
+ {
+  "contractor": "IMAIM CONSTRUCTION COMPANY LLC",
+  "phone": "(786)383-7741",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 3000000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "400 Nw 32 St",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "NEW CONSTRUCTION",
+    "val": 3000000.0,
+    "type": "NEW",
+    "date": "2026-07-01",
+    "sf": "13230"
+   }
+  ]
+ },
+ {
+  "contractor": "SUPERSTRUCTURE & SHAPE INTERFACE BUILD",
+  "phone": "(305)714-2421",
+  "city": "Miami",
+  "permits": 3,
+  "total_value": 3000000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "1 Mia Pbb Gate D22",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "PBB REPLACEMENT",
+    "val": 1000000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-08-08",
+    "sf": "0"
+   },
+   {
+    "addr": "1 Mia Pbb Gate F5",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "PBB REPLACEMENT",
+    "val": 1000000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-08-08",
+    "sf": "0"
+   },
+   {
+    "addr": "1 Mia Pbb Gate H14",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "PBB REPLACEMENT",
+    "val": 1000000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-08-08",
+    "sf": "0"
+   }
+  ]
+ },
+ {
+  "contractor": "PENA-ALUM GLASS & MIRROR INC",
+  "phone": "(305)640-1178",
+  "city": "Doral",
+  "permits": 3,
+  "total_value": 2859295,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "500 Sw 127 Ave",
+    "use": "SCHOOL BUILDINGS",
+    "desc": "INT. ALTER.-ADDITIO",
+    "val": 1800000.0,
+    "type": "ADDITION - ATTACHED",
+    "date": "2026-06-30",
+    "sf": "42032"
+   },
+   {
+    "addr": "8364 S Dixie Hwy",
+    "use": "RETAIL SALES",
+    "desc": "INTERIOR IMPROVE",
+    "val": 750000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-21",
+    "sf": "33768"
+   },
+   {
+    "addr": "1501 Nw 129 Ave",
+    "use": "OFFICE - PROFESSIONAL BUILDINGS",
+    "desc": "STOREFRONT GLASS/GL",
+    "val": 309295.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-08-07",
+    "sf": "4252"
+   }
+  ]
+ },
+ {
+  "contractor": "ALLIED HURRICANE SOLUTIONS INC",
+  "phone": "(786)712-3152",
+  "city": "Doral",
+  "permits": 1,
+  "total_value": 2829000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "12945 Sw 242 St",
+    "use": "APT BUILDING 3-4 UNITS",
+    "desc": "BEW/BUILDING B",
+    "val": 2829000.0,
+    "type": "NEW",
+    "date": "2026-08-03",
+    "sf": "28290"
+   }
+  ]
+ },
+ {
+  "contractor": "DOUBLE P CONSTRUCTION INC",
+  "phone": "(954)967-8244",
+  "city": "Ft Lauderdale",
+  "permits": 1,
+  "total_value": 2800000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "2724 Nw 2 Ave",
+    "use": "PAVING/OPEN LOTS",
+    "desc": "PARKING LOT",
+    "val": 2800000.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-07-07",
+    "sf": "1"
+   }
+  ]
+ },
+ {
+  "contractor": "SECURE WINDOW SOLUTIONS LLC",
+  "phone": "(561)674-2809",
+  "city": "Pompano Beach",
+  "permits": 1,
+  "total_value": 2705795,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "14160 Sw 136 St",
+    "use": "CLINIC/SANITARIUMS/HEALTH CENTERS",
+    "desc": "STORE FRONTS",
+    "val": 2705795.0,
+    "type": "NEW",
+    "date": "2026-06-24",
+    "sf": "24100"
+   }
+  ]
+ },
+ {
+  "contractor": "KALOS SERVICES INC",
+  "phone": "(352)243-7088",
+  "city": "Clermont",
+  "permits": 2,
+  "total_value": 2479231,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "8651 Nw 13 Ter",
+    "use": "RETAIL SALES",
+    "desc": "INTER REMODELING",
+    "val": 979231.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-15",
+    "sf": "26966"
+   },
+   {
+    "addr": "440 W 49 St",
+    "use": "RETAIL SALES",
+    "desc": "REMODEL",
+    "val": 1500000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-06",
+    "sf": "20000"
+   }
+  ]
+ },
+ {
+  "contractor": "HALCYON BUILDERS INC",
+  "phone": "(305)243-9194",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 2350000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "3200 Sw 62 Ave",
+    "use": "HOSPITALS",
+    "desc": "INTERIOR CHANGES",
+    "val": 2350000.0,
+    "type": "SHELL ONLY",
+    "date": "2026-06-25",
+    "sf": "3848"
+   }
+  ]
+ },
+ {
+  "contractor": "R C C ASSOCIATES INC",
+  "phone": "(305)429-3700",
+  "city": "Deerfield",
+  "permits": 2,
+  "total_value": 2300000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "40 Sw N River Dr",
+    "use": "RESTAURANT-CAFETERIA",
+    "desc": "RESTAURANTE",
+    "val": 2000000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-15",
+    "sf": "4740"
+   },
+   {
+    "addr": "40 Sw N River Dr",
+    "use": "RESTAURANT/CAFET/BAR/LOUNGE/NIGHT CLUB",
+    "desc": "PERGOLA",
+    "val": 300000.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-06-24",
+    "sf": "526"
+   }
+  ]
+ },
+ {
+  "contractor": "CONSTRUCTION SERVICES INTERNATIONAL CO",
+  "phone": "(305)418-0949",
+  "city": "Medley",
+  "permits": 3,
+  "total_value": 2216600,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "1 Mia N Term Centurion Launge",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "REPL.BOOSTER PUMP",
+    "val": 639000.0,
+    "type": "REPAIR",
+    "date": "2026-06-25",
+    "sf": "8800"
+   },
+   {
+    "addr": "1 Opf-Faa Tower",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "RPR EXP JOINT PAINT",
+    "val": 298600.0,
+    "type": "REPAIR",
+    "date": "2026-06-29",
+    "sf": "27900"
+   },
+   {
+    "addr": "1 Mia North Upper Roof",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "REROOF REPAIR",
+    "val": 1279000.0,
+    "type": "REPAIR",
+    "date": "2026-07-28",
+    "sf": "32400"
+   }
+  ]
+ },
+ {
+  "contractor": "CHEROKEE ENTERPRISES INC",
+  "phone": "(305)828-3353",
+  "city": "Medley",
+  "permits": 1,
+  "total_value": 2206550,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "11500 Nw 25 St",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "NEW FUELING FACILIT",
+    "val": 2206550.0,
+    "type": "NEW",
+    "date": "2026-07-15",
+    "sf": "1048"
+   }
+  ]
+ },
+ {
+  "contractor": "HODGEN CONSTRUCTION LLC",
+  "phone": "(954)727-0333",
+  "city": "Pompano Beach",
+  "permits": 1,
+  "total_value": 2200000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "16600 Nw 57 Ave",
+    "use": "CAR DEALERSHIP - NEW",
+    "desc": "",
+    "val": 2200000.0,
+    "type": "NEW",
+    "date": "2026-06-16",
+    "sf": "38782"
+   }
+  ]
+ },
+ {
+  "contractor": "R & G ENGINEERING INC",
+  "phone": "(305)470-1905",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 2030160,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "3811 Sw 108 Ave",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "NEW STRUCTURE/RESTO",
+    "val": 2030160.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-07-28",
+    "sf": "1332"
+   }
+  ]
+ },
+ {
+  "contractor": "ADRIAN HOMES CORP",
+  "phone": "(305)225-1515",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 2000000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "26701 Sw 148 Ave",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "NEW CONSTRUC BLDG 3",
+    "val": 2000000.0,
+    "type": "NEW",
+    "date": "2026-06-22",
+    "sf": "19130"
+   }
+  ]
+ },
+ {
+  "contractor": "ALL IN ONE IMPACT RESISTANT WINDOWS IN",
+  "phone": "(305)735-4166",
+  "city": "Doral",
+  "permits": 1,
+  "total_value": 2000000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "26701 Sw 148 Ave",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "WINDOWS/DOORS",
+    "val": 2000000.0,
+    "type": "NEW",
+    "date": "2026-07-28",
+    "sf": "3980"
+   }
+  ]
+ },
+ {
+  "contractor": "R G FIFER INC",
+  "phone": "(786)367-9054",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 2000000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "1900 Sunset Harbour Dr",
+    "use": "GYM/EXERCISE CLUB",
+    "desc": "GYM RENO",
+    "val": 2000000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-31",
+    "sf": "1853"
+   }
+  ]
+ },
+ {
+  "contractor": "THH CONSTRUCTION INC",
+  "phone": "(305)392-5104",
+  "city": "Doral",
+  "permits": 3,
+  "total_value": 1950000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "8900 N Kendall Dr",
+    "use": "HOSPITALS",
+    "desc": "INTERIOR RENO",
+    "val": 750000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-16",
+    "sf": "3000"
+   },
+   {
+    "addr": "8900 N Kendall Dr",
+    "use": "HOSPITALS",
+    "desc": "RENO OF EXSIT ROOM",
+    "val": 350000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-20",
+    "sf": "800"
+   },
+   {
+    "addr": "8900 N Kendall Dr",
+    "use": "HOSPITALS",
+    "desc": "RENOV WAITING AREA",
+    "val": 850000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-20",
+    "sf": "7600"
+   }
+  ]
+ },
+ {
+  "contractor": "VICTORIA ROOFING INCORPORATED",
+  "phone": "(305)666-2323",
+  "city": "Cutler Bay",
+  "permits": 6,
+  "total_value": 1935425,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "15759 Sw 276 Ter",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "NW TH LT 1-6 BLK26",
+    "val": 293950.0,
+    "type": "NEW",
+    "date": "2026-07-13",
+    "sf": "11758"
+   },
+   {
+    "addr": "24189 Sw 127 Ave",
+    "use": "PAVING/OPEN LOTS",
+    "desc": "CONDO BLDG TYPE 6A",
+    "val": 258800.0,
+    "type": "NEW",
+    "date": "2026-07-30",
+    "sf": "10352"
+   },
+   {
+    "addr": "15758 Sw 276 Ter",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "NW TH LT 6-1 BLK25",
+    "val": 293950.0,
+    "type": "NEW",
+    "date": "2026-07-30",
+    "sf": "11758"
+   }
+  ]
+ },
+ {
+  "contractor": "R M CONTRACTORS INC",
+  "phone": "(305)345-3649",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 1750000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "7102 Fisher Island Dr      7102",
+    "use": "CONDO/APT INDIVIDUAL UNIT",
+    "desc": "RENOVATIONS",
+    "val": 1750000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-29",
+    "sf": "8488"
+   }
+  ]
+ },
+ {
+  "contractor": "M. E. CONSTRUCTION, INC.",
+  "phone": "(321)723-5661",
+  "city": "Melbourne",
+  "permits": 1,
+  "total_value": 1750000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "11030 Nw 7 Ave",
+    "use": "RETAIL SALES",
+    "desc": "ALDI BUILDOUT",
+    "val": 1750000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-08-06",
+    "sf": "29915"
+   }
+  ]
+ },
+ {
+  "contractor": "RICK DEVELOPER INC",
+  "phone": "(786)285-8685",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 1737530,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "3231 Sw 23 St",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "NEW BUILDING",
+    "val": 1737530.0,
+    "type": "NEW",
+    "date": "2026-06-16",
+    "sf": "15109"
+   }
+  ]
+ },
+ {
+  "contractor": "SPEED CONSTRUCTION SERVICES INC",
+  "phone": "(305)218-8790",
+  "city": "Miami",
+  "permits": 3,
+  "total_value": 1665000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "15525 Sw 120 St",
+    "use": "RETAIL SALES",
+    "desc": "DETACHED BLDG",
+    "val": 500000.0,
+    "type": "SHELL ONLY",
+    "date": "2026-06-26",
+    "sf": "3299"
+   },
+   {
+    "addr": "1856 Ne Miami Gardens Dr",
+    "use": "RETAIL SALES",
+    "desc": "NEW CHIPOTLE",
+    "val": 1000000.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-07-24",
+    "sf": "2270"
+   },
+   {
+    "addr": "3510 Nw 60 St",
+    "use": "WAREHOUSE/STORAGE",
+    "desc": "INT/EXT ALTERATION",
+    "val": 165000.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-08-06",
+    "sf": "52960"
+   }
+  ]
+ },
+ {
+  "contractor": "IROSO BUILDING SERVICES CORP",
+  "phone": "(305)323-2954",
+  "city": "Miami",
+  "permits": 2,
+  "total_value": 1550000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "2900 Nw 39 St",
+    "use": "OFFICE - PROFESSIONAL BUILDINGS",
+    "desc": "INT DEMOLITION",
+    "val": 250000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-09",
+    "sf": "16000"
+   },
+   {
+    "addr": "13600 Sw 288 St",
+    "use": "RETAIL SALES",
+    "desc": "EV CHARGER STATION",
+    "val": 1300000.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-07-09",
+    "sf": "10000"
+   }
+  ]
+ },
+ {
+  "contractor": "WOLVERINE ROOFING LLC",
+  "phone": "(561)935-7641",
+  "city": "N. Palm Beach",
+  "permits": 1,
+  "total_value": 1508080,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "11270 Biscayne Blvd",
+    "use": "PAVING/OPEN LOTS",
+    "desc": "NEW ROOF - TPO",
+    "val": 1508080.0,
+    "type": "NEW",
+    "date": "2026-06-25",
+    "sf": "10772"
+   }
+  ]
+ },
+ {
+  "contractor": "ARCO/MURRAY NATIONAL HOLDINGS, INC",
+  "phone": "(954)294-6364",
+  "city": "Downers Grove",
+  "permits": 1,
+  "total_value": 1500000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "8888 Sw 136 St               317",
+    "use": "RETAIL SALES",
+    "desc": "INT.ALT/BUILD OUT",
+    "val": 1500000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-29",
+    "sf": "11500"
+   }
+  ]
+ },
+ {
+  "contractor": "C L CONTRACTORS CORP",
+  "phone": "(786)236-5419",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 1500000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "8200 Nw 58 St",
+    "use": "WAREHOUSE/STORAGE",
+    "desc": "SITE PLAN",
+    "val": 1500000.0,
+    "type": "NEW",
+    "date": "2026-07-15",
+    "sf": "9777"
+   }
+  ]
+ },
+ {
+  "contractor": "BETA CALUM LLC",
+  "phone": "(786)442-3142",
+  "city": "North Miami",
+  "permits": 1,
+  "total_value": 1445000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "1541 Brickell Ave          B404",
+    "use": "APT BUILDING 3-4 UNITS",
+    "desc": "REMODELING/REPAIRS",
+    "val": 1445000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-23",
+    "sf": "1640"
+   }
+  ]
+ },
+ {
+  "contractor": "ASSURANCE PROPERTY SERVICES GROUP INC",
+  "phone": "(786)485-4937",
+  "city": "Hialeah",
+  "permits": 1,
+  "total_value": 1406900,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "23707 Sw 97 Ave",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "STRU REPAIR BLDG 3",
+    "val": 1406900.0,
+    "type": "REPAIR",
+    "date": "2026-07-15",
+    "sf": "35530"
+   }
+  ]
+ },
+ {
+  "contractor": "GONZALEZ & SONS EQUIPMENT INC",
+  "phone": "(305)822-5455",
+  "city": "Hialeah",
+  "permits": 1,
+  "total_value": 1400000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "1 Mia Fuel Farm Tank 14",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "TANK 14",
+    "val": 1400000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-28",
+    "sf": "4000"
+   }
+  ]
+ },
+ {
+  "contractor": "POOLE AND KENT COMPANY OF FLORIDA",
+  "phone": "(305)325-1930",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 1370000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "6800 Sw 87 Ave",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "PUMP ROOM ELEC UPGR",
+    "val": 1370000.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-07-20",
+    "sf": "2145"
+   }
+  ]
+ },
+ {
+  "contractor": "PARAMOUNT CONTRACT SERVICES LLC",
+  "phone": "(412)281-9650",
+  "city": "Pittsburgh",
+  "permits": 1,
+  "total_value": 1341500,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "1890 Ne 150 St",
+    "use": "INDUSTRIAL USES",
+    "desc": "RENOVATION",
+    "val": 1341500.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-23",
+    "sf": "17422"
+   }
+  ]
+ },
+ {
+  "contractor": "LATITE ROOFING AND SHEET METAL LLC",
+  "phone": "(954)772-3446",
+  "city": "Pompano Beach",
+  "permits": 2,
+  "total_value": 1285560,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "1 Mia Bldg 3038",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "3 PLY BUR SYSTEM",
+    "val": 1005560.0,
+    "type": "REPAIR",
+    "date": "2026-07-29",
+    "sf": "12500"
+   },
+   {
+    "addr": "12955 Sw 242 St",
+    "use": "CABANA/CHICKEE/GAZEBO/CLUB HOUSE/REC BDG",
+    "desc": "NEW/CLUBHOUSE",
+    "val": 280000.0,
+    "type": "NEW",
+    "date": "2026-08-07",
+    "sf": "2820"
+   }
+  ]
+ },
+ {
+  "contractor": "HEICA CONSTRUCTION CORP",
+  "phone": "(954)372-3939",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 1223806,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "1100 Biscayne Blvd           6301",
+    "use": "APT BUILDING 3-4 UNITS",
+    "desc": "REMODELING/REPAIRS",
+    "val": 1223806.0,
+    "type": "ADDITION - ATTACHED",
+    "date": "2026-06-17",
+    "sf": "3831"
+   }
+  ]
+ },
+ {
+  "contractor": "NEWPORT PROPERTY CONSTRUCTION LTD",
+  "phone": "(305)529-3220",
+  "city": "Coconut Grove",
+  "permits": 1,
+  "total_value": 1200000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "19185 Sw 127 Ave",
+    "use": "SCHOOL BUILDINGS",
+    "desc": "PHASE 3 ADDITION",
+    "val": 1200000.0,
+    "type": "ADDITION - ATTACHED",
+    "date": "2026-06-16",
+    "sf": "11764"
+   }
+  ]
+ },
+ {
+  "contractor": "SEASIDE ROOFING INC",
+  "phone": "(772)285-0588",
+  "city": "Stuart",
+  "permits": 1,
+  "total_value": 1100000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "22601 S Dixie Hwy",
+    "use": "RETAIL SALES",
+    "desc": "NEW STORE/DEMO",
+    "val": 1100000.0,
+    "type": "NEW",
+    "date": "2026-07-06",
+    "sf": "8960"
+   }
+  ]
+ },
+ {
+  "contractor": "A & J GENERAL CONTRACTORS CORP",
+  "phone": "(305)599-2782",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 1097450,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "102 Nw 14 St",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "REMODELING",
+    "val": 1097450.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-16",
+    "sf": "7840"
+   }
+  ]
+ },
+ {
+  "contractor": "CH CONSTRUCTION GROUP CORP",
+  "phone": "(786)762-2641",
+  "city": "Miami",
+  "permits": 2,
+  "total_value": 1050000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "2843 S Bayshore Dr           P3-C",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "INTERIOR REMODELING",
+    "val": 350000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-20",
+    "sf": "4236"
+   },
+   {
+    "addr": "1425 Brickell Ave            44A",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "INTERIOR REMODEL",
+    "val": 700000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-31",
+    "sf": "2173"
+   }
+  ]
+ },
+ {
+  "contractor": "LUXCON CONSTRUCTION LLC",
+  "phone": "(862)260-7466",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 1036501,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "3140 Sw 16 St",
+    "use": "PAVING/OPEN LOTS",
+    "desc": "NEW DUPLEX",
+    "val": 1036501.0,
+    "type": "NEW",
+    "date": "2026-06-22",
+    "sf": "8276"
+   }
+  ]
+ },
+ {
+  "contractor": "TIGER & SON ROOFING COMPANY",
+  "phone": "(954)441-4630",
+  "city": "Miramar",
+  "permits": 1,
+  "total_value": 1000000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "360 Ne 185 St",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "NEW TPO ROOF  ITY",
+    "val": 1000000.0,
+    "type": "ADDITION - DETACHED",
+    "date": "2026-06-26",
+    "sf": "16700"
+   }
+  ]
+ },
+ {
+  "contractor": "ENGEL CONSTRUCTION INC",
+  "phone": "(954)583-1109",
+  "city": "Fort Lauderdale",
+  "permits": 1,
+  "total_value": 1000000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "9333 Sw 152 St",
+    "use": "HOSPITALS",
+    "desc": "RENO CATH LAB 2AREA",
+    "val": 1000000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-13",
+    "sf": "509"
+   }
+  ]
+ },
+ {
+  "contractor": "MIBH CONSTRUCTION LLC",
+  "phone": "(305)746-7307",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 975875,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "326 Sw 13 Ave",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "REMODELING/REPAIRS",
+    "val": 975875.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-09",
+    "sf": "11050"
+   }
+  ]
+ },
+ {
+  "contractor": "BUILCORE INC",
+  "phone": "(305)915-1566",
+  "city": "North Bay Village",
+  "permits": 2,
+  "total_value": 950000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "4 Grove Isle Dr              L403",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "INT REMOD",
+    "val": 250000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-15",
+    "sf": "19002"
+   },
+   {
+    "addr": "900 Brickell Key Blvd      403",
+    "use": "APT BUILDING 3-4 UNITS",
+    "desc": "REMODELING/REPAIRS",
+    "val": 700000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-24",
+    "sf": "2000"
+   }
+  ]
+ },
+ {
+  "contractor": "G2 CONSTRUCTION GROUP LLC",
+  "phone": "(305)901-5555",
+  "city": "Hollywood",
+  "permits": 1,
+  "total_value": 933110,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "20900 Biscayne Blvd",
+    "use": "HOSPITALS",
+    "desc": "INT REMODEL",
+    "val": 933110.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-06",
+    "sf": "5100"
+   }
+  ]
+ },
+ {
+  "contractor": "NOVABUILD LLC",
+  "phone": "(786)357-3199",
+  "city": "Miaim",
+  "permits": 2,
+  "total_value": 930000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "22035 Miami Ave",
+    "use": "APT BUILDING 3-4 UNITS",
+    "desc": "SHINGLE ROOF",
+    "val": 465000.0,
+    "type": "NEW",
+    "date": "2026-06-16",
+    "sf": "4690"
+   },
+   {
+    "addr": "22035 Miami Ave",
+    "use": "APT BUILDING 3-4 UNITS",
+    "desc": "NEW WINDOWS",
+    "val": 465000.0,
+    "type": "NEW",
+    "date": "2026-07-31",
+    "sf": "4690"
+   }
+  ]
+ },
+ {
+  "contractor": "HJB CONSTRUCTION INC",
+  "phone": "(843)853-6801",
+  "city": "Charleston",
+  "permits": 1,
+  "total_value": 905560,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "18380 Sw 147 Ave",
+    "use": "RETAIL SALES",
+    "desc": "NEW AUTOZONE",
+    "val": 905560.0,
+    "type": "NEW",
+    "date": "2026-08-03",
+    "sf": "7385"
+   }
+  ]
+ },
+ {
+  "contractor": "MARAND BUILDERS INC",
+  "phone": "(904)247-3211",
+  "city": "Jacksonville Beach",
+  "permits": 1,
+  "total_value": 850000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "6202 S Dixie Hwy",
+    "use": "BANKS - AUTOMATIC TELLER",
+    "desc": "REMODEL",
+    "val": 850000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-08",
+    "sf": "0"
+   }
+  ]
+ },
+ {
+  "contractor": "CANDELA DEVELOPERS INC",
+  "phone": "(786)485-4174",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 846500,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "945 Ne 43 Ave",
+    "use": "PAVING/OPEN LOTS",
+    "desc": "SHELL ONLY UNIT",
+    "val": 846500.0,
+    "type": "NEW",
+    "date": "2026-07-30",
+    "sf": "11565"
+   }
+  ]
+ },
+ {
+  "contractor": "EGERT CONSTRUCTION INC DBA:ACE CONSTRU",
+  "phone": "(305)778-5925",
+  "city": "North Miami",
+  "permits": 1,
+  "total_value": 845471,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "55 Indian Creek Island Rd",
+    "use": "RECREATIONAL COURTS - CLUB HOUSE",
+    "desc": "LANDCAPING/WALL CLS",
+    "val": 845471.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-07-31",
+    "sf": "0"
+   }
+  ]
+ },
+ {
+  "contractor": "CARIBBEAN BUILDING CORP",
+  "phone": "(305)364-4587",
+  "city": "Hialeah Gardens",
+  "permits": 1,
+  "total_value": 833000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "3306 Nw 10 Avenue",
+    "use": "PAVING/OPEN LOTS",
+    "desc": "NEW DUPLEX",
+    "val": 833000.0,
+    "type": "NEW",
+    "date": "2026-06-18",
+    "sf": "2921"
+   }
+  ]
+ },
+ {
+  "contractor": "A1 MASTER CONSTRUCTION LLC",
+  "phone": "(407)775-8198",
+  "city": "Orlando",
+  "permits": 1,
+  "total_value": 815000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "6701 Nw 7 St",
+    "use": "WAREHOUSE",
+    "desc": "AUTOMATION EQUIP",
+    "val": 815000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-15",
+    "sf": "36059"
+   }
+  ]
+ },
+ {
+  "contractor": "GESTIDO CONSTRUCTION LLC",
+  "phone": "(305)817-0114",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 800000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "6401 Kendale Lakes Dr",
+    "use": "CABANA/CHICKEE/GAZEBO/CLUB HOUSE/REC BDG",
+    "desc": "NEW GOLF CART BARN",
+    "val": 800000.0,
+    "type": "NEW",
+    "date": "2026-06-23",
+    "sf": "7198"
+   }
+  ]
+ },
+ {
+  "contractor": "ICONSTRUCTORS LLC",
+  "phone": "(813)287-9000",
+  "city": "Tampa",
+  "permits": 1,
+  "total_value": 800000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "15700 Sw 72 St",
+    "use": "RETAIL SALES",
+    "desc": "CHANGE OF USE",
+    "val": 800000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-07",
+    "sf": "3055"
+   }
+  ]
+ },
+ {
+  "contractor": "ROOFING EXPERTS SERVICES INC",
+  "phone": "(786)718-9593",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 750000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "8040 Sw 24 St",
+    "use": "OFFICE - PROFESSIONAL BUILDINGS",
+    "desc": "NEW ROOF",
+    "val": 750000.0,
+    "type": "NEW",
+    "date": "2026-06-18",
+    "sf": "5007"
+   }
+  ]
+ },
+ {
+  "contractor": "NEW JUPITER CONSTRUCTION CORP",
+  "phone": "(786)283-0085",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 750000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "15200 Sw 240 St",
+    "use": "CHURCHES-RELIGIOUS BUILDINGS",
+    "desc": "NEW FELLOWSHIP HALL",
+    "val": 750000.0,
+    "type": "NEW",
+    "date": "2026-07-09",
+    "sf": "5694"
+   }
+  ]
+ },
+ {
+  "contractor": "LUNACON ENGINEERING GROUP CORP",
+  "phone": "(786)293-0035",
+  "city": "Palmetto Bay",
+  "permits": 1,
+  "total_value": 750000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "13731 Collins Ave",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "METAL PANELSODELING",
+    "val": 750000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-22",
+    "sf": "11906"
+   }
+  ]
+ },
+ {
+  "contractor": "REGIONAL CONSTRUCTION SERVICES, LC",
+  "phone": "(954)536-1413",
+  "city": "Pompano Beach",
+  "permits": 1,
+  "total_value": 750000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "13731 Collins Ave",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "INTERIOR REMODELING",
+    "val": 750000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-27",
+    "sf": "11906"
+   }
+  ]
+ },
+ {
+  "contractor": "INFINITY ROOFING AND SHEET METAL LLC",
+  "phone": "(954)917-7107",
+  "city": "Ft Lauderdale",
+  "permits": 1,
+  "total_value": 736493,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "14695 Sw 104 St",
+    "use": "OFFICE - PROFESSIONAL BUILDINGS",
+    "desc": "INT RENOVATION",
+    "val": 736493.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-06-18",
+    "sf": "5115"
+   }
+  ]
+ },
+ {
+  "contractor": "OWN CONSTRUCTION I, LLC",
+  "phone": "(954)682-2250",
+  "city": "Weston",
+  "permits": 1,
+  "total_value": 720000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "337 Nw 47 St",
+    "use": "PAVING/OPEN LOTS",
+    "desc": "NEW CONSTRUCTION",
+    "val": 720000.0,
+    "type": "NEW",
+    "date": "2026-07-24",
+    "sf": "4450"
+   }
+  ]
+ },
+ {
+  "contractor": "ROOF TILE SPECIALISTS LLC",
+  "phone": "(239)293-6262",
+  "city": "Sarasota",
+  "permits": 2,
+  "total_value": 711400,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "10938 Sw 232 Ter",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "SHINGLE ROOFTE IMP",
+    "val": 279050.0,
+    "type": "NEW",
+    "date": "2026-06-16",
+    "sf": "11612"
+   },
+   {
+    "addr": "15597 Sw 280 St",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "APT BLDG TYPE 17294",
+    "val": 432350.0,
+    "type": "NEW",
+    "date": "2026-07-08",
+    "sf": "17294"
+   }
+  ]
+ },
+ {
+  "contractor": "UNIVERSAL SERVICES BY J&V CORP",
+  "phone": "(786)306-0214",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 700000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "727 77 St",
+    "use": "SCHOOL BUILDINGS",
+    "desc": "INTERIOR BUILD OUT",
+    "val": 700000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-16",
+    "sf": "6238"
+   }
+  ]
+ },
+ {
+  "contractor": "FMGI INC",
+  "phone": "(727)372-7100",
+  "city": "Woodstock",
+  "permits": 1,
+  "total_value": 655176,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "15601 Sw 127 Ave",
+    "use": "RETAIL SALES",
+    "desc": "EV CHARGING STATION",
+    "val": 655176.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-06-24",
+    "sf": "10000"
+   }
+  ]
+ },
+ {
+  "contractor": "CLUTE CONSTRUCTION LLC",
+  "phone": "(518)921-2263",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 650000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "1212 Lincoln Rd            Ru102",
+    "use": "RETAIL SALES",
+    "desc": "INTERIOR BUILDOUT",
+    "val": 650000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-08-05",
+    "sf": "3034"
+   }
+  ]
+ },
+ {
+  "contractor": "STRANGE & STRANGE CONSTRUCTION INC",
+  "phone": "(305)267-2767",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 644613,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "1800 Sw 8 St",
+    "use": "CLINIC/SANITARIUMS/HEALTH CENTERS",
+    "desc": "DENTAL OFFICE",
+    "val": 644613.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-16",
+    "sf": "7367"
+   }
+  ]
+ },
+ {
+  "contractor": "FULLCOVER ROOFING SYSTEMS INC",
+  "phone": "(305)386-5800",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 638000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "11201 Coral Way",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "NEW RSTRM BLDG",
+    "val": 638000.0,
+    "type": "NEW",
+    "date": "2026-07-29",
+    "sf": "600"
+   }
+  ]
+ },
+ {
+  "contractor": "POOL TECH BUILDERS LLC",
+  "phone": "(305)226-7510",
+  "city": "Pinecrest",
+  "permits": 1,
+  "total_value": 625000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "401 Ne 29 St",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "MULTY FAMILY",
+    "val": 625000.0,
+    "type": "NEW",
+    "date": "2026-06-22",
+    "sf": "361326"
+   }
+  ]
+ },
+ {
+  "contractor": "KANECO CONSTRUCTION LLC",
+  "phone": "(904)862-2930",
+  "city": "Atlantic Beach",
+  "permits": 1,
+  "total_value": 619044,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "7795 W Flagler St            6768",
+    "use": "RESTAURANT-CAFETERIA",
+    "desc": "RESTAURANT",
+    "val": 619044.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-07-01",
+    "sf": "1595"
+   }
+  ]
+ },
+ {
+  "contractor": "CAP PROPERTIES LLC DBA:THE CAP GROUP",
+  "phone": "(305)773-3101",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 605928,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "1 Opf Embassair Fbo",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "ROOM MODIFICATIONS",
+    "val": 605928.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-06-25",
+    "sf": "1250"
+   }
+  ]
+ },
+ {
+  "contractor": "SLEIMAN CONSTRUCTION LLC",
+  "phone": "(786)803-8575",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 605000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "101 W Flagler St",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "REPAIR/UPDATE WIND",
+    "val": 605000.0,
+    "type": "REPAIR",
+    "date": "2026-07-17",
+    "sf": "193090"
+   }
+  ]
+ },
+ {
+  "contractor": "YA GAR CONSTRUCTION INC",
+  "phone": "(305)649-7509",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 600000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "21595 S Dixie Hwy",
+    "use": "RESTAURANT/CAFET/BAR/LOUNGE/NIGHT CLUB",
+    "desc": "INT/EXT ALTERATION",
+    "val": 600000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-29",
+    "sf": "1744"
+   }
+  ]
+ },
+ {
+  "contractor": "ARDENT DESIGN + BUILD LLC",
+  "phone": "(786)431-3411",
+  "city": "Doral",
+  "permits": 1,
+  "total_value": 600000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "528 Nw 10 St",
+    "use": "CABANA/CHICKEE/GAZEBO/CLUB HOUSE/REC BDG",
+    "desc": "SOCCER FIELD PARK",
+    "val": 600000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-02",
+    "sf": "1"
+   }
+  ]
+ },
+ {
+  "contractor": "IVEY DESIGN BUILD, CORP",
+  "phone": "(954)580-8686",
+  "city": "Aventura",
+  "permits": 1,
+  "total_value": 600000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "100 S Pointe Dr            806",
+    "use": "CONDO/APT INDIVIDUAL UNIT",
+    "desc": "INTERIOR RENOVATION",
+    "val": 600000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-20",
+    "sf": "2508"
+   }
+  ]
+ },
+ {
+  "contractor": "F & F CONSTRUCTION COMPANY, INC",
+  "phone": "(901)398-1900",
+  "city": "Memphis",
+  "permits": 1,
+  "total_value": 600000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "13892 Sw 56 St",
+    "use": "RETAIL SALES",
+    "desc": "INT RENOVATION",
+    "val": 600000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-29",
+    "sf": "2097"
+   }
+  ]
+ },
+ {
+  "contractor": "NOVA CONSTRUCTION MANAGEMENT LLC",
+  "phone": "(786)256-0988",
+  "city": "Ft Lauderdale",
+  "permits": 1,
+  "total_value": 600000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "3605 Nw 112 Ave              3685",
+    "use": "WAREHOUSE/STORAGE",
+    "desc": "INTERIOR BUILD OUT",
+    "val": 600000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-08-05",
+    "sf": "49732"
+   }
+  ]
+ },
+ {
+  "contractor": "STATE CONTRACTING & ENGINEERING CORPOR",
+  "phone": "(954)923-4747",
+  "city": "Sunrise",
+  "permits": 1,
+  "total_value": 584281,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "8000 Sw 107 Ave",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "REPL WASH EQUIPMENT",
+    "val": 584281.0,
+    "type": "REPAIR",
+    "date": "2026-07-29",
+    "sf": "2300"
+   }
+  ]
+ },
+ {
+  "contractor": "ALPHATECH ROOF CORP",
+  "phone": "(786)355-1889",
+  "city": "Miami",
+  "permits": 2,
+  "total_value": 580000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "1000 Venetian Way            2201",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "INT RENOV",
+    "val": 380000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-29",
+    "sf": "3870"
+   },
+   {
+    "addr": "12210 Ne 13 Ct",
+    "use": "WAREHOUSE/STORAGE",
+    "desc": "CHANGE OF USE",
+    "val": 200000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-08-04",
+    "sf": "4480"
+   }
+  ]
+ },
+ {
+  "contractor": "US CONSTRUCTION CORP",
+  "phone": "(305)443-5808",
+  "city": "Virginia Gardens",
+  "permits": 2,
+  "total_value": 575000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "7535 Sw 88 St           2021B",
+    "use": "RESTAURANT/CAFET/BAR/LOUNGE/NIGHT CLUB",
+    "desc": "INT ALT/2021-B",
+    "val": 200000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-24",
+    "sf": "743"
+   },
+   {
+    "addr": "7535 Sw 88 St                2510",
+    "use": "WAREHOUSE",
+    "desc": "INTER REMO",
+    "val": 375000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-21",
+    "sf": "7479"
+   }
+  ]
+ },
+ {
+  "contractor": "SDA CONSTRUCTION CORP",
+  "phone": "(305)721-6567",
+  "city": "Miami Lakes",
+  "permits": 2,
+  "total_value": 560000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "14201 Nw 60 Ave              8B",
+    "use": "MANUFACTURING",
+    "desc": "",
+    "val": 325000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-23",
+    "sf": "6300"
+   },
+   {
+    "addr": "14201 Nw 60 Ave",
+    "use": "MANUFACTURING",
+    "desc": "",
+    "val": 235000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-16",
+    "sf": "0"
+   }
+  ]
+ },
+ {
+  "contractor": "BDM CONSTRUCTION SERVICES LLC",
+  "phone": "(305)363-5990",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 560000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "2330 Nw 9 St",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "ALT/EXT REMOD",
+    "val": 560000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-14",
+    "sf": "6300"
+   }
+  ]
+ },
+ {
+  "contractor": "TORO ENGINEERING AND CONSTRUCTION CORP",
+  "phone": "(305)785-2440",
+  "city": "Pompano Bch",
+  "permits": 1,
+  "total_value": 550000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "11750 Sw 40 St",
+    "use": "HOSPITALS",
+    "desc": "SITE IMPROVEMENT",
+    "val": 550000.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-06-16",
+    "sf": "8305"
+   }
+  ]
+ },
+ {
+  "contractor": "HB CONSTRUCTION LLC",
+  "phone": "(305)962-9444",
+  "city": "Miami",
+  "permits": 2,
+  "total_value": 550000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "2911 Grand Ave               100B",
+    "use": "OFFICE - PROFESSIONAL BUILDINGS",
+    "desc": "ADDITION REMOD",
+    "val": 250000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-22",
+    "sf": "1000"
+   },
+   {
+    "addr": "2911 Grand Ave               100B",
+    "use": "OFFICE USE ONLY",
+    "desc": "OFFICE/ BANK",
+    "val": 300000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-30",
+    "sf": "500"
+   }
+  ]
+ },
+ {
+  "contractor": "SERGIO A CACERES LLC",
+  "phone": "(786)481-9011",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 550000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "4599 Nw 32 Ave",
+    "use": "GAS/SERV STATION/AUTO REPAIR/CAR WASH",
+    "desc": "GAS STATION/STORE",
+    "val": 550000.0,
+    "type": "NEW",
+    "date": "2026-07-16",
+    "sf": "3742"
+   }
+  ]
+ },
+ {
+  "contractor": "PENINSULA PLUMBING INC",
+  "phone": "(305)525-4833",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 529000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "325 Nw South River Dr",
+    "use": "RESTAURANT-CAFETERIA",
+    "desc": "REMODELING/REPAIRS",
+    "val": 529000.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-08-04",
+    "sf": "6000"
+   }
+  ]
+ },
+ {
+  "contractor": "D R HORTON INC",
+  "phone": "(954)428-4854",
+  "city": "Deerfield Beach",
+  "permits": 3,
+  "total_value": 508626,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "303 Ne 6 Pl",
+    "use": "PAVING/OPEN LOTS",
+    "desc": "SFR CROSSCOURT",
+    "val": 169542.0,
+    "type": "NEW",
+    "date": "2026-06-17",
+    "sf": "2778"
+   },
+   {
+    "addr": "127 Ne 6 Pl",
+    "use": "PAVING/OPEN LOTS",
+    "desc": "SFR",
+    "val": 169542.0,
+    "type": "NEW",
+    "date": "2026-07-14",
+    "sf": "2778"
+   },
+   {
+    "addr": "203 Ne 6 Pl",
+    "use": "PAVING/OPEN LOTS",
+    "desc": "SFR",
+    "val": 169542.0,
+    "type": "NEW",
+    "date": "2026-07-16",
+    "sf": "2778"
+   }
+  ]
+ },
+ {
+  "contractor": "THE WHITING-TURNER CONTRACTING COMPANY",
+  "phone": "(954)776-0800",
+  "city": "Fort Lauderdale",
+  "permits": 1,
+  "total_value": 500000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "8400 Sw 24 St",
+    "use": "RETAIL SALES",
+    "desc": "INT/EXT REMODEL",
+    "val": 500000.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-06-17",
+    "sf": "130222"
+   }
+  ]
+ },
+ {
+  "contractor": "AIR CROSS CORPORATION",
+  "phone": "(786)242-3523",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 500000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "350 Nw 1 Ave                 130",
+    "use": "RETAIL SALES",
+    "desc": "NEW BUILD OUT",
+    "val": 500000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-23",
+    "sf": "2400"
+   }
+  ]
+ },
+ {
+  "contractor": "VERDEX CONSTRUCTION LLC",
+  "phone": "(561)440-1600",
+  "city": "West Palm Beach",
+  "permits": 1,
+  "total_value": 500000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "11320 Biscayne Blvd",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "WATER MAIN FOR APTS",
+    "val": 500000.0,
+    "type": "NEW",
+    "date": "2026-06-24",
+    "sf": "3001"
+   }
+  ]
+ },
+ {
+  "contractor": "RAIG CONSTRUCTION & CARPENTRY LLC",
+  "phone": "(305)505-2461",
+  "city": "Key Biscayne",
+  "permits": 1,
+  "total_value": 500000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "151 Crandon Blvd           1226",
+    "use": "CONDO/APT INDIVIDUAL UNIT",
+    "desc": "INT RENOVATIONS",
+    "val": 500000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-23",
+    "sf": "3127"
+   }
+  ]
+ },
+ {
+  "contractor": "BUTTERS CONSTRUCTION & DEVELOPMENT INC",
+  "phone": "(954)570-8111",
+  "city": "Coconut Creek",
+  "permits": 1,
+  "total_value": 500000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "9535 Nw 174 St               450",
+    "use": "WAREHOUSE/STORAGE",
+    "desc": "TENANT BUILDOUT",
+    "val": 500000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-09",
+    "sf": "31000"
+   }
+  ]
+ },
+ {
+  "contractor": "CFR COASTAL ENTERPRISES INC",
+  "phone": "(561)276-2386",
+  "city": "Delray  Beach",
+  "permits": 1,
+  "total_value": 500000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "9675 Nw 117 Ave",
+    "use": "OFFICE - PROFESSIONAL BUILDINGS",
+    "desc": "INTERIOR RENOVATION",
+    "val": 500000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-10",
+    "sf": "24104"
+   }
+  ]
+ },
+ {
+  "contractor": "RDF CONSTRUCTION & SERVICES, CORP",
+  "phone": "(305)609-4819",
+  "city": "Hialeah",
+  "permits": 1,
+  "total_value": 480000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "1805 Ponce De Leon Blvd    200",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "INTER. CHANGES",
+    "val": 480000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-13",
+    "sf": "0"
+   }
+  ]
+ },
+ {
+  "contractor": "SKYCON GROUP LLC",
+  "phone": "(305)640-5500",
+  "city": "Miami",
+  "permits": 2,
+  "total_value": 479338,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "1177 Kane Conc",
+    "use": "OFFICE - PROFESSIONAL BUILDINGS",
+    "desc": "INTERIOR BUILD OUT",
+    "val": 317886.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-15",
+    "sf": "143"
+   },
+   {
+    "addr": "5201 Blue Lagoon Dr          900",
+    "use": "OFFICE USE ONLY",
+    "desc": "INTERIOR DEMO",
+    "val": 161452.0,
+    "type": "SHELL ONLY",
+    "date": "2026-06-25",
+    "sf": "22436"
+   }
+  ]
+ },
+ {
+  "contractor": "GALEANO CONSTRUCTION INC",
+  "phone": "(407)276-7997",
+  "city": "Orlando",
+  "permits": 1,
+  "total_value": 475000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "3175 Park Of Commerce Blvd   103",
+    "use": "WAREHOUSE/STORAGE",
+    "desc": "OFFICE BUILDOUT",
+    "val": 475000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-24",
+    "sf": "24508"
+   }
+  ]
+ },
+ {
+  "contractor": "SHUTTER BROTHERS LLC",
+  "phone": "(305)204-5531",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 472000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "24945 Sw 134 Ave",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "3-STY MULTI-FAMILY",
+    "val": 472000.0,
+    "type": "NEW",
+    "date": "2026-07-22",
+    "sf": "33576"
+   }
+  ]
+ },
+ {
+  "contractor": "TOMKA LLC",
+  "phone": "(786)566-7465",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 470200,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "3801 Collins Ave           Th-1",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "INTERIOR RENO",
+    "val": 470200.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-20",
+    "sf": "2801"
+   }
+  ]
+ },
+ {
+  "contractor": "NAIM DEVELOPMENT LLC",
+  "phone": "(786)200-7355",
+  "city": "Aventura",
+  "permits": 1,
+  "total_value": 466850,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "19925 Ne 39 Pl             402",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "INT RENO",
+    "val": 466850.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-21",
+    "sf": "3050"
+   }
+  ]
+ },
+ {
+  "contractor": "NPSG BUILT, LLC",
+  "phone": "(678)221-4280",
+  "city": "Woodstock",
+  "permits": 1,
+  "total_value": 450000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "1900 Nw 132 Pl",
+    "use": "WAREHOUSE",
+    "desc": "PREFAB GUARD HOUSE",
+    "val": 450000.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-07-09",
+    "sf": "176"
+   }
+  ]
+ },
+ {
+  "contractor": "JRM CONSTRUCTION MANAGEMENT FLORIDA, L",
+  "phone": "(212)545-0500",
+  "city": "Fort Lauderdale",
+  "permits": 1,
+  "total_value": 450000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "1801 West Ave",
+    "use": "RETAIL SALES",
+    "desc": "BUILD OUT",
+    "val": 450000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-14",
+    "sf": "3907"
+   }
+  ]
+ },
+ {
+  "contractor": "DLM CONSTRUCTION INC",
+  "phone": "(786)223-6833",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 441525,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "2155 Sw 22 St",
+    "use": "ANIMAL HOSPITAL",
+    "desc": "REMODELING/REPAIRS",
+    "val": 441525.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-09",
+    "sf": "5046"
+   }
+  ]
+ },
+ {
+  "contractor": "ASCEND CONTRACTORS CORP",
+  "phone": "(786)877-2075",
+  "city": "Hialeah",
+  "permits": 2,
+  "total_value": 430000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "18350 Nw 7 Ave",
+    "use": "RETAIL SALES",
+    "desc": "CONST OF 7 DUMPSTER",
+    "val": 280000.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-07-20",
+    "sf": "1800"
+   },
+   {
+    "addr": "11975 S Dixie Hwy",
+    "use": "RETAIL SALES",
+    "desc": "DEMISE OF SPACE",
+    "val": 150000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-08-06",
+    "sf": "2432"
+   }
+  ]
+ },
+ {
+  "contractor": "ROBERTS ARCHITECTURE AND CONSTRUCTION",
+  "phone": "(954)600-1422",
+  "city": "Davie",
+  "permits": 2,
+  "total_value": 400000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "1 Mia Cc E 2Nd Level",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "ALTERATION INTERIOR",
+    "val": 208000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-02",
+    "sf": "800"
+   },
+   {
+    "addr": "1 Mia Cc E 2 Floor",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "ALTERATION INTERIOR",
+    "val": 192000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-08",
+    "sf": "385"
+   }
+  ]
+ },
+ {
+  "contractor": "STONE CONCEPT MIAMI INC",
+  "phone": "(786)337-3425",
+  "city": "Miami Springs",
+  "permits": 1,
+  "total_value": 400000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "1 Mia Term E 3 Floor E3420",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "INTERIOR ALTERATION",
+    "val": 400000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-23",
+    "sf": "870"
+   }
+  ]
+ },
+ {
+  "contractor": "THERMAL DYNAMICS INC DBA:ARDENT THERMA",
+  "phone": "(305)888-0000",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 395000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "1458 Nw 82 Ave",
+    "use": "RETAIL SALES",
+    "desc": "WALK-IN COOLER",
+    "val": 395000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-20",
+    "sf": "4500"
+   }
+  ]
+ },
+ {
+  "contractor": "BERTOLEZ CONSTRUCTION COMPANY LLC",
+  "phone": "(954)284-4131",
+  "city": "Margate",
+  "permits": 1,
+  "total_value": 388000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "945 Bay Dr",
+    "use": "APT BUILDING 3-4 UNITS",
+    "desc": "REPAIRS",
+    "val": 388000.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-07-27",
+    "sf": "6991"
+   }
+  ]
+ },
+ {
+  "contractor": "SUPERIOR BUILDERS LLC",
+  "phone": "(305)815-1513",
+  "city": "Miami Shores",
+  "permits": 1,
+  "total_value": 386000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "255 Ne 59 St",
+    "use": "GYM/EXERCISE CLUB",
+    "desc": "REMODELING",
+    "val": 386000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-29",
+    "sf": "4400"
+   }
+  ]
+ },
+ {
+  "contractor": "MADISON CONSTRUCTION GROUP INC",
+  "phone": "(305)220-8997",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 380150,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "28205 Sw 124 Ct",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "ENCLOSURE STRUCTURE",
+    "val": 380150.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-08-03",
+    "sf": "1328"
+   }
+  ]
+ },
+ {
+  "contractor": "ALCON BUILDERS LLC",
+  "phone": "(305)588-1285",
+  "city": "Miami",
+  "permits": 2,
+  "total_value": 375000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "3900 Ne 2 Ave",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "INT REM",
+    "val": 150000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-16",
+    "sf": "500"
+   },
+   {
+    "addr": "709 Ne 79 St",
+    "use": "BAR-LOUNGE-NIGHT CLUB",
+    "desc": "BAR REMODEL",
+    "val": 225000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-28",
+    "sf": "2521"
+   }
+  ]
+ },
+ {
+  "contractor": "LOBERG CONSTRUCTION CO",
+  "phone": "(847)392-4300",
+  "city": "Palatine",
+  "permits": 1,
+  "total_value": 373500,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "13550 Sw 120 St              420",
+    "use": "RETAIL SALES",
+    "desc": "INTERIOR RENOVATION",
+    "val": 373500.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-28",
+    "sf": "3020"
+   }
+  ]
+ },
+ {
+  "contractor": "GLR INC",
+  "phone": "(937)890-0510",
+  "city": "Dayton",
+  "permits": 2,
+  "total_value": 373423,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "4700 Nw 183 St",
+    "use": "RETAIL SALES",
+    "desc": "PARKING LOT REPAIRS",
+    "val": 150000.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-06-16",
+    "sf": "0"
+   },
+   {
+    "addr": "4700 Nw 183 St",
+    "use": "RETAIL SALES",
+    "desc": "INTERIOR ALTER",
+    "val": 223423.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-18",
+    "sf": "1291"
+   }
+  ]
+ },
+ {
+  "contractor": "DADE CONSTRUCTION CORP",
+  "phone": "(786)564-7623",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 369016,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "211 Sw 57 Ave",
+    "use": "PARKING GARAGE/OPEN DECK",
+    "desc": "NEW PARKING LOT",
+    "val": 369016.0,
+    "type": "NEW",
+    "date": "2026-07-27",
+    "sf": "9986"
+   }
+  ]
+ },
+ {
+  "contractor": "COBO CONSTRUCTION CORP",
+  "phone": "(305)361-6783",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 365000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "450 Alton Rd               2102",
+    "use": "CONDO/APT INDIVIDUAL UNIT",
+    "desc": "INT REMODEL",
+    "val": 365000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-24",
+    "sf": "4124"
+   }
+  ]
+ },
+ {
+  "contractor": "STANSELL PROPERTIES & DEVELOPMENT LLC",
+  "phone": "(305)680-5912",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 350000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "13725 Sw 152 St",
+    "use": "RESTAURANT-CAFETERIA",
+    "desc": "WALK IN COOLER",
+    "val": 350000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-07",
+    "sf": "1616"
+   }
+  ]
+ },
+ {
+  "contractor": "HORIZON RETAIL CONSTRUCTION INC",
+  "phone": "(262)638-6000",
+  "city": "Racine",
+  "permits": 1,
+  "total_value": 350000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "8268 Mills Dr                8510",
+    "use": "RETAIL SALES",
+    "desc": "REMODEL",
+    "val": 350000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-09",
+    "sf": "4709"
+   }
+  ]
+ },
+ {
+  "contractor": "ISAACS ROOFING & INSULATION CORP",
+  "phone": "(305)234-5234",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 350000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "7373 Sw 93 Ave",
+    "use": "OFFICE - PROFESSIONAL BUILDINGS",
+    "desc": "NEW OFFICE ROOF",
+    "val": 350000.0,
+    "type": "NEW",
+    "date": "2026-07-10",
+    "sf": "6574"
+   }
+  ]
+ },
+ {
+  "contractor": "RELATED URBAN CONSTRUCTION LLC",
+  "phone": "(305)460-9900",
+  "city": "Miami",
+  "permits": 2,
+  "total_value": 350000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "800 Nw 13 Ave",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "MOORING PILE/DREDGE",
+    "val": 175000.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-07-30",
+    "sf": "0"
+   },
+   {
+    "addr": "1389 Nw 7 St",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "MAINTENANCE DREDGE",
+    "val": 175000.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-07-30",
+    "sf": "0"
+   }
+  ]
+ },
+ {
+  "contractor": "RAUSA BUILDERS CORP",
+  "phone": "(305)970-7253",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 350000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "6190 Sw 8 St",
+    "use": "RETAIL SALES",
+    "desc": "PALLET STORAGE",
+    "val": 350000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-08-03",
+    "sf": "0"
+   }
+  ]
+ },
+ {
+  "contractor": "LINK CONSTRUCTION GROUP INC",
+  "phone": "(305)385-9860",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 350000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "1 Opf  Bldg 710 Suite 108",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "INTER. RENOVATION",
+    "val": 350000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-08-05",
+    "sf": "6300"
+   }
+  ]
+ },
+ {
+  "contractor": "CENTRAL FLORIDA CONTRACTING LLC",
+  "phone": "(407)913-1379",
+  "city": "Belle Isle",
+  "permits": 1,
+  "total_value": 326000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "1 Opf Bldg 1 Suite 200",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "INSTALL 52 BAYS PAL",
+    "val": 326000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-16",
+    "sf": "150600"
+   }
+  ]
+ },
+ {
+  "contractor": "NUNEZ CONSTRUCTION INC",
+  "phone": "(305)774-9000",
+  "city": "Coral Gables",
+  "permits": 1,
+  "total_value": 318000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "1 Mia Cc D 2Nd Floor",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "INTERIOR REMODEL",
+    "val": 318000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-29",
+    "sf": "862"
+   }
+  ]
+ },
+ {
+  "contractor": "MASTER BUILDERS DEVELOPMENT GROUP INC",
+  "phone": "(305)216-9006",
+  "city": "Coral Gables",
+  "permits": 1,
+  "total_value": 308000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "700 Ne 26 Ter                5203",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "INTERIOR REMODEL",
+    "val": 308000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-29",
+    "sf": "3520"
+   }
+  ]
+ },
+ {
+  "contractor": "GREEN ALLIANCE INC",
+  "phone": "(786)319-7023",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 300000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "6800 Sw 87 Ave",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "INT UPGRADES HVAC",
+    "val": 300000.0,
+    "type": "REPAIR",
+    "date": "2026-07-14",
+    "sf": "620"
+   }
+  ]
+ },
+ {
+  "contractor": "WAAS CONSTRUCTION COMPANY, INC",
+  "phone": "(305)592-9574",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 300000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "11860 Sw 147 Ave",
+    "use": "OFFICE - PROFESSIONAL BUILDINGS",
+    "desc": "ENCLOSURE",
+    "val": 300000.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-07-21",
+    "sf": "0"
+   }
+  ]
+ },
+ {
+  "contractor": "AMBUCON INC",
+  "phone": "(786)222-6711",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 300000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "9705 Nw 108 Ave              18",
+    "use": "WAREHOUSE/STORAGE",
+    "desc": "INTER BLD OUT/IMPRV",
+    "val": 300000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-23",
+    "sf": "45000"
+   }
+  ]
+ },
+ {
+  "contractor": "THE W GROUP INC",
+  "phone": "(772)220-1930",
+  "city": "Palm City",
+  "permits": 1,
+  "total_value": 300000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "17602 Sw 264 St",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "SLAB\\,STATE SHELTER",
+    "val": 300000.0,
+    "type": "NEW",
+    "date": "2026-08-06",
+    "sf": "596"
+   }
+  ]
+ },
+ {
+  "contractor": "LOOKTECH GLASS CORP",
+  "phone": "(786)775-7017",
+  "city": "Hialeah",
+  "permits": 1,
+  "total_value": 293357,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "10750 Sw 156 Ter",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "DOORS-STORE FRONT",
+    "val": 293357.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-07-08",
+    "sf": "1"
+   }
+  ]
+ },
+ {
+  "contractor": "CONCEPT BUILDERS GROUP LLC",
+  "phone": "(843)457-5875",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 291900,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "3150 Sw 38 Ave               700",
+    "use": "OFFICE - PROFESSIONAL BUILDINGS",
+    "desc": "OFFICE REMODEL",
+    "val": 291900.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-20",
+    "sf": "3336"
+   }
+  ]
+ },
+ {
+  "contractor": "TOP CRAFTS INC",
+  "phone": "(786)258-1439",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 290000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "12760 Sw 6 St",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "NEW DOG PARK",
+    "val": 290000.0,
+    "type": "NEW",
+    "date": "2026-06-16",
+    "sf": "7925"
+   }
+  ]
+ },
+ {
+  "contractor": "AA MASTERS CONSTRUCTION DEVELOPMENT AN",
+  "phone": "(305)244-0667",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 280000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "940 71 St",
+    "use": "RETAIL SALES",
+    "desc": "RENOV INT",
+    "val": 280000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-18",
+    "sf": "3800"
+   }
+  ]
+ },
+ {
+  "contractor": "J D K LLC",
+  "phone": "(954)424-1951",
+  "city": "Davie",
+  "permits": 1,
+  "total_value": 279800,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "1 Mia Rcc",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "NEW BOOTH INSTALL",
+    "val": 279800.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-06-25",
+    "sf": "530"
+   }
+  ]
+ },
+ {
+  "contractor": "SOUTH WINDS CONSTRUCTION CORP",
+  "phone": "(786)587-9487",
+  "city": "Davie",
+  "permits": 1,
+  "total_value": 279653,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "19111 Collins Ave          1804",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "INT RENOVTION",
+    "val": 279653.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-22",
+    "sf": "2440"
+   }
+  ]
+ },
+ {
+  "contractor": "D W RECREATION SERVICES INC",
+  "phone": "(561)818-4819",
+  "city": "Boynton Beach",
+  "permits": 1,
+  "total_value": 257186,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "1809 Meridian Ave",
+    "use": "RECREATIONAL COURTS - CLUB HOUSE",
+    "desc": "NEW PLAYGROUND",
+    "val": 257186.0,
+    "type": "ADDITION - DETACHED",
+    "date": "2026-06-22",
+    "sf": "3300"
+   }
+  ]
+ },
+ {
+  "contractor": "RYCON CONSTRUCTION INC",
+  "phone": "(954)851-9494",
+  "city": "Sunrise",
+  "permits": 1,
+  "total_value": 255000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "11375 Nw 105 St              100",
+    "use": "WAREHOUSE",
+    "desc": "TENANT IMPROVEMENT",
+    "val": 255000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-27",
+    "sf": "3000"
+   }
+  ]
+ },
+ {
+  "contractor": "TORRE CONSTRUCTION & DEVELOPMENT LLC",
+  "phone": "(305)740-0057",
+  "city": "Coral Gables",
+  "permits": 1,
+  "total_value": 250000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "87 Sw 8 St",
+    "use": "RETAIL SALES",
+    "desc": "INTERIOR REMODEL",
+    "val": 250000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-23",
+    "sf": "1254"
+   }
+  ]
+ },
+ {
+  "contractor": "ALARTECH INC",
+  "phone": "(305)986-3676",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 250000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "401 Biscayne Blvd            106S",
+    "use": "RESTAURANT-CAFETERIA",
+    "desc": "",
+    "val": 250000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-23",
+    "sf": "464"
+   }
+  ]
+ },
+ {
+  "contractor": "SAP WINDOW AND DOOR SERVICES LLC",
+  "phone": "(954)630-4401",
+  "city": "Hialeah",
+  "permits": 1,
+  "total_value": 250000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "12300 Quail Roost Dr",
+    "use": "DAYCARE - KINDERGARTEN",
+    "desc": "WINDOWS AND DOORS",
+    "val": 250000.0,
+    "type": "ADDITION - ATTACHED",
+    "date": "2026-07-01",
+    "sf": "2830"
+   }
+  ]
+ },
+ {
+  "contractor": "FLORIDA LEMARK CORPORATION",
+  "phone": "(305)593-1442",
+  "city": "Doral",
+  "permits": 1,
+  "total_value": 250000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "1400 Nw 12 Ave",
+    "use": "HOSPITALS",
+    "desc": "HELIPAD UPGRADES",
+    "val": 250000.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-07-07",
+    "sf": "200"
+   }
+  ]
+ },
+ {
+  "contractor": "ALL DADE PROPERTY SOLUTIONS LLC",
+  "phone": "(305)509-1809",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 250000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "3190 Commodore Plz",
+    "use": "BAR-LOUNGE-NIGHT CLUB",
+    "desc": "REMODELING/REPAIRS",
+    "val": 250000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-22",
+    "sf": "2231"
+   }
+  ]
+ },
+ {
+  "contractor": "HARDESTY & ASSOCIATES INC",
+  "phone": "(949)723-2230",
+  "city": "Costa Mesa",
+  "permits": 1,
+  "total_value": 250000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "7535 N Kendall Dr            1830",
+    "use": "RETAIL SALES",
+    "desc": "INT ALTERATIONS",
+    "val": 250000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-29",
+    "sf": "755"
+   }
+  ]
+ },
+ {
+  "contractor": "LEADEX CORPORATION",
+  "phone": "(305)266-2028",
+  "city": "Doral",
+  "permits": 1,
+  "total_value": 250000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "971 Nw 2 St",
+    "use": "CABANA/CHICKEE/GAZEBO/CLUB HOUSE/REC BDG",
+    "desc": "REMODELING/REPAIRS",
+    "val": 250000.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-07-29",
+    "sf": "400"
+   }
+  ]
+ },
+ {
+  "contractor": "LEI FENG CONSTRUCTION LLC",
+  "phone": "(678)459-5086",
+  "city": "Suwanee",
+  "permits": 1,
+  "total_value": 237000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "7520 Nw 104 Ave",
+    "use": "RETAIL SALES",
+    "desc": "RENOVATE STORE",
+    "val": 237000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-27",
+    "sf": "1214"
+   }
+  ]
+ },
+ {
+  "contractor": "LANDSCAPING PARTNERS INC",
+  "phone": "(954)609-3556",
+  "city": "Weston",
+  "permits": 1,
+  "total_value": 234603,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "400 Sunny Isles Blvd         2015",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "ALMN PATIO ROOF",
+    "val": 234603.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-07-31",
+    "sf": "0"
+   }
+  ]
+ },
+ {
+  "contractor": "A & M INTERIORS & SERVICES CORP",
+  "phone": "(786)325-4099",
+  "city": "North Miami",
+  "permits": 1,
+  "total_value": 230000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "19495 Biscayne Blvd          200",
+    "use": "OFFICE - PROFESSIONAL BUILDINGS",
+    "desc": "OFFICE BUILDOUT",
+    "val": 230000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-20",
+    "sf": "3575"
+   }
+  ]
+ },
+ {
+  "contractor": "OUTDO BUILDERS INC",
+  "phone": "(786)487-4306",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 230000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "3059 Grand Ave               300",
+    "use": "OFFICE - PROFESSIONAL BUILDINGS",
+    "desc": "INT REMODEL",
+    "val": 230000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-28",
+    "sf": "2000"
+   }
+  ]
+ },
+ {
+  "contractor": "STEADY BUILDERS GROUP INC",
+  "phone": "(786)275-6800",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 225000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "6365 Collins Ave           Ts-01",
+    "use": "CONDO/APT INDIVIDUAL UNIT",
+    "desc": "INTERIOR REMODEL",
+    "val": 225000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-30",
+    "sf": "1200"
+   }
+  ]
+ },
+ {
+  "contractor": "ANISENN INC",
+  "phone": "(305)825-5762",
+  "city": "Hialeah",
+  "permits": 1,
+  "total_value": 223000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "9971 W Flagler St            190",
+    "use": "RETAIL SALES",
+    "desc": "INTERIOR RENOVATION",
+    "val": 223000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-24",
+    "sf": "1312"
+   }
+  ]
+ },
+ {
+  "contractor": "VENTURA ARCHITECTURE DEVELOPMENT INC",
+  "phone": "(954)389-4806",
+  "city": "Weston",
+  "permits": 1,
+  "total_value": 220000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "8400 Nw 53 St                F107",
+    "use": "RETAIL SALES",
+    "desc": "INT BUILD OUT",
+    "val": 220000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-13",
+    "sf": "1937"
+   }
+  ]
+ },
+ {
+  "contractor": "J ROMANO GROUP INC",
+  "phone": "(786)624-1809",
+  "city": "Aventura",
+  "permits": 1,
+  "total_value": 216194,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "175 Se 25 Rd",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "",
+    "val": 216194.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-22",
+    "sf": "600"
+   }
+  ]
+ },
+ {
+  "contractor": "VERICON CONSTRUCTION COMPANY LLC",
+  "phone": "(908)873-0022",
+  "city": "Mountainside",
+  "permits": 1,
+  "total_value": 206120,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "6601 Nw 36 St",
+    "use": "OFFICE - PROFESSIONAL BUILDINGS",
+    "desc": "LVL 2 ALTERATION",
+    "val": 206120.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-28",
+    "sf": "818"
+   }
+  ]
+ },
+ {
+  "contractor": "MITCHELL BUILDING CONTRACTORS INC",
+  "phone": "(954)305-4983",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 200000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "3520 Grand Ave",
+    "use": "RECREATIONAL COURTS - CLUB HOUSE",
+    "desc": "SOIL IMPROVEMENT",
+    "val": 200000.0,
+    "type": "NEW",
+    "date": "2026-07-07",
+    "sf": "100"
+   }
+  ]
+ },
+ {
+  "contractor": "VICO PAINTING CONTRACTORS LLC",
+  "phone": "(786)953-7349",
+  "city": "Hialeah",
+  "permits": 1,
+  "total_value": 200000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "2640 W 84 St                 6",
+    "use": "OFFICE - PROFESSIONAL BUILDINGS",
+    "desc": "CHANGE USE  OFFICE",
+    "val": 200000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-09",
+    "sf": "2000"
+   }
+  ]
+ },
+ {
+  "contractor": "ARROW ASPHALT & ENGINEERING INC",
+  "phone": "(305)688-8686",
+  "city": "Opa-Locka",
+  "permits": 1,
+  "total_value": 192529,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "601 Sw 7 St",
+    "use": "CHURCHES-RELIGIOUS BUILDINGS",
+    "desc": "REMODELING/REPAIRS",
+    "val": 192529.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-07-15",
+    "sf": "1392"
+   }
+  ]
+ },
+ {
+  "contractor": "OPTIMUM CONTRACTORS INC",
+  "phone": "(305)661-6658",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 190000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "990 Nw 119 St",
+    "use": "RETAIL SALES",
+    "desc": "INTR. RETAIL STORE",
+    "val": 190000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-06",
+    "sf": "3454"
+   }
+  ]
+ },
+ {
+  "contractor": "RESTORE CONSTRUCTION GROUP INC",
+  "phone": "(954)985-5353",
+  "city": "Hollywood",
+  "permits": 1,
+  "total_value": 189785,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "9735 Nw 52 St",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "METAL WALL-WINDOWS",
+    "val": 189785.0,
+    "type": "REPAIR",
+    "date": "2026-07-07",
+    "sf": "60500"
+   }
+  ]
+ },
+ {
+  "contractor": "ASB CONSTRUCTION GROUP LLC",
+  "phone": "(954)440-5289",
+  "city": "Sunrise",
+  "permits": 1,
+  "total_value": 183110,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "888 Biscayne Blvd          4810",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "REMODELING",
+    "val": 183110.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-08-07",
+    "sf": "1255"
+   }
+  ]
+ },
+ {
+  "contractor": "ATLAS DOOR & GATE INC DBA:QUALITY CONS",
+  "phone": "(305)463-9218",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 175740,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "1750 Ne 115 St",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "REFURBISH BALCONIES",
+    "val": 175740.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-06-29",
+    "sf": "0"
+   }
+  ]
+ },
+ {
+  "contractor": "ERA WINDOWS & DOORS, CORP DBA:ERA TEAM",
+  "phone": "(954)903-0688",
+  "city": "Weston",
+  "permits": 1,
+  "total_value": 175000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "921 N American Way",
+    "use": "GOVERNMENT FACILITIES",
+    "desc": "CNSTR VESTIBULE ELV",
+    "val": 175000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-02",
+    "sf": "0"
+   }
+  ]
+ },
+ {
+  "contractor": "RJH CONSTRUCTION LLC",
+  "phone": "(404)542-5137",
+  "city": "Williston",
+  "permits": 1,
+  "total_value": 171249,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "12250 Nw 25 St               115",
+    "use": "RETAIL SALES",
+    "desc": "INST RACK SYSTEM",
+    "val": 171249.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-08-05",
+    "sf": "20110"
+   }
+  ]
+ },
+ {
+  "contractor": "AP WELDING AND STEEL MANUFACTURE CORP",
+  "phone": "(305)490-4168",
+  "city": "Hialeah",
+  "permits": 1,
+  "total_value": 167000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "1581 Brickell Ave            1705",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "INTERIOR REMOD",
+    "val": 167000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-01",
+    "sf": "1895"
+   }
+  ]
+ },
+ {
+  "contractor": "WING SING CONSTRUCTION INC",
+  "phone": "(305)798-5249",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 165000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "12295 Sw 88 St",
+    "use": "RESTAURANT/CAFET/BAR/LOUNGE/NIGHT CLUB",
+    "desc": "INT REMODEL RESTAUR",
+    "val": 165000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-26",
+    "sf": "8100"
+   }
+  ]
+ },
+ {
+  "contractor": "EXCEL GENERAL CONSTRUCTION INC",
+  "phone": "(305)984-3488",
+  "city": "North Miami",
+  "permits": 1,
+  "total_value": 158000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "9600 S Dixie Hwy             2",
+    "use": "RESTAURANT/CAFET/BAR/LOUNGE/NIGHT CLUB",
+    "desc": "WALK IN COOLER",
+    "val": 158000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-08-03",
+    "sf": "2720"
+   }
+  ]
+ },
+ {
+  "contractor": "PC BUILDING, LLC",
+  "phone": "(305)854-7100",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 155000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "11155 Sw 211 St",
+    "use": "RETAIL SALES",
+    "desc": "CNST OF PAV & DRAIN",
+    "val": 155000.0,
+    "type": "NEW",
+    "date": "2026-06-17",
+    "sf": "7000"
+   }
+  ]
+ },
+ {
+  "contractor": "ROTHSTAR CONSTRUCTION INC",
+  "phone": "(305)442-4462",
+  "city": "Coral Gables",
+  "permits": 1,
+  "total_value": 151813,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "1221 Brickell Ave            11Fl",
+    "use": "OFFICE USE ONLY",
+    "desc": "INT REMOD",
+    "val": 151813.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-25",
+    "sf": "1735"
+   }
+  ]
+ },
+ {
+  "contractor": "LORENTE PLUMBING SERVICES INC",
+  "phone": "(786)224-9509",
+  "city": "Miai",
+  "permits": 1,
+  "total_value": 150650,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "900 Bay Dr                   504",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "RENOVATION OF APART",
+    "val": 150650.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-13",
+    "sf": "1520"
+   }
+  ]
+ },
+ {
+  "contractor": "ACCRO GENERAL CONTRACTORS CORP",
+  "phone": "(833)222-2764",
+  "city": "Mirmar",
+  "permits": 1,
+  "total_value": 150000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "50 S Pointe Dr             603",
+    "use": "CONDO/APT INDIVIDUAL UNIT",
+    "desc": "INT REMODEL",
+    "val": 150000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-16",
+    "sf": "1199"
+   }
+  ]
+ },
+ {
+  "contractor": "MTM GLASS CONCEPTS INC",
+  "phone": "(786)899-2839",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 150000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "4089 Sw 152 Ave",
+    "use": "DAYCARE - KINDERGARTEN",
+    "desc": "WNDWS/DOORS",
+    "val": 150000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-06-16",
+    "sf": "2819"
+   }
+  ]
+ },
+ {
+  "contractor": "D-AIR CONDITIONING COMPANY",
+  "phone": "(786)390-1532",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 150000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "10301 Nw 108 Ave             11",
+    "use": "WAREHOUSE/STORAGE",
+    "desc": "INT ALT",
+    "val": 150000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-01",
+    "sf": "46238"
+   }
+  ]
+ },
+ {
+  "contractor": "COLEGIAL CONTRACTORS LLC",
+  "phone": "(305)815-4082",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 150000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "5959 Collins Ave             1404",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "INT RENOVATION",
+    "val": 150000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-08",
+    "sf": "3150"
+   }
+  ]
+ },
+ {
+  "contractor": "HIGH RISE DEVELOPMENT LLC",
+  "phone": "(786)295-0559",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 150000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "stucco"
+  ],
+  "projects": [
+   {
+    "addr": "8870 Sw 136 St",
+    "use": "RETAIL SALES",
+    "desc": "PAVING GRAD PATIO",
+    "val": 150000.0,
+    "type": "ALTER - EXTERIOR",
+    "date": "2026-07-08",
+    "sf": "5800"
+   }
+  ]
+ },
+ {
+  "contractor": "PROCONTRACTORS LLC",
+  "phone": "(786)789-0097",
+  "city": "Hialeah",
+  "permits": 1,
+  "total_value": 150000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "12538 Sw 88 St",
+    "use": "RETAIL SALES",
+    "desc": "INTERIOR ALTERATION",
+    "val": 150000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-28",
+    "sf": "900"
+   }
+  ]
+ },
+ {
+  "contractor": "TURN CONSTRUCTION LLC",
+  "phone": "(305)333-5153",
+  "city": "Miami Beach",
+  "permits": 1,
+  "total_value": 150000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "12200 Nw 25 St               109",
+    "use": "WAREHOUSE/STORAGE",
+    "desc": "WALK-IN COOLER",
+    "val": 150000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-29",
+    "sf": "17600"
+   }
+  ]
+ },
+ {
+  "contractor": "TVI CONSTRUCTION CORP",
+  "phone": "(786)314-0445",
+  "city": "Hollywood",
+  "permits": 1,
+  "total_value": 150000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "400 S Pointe Dr            1104",
+    "use": "CONDO/APT INDIVIDUAL UNIT",
+    "desc": "REMODEL",
+    "val": 150000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-07-30",
+    "sf": "1802"
+   }
+  ]
+ },
+ {
+  "contractor": "COASTAL HOMES OF SOUTH FLORIDA INC DBA",
+  "phone": "(305)559-4900",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 150000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "5121 Fisher Island Dr      5121",
+    "use": "5 UNITS OR MORE  - RESIDENTIAL",
+    "desc": "SINGLE ENTRY DOOR",
+    "val": 150000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-08-03",
+    "sf": "2000"
+   }
+  ]
+ },
+ {
+  "contractor": "G.M.L. CONSTRUCTION INC",
+  "phone": "(786)704-4198",
+  "city": "Miami",
+  "permits": 1,
+  "total_value": 150000,
+  "services_fit": [
+   "cleanup",
+   "paint",
+   "screed"
+  ],
+  "projects": [
+   {
+    "addr": "199 Ocean Lane Dr          613",
+    "use": "CONDO/APT INDIVIDUAL UNIT",
+    "desc": "INT RENOVATION",
+    "val": 150000.0,
+    "type": "ALTER - INTERIOR",
+    "date": "2026-08-04",
+    "sf": "1260"
+   }
+  ]
+ }
+]
