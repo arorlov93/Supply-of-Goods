@@ -18,9 +18,17 @@
 
 Запуск: python3 send_outreach.py [--limit 30] [--dry-run] [--test EMAIL]
 """
-import csv, os, smtplib, ssl, sys, time, datetime
+import csv, os, smtplib, ssl, sys, time, datetime, json, urllib.request
 from email.mime.text import MIMEText
 from email.utils import formataddr
+
+# .env из корня репо (gitignored) подхватывается автоматически
+_env = os.path.join(os.path.dirname(__file__), "..", "..", ".env")
+if os.path.exists(_env):
+    for _l in open(_env):
+        _l = _l.strip()
+        if _l and "=" in _l and not _l.startswith("#"):
+            k, v = _l.split("=", 1); os.environ.setdefault(k, v)
 
 BASE = os.path.join(os.path.dirname(__file__), "..", "outreach", "mdc-2026-08")
 CSV_PATH = os.path.join(BASE, "recipients.csv")
@@ -33,23 +41,40 @@ FOOTER = (
 )
 
 def send_batch(limit=30, dry=False, test=None):
+    # Транспорт 1 (основной в облачной среде): Brevo HTTPS API — прокси пропускает только HTTPS.
+    # Транспорт 2 (fallback для локального запуска): SMTP.
+    brevo_key = os.environ.get("BREVO_API_KEY")
+    sender = os.environ.get("SMTP_USER", "info@ispgroupgc.com")
     host = os.environ.get("SMTP_HOST", "smtp.gmail.com")
     port = int(os.environ.get("SMTP_PORT", "587"))
-    user = os.environ.get("SMTP_USER")
     pw = os.environ.get("SMTP_PASS")
-    if not (user and pw) and not dry:
-        sys.exit("SMTP_USER/SMTP_PASS не заданы в окружении. См. настройку в PLAYBOOK.")
+    if not brevo_key and not pw and not dry:
+        sys.exit("Нет ни BREVO_API_KEY, ни SMTP_PASS в окружении/.env. См. PLAYBOOK.")
 
     def deliver(to_addr, subject, body):
+        if brevo_key:
+            payload = {
+                "sender": {"name": "Aleksandr Orlov, ISP GROUP LLC", "email": sender},
+                "to": [{"email": to_addr}],
+                "replyTo": {"email": sender},
+                "subject": subject,
+                "textContent": body + FOOTER,
+            }
+            req = urllib.request.Request("https://api.brevo.com/v3/smtp/email",
+                json.dumps(payload).encode(),
+                {"api-key": brevo_key, "Content-Type": "application/json"})
+            r = urllib.request.urlopen(req, timeout=60)
+            if r.status not in (200, 201): raise RuntimeError(f"brevo {r.status}")
+            return
         msg = MIMEText(body + FOOTER, "plain", "utf-8")
         msg["Subject"] = subject
-        msg["From"] = formataddr(("Aleksandr Orlov, ISP GROUP LLC", user))
+        msg["From"] = formataddr(("Aleksandr Orlov, ISP GROUP LLC", sender))
         msg["To"] = to_addr
-        msg["Reply-To"] = user
+        msg["Reply-To"] = sender
         with smtplib.SMTP(host, port, timeout=60) as s:
             s.starttls(context=ssl.create_default_context())
-            s.login(user, pw)
-            s.sendmail(user, [to_addr], msg.as_string())
+            s.login(sender, pw)
+            s.sendmail(sender, [to_addr], msg.as_string())
 
     if test:
         deliver(test, "ISP GROUP outreach — тест отправки", "Тест SMTP-отправки. Если вы это видите — канал работает.")
