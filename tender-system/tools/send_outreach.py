@@ -56,6 +56,7 @@ def send_batch(limit=30, dry=False, test=None):
             payload = {
                 "sender": {"name": "Aleksandr Orlov, ISP GROUP LLC", "email": sender},
                 "to": [{"email": to_addr}],
+                "bcc": [{"email": sender}],   # копия каждого письма в ящик info@ — след в почте
                 "replyTo": {"email": sender},
                 "subject": subject,
                 "textContent": body + FOOTER,
