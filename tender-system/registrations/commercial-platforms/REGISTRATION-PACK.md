@@ -15,7 +15,16 @@ EIN:                 38-4380828
 UEI / CAGE:          WA46PAMTYMQ7 / 217F4
 Business type:       LLC (S-corp), Small Business
 W-9:                 подписан (Drive /Tender Department/Company Documents/)
-Insurance:           GL есть — ВПИСАТЬ: carrier, policy #, limits, expiration (нужно от пользователя для prequal-анкет)
+Insurance (COI от 05/05/2026, проверен):
+  Carrier:           National Specialty Insurance Company (NAIC 22608), через Thimble
+  Policy #:          IBL-PK3YE87NZJ
+  Type:              Commercial General Liability (occurrence)
+  Limits:            $1M each occurrence / $1M general aggregate / $1M products-completed ops
+                     / $100k rented premises / $5k med
+  Period:            05/05/2026 – 05/05/2027 (episodic endorsement до 05/05/2028)
+  ⚠️ Пробелы:        Workers Comp — НЕТ; Commercial Auto — НЕТ; aggregate $1M (часть GC хочет $2M)
+  Примечание:        для каждого GC/контракта запрашивать в Thimble COI с GC как certificate holder
+                     + additional insured + waiver of subrogation (в текущем COI оба = N)
 ```
 
 **Trades / Scopes (выбирать при регистрации):**
