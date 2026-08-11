@@ -87,8 +87,9 @@ def send_batch(limit=30, dry=False, test=None):
         if sent >= limit: break
         if r["status"] != "DRAFT_READY_TO_SEND" or "@" not in r.get("email", ""):
             continue
-        body = open(os.path.join(os.path.dirname(CSV_PATH), "..", "..", r["letter_file"])
-                    if not os.path.isabs(r["letter_file"]) else r["letter_file"]).read()
+        repo_root = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
+        body = open(r["letter_file"] if os.path.isabs(r["letter_file"])
+                    else os.path.join(repo_root, r["letter_file"])).read()
         # первая строка письма-файла — "Subject: ..."; отделяем
         lines = body.split("\n")
         subject = lines[0].replace("Subject:", "").strip()
