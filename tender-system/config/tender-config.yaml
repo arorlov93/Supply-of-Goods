@@ -110,12 +110,17 @@ MAX_DAYS_TO_DEADLINE: 60
 MIN_DAYS_TO_DEADLINE: 3
 
 # ─── РЕЖИМЫ И ОГРАНИЧЕНИЯ ──────────────────────────────────────────
-EMAIL_MODE: DRAFT
+# 2026-08-10, решение пользователя: коммерческий cold outreach система отправляет
+# САМА через SMTP (tools/send_outreach.py, лимит 30/день, CAN-SPAM футер, лог).
+# Официальные тендерные квоты/биды — по-прежнему отправляет только пользователь.
+EMAIL_MODE:
+  commercial_outreach: SEND_VIA_SMTP    # секреты в env: SMTP_USER/SMTP_PASS (не в git)
+  official_bids: DRAFT
 REQUIRE_HUMAN_APPROVAL:
   official_bid_submission: true
   registration_legal_steps: true
   paid_subscriptions: true
-  outreach_send: true
+  outreach_send: false                  # снято пользователем 2026-08-10 (только commercial)
   partner_agreements: true
 ALLOW_PAID_REGISTRATIONS: false    # решение пользователя 2026-08-10
 
