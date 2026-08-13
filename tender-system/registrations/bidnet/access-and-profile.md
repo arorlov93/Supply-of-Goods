@@ -14,7 +14,10 @@ Seminole mold remediation (FL, лицензируемо). → нерелеван
 Причина: NIGP-категории/локации в notification profile не соответствуют нашим услугам.
 
 ## Что настроить в профиле (рекомендация)
-**Локации:** Florida (все) — снять California, если не нужен.
+**Локации (директива пользователя 13.08): CA + FL, оба штата, основные города — к локации НЕ привязаны.**
+Оставить обе Purchasing Groups (California + Florida), приоритет крупных метро:
+FL — Miami-Dade, Broward, Palm Beach, Orlando, Tampa, Jacksonville; CA — LA, San Diego, Bay Area, Sacramento.
+Фильтруем НЕ по штату, а ПО ТРЕЙДУ (NIGP ниже).
 **NIGP-категории под наши трейды:**
 - 910/912 — Building Maintenance, Janitorial/Custodial
 - 988 — Landscaping / Grounds Maintenance
@@ -27,12 +30,16 @@ Seminole mold remediation (FL, лицензируемо). → нерелеван
 **Объёмы на BidNet по ключевым словам (весь доступный охват, CA+FL):**
 cleaning 225 · landscaping 149 · painting 136 · flooring 117 · debris 104 · aggregate 35 ·
 janitorial 33 · furniture 28 · stucco 18 · grounds maintenance 13 · pressure washing 7.
-После сужения на FL и наши категории — это управляемый поток на ежедневный разбор из почты.
+Это управляемый поток на ежедневный разбор из почты (оба штата).
+
+## Важно: услуги vs поставка при работе в двух штатах
+- **Поставка** (мебель 425, материалы/aggregate 750, оборудование) — география НЕ ограничивает: отгружаем в любой штат. CA-тендеры на furniture/supply берём наравне с FL.
+- **Услуги** (cleaning, painting, flooring install, landscaping) — нужна бригада на месте. В FL (Miami-Dade база) — свои силы; в CA — только через локального суб-исполнителя или как поставка материалов. В отбор берём, но помечаем «CA services → нужен местный суб».
 
 ## Рабочая схема (принята)
-BidNet шлёт совпадения на info@ispgroupgc.com → я читаю почту (доступ есть) → фильтрую по трейдам/FL →
-qualified в план подачи. Скрейпинг SPA признан хрупким; email-канал надёжнее.
+BidNet шлёт совпадения на info@ispgroupgc.com → я читаю почту (доступ есть) → фильтрую ПО ТРЕЙДУ (оба штата) →
+qualified в план подачи (supply — везде; services CA — с пометкой про местную бригаду). Email-канал надёжнее скрейпинга SPA.
 
 ## Действие пользователя
-Зайти в BidNet → Account → Notification Profile → выставить Florida + NIGP-категории выше.
-После этого email-feed станет релевантным, и я буду вести из него ежедневный отбор.
+BidNet → Account → Notification Profile → оставить California + Florida, добавить NIGP-категории выше
+(сейчас профиль ловит случайное — дорожные CA + нерелевантное FL). После этого email-feed станет релевантным.
