@@ -66,10 +66,30 @@ Certificate как Qualifying Agent компании → ISP получает б
 
 ---
 
-# 2. CALIFORNIA (SF + LA) — CSLB, обязательна для работ ≥ $500
-🚨 Без CSLB-лицензии выполнять/контрактовать отделку в CA нельзя. Нужна **C-35 (Lathing &
-Plastering)** для штукатурки; для другой отделки — свои: C-15 (Flooring), C-54 (Tile),
-C-9 (Drywall), B (General Building).
+# 2. CALIFORNIA (SF + LA) — ПРОТИВОПОЛОЖНО ФЛОРИДЕ: preemption НЕТ
+🚨 В отличие от FL, Калифорния НЕ преемптирует отделочные трейды. Для отделки нужна CSLB-лицензия.
+Но часть услуг ISP — это НЕ «contracting» и лицензии CSLB не требует. Разделяем чётко:
+
+## 2A. ЧТО В CA МОЖНО БЕЗ ЛИЦЕНЗИИ CSLB (законный вход в SF/LA прямо сейчас)
+Эти услуги НЕ являются подрядной деятельностью по CSLB — работаем без лицензии:
+- **Commercial cleaning / janitorial / post-construction cleaning** — CSLB не нужен. НО:
+  California **Janitorial Contractor Registration Act (AB 1978)** — если убираем коммерческие
+  здания СВОИМИ РАБОТНИКАМИ, нужна ежегодная регистрация у Labor Commissioner (DLSE).
+- **Debris removal / hauling / вывоз мусора** — не CSLB (могут требоваться waste-hauler пермиты города).
+- **Material supply** — поставка штукатурных смесей, self-leveler, tile, flooring materials — не CSLB.
+- **Pressure washing (только мойка, без покрытий)** — обычно не CSLB.
+- **Landscape MAINTENANCE / gardening** (кошение, уход) — освобождено; но landscape CONSTRUCTION
+  (installation) = C-27, нужна лицензия.
+- Порог **$1,000 (AB 2622)** для unlicensed — НЕ помогает нам: только работа БЕЗ пермита, в одиночку,
+  без наёмных. Для коммерческого субподряда (пермит+бригада+суммы) не подходит.
+- Городская регистрация (обязательна для любого бизнеса):
+  - **LA:** Business Tax Registration Certificate (Office of Finance).
+  - **SF:** Business Registration (Treasurer/Tax Collector) + gross receipts tax.
+
+## 2B. ЧТО В CA ТРЕБУЕТ ЛИЦЕНЗИИ CSLB (отделка — как и планировали, через партнёра/RME)
+🚨 Штукатурка/стяжка/drywall/tile/флоринг/покраска в CA (≥$500, с пермитом) — ТОЛЬКО с CSLB.
+Нужна **C-35 (Lathing & Plastering)** для штукатурки; для другой отделки — C-15 (Flooring),
+C-54 (Tile), C-9 (Drywall), C-33 (Painting), B (General Building).
 
 **Требования CSLB (2026):**
 1. **Опыт:** **4 года** journeyman/supervisory по трейду за последние 10 лет (до 3 лет можно

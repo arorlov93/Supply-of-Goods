@@ -41,22 +41,22 @@ rough carpentry, финальная уборка, вывоз мусора.
   sub, готовый quote за 48ч. НЕ наши (остаются лицензируемыми): электрика, сантехника, HVAC,
   кровля, structural — их не предлагаем.
 
-### San Francisco + Los Angeles (CA) — ВТОРИЧНЫЙ, НЕ self-perform без лицензии
-🚨 **КРИТИЧНО (главная «мелочь»):** California CSLB требует лицензию подрядчика на ЛЮБЫЕ
-строительно-отделочные работы контрактной стоимостью ≥ $500 (труд+материалы). Штукатурка = **C-35
-(Lathing & Plastering)**, флоринг = C-15, tile = C-54, general = B. **У ISP лицензии CSLB нет.**
-Предлагать/выполнять эти услуги в CA как исполнителю = незаконная контрактная деятельность
-(наказуемо, вредит репутации). ПОЭТОМУ в CA агент работает ТОЛЬКО в трёх режимах:
-  1. **Material supply** — поставка материалов (штукатурные смеси, self-leveler, tile, flooring
-     materials) CA-подрядчикам. Это законно без CSLB.
-  2. **Partner-seeking** — поиск CA-licensed contractor для JV/партнёрства (ISP = labor/material
-     supply partner под их лицензией). Оформление партнёрства — только человек.
-  3. **Lead-gen для будущего** — собирать спрос/контакты, но НЕ давать ценовых обязательств на
-     услуги и НЕ заявлять, что ISP выполнит работы, пока нет CSLB-лицензии или партнёра.
-- В CA-письмах НЕ используем формулировки «we can do your plastering/flooring». Используем
-  «we supply [materials] / we're expanding into the [SF/LA] market and seeking licensed partners».
-- Если пользователь получит CSLB-лицензию или CA-партнёра — режим CA переключается на self-perform
-  (обновить этот раздел). До тех пор — только supply/partner.
+### San Francisco + Los Angeles (CA) — противоположно FL: preemption НЕТ
+🚨 California НЕ преемптирует отделку (в отличие от FL HB 1383). Порог $1,000 (AB 2622) нам не
+подходит (только без пермита, в одиночку). Поэтому разделяем услуги на два класса:
+
+**МОЖНО без CSLB (продаём в SF/LA прямо сейчас, self-perform):**
+- **Commercial / post-construction cleaning, janitorial** — не CSLB. Нюанс: если убираем СВОИМИ
+  работниками — нужна регистрация Janitorial Act (DLSE). Городская бизнес-регистрация (LA BTRC / SF).
+- **Debris removal / hauling** — не CSLB (waste-hauler пермиты города по необходимости).
+- **Material supply** (штукатурка/self-leveler/tile/flooring materials) — не CSLB.
+- **Pressure washing** (только мойка), **landscape maintenance/gardening** (уход, не installation).
+
+**НЕЛЬЗЯ без CSLB (в CA НЕ продаём как исполнитель):**
+- Штукатурка/стяжка/drywall/tile/флоринг/покраска ≥$500 с пермитом = нужна CSLB (C-35/C-15/C-54/
+  C-9/C-33/B). Здесь агент работает ТОЛЬКО: (1) material supply, (2) поиск licensed CA-партнёра/RME
+  для JV, (3) lead-gen без ценовых обязательств. НЕ писать «we can do your plastering/flooring».
+- Если ISP получит CSLB или CA-партнёра — переключить CA-отделку на self-perform (обновить раздел).
 
 ---
 
