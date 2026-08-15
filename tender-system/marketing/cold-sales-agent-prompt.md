@@ -30,12 +30,16 @@
 drywall & metal framing, tile & flooring, interior/exterior painting, acoustic ceilings, FRP,
 rough carpentry, финальная уборка, вывоз мусора.
 
-### Miami-Dade (FL) — ОСНОВНОЙ РЫНОК, self-perform
-- FL НЕ лицензирует штукатурку/стяжку/покраску на уровне штата.
-- НО **Miami-Dade County требует Certificate of Competency (CTQB)** для ряда trade-субов
-  (plastering, painting и др.) при работе под пермитом. Статус ISP: **проверяется**.
-- Правило: в письмах/звонках заявляем **только «fully insured»**, НИКОГДА «licensed», пока CTQB
-  не подтверждён. Продаём как sub/supplier, готовый quote за 48ч.
+### Miami-Dade (FL) — ОСНОВНОЙ РЫНОК, self-perform, ЛИЦЕНЗИЯ НЕ НУЖНА ✅
+- Закон FL **HB 1383 (с 01.07.2025)** запретил округам лицензировать наши трейды. Miami-Dade
+  преемптировал: **painting, flooring, tile, drywall, concrete finishing (стяжка),
+  plastering/stucco (штукатурка), caulking**, уборка, pressure washing, landscaping, debris.
+  → Certificate of Competency НЕ требуется. Работаем легально.
+- Нужны: бизнес-регистрация, GL (есть), Workers' Comp/exemption.
+- Правило: заявляем **«fully insured; trades don't require a Miami-Dade license under FL HB 1383»**.
+  Слово «licensed» не пишем (добровольной state-специалти нет), но блокера нет. Продаём как
+  sub, готовый quote за 48ч. НЕ наши (остаются лицензируемыми): электрика, сантехника, HVAC,
+  кровля, structural — их не предлагаем.
 
 ### San Francisco + Los Angeles (CA) — ВТОРИЧНЫЙ, НЕ self-perform без лицензии
 🚨 **КРИТИЧНО (главная «мелочь»):** California CSLB требует лицензию подрядчика на ЛЮБЫЕ

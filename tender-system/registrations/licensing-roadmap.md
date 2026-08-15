@@ -11,12 +11,40 @@
 
 ---
 
-# 1. FLORIDA / MIAMI-DADE — штукатурка, стяжка, отделка
-Эти трейды НЕ лицензируются штатом FL (DBPR лицензирует GC/building), а регулируются на уровне
-округа. Нужен **Miami-Dade Certificate of Competency (CTQB)** по нужному трейду:
-- **Plastering / Stucco** → «Lathing & Plastering Contractor» (штукатурка, lath, metal studs).
-- Флоринг/tile, drywall — отдельные specialty-категории CTQB (по каждой свой Certificate).
-- (Broward и Palm Beach — свои county-сертификаты; начинаем с Miami-Dade.)
+# 1. FLORIDA / MIAMI-DADE — БОЛЬШИНСТВО НАШИХ РАБОТ ЛИЦЕНЗИИ НЕ ТРЕБУЮТ ✅
+🎉 **КЛЮЧЕВОЕ (обновление 14.08): закон FL HB 1383 с 01.07.2025 ЗАПРЕТИЛ округам (в т.ч.
+Miami-Dade) требовать местную лицензию на наши основные трейды.** Округ официально ведёт список
+«Contractor License Category Preemption». Больше НЕ требуют Certificate of Competency:
+- **Painting** (и roof cleaning/painting, sign painting)
+- **Flooring / Resilient Floor / Masonry Floor** (флоринг, покрытия)
+- **Tile / decorative stone / marble / granite / terrazzo** (плитка, камень)
+- **Drywall Installation & Finishing** (гипсокартон)
+- **Concrete Finishing** (в т.ч. стяжка/затирка полов — screed)
+- **Caulking, Plastering, Stuccoing** — ШТУКАТУРКА И СТУКО ТОЖЕ ПРЕЕМПТИРОВАНЫ
+- Insulation & Acoustical Tile, handyman, pressure washing, landscaping, debris removal, уборка
+
+**Вывод:** практически весь наш профиль — стяжка, штукатурка/stucco, drywall, tile, флоринг,
+покраска, отделка, уборка — в Miami-Dade можно выполнять ЛЕГАЛЬНО БЕЗ Certificate of Competency.
+Нужны только: регистрация бизнеса, GL-страховка (есть), Workers' Comp (или exemption).
+
+⚠️ Два нюанса:
+1. **State-level опция:** FL создала ДОБРОВОЛЬНЫЕ штатные specialty-категории (в т.ч. «Plaster & Lath»).
+   Они не обязательны для preempted-работ, но существуют — можно получить для престижа/крупных GC.
+2. **Осталось локально лицензируемым (исключения HB 1383):** структурные работы, электрика,
+   сантехника, HVAC, кровля, structural masonry/steel/carpentry, окна/двери (structural), seawall.
+   Мы это НЕ делаем — не касается.
+3. **Порог $2,500 / пермит-exemption:** для мелких работ действуют пороги, но для preempted-трейдов
+   лицензия не нужна независимо от суммы (нужен пермит/работа под пермитом GC, как обычно у субов).
+
+## Что это меняет для рассылки/продаж (СРАЗУ)
+- В Miami-Dade можно **продавать и выполнять** стяжку, штукатурку, drywall, tile, флоринг, покраску,
+  отделку, уборку — легально, без лицензии. Блокер снят.
+- В письмах теперь корректно: «fully insured, operating in trades that do not require a Miami-Dade
+  contractor license under FL HB 1383». Слово «licensed» по-прежнему НЕ используем (у нас нет
+  добровольной state-специалти), но и оправдываться за отсутствие лицензии больше не нужно.
+- Прежний статус «CTQB = блокер» → СНЯТ для наших трейдов.
+
+### Если всё же захотим лицензию (необязательно):
 
 **Что нужно для Certificate of Competency:**
 1. **Опыт:** документально подтверждённый (обычно несколько лет) — письма от работодателей с
@@ -64,15 +92,15 @@ fingerprints, бонд). Через RME/RMO — быстрее, но найти 
 
 ---
 
-# 3. РЕКОМЕНДАЦИЯ ПО ПРИОРИТЕТУ
-1. **Сначала Miami-Dade (FL)** — это наш основной рынок и активная рассылка. Проверить точные
-   требования Lathing&Plastering в CTQB; параллельно искать квалификатора с этим сертификатом.
-   Быстрее и дешевле, чем CA. Открывает legal self-perform по штукатурке/стяжке в Miami-Dade.
-2. **Workers' Comp / exemption** — оформить в любом случае (нужно и для CTQB, и для prequal у GC,
-   и для CA). FL exemption на управляющего члена ~$50, онлайн.
-3. **California — только через RME/RMO-квалификатора ИЛИ пока держим режим supply/partner.**
-   Самим набирать 4 года и сдавать 2 экзамена — долго; для входа в SF/LA реалистичнее найти
-   licensed CA-партнёра (JV) или C-35 RME. До этого в CA продаём ТОЛЬКО материалы (как в промте).
+# 3. РЕКОМЕНДАЦИЯ ПО ПРИОРИТЕТУ (обновлено 14.08)
+1. **Miami-Dade (FL) — лицензия НЕ нужна для наших трейдов (HB 1383).** Работаем легально уже
+   сейчас: нужны только бизнес-регистрация, GL (есть) и Workers' Comp/exemption. Никакого CTQB.
+2. **Workers' Comp / exemption** — оформить (нужно для работы на объектах, prequal-анкет GC, и CA).
+   FL exemption на управляющего члена ~$50, онлайн. ЕДИНСТВЕННЫЙ реальный «license-шаг» для FL.
+3. **(Опционально)** добровольная FL state «Plaster & Lath» specialty — для престижа/крупных GC,
+   не обязательна. Можно отложить.
+4. **California — по-прежнему нужна CSLB** (там preemption нет, лицензия обязательна ≥$500).
+   Только через RME/RMO-квалификатора или CA-партнёра; до этого в SF/LA — ТОЛЬКО материалы.
 
 # 4. ЧТО ДЕЛАТЬ СЕЙЧАС (чек-лист)
 - [ ] FL: позвонить/зайти в Miami-Dade CTQB — уточнить по Lathing&Plastering: годы опыта, список
