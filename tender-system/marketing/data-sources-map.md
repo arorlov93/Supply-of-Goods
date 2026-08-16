@@ -4,9 +4,12 @@
 ## FLORIDA (пермиты дают контрактора + телефон) ✅
 - **Miami-Dade** — ArcGIS `miamidade_permit_data`: ContractorName + Phone + объект + сумма. РАБОТАЕТ
   (текущая база 90+ целей). Дозагрузка по расписанию.
-- **Broward** — портал BrOWD/EPermits; проверить наличие open-data с контрактором (след. шаг).
-- **Palm Beach** — PBC ePZB / open data; проверить (след. шаг).
-- Ожидаемый охват FL: ~1,200–1,800 целей (GC/owners с активными объектами).
+- **Broward** — портал BrOWD/EPermits; проверено 16.08: gis.broward.org и data.broward.org НЕ
+  отвечают через прокси (пусто/invalid). ArcGIS-каталог с контрактором не найден открыто. ❌ пока.
+- **Palm Beach** — PBC ePZB / open data; проверено 16.08: services1.arcgis.com/rBhkPT1NUicJDNKk
+  тоже invalid. ❌ пока. → FL email-ядро держим на Miami-Dade (надёжно, с телефоном+GC).
+- Ожидаемый охват FL: Miami-Dade ~1,000+ надёжно; Broward/PB — только если найдём рабочий
+  open-data endpoint (низкий приоритет: MDC + CSLB уже дают ~3000 запас).
 
 ## CALIFORNIA — пермиты БЕЗ контактов ❌ → источник = CSLB License Master ✅
 Проверено: пермиты LA (data.lacity.org) и SF (data.sfgov.org) НЕ содержат контрактора/телефона;
