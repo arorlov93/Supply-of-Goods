@@ -5,3 +5,7 @@
 *.key
 credentials*.json
 token*.json
+
+# large raw datasets
+tender-system/**/cslb_master.csv
+*.raw.csv
