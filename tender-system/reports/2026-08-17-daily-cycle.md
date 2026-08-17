@@ -6,8 +6,8 @@
     MG3 Developer Group, Litecrete, Building Unlimited — письма привязаны к активным пермит-объектам ($1.8M–$43.6M).
   - CA Bay Area (10): Fisher Design&Build, Peninsula Construction, Gar-Cal, Keystone, Integrity Paint,
     361 Construction, Rayco Painting, Detail Drywall&Stucco, Redlog Flooring, Coastal Tile.
-- Email-дискавери за день: **17 подтверждённых адресов** (10 CA + 7 FL, проверены на реальных сайтах);
-  ещё батч LA в работе (для завтра). В phone-only очередь (звонок, Twilio позже): 16.
+- Email-дискавери за день: **20 подтверждённых адресов** (10 CA-Bay + 7 FL отправлены; +3 LA — Expert Tile,
+  Apollo Painting, Nova Contractors — в DRAFT_READY на завтра). В phone-only очередь (звонок, Twilio позже): 25.
 
 ## SAM.gov скан (обязательный)
 - Активных по категориям ISP: **929**. Новых с 14.08: **206** (накопление за выходные).
