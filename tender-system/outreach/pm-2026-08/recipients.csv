@@ -1,15 +1,15 @@
 #,company,city,email,type,website,status
-1,Miami Management,Miami,customers@miamimanagement.com,property_mgmt,miamimanagement.com,DRAFT_READY_TO_SEND
-2,Allen Morris Company,Coral Gables,info@allenmorris.com,property_mgmt,allenmorris.com,DRAFT_READY_TO_SEND
-3,Sharpe Properties,Miami,info@sharpeproperties.com,property_mgmt,sharpeproperties.com,DRAFT_READY_TO_SEND
-4,CADISA,Miami,contactus@cadisainc.com,property_mgmt,cadisainc.com,DRAFT_READY_TO_SEND
-5,GIC Asset Management,Miami,susy.fernandez@gicassetmanagement.com,retail,gicassetmanagement.com,DRAFT_READY_TO_SEND
-6,Ideal Shopping Center Management,Miami,mike@cdamiami.com,retail,idealshoppingcentermanagement.com,DRAFT_READY_TO_SEND
-7,Miami Commercial Property Management,Doral,info@miamicommercialpropertymanagement.com,property_mgmt,miamicommercialpropertymanagement.com,DRAFT_READY_TO_SEND
-8,JMK Property Management,Miami,info@jmkpropertymanagement.com,property_mgmt,jmkpropertymanagement.com,DRAFT_READY_TO_SEND
-9,Stiles Property Management,Fort Lauderdale,Adrienne.zalkind@stiles.com,property_mgmt,stiles.com,DRAFT_READY_TO_SEND
-10,Campbell Property Management,Coral Springs,contact@campbellproperty.com,HOA,campbellpropertymanagement.com,DRAFT_READY_TO_SEND
-11,Fusion AMG,Broward,support@fusionpmg.com,HOA,fusionpmg.com,DRAFT_READY_TO_SEND
-12,Marquis Association Management,Aventura,oded.abravanel@marquishoa.com,HOA,marquishoa.com,DRAFT_READY_TO_SEND
-13,ASPMG,Miami,info@aspmg.com,HOA,aspmg.com,DRAFT_READY_TO_SEND
-14,Ardent Residential,Miami,hello@myardent.com,HOA,myardent.com,DRAFT_READY_TO_SEND
+1,Miami Management,Miami,customers@miamimanagement.com,property_mgmt,miamimanagement.com,SENT_2026-08-19
+2,Allen Morris Company,Coral Gables,info@allenmorris.com,property_mgmt,allenmorris.com,SENT_2026-08-19
+3,Sharpe Properties,Miami,info@sharpeproperties.com,property_mgmt,sharpeproperties.com,SENT_2026-08-19
+4,CADISA,Miami,contactus@cadisainc.com,property_mgmt,cadisainc.com,SENT_2026-08-19
+5,GIC Asset Management,Miami,susy.fernandez@gicassetmanagement.com,retail,gicassetmanagement.com,SENT_2026-08-19
+6,Ideal Shopping Center Management,Miami,mike@cdamiami.com,retail,idealshoppingcentermanagement.com,SENT_2026-08-19
+7,Miami Commercial Property Management,Doral,info@miamicommercialpropertymanagement.com,property_mgmt,miamicommercialpropertymanagement.com,SENT_2026-08-19
+8,JMK Property Management,Miami,info@jmkpropertymanagement.com,property_mgmt,jmkpropertymanagement.com,SENT_2026-08-19
+9,Stiles Property Management,Fort Lauderdale,Adrienne.zalkind@stiles.com,property_mgmt,stiles.com,SENT_2026-08-19
+10,Campbell Property Management,Coral Springs,contact@campbellproperty.com,HOA,campbellpropertymanagement.com,SENT_2026-08-19
+11,Fusion AMG,Broward,support@fusionpmg.com,HOA,fusionpmg.com,SENT_2026-08-19
+12,Marquis Association Management,Aventura,oded.abravanel@marquishoa.com,HOA,marquishoa.com,SENT_2026-08-19
+13,ASPMG,Miami,info@aspmg.com,HOA,aspmg.com,SENT_2026-08-19
+14,Ardent Residential,Miami,hello@myardent.com,HOA,myardent.com,SENT_2026-08-19
