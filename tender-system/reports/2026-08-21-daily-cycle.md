@@ -1,7 +1,7 @@
 # Ежедневный цикл ISP — 2026-08-21 (пт) · фокус: КЛИНИНГ + СУБПОДРЯД
 
 ## Касания
-- PM janitorial: 3-я партия в подготовке (агент собирает новых property/facility managers). 28 уже отправлено (2 партии).
+- PM janitorial: **12 отправлено** (3-я партия) → **40 всего** за 3 дня (property/facility managers Miami-Dade/Broward/PB).
 - Ответов на 28 janitorial-питчей пока нет (первые <48ч), opt-out нет.
 
 ## SAM.gov скан
