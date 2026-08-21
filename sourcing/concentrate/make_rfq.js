@@ -79,8 +79,8 @@ const doc = new Document({
       p([t('Kindly reply to '), new TextRun({ text: 'estimating@ispgroupgc.com', font: 'Calibri', size: 22, bold: true }), t('. Thank you — I look forward to your offer.')]),
 
       p([t('Best regards,')], { spacing: { before: 180, after: 220 } }),
-      p([new TextRun({ text: 'Aleksandr Orlov', font: 'Calibri', size: 22, bold: true })], { spacing: { after: 20 } }),
-      p([t('Managing Member — ISP Group LLC')], { spacing: { after: 20 } }),
+      p([new TextRun({ text: 'Estimating Department', font: 'Calibri', size: 22, bold: true })], { spacing: { after: 20 } }),
+      p([t('ISP Group LLC')], { spacing: { after: 20 } }),
       p([t('estimating@ispgroupgc.com')]),
     ],
   }],

@@ -93,8 +93,8 @@ const doc = new Document({
 
       // Sign-off
       p([t('Best regards,')], { spacing: { before: 200, after: 240 } }),
-      p([new TextRun({ text: 'Aleksandr Orlov', font: 'Calibri', size: 22, bold: true })], { spacing: { after: 20 } }),
-      p([t('Managing Member — ISP Group LLC')], { spacing: { after: 20 } }),
+      p([new TextRun({ text: 'Estimating Department', font: 'Calibri', size: 22, bold: true })], { spacing: { after: 20 } }),
+      p([t('ISP Group LLC')], { spacing: { after: 20 } }),
       p([t('estimating@ispgroupgc.com')], { spacing: { after: 20 } }),
       p([new TextRun({ text: '[Add: proof-of-funds available on NCNDA · SGS/AHK inspection · LC/escrow settlement]', font: 'Calibri', size: 18, italics: true, color: GREY })]),
     ],
