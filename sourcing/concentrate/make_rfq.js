@@ -50,7 +50,7 @@ const doc = new Document({
     children: [
       p([new TextRun({ text: 'ISP GROUP LLC', font: 'Calibri', size: 30, bold: true, color: BRAND })], { spacing: { after: 20 } }),
       p([new TextRun({ text: 'International Trading & Supply', font: 'Calibri', size: 20, color: GREY })], { spacing: { after: 20 } }),
-      p([new TextRun({ text: '16395 Biscayne Blvd, Apt 818, Aventura, FL 33160, USA  ·  estimating@ispgroupgc.com  ·  +1 (929) 707-5551', font: 'Calibri', size: 18, color: GREY })], { spacing: { after: 120 } }),
+      p([new TextRun({ text: '16395 Biscayne Blvd, Aventura, FL 33160, USA  ·  estimating@ispgroupgc.com', font: 'Calibri', size: 18, color: GREY })], { spacing: { after: 120 } }),
       rule(),
 
       p([t('Date: '), ph('[DD Month 2026]')]),
@@ -81,7 +81,7 @@ const doc = new Document({
       p([t('Best regards,')], { spacing: { before: 180, after: 220 } }),
       p([new TextRun({ text: 'Aleksandr Orlov', font: 'Calibri', size: 22, bold: true })], { spacing: { after: 20 } }),
       p([t('Managing Member — ISP Group LLC')], { spacing: { after: 20 } }),
-      p([t('estimating@ispgroupgc.com  ·  +1 (929) 707-5551')]),
+      p([t('estimating@ispgroupgc.com')]),
     ],
   }],
 });
