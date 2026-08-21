@@ -50,7 +50,7 @@ const doc = new Document({
     children: [
       p([new TextRun({ text: 'ISP GROUP LLC', font: 'Calibri', size: 30, bold: true, color: BRAND })], { spacing: { after: 20 } }),
       p([new TextRun({ text: 'International Trading & Supply', font: 'Calibri', size: 20, color: GREY })], { spacing: { after: 20 } }),
-      p([new TextRun({ text: '16395 Biscayne Blvd, Apt 818, Aventura, FL 33160, USA  ·  info@ispgroupgc.com  ·  +1 (929) 707-5551', font: 'Calibri', size: 18, color: GREY })], { spacing: { after: 120 } }),
+      p([new TextRun({ text: '16395 Biscayne Blvd, Apt 818, Aventura, FL 33160, USA  ·  estimating@ispgroupgc.com  ·  +1 (929) 707-5551', font: 'Calibri', size: 18, color: GREY })], { spacing: { after: 120 } }),
       rule(),
 
       p([t('Date: '), ph('[DD Month 2026]')]),
@@ -76,12 +76,12 @@ const doc = new Document({
 
       p([t('For reference, we price against '), new TextRun({ text: 'LME copper less prevailing TC/RC and standard payables', font: 'Calibri', size: 22, bold: true }), t(', with proper credit for the silver and gold content. Offers that reflect the current market on those terms will get a firm response from us within '), ph('[24–48] hours'), t('.')], { spacing: { before: 120 } }),
       p([t('If this exact parcel is no longer available, please quote your current stock of the same or comparable copper concentrate — we are an active, repeat buyer.')]),
-      p([t('Kindly reply to '), new TextRun({ text: 'info@ispgroupgc.com', font: 'Calibri', size: 22, bold: true }), t('. Thank you — I look forward to your offer.')]),
+      p([t('Kindly reply to '), new TextRun({ text: 'estimating@ispgroupgc.com', font: 'Calibri', size: 22, bold: true }), t('. Thank you — I look forward to your offer.')]),
 
       p([t('Best regards,')], { spacing: { before: 180, after: 220 } }),
       p([new TextRun({ text: 'Aleksandr Orlov', font: 'Calibri', size: 22, bold: true })], { spacing: { after: 20 } }),
       p([t('Managing Member — ISP Group LLC')], { spacing: { after: 20 } }),
-      p([t('info@ispgroupgc.com  ·  +1 (929) 707-5551')]),
+      p([t('estimating@ispgroupgc.com  ·  +1 (929) 707-5551')]),
     ],
   }],
 });
