@@ -29,3 +29,18 @@ and plan to bid. Could you confirm the due date, whether it's set-aside (SBE/SLB
 ## Важно
 Звонки в бизнес/госномера — ок. Записывать согласие если попросят прислать инфо на email (тогда шлём с info@).
 Холодные SMS не слать (TCPA).
+
+## ВОПРОС ПРО БЮДЖЕТ (где стоимости нет — обязательно спросить)
+Для строк без «Стоимость закупки» (звонки в закупки, JLS-пул, часть SAM) — прямо спросить бюджет:
+- «Could you share the estimated annual budget or not-to-exceed value for the upcoming janitorial/grounds
+  contract, so we can prepare a competitive proposal?»
+- «Is there an engineer's estimate or prior-year contract value we can reference?»
+- «What was the value of the current/expiring contract for this service?»
+→ Записать ответ в колонку «Стоимость закупки». Где не скажут по телефону — см. колонку «Где искать стоимость»
+  (пакет солиситейшена / award ceiling / история USASpending / прошлый контракт).
+
+## C) Звонок GC на final-clean (строки «GC», из пермитов Miami-Dade)
+«Hi, this is Aleksandr with ISP Group — South Florida post-construction cleaning. I saw you have an active
+project at [адрес объекта]. As you approach closeout, we can handle the final/detail clean so your super
+doesn't have to. Could I get the square footage and target CO date to send a quick number?»
+→ Спросить: метраж, срок сдачи, кто отвечает за closeout. Уборку считаем от площади (см. cleaning-services-pack).
