@@ -7,7 +7,7 @@
   активных объектах — более срочная потребность, чем recurring janitorial). Кампания `outreach/gc-clean-2026-08/`.
 
 ## Касания
-- GC final-clean: дискавери email локальных Miami-Dade GC в работе → рассылка final-clean питча.
+- GC final-clean: **4 отправлено** (Gestido, Ya-Gar, Alcon, US Construction) — новый канал; 7 GC без email → phone-only.
 - PM janitorial: 53 отправлено (пауза на добор новых — переключаемся на GC-канал и follow-up).
 
 ## SAM.gov скан
