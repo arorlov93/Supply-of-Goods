@@ -94,6 +94,37 @@ def main():
     ]
     rows += platform
 
+    # Доп. FL-агентства (проверено агентом 25.08). (v)=verified live, (i)=из индекса .gov — проверить перед обзвоном.
+    # tuple: (имя, описание, город, телефон, контакт, портал/источник)
+    fl2 = [
+        ("City of Hialeah — Purchasing", "Регистрация вендора; клининг по городу", "Hialeah, FL", "305-883-5865", "Purchasing@hialeahfl.gov", "OpenGov"),
+        ("City of Coral Gables — Procurement", "Регистрация; клининг/grounds", "Coral Gables, FL", "305-460-5102", "procurement@coralgables.com", "Public Purchase"),
+        ("City of Homestead — Procurement", "Регистрация вендора", "Homestead, FL", "305-224-4620", "vendors@homesteadfl.gov", "OpenGov"),
+        ("City of Aventura — Purchasing", "Регистрация вендора (наш город HQ)", "Aventura, FL", "305-466-8925", "—", "DemandStar"),
+        ("City of Pembroke Pines — Procurement", "Регистрация; клининг по городу", "Pembroke Pines, FL", "954-518-9020", "purchasing@ppines.com", "OpenGov"),
+        ("City of Hollywood — Procurement", "Регистрация вендора", "Hollywood, FL", "954-921-3299", "Sstewart@hollywoodfl.org", "OpenGov"),
+        ("City of Pompano Beach — Procurement", "Регистрация вендора", "Pompano Beach, FL", "954-786-4098", "purchasing@copbfl.com", "OpenGov"),
+        ("City of Boca Raton — Purchasing", "Регистрация в supplier-портале", "Boca Raton, FL", "561-393-7871", "online supplier reg", "Own portal"),
+        ("FIU — Procurement Services", "Крупный кампус — janitorial/grounds спрос", "Miami, FL", "305-348-2161", "vendors@fiu.edu", "PantherSoft / bids.fiu.edu"),
+        ("Miami Dade College — Purchasing", "Много кампусов — клининг", "Miami, FL", "305-237-2402", "purchasing@mdc.edu", "eSupplier + BidNet"),
+        ("Broward College — Procurement", "Кампусы — janitorial/grounds", "Fort Lauderdale, FL", "954-201-7350", "procurement@broward.edu", "Euna OpenBids + MFMP"),
+        ("University of Miami — Supply Chain", "Частный универ; крупный кампус", "Coral Gables, FL", "305-284-5751", "—", "Jaggaer"),
+        ("Jackson Health System — Procurement", "Крупная больничная сеть — клининг", "Miami, FL", "305-585-7333", "Procurement.Services@jhsmiami.org", "Infor Supplier Portal"),
+        ("Miami-Dade Vendor Services (Port/MIA/Transit/WASD)", "Одна регистрация на порт, аэропорт, транзит, воду", "Miami, FL", "305-375-5773", "DTPW 786-469-5225 · WASD 305-665-7477", "INFORMS"),
+        ("South Florida Water Management District — Procurement", "Клининг/grounds по объектам district", "West Palm Beach, FL", "561-682-2011", "CMDM@sfwmd.gov", "Own portal"),
+        ("City of Sunrise — Purchasing (проверить номер)", "Регистрация вендора", "Sunrise, FL", "954-572-2274 (проверить)", "Purchasing@sunrisefl.gov", "DemandStar"),
+        ("City of West Palm Beach — Procurement (проверить)", "Регистрация вендора", "West Palm Beach, FL", "561-822-2100 (проверить)", "Procurement@wpb.org", "DemandStar"),
+        ("City of Coral Springs — Purchasing (проверить)", "Регистрация вендора", "Coral Springs, FL", "954-344-1101 (проверить)", "LBermudez@coralsprings.gov", "OpenGov/DemandStar"),
+        ("City of Miramar — Procurement (проверить)", "Регистрация вендора", "Miramar, FL", "954-602-3311 (проверить)", "procurementdept@miramarfl.gov", "DemandStar"),
+        ("Nova Southeastern University — Procurement (проверить)", "Частный универ; кампус Davie", "Davie, FL", "954-262-8841 (проверить)", "purchasing@nova.edu", "SAP Ariba + DemandStar"),
+        ("Broward Health — Vendor Relations (проверить)", "Больничная сеть — клининг", "Fort Lauderdale, FL", "954-473-7289 (проверить)", "vendorrelations@browardhealth.org", "Own VRS portal"),
+        ("City of Doral — Procurement (без звонков)", "Телефон не принимают — только email/портал", "Doral, FL", "", "procurement@cityofdoral.com", "Own + DemandStar"),
+        ("Palm Beach State College — Purchasing (без звонков)", "Телефон по закупкам не принимают — email/портал", "Lake Worth, FL", "", "purchasing@pbsc.edu", "DemandStar"),
+        ("Memorial Healthcare System — Supply Chain (email/портал)", "Больничная сеть; Facilities 954-265-8670", "Hollywood, FL", "954-265-8670", "vendorinquiry@mhs.net (Facilities line)", "DemandStar"),
+    ]
+    for nm, ds, ci, ph, ct, portal in fl2:
+        rows.append(prow(f"ЗВОНОК: {nm}", ds, ci, "постоянно", "—", ASK, ph, ct, "—", "все категории", portal, ""))
+
     # FL-подрядчики из пермитов Miami-Dade (телефон+объект) → звонок на final-clean суб
     mdc = os.path.join(os.path.dirname(__file__), "..", "outreach", "mdc-2026-08", "recipients.csv")
     gc = 0
