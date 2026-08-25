@@ -70,14 +70,23 @@ def main():
             "Ссылка": o["link"],
         })
         time.sleep(0.15)
-    # строки с других платформ (из наших отчётов — проверенные телефоны)
+    # Строки с других платформ — телефоны ВЕРИФИЦИРОВАНЫ по официальным .gov/.edu (25.08.2026).
+    # (a) КОНКРЕТНЫЕ ТЕНДЕРЫ с известной стоимостью/контактом:
     platform = [
-        ["Miami-Dade JLS — Janitorial & Landscaping (SBE пул)", "Miami, FL", "rolling (нужна SBE)", "right-sized задания", "305-375-3111", "Small Business Development · sbdcert@miamidade.gov", "SBE set-aside", "janitorial/landscaping", "Miami-Dade County", "miamidade.gov/global/strategic-procurement/janitorial-and-landscaping-services.page"],
-        ["City of Tampa — Janitorial @ Water Engineering (recompete)", "Tampa, FL", "imminent", "$3,152,000 (инкумбент)", "813-274-8351", "City of Tampa Procurement (SLBE)", "SLBE set-aside", "janitorial", "OpenGov 25-P-00234", "procurement.opengov.com/portal/cityoftampa"],
-        ["Early Learning Coalition Palm Beach — Janitorial", "West Palm Beach, FL", "recompete watch", "$25,000–$70,000/год", "561-514-3300", "ELC Palm Beach Procurement", "open", "janitorial", "BidNet ITB 26-100", "elcpalmbeach.org"],
-        ["FSW College 26-02 — Painting/Pressure Cleaning JOC", "Fort Myers, FL", "проверить addendum", "JOC unit-price", "239-489-9089", "FSW Procurement Services", "open", "painting/pressure", "BidNet", "bidnetdirect.com/florida"],
-        ["Broward County Public Schools — Grounds (7 зон)", "Fort Lauderdale, FL", "recompete watch", "$11,000,000 (всего)", "754-321-0505", "Broward Schools Procurement", "open", "landscaping", "RFP26-008 (DemandStar)", "browardschools.com"],
-        ["City of Fort Lauderdale — Janitorial Citywide (rebid)", "Fort Lauderdale, FL", "recompete watch", "$500,000–$2,000,000", "954-828-5140", "City of Ft Lauderdale Procurement", "open", "janitorial", "BidNet opp #494", "bidnetdirect.com/florida"],
+        ["ТЕНДЕР: Miami-Dade JLS — Janitorial & Landscaping (SBE пул)", "Miami, FL", "rolling — нужна SBE-серт.", "right-sized задания (пул)", "305-375-1939", "Small Business Development · sbdcert@miamidade.gov", "SBE set-aside", "janitorial/landscaping", "Miami-Dade SPD", "miamidade.gov/global/strategic-procurement/janitorial-and-landscaping-services.page"],
+        ["ТЕНДЕР: City of Tampa — Janitorial @ Water Eng. (recompete)", "Tampa, FL", "имминентно", "$3,152,000 (инкумбент)", "813-274-8351", "Buyer Eryn Berg (Water Dept) — SLBE-restricted", "SLBE set-aside", "janitorial", "OpenGov 25-P-00234", "procurement.opengov.com/portal/cityoftampa"],
+        ["ТЕНДЕР: FSW College 26-02 — Painting/Pressure JOC", "Fort Myers, FL", "проверить addendum на BidNet", "JOC unit-price", "239-489-9256", "FSW Procurement · purchasing@fsw.edu · Dir. R.Pence 239-489-9102", "open", "painting/pressure", "BidNet / fsw.edu/procurement", "fsw.edu/procurement"],
+        ["ТЕНДЕР: Early Learning Coalition PBC — Janitorial", "West Palm Beach, FL", "recompete watch", "$25,000–$70,000/год", "561-214-8000", "ELC PBC Admin — контакт брать из конкретного RFP", "open", "janitorial", "BidNet ITB 26-100", "elcpalmbeach.org/procurement"],
+        ["ТЕНДЕР: Broward Schools — Grounds Maintenance (7 зон)", "Fort Lauderdale, FL", "recompete watch (до 2028)", "$11,000,000 (всего, ~$3.6M/год)", "754-321-0505", "Broward Schools Procurement · PurchasingHelpdesk@browardschools.com", "open (по зонам)", "landscaping", "RFP26-008 (DemandStar)", "browardschools.com/bcps-departments/procurement"],
+        # (b) ЗВОНКИ В ЗАКУПКИ — регистрация вендора + узнать про будущие клининг/grounds биды:
+        ["ЗВОНОК: Miami-Dade County — Strategic Procurement", "Miami, FL", "постоянно (регистрация вендора)", "—", "305-375-5773", "Vendor Outreach 305-375-4252 · Small Biz 305-375-1939", "—", "все категории", "Miami-Dade SPD", "miamidade.gov/global/strategic-procurement/contact.page"],
+        ["ЗВОНОК: Miami-Dade County Public Schools — Procurement", "Miami, FL", "постоянно", "—", "305-995-4288", "M-DCPS Procurement Mgmt Svcs (also 305-995-7254)", "—", "janitorial/grounds", "M-DCPS", "procurement.dadeschools.net"],
+        ["ЗВОНОК: Broward County — Purchasing Division", "Fort Lauderdale, FL", "постоянно", "—", "954-357-6066", "Broward County Purchasing", "—", "все категории", "Broward County", "broward.org/Purchasing"],
+        ["ЗВОНОК: Palm Beach County — Purchasing", "West Palm Beach, FL", "постоянно", "—", "561-616-6800", "PBC Purchasing · purchase@pbcgov.org", "—", "все категории", "Palm Beach County", "discover.pbc.gov/procurement"],
+        ["ЗВОНОК: School District of Palm Beach County — Purchasing", "West Palm Beach, FL", "постоянно", "—", "561-434-8214", "PBC Schools Purchasing", "—", "janitorial/grounds", "PBC Schools", "palmbeachschools.org/departments/purchasing"],
+        ["ЗВОНОК: City of Miami — Procurement", "Miami, FL", "постоянно", "—", "305-416-1922", "City of Miami Procurement (iSupplier портал)", "—", "все категории", "City of Miami", "miami.gov"],
+        ["ЗВОНОК: City of Miami Beach — Procurement", "Miami Beach, FL", "постоянно", "—", "305-673-7490", "procurement@miamibeachfl.gov", "—", "все категории", "City of Miami Beach", "miamibeachfl.gov/city-hall/procurement"],
+        ["ЗВОНОК: City of Fort Lauderdale — Procurement Services", "Fort Lauderdale, FL", "постоянно", "—", "954-828-5933", "purchase@fortlauderdale.gov · CPO G.Marcos 954-828-5677", "—", "все категории", "City of Ft Lauderdale", "fortlauderdale.gov/government/departments-i-z/procurement-services"],
     ]
     fields = ["Наименование конкурса","Город","Дата (дедлайн)","Стоимость закупки","Телефон","Контакт (имя/email)","Set-aside","Категория","Источник","Ссылка"]
     for pr in platform:
