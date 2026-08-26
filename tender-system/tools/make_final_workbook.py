@@ -98,9 +98,9 @@ COLS = ["Заказчик", "Подрядчик (GC)", "Телефон GC (пе�
 hf = Font(bold=True, color="FFFFFF"); thin = Side(style="thin", color="D0D0D0")
 bd = Border(left=thin, right=thin, top=thin, bottom=thin)
 green = Font(color="1E7A34", bold=True); amber = Font(color="9A6A00"); grey = Font(color="777777")
-def build(title, data, headcolor):
+def build(title, data, headcolor, subtitle=""):
     ws = wb.create_sheet(title)
-    hint = f"{title} · {len(data)} объектов · Miami-Dade · активные (CO нет) · свежесть ≤180д · звони по «Телефон GC»; ✓ = номер подтверждён вебом"
+    hint = f"{title} — {subtitle} · {len(data)} объектов · Miami-Dade · активные (CO нет) · свежесть ≤180д · звони по «Телефон GC»; ✓ = номер подтверждён вебом"
     ws.append([hint]); ws.merge_cells(start_row=1, start_column=1, end_row=1, end_column=len(COLS))
     ws["A1"].font = Font(bold=True, color="FFFFFF"); ws["A1"].fill = PatternFill("solid", fgColor=headcolor)
     ws["A1"].alignment = Alignment(vertical="center")
@@ -123,9 +123,9 @@ def build(title, data, headcolor):
     ws.freeze_panes = "A3"; ws.auto_filter.ref = f"A2:{get_column_letter(len(COLS))}{ws.max_row}"
     ws.row_dimensions[1].height = 22
 
-build("P1 · ОТДЕЛКА (краска+гипсокартон+полы)", p1, "2E5E8C")
-build("P2 · УБОРКА (final clean)", p2, "B5651D")
-build("P3 · ДЕМОНТАЖ", p3, "555555")
+build("P1 · Отделка", p1, "2E5E8C", "Покраска + гипсокартон + полы")
+build("P2 · Уборка", p2, "B5651D", "Final clean после стройки")
+build("P3 · Демонтаж", p3, "555555", "Демонтаж / вывоз мусора")
 
 out = os.path.join(os.path.dirname(__file__), "..", "reports", "ISP-обзвон-ИТОГ-2026-08-26.xlsx")
 wb.save(out)
