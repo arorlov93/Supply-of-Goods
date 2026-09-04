@@ -8,7 +8,7 @@ from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
 
 SP = "/tmp/claude-0/-home-user-Supply-of-Goods/4f5e4e6d-222f-57da-93ad-94f5b2132f9f/scratchpad"
-TODAY = datetime.date(2026, 8, 26)
+TODAY = datetime.date(2026, 9, 4)
 TARGET = {
     "RETAIL SALES": "Ритейл", "OFFICE - PROFESSIONAL BUILDINGS": "Офис", "OFFICE USE ONLY": "Офис",
     "OFFICE - SALES": "Офис", "RESTAURANT-CAFETERIA": "Ресторан",
@@ -217,7 +217,7 @@ for rr in range(note, note+6):
     rs.cell(rr, 1).alignment = Alignment(wrap_text=True, vertical="top")
     rs.merge_cells(start_row=rr, start_column=1, end_row=rr, end_column=5)
 
-out = os.path.join(os.path.dirname(__file__), "..", "reports", "ISP-обзвон-ИТОГ-2026-08-26.xlsx")
+out = os.path.join(os.path.dirname(__file__), "..", "reports", "ISP-обзвон-ИТОГ-2026-09-04.xlsx")
 wb.save(out)
 print("wrote", out)
 print(f"P1 отделка: {len(p1)} | P2 уборка: {len(p2)} | P3 демонтаж: {len(p3)}")
