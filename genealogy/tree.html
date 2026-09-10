@@ -1,0 +1,122 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Древо — Александр Орлов</title>
+<style>
+  :root{--bg:#f6f4ef;--card:#fff;--ink:#22303a;--line:#c9cfd4;
+    --ok:#1e7a34;--okbg:#e7f0e9;--maybe:#9a6a00;--maybebg:#fdf3d8;--q:#7a4a8a;--qbg:#f0e7f4;
+    --pat:#2e5e8c;--patbg:#e6eef6;--mat:#7a3e8f;--matbg:#f1e8f5;--brand:#2e4a62;--accent:#b23a2e;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 -apple-system,Segoe UI,Roboto,sans-serif;padding:20px}
+  h1{font-size:22px;color:var(--brand);margin:0 0 2px}
+  .sub{color:#6b7680;margin:0 0 14px;font-size:13px}
+  .legend{display:flex;gap:12px;flex-wrap:wrap;margin:0 0 18px;font-size:12px}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .dot{width:12px;height:12px;border-radius:3px;display:inline-block}
+  .cols{display:flex;gap:18px;flex-wrap:wrap}
+  .col{flex:1;min-width:300px}
+  .colh{font-weight:800;padding:6px 10px;border-radius:8px;margin:0 0 10px;color:#fff}
+  .colh.pat{background:var(--pat)} .colh.mat{background:var(--mat)}
+  .gen{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:#6b7680;margin:12px 0 6px;font-weight:700}
+  .pair{border:1px dashed #b9c0c6;border-radius:12px;padding:8px;display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px;background:#ffffff88}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:8px 10px;flex:1;min-width:135px}
+  .card .nm{font-weight:700;font-size:13px;margin:0 0 2px}
+  .card .meta{font-size:11.5px;color:#55636e;margin:1px 0}
+  .card.ok{border-left:4px solid var(--ok);background:var(--okbg)}
+  .card.maybe{border-left:4px solid var(--maybe);background:var(--maybebg)}
+  .card.q{border-left:4px solid var(--q);background:var(--qbg)}
+  .card.pat{border-left:4px solid var(--pat)}
+  .card.mat{border-left:4px solid var(--mat)}
+  .arrow{text-align:center;color:#9aa4ad;font-size:16px;margin:-3px 0 3px}
+  .you{background:var(--brand);color:#fff;border-radius:10px;padding:10px 14px;text-align:center;font-weight:800;max-width:260px;margin:12px auto 0}
+  .note{background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px;padding:10px 12px;margin:14px 0;font-size:12.5px}
+  .uk{background:#eef6ee;border:1px solid #cfe3cf;border-left:4px solid var(--ok);border-radius:8px;padding:10px 12px;margin:10px 0;font-size:12.5px}
+</style>
+
+<h1>Родословное древо — Александр Орлов (Саша)</h1>
+<p class="sub">Цвет карточки = доказанность · рамка слева = линия. Обновлено 2026-09-09.</p>
+<div class="legend">
+  <span><i class="dot" style="background:var(--okbg);border:1px solid var(--ok)"></i> подтверждено документом</span>
+  <span><i class="dot" style="background:var(--maybebg);border:1px solid var(--maybe)"></i> из семьи/косвенно</span>
+  <span><i class="dot" style="background:var(--qbg);border:1px solid var(--q)"></i> цель поиска</span>
+  <span><i class="dot" style="background:var(--patbg);border:1px solid var(--pat)"></i> отцовская</span>
+  <span><i class="dot" style="background:var(--matbg);border:1px solid var(--mat)"></i> материнская</span>
+</div>
+
+<div class="cols">
+  <!-- PATERNAL -->
+  <div class="col">
+    <div class="colh pat">🔵 ОТЦОВСКАЯ линия — Орловы · Шакало 🇺🇦 · Болотновы</div>
+
+    <div class="gen">Прапрадеды (Г5) — корни ветвей</div>
+    <div class="pair">
+      <div class="card ok">Николай Ефремов Орлов ⚭ Елена Семёнова<div class="meta">слоб. Александровская, Бугурусланский у. · ← Ефрем Орлов · ✅ метрика 1918 (FS #005477699 №92)</div></div>
+      <div class="card q">Прокопий [?]<div class="meta">отец Евдокии · г. Самара · фамилия ❓</div></div>
+    </div>
+    <div class="pair">
+      <div class="card ok">Фёдор Шакало 🇺🇦<div class="meta">казак ПМВ, ранен (документ) · Старонижестеблиевская → Нижестеблиевский курень Сечи → Стеблів, Черкащина</div></div>
+      <div class="card ok">Матвей Алексеев Болотнов<div class="meta">Малый Карсун (Ст. Погорелово), удельные крестьяне · ⚭ Евпраксия Иванова · ← Алексей Яковлев ⚭ Елена Егорова … до Фёдора Петрова (1842) и Петра Максимова (1852) ← Максим (ревизия 1834)</div></div>
+    </div>
+
+    <div class="gen">Прадеды (Г4)</div>
+    <div class="pair">
+      <div class="card ok pat">Орлов Владимир Николаевич<div class="meta">✅ род. 13.07.1918, слоб. Александровская, Бугурусланский у. (метрика) · сын Николая Ефремова ⚭ Елены Семёновой</div></div>
+      <div class="card ok pat">Евдокия Прокопьевна<div class="meta">14.03.1918, г. Самара · девичья ❓ (FS «Самарские метрики»)</div></div>
+    </div>
+    <div class="pair">
+      <div class="card ok pat">Шакало Иван Фёдорович 🇺🇦<div class="meta">05.05.1917, Старонижестеблиевская</div></div>
+      <div class="card ok pat">Болотнова Екатерина Матвеевна<div class="meta">26.08.1924, Ульяновск</div></div>
+    </div>
+
+    <div class="gen">Деды/бабки (Г3)</div>
+    <div class="pair">
+      <div class="card maybe pat">Дед — Орлов [имя?]<div class="meta">сын Владимира + Евдокии · брат — Владимир Владимирович Орлов (1941, Самара)</div></div>
+      <div class="card maybe pat">Бабушка — Шакало [имя?]<div class="meta">дочь Ивана + Екатерины · девичья Шакало</div></div>
+    </div>
+    <div class="arrow">↓</div>
+    <div class="card ok pat" style="max-width:230px">Отец Саши (Орлов)</div>
+  </div>
+
+  <!-- MATERNAL -->
+  <div class="col">
+    <div class="colh mat">🟣 МАТЕРИНСКАЯ линия — Левушкины · Сарапкины/Шибакины · Романцовы · Арбузовы</div>
+
+    <div class="gen">Прапра… (Г5) — корни ветвей</div>
+    <div class="pair">
+      <div class="card ok mat">Михаил Осипов Левушкин ⚭ Домна Иванова<div class="meta">Адоевщина, ГАУО ф.134 оп.18 (OCR) · ← Осип Яковлев ⚭ Пелагея Арефьева ← Яков</div></div>
+      <div class="card ok mat">Сарапкин Алексей Алексеев<div class="meta">род. 1870 Адоевщина (скан д.2/417), сын Алексея Васильева ⚭ Марии Андреевой ← Василий · отец Евгении 1912 (Баку) ❓</div></div>
+    </div>
+    <div class="pair">
+      <div class="card ok mat">Роман Власович Романцов<div class="meta">≈1890, Биркаловка, Аткарский у. · ПМВ · ← Влас Романцов ✅ (брат — Кирилл Власович, ГААО ф.1125, Астрахань)</div></div>
+      <div class="card ok mat">Григорий Петрович Арбузов<div class="meta">ПМВ, ранен · Баланда · ← Пётр</div></div>
+    </div>
+
+    <div class="gen">Прадеды (Г4)</div>
+    <div class="pair">
+      <div class="card ok mat">Левушкин Иван Михайлович<div class="meta">род. 28.01.1892 Адоевщина (скан д.5/129), сын Михаила Осипова ⚭ Домны Ивановой · ПМВ, ранен 1916</div></div>
+      <div class="card q mat">Евгения Сарапкина-Шибакина?<div class="meta">1912, Сураханы (Баку) · возможно мать деда — уточнить</div></div>
+    </div>
+    <div class="pair" style="border-color:var(--ok)">
+      <div class="card ok mat">Арбузов Константин Григорьевич<div class="meta">1915, Баланда · ВОВ, 2 медали · метрика д.88 (ГАСО ф.637 оп.17)</div></div>
+      <div class="card ok mat">Мария Романовна Романцова<div class="meta">24.02.1913, Биркаловка</div></div>
+    </div>
+    <div class="arrow" style="text-align:left">⚭ Константин + Мария → бабушка Евгения (Арбузова)</div>
+
+    <div class="gen">Деды/бабки (Г3)</div>
+    <div class="pair">
+      <div class="card ok mat">Дед — Левушкин Александр Алексеевич<div class="meta">отец мамы · ← Алексей Иванович ← Иван Михайлович</div></div>
+      <div class="card ok mat">Бабушка — Евгения (née Арбузова)<div class="meta">дочь Константина Арбузова + Марии Романцовой</div></div>
+    </div>
+    <div class="arrow">↓</div>
+    <div class="card ok mat" style="max-width:230px">Мать Саши</div>
+    <div class="card q mat" style="margin-top:6px">Не привязаны: Колосова Мария Дмитриевна (1893, Адоевщина); Егорова Наталия Андреевна<div class="meta">точки соединения уточняются</div></div>
+  </div>
+</div>
+
+<div class="arrow" style="font-size:20px;margin-top:8px">↓ &nbsp; ↓</div>
+<div class="you">АЛЕКСАНДР ОРЛОВ (Саша)<div style="font-weight:400;font-size:12px;margin-top:2px">Майами, США</div></div>
+
+<div class="uk">🇺🇦 <b>Украинские (запорожские) корни</b> — линия Шакало: <b>Фёдор Шакало</b> (казак ПМВ, ранен ✅) → <b>Иван Фёдорович</b> (1917). Станица Старонижестеблиевская → Нижестеблиевский курень Запорожской Сечи → мест. <b>Стеблів, Черкасская обл. (Украина)</b>. Фамилия украинская; род коренной черноморско-казачий. Древнейший след — «Ярема Шакало» в Реестре Войска Запорожского 1649. Глубже — метрики ГАКК ф.801 и перепись 1794 (ГАКК ф.250, запрос).</div>
+
+<div class="uk">🚀 <b>Адоевщинский куст</b> (Левушкины, Сарапкины — 158 записей, Колосовы — 140) оцифрован в <b>ГАУО Ф.134 Оп.18</b> (церковь Знамения) и ищется в <b>Яндекс.Архиве</b> — саратовская стена обойдена. Подтверждено сканами: рождение <b>Ивана Левушкина 28.01.1892</b> и <b>Алексея Сарапкина 1870</b>. Орловы: прямая линия доказана метрикой 1918 (Бугуруслан) — Владимир ← Николай Ефремов ⚭ Елена Семёнова ← Ефрем.</div>
+
+<div class="note">✅ <b>Замкнуто:</b> бабушка Евгения = дочь <b>Константина Арбузова ⚭ Марии Романцовой</b>; дед — <b>Левушкин Александр Алексеевич</b>; отцовская линия — <b>Орлов Владимир Николаевич (1918) ← Николай Ефремов ⚭ Елена Семёнова</b> (метрика). <br>⚠️ <b>Осталось:</b> (1) дед Ефрем с отчеством (FS-плёнки Бугуруслана); (2) девичья фамилия Евдокии (Самара 1918, отец Прокопий); (3) мать деда — Евгения Сарапкина (1912)?; (4) отец Марии Колосовой; (5) Егорова = мать Константина? (метрика Баланды д.88); (6) Шакало вглубь — ГАКК ф.801/ф.250.</div>
