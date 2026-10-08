@@ -10,7 +10,7 @@
 <meta property="og:site_name" content="ISP Group">
 <meta property="og:title" content="ISP Group — international sourcing and trading">
 <meta property="og:description" content="Name the product. We return three verified producers and a landed price. Materials, products and industrial equipment, delivered to your port.">
-<meta property="og:image" content="https://ispgroupgc.com/og.jpg">
+<meta property="og:image" content="https://ispgroupgc.com/media/terminal.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#0a1420">
@@ -28,6 +28,7 @@
   --fd:"Archivo","Helvetica Neue",Arial,sans-serif;
   --fm:"IBM Plex Mono",ui-monospace,Menlo,monospace;
   --maxw:72rem;
+  --on-shot:#f4f7f9; --on-shot-2:#c3d2dd;
   color-scheme:dark;
 }
 @media (prefers-color-scheme:light){
@@ -165,6 +166,31 @@ footer{padding-block:34px 56px;color:var(--ink-2);font-size:.88rem}
 .todo{color:var(--accent);font-family:var(--fm);font-size:.9rem}
 .fbottom{margin-top:34px;padding-top:20px;border-top:1px solid var(--rule);font-size:.82rem}
 
+/* ---------- фотография: единая обработка, чтобы разные источники читались как один набор ---------- */
+.shot{position:relative;overflow:hidden;background:var(--surface)}
+.shot img{display:block;width:100%;height:100%;object-fit:cover;
+  filter:grayscale(.52) contrast(1.07) brightness(.84) saturate(.9)}
+.shot::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(10,20,32,.20) 0%,rgba(10,20,32,.78) 100%)}
+.shot::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:radial-gradient(120% 85% at 78% 10%,rgba(192,138,66,.22),transparent 60%)}
+
+.band{position:relative;border-bottom:1px solid var(--rule);display:grid;isolation:isolate}
+.band .shot{position:absolute;inset:0;z-index:0}
+.band .wrap{position:relative;z-index:2;align-self:center;
+  padding-block:clamp(64px,8vw,104px)}
+.band h2{color:var(--on-shot);max-width:18ch}
+.band p{color:var(--on-shot-2);max-width:54ch;margin-top:16px;font-size:1.04rem}
+.band .eyebrow{color:var(--accent)}
+
+.figpair{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:18px}
+figure{margin:0}
+figure .shot{aspect-ratio:4/3}
+figcaption{font-family:var(--fm);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-2);padding-top:10px}
+
+.mediafig .shot{aspect-ratio:16/9}
+
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -254,6 +280,17 @@ footer{padding-block:34px 56px;color:var(--ink-2);font-size:.88rem}
   </div>
 </section>
 
+<section class="band">
+  <div class="shot"><img src="media/terminal.jpg" width="988" height="423" loading="lazy"
+    alt="Ship-to-shore gantry cranes over a container terminal"></div>
+  <div class="wrap">
+    <span class="eyebrow">Scale</span>
+    <h2>One counterparty from the plant gate to your port</h2>
+    <p>We contract the production, book the vessel, clear the paperwork on both ends and
+      carry the goods on our own balance sheet until they are yours.</p>
+  </div>
+</section>
+
 <section id="categories">
   <div class="wrap">
     <span class="eyebrow">What we supply</span>
@@ -261,6 +298,19 @@ footer{padding-block:34px 56px;color:var(--ink-2);font-size:.88rem}
     <p class="intro">We are not tied to one commodity. Our work is sourcing and execution,
       and the categories below are where we already have producer relationships and a
       documented lane. A product outside them is a sourcing project, not a refusal.</p>
+
+    <div class="figpair">
+      <figure>
+        <div class="shot"><img src="media/machinery.jpg" width="900" height="675" loading="lazy"
+          alt="Industrial machinery drive assembly"></div>
+        <figcaption>Equipment and machinery</figcaption>
+      </figure>
+      <figure>
+        <div class="shot"><img src="media/materials.jpg" width="900" height="675" loading="lazy"
+          alt="Steel rod and wire stock"></div>
+        <figcaption>Metals and raw materials</figcaption>
+      </figure>
+    </div>
 
     <div class="cats">
       <div class="cat">
@@ -380,10 +430,11 @@ footer{padding-block:34px 56px;color:var(--ink-2);font-size:.88rem}
           forwarder.</p></div></div>
     </div>
 
-    <div class="media">
-      <p>Video slot &mdash; 16:9. Loading, plant walkthrough or corridor map animation.
-        Supply an MP4 and a poster frame and it drops in here.</p>
-    </div>
+    <figure class="mediafig" style="margin-top:38px">
+      <div class="shot"><img src="media/vessel.jpg" width="1023" height="575" loading="lazy"
+        alt="Container vessel under way, loaded with boxes, approaching port"></div>
+      <figcaption>Cargo moves under our contract from the plant gate to the discharge port</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -452,7 +503,6 @@ footer{padding-block:34px 56px;color:var(--ink-2);font-size:.88rem}
     <dl class="fgrid">
       <div><dt>Entity</dt><dd>ISP GROUP LLC<br><span style="color:var(--ink-2)">United States</span></dd></div>
       <div><dt>Email</dt><dd>info@ispgroupgc.com</dd></div>
-      <div><dt>Telephone</dt><dd class="todo">[ to be filled in ]</dd></div>
       <div><dt>Registered office</dt><dd class="todo">[ street, city, FL, ZIP ]</dd></div>
     </dl>
     <p class="fbottom">ISP GROUP LLC &middot; Global Commerce &middot; International sourcing,

@@ -16,27 +16,47 @@ GC раскрыто как **Global Commerce**, а не Global Commodities: «co
 
 ## Что заполнить
 
-- `[ to be filled in ]` — телефон (футер)
 - `[ street, city, FL, ZIP ]` — юридический адрес (футер)
-- `addressLocality`, `streetAddress`, `postalCode`, `telephone` в блоке JSON-LD
-- `og.jpg` 1200x630 в корень, иначе ссылка в мессенджерах будет без картинки
+- `streetAddress`, `addressLocality`, `postalCode` в блоке JSON-LD
+
+Телефон на сайте намеренно не стоит, контакт один: info@ispgroupgc.com.
 
 Адрес обязателен: коммерческая рассылка из США должна содержать физический
 почтовый адрес отправителя по CAN-SPAM. Тот же адрес ставим в подпись почты.
 
-## Видео и фото
+## Фотографии
 
-В разделе Process стоит слот 16:9 с пунктирной рамкой. Чтобы включить видео,
-заменить блок `<div class="media">` на:
+В `media/` четыре снимка. Все CC0 или Public Domain Mark, то есть коммерческое
+использование разрешено и указание автора не требуется. Источники записаны в
+`media/CREDITS.json` со ссылкой на страницу оригинала.
+
+Обработка не впечатана в файлы, она в CSS (`.shot`): обесцвечивание, контраст,
+затемняющий градиент и латунная засветка сверху справа. За счёт этого снимки из
+разных источников читаются как один набор. Любой файл можно заменить своим
+того же размера, и он автоматически получит ту же обработку.
+
+| Файл | Где стоит | Размер |
+|---|---|---|
+| `terminal.jpg` | полоса после блока Capabilities | 988x423 |
+| `vessel.jpg` | раздел Process, слот 16:9 | 1023x575 |
+| `machinery.jpg` | пара снимков в разделе категорий | 900x675 |
+| `materials.jpg` | там же | 900x675 |
+
+## Видео
+
+Слот под видео это `figure.mediafig` в разделе Process. Чтобы включить ролик,
+заменить `<div class="shot">...</div>` внутри него на:
 
 ```html
-<video class="media" autoplay muted loop playsinline preload="metadata"
-       poster="/media/poster.jpg" style="border:0;object-fit:cover;width:100%">
-  <source src="/media/loading.mp4" type="video/mp4">
-</video>
+<div class="shot">
+  <video autoplay muted loop playsinline preload="metadata" poster="media/vessel.jpg"
+         style="display:block;width:100%;height:100%;object-fit:cover">
+    <source src="media/loading.mp4" type="video/mp4">
+  </video>
+</div>
 ```
 
-Снимать стоит одно: погрузку контейнера, проход по цеху, работу с документами.
+Снимать стоит своё: погрузку контейнера, проход по цеху, работу с документами.
 Стоковые ролики с абстрактными портами видно за километр и доверия не добавляют.
 
 ## SEO
