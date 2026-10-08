@@ -141,9 +141,14 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 <style>
 /* hero */
 .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--rule)}
-#globe{position:absolute;top:50%;right:-5%;transform:translateY(-50%);pointer-events:none;
-  width:min(720px,56%);aspect-ratio:1/1;height:auto;display:block}
-@media(max-width:940px){#globe{top:-7%;right:-26%;transform:none;width:62%;opacity:.45}}
+#globe,#globe-still{position:absolute;top:50%;right:-5%;transform:translateY(-50%);
+  pointer-events:none;width:min(720px,56%);aspect-ratio:1/1;height:auto;display:block}
+#globe-still{object-fit:contain;transition:opacity .6s ease}
+#globe{opacity:0;transition:opacity .8s ease}
+#globe.live{opacity:1}
+#globe-still.gone{opacity:0}
+@media(max-width:940px){#globe,#globe-still{top:-7%;right:-26%;transform:none;width:62%}
+  #globe-still{opacity:.45}#globe.live{opacity:.45}}
 .hero .wrap{position:relative;z-index:2;padding-block:clamp(56px,8.5vw,108px)}
 .hero h1{font-size:clamp(2.55rem,6.4vw,4.9rem);max-width:16ch;letter-spacing:-.018em;line-height:1.05}
 .hero h1 em{font-style:italic;color:var(--brand)}
@@ -457,6 +462,51 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .skip:focus{left:12px;top:12px}
 .navlinks a[aria-current]{color:var(--ink)}
 .navlinks a[aria-current]::after{right:0}
+
+/* оглавление страницы */
+.toc{margin-top:38px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+  padding:22px 0 20px}
+.toc ol{list-style:none;margin:14px 0 0;padding:0;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));
+  gap:2px clamp(20px,3vw,46px)}
+.toc li{min-width:0}
+.toc a{display:flex;gap:13px;align-items:baseline;text-decoration:none;color:var(--ink-2);
+  padding:7px 0;border-bottom:1px solid transparent;transition:color .18s,border-color .18s}
+.toc a span{font-family:var(--fm);font-size:.57rem;letter-spacing:.1em;color:var(--gold-ink);
+  flex:0 0 auto}
+.toc a:hover{color:var(--brand)}
+.toc a:hover span{color:var(--gold-ink)}
+/* липкая шапка не должна накрывать заголовок при переходе по якорю */
+.pblock h2{scroll-margin-top:96px}
+
+/* дата обновления материала */
+.upd{font-family:var(--fm);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-3);margin:-8px 0 16px}
+
+/* поиск */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.navsearch{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;
+  margin-left:4px;padding:0;border:1px solid var(--rule);background:var(--surface);
+  color:var(--ink-2);cursor:pointer;border-radius:1px;box-shadow:var(--shadow-s);
+  transition:border-color .18s,color .18s}
+.navsearch:hover{border-color:var(--brand);color:var(--brand)}
+.searchpanel{position:sticky;top:68px;z-index:39;background:var(--surface);
+  border-bottom:1px solid var(--rule);box-shadow:var(--shadow-m);padding:22px 0 26px}
+.searchpanel[hidden]{display:none}
+.searchpanel input{width:100%;background:var(--paper);border:1px solid var(--rule);
+  color:var(--ink);font-family:var(--fs);font-size:clamp(1.3rem,2.6vw,1.9rem);
+  padding:14px 16px;transition:border-color .18s,box-shadow .18s}
+.searchpanel input:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-wash)}
+.searchhint{margin-top:10px;font-family:var(--fm);font-size:.55rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink-3)}
+.searchres{list-style:none;margin:16px 0 0;padding:0;max-height:52vh;overflow:auto}
+.searchres li{border-top:1px solid var(--rule)}
+.searchres a{display:block;padding:14px 0;text-decoration:none;color:var(--ink)}
+.searchres a:hover,.searchres a:focus-visible{background:var(--surface-2)}
+.searchres b{display:block;font-family:var(--fs);font-weight:400;font-size:1.18rem;margin-bottom:4px}
+.searchres span{display:block;color:var(--ink-2);font-size:.92rem}
+.searchres mark{background:var(--gold-soft);color:inherit;padding:0 2px}
+@media(max-width:940px){.searchpanel{top:68px}}
 </style>
 </head>
 <body>
@@ -467,6 +517,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
     <button class="navtoggle" id="navtoggle" type="button"
       aria-expanded="false" aria-controls="navmenu" aria-label="Menu"><span></span></button>
+    <button class="navsearch" id="navsearch" type="button" aria-label="Search" aria-expanded="false" aria-controls="searchpanel"><svg viewBox="0 0 20 20" width="17" height="17" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.6" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12.8 12.8 17 17" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
     <div class="navlinks" id="navmenu">
       <a href="services">What we do</a>
       <a href="supply">What we supply</a>
@@ -478,11 +529,21 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <a class="btn" href="contact#enquiry"><span class="btn-long">Request a </span>quote</a>
   </div>
 </nav>
+<div class="searchpanel" id="searchpanel" hidden>
+  <div class="wrap">
+    <label class="sr" for="searchinput">Search the site</label>
+    <input id="searchinput" type="search" autocomplete="off" spellcheck="false"
+      placeholder="Search guides, corridors, categories&hellip;">
+    <p class="searchhint">Type at least two letters. Press Escape to close.</p>
+    <ul class="searchres" id="searchres"></ul>
+  </div>
+</div>
 
 <header class="hero chero" id="top">
   <div class="wrap chero-g chero-1">
     <div>
       <nav class="crumbs" aria-label="Breadcrumb"><a href="/">ISP Group</a> <span>/</span> <a href="guides">Guides</a> <span>/</span> <b>Poultry cuts</b></nav>
+      <p class="upd"><time datetime="2026-10-08">Updated 8 October 2026</time> &middot; ISP Group</p>
       <h1>“Wings” is <em>not a product</em></h1>
       <p class="sub">A whole wing has three sections. Remove the tip and it is a two-joint. Separate the two remaining sections and you have two more products. Four items, four prices, four different buyers.</p>
       <div class="chips"><span class="chip">3-joint &middot; 2-joint</span><span class="chip">Drumette &middot; flat &middot; tip</span><span class="chip">Tom &middot; hen</span><span class="chip">Per line, per Incoterm</span></div>
@@ -494,7 +555,8 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 <main id="main" tabindex="-1">
 <section><div class="wrap">
 <div class="lede"><h2>The commonest reason two offers cannot be compared</h2><p class="intro">Not the Incoterm, not the pack, not the payment terms. It is that the two sellers are quoting different parts of the bird and both are calling it the same thing.</p></div>
-<div class="prose"><div class="pblock"><span class="k">01</span><h2>The anatomy, once, clearly</h2><div class="ptext"><p>A whole wing has three sections joined end to end. Closest to the body is the <b>drumette</b>, the small drumstick-shaped piece with a single bone. In the middle is the <b>mid-joint</b>, also called the flat or the wingette, with two parallel bones. At the end is the <b>tip</b>, which has very little meat.</p><ul class="plist"><li><b>Whole wing, three joint</b>: all three sections, intact.</li><li><b>Two joint wing</b>: drumette plus flat, tip removed. This is what most markets mean by a wing for retail or food service.</li><li><b>Drumette</b> alone: the premium section, priced accordingly.</li><li><b>Mid-joint flat</b> alone: sold separately, strong demand in some markets and almost none in others.</li><li><b>Tips</b>: a by-product with its own narrow market, mostly for stock and processing.</li></ul><p class="pnote">A seller quoting “wings” without naming the configuration can be offering any of the first four, and the difference between the cheapest and the dearest is not a rounding error.</p></div></div><div class="pblock"><span class="k">02</span><h2>Tom and hen are not grades of the same thing</h2><div class="ptext"><p>In turkey the male and female lines are raised to different weights and give different piece sizes. For a processor buying to a portion weight, they are not interchangeable, and a shipment of the wrong one is unusable rather than merely disappointing. Specify which line, and specify the piece weight range.</p></div></div><div class="pblock"><span class="k">03</span><h2>The other parts, and why they have their own markets</h2><div class="ptext"><p>Legs, thighs, drumsticks, backs, necks, tails and paws all trade separately and each has a geography. A cut that is a by-product in one market is a staple in another, which is the whole reason the international trade in poultry parts exists: a bird is disassembled and each part sold where it is worth most.</p><p>Two commercial consequences. First, prices for different parts of the same bird move independently, so a basket quoted as a single average price hides which line is expensive. Second, availability is driven by what the rest of the world is buying, which is why a line can be unobtainable in a month when the whole bird is cheap.</p></div></div><div class="pblock"><span class="k">04</span><h2>What a usable enquiry looks like</h2><div class="ptext"><ul class="plist"><li>The cut named by anatomy, not by category.</li><li>Tom or hen for turkey, and the piece weight range.</li><li>The pack: carton weight, block frozen or individually quick frozen, net or gross.</li><li>The Incoterm and the named port, per destination port if there is more than one.</li><li>Quantity per line, per month, not as a single basket figure.</li><li>The establishment number, because an inadmissible plant makes all of the above irrelevant.</li></ul><p>We send every enquiry on this corridor in that form and ask for the price per line on the same basis. It takes one extra paragraph to write and it removes two weeks of correspondence.</p></div></div><div class="pblock"><span class="k">05</span><h2>Why the basket matters more than the discount</h2><div class="ptext"><p>On a mixed programme the mix is worth more than the negotiation. Shifting the proportion of the container towards the lines with the widest spread between the buying market and the selling market can be worth more per month than every cent squeezed out of the supplier. That conversation belongs with the buyer at the start, not after the first shipment.</p></div></div></div>
+<nav class="toc" aria-label="On this page"><span class="eyebrow">On this page</span><ol><li><a href="#s1"><span>01</span>The anatomy, once, clearly</a></li><li><a href="#s2"><span>02</span>Tom and hen are not grades of the same thing</a></li><li><a href="#s3"><span>03</span>The other parts, and why they have their own markets</a></li><li><a href="#s4"><span>04</span>What a usable enquiry looks like</a></li><li><a href="#s5"><span>05</span>Why the basket matters more than the discount</a></li></ol></nav>
+<div class="prose"><div class="pblock"><span class="k">01</span><h2 id="s1">The anatomy, once, clearly</h2><div class="ptext"><p>A whole wing has three sections joined end to end. Closest to the body is the <b>drumette</b>, the small drumstick-shaped piece with a single bone. In the middle is the <b>mid-joint</b>, also called the flat or the wingette, with two parallel bones. At the end is the <b>tip</b>, which has very little meat.</p><ul class="plist"><li><b>Whole wing, three joint</b>: all three sections, intact.</li><li><b>Two joint wing</b>: drumette plus flat, tip removed. This is what most markets mean by a wing for retail or food service.</li><li><b>Drumette</b> alone: the premium section, priced accordingly.</li><li><b>Mid-joint flat</b> alone: sold separately, strong demand in some markets and almost none in others.</li><li><b>Tips</b>: a by-product with its own narrow market, mostly for stock and processing.</li></ul><p class="pnote">A seller quoting “wings” without naming the configuration can be offering any of the first four, and the difference between the cheapest and the dearest is not a rounding error.</p></div></div><div class="pblock"><span class="k">02</span><h2 id="s2">Tom and hen are not grades of the same thing</h2><div class="ptext"><p>In turkey the male and female lines are raised to different weights and give different piece sizes. For a processor buying to a portion weight, they are not interchangeable, and a shipment of the wrong one is unusable rather than merely disappointing. Specify which line, and specify the piece weight range.</p></div></div><div class="pblock"><span class="k">03</span><h2 id="s3">The other parts, and why they have their own markets</h2><div class="ptext"><p>Legs, thighs, drumsticks, backs, necks, tails and paws all trade separately and each has a geography. A cut that is a by-product in one market is a staple in another, which is the whole reason the international trade in poultry parts exists: a bird is disassembled and each part sold where it is worth most.</p><p>Two commercial consequences. First, prices for different parts of the same bird move independently, so a basket quoted as a single average price hides which line is expensive. Second, availability is driven by what the rest of the world is buying, which is why a line can be unobtainable in a month when the whole bird is cheap.</p></div></div><div class="pblock"><span class="k">04</span><h2 id="s4">What a usable enquiry looks like</h2><div class="ptext"><ul class="plist"><li>The cut named by anatomy, not by category.</li><li>Tom or hen for turkey, and the piece weight range.</li><li>The pack: carton weight, block frozen or individually quick frozen, net or gross.</li><li>The Incoterm and the named port, per destination port if there is more than one.</li><li>Quantity per line, per month, not as a single basket figure.</li><li>The establishment number, because an inadmissible plant makes all of the above irrelevant.</li></ul><p>We send every enquiry on this corridor in that form and ask for the price per line on the same basis. It takes one extra paragraph to write and it removes two weeks of correspondence.</p></div></div><div class="pblock"><span class="k">05</span><h2 id="s5">Why the basket matters more than the discount</h2><div class="ptext"><p>On a mixed programme the mix is worth more than the negotiation. Shifting the proportion of the container towards the lines with the widest spread between the buying market and the selling market can be worth more per month than every cent squeezed out of the supplier. That conversation belongs with the buyer at the start, not after the first shipment.</p></div></div></div>
 
 </div></section>
 <section id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>Questions on this</h2><p class="intro">The ones we are asked most often.</p></div><div style="margin-top:34px"><details><summary>What is the difference between a wingette and a flat?</summary><p>Nothing. They are two names for the mid-joint section, the one with two parallel bones. The confusion is real enough that we write “mid-joint flat” in enquiries to remove it.</p></details><details><summary>Can I buy whole wings and have them cut at destination?</summary><p>Sometimes, and the economics depend entirely on labour cost and yield at your end. Ask for both prices, whole and separated, and compare after adding your own cutting cost and waste.</p></details><details><summary>Why do prices for different cuts move in opposite directions?</summary><p>Because each cut is sold into a different geography with its own demand. A bird is disassembled and each part goes where it is worth most, so the parts have independent markets even though they come off the same line.</p></details></div></div></section>
@@ -527,10 +589,12 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <p class="credits">Photography: pipe by JWPhotowerks; straddle carrier by Lars K. Jensen (CC BY).
       All other images CC0 or public domain. Full list with links in media/CREDITS.json.</p>
     <p class="fbottom">ISP GROUP LLC &middot; Global Commerce &middot; International sourcing,
-      trading and supply of materials, products and industrial equipment.</p>
+      trading and supply of materials, products and industrial equipment.
+      &nbsp;&middot;&nbsp; <a href="privacy">Privacy</a>
+      &nbsp;&middot;&nbsp; <a href="terms">Terms of use</a></p>
   </div>
 </footer>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Wing, drumette, flat: four different products", "description": "Why a quotation for wings is not a quotation: whole wing, two-joint, drumette and mid-joint flat are four products with four prices, and tom is not hen.", "author": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "publisher": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "mainEntityOfPage": "https://ispgroupgc.com/poultry-cuts"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Wing, drumette, flat: four different products", "description": "Why a quotation for wings is not a quotation: whole wing, two-joint, drumette and mid-joint flat are four products with four prices, and tom is not hen.", "author": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "publisher": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "datePublished": "2026-10-08", "dateModified": "2026-10-08", "inLanguage": "en", "mainEntityOfPage": "https://ispgroupgc.com/poultry-cuts"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the difference between a wingette and a flat?", "acceptedAnswer": {"@type": "Answer", "text": "Nothing. They are two names for the mid-joint section, the one with two parallel bones. The confusion is real enough that we write “mid-joint flat” in enquiries to remove it."}}, {"@type": "Question", "name": "Can I buy whole wings and have them cut at destination?", "acceptedAnswer": {"@type": "Answer", "text": "Sometimes, and the economics depend entirely on labour cost and yield at your end. Ask for both prices, whole and separated, and compare after adding your own cutting cost and waste."}}, {"@type": "Question", "name": "Why do prices for different cuts move in opposite directions?", "acceptedAnswer": {"@type": "Answer", "text": "Because each cut is sold into a different geography with its own demand. A bird is disassembled and each part goes where it is worth most, so the parts have independent markets even though they come off the same line."}}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ISP Group", "item": "https://ispgroupgc.com/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://ispgroupgc.com/guides"}, {"@type": "ListItem", "position": 3, "name": "Poultry cuts", "item": "https://ispgroupgc.com/poultry-cuts"}]}</script>
 <script>
@@ -619,6 +683,71 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   window.addEventListener('scroll',kick,{passive:true});
   window.addEventListener('resize',kick,{passive:true});
   par();
+})();
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('navsearch'), panel=document.getElementById('searchpanel');
+  if(!btn||!panel) return;
+  var input=document.getElementById('searchinput'), out=document.getElementById('searchres');
+  var idx=null, loading=false, opener=null;
+  function load(){
+    if(idx||loading) return;
+    loading=true;
+    fetch('/search.json').then(function(r){return r.json();})
+      .then(function(j){ idx=j; loading=false; run(); })
+      .catch(function(){ loading=false;
+        out.innerHTML='<li><a href="/guides"><b>Search is unavailable</b>'+
+          '<span>Browse the guides instead.</span></a></li>'; });
+  }
+  function esc(s){ return s.replace(/[&<>"]/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function hl(s,q){ if(!s) return '';
+    var i=s.toLowerCase().indexOf(q);
+    if(i<0) return esc(s.slice(0,118));
+    var a=Math.max(0,i-40), t=(a?'… ':'')+s.slice(a,i)+'\u0000'+s.slice(i,i+q.length)+'\u0001'+s.slice(i+q.length,i+q.length+70);
+    return esc(t).replace('\u0000','<mark>').replace('\u0001','</mark>'); }
+  function run(){
+    var q=(input.value||'').trim().toLowerCase();
+    if(q.length<2){ out.innerHTML=''; return; }
+    if(!idx){ load(); return; }
+    var hits=[];
+    for(var i=0;i<idx.length;i++){
+      var r=idx[i], t=r.t.toLowerCase(), d=(r.d||'').toLowerCase(), h=(r.h||'').toLowerCase();
+      var sc=0;
+      if(t.indexOf(q)>=0) sc+=10;
+      if(h.indexOf(q)>=0) sc+=4;
+      if(d.indexOf(q)>=0) sc+=3;
+      if(sc) hits.push([sc,r]);
+    }
+    hits.sort(function(a,b){return b[0]-a[0];});
+    if(!hits.length){
+      out.innerHTML='<li><a href="/contact"><b>Nothing matched &ldquo;'+esc(q)+'&rdquo;</b>'+
+        '<span>Ask us directly and we will answer.</span></a></li>'; return; }
+    out.innerHTML=hits.slice(0,8).map(function(x){
+      var r=x[1], ctx=(r.d&&r.d.toLowerCase().indexOf(q)>=0)?r.d:(r.h||r.d);
+      return '<li><a href="'+r.u+'"><b>'+hl(r.t,q)+'</b><span>'+hl(ctx,q)+'</span></a></li>';
+    }).join('');
+  }
+  function open_(){
+    opener=document.activeElement;
+    panel.hidden=false; btn.setAttribute('aria-expanded','true');
+    load(); input.focus(); input.select();
+  }
+  function close_(){
+    panel.hidden=true; btn.setAttribute('aria-expanded','false');
+    if(opener&&opener.focus) opener.focus();
+  }
+  btn.addEventListener('click',function(){ panel.hidden?open_():close_(); });
+  input.addEventListener('input',run);
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&!panel.hidden){ close_(); return; }
+    if(e.key==='/'&&panel.hidden){
+      var a=document.activeElement, tag=a?a.tagName:'';
+      if(tag==='INPUT'||tag==='TEXTAREA'||tag==='SELECT'||(a&&a.isContentEditable)) return;
+      e.preventDefault(); open_();
+    }
+  });
 })();
 </script>
 <!--/email_off-->

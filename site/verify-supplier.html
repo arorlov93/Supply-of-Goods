@@ -138,9 +138,14 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 <style>
 /* hero */
 .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--rule)}
-#globe{position:absolute;top:50%;right:-5%;transform:translateY(-50%);pointer-events:none;
-  width:min(720px,56%);aspect-ratio:1/1;height:auto;display:block}
-@media(max-width:940px){#globe{top:-7%;right:-26%;transform:none;width:62%;opacity:.45}}
+#globe,#globe-still{position:absolute;top:50%;right:-5%;transform:translateY(-50%);
+  pointer-events:none;width:min(720px,56%);aspect-ratio:1/1;height:auto;display:block}
+#globe-still{object-fit:contain;transition:opacity .6s ease}
+#globe{opacity:0;transition:opacity .8s ease}
+#globe.live{opacity:1}
+#globe-still.gone{opacity:0}
+@media(max-width:940px){#globe,#globe-still{top:-7%;right:-26%;transform:none;width:62%}
+  #globe-still{opacity:.45}#globe.live{opacity:.45}}
 .hero .wrap{position:relative;z-index:2;padding-block:clamp(56px,8.5vw,108px)}
 .hero h1{font-size:clamp(2.55rem,6.4vw,4.9rem);max-width:16ch;letter-spacing:-.018em;line-height:1.05}
 .hero h1 em{font-style:italic;color:var(--brand)}
@@ -454,6 +459,51 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .skip:focus{left:12px;top:12px}
 .navlinks a[aria-current]{color:var(--ink)}
 .navlinks a[aria-current]::after{right:0}
+
+/* оглавление страницы */
+.toc{margin-top:38px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+  padding:22px 0 20px}
+.toc ol{list-style:none;margin:14px 0 0;padding:0;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));
+  gap:2px clamp(20px,3vw,46px)}
+.toc li{min-width:0}
+.toc a{display:flex;gap:13px;align-items:baseline;text-decoration:none;color:var(--ink-2);
+  padding:7px 0;border-bottom:1px solid transparent;transition:color .18s,border-color .18s}
+.toc a span{font-family:var(--fm);font-size:.57rem;letter-spacing:.1em;color:var(--gold-ink);
+  flex:0 0 auto}
+.toc a:hover{color:var(--brand)}
+.toc a:hover span{color:var(--gold-ink)}
+/* липкая шапка не должна накрывать заголовок при переходе по якорю */
+.pblock h2{scroll-margin-top:96px}
+
+/* дата обновления материала */
+.upd{font-family:var(--fm);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-3);margin:-8px 0 16px}
+
+/* поиск */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.navsearch{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;
+  margin-left:4px;padding:0;border:1px solid var(--rule);background:var(--surface);
+  color:var(--ink-2);cursor:pointer;border-radius:1px;box-shadow:var(--shadow-s);
+  transition:border-color .18s,color .18s}
+.navsearch:hover{border-color:var(--brand);color:var(--brand)}
+.searchpanel{position:sticky;top:68px;z-index:39;background:var(--surface);
+  border-bottom:1px solid var(--rule);box-shadow:var(--shadow-m);padding:22px 0 26px}
+.searchpanel[hidden]{display:none}
+.searchpanel input{width:100%;background:var(--paper);border:1px solid var(--rule);
+  color:var(--ink);font-family:var(--fs);font-size:clamp(1.3rem,2.6vw,1.9rem);
+  padding:14px 16px;transition:border-color .18s,box-shadow .18s}
+.searchpanel input:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-wash)}
+.searchhint{margin-top:10px;font-family:var(--fm);font-size:.55rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink-3)}
+.searchres{list-style:none;margin:16px 0 0;padding:0;max-height:52vh;overflow:auto}
+.searchres li{border-top:1px solid var(--rule)}
+.searchres a{display:block;padding:14px 0;text-decoration:none;color:var(--ink)}
+.searchres a:hover,.searchres a:focus-visible{background:var(--surface-2)}
+.searchres b{display:block;font-family:var(--fs);font-weight:400;font-size:1.18rem;margin-bottom:4px}
+.searchres span{display:block;color:var(--ink-2);font-size:.92rem}
+.searchres mark{background:var(--gold-soft);color:inherit;padding:0 2px}
+@media(max-width:940px){.searchpanel{top:68px}}
 </style>
 </head>
 <body>
@@ -464,6 +514,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
     <button class="navtoggle" id="navtoggle" type="button"
       aria-expanded="false" aria-controls="navmenu" aria-label="Menu"><span></span></button>
+    <button class="navsearch" id="navsearch" type="button" aria-label="Search" aria-expanded="false" aria-controls="searchpanel"><svg viewBox="0 0 20 20" width="17" height="17" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.6" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12.8 12.8 17 17" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
     <div class="navlinks" id="navmenu">
       <a href="services">What we do</a>
       <a href="supply">What we supply</a>
@@ -475,11 +526,21 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <a class="btn" href="contact#enquiry"><span class="btn-long">Request a </span>quote</a>
   </div>
 </nav>
+<div class="searchpanel" id="searchpanel" hidden>
+  <div class="wrap">
+    <label class="sr" for="searchinput">Search the site</label>
+    <input id="searchinput" type="search" autocomplete="off" spellcheck="false"
+      placeholder="Search guides, corridors, categories&hellip;">
+    <p class="searchhint">Type at least two letters. Press Escape to close.</p>
+    <ul class="searchres" id="searchres"></ul>
+  </div>
+</div>
 
 <header class="hero chero" id="top">
   <div class="wrap chero-g chero-1">
     <div>
       <nav class="crumbs" aria-label="Breadcrumb"><a href="/">ISP Group</a> <span>/</span> <a href="guides">Guides</a> <span>/</span> <b>Verifying a supplier</b></nav>
+      <p class="upd"><time datetime="2026-10-08">Updated 8 October 2026</time> &middot; ISP Group</p>
       <h1>How to verify a supplier <em>is actually a factory</em></h1>
       <p class="sub">Both kinds of counterparty answer your enquiry within an hour and both send photographs of a plant. Four checks separate them, and one of the four catches almost every impersonation.</p>
       <div class="chips"><span class="chip">Licence</span><span class="chip">Export right</span><span class="chip">Scope of business</span><span class="chip">Beneficiary name</span></div>
@@ -491,7 +552,8 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 <main id="main" tabindex="-1">
 <section><div class="wrap">
 <div class="lede"><h2>Why it matters, in one sentence</h2><p class="intro">A factory can re-run a batch. A trading company has to persuade someone else to re-run it, at its own cost, with no leverage, which is why the difference shows up only when something has already gone wrong.</p></div>
-<div class="prose"><div class="pblock"><span class="k">01</span><h2>Check one: the registration document</h2><div class="ptext"><p>Every registered company has one, and it names the legal entity, the registration number, the registered capital and the scope of business. In China that is the business licence with its unified social credit code; elsewhere it has a different name and the same function.</p><p>Read the scope of business rather than the letterhead. A company whose registered scope is wholesale and import-export is not a manufacturer, whatever the website says. This is not a hidden fact, it is printed on the document they will send you if you ask.</p></div></div><div class="pblock"><span class="k">02</span><h2>Check two: the right to export</h2><div class="ptext"><p>Manufacturing and exporting are separate permissions in many jurisdictions. A real factory may have no export right at all and may ship through an agent, which is legitimate and changes who your contract is with, who issues the invoice and who is named on the bill of lading.</p><p>If the entity that signs your contract is not the entity that manufactures and not the entity that exports, there are three parties and you are relying on the relationships between two of them that you cannot see.</p></div></div><div class="pblock"><span class="k">03</span><h2>Check three: the beneficiary name on the proforma</h2><div class="ptext"><p>This is the one that catches almost everything. The bank account on the proforma invoice has to carry the same name as the registration document. Not a similar name, not the trading name, not the name of a director, not an account in a third country “because of currency controls”.</p><p class="pnote">A mismatch between the seller name and the beneficiary name is not an administrative detail to be smoothed over. It is the whole question. Every payment-diversion fraud in this trade runs through exactly that gap.</p><p>The related problem is the lookalike domain. Around well-known exporters there is a layer of sites that copy the name and offer their own sales addresses. The rule is simple: write only to the domain published on the company's own official site, and treat any address on a different domain as unverified until proven otherwise.</p></div></div><div class="pblock"><span class="k">04</span><h2>Check four: something only a factory can answer</h2><div class="ptext"><p>Ask a production question that a trader cannot answer without a phone call: the cycle time on the line that would make your item, the changeover time between sizes, the name of the controller on the main machine, how many shifts run in a normal week, and what the minimum run is before a changeover stops being worth it.</p><p>A factory answers in one message. A trader answers tomorrow, in different words from the ones they used yesterday.</p></div></div><div class="pblock"><span class="k">05</span><h2>What an audit adds, and when it is worth it</h2><div class="ptext"><p>A physical factory audit by a third party adds what documents cannot: that the plant exists at the registered address, that the equipment matches the claim, and that the quality system is operated rather than framed. It costs a fraction of a container and it is worth it on a first order of any size, on anything safety-critical, and on any supplier found through a marketplace rather than through a reference.</p><p>We do these checks before quoting rather than before ordering, because a price from a counterparty that will not survive the check is not information.</p></div></div></div>
+<nav class="toc" aria-label="On this page"><span class="eyebrow">On this page</span><ol><li><a href="#s1"><span>01</span>Check one: the registration document</a></li><li><a href="#s2"><span>02</span>Check two: the right to export</a></li><li><a href="#s3"><span>03</span>Check three: the beneficiary name on the proforma</a></li><li><a href="#s4"><span>04</span>Check four: something only a factory can answer</a></li><li><a href="#s5"><span>05</span>What an audit adds, and when it is worth it</a></li></ol></nav>
+<div class="prose"><div class="pblock"><span class="k">01</span><h2 id="s1">Check one: the registration document</h2><div class="ptext"><p>Every registered company has one, and it names the legal entity, the registration number, the registered capital and the scope of business. In China that is the business licence with its unified social credit code; elsewhere it has a different name and the same function.</p><p>Read the scope of business rather than the letterhead. A company whose registered scope is wholesale and import-export is not a manufacturer, whatever the website says. This is not a hidden fact, it is printed on the document they will send you if you ask.</p></div></div><div class="pblock"><span class="k">02</span><h2 id="s2">Check two: the right to export</h2><div class="ptext"><p>Manufacturing and exporting are separate permissions in many jurisdictions. A real factory may have no export right at all and may ship through an agent, which is legitimate and changes who your contract is with, who issues the invoice and who is named on the bill of lading.</p><p>If the entity that signs your contract is not the entity that manufactures and not the entity that exports, there are three parties and you are relying on the relationships between two of them that you cannot see.</p></div></div><div class="pblock"><span class="k">03</span><h2 id="s3">Check three: the beneficiary name on the proforma</h2><div class="ptext"><p>This is the one that catches almost everything. The bank account on the proforma invoice has to carry the same name as the registration document. Not a similar name, not the trading name, not the name of a director, not an account in a third country “because of currency controls”.</p><p class="pnote">A mismatch between the seller name and the beneficiary name is not an administrative detail to be smoothed over. It is the whole question. Every payment-diversion fraud in this trade runs through exactly that gap.</p><p>The related problem is the lookalike domain. Around well-known exporters there is a layer of sites that copy the name and offer their own sales addresses. The rule is simple: write only to the domain published on the company's own official site, and treat any address on a different domain as unverified until proven otherwise.</p></div></div><div class="pblock"><span class="k">04</span><h2 id="s4">Check four: something only a factory can answer</h2><div class="ptext"><p>Ask a production question that a trader cannot answer without a phone call: the cycle time on the line that would make your item, the changeover time between sizes, the name of the controller on the main machine, how many shifts run in a normal week, and what the minimum run is before a changeover stops being worth it.</p><p>A factory answers in one message. A trader answers tomorrow, in different words from the ones they used yesterday.</p></div></div><div class="pblock"><span class="k">05</span><h2 id="s5">What an audit adds, and when it is worth it</h2><div class="ptext"><p>A physical factory audit by a third party adds what documents cannot: that the plant exists at the registered address, that the equipment matches the claim, and that the quality system is operated rather than framed. It costs a fraction of a container and it is worth it on a first order of any size, on anything safety-critical, and on any supplier found through a marketplace rather than through a reference.</p><p>We do these checks before quoting rather than before ordering, because a price from a counterparty that will not survive the check is not information.</p></div></div></div>
 
 </div></section>
 <section id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>Questions on this</h2><p class="intro">The ones we are asked most often.</p></div><div style="margin-top:34px"><details><summary>Is it wrong to buy through a trading company?</summary><p>No. For a small quantity or an assortment across several plants a trading company is often the right answer and costs less than dealing with five factories. What is wrong is a trading company presenting itself as a manufacturer, because then you are pricing a risk you do not know you are carrying.</p></details><details><summary>The supplier wants payment to an account in another country. Is that normal?</summary><p>It is a stop sign. There are legitimate reasons a group banks offshore, and they can all be evidenced in writing on company letterhead with the group structure. Until that evidence exists, treat it as the most common pattern in payment fraud.</p></details><details><summary>How long do these checks take?</summary><p>The document checks take a day or two. A third-party factory audit takes one to two weeks to schedule and a day to perform. Both are shorter than the delay caused by a failed first shipment.</p></details></div></div></section>
@@ -524,10 +586,12 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <p class="credits">Photography: pipe by JWPhotowerks; straddle carrier by Lars K. Jensen (CC BY).
       All other images CC0 or public domain. Full list with links in media/CREDITS.json.</p>
     <p class="fbottom">ISP GROUP LLC &middot; Global Commerce &middot; International sourcing,
-      trading and supply of materials, products and industrial equipment.</p>
+      trading and supply of materials, products and industrial equipment.
+      &nbsp;&middot;&nbsp; <a href="privacy">Privacy</a>
+      &nbsp;&middot;&nbsp; <a href="terms">Terms of use</a></p>
   </div>
 </footer>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to verify a supplier is a factory", "description": "Business licence, export right, scope of business and the bank account name: the checks that separate a manufacturer from a trading company, and the ones that catch a lookalike domain.", "author": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "publisher": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "mainEntityOfPage": "https://ispgroupgc.com/verify-supplier"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to verify a supplier is a factory", "description": "Business licence, export right, scope of business and the bank account name: the checks that separate a manufacturer from a trading company, and the ones that catch a lookalike domain.", "author": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "publisher": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "datePublished": "2026-10-08", "dateModified": "2026-10-08", "inLanguage": "en", "mainEntityOfPage": "https://ispgroupgc.com/verify-supplier"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is it wrong to buy through a trading company?", "acceptedAnswer": {"@type": "Answer", "text": "No. For a small quantity or an assortment across several plants a trading company is often the right answer and costs less than dealing with five factories. What is wrong is a trading company presenting itself as a manufacturer, because then you are pricing a risk you do not know you are carrying."}}, {"@type": "Question", "name": "The supplier wants payment to an account in another country. Is that normal?", "acceptedAnswer": {"@type": "Answer", "text": "It is a stop sign. There are legitimate reasons a group banks offshore, and they can all be evidenced in writing on company letterhead with the group structure. Until that evidence exists, treat it as the most common pattern in payment fraud."}}, {"@type": "Question", "name": "How long do these checks take?", "acceptedAnswer": {"@type": "Answer", "text": "The document checks take a day or two. A third-party factory audit takes one to two weeks to schedule and a day to perform. Both are shorter than the delay caused by a failed first shipment."}}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ISP Group", "item": "https://ispgroupgc.com/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://ispgroupgc.com/guides"}, {"@type": "ListItem", "position": 3, "name": "Verifying a supplier", "item": "https://ispgroupgc.com/verify-supplier"}]}</script>
 <script>
@@ -616,6 +680,71 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   window.addEventListener('scroll',kick,{passive:true});
   window.addEventListener('resize',kick,{passive:true});
   par();
+})();
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('navsearch'), panel=document.getElementById('searchpanel');
+  if(!btn||!panel) return;
+  var input=document.getElementById('searchinput'), out=document.getElementById('searchres');
+  var idx=null, loading=false, opener=null;
+  function load(){
+    if(idx||loading) return;
+    loading=true;
+    fetch('/search.json').then(function(r){return r.json();})
+      .then(function(j){ idx=j; loading=false; run(); })
+      .catch(function(){ loading=false;
+        out.innerHTML='<li><a href="/guides"><b>Search is unavailable</b>'+
+          '<span>Browse the guides instead.</span></a></li>'; });
+  }
+  function esc(s){ return s.replace(/[&<>"]/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function hl(s,q){ if(!s) return '';
+    var i=s.toLowerCase().indexOf(q);
+    if(i<0) return esc(s.slice(0,118));
+    var a=Math.max(0,i-40), t=(a?'… ':'')+s.slice(a,i)+'\u0000'+s.slice(i,i+q.length)+'\u0001'+s.slice(i+q.length,i+q.length+70);
+    return esc(t).replace('\u0000','<mark>').replace('\u0001','</mark>'); }
+  function run(){
+    var q=(input.value||'').trim().toLowerCase();
+    if(q.length<2){ out.innerHTML=''; return; }
+    if(!idx){ load(); return; }
+    var hits=[];
+    for(var i=0;i<idx.length;i++){
+      var r=idx[i], t=r.t.toLowerCase(), d=(r.d||'').toLowerCase(), h=(r.h||'').toLowerCase();
+      var sc=0;
+      if(t.indexOf(q)>=0) sc+=10;
+      if(h.indexOf(q)>=0) sc+=4;
+      if(d.indexOf(q)>=0) sc+=3;
+      if(sc) hits.push([sc,r]);
+    }
+    hits.sort(function(a,b){return b[0]-a[0];});
+    if(!hits.length){
+      out.innerHTML='<li><a href="/contact"><b>Nothing matched &ldquo;'+esc(q)+'&rdquo;</b>'+
+        '<span>Ask us directly and we will answer.</span></a></li>'; return; }
+    out.innerHTML=hits.slice(0,8).map(function(x){
+      var r=x[1], ctx=(r.d&&r.d.toLowerCase().indexOf(q)>=0)?r.d:(r.h||r.d);
+      return '<li><a href="'+r.u+'"><b>'+hl(r.t,q)+'</b><span>'+hl(ctx,q)+'</span></a></li>';
+    }).join('');
+  }
+  function open_(){
+    opener=document.activeElement;
+    panel.hidden=false; btn.setAttribute('aria-expanded','true');
+    load(); input.focus(); input.select();
+  }
+  function close_(){
+    panel.hidden=true; btn.setAttribute('aria-expanded','false');
+    if(opener&&opener.focus) opener.focus();
+  }
+  btn.addEventListener('click',function(){ panel.hidden?open_():close_(); });
+  input.addEventListener('input',run);
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&!panel.hidden){ close_(); return; }
+    if(e.key==='/'&&panel.hidden){
+      var a=document.activeElement, tag=a?a.tagName:'';
+      if(tag==='INPUT'||tag==='TEXTAREA'||tag==='SELECT'||(a&&a.isContentEditable)) return;
+      e.preventDefault(); open_();
+    }
+  });
 })();
 </script>
 <!--/email_off-->

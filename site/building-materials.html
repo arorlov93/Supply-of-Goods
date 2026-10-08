@@ -138,9 +138,14 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 <style>
 /* hero */
 .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--rule)}
-#globe{position:absolute;top:50%;right:-5%;transform:translateY(-50%);pointer-events:none;
-  width:min(720px,56%);aspect-ratio:1/1;height:auto;display:block}
-@media(max-width:940px){#globe{top:-7%;right:-26%;transform:none;width:62%;opacity:.45}}
+#globe,#globe-still{position:absolute;top:50%;right:-5%;transform:translateY(-50%);
+  pointer-events:none;width:min(720px,56%);aspect-ratio:1/1;height:auto;display:block}
+#globe-still{object-fit:contain;transition:opacity .6s ease}
+#globe{opacity:0;transition:opacity .8s ease}
+#globe.live{opacity:1}
+#globe-still.gone{opacity:0}
+@media(max-width:940px){#globe,#globe-still{top:-7%;right:-26%;transform:none;width:62%}
+  #globe-still{opacity:.45}#globe.live{opacity:.45}}
 .hero .wrap{position:relative;z-index:2;padding-block:clamp(56px,8.5vw,108px)}
 .hero h1{font-size:clamp(2.55rem,6.4vw,4.9rem);max-width:16ch;letter-spacing:-.018em;line-height:1.05}
 .hero h1 em{font-style:italic;color:var(--brand)}
@@ -454,6 +459,51 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .skip:focus{left:12px;top:12px}
 .navlinks a[aria-current]{color:var(--ink)}
 .navlinks a[aria-current]::after{right:0}
+
+/* оглавление страницы */
+.toc{margin-top:38px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+  padding:22px 0 20px}
+.toc ol{list-style:none;margin:14px 0 0;padding:0;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));
+  gap:2px clamp(20px,3vw,46px)}
+.toc li{min-width:0}
+.toc a{display:flex;gap:13px;align-items:baseline;text-decoration:none;color:var(--ink-2);
+  padding:7px 0;border-bottom:1px solid transparent;transition:color .18s,border-color .18s}
+.toc a span{font-family:var(--fm);font-size:.57rem;letter-spacing:.1em;color:var(--gold-ink);
+  flex:0 0 auto}
+.toc a:hover{color:var(--brand)}
+.toc a:hover span{color:var(--gold-ink)}
+/* липкая шапка не должна накрывать заголовок при переходе по якорю */
+.pblock h2{scroll-margin-top:96px}
+
+/* дата обновления материала */
+.upd{font-family:var(--fm);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-3);margin:-8px 0 16px}
+
+/* поиск */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.navsearch{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;
+  margin-left:4px;padding:0;border:1px solid var(--rule);background:var(--surface);
+  color:var(--ink-2);cursor:pointer;border-radius:1px;box-shadow:var(--shadow-s);
+  transition:border-color .18s,color .18s}
+.navsearch:hover{border-color:var(--brand);color:var(--brand)}
+.searchpanel{position:sticky;top:68px;z-index:39;background:var(--surface);
+  border-bottom:1px solid var(--rule);box-shadow:var(--shadow-m);padding:22px 0 26px}
+.searchpanel[hidden]{display:none}
+.searchpanel input{width:100%;background:var(--paper);border:1px solid var(--rule);
+  color:var(--ink);font-family:var(--fs);font-size:clamp(1.3rem,2.6vw,1.9rem);
+  padding:14px 16px;transition:border-color .18s,box-shadow .18s}
+.searchpanel input:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-wash)}
+.searchhint{margin-top:10px;font-family:var(--fm);font-size:.55rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink-3)}
+.searchres{list-style:none;margin:16px 0 0;padding:0;max-height:52vh;overflow:auto}
+.searchres li{border-top:1px solid var(--rule)}
+.searchres a{display:block;padding:14px 0;text-decoration:none;color:var(--ink)}
+.searchres a:hover,.searchres a:focus-visible{background:var(--surface-2)}
+.searchres b{display:block;font-family:var(--fs);font-weight:400;font-size:1.18rem;margin-bottom:4px}
+.searchres span{display:block;color:var(--ink-2);font-size:.92rem}
+.searchres mark{background:var(--gold-soft);color:inherit;padding:0 2px}
+@media(max-width:940px){.searchpanel{top:68px}}
 </style>
 </head>
 <body>
@@ -464,6 +514,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
     <button class="navtoggle" id="navtoggle" type="button"
       aria-expanded="false" aria-controls="navmenu" aria-label="Menu"><span></span></button>
+    <button class="navsearch" id="navsearch" type="button" aria-label="Search" aria-expanded="false" aria-controls="searchpanel"><svg viewBox="0 0 20 20" width="17" height="17" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.6" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12.8 12.8 17 17" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
     <div class="navlinks" id="navmenu">
       <a href="services">What we do</a>
       <a href="supply">What we supply</a>
@@ -475,11 +526,21 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <a class="btn" href="contact#enquiry"><span class="btn-long">Request a </span>quote</a>
   </div>
 </nav>
+<div class="searchpanel" id="searchpanel" hidden>
+  <div class="wrap">
+    <label class="sr" for="searchinput">Search the site</label>
+    <input id="searchinput" type="search" autocomplete="off" spellcheck="false"
+      placeholder="Search guides, corridors, categories&hellip;">
+    <p class="searchhint">Type at least two letters. Press Escape to close.</p>
+    <ul class="searchres" id="searchres"></ul>
+  </div>
+</div>
 
 <header class="hero chero" id="top">
   <div class="wrap chero-g">
     <div>
       <nav class="crumbs" aria-label="Breadcrumb"><a href="/">ISP Group</a> <span>/</span> <a href="supply">What we supply</a> <span>/</span> <b>Building materials</b></nav>
+
       <h1>Building and <em>finishing materials</em></h1>
       <p class="sub">Stone, tile, cement products, insulation, dry mixes, sanitary ware and cable. Bought against a named standard with the test certificate attached, not against a photograph in a catalogue.</p>
       <div class="chips"><span class="chip">EN &middot; ISO &middot; ASTM &middot; GOST</span><span class="chip">FCL and consolidated LCL</span><span class="chip">T&uuml;rkiye &middot; China &middot; EU</span></div>
@@ -492,7 +553,8 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 <main id="main" tabindex="-1">
 <section><div class="wrap"><figure class="mediafig" style="margin-bottom:44px"><div class="shot"><span class="pz"><img src="media/pipe.webp" width="922" height="691" loading="lazy" alt="Stacked construction material seen end on"></span></div><figcaption>Materials bought to a named standard, with the certificate attached</figcaption></figure>
 <div class="lede"><h2>Finishing materials fail on tolerance, not on price</h2><p class="intro">A tile that is two millimetres out of square, a batch of slabs from three different blocks, a cable that does not carry the reaction-to-fire class the building needs. None of these shows in a quotation, and all of them are discovered on site.</p></div>
-<div class="prose"><div class="pblock"><span class="k">01</span><h2>What we buy in this category</h2><div class="ptext"><ul class="plist"><li><b>Natural stone</b> in blocks, slabs cut to 2 cm or 3 cm, and finished pieces. Polished, honed or brushed, bundled by block so a run matches.</li><li><b>Porcelain and ceramic tile</b> to ISO 13006 and EN 14411, specified by water absorption group and by abrasion class rather than by trade name.</li><li><b>Cement products and dry mixes</b>, cement to EN 197-1 class, adhesives and screeds with the batch certificate.</li><li><b>Insulation</b> to the EN 13162 to 13171 family, specified by declared thermal conductivity and by thickness, not by brand.</li><li><b>Sanitary ware</b>, ceramics and fittings, with the pressure and flush tests stated.</li><li><b>Cable and electrical goods</b>, with the reaction-to-fire classification the destination building code requires.</li></ul></div></div><div class="pblock"><span class="k">02</span><h2>The specification that makes offers comparable</h2><div class="ptext"><p>Tile is the clearest example. “600 by 600 porcelain, grey” is not a specification: it leaves out the water absorption group, which decides whether the tile can go outside; the abrasion class, which decides whether it survives a commercial floor; the rectification, which decides the joint width; the surface slip rating; and the calibre and shade batch, which decide whether two pallets laid side by side look like one floor.</p><p>We write those into the order before asking for a price, and we ask for the shade and calibre batch to be held across the whole quantity. A second shipment from the same factory in a different batch will not match the first, and no discount fixes it.</p></div></div><div class="pblock"><span class="k">03</span><h2>Natural stone is three different purchases</h2><div class="ptext"><p>A quarry sells blocks by the cubic metre. A factory sells slabs by the square metre, bundled by block. A fabricator sells pieces cut to a drawing. Different prices, different packing, different waste and different people to argue with.</p><p>If the buyer intends to fabricate, bundle integrity matters more than the unit price, because slabs from different blocks will not match across a run. Most commercial travertine and much marble is resin treated and often mesh backed, which is normal and has to be declared. Stone sold as unfilled that arrives resin filled is a claim. The detail is on the <a href="turkiye">Türkiye corridor page</a>.</p></div></div><div class="pblock"><span class="k">04</span><h2>Packing decides what arrives saleable</h2><div class="ptext"><p>Tile travels on pallets and is lost to corner damage; the pallet has to be strapped and corner-protected and the stretch wrap has to be real wrap, not three turns. Stone travels on A-frames or in wooden bundles with the faces separated, and a sealed crate that cannot breathe marks light material with trapped moisture.</p><p>Cement products and dry mixes are hygroscopic: they want a liner and they want to be loaded last and discharged first. We write the breakage and moisture allowance into both contracts in the same words, with the same inspection window and the same evidence standard.</p></div></div><div class="pblock"><span class="k">05</span><h2>What the destination will ask for</h2><div class="ptext"><p>Which certificates matter depends entirely on where the goods are going, and this is settled before the order rather than at the border. In the European Union, construction products in scope carry a declaration of performance and CE marking. In the Eurasian customs union the equivalent is the EAC conformity regime. In the United States the question is usually the HTS classification and whether a trade remedy order touches the product.</p><p class="pnote">We agree the classification in writing before the order is placed, because the importer of record is liable for a wrong one and the seller is not.</p></div></div></div>
+<nav class="toc" aria-label="On this page"><span class="eyebrow">On this page</span><ol><li><a href="#s1"><span>01</span>What we buy in this category</a></li><li><a href="#s2"><span>02</span>The specification that makes offers comparable</a></li><li><a href="#s3"><span>03</span>Natural stone is three different purchases</a></li><li><a href="#s4"><span>04</span>Packing decides what arrives saleable</a></li><li><a href="#s5"><span>05</span>What the destination will ask for</a></li></ol></nav>
+<div class="prose"><div class="pblock"><span class="k">01</span><h2 id="s1">What we buy in this category</h2><div class="ptext"><ul class="plist"><li><b>Natural stone</b> in blocks, slabs cut to 2 cm or 3 cm, and finished pieces. Polished, honed or brushed, bundled by block so a run matches.</li><li><b>Porcelain and ceramic tile</b> to ISO 13006 and EN 14411, specified by water absorption group and by abrasion class rather than by trade name.</li><li><b>Cement products and dry mixes</b>, cement to EN 197-1 class, adhesives and screeds with the batch certificate.</li><li><b>Insulation</b> to the EN 13162 to 13171 family, specified by declared thermal conductivity and by thickness, not by brand.</li><li><b>Sanitary ware</b>, ceramics and fittings, with the pressure and flush tests stated.</li><li><b>Cable and electrical goods</b>, with the reaction-to-fire classification the destination building code requires.</li></ul></div></div><div class="pblock"><span class="k">02</span><h2 id="s2">The specification that makes offers comparable</h2><div class="ptext"><p>Tile is the clearest example. “600 by 600 porcelain, grey” is not a specification: it leaves out the water absorption group, which decides whether the tile can go outside; the abrasion class, which decides whether it survives a commercial floor; the rectification, which decides the joint width; the surface slip rating; and the calibre and shade batch, which decide whether two pallets laid side by side look like one floor.</p><p>We write those into the order before asking for a price, and we ask for the shade and calibre batch to be held across the whole quantity. A second shipment from the same factory in a different batch will not match the first, and no discount fixes it.</p></div></div><div class="pblock"><span class="k">03</span><h2 id="s3">Natural stone is three different purchases</h2><div class="ptext"><p>A quarry sells blocks by the cubic metre. A factory sells slabs by the square metre, bundled by block. A fabricator sells pieces cut to a drawing. Different prices, different packing, different waste and different people to argue with.</p><p>If the buyer intends to fabricate, bundle integrity matters more than the unit price, because slabs from different blocks will not match across a run. Most commercial travertine and much marble is resin treated and often mesh backed, which is normal and has to be declared. Stone sold as unfilled that arrives resin filled is a claim. The detail is on the <a href="turkiye">Türkiye corridor page</a>.</p></div></div><div class="pblock"><span class="k">04</span><h2 id="s4">Packing decides what arrives saleable</h2><div class="ptext"><p>Tile travels on pallets and is lost to corner damage; the pallet has to be strapped and corner-protected and the stretch wrap has to be real wrap, not three turns. Stone travels on A-frames or in wooden bundles with the faces separated, and a sealed crate that cannot breathe marks light material with trapped moisture.</p><p>Cement products and dry mixes are hygroscopic: they want a liner and they want to be loaded last and discharged first. We write the breakage and moisture allowance into both contracts in the same words, with the same inspection window and the same evidence standard.</p></div></div><div class="pblock"><span class="k">05</span><h2 id="s5">What the destination will ask for</h2><div class="ptext"><p>Which certificates matter depends entirely on where the goods are going, and this is settled before the order rather than at the border. In the European Union, construction products in scope carry a declaration of performance and CE marking. In the Eurasian customs union the equivalent is the EAC conformity regime. In the United States the question is usually the HTS classification and whether a trade remedy order touches the product.</p><p class="pnote">We agree the classification in writing before the order is placed, because the importer of record is liable for a wrong one and the seller is not.</p></div></div></div>
 
 </div></section>
 <section id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>What buyers ask about this category</h2><p class="intro">The three that come up before a first order.</p></div><div style="margin-top:34px"><details><summary>Can you match a tile we already have?</summary><p>Usually, from a sample or from the original manufacturer's reference. What cannot be promised is a shade match across batches, because shade is a batch property. If matching matters, the whole quantity has to come from one batch and that has to be in the order.</p></details><details><summary>Do you supply stone by the block or by the slab?</summary><p>Both, but they are different purchases with different economics. If you are not running your own saw, buy slabs bundled by block. If you are, blocks can be cheaper per square metre and you carry the yield risk.</p></details><details><summary>Who certifies that the material meets the standard?</summary><p>The producer issues the test report or declaration; we check that the document names the standard the destination actually requires, which is not always the one the producer is used to issuing. Where the value justifies it we add third-party testing before shipment.</p></details></div></div></section>
@@ -525,7 +587,9 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <p class="credits">Photography: pipe by JWPhotowerks; straddle carrier by Lars K. Jensen (CC BY).
       All other images CC0 or public domain. Full list with links in media/CREDITS.json.</p>
     <p class="fbottom">ISP GROUP LLC &middot; Global Commerce &middot; International sourcing,
-      trading and supply of materials, products and industrial equipment.</p>
+      trading and supply of materials, products and industrial equipment.
+      &nbsp;&middot;&nbsp; <a href="privacy">Privacy</a>
+      &nbsp;&middot;&nbsp; <a href="terms">Terms of use</a></p>
   </div>
 </footer>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Building and finishing materials", "description": "Natural stone, porcelain and ceramic tile, cement, insulation, dry mixes, sanitary ware and cable, bought against EN and ISO standards with the certificates named.", "provider": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "url": "https://ispgroupgc.com/building-materials", "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Building and finishing materials", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Stone, porcelain and ceramic tile, cement products, dry mixes, insulation, sanitary ware, cable"}}]}}</script>
@@ -617,6 +681,71 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   window.addEventListener('scroll',kick,{passive:true});
   window.addEventListener('resize',kick,{passive:true});
   par();
+})();
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('navsearch'), panel=document.getElementById('searchpanel');
+  if(!btn||!panel) return;
+  var input=document.getElementById('searchinput'), out=document.getElementById('searchres');
+  var idx=null, loading=false, opener=null;
+  function load(){
+    if(idx||loading) return;
+    loading=true;
+    fetch('/search.json').then(function(r){return r.json();})
+      .then(function(j){ idx=j; loading=false; run(); })
+      .catch(function(){ loading=false;
+        out.innerHTML='<li><a href="/guides"><b>Search is unavailable</b>'+
+          '<span>Browse the guides instead.</span></a></li>'; });
+  }
+  function esc(s){ return s.replace(/[&<>"]/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function hl(s,q){ if(!s) return '';
+    var i=s.toLowerCase().indexOf(q);
+    if(i<0) return esc(s.slice(0,118));
+    var a=Math.max(0,i-40), t=(a?'… ':'')+s.slice(a,i)+'\u0000'+s.slice(i,i+q.length)+'\u0001'+s.slice(i+q.length,i+q.length+70);
+    return esc(t).replace('\u0000','<mark>').replace('\u0001','</mark>'); }
+  function run(){
+    var q=(input.value||'').trim().toLowerCase();
+    if(q.length<2){ out.innerHTML=''; return; }
+    if(!idx){ load(); return; }
+    var hits=[];
+    for(var i=0;i<idx.length;i++){
+      var r=idx[i], t=r.t.toLowerCase(), d=(r.d||'').toLowerCase(), h=(r.h||'').toLowerCase();
+      var sc=0;
+      if(t.indexOf(q)>=0) sc+=10;
+      if(h.indexOf(q)>=0) sc+=4;
+      if(d.indexOf(q)>=0) sc+=3;
+      if(sc) hits.push([sc,r]);
+    }
+    hits.sort(function(a,b){return b[0]-a[0];});
+    if(!hits.length){
+      out.innerHTML='<li><a href="/contact"><b>Nothing matched &ldquo;'+esc(q)+'&rdquo;</b>'+
+        '<span>Ask us directly and we will answer.</span></a></li>'; return; }
+    out.innerHTML=hits.slice(0,8).map(function(x){
+      var r=x[1], ctx=(r.d&&r.d.toLowerCase().indexOf(q)>=0)?r.d:(r.h||r.d);
+      return '<li><a href="'+r.u+'"><b>'+hl(r.t,q)+'</b><span>'+hl(ctx,q)+'</span></a></li>';
+    }).join('');
+  }
+  function open_(){
+    opener=document.activeElement;
+    panel.hidden=false; btn.setAttribute('aria-expanded','true');
+    load(); input.focus(); input.select();
+  }
+  function close_(){
+    panel.hidden=true; btn.setAttribute('aria-expanded','false');
+    if(opener&&opener.focus) opener.focus();
+  }
+  btn.addEventListener('click',function(){ panel.hidden?open_():close_(); });
+  input.addEventListener('input',run);
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&!panel.hidden){ close_(); return; }
+    if(e.key==='/'&&panel.hidden){
+      var a=document.activeElement, tag=a?a.tagName:'';
+      if(tag==='INPUT'||tag==='TEXTAREA'||tag==='SELECT'||(a&&a.isContentEditable)) return;
+      e.preventDefault(); open_();
+    }
+  });
 })();
 </script>
 <!--/email_off-->

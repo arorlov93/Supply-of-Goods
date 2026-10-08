@@ -363,6 +363,31 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .pz{position:absolute;inset:-8% 0;display:block;will-change:transform}
 .pz img{width:100%;height:100%;object-fit:cover}
 @media (prefers-reduced-motion:reduce){.pz{inset:0}}
+
+/* поиск */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.navsearch{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;
+  margin-left:4px;padding:0;border:1px solid var(--rule);background:var(--surface);
+  color:var(--ink-2);cursor:pointer;border-radius:1px;box-shadow:var(--shadow-s);
+  transition:border-color .18s,color .18s}
+.navsearch:hover{border-color:var(--brand);color:var(--brand)}
+.searchpanel{position:sticky;top:68px;z-index:39;background:var(--surface);
+  border-bottom:1px solid var(--rule);box-shadow:var(--shadow-m);padding:22px 0 26px}
+.searchpanel[hidden]{display:none}
+.searchpanel input{width:100%;background:var(--paper);border:1px solid var(--rule);
+  color:var(--ink);font-family:var(--fs);font-size:clamp(1.3rem,2.6vw,1.9rem);
+  padding:14px 16px;transition:border-color .18s,box-shadow .18s}
+.searchpanel input:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-wash)}
+.searchhint{margin-top:10px;font-family:var(--fm);font-size:.55rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink-3)}
+.searchres{list-style:none;margin:16px 0 0;padding:0;max-height:52vh;overflow:auto}
+.searchres li{border-top:1px solid var(--rule)}
+.searchres a{display:block;padding:14px 0;text-decoration:none;color:var(--ink)}
+.searchres a:hover,.searchres a:focus-visible{background:var(--surface-2)}
+.searchres b{display:block;font-family:var(--fs);font-weight:400;font-size:1.18rem;margin-bottom:4px}
+.searchres span{display:block;color:var(--ink-2);font-size:.92rem}
+.searchres mark{background:var(--gold-soft);color:inherit;padding:0 2px}
+@media(max-width:940px){.searchpanel{top:68px}}
 </style>
 </head>
 <body>
@@ -373,6 +398,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
     <button class="navtoggle" id="navtoggle" type="button"
       aria-expanded="false" aria-controls="navmenu" aria-label="Menu"><span></span></button>
+    <button class="navsearch" id="navsearch" type="button" aria-label="Search" aria-expanded="false" aria-controls="searchpanel"><svg viewBox="0 0 20 20" width="17" height="17" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.6" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12.8 12.8 17 17" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
     <div class="navlinks" id="navmenu">
       <a href="services">What we do</a>
       <a href="supply">What we supply</a>
@@ -384,6 +410,15 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <a class="btn" href="contact#enquiry"><span class="btn-long">Request a </span>quote</a>
   </div>
 </nav>
+<div class="searchpanel" id="searchpanel" hidden>
+  <div class="wrap">
+    <label class="sr" for="searchinput">Search the site</label>
+    <input id="searchinput" type="search" autocomplete="off" spellcheck="false"
+      placeholder="Search guides, corridors, categories&hellip;">
+    <p class="searchhint">Type at least two letters. Press Escape to close.</p>
+    <ul class="searchres" id="searchres"></ul>
+  </div>
+</div>
 
 <header class="hero chero" id="top">
   <div class="wrap chero-g">
@@ -420,11 +455,11 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
       <h2>The cheapest offer in this trade is usually the one that cannot ship</h2>
       <p class="intro">Frozen poultry and bulk staples into West Africa look like a pure price business and they are not. An offer is only real if the producing establishment is admissible in the destination country, if the cut is the one the market actually buys and if the payment terms survive a forty day voyage. Most of the cheap offers fail one of the three.</p>
     </div>
-    <div class="prose"><div class="pblock"><span class="k">01</span><h2>Admissibility comes before price</h2><div class="ptext"><p>Frozen meat does not enter on a commercial invoice. It enters on a veterinary health certificate issued for a specific producing establishment, in a form the destination country accepts. An establishment approved for one West African country is not automatically approved for its neighbour, and the requirements change.</p><p>For United States origin, export certification runs through the Food Safety and Inspection Service, and the certificate requirements for a given destination are published in its export library. Some destinations are handled electronically and some still require a paper certificate, which changes the lead time at the loading end. For European Union origin the equivalent is the competent authority of the member state. The question to put to any seller, before discussing a price, is the establishment number and written confirmation that it is cleared for the destination.</p><p>We do not treat a seller’s assurance on this as an answer. The establishment number is checked, and where the destination is ambiguous we get the certificate form identified in writing before any money moves.</p></div></div>
-<div class="pblock"><span class="k">02</span><h2>A cut is three products, not one</h2><div class="ptext"><p>The commonest reason two offers cannot be compared is that they are not for the same thing. A whole wing with three joints, a two joint wing, a drumette and a mid joint flat are four different products with four different prices and four different buyers. Turkey is sold as tom or hen, and the lines are not interchangeable for a processor. Tails, backs and paws each have their own market and their own seasonality.</p><p>Every enquiry we send names the anatomy explicitly, names the pack, and asks for the price on the same Incoterm for each line separately. An offer that quotes “wings” is not an offer.</p></div></div>
-<div class="pblock"><span class="k">03</span><h2>Pack and cold chain are part of the specification</h2><div class="ptext"><p>The West African standard is block frozen product in 10 kg cartons, which is not the standard pack in the United States or in the European Union. Repacking is possible and it costs money, so the price has to be asked for in both the producer’s own pack and in the destination pack. The difference tells you what the non-standard format is really worth.</p><p>A 40ft reefer carries about 25 tonnes net. The temperature is set at loading, recorded throughout and read at discharge, and the recorder tape is part of the document set, not an optional extra. Plug time at the transhipment port and at the destination is the part of the chain nobody books and everybody assumes.</p></div></div>
-<div class="pblock"><span class="k">04</span><h2>Compare the market, not the quotations</h2><div class="ptext"><p>A quotation is what a seller would like to receive. Customs statistics are what the goods actually crossed a border at, because the declared value is divided by the declared net weight and every discount the seller really gave is already inside that number. Before we negotiate a lane we pull the destination country’s import values by origin and by commodity code for the most recent full periods, and we negotiate against that rather than against the first offer.</p><p>On this corridor that exercise regularly moves the target by twenty per cent or more, and it changes which origin we approach first. It is also the only way to tell a genuinely competitive offer from one that is simply the lowest of three bad ones.</p></div></div>
-<div class="pblock"><span class="k">05</span><h2>The payment terms decide the return, not the margin</h2><div class="ptext"><p>This is the part buyers and sellers both underestimate. The margin per kilogram is set in the negotiation; the return on the money is set by how long the money is out. A letter of credit payable at sight against shipping documents releases the cash while the vessel is still at sea. Thirty day terms after arrival add the full voyage plus a month to the cycle, and on a multi container programme that is the difference between financing one shipment and financing four at once.</p><p>We price the two cases separately and we say so. A buyer who wants extended terms is asking for a credit facility, and a credit facility has a price. That conversation belongs before the first shipment, not after it.</p></div></div></div>
+    <nav class="toc" aria-label="On this page"><span class="eyebrow">On this page</span><ol><li><a href="#s1"><span>01</span>Admissibility comes before price</a></li><li><a href="#s2"><span>02</span>A cut is three products, not one</a></li><li><a href="#s3"><span>03</span>Pack and cold chain are part of the specification</a></li><li><a href="#s4"><span>04</span>Compare the market, not the quotations</a></li><li><a href="#s5"><span>05</span>The payment terms decide the return, not the margin</a></li></ol></nav><div class="prose"><div class="pblock"><span class="k">01</span><h2 id="s1">Admissibility comes before price</h2><div class="ptext"><p>Frozen meat does not enter on a commercial invoice. It enters on a veterinary health certificate issued for a specific producing establishment, in a form the destination country accepts. An establishment approved for one West African country is not automatically approved for its neighbour, and the requirements change.</p><p>For United States origin, export certification runs through the Food Safety and Inspection Service, and the certificate requirements for a given destination are published in its export library. Some destinations are handled electronically and some still require a paper certificate, which changes the lead time at the loading end. For European Union origin the equivalent is the competent authority of the member state. The question to put to any seller, before discussing a price, is the establishment number and written confirmation that it is cleared for the destination.</p><p>We do not treat a seller’s assurance on this as an answer. The establishment number is checked, and where the destination is ambiguous we get the certificate form identified in writing before any money moves.</p></div></div>
+<div class="pblock"><span class="k">02</span><h2 id="s2">A cut is three products, not one</h2><div class="ptext"><p>The commonest reason two offers cannot be compared is that they are not for the same thing. A whole wing with three joints, a two joint wing, a drumette and a mid joint flat are four different products with four different prices and four different buyers. Turkey is sold as tom or hen, and the lines are not interchangeable for a processor. Tails, backs and paws each have their own market and their own seasonality.</p><p>Every enquiry we send names the anatomy explicitly, names the pack, and asks for the price on the same Incoterm for each line separately. An offer that quotes “wings” is not an offer.</p></div></div>
+<div class="pblock"><span class="k">03</span><h2 id="s3">Pack and cold chain are part of the specification</h2><div class="ptext"><p>The West African standard is block frozen product in 10 kg cartons, which is not the standard pack in the United States or in the European Union. Repacking is possible and it costs money, so the price has to be asked for in both the producer’s own pack and in the destination pack. The difference tells you what the non-standard format is really worth.</p><p>A 40ft reefer carries about 25 tonnes net. The temperature is set at loading, recorded throughout and read at discharge, and the recorder tape is part of the document set, not an optional extra. Plug time at the transhipment port and at the destination is the part of the chain nobody books and everybody assumes.</p></div></div>
+<div class="pblock"><span class="k">04</span><h2 id="s4">Compare the market, not the quotations</h2><div class="ptext"><p>A quotation is what a seller would like to receive. Customs statistics are what the goods actually crossed a border at, because the declared value is divided by the declared net weight and every discount the seller really gave is already inside that number. Before we negotiate a lane we pull the destination country’s import values by origin and by commodity code for the most recent full periods, and we negotiate against that rather than against the first offer.</p><p>On this corridor that exercise regularly moves the target by twenty per cent or more, and it changes which origin we approach first. It is also the only way to tell a genuinely competitive offer from one that is simply the lowest of three bad ones.</p></div></div>
+<div class="pblock"><span class="k">05</span><h2 id="s5">The payment terms decide the return, not the margin</h2><div class="ptext"><p>This is the part buyers and sellers both underestimate. The margin per kilogram is set in the negotiation; the return on the money is set by how long the money is out. A letter of credit payable at sight against shipping documents releases the cash while the vessel is still at sea. Thirty day terms after arrival add the full voyage plus a month to the cycle, and on a multi container programme that is the difference between financing one shipment and financing four at once.</p><p>We price the two cases separately and we say so. A buyer who wants extended terms is asking for a credit facility, and a credit facility has a price. That conversation belongs before the first shipment, not after it.</p></div></div></div>
   </div>
 </section>
 
@@ -484,7 +519,9 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <p class="credits">Photography: pipe by JWPhotowerks; straddle carrier by Lars K. Jensen (CC BY).
       All other images CC0 or public domain. Full list with links in media/CREDITS.json.</p>
     <p class="fbottom">ISP GROUP LLC &middot; Global Commerce &middot; International sourcing,
-      trading and supply of materials, products and industrial equipment.</p>
+      trading and supply of materials, products and industrial equipment.
+      &nbsp;&middot;&nbsp; <a href="privacy">Privacy</a>
+      &nbsp;&middot;&nbsp; <a href="terms">Terms of use</a></p>
   </div>
 </footer>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "West Africa: frozen food and consumables into Lomé and Cotonou", "serviceType": "International sourcing, trading and supply", "description": "Shipping frozen poultry, bulk staples and consumables into Togo and Benin: veterinary admissibility, cut nomenclature, reefer cold chain and what the buyer's payment terms do to the cash cycle.", "provider": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "areaServed": [{"@type": "Place", "name": "frozen poultry West Africa"}], "url": "https://ispgroupgc.com/west-africa"}</script>
@@ -579,5 +616,70 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 })();
 </script>
 <!--/email_off-->
+<script>
+(function(){
+  var btn=document.getElementById('navsearch'), panel=document.getElementById('searchpanel');
+  if(!btn||!panel) return;
+  var input=document.getElementById('searchinput'), out=document.getElementById('searchres');
+  var idx=null, loading=false, opener=null;
+  function load(){
+    if(idx||loading) return;
+    loading=true;
+    fetch('/search.json').then(function(r){return r.json();})
+      .then(function(j){ idx=j; loading=false; run(); })
+      .catch(function(){ loading=false;
+        out.innerHTML='<li><a href="/guides"><b>Search is unavailable</b>'+
+          '<span>Browse the guides instead.</span></a></li>'; });
+  }
+  function esc(s){ return s.replace(/[&<>"]/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function hl(s,q){ if(!s) return '';
+    var i=s.toLowerCase().indexOf(q);
+    if(i<0) return esc(s.slice(0,118));
+    var a=Math.max(0,i-40), t=(a?'… ':'')+s.slice(a,i)+'\u0000'+s.slice(i,i+q.length)+'\u0001'+s.slice(i+q.length,i+q.length+70);
+    return esc(t).replace('\u0000','<mark>').replace('\u0001','</mark>'); }
+  function run(){
+    var q=(input.value||'').trim().toLowerCase();
+    if(q.length<2){ out.innerHTML=''; return; }
+    if(!idx){ load(); return; }
+    var hits=[];
+    for(var i=0;i<idx.length;i++){
+      var r=idx[i], t=r.t.toLowerCase(), d=(r.d||'').toLowerCase(), h=(r.h||'').toLowerCase();
+      var sc=0;
+      if(t.indexOf(q)>=0) sc+=10;
+      if(h.indexOf(q)>=0) sc+=4;
+      if(d.indexOf(q)>=0) sc+=3;
+      if(sc) hits.push([sc,r]);
+    }
+    hits.sort(function(a,b){return b[0]-a[0];});
+    if(!hits.length){
+      out.innerHTML='<li><a href="/contact"><b>Nothing matched &ldquo;'+esc(q)+'&rdquo;</b>'+
+        '<span>Ask us directly and we will answer.</span></a></li>'; return; }
+    out.innerHTML=hits.slice(0,8).map(function(x){
+      var r=x[1], ctx=(r.d&&r.d.toLowerCase().indexOf(q)>=0)?r.d:(r.h||r.d);
+      return '<li><a href="'+r.u+'"><b>'+hl(r.t,q)+'</b><span>'+hl(ctx,q)+'</span></a></li>';
+    }).join('');
+  }
+  function open_(){
+    opener=document.activeElement;
+    panel.hidden=false; btn.setAttribute('aria-expanded','true');
+    load(); input.focus(); input.select();
+  }
+  function close_(){
+    panel.hidden=true; btn.setAttribute('aria-expanded','false');
+    if(opener&&opener.focus) opener.focus();
+  }
+  btn.addEventListener('click',function(){ panel.hidden?open_():close_(); });
+  input.addEventListener('input',run);
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&!panel.hidden){ close_(); return; }
+    if(e.key==='/'&&panel.hidden){
+      var a=document.activeElement, tag=a?a.tagName:'';
+      if(tag==='INPUT'||tag==='TEXTAREA'||tag==='SELECT'||(a&&a.isContentEditable)) return;
+      e.preventDefault(); open_();
+    }
+  });
+})();
+</script>
 </body>
 </html>

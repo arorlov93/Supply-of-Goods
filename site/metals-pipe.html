@@ -138,9 +138,14 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 <style>
 /* hero */
 .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--rule)}
-#globe{position:absolute;top:50%;right:-5%;transform:translateY(-50%);pointer-events:none;
-  width:min(720px,56%);aspect-ratio:1/1;height:auto;display:block}
-@media(max-width:940px){#globe{top:-7%;right:-26%;transform:none;width:62%;opacity:.45}}
+#globe,#globe-still{position:absolute;top:50%;right:-5%;transform:translateY(-50%);
+  pointer-events:none;width:min(720px,56%);aspect-ratio:1/1;height:auto;display:block}
+#globe-still{object-fit:contain;transition:opacity .6s ease}
+#globe{opacity:0;transition:opacity .8s ease}
+#globe.live{opacity:1}
+#globe-still.gone{opacity:0}
+@media(max-width:940px){#globe,#globe-still{top:-7%;right:-26%;transform:none;width:62%}
+  #globe-still{opacity:.45}#globe.live{opacity:.45}}
 .hero .wrap{position:relative;z-index:2;padding-block:clamp(56px,8.5vw,108px)}
 .hero h1{font-size:clamp(2.55rem,6.4vw,4.9rem);max-width:16ch;letter-spacing:-.018em;line-height:1.05}
 .hero h1 em{font-style:italic;color:var(--brand)}
@@ -454,6 +459,51 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .skip:focus{left:12px;top:12px}
 .navlinks a[aria-current]{color:var(--ink)}
 .navlinks a[aria-current]::after{right:0}
+
+/* оглавление страницы */
+.toc{margin-top:38px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+  padding:22px 0 20px}
+.toc ol{list-style:none;margin:14px 0 0;padding:0;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));
+  gap:2px clamp(20px,3vw,46px)}
+.toc li{min-width:0}
+.toc a{display:flex;gap:13px;align-items:baseline;text-decoration:none;color:var(--ink-2);
+  padding:7px 0;border-bottom:1px solid transparent;transition:color .18s,border-color .18s}
+.toc a span{font-family:var(--fm);font-size:.57rem;letter-spacing:.1em;color:var(--gold-ink);
+  flex:0 0 auto}
+.toc a:hover{color:var(--brand)}
+.toc a:hover span{color:var(--gold-ink)}
+/* липкая шапка не должна накрывать заголовок при переходе по якорю */
+.pblock h2{scroll-margin-top:96px}
+
+/* дата обновления материала */
+.upd{font-family:var(--fm);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-3);margin:-8px 0 16px}
+
+/* поиск */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.navsearch{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;
+  margin-left:4px;padding:0;border:1px solid var(--rule);background:var(--surface);
+  color:var(--ink-2);cursor:pointer;border-radius:1px;box-shadow:var(--shadow-s);
+  transition:border-color .18s,color .18s}
+.navsearch:hover{border-color:var(--brand);color:var(--brand)}
+.searchpanel{position:sticky;top:68px;z-index:39;background:var(--surface);
+  border-bottom:1px solid var(--rule);box-shadow:var(--shadow-m);padding:22px 0 26px}
+.searchpanel[hidden]{display:none}
+.searchpanel input{width:100%;background:var(--paper);border:1px solid var(--rule);
+  color:var(--ink);font-family:var(--fs);font-size:clamp(1.3rem,2.6vw,1.9rem);
+  padding:14px 16px;transition:border-color .18s,box-shadow .18s}
+.searchpanel input:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-wash)}
+.searchhint{margin-top:10px;font-family:var(--fm);font-size:.55rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink-3)}
+.searchres{list-style:none;margin:16px 0 0;padding:0;max-height:52vh;overflow:auto}
+.searchres li{border-top:1px solid var(--rule)}
+.searchres a{display:block;padding:14px 0;text-decoration:none;color:var(--ink)}
+.searchres a:hover,.searchres a:focus-visible{background:var(--surface-2)}
+.searchres b{display:block;font-family:var(--fs);font-weight:400;font-size:1.18rem;margin-bottom:4px}
+.searchres span{display:block;color:var(--ink-2);font-size:.92rem}
+.searchres mark{background:var(--gold-soft);color:inherit;padding:0 2px}
+@media(max-width:940px){.searchpanel{top:68px}}
 </style>
 </head>
 <body>
@@ -464,6 +514,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
     <button class="navtoggle" id="navtoggle" type="button"
       aria-expanded="false" aria-controls="navmenu" aria-label="Menu"><span></span></button>
+    <button class="navsearch" id="navsearch" type="button" aria-label="Search" aria-expanded="false" aria-controls="searchpanel"><svg viewBox="0 0 20 20" width="17" height="17" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.6" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12.8 12.8 17 17" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
     <div class="navlinks" id="navmenu">
       <a href="services">What we do</a>
       <a href="supply">What we supply</a>
@@ -475,11 +526,21 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <a class="btn" href="contact#enquiry"><span class="btn-long">Request a </span>quote</a>
   </div>
 </nav>
+<div class="searchpanel" id="searchpanel" hidden>
+  <div class="wrap">
+    <label class="sr" for="searchinput">Search the site</label>
+    <input id="searchinput" type="search" autocomplete="off" spellcheck="false"
+      placeholder="Search guides, corridors, categories&hellip;">
+    <p class="searchhint">Type at least two letters. Press Escape to close.</p>
+    <ul class="searchres" id="searchres"></ul>
+  </div>
+</div>
 
 <header class="hero chero" id="top">
   <div class="wrap chero-g">
     <div>
       <nav class="crumbs" aria-label="Breadcrumb"><a href="/">ISP Group</a> <span>/</span> <a href="supply">What we supply</a> <span>/</span> <b>Metals and pipe</b></nav>
+
       <h1>Metals <em>and pipe</em></h1>
       <p class="sub">Structural sections, sheet and plate, seamless and welded pipe, fittings and flanges. To EN, ASTM or GOST, with the mill certificate that proves it.</p>
       <div class="chips"><span class="chip">EN &middot; ASTM &middot; GOST</span><span class="chip">EN 10204 3.1 certificates</span><span class="chip">Seamless and welded</span><span class="chip">Mill direct</span></div>
@@ -492,7 +553,8 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 <main id="main" tabindex="-1">
 <section><div class="wrap"><figure class="mediafig" style="margin-bottom:44px"><div class="shot"><span class="pz"><img src="media/pipe.webp" width="922" height="691" loading="lazy" alt="Stacked steel pipe seen end on"></span></div><figcaption>Pipe is bought on the certificate as much as on the dimension</figcaption></figure>
 <div class="lede"><h2>In metals the document is half the product</h2><p class="intro">Two lengths of pipe can be dimensionally identical and commercially worth very different money, because one has a mill test certificate traceable to the heat it was rolled from and the other has a piece of paper. On anything that will be welded, pressurised or inspected, the certificate is the product.</p></div>
-<div class="prose"><div class="pblock"><span class="k">01</span><h2>What we buy</h2><div class="ptext"><ul class="plist"><li><b>Structural sections</b>: beams, channels, angles and hollow sections to EN 10025 grades or the ASTM equivalents, in the profile series the design actually calls for.</li><li><b>Sheet and plate</b>, hot and cold rolled, by grade, thickness tolerance and surface condition.</li><li><b>Seamless and welded pipe</b>, by outside diameter and wall thickness or by schedule, to the pressure standard the application requires.</li><li><b>Fittings and flanges</b> to ANSI or ASME B16.5, EN 1092-1 or the GOST series, matched to the pipe standard rather than assumed to fit.</li><li><b>Fasteners and structural bolting</b> by property class and coating.</li></ul></div></div><div class="pblock"><span class="k">02</span><h2>The certificate, and why 3.1 is the line</h2><div class="ptext"><p>EN 10204 defines the inspection documents. A type 2.2 test report is the producer's own statement of general conformity. A type 3.1 certificate is issued by the producer's own inspection function, independent of the manufacturing department, and states the actual test results for the material supplied, traceable to the heat number. A type 3.2 adds a third party.</p><p>On anything structural or pressure-bearing, 3.1 is normally the minimum that an engineer, an insurer or a customs authority will accept. Asking for “a certificate” and receiving a 2.2 is the commonest quiet downgrade in this trade, and it is invisible until the material is already on site.</p><p class="pnote">We state the required document type in the order, we check the heat numbers on the certificate against the markings on the material at loading, and we photograph both.</p></div></div><div class="pblock"><span class="k">03</span><h2>Three standards families that do not map one to one</h2><div class="ptext"><p>EN, ASTM and GOST are not translations of each other. Grades that are commonly treated as equivalent differ in chemistry, in impact testing temperature and in permitted tolerance. A material sold as “analogue of” a grade is not that grade, and if the destination's inspector works to one family, that is the family the certificate has to be issued under.</p><p>Where a project genuinely needs cross-standard supply, the right move is to name the standard in the purchase order and have the mill certify to it, which most mills of reasonable size can do if it is agreed before rolling rather than after.</p></div></div><div class="pblock"><span class="k">04</span><h2>Tolerance, length and what arrives bent</h2><div class="ptext"><p>Thickness tolerance, straightness, ovality on pipe and end condition are all negotiable and all routinely unstated. Mill lengths differ by producer, and a specification that asks for exact lengths carries a cutting cost and a yield loss that has to be priced rather than discovered.</p><p>Pipe and sections are loaded in bundles and damaged on the ends. Bundles are strapped, end caps are specified where the application needs clean ends, and dunnage is written into the order because a container of steel that has shifted in transit is both a claim and a discharge problem.</p></div></div><div class="pblock"><span class="k">05</span><h2>Weight, not pieces</h2><div class="ptext"><p>Metals are invoiced by weight and a container fills on weight long before it fills on volume. A 20ft container is usually the right box for dense cargo even when it looks half empty, and the theoretical weight against actual weighbridge weight is a line that has to be agreed in the contract, because the two are never identical.</p></div></div></div>
+<nav class="toc" aria-label="On this page"><span class="eyebrow">On this page</span><ol><li><a href="#s1"><span>01</span>What we buy</a></li><li><a href="#s2"><span>02</span>The certificate, and why 3.1 is the line</a></li><li><a href="#s3"><span>03</span>Three standards families that do not map one to one</a></li><li><a href="#s4"><span>04</span>Tolerance, length and what arrives bent</a></li><li><a href="#s5"><span>05</span>Weight, not pieces</a></li></ol></nav>
+<div class="prose"><div class="pblock"><span class="k">01</span><h2 id="s1">What we buy</h2><div class="ptext"><ul class="plist"><li><b>Structural sections</b>: beams, channels, angles and hollow sections to EN 10025 grades or the ASTM equivalents, in the profile series the design actually calls for.</li><li><b>Sheet and plate</b>, hot and cold rolled, by grade, thickness tolerance and surface condition.</li><li><b>Seamless and welded pipe</b>, by outside diameter and wall thickness or by schedule, to the pressure standard the application requires.</li><li><b>Fittings and flanges</b> to ANSI or ASME B16.5, EN 1092-1 or the GOST series, matched to the pipe standard rather than assumed to fit.</li><li><b>Fasteners and structural bolting</b> by property class and coating.</li></ul></div></div><div class="pblock"><span class="k">02</span><h2 id="s2">The certificate, and why 3.1 is the line</h2><div class="ptext"><p>EN 10204 defines the inspection documents. A type 2.2 test report is the producer's own statement of general conformity. A type 3.1 certificate is issued by the producer's own inspection function, independent of the manufacturing department, and states the actual test results for the material supplied, traceable to the heat number. A type 3.2 adds a third party.</p><p>On anything structural or pressure-bearing, 3.1 is normally the minimum that an engineer, an insurer or a customs authority will accept. Asking for “a certificate” and receiving a 2.2 is the commonest quiet downgrade in this trade, and it is invisible until the material is already on site.</p><p class="pnote">We state the required document type in the order, we check the heat numbers on the certificate against the markings on the material at loading, and we photograph both.</p></div></div><div class="pblock"><span class="k">03</span><h2 id="s3">Three standards families that do not map one to one</h2><div class="ptext"><p>EN, ASTM and GOST are not translations of each other. Grades that are commonly treated as equivalent differ in chemistry, in impact testing temperature and in permitted tolerance. A material sold as “analogue of” a grade is not that grade, and if the destination's inspector works to one family, that is the family the certificate has to be issued under.</p><p>Where a project genuinely needs cross-standard supply, the right move is to name the standard in the purchase order and have the mill certify to it, which most mills of reasonable size can do if it is agreed before rolling rather than after.</p></div></div><div class="pblock"><span class="k">04</span><h2 id="s4">Tolerance, length and what arrives bent</h2><div class="ptext"><p>Thickness tolerance, straightness, ovality on pipe and end condition are all negotiable and all routinely unstated. Mill lengths differ by producer, and a specification that asks for exact lengths carries a cutting cost and a yield loss that has to be priced rather than discovered.</p><p>Pipe and sections are loaded in bundles and damaged on the ends. Bundles are strapped, end caps are specified where the application needs clean ends, and dunnage is written into the order because a container of steel that has shifted in transit is both a claim and a discharge problem.</p></div></div><div class="pblock"><span class="k">05</span><h2 id="s5">Weight, not pieces</h2><div class="ptext"><p>Metals are invoiced by weight and a container fills on weight long before it fills on volume. A 20ft container is usually the right box for dense cargo even when it looks half empty, and the theoretical weight against actual weighbridge weight is a line that has to be agreed in the contract, because the two are never identical.</p></div></div></div>
 
 </div></section>
 <section id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>What buyers ask about this category</h2><p class="intro">The three that come up before a first order.</p></div><div style="margin-top:34px"><details><summary>What is the difference between a 2.2 and a 3.1 certificate?</summary><p>A 2.2 is the producer's general statement of conformity. A 3.1 states the actual test results for the material supplied, is issued by an inspection function independent of manufacturing, and is traceable to the heat number. On structural and pressure work, 3.1 is normally the minimum anyone will accept.</p></details><details><summary>Can you supply GOST material against an EN design?</summary><p>We can have a mill certify to the standard named in the purchase order, if it is agreed before rolling. What we will not do is supply an “analogue” grade and let the buyer discover at inspection that the chemistry and the impact testing are different.</p></details><details><summary>Is a 20ft or a 40ft container better for steel?</summary><p>Usually 20ft. Dense cargo reaches the weight limit long before it fills the volume, so a 40ft box ships mostly air and costs more per tonne.</p></details></div></div></section>
@@ -525,7 +587,9 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <p class="credits">Photography: pipe by JWPhotowerks; straddle carrier by Lars K. Jensen (CC BY).
       All other images CC0 or public domain. Full list with links in media/CREDITS.json.</p>
     <p class="fbottom">ISP GROUP LLC &middot; Global Commerce &middot; International sourcing,
-      trading and supply of materials, products and industrial equipment.</p>
+      trading and supply of materials, products and industrial equipment.
+      &nbsp;&middot;&nbsp; <a href="privacy">Privacy</a>
+      &nbsp;&middot;&nbsp; <a href="terms">Terms of use</a></p>
   </div>
 </footer>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Metals and pipe", "description": "Structural sections, sheet and plate, seamless and welded pipe, fittings and flanges to EN, ASTM or GOST, with EN 10204 mill certificates.", "provider": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "url": "https://ispgroupgc.com/metals-pipe", "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Metals and pipe", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Structural sections, sheet and plate, seamless and welded pipe, fittings, flanges, structural bolting"}}]}}</script>
@@ -617,6 +681,71 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   window.addEventListener('scroll',kick,{passive:true});
   window.addEventListener('resize',kick,{passive:true});
   par();
+})();
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('navsearch'), panel=document.getElementById('searchpanel');
+  if(!btn||!panel) return;
+  var input=document.getElementById('searchinput'), out=document.getElementById('searchres');
+  var idx=null, loading=false, opener=null;
+  function load(){
+    if(idx||loading) return;
+    loading=true;
+    fetch('/search.json').then(function(r){return r.json();})
+      .then(function(j){ idx=j; loading=false; run(); })
+      .catch(function(){ loading=false;
+        out.innerHTML='<li><a href="/guides"><b>Search is unavailable</b>'+
+          '<span>Browse the guides instead.</span></a></li>'; });
+  }
+  function esc(s){ return s.replace(/[&<>"]/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function hl(s,q){ if(!s) return '';
+    var i=s.toLowerCase().indexOf(q);
+    if(i<0) return esc(s.slice(0,118));
+    var a=Math.max(0,i-40), t=(a?'… ':'')+s.slice(a,i)+'\u0000'+s.slice(i,i+q.length)+'\u0001'+s.slice(i+q.length,i+q.length+70);
+    return esc(t).replace('\u0000','<mark>').replace('\u0001','</mark>'); }
+  function run(){
+    var q=(input.value||'').trim().toLowerCase();
+    if(q.length<2){ out.innerHTML=''; return; }
+    if(!idx){ load(); return; }
+    var hits=[];
+    for(var i=0;i<idx.length;i++){
+      var r=idx[i], t=r.t.toLowerCase(), d=(r.d||'').toLowerCase(), h=(r.h||'').toLowerCase();
+      var sc=0;
+      if(t.indexOf(q)>=0) sc+=10;
+      if(h.indexOf(q)>=0) sc+=4;
+      if(d.indexOf(q)>=0) sc+=3;
+      if(sc) hits.push([sc,r]);
+    }
+    hits.sort(function(a,b){return b[0]-a[0];});
+    if(!hits.length){
+      out.innerHTML='<li><a href="/contact"><b>Nothing matched &ldquo;'+esc(q)+'&rdquo;</b>'+
+        '<span>Ask us directly and we will answer.</span></a></li>'; return; }
+    out.innerHTML=hits.slice(0,8).map(function(x){
+      var r=x[1], ctx=(r.d&&r.d.toLowerCase().indexOf(q)>=0)?r.d:(r.h||r.d);
+      return '<li><a href="'+r.u+'"><b>'+hl(r.t,q)+'</b><span>'+hl(ctx,q)+'</span></a></li>';
+    }).join('');
+  }
+  function open_(){
+    opener=document.activeElement;
+    panel.hidden=false; btn.setAttribute('aria-expanded','true');
+    load(); input.focus(); input.select();
+  }
+  function close_(){
+    panel.hidden=true; btn.setAttribute('aria-expanded','false');
+    if(opener&&opener.focus) opener.focus();
+  }
+  btn.addEventListener('click',function(){ panel.hidden?open_():close_(); });
+  input.addEventListener('input',run);
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&!panel.hidden){ close_(); return; }
+    if(e.key==='/'&&panel.hidden){
+      var a=document.activeElement, tag=a?a.tagName:'';
+      if(tag==='INPUT'||tag==='TEXTAREA'||tag==='SELECT'||(a&&a.isContentEditable)) return;
+      e.preventDefault(); open_();
+    }
+  });
 })();
 </script>
 <!--/email_off-->

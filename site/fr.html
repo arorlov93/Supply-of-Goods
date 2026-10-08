@@ -141,9 +141,14 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 <style>
 /* hero */
 .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--rule)}
-#globe{position:absolute;top:50%;right:-5%;transform:translateY(-50%);pointer-events:none;
-  width:min(720px,56%);aspect-ratio:1/1;height:auto;display:block}
-@media(max-width:940px){#globe{top:-7%;right:-26%;transform:none;width:62%;opacity:.45}}
+#globe,#globe-still{position:absolute;top:50%;right:-5%;transform:translateY(-50%);
+  pointer-events:none;width:min(720px,56%);aspect-ratio:1/1;height:auto;display:block}
+#globe-still{object-fit:contain;transition:opacity .6s ease}
+#globe{opacity:0;transition:opacity .8s ease}
+#globe.live{opacity:1}
+#globe-still.gone{opacity:0}
+@media(max-width:940px){#globe,#globe-still{top:-7%;right:-26%;transform:none;width:62%}
+  #globe-still{opacity:.45}#globe.live{opacity:.45}}
 .hero .wrap{position:relative;z-index:2;padding-block:clamp(56px,8.5vw,108px)}
 .hero h1{font-size:clamp(2.55rem,6.4vw,4.9rem);max-width:16ch;letter-spacing:-.018em;line-height:1.05}
 .hero h1 em{font-style:italic;color:var(--brand)}
@@ -457,6 +462,51 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .skip:focus{left:12px;top:12px}
 .navlinks a[aria-current]{color:var(--ink)}
 .navlinks a[aria-current]::after{right:0}
+
+/* оглавление страницы */
+.toc{margin-top:38px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+  padding:22px 0 20px}
+.toc ol{list-style:none;margin:14px 0 0;padding:0;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));
+  gap:2px clamp(20px,3vw,46px)}
+.toc li{min-width:0}
+.toc a{display:flex;gap:13px;align-items:baseline;text-decoration:none;color:var(--ink-2);
+  padding:7px 0;border-bottom:1px solid transparent;transition:color .18s,border-color .18s}
+.toc a span{font-family:var(--fm);font-size:.57rem;letter-spacing:.1em;color:var(--gold-ink);
+  flex:0 0 auto}
+.toc a:hover{color:var(--brand)}
+.toc a:hover span{color:var(--gold-ink)}
+/* липкая шапка не должна накрывать заголовок при переходе по якорю */
+.pblock h2{scroll-margin-top:96px}
+
+/* дата обновления материала */
+.upd{font-family:var(--fm);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-3);margin:-8px 0 16px}
+
+/* поиск */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.navsearch{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;
+  margin-left:4px;padding:0;border:1px solid var(--rule);background:var(--surface);
+  color:var(--ink-2);cursor:pointer;border-radius:1px;box-shadow:var(--shadow-s);
+  transition:border-color .18s,color .18s}
+.navsearch:hover{border-color:var(--brand);color:var(--brand)}
+.searchpanel{position:sticky;top:68px;z-index:39;background:var(--surface);
+  border-bottom:1px solid var(--rule);box-shadow:var(--shadow-m);padding:22px 0 26px}
+.searchpanel[hidden]{display:none}
+.searchpanel input{width:100%;background:var(--paper);border:1px solid var(--rule);
+  color:var(--ink);font-family:var(--fs);font-size:clamp(1.3rem,2.6vw,1.9rem);
+  padding:14px 16px;transition:border-color .18s,box-shadow .18s}
+.searchpanel input:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-wash)}
+.searchhint{margin-top:10px;font-family:var(--fm);font-size:.55rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink-3)}
+.searchres{list-style:none;margin:16px 0 0;padding:0;max-height:52vh;overflow:auto}
+.searchres li{border-top:1px solid var(--rule)}
+.searchres a{display:block;padding:14px 0;text-decoration:none;color:var(--ink)}
+.searchres a:hover,.searchres a:focus-visible{background:var(--surface-2)}
+.searchres b{display:block;font-family:var(--fs);font-weight:400;font-size:1.18rem;margin-bottom:4px}
+.searchres span{display:block;color:var(--ink-2);font-size:.92rem}
+.searchres mark{background:var(--gold-soft);color:inherit;padding:0 2px}
+@media(max-width:940px){.searchpanel{top:68px}}
 </style>
 </head>
 <body>
@@ -467,6 +517,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <a class="logo" href="/fr">ISP Group <em>Global Commerce</em></a>
     <button class="navtoggle" id="navtoggle" type="button"
       aria-expanded="false" aria-controls="navmenu" aria-label="Menu"><span></span></button>
+    <button class="navsearch" id="navsearch" type="button" aria-label="Search" aria-expanded="false" aria-controls="searchpanel"><svg viewBox="0 0 20 20" width="17" height="17" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.6" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12.8 12.8 17 17" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
     <div class="navlinks" id="navmenu">
       <a href="afrique-ouest">Afrique de l'Ouest</a>
       <a href="decoupes-volaille">Découpes</a>
@@ -477,11 +528,21 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <a class="btn" href="contact-fr#enquiry"><span class="btn-long">Demander un </span>devis</a>
   </div>
 </nav>
+<div class="searchpanel" id="searchpanel" hidden>
+  <div class="wrap">
+    <label class="sr" for="searchinput">Search the site</label>
+    <input id="searchinput" type="search" autocomplete="off" spellcheck="false"
+      placeholder="Search guides, corridors, categories&hellip;">
+    <p class="searchhint">Type at least two letters. Press Escape to close.</p>
+    <ul class="searchres" id="searchres"></ul>
+  </div>
+</div>
 
 <header class="hero chero" id="top">
   <div class="wrap chero-g chero-1">
     <div>
       <span class="eyebrow">Sourcing et négoce international · États-Unis</span>
+
       <h1>Nommez le produit. Nous rendons <em>trois producteurs vérifiés</em> et un prix rendu.</h1>
       <p class="sub">Nous trouvons l’usine, vérifions qu’elle peut légalement expédier vers votre pays, achetons la marchandise en notre nom propre et la livrons à votre port.</p>
       <div class="chips"><span class="chip"><b>20</b> ans d’expérience</span><span class="chip"><b>10</b> jours ouvrés jusqu’au prix rendu</span><span class="chip">FOB &middot; CFR &middot; CIF &middot; DAP</span><span class="chip">Principal, <b>pas courtier</b></span></div>
@@ -511,7 +572,8 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 
 <section><div class="wrap"><figure class="mediafig" style="margin-bottom:44px"><div class="shot"><span class="pz"><img src="media/terminal.webp" width="1023" height="438" loading="lazy" alt="Portiques à conteneurs sur un terminal maritime"></span></div><figcaption>Un seul interlocuteur, de la sortie d’usine à votre port</figcaption></figure>
 <div class="lede"><h2>La partie d’un achat transfrontière dont personne ne veut</h2><p class="intro">Trouver une usine est la moitié facile. La moitié difficile consiste à prouver qu’elle existe, à la faire produire selon votre cahier des charges, à faire passer les documents par deux douanes et à s’assurer que l’argent arrive. C’est cette partie que nous prenons.</p></div>
-<div class="prose"><div class="pblock"><span class="k">01</span><h2>Pourquoi les acheteurs passent par nous</h2><div class="ptext"><ul class="plist"><li><b>Nous vérifions avant de coter.</b> Les numéros d’agrément et de licence sont contrôlés auprès des registres du pays importateur, et non repris du site du vendeur. Les domaines imitant de vrais exportateurs sont courants dans ce métier et nous les filtrons.</li><li><b>Nous cotons à partir des statistiques douanières.</b> Nous comparons ce que des marchandises semblables ont réellement payé au dédouanement sur votre ligne avant de négocier. Une offre se juge ainsi par rapport au marché et non par rapport à elle-même.</li><li><b>Nous prenons la propriété de la marchandise.</b> Nous sommes l’acheteur sur un contrat et le vendeur sur l’autre. Un seul interlocuteur, une seule facture, une seule devise.</li><li><b>Nous reflétons les conditions.</b> Délais d’inspection, tolérances de poids, délais de réclamation et frais bancaires sont identiques sur les deux contrats, pour que rien ne tombe dans l’intervalle.</li></ul></div></div><div class="pblock"><span class="k">02</span><h2>Ce que nous fournissons</h2><div class="ptext"><p>Nous ne sommes pas liés à une seule marchandise. Volaille et protéines congelées, denrées de base et ingrédients alimentaires, matériaux de construction et de finition, équipements industriels, outillage et quincaillerie, métaux et tubes, papier, emballage et consommables.</p><p>Notre métier est le sourcing et l’exécution. Un produit hors de ces catégories est un projet de sourcing, pas un refus.</p></div></div><div class="pblock"><span class="k">03</span><h2>L’Afrique de l’Ouest</h2><div class="ptext"><p>Nous livrons des programmes de conteneurs frigorifiques depuis les Amériques et l’Union européenne vers Lomé et Cotonou. Sur cette ligne, trois questions passent avant le prix : l’agrément de l’établissement pour le pays de destination, la désignation exacte de la découpe, et la chaîne du froid.</p><p>Le détail figure sur la page <a href="afrique-ouest">Afrique de l’Ouest</a>, et la nomenclature des découpes sur <a href="decoupes-volaille">découpes de volaille</a>.</p><p class="pnote">« Ailes » n’est pas un produit. L’aile entière à trois phalanges, l’aile à deux phalanges, le manchon et l’aileron sont quatre produits différents, à quatre prix différents.</p></div></div><div class="pblock"><span class="k">04</span><h2>Comment commencer</h2><div class="ptext"><p>Écrivez-nous le produit, la quantité et le port de destination. Vous recevez sous un jour ouvré un accusé de réception avec les questions restantes, et sous une dizaine de jours ouvrés un prix rendu : au moins trois offres comparables de producteurs vérifiés, fret, assurance, frais portuaires, droits et certification inclus, avec la date de validité indiquée.</p><p>Pas de frais de cotation et pas de commission sur la facture d’un producteur. Nous achetons en notre nom propre et revendons.</p></div></div></div>
+<nav class="toc" aria-label="On this page"><span class="eyebrow">On this page</span><ol><li><a href="#s1"><span>01</span>Pourquoi les acheteurs passent par nous</a></li><li><a href="#s2"><span>02</span>Ce que nous fournissons</a></li><li><a href="#s3"><span>03</span>L’Afrique de l’Ouest</a></li><li><a href="#s4"><span>04</span>Comment commencer</a></li></ol></nav>
+<div class="prose"><div class="pblock"><span class="k">01</span><h2 id="s1">Pourquoi les acheteurs passent par nous</h2><div class="ptext"><ul class="plist"><li><b>Nous vérifions avant de coter.</b> Les numéros d’agrément et de licence sont contrôlés auprès des registres du pays importateur, et non repris du site du vendeur. Les domaines imitant de vrais exportateurs sont courants dans ce métier et nous les filtrons.</li><li><b>Nous cotons à partir des statistiques douanières.</b> Nous comparons ce que des marchandises semblables ont réellement payé au dédouanement sur votre ligne avant de négocier. Une offre se juge ainsi par rapport au marché et non par rapport à elle-même.</li><li><b>Nous prenons la propriété de la marchandise.</b> Nous sommes l’acheteur sur un contrat et le vendeur sur l’autre. Un seul interlocuteur, une seule facture, une seule devise.</li><li><b>Nous reflétons les conditions.</b> Délais d’inspection, tolérances de poids, délais de réclamation et frais bancaires sont identiques sur les deux contrats, pour que rien ne tombe dans l’intervalle.</li></ul></div></div><div class="pblock"><span class="k">02</span><h2 id="s2">Ce que nous fournissons</h2><div class="ptext"><p>Nous ne sommes pas liés à une seule marchandise. Volaille et protéines congelées, denrées de base et ingrédients alimentaires, matériaux de construction et de finition, équipements industriels, outillage et quincaillerie, métaux et tubes, papier, emballage et consommables.</p><p>Notre métier est le sourcing et l’exécution. Un produit hors de ces catégories est un projet de sourcing, pas un refus.</p></div></div><div class="pblock"><span class="k">03</span><h2 id="s3">L’Afrique de l’Ouest</h2><div class="ptext"><p>Nous livrons des programmes de conteneurs frigorifiques depuis les Amériques et l’Union européenne vers Lomé et Cotonou. Sur cette ligne, trois questions passent avant le prix : l’agrément de l’établissement pour le pays de destination, la désignation exacte de la découpe, et la chaîne du froid.</p><p>Le détail figure sur la page <a href="afrique-ouest">Afrique de l’Ouest</a>, et la nomenclature des découpes sur <a href="decoupes-volaille">découpes de volaille</a>.</p><p class="pnote">« Ailes » n’est pas un produit. L’aile entière à trois phalanges, l’aile à deux phalanges, le manchon et l’aileron sont quatre produits différents, à quatre prix différents.</p></div></div><div class="pblock"><span class="k">04</span><h2 id="s4">Comment commencer</h2><div class="ptext"><p>Écrivez-nous le produit, la quantité et le port de destination. Vous recevez sous un jour ouvré un accusé de réception avec les questions restantes, et sous une dizaine de jours ouvrés un prix rendu : au moins trois offres comparables de producteurs vérifiés, fret, assurance, frais portuaires, droits et certification inclus, avec la date de validité indiquée.</p><p>Pas de frais de cotation et pas de commission sur la facture d’un producteur. Nous achetons en notre nom propre et revendons.</p></div></div></div>
 
 </div></section>
 <section id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>Questions fréquentes</h2><p class="intro">Celles qui reviennent au premier échange.</p></div><div style="margin-top:34px"><details><summary>Êtes-vous courtier ou agent ?</summary><p>Ni l’un ni l’autre. Nous achetons la marchandise en notre nom propre et la revendons. Aucune commission ne s’ajoute à la facture du producteur, et celui-ci n’a pas à gérer une facturation triangulaire.</p></details><details><summary>Traitez-vous de petites quantités ?</summary><p>Nous travaillons en conteneurs complets, car c’est là que l’économie tient. Pour une première commande nous faisons généralement un essai d’un ou deux conteneurs à conditions commerciales complètes.</p></details><details><summary>Quels Incoterms cotez-vous ?</summary><p>FOB, CFR, CIF, FCA et DAP. Nous préférons coter au moins deux bases côte à côte, pour que le coût réel de la partie logistique soit visible.</p></details><details><summary>Dans quelles langues travaillez-vous ?</summary><p>Anglais et russe en correspondance directe, et français sur les lignes ouest-africaines. Côté producteurs, nous travaillons également en chinois, en turc et en portugais.</p></details></div></div></section>
@@ -543,7 +605,9 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
       <div><dt>English</dt><dd style="line-height:1.95"><a href="/" style="display:block">Full site in English</a><a href="guides" style="display:block">Guides</a></dd></div>
     </dl>
     <p class="fbottom">ISP GROUP LLC &middot; Global Commerce &middot; Sourcing, n&eacute;goce et
-      approvisionnement international en mati&eacute;riaux, produits et &eacute;quipements industriels.</p>
+      approvisionnement international en mati&eacute;riaux, produits et &eacute;quipements industriels.
+      &nbsp;&middot;&nbsp; <a href="privacy">Privacy</a>
+      &nbsp;&middot;&nbsp; <a href="terms">Terms of use</a></p>
   </div>
 </footer>
 <script type="application/ld+json">{"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}, "@context": "https://schema.org", "alternateName": "ISP Group Global Commerce", "description": "Société de négoce et de sourcing international basée aux États-Unis."}</script>
@@ -697,6 +761,71 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     }
   }
   window.addEventListener('scroll',function(){ if(!q){q=true;requestAnimationFrame(par);} },{passive:true});
+})();
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('navsearch'), panel=document.getElementById('searchpanel');
+  if(!btn||!panel) return;
+  var input=document.getElementById('searchinput'), out=document.getElementById('searchres');
+  var idx=null, loading=false, opener=null;
+  function load(){
+    if(idx||loading) return;
+    loading=true;
+    fetch('/search.json').then(function(r){return r.json();})
+      .then(function(j){ idx=j; loading=false; run(); })
+      .catch(function(){ loading=false;
+        out.innerHTML='<li><a href="/guides"><b>Search is unavailable</b>'+
+          '<span>Browse the guides instead.</span></a></li>'; });
+  }
+  function esc(s){ return s.replace(/[&<>"]/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function hl(s,q){ if(!s) return '';
+    var i=s.toLowerCase().indexOf(q);
+    if(i<0) return esc(s.slice(0,118));
+    var a=Math.max(0,i-40), t=(a?'… ':'')+s.slice(a,i)+'\u0000'+s.slice(i,i+q.length)+'\u0001'+s.slice(i+q.length,i+q.length+70);
+    return esc(t).replace('\u0000','<mark>').replace('\u0001','</mark>'); }
+  function run(){
+    var q=(input.value||'').trim().toLowerCase();
+    if(q.length<2){ out.innerHTML=''; return; }
+    if(!idx){ load(); return; }
+    var hits=[];
+    for(var i=0;i<idx.length;i++){
+      var r=idx[i], t=r.t.toLowerCase(), d=(r.d||'').toLowerCase(), h=(r.h||'').toLowerCase();
+      var sc=0;
+      if(t.indexOf(q)>=0) sc+=10;
+      if(h.indexOf(q)>=0) sc+=4;
+      if(d.indexOf(q)>=0) sc+=3;
+      if(sc) hits.push([sc,r]);
+    }
+    hits.sort(function(a,b){return b[0]-a[0];});
+    if(!hits.length){
+      out.innerHTML='<li><a href="/contact"><b>Nothing matched &ldquo;'+esc(q)+'&rdquo;</b>'+
+        '<span>Ask us directly and we will answer.</span></a></li>'; return; }
+    out.innerHTML=hits.slice(0,8).map(function(x){
+      var r=x[1], ctx=(r.d&&r.d.toLowerCase().indexOf(q)>=0)?r.d:(r.h||r.d);
+      return '<li><a href="'+r.u+'"><b>'+hl(r.t,q)+'</b><span>'+hl(ctx,q)+'</span></a></li>';
+    }).join('');
+  }
+  function open_(){
+    opener=document.activeElement;
+    panel.hidden=false; btn.setAttribute('aria-expanded','true');
+    load(); input.focus(); input.select();
+  }
+  function close_(){
+    panel.hidden=true; btn.setAttribute('aria-expanded','false');
+    if(opener&&opener.focus) opener.focus();
+  }
+  btn.addEventListener('click',function(){ panel.hidden?open_():close_(); });
+  input.addEventListener('input',run);
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&!panel.hidden){ close_(); return; }
+    if(e.key==='/'&&panel.hidden){
+      var a=document.activeElement, tag=a?a.tagName:'';
+      if(tag==='INPUT'||tag==='TEXTAREA'||tag==='SELECT'||(a&&a.isContentEditable)) return;
+      e.preventDefault(); open_();
+    }
+  });
 })();
 </script>
 <!--/email_off-->

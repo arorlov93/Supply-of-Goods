@@ -138,9 +138,14 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 <style>
 /* hero */
 .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--rule)}
-#globe{position:absolute;top:50%;right:-5%;transform:translateY(-50%);pointer-events:none;
-  width:min(720px,56%);aspect-ratio:1/1;height:auto;display:block}
-@media(max-width:940px){#globe{top:-7%;right:-26%;transform:none;width:62%;opacity:.45}}
+#globe,#globe-still{position:absolute;top:50%;right:-5%;transform:translateY(-50%);
+  pointer-events:none;width:min(720px,56%);aspect-ratio:1/1;height:auto;display:block}
+#globe-still{object-fit:contain;transition:opacity .6s ease}
+#globe{opacity:0;transition:opacity .8s ease}
+#globe.live{opacity:1}
+#globe-still.gone{opacity:0}
+@media(max-width:940px){#globe,#globe-still{top:-7%;right:-26%;transform:none;width:62%}
+  #globe-still{opacity:.45}#globe.live{opacity:.45}}
 .hero .wrap{position:relative;z-index:2;padding-block:clamp(56px,8.5vw,108px)}
 .hero h1{font-size:clamp(2.55rem,6.4vw,4.9rem);max-width:16ch;letter-spacing:-.018em;line-height:1.05}
 .hero h1 em{font-style:italic;color:var(--brand)}
@@ -454,6 +459,51 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .skip:focus{left:12px;top:12px}
 .navlinks a[aria-current]{color:var(--ink)}
 .navlinks a[aria-current]::after{right:0}
+
+/* оглавление страницы */
+.toc{margin-top:38px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+  padding:22px 0 20px}
+.toc ol{list-style:none;margin:14px 0 0;padding:0;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));
+  gap:2px clamp(20px,3vw,46px)}
+.toc li{min-width:0}
+.toc a{display:flex;gap:13px;align-items:baseline;text-decoration:none;color:var(--ink-2);
+  padding:7px 0;border-bottom:1px solid transparent;transition:color .18s,border-color .18s}
+.toc a span{font-family:var(--fm);font-size:.57rem;letter-spacing:.1em;color:var(--gold-ink);
+  flex:0 0 auto}
+.toc a:hover{color:var(--brand)}
+.toc a:hover span{color:var(--gold-ink)}
+/* липкая шапка не должна накрывать заголовок при переходе по якорю */
+.pblock h2{scroll-margin-top:96px}
+
+/* дата обновления материала */
+.upd{font-family:var(--fm);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-3);margin:-8px 0 16px}
+
+/* поиск */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.navsearch{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;
+  margin-left:4px;padding:0;border:1px solid var(--rule);background:var(--surface);
+  color:var(--ink-2);cursor:pointer;border-radius:1px;box-shadow:var(--shadow-s);
+  transition:border-color .18s,color .18s}
+.navsearch:hover{border-color:var(--brand);color:var(--brand)}
+.searchpanel{position:sticky;top:68px;z-index:39;background:var(--surface);
+  border-bottom:1px solid var(--rule);box-shadow:var(--shadow-m);padding:22px 0 26px}
+.searchpanel[hidden]{display:none}
+.searchpanel input{width:100%;background:var(--paper);border:1px solid var(--rule);
+  color:var(--ink);font-family:var(--fs);font-size:clamp(1.3rem,2.6vw,1.9rem);
+  padding:14px 16px;transition:border-color .18s,box-shadow .18s}
+.searchpanel input:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-wash)}
+.searchhint{margin-top:10px;font-family:var(--fm);font-size:.55rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink-3)}
+.searchres{list-style:none;margin:16px 0 0;padding:0;max-height:52vh;overflow:auto}
+.searchres li{border-top:1px solid var(--rule)}
+.searchres a{display:block;padding:14px 0;text-decoration:none;color:var(--ink)}
+.searchres a:hover,.searchres a:focus-visible{background:var(--surface-2)}
+.searchres b{display:block;font-family:var(--fs);font-weight:400;font-size:1.18rem;margin-bottom:4px}
+.searchres span{display:block;color:var(--ink-2);font-size:.92rem}
+.searchres mark{background:var(--gold-soft);color:inherit;padding:0 2px}
+@media(max-width:940px){.searchpanel{top:68px}}
 </style>
 </head>
 <body>
@@ -464,6 +514,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
     <button class="navtoggle" id="navtoggle" type="button"
       aria-expanded="false" aria-controls="navmenu" aria-label="Menu"><span></span></button>
+    <button class="navsearch" id="navsearch" type="button" aria-label="Search" aria-expanded="false" aria-controls="searchpanel"><svg viewBox="0 0 20 20" width="17" height="17" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.6" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12.8 12.8 17 17" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
     <div class="navlinks" id="navmenu">
       <a href="services">What we do</a>
       <a href="supply">What we supply</a>
@@ -475,11 +526,21 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <a class="btn" href="contact#enquiry"><span class="btn-long">Request a </span>quote</a>
   </div>
 </nav>
+<div class="searchpanel" id="searchpanel" hidden>
+  <div class="wrap">
+    <label class="sr" for="searchinput">Search the site</label>
+    <input id="searchinput" type="search" autocomplete="off" spellcheck="false"
+      placeholder="Search guides, corridors, categories&hellip;">
+    <p class="searchhint">Type at least two letters. Press Escape to close.</p>
+    <ul class="searchres" id="searchres"></ul>
+  </div>
+</div>
 
 <header class="hero chero" id="top">
   <div class="wrap chero-g chero-1">
     <div>
       <nav class="crumbs" aria-label="Breadcrumb"><a href="/">ISP Group</a> <span>/</span> <a href="guides">Guides</a> <span>/</span> <b>Letter of credit</b></nav>
+      <p class="upd"><time datetime="2026-10-08">Updated 8 October 2026</time> &middot; ISP Group</p>
       <h1>The letter of credit, <em>and what it actually protects</em></h1>
       <p class="sub">It does not guarantee that the goods are good. It guarantees that a bank pays against documents that comply. Understanding that one sentence prevents most of the disappointment.</p>
       <div class="chips"><span class="chip">UCP 600</span><span class="chip">Irrevocable by default</span><span class="chip">Documents, not goods</span><span class="chip">21 days to present</span></div>
@@ -491,7 +552,8 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 <main id="main" tabindex="-1">
 <section><div class="wrap">
 <div class="lede"><h2>The instrument solves one problem and only one</h2><p class="intro">A seller does not want to ship before being paid. A buyer does not want to pay before being shipped to. A documentary credit puts a bank between them so that neither has to go first. Everything else people expect from it, it does not do.</p></div>
-<div class="prose"><div class="pblock"><span class="k">01</span><h2>Banks deal in documents, not in goods</h2><div class="ptext"><p>This is the governing principle of the rules that almost every credit is issued under, the ICC Uniform Customs and Practice for Documentary Credits. The bank never sees the cargo. It examines whether the presented documents comply on their face with the credit, and if they do it pays, even if the container turns out to hold the wrong goods.</p><p>Which means the protection a credit gives a buyer is exactly as good as the document list written into it. A credit that calls for an inspection certificate issued by a named third party protects the buyer. A credit that calls only for an invoice and a bill of lading protects the seller.</p></div></div><div class="pblock"><span class="k">02</span><h2>Sight, usance and what each one costs the other side</h2><div class="ptext"><p>A credit payable <b>at sight</b> pays on presentation of compliant documents, which in practice is a few banking days after shipment. A <b>usance</b> credit pays a stated number of days later, typically 30, 60 or 90 from the bill of lading date.</p><p>The difference is not a formality, it is the whole financing question. At sight, the seller is funded while the vessel is at sea. At 90 days, the seller is lending the buyer the value of the cargo for three months and will price that in, openly or otherwise. A buyer asking for long usance is asking for credit, and credit has a price whether or not it appears as a line.</p></div></div><div class="pblock"><span class="k">03</span><h2>Confirmed or unconfirmed</h2><div class="ptext"><p>An unconfirmed credit carries the risk of the issuing bank and of its country. A confirmed credit adds a second bank, usually in the seller's country, which undertakes to pay independently. Confirmation costs a fee that scales with the perceived risk of the issuing bank, and on some corridors that fee is the honest market price of the country risk.</p><p class="pnote">If a seller insists on confirmation and the buyer finds the cost unreasonable, the disagreement is not really about the fee. It is about what the market thinks of the issuing bank, and that is worth knowing before the first shipment.</p></div></div><div class="pblock"><span class="k">04</span><h2>Discrepancies, which is where credits actually fail</h2><div class="ptext"><p>Compliance is strict. A spelling difference between the invoice and the credit, a bill of lading dated one day outside the shipment window, a certificate signed by the wrong function, an amount expressed in a different form of words: any of these is a discrepancy, and a discrepant presentation can be refused.</p><p>In practice most discrepancies are waived by the buyer, but the waiver is the buyer's to give, which means a discrepant seller has lost the protection they paid for and is back to trusting the buyer. Each discrepancy also carries a bank fee.</p><p>Two mechanical points prevent most of it. The presentation period is finite, normally 21 calendar days after shipment and always within the credit's expiry, so documents have to be assembled fast. And the draft of the credit should be reviewed by the beneficiary before it is issued, not after, because amending a credit costs money and time and needs both sides to agree.</p></div></div><div class="pblock"><span class="k">05</span><h2>When a credit is the wrong instrument</h2><div class="ptext"><ul class="plist"><li><b>Small shipments.</b> The bank charges on both legs can be a visible share of a small container's value. A documentary collection is cheaper and gives less protection; staged transfer against milestones gives different protection again.</li><li><b>Trusted repeat business.</b> After a dozen clean shipments the credit is paying for a risk neither side believes in.</li><li><b>A counterparty you have not verified.</b> A credit does not make an unverified producer safe. It only ensures you pay against paper. Verification comes first.</li></ul></div></div><div class="pblock"><span class="k">06</span><h2>What we do</h2><div class="ptext"><p>We contract with the producer in our own name and with the buyer separately, and we mirror the settlement terms on both legs so the gap between them does not become our working capital by accident. We review the credit draft before issuance, we allocate the bank charges on each leg in writing, and we prefer the document list to include something the buyer actually cares about rather than only what the bank needs.</p></div></div></div>
+<nav class="toc" aria-label="On this page"><span class="eyebrow">On this page</span><ol><li><a href="#s1"><span>01</span>Banks deal in documents, not in goods</a></li><li><a href="#s2"><span>02</span>Sight, usance and what each one costs the other side</a></li><li><a href="#s3"><span>03</span>Confirmed or unconfirmed</a></li><li><a href="#s4"><span>04</span>Discrepancies, which is where credits actually fail</a></li><li><a href="#s5"><span>05</span>When a credit is the wrong instrument</a></li><li><a href="#s6"><span>06</span>What we do</a></li></ol></nav>
+<div class="prose"><div class="pblock"><span class="k">01</span><h2 id="s1">Banks deal in documents, not in goods</h2><div class="ptext"><p>This is the governing principle of the rules that almost every credit is issued under, the ICC Uniform Customs and Practice for Documentary Credits. The bank never sees the cargo. It examines whether the presented documents comply on their face with the credit, and if they do it pays, even if the container turns out to hold the wrong goods.</p><p>Which means the protection a credit gives a buyer is exactly as good as the document list written into it. A credit that calls for an inspection certificate issued by a named third party protects the buyer. A credit that calls only for an invoice and a bill of lading protects the seller.</p></div></div><div class="pblock"><span class="k">02</span><h2 id="s2">Sight, usance and what each one costs the other side</h2><div class="ptext"><p>A credit payable <b>at sight</b> pays on presentation of compliant documents, which in practice is a few banking days after shipment. A <b>usance</b> credit pays a stated number of days later, typically 30, 60 or 90 from the bill of lading date.</p><p>The difference is not a formality, it is the whole financing question. At sight, the seller is funded while the vessel is at sea. At 90 days, the seller is lending the buyer the value of the cargo for three months and will price that in, openly or otherwise. A buyer asking for long usance is asking for credit, and credit has a price whether or not it appears as a line.</p></div></div><div class="pblock"><span class="k">03</span><h2 id="s3">Confirmed or unconfirmed</h2><div class="ptext"><p>An unconfirmed credit carries the risk of the issuing bank and of its country. A confirmed credit adds a second bank, usually in the seller's country, which undertakes to pay independently. Confirmation costs a fee that scales with the perceived risk of the issuing bank, and on some corridors that fee is the honest market price of the country risk.</p><p class="pnote">If a seller insists on confirmation and the buyer finds the cost unreasonable, the disagreement is not really about the fee. It is about what the market thinks of the issuing bank, and that is worth knowing before the first shipment.</p></div></div><div class="pblock"><span class="k">04</span><h2 id="s4">Discrepancies, which is where credits actually fail</h2><div class="ptext"><p>Compliance is strict. A spelling difference between the invoice and the credit, a bill of lading dated one day outside the shipment window, a certificate signed by the wrong function, an amount expressed in a different form of words: any of these is a discrepancy, and a discrepant presentation can be refused.</p><p>In practice most discrepancies are waived by the buyer, but the waiver is the buyer's to give, which means a discrepant seller has lost the protection they paid for and is back to trusting the buyer. Each discrepancy also carries a bank fee.</p><p>Two mechanical points prevent most of it. The presentation period is finite, normally 21 calendar days after shipment and always within the credit's expiry, so documents have to be assembled fast. And the draft of the credit should be reviewed by the beneficiary before it is issued, not after, because amending a credit costs money and time and needs both sides to agree.</p></div></div><div class="pblock"><span class="k">05</span><h2 id="s5">When a credit is the wrong instrument</h2><div class="ptext"><ul class="plist"><li><b>Small shipments.</b> The bank charges on both legs can be a visible share of a small container's value. A documentary collection is cheaper and gives less protection; staged transfer against milestones gives different protection again.</li><li><b>Trusted repeat business.</b> After a dozen clean shipments the credit is paying for a risk neither side believes in.</li><li><b>A counterparty you have not verified.</b> A credit does not make an unverified producer safe. It only ensures you pay against paper. Verification comes first.</li></ul></div></div><div class="pblock"><span class="k">06</span><h2 id="s6">What we do</h2><div class="ptext"><p>We contract with the producer in our own name and with the buyer separately, and we mirror the settlement terms on both legs so the gap between them does not become our working capital by accident. We review the credit draft before issuance, we allocate the bank charges on each leg in writing, and we prefer the document list to include something the buyer actually cares about rather than only what the bank needs.</p></div></div></div>
 
 </div></section>
 <section id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>Questions on this</h2><p class="intro">The ones we are asked most often.</p></div><div style="margin-top:34px"><details><summary>Does a letter of credit protect me if the goods are defective?</summary><p>Only indirectly. The bank pays against documents, not goods. You get protection by writing the right documents into the credit, for example an inspection certificate from a named third party, so that defective goods cannot produce a compliant presentation.</p></details><details><summary>Who pays the bank charges?</summary><p>Whoever the contract says. The default is that each side pays the charges of banks in its own country, but it is routinely varied and it should be written down. Unallocated charges are a predictable argument at the worst moment.</p></details><details><summary>Is an irrevocable credit really irrevocable?</summary><p>Under the current ICC rules every credit is irrevocable unless it says otherwise, and it cannot be amended or cancelled without the agreement of the beneficiary and any confirming bank. What it can be is discrepant on presentation, which is a different and far more common problem.</p></details></div></div></section>
@@ -524,10 +586,12 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <p class="credits">Photography: pipe by JWPhotowerks; straddle carrier by Lars K. Jensen (CC BY).
       All other images CC0 or public domain. Full list with links in media/CREDITS.json.</p>
     <p class="fbottom">ISP GROUP LLC &middot; Global Commerce &middot; International sourcing,
-      trading and supply of materials, products and industrial equipment.</p>
+      trading and supply of materials, products and industrial equipment.
+      &nbsp;&middot;&nbsp; <a href="privacy">Privacy</a>
+      &nbsp;&middot;&nbsp; <a href="terms">Terms of use</a></p>
   </div>
 </footer>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "A letter of credit at sight", "description": "What a documentary credit protects, why banks deal in documents and not goods, what a discrepancy costs, and when a letter of credit is the wrong instrument.", "author": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "publisher": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "mainEntityOfPage": "https://ispgroupgc.com/letter-of-credit"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "A letter of credit at sight", "description": "What a documentary credit protects, why banks deal in documents and not goods, what a discrepancy costs, and when a letter of credit is the wrong instrument.", "author": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "publisher": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "datePublished": "2026-10-08", "dateModified": "2026-10-08", "inLanguage": "en", "mainEntityOfPage": "https://ispgroupgc.com/letter-of-credit"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does a letter of credit protect me if the goods are defective?", "acceptedAnswer": {"@type": "Answer", "text": "Only indirectly. The bank pays against documents, not goods. You get protection by writing the right documents into the credit, for example an inspection certificate from a named third party, so that defective goods cannot produce a compliant presentation."}}, {"@type": "Question", "name": "Who pays the bank charges?", "acceptedAnswer": {"@type": "Answer", "text": "Whoever the contract says. The default is that each side pays the charges of banks in its own country, but it is routinely varied and it should be written down. Unallocated charges are a predictable argument at the worst moment."}}, {"@type": "Question", "name": "Is an irrevocable credit really irrevocable?", "acceptedAnswer": {"@type": "Answer", "text": "Under the current ICC rules every credit is irrevocable unless it says otherwise, and it cannot be amended or cancelled without the agreement of the beneficiary and any confirming bank. What it can be is discrepant on presentation, which is a different and far more common problem."}}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ISP Group", "item": "https://ispgroupgc.com/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://ispgroupgc.com/guides"}, {"@type": "ListItem", "position": 3, "name": "Letter of credit", "item": "https://ispgroupgc.com/letter-of-credit"}]}</script>
 <script>
@@ -616,6 +680,71 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   window.addEventListener('scroll',kick,{passive:true});
   window.addEventListener('resize',kick,{passive:true});
   par();
+})();
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('navsearch'), panel=document.getElementById('searchpanel');
+  if(!btn||!panel) return;
+  var input=document.getElementById('searchinput'), out=document.getElementById('searchres');
+  var idx=null, loading=false, opener=null;
+  function load(){
+    if(idx||loading) return;
+    loading=true;
+    fetch('/search.json').then(function(r){return r.json();})
+      .then(function(j){ idx=j; loading=false; run(); })
+      .catch(function(){ loading=false;
+        out.innerHTML='<li><a href="/guides"><b>Search is unavailable</b>'+
+          '<span>Browse the guides instead.</span></a></li>'; });
+  }
+  function esc(s){ return s.replace(/[&<>"]/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function hl(s,q){ if(!s) return '';
+    var i=s.toLowerCase().indexOf(q);
+    if(i<0) return esc(s.slice(0,118));
+    var a=Math.max(0,i-40), t=(a?'… ':'')+s.slice(a,i)+'\u0000'+s.slice(i,i+q.length)+'\u0001'+s.slice(i+q.length,i+q.length+70);
+    return esc(t).replace('\u0000','<mark>').replace('\u0001','</mark>'); }
+  function run(){
+    var q=(input.value||'').trim().toLowerCase();
+    if(q.length<2){ out.innerHTML=''; return; }
+    if(!idx){ load(); return; }
+    var hits=[];
+    for(var i=0;i<idx.length;i++){
+      var r=idx[i], t=r.t.toLowerCase(), d=(r.d||'').toLowerCase(), h=(r.h||'').toLowerCase();
+      var sc=0;
+      if(t.indexOf(q)>=0) sc+=10;
+      if(h.indexOf(q)>=0) sc+=4;
+      if(d.indexOf(q)>=0) sc+=3;
+      if(sc) hits.push([sc,r]);
+    }
+    hits.sort(function(a,b){return b[0]-a[0];});
+    if(!hits.length){
+      out.innerHTML='<li><a href="/contact"><b>Nothing matched &ldquo;'+esc(q)+'&rdquo;</b>'+
+        '<span>Ask us directly and we will answer.</span></a></li>'; return; }
+    out.innerHTML=hits.slice(0,8).map(function(x){
+      var r=x[1], ctx=(r.d&&r.d.toLowerCase().indexOf(q)>=0)?r.d:(r.h||r.d);
+      return '<li><a href="'+r.u+'"><b>'+hl(r.t,q)+'</b><span>'+hl(ctx,q)+'</span></a></li>';
+    }).join('');
+  }
+  function open_(){
+    opener=document.activeElement;
+    panel.hidden=false; btn.setAttribute('aria-expanded','true');
+    load(); input.focus(); input.select();
+  }
+  function close_(){
+    panel.hidden=true; btn.setAttribute('aria-expanded','false');
+    if(opener&&opener.focus) opener.focus();
+  }
+  btn.addEventListener('click',function(){ panel.hidden?open_():close_(); });
+  input.addEventListener('input',run);
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&!panel.hidden){ close_(); return; }
+    if(e.key==='/'&&panel.hidden){
+      var a=document.activeElement, tag=a?a.tagName:'';
+      if(tag==='INPUT'||tag==='TEXTAREA'||tag==='SELECT'||(a&&a.isContentEditable)) return;
+      e.preventDefault(); open_();
+    }
+  });
 })();
 </script>
 <!--/email_off-->

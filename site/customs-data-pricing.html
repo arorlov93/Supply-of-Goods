@@ -138,9 +138,14 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 <style>
 /* hero */
 .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--rule)}
-#globe{position:absolute;top:50%;right:-5%;transform:translateY(-50%);pointer-events:none;
-  width:min(720px,56%);aspect-ratio:1/1;height:auto;display:block}
-@media(max-width:940px){#globe{top:-7%;right:-26%;transform:none;width:62%;opacity:.45}}
+#globe,#globe-still{position:absolute;top:50%;right:-5%;transform:translateY(-50%);
+  pointer-events:none;width:min(720px,56%);aspect-ratio:1/1;height:auto;display:block}
+#globe-still{object-fit:contain;transition:opacity .6s ease}
+#globe{opacity:0;transition:opacity .8s ease}
+#globe.live{opacity:1}
+#globe-still.gone{opacity:0}
+@media(max-width:940px){#globe,#globe-still{top:-7%;right:-26%;transform:none;width:62%}
+  #globe-still{opacity:.45}#globe.live{opacity:.45}}
 .hero .wrap{position:relative;z-index:2;padding-block:clamp(56px,8.5vw,108px)}
 .hero h1{font-size:clamp(2.55rem,6.4vw,4.9rem);max-width:16ch;letter-spacing:-.018em;line-height:1.05}
 .hero h1 em{font-style:italic;color:var(--brand)}
@@ -454,6 +459,51 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .skip:focus{left:12px;top:12px}
 .navlinks a[aria-current]{color:var(--ink)}
 .navlinks a[aria-current]::after{right:0}
+
+/* оглавление страницы */
+.toc{margin-top:38px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+  padding:22px 0 20px}
+.toc ol{list-style:none;margin:14px 0 0;padding:0;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));
+  gap:2px clamp(20px,3vw,46px)}
+.toc li{min-width:0}
+.toc a{display:flex;gap:13px;align-items:baseline;text-decoration:none;color:var(--ink-2);
+  padding:7px 0;border-bottom:1px solid transparent;transition:color .18s,border-color .18s}
+.toc a span{font-family:var(--fm);font-size:.57rem;letter-spacing:.1em;color:var(--gold-ink);
+  flex:0 0 auto}
+.toc a:hover{color:var(--brand)}
+.toc a:hover span{color:var(--gold-ink)}
+/* липкая шапка не должна накрывать заголовок при переходе по якорю */
+.pblock h2{scroll-margin-top:96px}
+
+/* дата обновления материала */
+.upd{font-family:var(--fm);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-3);margin:-8px 0 16px}
+
+/* поиск */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.navsearch{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;
+  margin-left:4px;padding:0;border:1px solid var(--rule);background:var(--surface);
+  color:var(--ink-2);cursor:pointer;border-radius:1px;box-shadow:var(--shadow-s);
+  transition:border-color .18s,color .18s}
+.navsearch:hover{border-color:var(--brand);color:var(--brand)}
+.searchpanel{position:sticky;top:68px;z-index:39;background:var(--surface);
+  border-bottom:1px solid var(--rule);box-shadow:var(--shadow-m);padding:22px 0 26px}
+.searchpanel[hidden]{display:none}
+.searchpanel input{width:100%;background:var(--paper);border:1px solid var(--rule);
+  color:var(--ink);font-family:var(--fs);font-size:clamp(1.3rem,2.6vw,1.9rem);
+  padding:14px 16px;transition:border-color .18s,box-shadow .18s}
+.searchpanel input:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-wash)}
+.searchhint{margin-top:10px;font-family:var(--fm);font-size:.55rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink-3)}
+.searchres{list-style:none;margin:16px 0 0;padding:0;max-height:52vh;overflow:auto}
+.searchres li{border-top:1px solid var(--rule)}
+.searchres a{display:block;padding:14px 0;text-decoration:none;color:var(--ink)}
+.searchres a:hover,.searchres a:focus-visible{background:var(--surface-2)}
+.searchres b{display:block;font-family:var(--fs);font-weight:400;font-size:1.18rem;margin-bottom:4px}
+.searchres span{display:block;color:var(--ink-2);font-size:.92rem}
+.searchres mark{background:var(--gold-soft);color:inherit;padding:0 2px}
+@media(max-width:940px){.searchpanel{top:68px}}
 </style>
 </head>
 <body>
@@ -464,6 +514,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
     <button class="navtoggle" id="navtoggle" type="button"
       aria-expanded="false" aria-controls="navmenu" aria-label="Menu"><span></span></button>
+    <button class="navsearch" id="navsearch" type="button" aria-label="Search" aria-expanded="false" aria-controls="searchpanel"><svg viewBox="0 0 20 20" width="17" height="17" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.6" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12.8 12.8 17 17" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
     <div class="navlinks" id="navmenu">
       <a href="services">What we do</a>
       <a href="supply">What we supply</a>
@@ -475,11 +526,21 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <a class="btn" href="contact#enquiry"><span class="btn-long">Request a </span>quote</a>
   </div>
 </nav>
+<div class="searchpanel" id="searchpanel" hidden>
+  <div class="wrap">
+    <label class="sr" for="searchinput">Search the site</label>
+    <input id="searchinput" type="search" autocomplete="off" spellcheck="false"
+      placeholder="Search guides, corridors, categories&hellip;">
+    <p class="searchhint">Type at least two letters. Press Escape to close.</p>
+    <ul class="searchres" id="searchres"></ul>
+  </div>
+</div>
 
 <header class="hero chero" id="top">
   <div class="wrap chero-g chero-1">
     <div>
       <nav class="crumbs" aria-label="Breadcrumb"><a href="/">ISP Group</a> <span>/</span> <a href="guides">Guides</a> <span>/</span> <b>Customs data</b></nav>
+      <p class="upd"><time datetime="2026-10-08">Updated 8 October 2026</time> &middot; ISP Group</p>
       <h1>A quotation is an opinion. <em>Customs data is a record</em></h1>
       <p class="sub">Declared value divided by declared net weight gives the price at which goods really crossed a border, with every discount the seller actually gave already inside the number.</p>
       <div class="chips"><span class="chip">Unit value</span><span class="chip">By origin</span><span class="chip">By commodity code</span><span class="chip">Four traps</span></div>
@@ -491,7 +552,8 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 <main id="main" tabindex="-1">
 <section><div class="wrap">
 <div class="lede"><h2>Why we benchmark before we negotiate</h2><p class="intro">Three quotations tell you what three sellers hope for. They do not tell you whether the best of the three is good. Customs statistics do, because they are built from declarations that someone signed and a customs authority accepted.</p></div>
-<div class="prose"><div class="pblock"><span class="k">01</span><h2>What the number is</h2><div class="ptext"><p>Trade statistics record, for each commodity code and each partner country, the declared value and the declared net weight of what actually moved in a period. Dividing one by the other gives a unit value: the average price per kilogram at which that commodity crossed that border from that origin.</p><p>It is an average rather than a quotation, and that is the point. It already contains the volume discounts, the seasonal softness and the deals that were never published. A seller quoting well above the running unit value for the same code and the same lane is asking you to pay for something, and the conversation starts there.</p></div></div><div class="pblock"><span class="k">02</span><h2>Where to get it</h2><div class="ptext"><ul class="plist"><li><b>UN Comtrade</b> covers most countries at the six-digit level and is the fastest way to compare several origins into one destination.</li><li><b>National sources</b> are more detailed. The United States publishes down to ten digits, the European Union eight, and several countries, Brazil among them, run open query tools over their own export data at full code level.</li><li><b>Mirror statistics</b>, meaning the exporter's declaration of what it sent you, are often published faster than the importer's own figures and are a useful cross-check when a destination reports slowly.</li></ul></div></div><div class="pblock"><span class="k">03</span><h2>The four traps</h2><div class="ptext"><p><b>Trap one: CIF against FOB.</b> Most countries record imports at CIF value and exports at FOB. Comparing an import unit value with an export unit value therefore compares a delivered price with a factory-gate price, and the gap is the freight, not the margin. Compare like with like or adjust for it explicitly.</p><p><b>Trap two: the basket inside the code.</b> A six-digit code can hold several commercial products at very different prices. A code covering frozen poultry cuts holds wings, legs and tails together, and the average moves with the mix rather than with the market. Go as deep as the national code allows and read the description.</p><p><b>Trap three: thin flows.</b> A unit value built on fifty tonnes in a year is one or two shipments and can be anything, including a sample consignment or a gift. We set a weight floor before we look at a number, and we ignore everything below it.</p><p><b>Trap four: related-party pricing.</b> Shipments between two arms of the same group are declared at transfer prices that serve a tax purpose, not a market one. On lanes dominated by a single integrated producer this can pull the whole average.</p><p class="pnote">None of the four makes the data useless. They make it data that has to be read rather than quoted. Used properly it is still the only published number in this trade that someone had to sign.</p></div></div><div class="pblock"><span class="k">04</span><h2>How we use it in a negotiation</h2><div class="ptext"><p>Before approaching producers on a lane we pull the destination's import unit values by origin and by code for the most recent full periods, drop the thin flows, and set a target band rather than a target number. The band is what we negotiate against, and we say to the seller what it is based on.</p><p>That changes the conversation from haggling to arithmetic, and it regularly moves the achievable price by a fifth or more. It also decides which origin to approach first, which is often worth more than the discount itself.</p></div></div></div>
+<nav class="toc" aria-label="On this page"><span class="eyebrow">On this page</span><ol><li><a href="#s1"><span>01</span>What the number is</a></li><li><a href="#s2"><span>02</span>Where to get it</a></li><li><a href="#s3"><span>03</span>The four traps</a></li><li><a href="#s4"><span>04</span>How we use it in a negotiation</a></li></ol></nav>
+<div class="prose"><div class="pblock"><span class="k">01</span><h2 id="s1">What the number is</h2><div class="ptext"><p>Trade statistics record, for each commodity code and each partner country, the declared value and the declared net weight of what actually moved in a period. Dividing one by the other gives a unit value: the average price per kilogram at which that commodity crossed that border from that origin.</p><p>It is an average rather than a quotation, and that is the point. It already contains the volume discounts, the seasonal softness and the deals that were never published. A seller quoting well above the running unit value for the same code and the same lane is asking you to pay for something, and the conversation starts there.</p></div></div><div class="pblock"><span class="k">02</span><h2 id="s2">Where to get it</h2><div class="ptext"><ul class="plist"><li><b>UN Comtrade</b> covers most countries at the six-digit level and is the fastest way to compare several origins into one destination.</li><li><b>National sources</b> are more detailed. The United States publishes down to ten digits, the European Union eight, and several countries, Brazil among them, run open query tools over their own export data at full code level.</li><li><b>Mirror statistics</b>, meaning the exporter's declaration of what it sent you, are often published faster than the importer's own figures and are a useful cross-check when a destination reports slowly.</li></ul></div></div><div class="pblock"><span class="k">03</span><h2 id="s3">The four traps</h2><div class="ptext"><p><b>Trap one: CIF against FOB.</b> Most countries record imports at CIF value and exports at FOB. Comparing an import unit value with an export unit value therefore compares a delivered price with a factory-gate price, and the gap is the freight, not the margin. Compare like with like or adjust for it explicitly.</p><p><b>Trap two: the basket inside the code.</b> A six-digit code can hold several commercial products at very different prices. A code covering frozen poultry cuts holds wings, legs and tails together, and the average moves with the mix rather than with the market. Go as deep as the national code allows and read the description.</p><p><b>Trap three: thin flows.</b> A unit value built on fifty tonnes in a year is one or two shipments and can be anything, including a sample consignment or a gift. We set a weight floor before we look at a number, and we ignore everything below it.</p><p><b>Trap four: related-party pricing.</b> Shipments between two arms of the same group are declared at transfer prices that serve a tax purpose, not a market one. On lanes dominated by a single integrated producer this can pull the whole average.</p><p class="pnote">None of the four makes the data useless. They make it data that has to be read rather than quoted. Used properly it is still the only published number in this trade that someone had to sign.</p></div></div><div class="pblock"><span class="k">04</span><h2 id="s4">How we use it in a negotiation</h2><div class="ptext"><p>Before approaching producers on a lane we pull the destination's import unit values by origin and by code for the most recent full periods, drop the thin flows, and set a target band rather than a target number. The band is what we negotiate against, and we say to the seller what it is based on.</p><p>That changes the conversation from haggling to arithmetic, and it regularly moves the achievable price by a fifth or more. It also decides which origin to approach first, which is often worth more than the discount itself.</p></div></div></div>
 
 </div></section>
 <section id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>Questions on this</h2><p class="intro">The ones we are asked most often.</p></div><div style="margin-top:34px"><details><summary>Is customs data public?</summary><p>Yes, in aggregate. Country-to-country flows by commodity code and period are published by the United Nations and by most national statistics offices at no cost. Shipment-level records with named companies are a separate, commercial product in the countries that release them at all.</p></details><details><summary>How current is it?</summary><p>Typically one to three months behind for the fastest reporters and longer for others. On a volatile commodity that lag matters and the data sets the band rather than the price. On a stable one it is close enough to negotiate against.</p></details><details><summary>Can a seller argue the data is wrong for their product?</summary><p>Often, and sometimes they are right, because of the basket problem. The useful answer is to ask what in their product justifies the gap: a grade, a certification, a pack, a lead time. If there is a real answer it is worth paying for. If there is not, the gap is the negotiation.</p></details></div></div></section>
@@ -524,10 +586,12 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <p class="credits">Photography: pipe by JWPhotowerks; straddle carrier by Lars K. Jensen (CC BY).
       All other images CC0 or public domain. Full list with links in media/CREDITS.json.</p>
     <p class="fbottom">ISP GROUP LLC &middot; Global Commerce &middot; International sourcing,
-      trading and supply of materials, products and industrial equipment.</p>
+      trading and supply of materials, products and industrial equipment.
+      &nbsp;&middot;&nbsp; <a href="privacy">Privacy</a>
+      &nbsp;&middot;&nbsp; <a href="terms">Terms of use</a></p>
   </div>
 </footer>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How customs data shows the real price", "description": "A quotation is what a seller wants. A customs unit value is what the market paid. Where to find the data, how to read it, and the four traps in it.", "author": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "publisher": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "mainEntityOfPage": "https://ispgroupgc.com/customs-data-pricing"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How customs data shows the real price", "description": "A quotation is what a seller wants. A customs unit value is what the market paid. Where to find the data, how to read it, and the four traps in it.", "author": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "publisher": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "datePublished": "2026-10-08", "dateModified": "2026-10-08", "inLanguage": "en", "mainEntityOfPage": "https://ispgroupgc.com/customs-data-pricing"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is customs data public?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, in aggregate. Country-to-country flows by commodity code and period are published by the United Nations and by most national statistics offices at no cost. Shipment-level records with named companies are a separate, commercial product in the countries that release them at all."}}, {"@type": "Question", "name": "How current is it?", "acceptedAnswer": {"@type": "Answer", "text": "Typically one to three months behind for the fastest reporters and longer for others. On a volatile commodity that lag matters and the data sets the band rather than the price. On a stable one it is close enough to negotiate against."}}, {"@type": "Question", "name": "Can a seller argue the data is wrong for their product?", "acceptedAnswer": {"@type": "Answer", "text": "Often, and sometimes they are right, because of the basket problem. The useful answer is to ask what in their product justifies the gap: a grade, a certification, a pack, a lead time. If there is a real answer it is worth paying for. If there is not, the gap is the negotiation."}}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ISP Group", "item": "https://ispgroupgc.com/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://ispgroupgc.com/guides"}, {"@type": "ListItem", "position": 3, "name": "Customs data", "item": "https://ispgroupgc.com/customs-data-pricing"}]}</script>
 <script>
@@ -616,6 +680,71 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   window.addEventListener('scroll',kick,{passive:true});
   window.addEventListener('resize',kick,{passive:true});
   par();
+})();
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('navsearch'), panel=document.getElementById('searchpanel');
+  if(!btn||!panel) return;
+  var input=document.getElementById('searchinput'), out=document.getElementById('searchres');
+  var idx=null, loading=false, opener=null;
+  function load(){
+    if(idx||loading) return;
+    loading=true;
+    fetch('/search.json').then(function(r){return r.json();})
+      .then(function(j){ idx=j; loading=false; run(); })
+      .catch(function(){ loading=false;
+        out.innerHTML='<li><a href="/guides"><b>Search is unavailable</b>'+
+          '<span>Browse the guides instead.</span></a></li>'; });
+  }
+  function esc(s){ return s.replace(/[&<>"]/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function hl(s,q){ if(!s) return '';
+    var i=s.toLowerCase().indexOf(q);
+    if(i<0) return esc(s.slice(0,118));
+    var a=Math.max(0,i-40), t=(a?'… ':'')+s.slice(a,i)+'\u0000'+s.slice(i,i+q.length)+'\u0001'+s.slice(i+q.length,i+q.length+70);
+    return esc(t).replace('\u0000','<mark>').replace('\u0001','</mark>'); }
+  function run(){
+    var q=(input.value||'').trim().toLowerCase();
+    if(q.length<2){ out.innerHTML=''; return; }
+    if(!idx){ load(); return; }
+    var hits=[];
+    for(var i=0;i<idx.length;i++){
+      var r=idx[i], t=r.t.toLowerCase(), d=(r.d||'').toLowerCase(), h=(r.h||'').toLowerCase();
+      var sc=0;
+      if(t.indexOf(q)>=0) sc+=10;
+      if(h.indexOf(q)>=0) sc+=4;
+      if(d.indexOf(q)>=0) sc+=3;
+      if(sc) hits.push([sc,r]);
+    }
+    hits.sort(function(a,b){return b[0]-a[0];});
+    if(!hits.length){
+      out.innerHTML='<li><a href="/contact"><b>Nothing matched &ldquo;'+esc(q)+'&rdquo;</b>'+
+        '<span>Ask us directly and we will answer.</span></a></li>'; return; }
+    out.innerHTML=hits.slice(0,8).map(function(x){
+      var r=x[1], ctx=(r.d&&r.d.toLowerCase().indexOf(q)>=0)?r.d:(r.h||r.d);
+      return '<li><a href="'+r.u+'"><b>'+hl(r.t,q)+'</b><span>'+hl(ctx,q)+'</span></a></li>';
+    }).join('');
+  }
+  function open_(){
+    opener=document.activeElement;
+    panel.hidden=false; btn.setAttribute('aria-expanded','true');
+    load(); input.focus(); input.select();
+  }
+  function close_(){
+    panel.hidden=true; btn.setAttribute('aria-expanded','false');
+    if(opener&&opener.focus) opener.focus();
+  }
+  btn.addEventListener('click',function(){ panel.hidden?open_():close_(); });
+  input.addEventListener('input',run);
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&!panel.hidden){ close_(); return; }
+    if(e.key==='/'&&panel.hidden){
+      var a=document.activeElement, tag=a?a.tagName:'';
+      if(tag==='INPUT'||tag==='TEXTAREA'||tag==='SELECT'||(a&&a.isContentEditable)) return;
+      e.preventDefault(); open_();
+    }
+  });
 })();
 </script>
 <!--/email_off-->

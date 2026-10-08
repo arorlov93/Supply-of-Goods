@@ -14,9 +14,16 @@ try:
 except Exception: FR = None
 
 # ── этап 1 и хабы
+UPD = ('<p class="upd"><time datetime="2026-10-08">Updated 8 October 2026</time>'
+       ' &middot; ISP Group</p>')
 for spec in [C.CONTACT, C.ABOUT, C.SERVICES, C.INCOTERMS, C.NOTFOUND,
-             C.SUPPLY, C.CORRIDORS_HUB, C.GUIDES]:
-    B.write(spec, extra_js=C.CONTACT_JS if spec["slug"] == "contact" else "")
+             C.SUPPLY, C.CORRIDORS_HUB, C.GUIDES, C.PRIVACY, C.TERMS]:
+    sp = dict(spec)
+    if sp["slug"] in ("incoterms", "privacy", "terms"):
+        sp["updated"] = UPD
+    if sp["slug"] == "incoterms" and GU:
+        sp["ld"] = GU.article_ld(sp)
+    B.write(sp, extra_js=C.CONTACT_JS if sp["slug"] == "contact" else "")
 
 # ── этап 2: товарные группы
 if CAT:
@@ -38,6 +45,8 @@ if GU:
         s.setdefault("faq_sub", "The ones we are asked most often.")
         s["related"] = GU.rel(spec["slug"])
         s["ld"] = GU.article_ld(spec)
+        s["updated"] = ('<p class="upd"><time datetime="%s">Updated 8 October 2026</time>'
+                        ' &middot; ISP Group</p>' % GU.UPDATED)
         B.write(s)
 
 # ── этап 4: французская версия
@@ -74,3 +83,7 @@ B.pretty_urls(G.HOST)
 
 allslugs = sorted({os.path.basename(p)[:-5] for p in glob.glob("site/*.html")})
 print("в sitemap адресов:", B.sitemap(allslugs))
+
+import search_mod
+n, size = search_mod.build_index()
+print(f"индекс поиска: {n} страниц, {size//1024} КБ")

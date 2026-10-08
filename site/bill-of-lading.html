@@ -138,9 +138,14 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 <style>
 /* hero */
 .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--rule)}
-#globe{position:absolute;top:50%;right:-5%;transform:translateY(-50%);pointer-events:none;
-  width:min(720px,56%);aspect-ratio:1/1;height:auto;display:block}
-@media(max-width:940px){#globe{top:-7%;right:-26%;transform:none;width:62%;opacity:.45}}
+#globe,#globe-still{position:absolute;top:50%;right:-5%;transform:translateY(-50%);
+  pointer-events:none;width:min(720px,56%);aspect-ratio:1/1;height:auto;display:block}
+#globe-still{object-fit:contain;transition:opacity .6s ease}
+#globe{opacity:0;transition:opacity .8s ease}
+#globe.live{opacity:1}
+#globe-still.gone{opacity:0}
+@media(max-width:940px){#globe,#globe-still{top:-7%;right:-26%;transform:none;width:62%}
+  #globe-still{opacity:.45}#globe.live{opacity:.45}}
 .hero .wrap{position:relative;z-index:2;padding-block:clamp(56px,8.5vw,108px)}
 .hero h1{font-size:clamp(2.55rem,6.4vw,4.9rem);max-width:16ch;letter-spacing:-.018em;line-height:1.05}
 .hero h1 em{font-style:italic;color:var(--brand)}
@@ -454,6 +459,51 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .skip:focus{left:12px;top:12px}
 .navlinks a[aria-current]{color:var(--ink)}
 .navlinks a[aria-current]::after{right:0}
+
+/* оглавление страницы */
+.toc{margin-top:38px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+  padding:22px 0 20px}
+.toc ol{list-style:none;margin:14px 0 0;padding:0;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));
+  gap:2px clamp(20px,3vw,46px)}
+.toc li{min-width:0}
+.toc a{display:flex;gap:13px;align-items:baseline;text-decoration:none;color:var(--ink-2);
+  padding:7px 0;border-bottom:1px solid transparent;transition:color .18s,border-color .18s}
+.toc a span{font-family:var(--fm);font-size:.57rem;letter-spacing:.1em;color:var(--gold-ink);
+  flex:0 0 auto}
+.toc a:hover{color:var(--brand)}
+.toc a:hover span{color:var(--gold-ink)}
+/* липкая шапка не должна накрывать заголовок при переходе по якорю */
+.pblock h2{scroll-margin-top:96px}
+
+/* дата обновления материала */
+.upd{font-family:var(--fm);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-3);margin:-8px 0 16px}
+
+/* поиск */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.navsearch{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;
+  margin-left:4px;padding:0;border:1px solid var(--rule);background:var(--surface);
+  color:var(--ink-2);cursor:pointer;border-radius:1px;box-shadow:var(--shadow-s);
+  transition:border-color .18s,color .18s}
+.navsearch:hover{border-color:var(--brand);color:var(--brand)}
+.searchpanel{position:sticky;top:68px;z-index:39;background:var(--surface);
+  border-bottom:1px solid var(--rule);box-shadow:var(--shadow-m);padding:22px 0 26px}
+.searchpanel[hidden]{display:none}
+.searchpanel input{width:100%;background:var(--paper);border:1px solid var(--rule);
+  color:var(--ink);font-family:var(--fs);font-size:clamp(1.3rem,2.6vw,1.9rem);
+  padding:14px 16px;transition:border-color .18s,box-shadow .18s}
+.searchpanel input:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-wash)}
+.searchhint{margin-top:10px;font-family:var(--fm);font-size:.55rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink-3)}
+.searchres{list-style:none;margin:16px 0 0;padding:0;max-height:52vh;overflow:auto}
+.searchres li{border-top:1px solid var(--rule)}
+.searchres a{display:block;padding:14px 0;text-decoration:none;color:var(--ink)}
+.searchres a:hover,.searchres a:focus-visible{background:var(--surface-2)}
+.searchres b{display:block;font-family:var(--fs);font-weight:400;font-size:1.18rem;margin-bottom:4px}
+.searchres span{display:block;color:var(--ink-2);font-size:.92rem}
+.searchres mark{background:var(--gold-soft);color:inherit;padding:0 2px}
+@media(max-width:940px){.searchpanel{top:68px}}
 </style>
 </head>
 <body>
@@ -464,6 +514,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
     <button class="navtoggle" id="navtoggle" type="button"
       aria-expanded="false" aria-controls="navmenu" aria-label="Menu"><span></span></button>
+    <button class="navsearch" id="navsearch" type="button" aria-label="Search" aria-expanded="false" aria-controls="searchpanel"><svg viewBox="0 0 20 20" width="17" height="17" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.6" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12.8 12.8 17 17" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
     <div class="navlinks" id="navmenu">
       <a href="services">What we do</a>
       <a href="supply">What we supply</a>
@@ -475,11 +526,21 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <a class="btn" href="contact#enquiry"><span class="btn-long">Request a </span>quote</a>
   </div>
 </nav>
+<div class="searchpanel" id="searchpanel" hidden>
+  <div class="wrap">
+    <label class="sr" for="searchinput">Search the site</label>
+    <input id="searchinput" type="search" autocomplete="off" spellcheck="false"
+      placeholder="Search guides, corridors, categories&hellip;">
+    <p class="searchhint">Type at least two letters. Press Escape to close.</p>
+    <ul class="searchres" id="searchres"></ul>
+  </div>
+</div>
 
 <header class="hero chero" id="top">
   <div class="wrap chero-g chero-1">
     <div>
       <nav class="crumbs" aria-label="Breadcrumb"><a href="/">ISP Group</a> <span>/</span> <a href="guides">Guides</a> <span>/</span> <b>Bill of lading</b></nav>
+      <p class="upd"><time datetime="2026-10-08">Updated 8 October 2026</time> &middot; ISP Group</p>
       <h1>The bill of lading <em>is the cargo</em></h1>
       <p class="sub">Whoever holds an original endorsed bill of lading can collect the goods. That one sentence explains every rule, every delay and every argument around this document.</p>
       <div class="chips"><span class="chip">Receipt</span><span class="chip">Contract</span><span class="chip">Document of title</span><span class="chip">Telex release</span></div>
@@ -491,7 +552,8 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 <main id="main" tabindex="-1">
 <section><div class="wrap">
 <div class="lede"><h2>Three jobs in one piece of paper</h2><p class="intro">A bill of lading is a receipt that the carrier took the goods, the contract of carriage on which it carries them, and, when it is negotiable, a document of title. The third job is the one that creates all the drama, because it means the paper controls the steel box.</p></div>
-<div class="prose"><div class="pblock"><span class="k">01</span><h2>Negotiable original or sea waybill</h2><div class="ptext"><p>A negotiable bill of lading is usually issued in a set of three originals, and surrendering any one of them releases the cargo; the other two then become void. The set exists because paper used to travel by post on different ships, and the practice survived the reason for it.</p><p>A sea waybill is not a document of title. It names a consignee, the carrier releases to that named party on identification, and nothing has to travel. It is faster and safer, and it is the right choice whenever the seller is already paid or is content to be paid against something other than the document.</p><p class="pnote">The rule of thumb: if payment depends on controlling the goods, you need a negotiable original. If it does not, a sea waybill removes an entire category of problem.</p></div></div><div class="pblock"><span class="k">02</span><h2>Who is the consignee, and why “to order” matters</h2><div class="ptext"><ul class="plist"><li><b>Straight consigned</b> to a named buyer: only that buyer can collect. Simple, and it gives the seller no leverage after shipment.</li><li><b>To order</b> of the shipper: the shipper endorses the bill to transfer control, which is what makes a documentary credit work.</li><li><b>To order of the issuing bank</b>: the bank holds control until the buyer pays or accepts. The strongest position for the bank and the most common under a credit.</li><li><b>Notify party</b> is not the consignee. It is who the carrier telephones on arrival, and it has no rights over the cargo at all.</li></ul></div></div><div class="pblock"><span class="k">03</span><h2>Telex release, which is not a telex</h2><div class="ptext"><p>On a short voyage the vessel arrives before the paperwork, and originals posted from the origin will not be at the destination in time. A telex release solves it: the shipper surrenders all originals to the carrier at the origin, and the carrier instructs its own office at the destination to release without presentation.</p><p>Two things follow. The seller gives up control the moment the originals are surrendered, so it should only be done when payment is secure. And because it is a carrier process rather than a legal instrument, every line does it slightly differently, charges differently for it, and takes a different amount of time, which has to be asked about before the booking rather than during the crisis.</p><p>An express release is the same idea built in from the start: the bill is issued non-negotiable and no original is ever printed.</p></div></div><div class="pblock"><span class="k">04</span><h2>House and master bills</h2><div class="ptext"><p>When a freight forwarder consolidates, the ocean carrier issues a master bill to the forwarder, and the forwarder issues a house bill to each shipper. The house bill is the document the buyer deals with, and it is only as good as the forwarder behind it.</p><p>That matters at the destination: the cargo is released by the forwarder's own agent, not by the shipping line. A forwarder with no real agent at the discharge port is the commonest cause of a consignment sitting on the quay while two offices email each other.</p></div></div><div class="pblock"><span class="k">05</span><h2>When the paper goes wrong</h2><div class="ptext"><ul class="plist"><li><b>Cargo arrives before documents.</b> Either arrange a telex release, or the buyer provides a bank guarantee to the carrier, which the bank will charge for and will not love.</li><li><b>Originals lost.</b> Replacement requires an indemnity, usually bank-backed, for a multiple of the cargo value, held for years. Expensive and slow.</li><li><b>Details differ from the credit.</b> A spelling difference between the bill and the letter of credit is a discrepancy, and the protection the seller paid for is gone until the buyer waives it.</li><li><b>A switch bill is requested.</b> Issuing a second set at a different port, usually to hide the original supplier, is a real commercial practice and also the mechanism behind a lot of fraud. We only do it with the first set physically surrendered, and we do not do it to misstate origin.</li></ul></div></div><div class="pblock"><span class="k">06</span><h2>What we put in the contract</h2><div class="ptext"><p>Which document type will be issued, who is consignee and notify, how many originals, where they are to be couriered and at whose cost, whether telex release is permitted and who authorises it, and the deadline for the document set to reach the buyer relative to the vessel's arrival. All five are settled before loading, because none of them can be fixed while a container accrues demurrage.</p></div></div></div>
+<nav class="toc" aria-label="On this page"><span class="eyebrow">On this page</span><ol><li><a href="#s1"><span>01</span>Negotiable original or sea waybill</a></li><li><a href="#s2"><span>02</span>Who is the consignee, and why “to order” matters</a></li><li><a href="#s3"><span>03</span>Telex release, which is not a telex</a></li><li><a href="#s4"><span>04</span>House and master bills</a></li><li><a href="#s5"><span>05</span>When the paper goes wrong</a></li><li><a href="#s6"><span>06</span>What we put in the contract</a></li></ol></nav>
+<div class="prose"><div class="pblock"><span class="k">01</span><h2 id="s1">Negotiable original or sea waybill</h2><div class="ptext"><p>A negotiable bill of lading is usually issued in a set of three originals, and surrendering any one of them releases the cargo; the other two then become void. The set exists because paper used to travel by post on different ships, and the practice survived the reason for it.</p><p>A sea waybill is not a document of title. It names a consignee, the carrier releases to that named party on identification, and nothing has to travel. It is faster and safer, and it is the right choice whenever the seller is already paid or is content to be paid against something other than the document.</p><p class="pnote">The rule of thumb: if payment depends on controlling the goods, you need a negotiable original. If it does not, a sea waybill removes an entire category of problem.</p></div></div><div class="pblock"><span class="k">02</span><h2 id="s2">Who is the consignee, and why “to order” matters</h2><div class="ptext"><ul class="plist"><li><b>Straight consigned</b> to a named buyer: only that buyer can collect. Simple, and it gives the seller no leverage after shipment.</li><li><b>To order</b> of the shipper: the shipper endorses the bill to transfer control, which is what makes a documentary credit work.</li><li><b>To order of the issuing bank</b>: the bank holds control until the buyer pays or accepts. The strongest position for the bank and the most common under a credit.</li><li><b>Notify party</b> is not the consignee. It is who the carrier telephones on arrival, and it has no rights over the cargo at all.</li></ul></div></div><div class="pblock"><span class="k">03</span><h2 id="s3">Telex release, which is not a telex</h2><div class="ptext"><p>On a short voyage the vessel arrives before the paperwork, and originals posted from the origin will not be at the destination in time. A telex release solves it: the shipper surrenders all originals to the carrier at the origin, and the carrier instructs its own office at the destination to release without presentation.</p><p>Two things follow. The seller gives up control the moment the originals are surrendered, so it should only be done when payment is secure. And because it is a carrier process rather than a legal instrument, every line does it slightly differently, charges differently for it, and takes a different amount of time, which has to be asked about before the booking rather than during the crisis.</p><p>An express release is the same idea built in from the start: the bill is issued non-negotiable and no original is ever printed.</p></div></div><div class="pblock"><span class="k">04</span><h2 id="s4">House and master bills</h2><div class="ptext"><p>When a freight forwarder consolidates, the ocean carrier issues a master bill to the forwarder, and the forwarder issues a house bill to each shipper. The house bill is the document the buyer deals with, and it is only as good as the forwarder behind it.</p><p>That matters at the destination: the cargo is released by the forwarder's own agent, not by the shipping line. A forwarder with no real agent at the discharge port is the commonest cause of a consignment sitting on the quay while two offices email each other.</p></div></div><div class="pblock"><span class="k">05</span><h2 id="s5">When the paper goes wrong</h2><div class="ptext"><ul class="plist"><li><b>Cargo arrives before documents.</b> Either arrange a telex release, or the buyer provides a bank guarantee to the carrier, which the bank will charge for and will not love.</li><li><b>Originals lost.</b> Replacement requires an indemnity, usually bank-backed, for a multiple of the cargo value, held for years. Expensive and slow.</li><li><b>Details differ from the credit.</b> A spelling difference between the bill and the letter of credit is a discrepancy, and the protection the seller paid for is gone until the buyer waives it.</li><li><b>A switch bill is requested.</b> Issuing a second set at a different port, usually to hide the original supplier, is a real commercial practice and also the mechanism behind a lot of fraud. We only do it with the first set physically surrendered, and we do not do it to misstate origin.</li></ul></div></div><div class="pblock"><span class="k">06</span><h2 id="s6">What we put in the contract</h2><div class="ptext"><p>Which document type will be issued, who is consignee and notify, how many originals, where they are to be couriered and at whose cost, whether telex release is permitted and who authorises it, and the deadline for the document set to reach the buyer relative to the vessel's arrival. All five are settled before loading, because none of them can be fixed while a container accrues demurrage.</p></div></div></div>
 
 </div></section>
 <section id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>Questions on this</h2><p class="intro">The ones we are asked most often.</p></div><div style="margin-top:34px"><details><summary>What is the difference between a bill of lading and a sea waybill?</summary><p>A negotiable bill of lading is a document of title: whoever holds an endorsed original can take the goods. A sea waybill is not; the carrier releases to the named consignee on identification and nothing has to be presented. Use the first when payment depends on controlling the cargo, the second when it does not.</p></details><details><summary>How long does a telex release take?</summary><p>It is a carrier procedure, not a legal instrument, so it varies by line and by office, from a few hours to a couple of days. Ask the carrier before the booking rather than on the day the vessel berths.</p></details><details><summary>Can I get my cargo without the original bill of lading?</summary><p>Only with the carrier's agreement, normally against a bank guarantee for a multiple of the cargo value. It is expensive and the bank will want security. Preventing the situation costs nothing by comparison.</p></details></div></div></section>
@@ -524,10 +586,12 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <p class="credits">Photography: pipe by JWPhotowerks; straddle carrier by Lars K. Jensen (CC BY).
       All other images CC0 or public domain. Full list with links in media/CREDITS.json.</p>
     <p class="fbottom">ISP GROUP LLC &middot; Global Commerce &middot; International sourcing,
-      trading and supply of materials, products and industrial equipment.</p>
+      trading and supply of materials, products and industrial equipment.
+      &nbsp;&middot;&nbsp; <a href="privacy">Privacy</a>
+      &nbsp;&middot;&nbsp; <a href="terms">Terms of use</a></p>
   </div>
 </footer>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Bill of lading and telex release", "description": "Receipt, contract of carriage and document of title in one piece of paper. Originals, seaway bills, telex release and what happens when cargo beats documents.", "author": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "publisher": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "mainEntityOfPage": "https://ispgroupgc.com/bill-of-lading"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Bill of lading and telex release", "description": "Receipt, contract of carriage and document of title in one piece of paper. Originals, seaway bills, telex release and what happens when cargo beats documents.", "author": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "publisher": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "datePublished": "2026-10-08", "dateModified": "2026-10-08", "inLanguage": "en", "mainEntityOfPage": "https://ispgroupgc.com/bill-of-lading"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the difference between a bill of lading and a sea waybill?", "acceptedAnswer": {"@type": "Answer", "text": "A negotiable bill of lading is a document of title: whoever holds an endorsed original can take the goods. A sea waybill is not; the carrier releases to the named consignee on identification and nothing has to be presented. Use the first when payment depends on controlling the cargo, the second when it does not."}}, {"@type": "Question", "name": "How long does a telex release take?", "acceptedAnswer": {"@type": "Answer", "text": "It is a carrier procedure, not a legal instrument, so it varies by line and by office, from a few hours to a couple of days. Ask the carrier before the booking rather than on the day the vessel berths."}}, {"@type": "Question", "name": "Can I get my cargo without the original bill of lading?", "acceptedAnswer": {"@type": "Answer", "text": "Only with the carrier's agreement, normally against a bank guarantee for a multiple of the cargo value. It is expensive and the bank will want security. Preventing the situation costs nothing by comparison."}}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ISP Group", "item": "https://ispgroupgc.com/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://ispgroupgc.com/guides"}, {"@type": "ListItem", "position": 3, "name": "Bill of lading", "item": "https://ispgroupgc.com/bill-of-lading"}]}</script>
 <script>
@@ -616,6 +680,71 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   window.addEventListener('scroll',kick,{passive:true});
   window.addEventListener('resize',kick,{passive:true});
   par();
+})();
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('navsearch'), panel=document.getElementById('searchpanel');
+  if(!btn||!panel) return;
+  var input=document.getElementById('searchinput'), out=document.getElementById('searchres');
+  var idx=null, loading=false, opener=null;
+  function load(){
+    if(idx||loading) return;
+    loading=true;
+    fetch('/search.json').then(function(r){return r.json();})
+      .then(function(j){ idx=j; loading=false; run(); })
+      .catch(function(){ loading=false;
+        out.innerHTML='<li><a href="/guides"><b>Search is unavailable</b>'+
+          '<span>Browse the guides instead.</span></a></li>'; });
+  }
+  function esc(s){ return s.replace(/[&<>"]/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function hl(s,q){ if(!s) return '';
+    var i=s.toLowerCase().indexOf(q);
+    if(i<0) return esc(s.slice(0,118));
+    var a=Math.max(0,i-40), t=(a?'… ':'')+s.slice(a,i)+'\u0000'+s.slice(i,i+q.length)+'\u0001'+s.slice(i+q.length,i+q.length+70);
+    return esc(t).replace('\u0000','<mark>').replace('\u0001','</mark>'); }
+  function run(){
+    var q=(input.value||'').trim().toLowerCase();
+    if(q.length<2){ out.innerHTML=''; return; }
+    if(!idx){ load(); return; }
+    var hits=[];
+    for(var i=0;i<idx.length;i++){
+      var r=idx[i], t=r.t.toLowerCase(), d=(r.d||'').toLowerCase(), h=(r.h||'').toLowerCase();
+      var sc=0;
+      if(t.indexOf(q)>=0) sc+=10;
+      if(h.indexOf(q)>=0) sc+=4;
+      if(d.indexOf(q)>=0) sc+=3;
+      if(sc) hits.push([sc,r]);
+    }
+    hits.sort(function(a,b){return b[0]-a[0];});
+    if(!hits.length){
+      out.innerHTML='<li><a href="/contact"><b>Nothing matched &ldquo;'+esc(q)+'&rdquo;</b>'+
+        '<span>Ask us directly and we will answer.</span></a></li>'; return; }
+    out.innerHTML=hits.slice(0,8).map(function(x){
+      var r=x[1], ctx=(r.d&&r.d.toLowerCase().indexOf(q)>=0)?r.d:(r.h||r.d);
+      return '<li><a href="'+r.u+'"><b>'+hl(r.t,q)+'</b><span>'+hl(ctx,q)+'</span></a></li>';
+    }).join('');
+  }
+  function open_(){
+    opener=document.activeElement;
+    panel.hidden=false; btn.setAttribute('aria-expanded','true');
+    load(); input.focus(); input.select();
+  }
+  function close_(){
+    panel.hidden=true; btn.setAttribute('aria-expanded','false');
+    if(opener&&opener.focus) opener.focus();
+  }
+  btn.addEventListener('click',function(){ panel.hidden?open_():close_(); });
+  input.addEventListener('input',run);
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&!panel.hidden){ close_(); return; }
+    if(e.key==='/'&&panel.hidden){
+      var a=document.activeElement, tag=a?a.tagName:'';
+      if(tag==='INPUT'||tag==='TEXTAREA'||tag==='SELECT'||(a&&a.isContentEditable)) return;
+      e.preventDefault(); open_();
+    }
+  });
 })();
 </script>
 <!--/email_off-->

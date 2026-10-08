@@ -12,12 +12,16 @@ def rel(slug):
                   "Product, quantity and destination port is enough to start."))
     return ("Related guides", "The ones that usually get read next.", items)
 
+UPDATED = "2026-10-08"
+
 def article_ld(spec):
     return [{"@context": "https://schema.org", "@type": "Article",
              "headline": spec["title"].split(" | ")[0],
              "description": spec["desc"],
              "author": ORG, "publisher": ORG,
-             "mainEntityOfPage": HOST + spec["slug"] + ".html"}]
+             "datePublished": UPDATED, "dateModified": UPDATED,
+             "inLanguage": "en",
+             "mainEntityOfPage": HOST + spec["slug"]}]
 
 def t(slug, extra=None):
     return [("ISP Group", "index.html"), ("Guides", "guides.html"), (extra or slug, None)]

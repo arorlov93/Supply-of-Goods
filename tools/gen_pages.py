@@ -69,7 +69,9 @@ FOOT_FR = """<footer>
       <div><dt>English</dt><dd style="line-height:1.95"><a href="index.html" style="display:block">Full site in English</a><a href="guides.html" style="display:block">Guides</a></dd></div>
     </dl>
     <p class="fbottom">ISP GROUP LLC &middot; Global Commerce &middot; Sourcing, n&eacute;goce et
-      approvisionnement international en mati&eacute;riaux, produits et &eacute;quipements industriels.</p>
+      approvisionnement international en mati&eacute;riaux, produits et &eacute;quipements industriels.
+      &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy</a>
+      &nbsp;&middot;&nbsp; <a href="terms.html">Terms of use</a></p>
   </div>
 </footer>"""
 
@@ -90,7 +92,9 @@ def footer(lang="en"):
     <p class="credits">Photography: pipe by JWPhotowerks; straddle carrier by Lars K. Jensen (CC BY).
       All other images CC0 or public domain. Full list with links in media/CREDITS.json.</p>
     <p class="fbottom">ISP GROUP LLC &middot; Global Commerce &middot; International sourcing,
-      trading and supply of materials, products and industrial equipment.</p>
+      trading and supply of materials, products and industrial equipment.
+      &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy</a>
+      &nbsp;&middot;&nbsp; <a href="terms.html">Terms of use</a></p>
   </div>
 </footer>""" % cor
 
@@ -111,6 +115,18 @@ def crumbs(trail):
     return '<nav class="crumbs" aria-label="Breadcrumb">%s</nav>' % " ".join(out)
 
 
+def toc(blocks, title="On this page"):
+    """Оглавление из заголовков разделов. Собирается при сборке, без JS:
+    работает со скриптами выключенными и видно поисковику как обычные ссылки."""
+    heads = [t for k, t in blocks if k == "h2"]
+    if len(heads) < 4:
+        return ""
+    items = "".join('<li><a href="#s%d"><span>%02d</span>%s</a></li>' % (i, i, h)
+                    for i, h in enumerate(heads, 1))
+    return ('<nav class="toc" aria-label="%s"><span class="eyebrow">%s</span>'
+            '<ol>%s</ol></nav>' % (title, title, items))
+
+
 def prose(blocks):
     """blocks: [("h2", текст) | ("p", текст) | ("ul", [пункты]) | ("note", текст)]"""
     out, n, opened = [], 0, False
@@ -118,8 +134,8 @@ def prose(blocks):
         if kind == "h2":
             if opened: out.append("</div></div>")
             n += 1
-            out.append('<div class="pblock"><span class="k">%02d</span><h2>%s</h2>'
-                       '<div class="ptext">' % (n, text))
+            out.append('<div class="pblock"><span class="k">%02d</span>'
+                       '<h2 id="s%d">%s</h2><div class="ptext">' % (n, n, text))
             opened = True
         elif kind == "raw":
             out.append(text)
@@ -215,6 +231,7 @@ def build(spec, extra_css="", lang="en"):
             "    <div>",
             "      " + (crumbs(spec["trail"]) if spec.get("trail")
                         else '<span class="eyebrow">%s</span>' % spec.get("eyebrow", "")),
+            ("      " + spec["updated"]) if spec.get("updated") else "",
             "      <h1>%s</h1>" % spec["h1"],
             '      <p class="sub">%s</p>' % spec["sub"]]
     if spec.get("chips"):
@@ -241,6 +258,7 @@ def build(spec, extra_css="", lang="en"):
     if spec.get("lede"):
         body.append('<div class="lede"><h2>%s</h2><p class="intro">%s</p></div>' % spec["lede"])
     if spec.get("body"):
+        body.append(toc(spec["body"], spec.get("toc_title", "On this page")))
         body.append('<div class="prose">%s</div>' % prose(spec["body"]))
     body.append(spec.get("tail", ""))
     body.append("</div></section>")

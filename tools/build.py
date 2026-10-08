@@ -2,6 +2,7 @@
 """Сборка сайта: страницы, навигация на уже существующих файлах, sitemap."""
 import os, re, sys, json, importlib
 import gen_pages as G
+import search_mod as SRCH
 
 
 # Выдача обрезает описание около 160 знаков и заголовок около 60. Тексты в
@@ -107,6 +108,31 @@ def pretty_urls(host):
         # абсолютные адреса в canonical, og:url, hreflang и структурных данных
         t = t.replace(host + "index.html", host)
         t = _re.sub(r'(%s)([a-z0-9][a-z0-9\-]*)\.html' % _re.escape(host), r"\1\2", t)
+        # страницы, собранные другим генератором, оглавления не получили:
+        # добавляем его здесь, чтобы правило было одно на весь сайт
+        if 'class="prose"' in t and 'class="toc"' not in t:
+            heads = _re.findall(r'<div class="pblock"><span class="k">\d+</span><h2[^>]*>(.*?)</h2>', t, _re.S)
+            if len(heads) >= 4:
+                k = [0]
+                def _anchor(m):
+                    k[0] += 1
+                    return '%s<h2 id="s%d">' % (m.group(1), k[0])
+                t = _re.sub(r'(<div class="pblock"><span class="k">\d+</span>)<h2[^>]*>', _anchor, t)
+                items = "".join('<li><a href="#s%d"><span>%02d</span>%s</a></li>' % (i, i, h)
+                                for i, h in enumerate(heads, 1))
+                toc = ('<nav class="toc" aria-label="On this page">'
+                       '<span class="eyebrow">On this page</span><ol>%s</ol></nav>' % items)
+                t = t.replace('<div class="prose">', toc + '<div class="prose">', 1)
+
+        # поиск: кнопка в шапке, панель под ней, стили и скрипт
+        if 'id="navsearch"' not in t:
+            t = t.replace('    <div class="navlinks" id="navmenu">',
+                          SRCH.BUTTON + '    <div class="navlinks" id="navmenu">', 1)
+            t = t.replace("</nav>\n", "</nav>\n" + SRCH.PANEL, 1)
+            i = t.rindex("</style>")
+            t = t[:i] + SRCH.CSS + t[i:]
+            t = t.replace("</body>", SRCH.JS + "</body>", 1)
+
         # клавиатурный пропуск навигации и пометка текущего пункта меню
         if 'class="skip"' not in t:
             t = t.replace("<body>", '<body>\n<a class="skip" href="#main">Skip to content</a>', 1)

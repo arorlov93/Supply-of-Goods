@@ -138,9 +138,14 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 <style>
 /* hero */
 .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--rule)}
-#globe{position:absolute;top:50%;right:-5%;transform:translateY(-50%);pointer-events:none;
-  width:min(720px,56%);aspect-ratio:1/1;height:auto;display:block}
-@media(max-width:940px){#globe{top:-7%;right:-26%;transform:none;width:62%;opacity:.45}}
+#globe,#globe-still{position:absolute;top:50%;right:-5%;transform:translateY(-50%);
+  pointer-events:none;width:min(720px,56%);aspect-ratio:1/1;height:auto;display:block}
+#globe-still{object-fit:contain;transition:opacity .6s ease}
+#globe{opacity:0;transition:opacity .8s ease}
+#globe.live{opacity:1}
+#globe-still.gone{opacity:0}
+@media(max-width:940px){#globe,#globe-still{top:-7%;right:-26%;transform:none;width:62%}
+  #globe-still{opacity:.45}#globe.live{opacity:.45}}
 .hero .wrap{position:relative;z-index:2;padding-block:clamp(56px,8.5vw,108px)}
 .hero h1{font-size:clamp(2.55rem,6.4vw,4.9rem);max-width:16ch;letter-spacing:-.018em;line-height:1.05}
 .hero h1 em{font-style:italic;color:var(--brand)}
@@ -454,6 +459,51 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .skip:focus{left:12px;top:12px}
 .navlinks a[aria-current]{color:var(--ink)}
 .navlinks a[aria-current]::after{right:0}
+
+/* оглавление страницы */
+.toc{margin-top:38px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+  padding:22px 0 20px}
+.toc ol{list-style:none;margin:14px 0 0;padding:0;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));
+  gap:2px clamp(20px,3vw,46px)}
+.toc li{min-width:0}
+.toc a{display:flex;gap:13px;align-items:baseline;text-decoration:none;color:var(--ink-2);
+  padding:7px 0;border-bottom:1px solid transparent;transition:color .18s,border-color .18s}
+.toc a span{font-family:var(--fm);font-size:.57rem;letter-spacing:.1em;color:var(--gold-ink);
+  flex:0 0 auto}
+.toc a:hover{color:var(--brand)}
+.toc a:hover span{color:var(--gold-ink)}
+/* липкая шапка не должна накрывать заголовок при переходе по якорю */
+.pblock h2{scroll-margin-top:96px}
+
+/* дата обновления материала */
+.upd{font-family:var(--fm);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-3);margin:-8px 0 16px}
+
+/* поиск */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.navsearch{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;
+  margin-left:4px;padding:0;border:1px solid var(--rule);background:var(--surface);
+  color:var(--ink-2);cursor:pointer;border-radius:1px;box-shadow:var(--shadow-s);
+  transition:border-color .18s,color .18s}
+.navsearch:hover{border-color:var(--brand);color:var(--brand)}
+.searchpanel{position:sticky;top:68px;z-index:39;background:var(--surface);
+  border-bottom:1px solid var(--rule);box-shadow:var(--shadow-m);padding:22px 0 26px}
+.searchpanel[hidden]{display:none}
+.searchpanel input{width:100%;background:var(--paper);border:1px solid var(--rule);
+  color:var(--ink);font-family:var(--fs);font-size:clamp(1.3rem,2.6vw,1.9rem);
+  padding:14px 16px;transition:border-color .18s,box-shadow .18s}
+.searchpanel input:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-wash)}
+.searchhint{margin-top:10px;font-family:var(--fm);font-size:.55rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink-3)}
+.searchres{list-style:none;margin:16px 0 0;padding:0;max-height:52vh;overflow:auto}
+.searchres li{border-top:1px solid var(--rule)}
+.searchres a{display:block;padding:14px 0;text-decoration:none;color:var(--ink)}
+.searchres a:hover,.searchres a:focus-visible{background:var(--surface-2)}
+.searchres b{display:block;font-family:var(--fs);font-weight:400;font-size:1.18rem;margin-bottom:4px}
+.searchres span{display:block;color:var(--ink-2);font-size:.92rem}
+.searchres mark{background:var(--gold-soft);color:inherit;padding:0 2px}
+@media(max-width:940px){.searchpanel{top:68px}}
 </style>
 </head>
 <body>
@@ -464,6 +514,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
     <button class="navtoggle" id="navtoggle" type="button"
       aria-expanded="false" aria-controls="navmenu" aria-label="Menu"><span></span></button>
+    <button class="navsearch" id="navsearch" type="button" aria-label="Search" aria-expanded="false" aria-controls="searchpanel"><svg viewBox="0 0 20 20" width="17" height="17" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.6" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12.8 12.8 17 17" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
     <div class="navlinks" id="navmenu">
       <a href="services">What we do</a>
       <a href="supply">What we supply</a>
@@ -475,11 +526,21 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <a class="btn" href="contact#enquiry"><span class="btn-long">Request a </span>quote</a>
   </div>
 </nav>
+<div class="searchpanel" id="searchpanel" hidden>
+  <div class="wrap">
+    <label class="sr" for="searchinput">Search the site</label>
+    <input id="searchinput" type="search" autocomplete="off" spellcheck="false"
+      placeholder="Search guides, corridors, categories&hellip;">
+    <p class="searchhint">Type at least two letters. Press Escape to close.</p>
+    <ul class="searchres" id="searchres"></ul>
+  </div>
+</div>
 
 <header class="hero chero" id="top">
   <div class="wrap chero-g chero-1">
     <div>
       <nav class="crumbs" aria-label="Breadcrumb"><a href="/">ISP Group</a> <span>/</span> <a href="guides">Guides</a> <span>/</span> <b>Trade remedies</b></nav>
+      <p class="upd"><time datetime="2026-10-08">Updated 8 October 2026</time> &middot; ISP Group</p>
       <h1>The check that turns a good purchase <em>into a loss</em></h1>
       <p class="sub">Antidumping and countervailing duties are not ordinary tariffs. The rate can exceed the value of the goods, the scope is defined by product description rather than by code alone, and in some systems the amount paid at entry is only a deposit.</p>
       <div class="chips"><span class="chip">Scope by description</span><span class="chip">Deposit at entry</span><span class="chip">Retrospective assessment</span><span class="chip">Sunset review</span></div>
@@ -491,7 +552,8 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 <main id="main" tabindex="-1">
 <section><div class="wrap">
 <div class="lede"><h2>Why this deserves its own check</h2><p class="intro">An ordinary duty rate of a few per cent is a line in a cost model. A trade remedy rate in the hundreds of per cent is not a line in a cost model, it is the end of the transaction, and it attaches to the importer.</p></div>
-<div class="prose"><div class="pblock"><span class="k">01</span><h2>What the two remedies are</h2><div class="ptext"><p>An <b>antidumping</b> duty answers a finding that goods were sold into the market below their normal value. A <b>countervailing</b> duty answers a finding that the production was subsidised. They are imposed per country of origin and usually per producer, so two factories in the same country can carry very different rates and one can carry none.</p><p>They sit on top of the ordinary tariff, not instead of it, and they are collected from the importer of record.</p></div></div><div class="pblock"><span class="k">02</span><h2>Scope is a description, not a code</h2><div class="ptext"><p>This is the part that catches people. An order defines the subject merchandise in words: what it is made of, how it is processed, what it is used for, and what is expressly excluded. Commodity codes are listed for convenience and the text says so; goods outside the listed codes can still be in scope and goods inside them can be out of it.</p><p>A worked example from a lane we run: quartz surface products from a particular origin carry orders, while quarried stone such as granite, marble, soapstone and quartzite is expressly excluded from that scope. Two slabs that a buyer would describe the same way sit on opposite sides of the line, and the difference is in the material and the processing, not in the appearance.</p><p class="pnote">Where the answer is genuinely unclear, administrations issue scope rulings. Asking for one before a programme starts costs a fraction of discovering the answer at entry.</p></div></div><div class="pblock"><span class="k">03</span><h2>In the United States the deposit is not the bill</h2><div class="ptext"><p>Most systems assess the final duty at entry. The United States operates retrospectively: the amount paid at entry is a cash deposit at the current rate, and the final liability is determined later in an administrative review covering that period, which can take years.</p><p>The consequence is uncomfortable and frequently missed. If the review sets a higher rate than the deposit, the importer owes the difference with interest, long after the goods were sold and the margin was spent. A buyer running a programme under an order has an open liability on the books, and should know that before the first container, not during an audit.</p></div></div><div class="pblock"><span class="k">04</span><h2>Rates change, so the check has a date on it</h2><div class="ptext"><p>Rates are revised in administrative reviews, new producers can obtain their own rates, and the orders themselves are reviewed periodically to decide whether they continue. A rate confirmed six months ago is not a rate confirmed today, and the only date that matters is the date of entry.</p></div></div><div class="pblock"><span class="k">05</span><h2>How we run the check</h2><div class="ptext"><ul class="plist"><li>Identify the classification and read the scope text of any order touching that product and origin, rather than relying on the code alone.</li><li>Identify the specific producer, because rates are producer-specific and a company-specific rate can be zero where the country-wide rate is not.</li><li>Confirm the live rate as at the planned entry date, not as at the enquiry date.</li><li>Where the product sits near a scope boundary, recommend a scope ruling and say what the delay costs against what the exposure is.</li><li>Show any deposit as a separate line in the landed price, flagged as a deposit rather than as a duty, so nobody treats it as final.</li></ul></div></div></div>
+<nav class="toc" aria-label="On this page"><span class="eyebrow">On this page</span><ol><li><a href="#s1"><span>01</span>What the two remedies are</a></li><li><a href="#s2"><span>02</span>Scope is a description, not a code</a></li><li><a href="#s3"><span>03</span>In the United States the deposit is not the bill</a></li><li><a href="#s4"><span>04</span>Rates change, so the check has a date on it</a></li><li><a href="#s5"><span>05</span>How we run the check</a></li></ol></nav>
+<div class="prose"><div class="pblock"><span class="k">01</span><h2 id="s1">What the two remedies are</h2><div class="ptext"><p>An <b>antidumping</b> duty answers a finding that goods were sold into the market below their normal value. A <b>countervailing</b> duty answers a finding that the production was subsidised. They are imposed per country of origin and usually per producer, so two factories in the same country can carry very different rates and one can carry none.</p><p>They sit on top of the ordinary tariff, not instead of it, and they are collected from the importer of record.</p></div></div><div class="pblock"><span class="k">02</span><h2 id="s2">Scope is a description, not a code</h2><div class="ptext"><p>This is the part that catches people. An order defines the subject merchandise in words: what it is made of, how it is processed, what it is used for, and what is expressly excluded. Commodity codes are listed for convenience and the text says so; goods outside the listed codes can still be in scope and goods inside them can be out of it.</p><p>A worked example from a lane we run: quartz surface products from a particular origin carry orders, while quarried stone such as granite, marble, soapstone and quartzite is expressly excluded from that scope. Two slabs that a buyer would describe the same way sit on opposite sides of the line, and the difference is in the material and the processing, not in the appearance.</p><p class="pnote">Where the answer is genuinely unclear, administrations issue scope rulings. Asking for one before a programme starts costs a fraction of discovering the answer at entry.</p></div></div><div class="pblock"><span class="k">03</span><h2 id="s3">In the United States the deposit is not the bill</h2><div class="ptext"><p>Most systems assess the final duty at entry. The United States operates retrospectively: the amount paid at entry is a cash deposit at the current rate, and the final liability is determined later in an administrative review covering that period, which can take years.</p><p>The consequence is uncomfortable and frequently missed. If the review sets a higher rate than the deposit, the importer owes the difference with interest, long after the goods were sold and the margin was spent. A buyer running a programme under an order has an open liability on the books, and should know that before the first container, not during an audit.</p></div></div><div class="pblock"><span class="k">04</span><h2 id="s4">Rates change, so the check has a date on it</h2><div class="ptext"><p>Rates are revised in administrative reviews, new producers can obtain their own rates, and the orders themselves are reviewed periodically to decide whether they continue. A rate confirmed six months ago is not a rate confirmed today, and the only date that matters is the date of entry.</p></div></div><div class="pblock"><span class="k">05</span><h2 id="s5">How we run the check</h2><div class="ptext"><ul class="plist"><li>Identify the classification and read the scope text of any order touching that product and origin, rather than relying on the code alone.</li><li>Identify the specific producer, because rates are producer-specific and a company-specific rate can be zero where the country-wide rate is not.</li><li>Confirm the live rate as at the planned entry date, not as at the enquiry date.</li><li>Where the product sits near a scope boundary, recommend a scope ruling and say what the delay costs against what the exposure is.</li><li>Show any deposit as a separate line in the landed price, flagged as a deposit rather than as a duty, so nobody treats it as final.</li></ul></div></div></div>
 
 </div></section>
 <section id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>Questions on this</h2><p class="intro">The ones we are asked most often.</p></div><div style="margin-top:34px"><details><summary>Does an antidumping duty apply to the product or to the supplier?</summary><p>To both. Scope defines the product and the origin; rates are then set per producer, so the same goods from two factories in one country can carry very different rates and one of them may carry none.</p></details><details><summary>Can I avoid it by shipping through another country?</summary><p>No, and attempting it is circumvention, which carries its own penalties and reaches back to the importer. Origin for these purposes is where the goods were produced, not where they were last loaded.</p></details><details><summary>Is the duty I pay at entry final?</summary><p>Not in every system. The United States assesses retrospectively: what you pay at entry is a deposit, and the final rate is set later in a review, with the difference payable with interest. That open liability belongs in the decision before the first order.</p></details></div></div></section>
@@ -524,10 +586,12 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <p class="credits">Photography: pipe by JWPhotowerks; straddle carrier by Lars K. Jensen (CC BY).
       All other images CC0 or public domain. Full list with links in media/CREDITS.json.</p>
     <p class="fbottom">ISP GROUP LLC &middot; Global Commerce &middot; International sourcing,
-      trading and supply of materials, products and industrial equipment.</p>
+      trading and supply of materials, products and industrial equipment.
+      &nbsp;&middot;&nbsp; <a href="privacy">Privacy</a>
+      &nbsp;&middot;&nbsp; <a href="terms">Terms of use</a></p>
   </div>
 </footer>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "The trade remedy check before you order", "description": "Why a cash deposit can exceed the value of the goods, how scope is defined, and why in the United States the deposit is not the final liability.", "author": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "publisher": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "mainEntityOfPage": "https://ispgroupgc.com/antidumping-check"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "The trade remedy check before you order", "description": "Why a cash deposit can exceed the value of the goods, how scope is defined, and why in the United States the deposit is not the final liability.", "author": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "publisher": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "datePublished": "2026-10-08", "dateModified": "2026-10-08", "inLanguage": "en", "mainEntityOfPage": "https://ispgroupgc.com/antidumping-check"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does an antidumping duty apply to the product or to the supplier?", "acceptedAnswer": {"@type": "Answer", "text": "To both. Scope defines the product and the origin; rates are then set per producer, so the same goods from two factories in one country can carry very different rates and one of them may carry none."}}, {"@type": "Question", "name": "Can I avoid it by shipping through another country?", "acceptedAnswer": {"@type": "Answer", "text": "No, and attempting it is circumvention, which carries its own penalties and reaches back to the importer. Origin for these purposes is where the goods were produced, not where they were last loaded."}}, {"@type": "Question", "name": "Is the duty I pay at entry final?", "acceptedAnswer": {"@type": "Answer", "text": "Not in every system. The United States assesses retrospectively: what you pay at entry is a deposit, and the final rate is set later in a review, with the difference payable with interest. That open liability belongs in the decision before the first order."}}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ISP Group", "item": "https://ispgroupgc.com/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://ispgroupgc.com/guides"}, {"@type": "ListItem", "position": 3, "name": "Trade remedies", "item": "https://ispgroupgc.com/antidumping-check"}]}</script>
 <script>
@@ -616,6 +680,71 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   window.addEventListener('scroll',kick,{passive:true});
   window.addEventListener('resize',kick,{passive:true});
   par();
+})();
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('navsearch'), panel=document.getElementById('searchpanel');
+  if(!btn||!panel) return;
+  var input=document.getElementById('searchinput'), out=document.getElementById('searchres');
+  var idx=null, loading=false, opener=null;
+  function load(){
+    if(idx||loading) return;
+    loading=true;
+    fetch('/search.json').then(function(r){return r.json();})
+      .then(function(j){ idx=j; loading=false; run(); })
+      .catch(function(){ loading=false;
+        out.innerHTML='<li><a href="/guides"><b>Search is unavailable</b>'+
+          '<span>Browse the guides instead.</span></a></li>'; });
+  }
+  function esc(s){ return s.replace(/[&<>"]/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function hl(s,q){ if(!s) return '';
+    var i=s.toLowerCase().indexOf(q);
+    if(i<0) return esc(s.slice(0,118));
+    var a=Math.max(0,i-40), t=(a?'… ':'')+s.slice(a,i)+'\u0000'+s.slice(i,i+q.length)+'\u0001'+s.slice(i+q.length,i+q.length+70);
+    return esc(t).replace('\u0000','<mark>').replace('\u0001','</mark>'); }
+  function run(){
+    var q=(input.value||'').trim().toLowerCase();
+    if(q.length<2){ out.innerHTML=''; return; }
+    if(!idx){ load(); return; }
+    var hits=[];
+    for(var i=0;i<idx.length;i++){
+      var r=idx[i], t=r.t.toLowerCase(), d=(r.d||'').toLowerCase(), h=(r.h||'').toLowerCase();
+      var sc=0;
+      if(t.indexOf(q)>=0) sc+=10;
+      if(h.indexOf(q)>=0) sc+=4;
+      if(d.indexOf(q)>=0) sc+=3;
+      if(sc) hits.push([sc,r]);
+    }
+    hits.sort(function(a,b){return b[0]-a[0];});
+    if(!hits.length){
+      out.innerHTML='<li><a href="/contact"><b>Nothing matched &ldquo;'+esc(q)+'&rdquo;</b>'+
+        '<span>Ask us directly and we will answer.</span></a></li>'; return; }
+    out.innerHTML=hits.slice(0,8).map(function(x){
+      var r=x[1], ctx=(r.d&&r.d.toLowerCase().indexOf(q)>=0)?r.d:(r.h||r.d);
+      return '<li><a href="'+r.u+'"><b>'+hl(r.t,q)+'</b><span>'+hl(ctx,q)+'</span></a></li>';
+    }).join('');
+  }
+  function open_(){
+    opener=document.activeElement;
+    panel.hidden=false; btn.setAttribute('aria-expanded','true');
+    load(); input.focus(); input.select();
+  }
+  function close_(){
+    panel.hidden=true; btn.setAttribute('aria-expanded','false');
+    if(opener&&opener.focus) opener.focus();
+  }
+  btn.addEventListener('click',function(){ panel.hidden?open_():close_(); });
+  input.addEventListener('input',run);
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&!panel.hidden){ close_(); return; }
+    if(e.key==='/'&&panel.hidden){
+      var a=document.activeElement, tag=a?a.tagName:'';
+      if(tag==='INPUT'||tag==='TEXTAREA'||tag==='SELECT'||(a&&a.isContentEditable)) return;
+      e.preventDefault(); open_();
+    }
+  });
 })();
 </script>
 <!--/email_off-->

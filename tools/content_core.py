@@ -701,3 +701,177 @@ GUIDES = {
          "hasPart": [{"@type": "Article", "name": t, "url": HOST + h}
                      for h, t, _ in GUIDE_LINKS]}],
 }
+
+# ───────────────────────────────────────────────────── юридические страницы
+PRIVACY = {
+ "slug": "privacy",
+ "title": "Privacy | ISP Group",
+ "desc": "This site sets no cookies and stores nothing in your browser. What the pages load, "
+         "what third parties see, and what happens to an email you send us.",
+ "trail": [("ISP Group", "index.html"), ("Privacy", None)],
+ "h1": "This site sets <em>no cookies</em>",
+ "sub": "No analytics cookies, no advertising pixels, no local storage, no login, no "
+        "profile. The short version is that the site itself collects nothing about you.",
+ "chips": ["No cookies", "No local storage", "No advertising", "No sale of data"],
+ "lede": ("Verified, not claimed",
+   "The statements on this page describe what the site actually does, checked by loading it "
+   "in a browser and reading what it stores and what it requests. If you want to confirm it "
+   "yourself, open your browser's developer tools on any page here and look."),
+ "body": [
+  ("h2","What the site stores on your device"),
+  ("p","Nothing. There are no cookies of any kind, no local storage and no session storage. "
+       "Closing the tab leaves nothing behind. Because nothing is stored, there is no cookie "
+       "banner, no consent to manage and no preference to remember."),
+  ("h2","What is loaded from other companies, and what they can see"),
+  ("p","Like almost any website, these pages load a few files from other providers. Those "
+       "providers necessarily see your IP address and the usual request information, because "
+       "that is how the internet delivers a file. They are:"),
+  ("ul",["<b>Cloudflare</b>, which hosts the site and serves every page, image and document.",
+         "<b>Google Fonts</b> (fonts.googleapis.com and fonts.gstatic.com), which serves the "
+         "three typefaces used here.",
+         "<b>Cloudflare Web Analytics</b>, which counts page views without cookies and "
+         "without building a profile of you.",
+         "<b>jsDelivr</b>, on the home page only, which serves the graphics library that "
+         "draws the globe."]),
+  ("p","We do not place advertising, we do not use remarketing pixels, and we do not run "
+       "any third-party tracker beyond the cookieless page counter named above."),
+  ("h2","The enquiry form"),
+  ("p","The form on the contact page does not send anything to us or to anyone else. It "
+       "assembles the text you typed into a draft message and opens it in your own email "
+       "program. Nothing leaves your computer unless you press send there, and you keep a "
+       "copy in your own sent items."),
+  ("p","Practically, that means that if you fill in the form and change your mind, we never "
+       "saw it. There is no partial submission, no abandoned-form capture and nothing to "
+       "delete."),
+  ("h2","Email you send us"),
+  ("p","When you write to info@ispgroupgc.com the message arrives in our mailbox, which is "
+       "hosted on Google Workspace. We use what you send to answer you and to carry out the "
+       "business you are asking about: finding producers, requesting quotations, arranging "
+       "shipment and settlement."),
+  ("ul",["<b>Who else sees it.</b> Where the enquiry requires it, the relevant parts are "
+         "shared with producers, freight forwarders, customs brokers, inspection companies "
+         "and banks. Only what the task needs, and only with parties engaged on that task.",
+         "<b>What we do not do.</b> We do not sell correspondence, we do not add you to a "
+         "marketing list because you asked a commercial question, and we do not pass your "
+         "details to anyone who is not involved in your shipment.",
+         "<b>How long we keep it.</b> Correspondence relating to a transaction is kept for "
+         "as long as commercial and tax record-keeping requires. Enquiries that do not lead "
+         "to a transaction are kept while the conversation is live and then deleted on "
+         "request."]),
+  ("h2","If you are in the European Union or the United Kingdom"),
+  ("p","Where that law applies to a given exchange, you may ask us for a copy of the "
+       "correspondence we hold about you, ask us to correct it, ask us to delete it, or "
+       "object to our holding it. Write to info@ispgroupgc.com and say which of those you "
+       "want. We will answer within a month, and we will not charge for it."),
+  ("p","Where we process correspondence it is on the basis of taking steps at your request "
+       "before entering a contract, performing a contract, or our legitimate interest in "
+       "answering a business enquiry addressed to us."),
+  ("h2","If you are in California"),
+  ("p","We do not sell or share personal information as those terms are used in California "
+       "law, and we do not use it for cross-context behavioural advertising. You may ask "
+       "what we hold and ask us to delete it, at the same address, and we will not treat "
+       "you differently for asking."),
+  ("h2","Children"),
+  ("p","This is a business-to-business site about international trade. It is not directed "
+       "at children and we do not knowingly collect anything from them."),
+  ("h2","Changes, and who to write to"),
+  ("p","If this page changes we will change the date at the top of it. Questions about "
+       "anything here go to info@ispgroupgc.com, or by post to ISP GROUP LLC, 16395 Biscayne "
+       "Blvd, North Miami Beach, Florida 33160, United States."),
+  ("note","This page describes our practice in plain language. It is not legal advice, and "
+          "it has not been reviewed by counsel. If you need a formal assessment for your own "
+          "compliance, ask your lawyer."),
+ ],
+ "related": ("Also here", "The other pages people look for.",
+   [("terms.html", "Terms of use", "What the content on this site is and is not."),
+    ("contact.html", "Contact", "Send a requirement and get a landed price."),
+    ("about.html", "About ISP Group", "Who we are and how we work."),
+    ("guides.html", "Guides", "Sixteen answers to what comes up before a first order.")]),
+ "ld": [],
+}
+
+TERMS = {
+ "slug": "terms",
+ "title": "Terms of use | ISP Group",
+ "desc": "What the content on this site is: information, not an offer. Prices are indicative "
+         "until confirmed in writing, and the guides are general rather than advice.",
+ "trail": [("ISP Group", "index.html"), ("Terms of use", None)],
+ "h1": "Nothing here is <em>an offer</em>",
+ "sub": "This site describes what we do and explains how the trade works. It does not "
+        "constitute an offer, and nothing on it binds either of us until it is written into "
+        "a contract.",
+ "chips": ["Information, not an offer", "Prices indicative", "Not professional advice",
+           "Florida law"],
+ "lede": ("Who you are dealing with",
+   "This site is published by ISP GROUP LLC, a company established in the United States with "
+   "its registered office at 16395 Biscayne Blvd, North Miami Beach, Florida 33160. "
+   "Throughout this page, “we” means that company."),
+ "body": [
+  ("h2","The content is information, not an offer"),
+  ("p","Descriptions of goods, corridors, categories, capabilities, lead times and any "
+       "figures shown are there to explain what we do. They are not an offer capable of "
+       "acceptance and they do not create an obligation on either side."),
+  ("p","A commitment between us comes into existence only when it is set out in a signed "
+       "contract, or in a proforma invoice we have issued and you have accepted. Until "
+       "then, prices, availability and schedules are indicative and subject to change "
+       "without notice."),
+  ("h2","The guides are general, and your case may differ"),
+  ("p","The guides on this site deal with customs classification, trade remedies, "
+       "documentary credits, certificates of origin, packaging rules and similar subjects. "
+       "They are written carefully and from practice, and they are general explanations "
+       "rather than advice on your particular shipment."),
+  ("p","Rules change, they differ by country, and they turn on facts we do not know about "
+       "your consignment. Do not act on a guide alone where money or compliance is at stake. "
+       "Confirm the position for your own transaction with the relevant authority, your "
+       "customs broker or your lawyer, or ask us and we will do it with you."),
+  ("note","Where a guide names a specific rule, a standard or a trade measure, it reflects "
+          "our understanding at the time of writing. We update pages when we learn that "
+          "something has moved, but we do not guarantee that any page is current on the day "
+          "you read it."),
+  ("h2","Accuracy and availability"),
+  ("p","We take care to keep this site accurate and we correct errors when we find them. We "
+       "do not warrant that it is free of error, nor that it will be available without "
+       "interruption. We may change, add to or remove any part of it at any time."),
+  ("h2","Intellectual property"),
+  ("p","The text, structure, design and code of this site belong to us, except where stated "
+       "otherwise. You may read it, print it and quote from it with attribution and a link. "
+       "You may not republish it wholesale, present it as your own, or use it to train a "
+       "commercial model without asking us first."),
+  ("p","The photographs are not ours. They are used under Creative Commons or public domain "
+       "licences and each one is credited, with the photographer and a link to the original, "
+       "in the file <a href=\"media/CREDITS.json\">media/CREDITS.json</a>. If you want to "
+       "reuse a photograph, take it from the source named there rather than from this site, "
+       "and respect its licence."),
+  ("h2","Links to other sites"),
+  ("p","Where we link to an external site we do so because it was useful when we wrote the "
+       "page. We do not control those sites and we are not responsible for what they say or "
+       "do. A link is not an endorsement."),
+  ("h2","Limits on our liability"),
+  ("p","To the extent the law allows, we are not liable for loss arising from your use of "
+       "this site or from reliance on anything published here, including lost profit, lost "
+       "contracts, duty or penalties assessed against you, or any indirect or consequential "
+       "loss. Nothing in this paragraph limits liability that cannot lawfully be limited, "
+       "including liability for fraud."),
+  ("p","Our obligations in an actual transaction are governed by the contract for that "
+       "transaction, not by this page."),
+  ("h2","Governing law"),
+  ("p","These terms and any dispute about this site are governed by the law of the State of "
+       "Florida and the federal law of the United States as applicable, and the courts "
+       "sitting in Miami-Dade County, Florida have jurisdiction. The law governing a supply "
+       "contract is whatever that contract says, which is frequently not Florida law and is "
+       "negotiated case by case."),
+  ("h2","Changes and contact"),
+  ("p","We may revise this page. The version in force is the one published here. Questions "
+       "go to info@ispgroupgc.com, or ISP GROUP LLC, 16395 Biscayne Blvd, North Miami Beach, "
+       "Florida 33160, United States."),
+  ("note","This page is written in plain language to be useful rather than to be exhaustive, "
+          "and it has not been reviewed by counsel. Before relying on it as your website "
+          "terms, have a lawyer read it."),
+ ],
+ "related": ("Also here", "The other pages people look for.",
+   [("privacy.html", "Privacy", "No cookies, no storage, and what third parties see."),
+    ("contact.html", "Contact", "Send a requirement and get a landed price."),
+    ("about.html", "About ISP Group", "Who we are and how we work."),
+    ("services.html", "What we do", "Each step as a named piece of work.")]),
+ "ld": [],
+}
