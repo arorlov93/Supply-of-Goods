@@ -1,22 +1,50 @@
 {
  "terminal.jpg": {
-  "title": "20201119-TFAA-LSC-0470",
+  "title": "Container terminal. Port of Melbourne.",
+  "license": "cc0",
+  "author": null,
+  "source": "https://www.flickr.com/photos/88123769@N02/21891290959"
+ },
+ "aerial.jpg": {
+  "title": "20201119-TFAA-LSC-0124-PANO",
   "license": "pdm",
-  "page": "https://www.flickr.com/photos/41284017@N08/50699878778"
+  "author": "USDAgov",
+  "source": "https://www.flickr.com/photos/41284017@N08/50699879028"
  },
  "vessel.jpg": {
   "title": "ARUNA IPSA (Container Ship)",
   "license": "cc0",
-  "page": "https://www.flickr.com/photos/88123769@N02/15947941600"
+  "author": null,
+  "source": "https://www.flickr.com/photos/88123769@N02/15947941600"
+ },
+ "pipe.jpg": {
+  "title": "Staring down the barrel",
+  "license": "by",
+  "author": "JWPhotowerks",
+  "source": "https://www.flickr.com/photos/7839304@N03/625521282"
  },
  "machinery.jpg": {
   "title": "Metalworking equipment",
   "license": "cc0",
-  "page": "https://www.flickr.com/photos/157635012@N07/49389778403"
+  "author": null,
+  "source": "https://www.flickr.com/photos/157635012@N07/49389778403"
  },
- "materials.jpg": {
-  "title": "Metalworking equipment",
+ "crane.jpg": {
+  "title": "Container Crane Lyttleton.",
   "license": "cc0",
-  "page": "https://www.flickr.com/photos/157635012@N07/49390448102"
+  "author": "Bernard Spragg",
+  "source": "https://www.flickr.com/photos/88123769@N02/12807777564"
+ },
+ "freight.jpg": {
+  "title": "'Johnny Winter'",
+  "license": "by",
+  "author": "Sir Hectimere",
+  "source": "https://www.flickr.com/photos/16179216@N07/6674301959"
+ },
+ "vessel2.jpg": {
+  "title": "OOCL SAVANNAH.",
+  "license": "cc0",
+  "author": null,
+  "source": "https://www.flickr.com/photos/88123769@N02/32916296820"
  }
 }
