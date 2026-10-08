@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="International sourcing and trading company in Miami. We find verified producers for materials, products and industrial equipment, buy in our own name and deliver to your port.">
+<meta name="description" content="International sourcing and trading from Miami. We find verified producers for materials, products and equipment, buy in our own name and deliver to your port.">
 <link rel="canonical" href="https://ispgroupgc.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ISP Group Global Commerce">
@@ -16,8 +16,9 @@
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#eef1ef">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%230b4a40'/><text x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='400' fill='%23e8d9b4' text-anchor='middle'>IG</text></svg>">
-<title>ISP Group Global Commerce &mdash; international sourcing, trading and supply</title>
+<title>International sourcing and trading | ISP Group</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@300;400;500;600;700&family=Martian+Mono:wght@400;500&display=swap">
 <style>
 /* Single light theme by choice: the page commits to one look and never follows the OS.
@@ -256,6 +257,49 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   .navlinks a::after{display:none}
   .navin .btn{margin-left:0}
 }
+
+/* страницы коридоров */
+.chero-g{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);
+  gap:clamp(28px,5vw,64px);align-items:start;padding-block:clamp(48px,7vw,92px)}
+@media(max-width:900px){.chero-g{grid-template-columns:1fr}}
+.chero h1{font-size:clamp(2.3rem,5.2vw,4rem);max-width:16ch;letter-spacing:-.02em}
+.chero h1 em{font-style:italic;color:var(--brand)}
+.chero .sub{margin-top:22px;max-width:48ch;font-size:clamp(1rem,1.7vw,1.14rem);color:var(--ink-2)}
+.factcard{background:var(--surface);border:1px solid var(--rule);padding:26px 24px;
+  box-shadow:var(--shadow-m)}
+.facts{width:100%;border-collapse:collapse;font-size:.92rem;margin-top:4px}
+.facts th{text-align:left;font-family:var(--fm);font-weight:500;font-size:.56rem;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);
+  padding:14px 14px 14px 0;vertical-align:top;width:9.5rem}
+.facts td{padding:14px 0;color:var(--ink-2);vertical-align:top}
+.facts tr+tr th,.facts tr+tr td{border-top:1px solid var(--rule)}
+.prose{margin-top:6px}
+.pblock{display:grid;grid-template-columns:4.4rem minmax(0,.92fr) minmax(0,1.28fr);
+  gap:0 30px;padding:34px 0;border-top:1px solid var(--rule);align-items:start}
+.pblock:last-child{border-bottom:1px solid var(--rule)}
+.pblock .k{font-family:var(--fm);font-size:.6rem;color:var(--gold);letter-spacing:.12em;padding-top:10px}
+.pblock h2{font-size:clamp(1.5rem,2.3vw,1.92rem);max-width:20ch}
+.pblock .ptext p{color:var(--ink-2);font-size:1rem}
+.pblock .ptext p+p{margin-top:15px}
+@media(max-width:900px){.pblock{grid-template-columns:4.4rem minmax(0,1fr);gap:0 24px}
+  .pblock .ptext{grid-column:2;margin-top:16px}}
+@media(max-width:620px){.pblock{grid-template-columns:1fr}
+  .pblock .ptext{grid-column:1}}
+.lanelinks{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:34px}
+.lanelink{display:block;text-decoration:none;background:var(--surface);border:1px solid var(--rule);
+  padding:20px 20px 18px;box-shadow:var(--shadow-s);
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.lanelink:hover{transform:translateY(-4px);box-shadow:var(--shadow-l);border-color:var(--brand)}
+.lanelink b{display:block;font-family:var(--fs);font-weight:400;font-size:1.22rem;margin-bottom:6px}
+.lanelink span{font-size:.9rem;color:var(--ink-2)}
+.lanes td a{color:var(--ink);text-decoration:none;border-bottom:1.5px solid var(--gold-soft);
+  transition:border-color .2s}
+.lanes td a:hover{border-color:var(--gold)}
+
+/* параллакс: картинка живёт в обёртке выше кадра, чтобы было куда ехать */
+.pz{position:absolute;inset:-8% 0;display:block;will-change:transform}
+.pz img{width:100%;height:100%;object-fit:cover}
+@media (prefers-reduced-motion:reduce){.pz{inset:0}}
 </style>
 </head>
 <body>
@@ -330,8 +374,8 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 </section>
 
 <section class="band">
-  <div class="shot"><img src="media/terminal.jpg" width="1023" height="438" loading="lazy"
-    alt="Ship-to-shore gantry cranes working a container vessel"></div>
+  <div class="shot"><span class="pz"><img src="media/terminal.jpg" width="1023" height="438" loading="lazy"
+    alt="Ship-to-shore gantry cranes working a container vessel"></span></div>
   <div class="wrap">
     <span class="eyebrow">Scale</span>
     <h2>One counterparty from the plant gate to your port</h2>
@@ -357,8 +401,8 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
         </div>
       </div>
       <figure>
-        <div class="shot"><img src="media/aerial.jpg" width="794" height="340" loading="lazy"
-          alt="Aerial view of a working port"></div>
+        <div class="shot"><span class="pz"><img src="media/aerial.jpg" width="794" height="340" loading="lazy"
+          alt="Aerial view of a working port"></span></div>
         <figcaption>Twenty years across four continents</figcaption>
       </figure>
     </div>
@@ -375,12 +419,12 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
       documented lane. A product outside them is a sourcing project, not a refusal.</p>
     </div>
     <div class="figrow">
-      <figure><div class="shot"><img src="media/pipe.jpg" width="922" height="691" loading="lazy"
-        alt="Stacked steel pipe seen end on"></div><figcaption>Metals and pipe</figcaption></figure>
-      <figure><div class="shot"><img src="media/machinery.jpg" width="910" height="683" loading="lazy"
-        alt="Industrial drive assembly and chain gearing"></div><figcaption>Equipment and machinery</figcaption></figure>
-      <figure><div class="shot"><img src="media/crane.jpg" width="834" height="625" loading="lazy"
-        alt="Quayside crane against an open sky"></div><figcaption>Port and project cargo</figcaption></figure>
+      <figure><div class="shot"><span class="pz"><img src="media/pipe.jpg" width="922" height="691" loading="lazy"
+        alt="Stacked steel pipe seen end on"></span></div><figcaption>Metals and pipe</figcaption></figure>
+      <figure><div class="shot"><span class="pz"><img src="media/machinery.jpg" width="910" height="683" loading="lazy"
+        alt="Industrial drive assembly and chain gearing"></span></div><figcaption>Equipment and machinery</figcaption></figure>
+      <figure><div class="shot"><span class="pz"><img src="media/crane.jpg" width="834" height="625" loading="lazy"
+        alt="Quayside crane against an open sky"></span></div><figcaption>Port and project cargo</figcaption></figure>
     </div>
     <div class="cats">
       <div class="cat"><h3>Building and finishing materials</h3>
@@ -425,22 +469,22 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
         <thead><tr><th scope="col">Corridor</th><th scope="col">Typical cargo</th>
           <th scope="col">Terms</th><th scope="col">Gateways</th></tr></thead>
         <tbody>
-          <tr><td>China &rarr; worldwide</td><td>Equipment, tools, hardware, building materials</td>
+          <tr><td><a href="china.html">China &rarr; worldwide</a></td><td>Equipment, tools, hardware, building materials</td>
             <td>FOB, CIF</td><td>Ningbo, Qingdao, Shenzhen</td></tr>
-          <tr><td>T&uuml;rkiye &rarr; United States</td><td>Stone and tile, building materials</td>
+          <tr><td><a href="turkiye.html">T&uuml;rkiye &rarr; United States</a></td><td>Stone and tile, building materials</td>
             <td>FOB, CIF</td><td>Izmir, Istanbul &rarr; New York, Savannah, Houston</td></tr>
-          <tr><td>Americas &amp; EU &rarr; West Africa</td><td>Food and agricultural goods, consumables</td>
+          <tr><td><a href="west-africa.html">Americas &amp; EU &rarr; West Africa</a></td><td>Food and agricultural goods, consumables</td>
             <td>CIF, CFR</td><td>Santos, Gda&#324;sk, Houston &rarr; Lom&eacute;, Cotonou</td></tr>
-          <tr><td>Intra-Africa</td><td>Paper and packaging, industrial supply</td>
+          <tr><td><a href="southern-africa.html">Intra-Africa</a></td><td>Paper and packaging, industrial supply</td>
             <td>DAP</td><td>Durban &rarr; Gaborone and SADC</td></tr>
         </tbody>
       </table>
     </div>
     <div class="figrow">
-      <figure><div class="shot"><img src="media/straddle.jpg" width="1024" height="768" loading="lazy"
-        alt="Straddle carrier moving a container across a terminal apron"></div><figcaption>Terminal handling</figcaption></figure>
-      <figure><div class="shot"><img src="media/vessel2.jpg" width="774" height="581" loading="lazy"
-        alt="Container vessel alongside with boxes loaded"></div><figcaption>Ocean leg</figcaption></figure>
+      <figure><div class="shot"><span class="pz"><img src="media/straddle.jpg" width="1024" height="768" loading="lazy"
+        alt="Straddle carrier moving a container across a terminal apron"></span></div><figcaption>Terminal handling</figcaption></figure>
+      <figure><div class="shot"><span class="pz"><img src="media/vessel2.jpg" width="774" height="581" loading="lazy"
+        alt="Container vessel alongside with boxes loaded"></span></div><figcaption>Ocean leg</figcaption></figure>
     </div>
   </div>
 </section>
@@ -471,8 +515,8 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
         forwarder.</p></div><span class="out">Full document set and inspection report</span></div>
     </div>
     <figure class="mediafig" style="margin-top:40px">
-      <div class="shot"><img src="media/vessel.jpg" width="1023" height="575" loading="lazy"
-        alt="Container vessel under way"></div>
+      <div class="shot"><span class="pz"><img src="media/vessel.jpg" width="1023" height="575" loading="lazy"
+        alt="Container vessel under way"></span></div>
       <figcaption>Cargo moves under our contract from the plant gate to the discharge port</figcaption>
     </figure>
   </div>
@@ -533,6 +577,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
       <div><dt>Entity</dt><dd>ISP GROUP LLC<br><span style="color:var(--ink-2)">United States</span></dd></div>
       <div><dt>Email</dt><dd>info@ispgroupgc.com</dd></div>
       <div><dt>Registered office</dt><dd>16395 Biscayne Blvd<br><span style="color:var(--ink-2)">North Miami Beach, FL 33160<br>United States</span></dd></div>
+      <div><dt>Corridors</dt><dd style="line-height:1.95"><a href="china.html" style="display:block">China &rarr; worldwide</a><a href="turkiye.html" style="display:block">T&uuml;rkiye &rarr; United States</a><a href="west-africa.html" style="display:block">Americas &amp; EU &rarr; West Africa</a><a href="southern-africa.html" style="display:block">Intra-Africa</a></dd></div>
       <div><dt>Reading</dt><dd><a href="experience.html">Twenty years of supply work</a></dd></div>
     </dl>
     <p class="credits">Photography: pipe by JWPhotowerks; straddle carrier by Lars K. Jensen (CC BY).
@@ -552,8 +597,9 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 "areaServed":[{"@type":"Place","name":"United States"},{"@type":"Place","name":"China"},{"@type":"Place","name":"Russia"},{"@type":"Place","name":"European Union"},{"@type":"Place","name":"West Africa"},{"@type":"Place","name":"Türkiye"}]}
 </script>
 
-<script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+<script defer crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
 <script>
+document.addEventListener('DOMContentLoaded',function(){
 (function(){
   /* Глобус на three.js. Точки суши взяты из контуров Natural Earth 110m:
      равномерная по площади решётка Фибоначчи, проверка «точка внутри полигона»,
@@ -752,6 +798,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   window.addEventListener('resize', layout, {passive:true});
   layout(); requestAnimationFrame(tick);
 })();
+});
 </script>
 <script>
 (function(){
@@ -787,6 +834,64 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   nm.addEventListener('click',function(e){
     if(e.target.tagName==='A'){ nm.classList.remove('open'); nt.setAttribute('aria-expanded','false'); }
   });
+})();
+</script>
+<script>
+(function(){
+  /* Глубина при скролле. Всё делается инлайновыми стилями: без JS страница
+     остаётся полностью видимой, и поисковик видит обычный документ. */
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var EASE='cubic-bezier(.16,.74,.22,1)';
+  var SEL='.cap,.cat,.step,figure,.lede>*,.band .wrap>*,details,.scroller,.factcard,'+
+          '.pblock,.lanelink,.teaser>*,.ask,.steps,.fgrid>div';
+  var items=[].slice.call(document.querySelectorAll(SEL)).filter(function(e){
+    return !e.closest('.pz');
+  });
+  items.forEach(function(el){
+    var p=el.parentNode;
+    if(p.__g===undefined) p.__g=0;
+    el.__d=Math.min(p.__g++,5)*70;
+    el.style.willChange='transform,opacity';
+    el.style.opacity='0';
+    el.style.transform='perspective(1300px) rotateX(7deg) translate3d(0,36px,-70px)';
+  });
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting) return;
+      var el=e.target; io.unobserve(el);
+      el.style.transition='opacity .75s '+EASE+' '+el.__d+'ms, transform .95s '+EASE+' '+el.__d+'ms';
+      el.style.opacity=''; el.style.transform='';
+      setTimeout(function(){ el.style.transition=''; el.style.willChange=''; }, el.__d+1200);
+    });
+  },{rootMargin:'0px 0px -9% 0px', threshold:0.05});
+  items.forEach(function(el){ io.observe(el); });
+
+  /* параллакс фотографий */
+  var live=[];
+  var pio=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      var i=live.indexOf(e.target);
+      if(e.isIntersecting){ if(i<0) live.push(e.target); }
+      else if(i>=0) live.splice(i,1);
+    });
+  },{rootMargin:'30% 0px 30% 0px'});
+  [].forEach.call(document.querySelectorAll('.pz'), function(e){ pio.observe(e); });
+  var queued=false;
+  function par(){
+    queued=false;
+    var h=window.innerHeight||1;
+    for(var i=0;i<live.length;i++){
+      var e=live[i], r=e.getBoundingClientRect();
+      var p=((r.top+r.height/2)-h/2)/h;
+      if(p>1.3)p=1.3; if(p<-1.3)p=-1.3;
+      e.style.transform='translate3d(0,'+(p*-5.6).toFixed(2)+'%,0)';
+    }
+  }
+  function kick(){ if(!queued){ queued=true; requestAnimationFrame(par); } }
+  window.addEventListener('scroll',kick,{passive:true});
+  window.addEventListener('resize',kick,{passive:true});
+  par();
 })();
 </script>
 </body>

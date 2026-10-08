@@ -1,7 +1,9 @@
 dots = open("am/dots.txt").read()
 
-globe = r'''<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+globe = r'''<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<script defer crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
 <script>
+document.addEventListener('DOMContentLoaded',function(){
 (function(){
   /* Глобус на three.js. Точки суши взяты из контуров Natural Earth 110m:
      равномерная по площади решётка Фибоначчи, проверка «точка внутри полигона»,
@@ -199,6 +201,7 @@ globe = r'''<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.
   window.addEventListener('resize', layout, {passive:true});
   layout(); requestAnimationFrame(tick);
 })();
+});
 </script>'''
 open("globe.html","w").write(globe)
 print("globe.html", len(globe), "байт")
