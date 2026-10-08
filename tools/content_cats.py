@@ -3,7 +3,11 @@
 from content_core import HOST, ORG, CORRIDOR_LINKS, CATEGORY_LINKS
 
 def rel(slug, extra=None):
-    items = [x for x in CATEGORY_LINKS if x[0] != slug][:3]
+    """Три следующие категории по кругу, а не первые три из списка:
+    иначе последние в списке никогда не получают входящих ссылок."""
+    order = [x[0] for x in CATEGORY_LINKS]
+    i = order.index(slug + ".html") if slug + ".html" in order else 0
+    items = [CATEGORY_LINKS[(i + k) % len(CATEGORY_LINKS)] for k in range(1, 4)]
     items.append(extra or ("contact.html", "Send a requirement",
                            "Product, quantity and destination port is enough to start."))
     return ("Other categories", "The same method, applied to different goods.", items)
@@ -485,24 +489,19 @@ CATS = [
        "veterinary health certificate issued for a specific producing establishment, in a "
        "form the destination accepts. An establishment approved for one country is not "
        "automatically approved for its neighbour, and the requirements change."),
-  ("p","For United States origin, export certification runs through the Food Safety and "
-       "Inspection Service and the requirements for a given destination are published in its "
-       "export library; some destinations are handled electronically and some still need a "
-       "paper certificate, which changes the lead time at loading. For European Union origin "
-       "the equivalent is the competent authority of the member state. The first question to "
-       "any seller is the establishment number and written confirmation that it is cleared "
-       "for the destination. The detail is on the "
-       "<a href=\"veterinary-certificate.html\">veterinary certificate guide</a>."),
-  ("h2","A cut is three or four products, not one"),
-  ("p","The commonest reason two offers cannot be compared is that they are not for the same "
-       "thing. A whole wing with three joints, a two joint wing, a drumette and a mid joint "
-       "flat are four different products with four different prices and four different "
-       "buyers. Turkey is sold as tom or hen and the lines are not interchangeable for a "
-       "processor. Tails, backs and paws each have their own market and their own "
-       "seasonality."),
-  ("p","Every enquiry we send names the anatomy explicitly, names the pack, and asks for the "
-       "price per line on the same Incoterm. An offer that quotes “wings” is not an offer. "
-       "There is a full breakdown in <a href=\"poultry-cuts.html\">the cuts guide</a>."),
+  ("p","The first question to any seller is the establishment number and written "
+       "confirmation that it is cleared for the destination, before price is discussed. "
+       "How certification works for United States and European Union origin, which form "
+       "is issued and who signs it, is in the "
+       "<a href=\"veterinary-certificate.html\">veterinary certificate guide</a>, and the "
+       "lane itself on the <a href=\"west-africa.html\">West Africa corridor page</a>."),
+  ("h2","Specify the cut by anatomy, not by category"),
+  ("p","Every enquiry we send names the anatomy explicitly, names the pack and asks for "
+       "the price per line on the same Incoterm, because a category name covers several "
+       "products at several prices. The same discipline applies to grading on staples "
+       "and to piece weight on anything portioned."),
+  ("p","The full nomenclature, and why two offers using the same word are not "
+       "comparable, is in <a href=\"poultry-cuts.html\">the cuts guide</a>."),
   ("h2","Pack and cold chain are part of the specification"),
   ("p","Many destination markets buy block frozen product in 10 kg cartons, which is not the "
        "standard pack in the United States or in the European Union. Repacking is possible "

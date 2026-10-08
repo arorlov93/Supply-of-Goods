@@ -11,7 +11,8 @@ SITE = "site"
 HOST = "https://ispgroupgc.com/"
 
 # ─── навигация: одно определение на весь сайт ──────────────────────────────
-NAV = [("What we supply", "supply.html"),
+NAV = [("What we do",      "services.html"),
+       ("What we supply", "supply.html"),
        ("Corridors",      "corridors.html"),
        ("Guides",         "guides.html"),
        ("About",          "about.html"),

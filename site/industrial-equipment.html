@@ -18,7 +18,7 @@
 <title>Industrial equipment and machinery | sourcing and supply</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@300;400;500;600;700&family=Martian+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;1,400&family=Schibsted+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 /* Single light theme by choice: the page commits to one look and never follows the OS.
    Pine green and warm gold on a cool bone ground; Instrument Serif over Hanken Grotesk,
@@ -34,9 +34,9 @@
   --shadow-s:0 1px 2px rgba(14,42,38,.06);
   --shadow-m:0 1px 2px rgba(14,42,38,.05), 0 10px 28px -18px rgba(14,42,38,.35);
   --shadow-l:0 2px 6px rgba(14,42,38,.07), 0 24px 48px -28px rgba(11,74,64,.55);
-  --fs:"Instrument Serif",Georgia,"Times New Roman",serif;
-  --fd:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
-  --fm:"Martian Mono",ui-monospace,Menlo,monospace;
+  --fs:"Newsreader",Georgia,"Times New Roman",serif;
+  --fd:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;
+  --fm:"IBM Plex Mono",ui-monospace,Menlo,monospace;
   --maxw:74rem;
   color-scheme:light;
 }
@@ -48,8 +48,11 @@ body{margin:0;color:var(--ink);font-family:var(--fd);font-size:16.5px;line-heigh
     radial-gradient(760px 460px at -8% 104%, rgba(184,134,43,.10), transparent 58%),
     var(--paper);
   background-attachment:fixed}
-h1,h2,h3{margin:0;font-family:var(--fs);font-weight:400;line-height:1.06;
-  letter-spacing:-.012em;text-wrap:balance}
+h1,h2,h3{margin:0;font-family:var(--fs);font-weight:400;line-height:1.1;
+  letter-spacing:-.008em;text-wrap:balance;font-optical-sizing:auto}
+/* IBM Plex Mono уже уже Martian Mono, поэтому межбуквенное чуть шире */
+.eyebrow,.chip,.crumbs,figcaption,.lanes th,.facts th,.num span,.step .k,.pblock .k,
+.cap .n,.cat ul,.fgrid dt,.step .out{font-feature-settings:"tnum" 1}
 p{margin:0}
 a{color:inherit}
 .wrap{max-width:var(--maxw);margin:0 auto;padding-inline:22px}
@@ -96,7 +99,7 @@ nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;
 
 /* sections */
 section{padding-block:clamp(56px,7vw,94px);border-bottom:1px solid var(--rule)}
-section h2{font-size:clamp(1.95rem,4vw,3rem);max-width:19ch}
+section h2{font-size:clamp(1.85rem,3.7vw,2.8rem);max-width:20ch;line-height:1.1}
 .intro{margin-top:18px;max-width:60ch;color:var(--ink-2);font-size:1.05rem}
 
 /* photography */
@@ -133,7 +136,7 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
   width:min(720px,56%);aspect-ratio:1/1;height:auto;display:block}
 @media(max-width:940px){#globe{top:-7%;right:-26%;transform:none;width:62%;opacity:.45}}
 .hero .wrap{position:relative;z-index:2;padding-block:clamp(56px,8.5vw,108px)}
-.hero h1{font-size:clamp(2.7rem,7vw,5.4rem);max-width:15ch;letter-spacing:-.02em}
+.hero h1{font-size:clamp(2.55rem,6.4vw,4.9rem);max-width:16ch;letter-spacing:-.018em;line-height:1.05}
 .hero h1 em{font-style:italic;color:var(--brand)}
 .hero .sub{margin-top:24px;max-width:44ch;font-size:clamp(1.04rem,2vw,1.2rem);color:var(--ink-2)}
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
@@ -439,6 +442,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <button class="navtoggle" id="navtoggle" type="button"
       aria-expanded="false" aria-controls="navmenu" aria-label="Menu"><span></span></button>
     <div class="navlinks" id="navmenu">
+      <a href="services">What we do</a>
       <a href="supply">What we supply</a>
       <a href="corridors">Corridors</a>
       <a href="guides">Guides</a>
@@ -463,13 +467,13 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 </header>
 
 <main>
-<section><div class="wrap"><figure class="mediafig" style="margin-bottom:44px"><div class="shot"><span class="pz"><img src="media/machinery.jpg" width="910" height="683" loading="lazy" alt="Industrial drive assembly and chain gearing"></span></div><figcaption>A machine is bought on its drive, its controller and its spares, not on its price</figcaption></figure>
+<section><div class="wrap"><figure class="mediafig" style="margin-bottom:44px"><div class="shot"><span class="pz"><img src="media/machinery.webp" width="910" height="683" loading="lazy" alt="Industrial drive assembly and chain gearing"></span></div><figcaption>A machine is bought on its drive, its controller and its spares, not on its price</figcaption></figure>
 <div class="lede"><h2>A machine is the one purchase where the cheapest offer is usually the most expensive</h2><p class="intro">Equipment is bought once and run for ten years. The price difference between two offers is almost always smaller than the cost of a single week of unplanned downtime in year three, and the thing that decides which you get is the specification, not the invoice.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>What has to be in the specification</h2><div class="ptext"><p>A purchase order that says “machine, 50 kW, 380 V” leaves the motor brand, the controller, the duty cycle, the finish, the spares pack and the manual language entirely to the seller, and the seller resolves every one of them in the direction of cost. These are the lines we insist on before asking for a price.</p><ul class="plist"><li><b>Drive and controller by make and model.</b> Two machines with identical output figures and different controllers are different machines when a board fails.</li><li><b>Electrical supply.</b> Voltage and frequency at the destination, and whether that means 380 to 400 V at 50 Hz or 480 V at 60 Hz. Conversion after the fact costs more than specifying it.</li><li><b>Certification mark the destination requires.</b> CE for the European Union, EAC for the Eurasian customs union, UL or CSA where the insurer or the inspector asks for it.</li><li><b>Ingress protection and ambient.</b> An IP rating and the design ambient temperature. Equipment specified for a temperate workshop fails in a West African one.</li><li><b>Duty cycle.</b> Continuous, intermittent or short-time. The single most commonly omitted line, and the one that decides service life.</li><li><b>Spares pack and consumables</b> for the first period of operation, priced separately so it can be compared.</li><li><b>Documentation language</b> and whether the electrical schematic is included.</li></ul></div></div><div class="pblock"><span class="k">02</span><h2>New or factory refurbished</h2><div class="ptext"><p>Refurbished equipment is a real market and it is not a lesser one, but it has to be bought differently. What matters is who refurbished it, what was replaced, what was only cleaned, whether the control system was updated or merely made to work, and whether there is a warranty attached to the refurbishment rather than to the original manufacture.</p><p>We ask for the refurbishment report line by line and for a witnessed run before payment. On a machine with a known service history, that combination is often better value than a new machine from an unfamiliar producer.</p></div></div><div class="pblock"><span class="k">03</span><h2>Inspection means a witnessed run</h2><div class="ptext"><p>For a commodity, inspection is a sampling plan. For a machine it is a factory acceptance test: the equipment is run under load, against the specification, with someone present who is not the seller, and the result is recorded with photographs and readings.</p><p>That is also the moment to confirm the spares pack is physically in the crate and that the schematic is in the document folder, because both are routinely promised and occasionally shipped.</p></div></div><div class="pblock"><span class="k">04</span><h2>Commissioning and what happens after</h2><div class="ptext"><p>Machinery arrives in pieces and the gap between delivery and production is where most of the disappointment lives. Before the order we settle who assembles it, who commissions it, whether the producer sends an engineer or supplies instructions, who pays for the visa and the flights, and what the response time is on a warranty call.</p><p class="pnote">Deliverable on this category: a specification the producer has signed, a witnessed run report, a spares list priced separately, and a written commissioning arrangement with named responsibilities.</p></div></div><div class="pblock"><span class="k">05</span><h2>Packing and the inland leg</h2><div class="ptext"><p>Heavy equipment is out-of-gauge more often than buyers expect, and an item that does not fit a standard container changes the freight cost by a multiple rather than a percentage. Dimensions and weights are confirmed from the drawing before we quote, not from the brochure. Wood packaging is heat treated and marked under ISPM 15, checked at loading rather than at arrival.</p></div></div></div>
 
 </div></section>
 <section id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>What buyers ask about this category</h2><p class="intro">The three that come up before a first order.</p></div><div style="margin-top:34px"><details><summary>Can you arrange commissioning at our site?</summary><p>We arrange it with the producer and write it into the contract: who travels, who pays for the travel, how long they stay and what the warranty response time is. That is settled before the order, because afterwards it is a negotiation with no leverage.</p></details><details><summary>What voltage will the machine be built for?</summary><p>Whatever you specify, if it is specified before the order. Say the voltage and the frequency at the destination. Converting after delivery costs more than the difference ever did.</p></details><details><summary>Is refurbished equipment worth the risk?</summary><p>It can be clearly better value, but only against a refurbishment report that says what was replaced rather than what was serviced, a warranty attached to the refurbishment, and a witnessed run before payment.</p></details></div></div></section>
-<section><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Other categories</h2><p class="intro">The same method, applied to different goods.</p></div><div class="lanelinks"><a class="lanelink" href="building-materials"><b>Building and finishing materials</b><span>Stone, tile, cement products, insulation, dry mixes, sanitary ware, cable.</span></a><a class="lanelink" href="industrial-equipment"><b>Industrial equipment and machinery</b><span>Production lines, compressors, pumps, generators, material handling.</span></a><a class="lanelink" href="tools-hardware"><b>Tools, hardware and fasteners</b><span>Power and hand tools, abrasives, measuring instruments, fixings.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
+<section><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Other categories</h2><p class="intro">The same method, applied to different goods.</p></div><div class="lanelinks"><a class="lanelink" href="tools-hardware"><b>Tools, hardware and fasteners</b><span>Power and hand tools, abrasives, measuring instruments, fixings.</span></a><a class="lanelink" href="metals-pipe"><b>Metals and pipe</b><span>Sections, sheet and plate, seamless and welded pipe, fittings and flanges.</span></a><a class="lanelink" href="paper-packaging"><b>Paper, packaging and consumables</b><span>Newsprint, kraft and containerboard in reels, corrugated, PPE and workwear.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
 <section class="cta">
   <div class="wrap">
     <span class="eyebrow">Get started</span>
@@ -537,16 +541,33 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     el.style.opacity='0';
     el.style.transform='perspective(1300px) rotateX(7deg) translate3d(0,36px,-70px)';
   });
+  function show(el){
+    el.style.transition='opacity .75s '+EASE+' '+el.__d+'ms, transform .95s '+EASE+' '+el.__d+'ms';
+    el.style.opacity=''; el.style.transform='';
+    setTimeout(function(){ el.style.transition=''; el.style.willChange=''; }, el.__d+1200);
+  }
   var io=new IntersectionObserver(function(es){
     es.forEach(function(e){
       if(!e.isIntersecting) return;
-      var el=e.target; io.unobserve(el);
-      el.style.transition='opacity .75s '+EASE+' '+el.__d+'ms, transform .95s '+EASE+' '+el.__d+'ms';
-      el.style.opacity=''; el.style.transform='';
-      setTimeout(function(){ el.style.transition=''; el.style.willChange=''; }, el.__d+1200);
+      var el=e.target; io.unobserve(el); show(el);
     });
   },{rootMargin:'0px 0px -9% 0px', threshold:0.05});
   items.forEach(function(el){ io.observe(el); });
+
+  /* Подстраховка. Наблюдатель изредка не срабатывает, и тогда блок остаётся
+     невидимым навсегда. Раз в полторы секунды показываем всё, что уже в кадре,
+     и прекращаем, когда скрытого не осталось. */
+  var sweeps=0;
+  var timer=setInterval(function(){
+    var left=0, h=window.innerHeight||0;
+    for(var i=0;i<items.length;i++){
+      var el=items[i];
+      if(el.style.opacity!=='0') continue;
+      left++;
+      if(el.getBoundingClientRect().top < h+140){ io.unobserve(el); show(el); }
+    }
+    if(!left || ++sweeps>40) clearInterval(timer);
+  },1500);
 
   /* параллакс фотографий */
   var live=[];

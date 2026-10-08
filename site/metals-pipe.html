@@ -18,7 +18,7 @@
 <title>Metals and pipe | sections, plate, seamless and welded</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@300;400;500;600;700&family=Martian+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;1,400&family=Schibsted+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 /* Single light theme by choice: the page commits to one look and never follows the OS.
    Pine green and warm gold on a cool bone ground; Instrument Serif over Hanken Grotesk,
@@ -34,9 +34,9 @@
   --shadow-s:0 1px 2px rgba(14,42,38,.06);
   --shadow-m:0 1px 2px rgba(14,42,38,.05), 0 10px 28px -18px rgba(14,42,38,.35);
   --shadow-l:0 2px 6px rgba(14,42,38,.07), 0 24px 48px -28px rgba(11,74,64,.55);
-  --fs:"Instrument Serif",Georgia,"Times New Roman",serif;
-  --fd:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
-  --fm:"Martian Mono",ui-monospace,Menlo,monospace;
+  --fs:"Newsreader",Georgia,"Times New Roman",serif;
+  --fd:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;
+  --fm:"IBM Plex Mono",ui-monospace,Menlo,monospace;
   --maxw:74rem;
   color-scheme:light;
 }
@@ -48,8 +48,11 @@ body{margin:0;color:var(--ink);font-family:var(--fd);font-size:16.5px;line-heigh
     radial-gradient(760px 460px at -8% 104%, rgba(184,134,43,.10), transparent 58%),
     var(--paper);
   background-attachment:fixed}
-h1,h2,h3{margin:0;font-family:var(--fs);font-weight:400;line-height:1.06;
-  letter-spacing:-.012em;text-wrap:balance}
+h1,h2,h3{margin:0;font-family:var(--fs);font-weight:400;line-height:1.1;
+  letter-spacing:-.008em;text-wrap:balance;font-optical-sizing:auto}
+/* IBM Plex Mono уже уже Martian Mono, поэтому межбуквенное чуть шире */
+.eyebrow,.chip,.crumbs,figcaption,.lanes th,.facts th,.num span,.step .k,.pblock .k,
+.cap .n,.cat ul,.fgrid dt,.step .out{font-feature-settings:"tnum" 1}
 p{margin:0}
 a{color:inherit}
 .wrap{max-width:var(--maxw);margin:0 auto;padding-inline:22px}
@@ -96,7 +99,7 @@ nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;
 
 /* sections */
 section{padding-block:clamp(56px,7vw,94px);border-bottom:1px solid var(--rule)}
-section h2{font-size:clamp(1.95rem,4vw,3rem);max-width:19ch}
+section h2{font-size:clamp(1.85rem,3.7vw,2.8rem);max-width:20ch;line-height:1.1}
 .intro{margin-top:18px;max-width:60ch;color:var(--ink-2);font-size:1.05rem}
 
 /* photography */
@@ -133,7 +136,7 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
   width:min(720px,56%);aspect-ratio:1/1;height:auto;display:block}
 @media(max-width:940px){#globe{top:-7%;right:-26%;transform:none;width:62%;opacity:.45}}
 .hero .wrap{position:relative;z-index:2;padding-block:clamp(56px,8.5vw,108px)}
-.hero h1{font-size:clamp(2.7rem,7vw,5.4rem);max-width:15ch;letter-spacing:-.02em}
+.hero h1{font-size:clamp(2.55rem,6.4vw,4.9rem);max-width:16ch;letter-spacing:-.018em;line-height:1.05}
 .hero h1 em{font-style:italic;color:var(--brand)}
 .hero .sub{margin-top:24px;max-width:44ch;font-size:clamp(1.04rem,2vw,1.2rem);color:var(--ink-2)}
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
@@ -439,6 +442,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <button class="navtoggle" id="navtoggle" type="button"
       aria-expanded="false" aria-controls="navmenu" aria-label="Menu"><span></span></button>
     <div class="navlinks" id="navmenu">
+      <a href="services">What we do</a>
       <a href="supply">What we supply</a>
       <a href="corridors">Corridors</a>
       <a href="guides">Guides</a>
@@ -463,13 +467,13 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 </header>
 
 <main>
-<section><div class="wrap"><figure class="mediafig" style="margin-bottom:44px"><div class="shot"><span class="pz"><img src="media/pipe.jpg" width="922" height="691" loading="lazy" alt="Stacked steel pipe seen end on"></span></div><figcaption>Pipe is bought on the certificate as much as on the dimension</figcaption></figure>
+<section><div class="wrap"><figure class="mediafig" style="margin-bottom:44px"><div class="shot"><span class="pz"><img src="media/pipe.webp" width="922" height="691" loading="lazy" alt="Stacked steel pipe seen end on"></span></div><figcaption>Pipe is bought on the certificate as much as on the dimension</figcaption></figure>
 <div class="lede"><h2>In metals the document is half the product</h2><p class="intro">Two lengths of pipe can be dimensionally identical and commercially worth very different money, because one has a mill test certificate traceable to the heat it was rolled from and the other has a piece of paper. On anything that will be welded, pressurised or inspected, the certificate is the product.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>What we buy</h2><div class="ptext"><ul class="plist"><li><b>Structural sections</b>: beams, channels, angles and hollow sections to EN 10025 grades or the ASTM equivalents, in the profile series the design actually calls for.</li><li><b>Sheet and plate</b>, hot and cold rolled, by grade, thickness tolerance and surface condition.</li><li><b>Seamless and welded pipe</b>, by outside diameter and wall thickness or by schedule, to the pressure standard the application requires.</li><li><b>Fittings and flanges</b> to ANSI or ASME B16.5, EN 1092-1 or the GOST series, matched to the pipe standard rather than assumed to fit.</li><li><b>Fasteners and structural bolting</b> by property class and coating.</li></ul></div></div><div class="pblock"><span class="k">02</span><h2>The certificate, and why 3.1 is the line</h2><div class="ptext"><p>EN 10204 defines the inspection documents. A type 2.2 test report is the producer's own statement of general conformity. A type 3.1 certificate is issued by the producer's own inspection function, independent of the manufacturing department, and states the actual test results for the material supplied, traceable to the heat number. A type 3.2 adds a third party.</p><p>On anything structural or pressure-bearing, 3.1 is normally the minimum that an engineer, an insurer or a customs authority will accept. Asking for “a certificate” and receiving a 2.2 is the commonest quiet downgrade in this trade, and it is invisible until the material is already on site.</p><p class="pnote">We state the required document type in the order, we check the heat numbers on the certificate against the markings on the material at loading, and we photograph both.</p></div></div><div class="pblock"><span class="k">03</span><h2>Three standards families that do not map one to one</h2><div class="ptext"><p>EN, ASTM and GOST are not translations of each other. Grades that are commonly treated as equivalent differ in chemistry, in impact testing temperature and in permitted tolerance. A material sold as “analogue of” a grade is not that grade, and if the destination's inspector works to one family, that is the family the certificate has to be issued under.</p><p>Where a project genuinely needs cross-standard supply, the right move is to name the standard in the purchase order and have the mill certify to it, which most mills of reasonable size can do if it is agreed before rolling rather than after.</p></div></div><div class="pblock"><span class="k">04</span><h2>Tolerance, length and what arrives bent</h2><div class="ptext"><p>Thickness tolerance, straightness, ovality on pipe and end condition are all negotiable and all routinely unstated. Mill lengths differ by producer, and a specification that asks for exact lengths carries a cutting cost and a yield loss that has to be priced rather than discovered.</p><p>Pipe and sections are loaded in bundles and damaged on the ends. Bundles are strapped, end caps are specified where the application needs clean ends, and dunnage is written into the order because a container of steel that has shifted in transit is both a claim and a discharge problem.</p></div></div><div class="pblock"><span class="k">05</span><h2>Weight, not pieces</h2><div class="ptext"><p>Metals are invoiced by weight and a container fills on weight long before it fills on volume. A 20ft container is usually the right box for dense cargo even when it looks half empty, and the theoretical weight against actual weighbridge weight is a line that has to be agreed in the contract, because the two are never identical.</p></div></div></div>
 
 </div></section>
 <section id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>What buyers ask about this category</h2><p class="intro">The three that come up before a first order.</p></div><div style="margin-top:34px"><details><summary>What is the difference between a 2.2 and a 3.1 certificate?</summary><p>A 2.2 is the producer's general statement of conformity. A 3.1 states the actual test results for the material supplied, is issued by an inspection function independent of manufacturing, and is traceable to the heat number. On structural and pressure work, 3.1 is normally the minimum anyone will accept.</p></details><details><summary>Can you supply GOST material against an EN design?</summary><p>We can have a mill certify to the standard named in the purchase order, if it is agreed before rolling. What we will not do is supply an “analogue” grade and let the buyer discover at inspection that the chemistry and the impact testing are different.</p></details><details><summary>Is a 20ft or a 40ft container better for steel?</summary><p>Usually 20ft. Dense cargo reaches the weight limit long before it fills the volume, so a 40ft box ships mostly air and costs more per tonne.</p></details></div></div></section>
-<section><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Other categories</h2><p class="intro">The same method, applied to different goods.</p></div><div class="lanelinks"><a class="lanelink" href="building-materials"><b>Building and finishing materials</b><span>Stone, tile, cement products, insulation, dry mixes, sanitary ware, cable.</span></a><a class="lanelink" href="industrial-equipment"><b>Industrial equipment and machinery</b><span>Production lines, compressors, pumps, generators, material handling.</span></a><a class="lanelink" href="tools-hardware"><b>Tools, hardware and fasteners</b><span>Power and hand tools, abrasives, measuring instruments, fixings.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
+<section><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Other categories</h2><p class="intro">The same method, applied to different goods.</p></div><div class="lanelinks"><a class="lanelink" href="paper-packaging"><b>Paper, packaging and consumables</b><span>Newsprint, kraft and containerboard in reels, corrugated, PPE and workwear.</span></a><a class="lanelink" href="food-agricultural"><b>Food and agricultural goods</b><span>Frozen and chilled protein, bulk staples and ingredients under veterinary certification.</span></a><a class="lanelink" href="building-materials"><b>Building and finishing materials</b><span>Stone, tile, cement products, insulation, dry mixes, sanitary ware, cable.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
 <section class="cta">
   <div class="wrap">
     <span class="eyebrow">Get started</span>
@@ -537,16 +541,33 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     el.style.opacity='0';
     el.style.transform='perspective(1300px) rotateX(7deg) translate3d(0,36px,-70px)';
   });
+  function show(el){
+    el.style.transition='opacity .75s '+EASE+' '+el.__d+'ms, transform .95s '+EASE+' '+el.__d+'ms';
+    el.style.opacity=''; el.style.transform='';
+    setTimeout(function(){ el.style.transition=''; el.style.willChange=''; }, el.__d+1200);
+  }
   var io=new IntersectionObserver(function(es){
     es.forEach(function(e){
       if(!e.isIntersecting) return;
-      var el=e.target; io.unobserve(el);
-      el.style.transition='opacity .75s '+EASE+' '+el.__d+'ms, transform .95s '+EASE+' '+el.__d+'ms';
-      el.style.opacity=''; el.style.transform='';
-      setTimeout(function(){ el.style.transition=''; el.style.willChange=''; }, el.__d+1200);
+      var el=e.target; io.unobserve(el); show(el);
     });
   },{rootMargin:'0px 0px -9% 0px', threshold:0.05});
   items.forEach(function(el){ io.observe(el); });
+
+  /* Подстраховка. Наблюдатель изредка не срабатывает, и тогда блок остаётся
+     невидимым навсегда. Раз в полторы секунды показываем всё, что уже в кадре,
+     и прекращаем, когда скрытого не осталось. */
+  var sweeps=0;
+  var timer=setInterval(function(){
+    var left=0, h=window.innerHeight||0;
+    for(var i=0;i<items.length;i++){
+      var el=items[i];
+      if(el.style.opacity!=='0') continue;
+      left++;
+      if(el.getBoundingClientRect().top < h+140){ io.unobserve(el); show(el); }
+    }
+    if(!left || ++sweeps>40) clearInterval(timer);
+  },1500);
 
   /* параллакс фотографий */
   var live=[];

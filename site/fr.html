@@ -21,7 +21,7 @@
 <title>ISP Group | sourcing et négoce international</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@300;400;500;600;700&family=Martian+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;1,400&family=Schibsted+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 /* Single light theme by choice: the page commits to one look and never follows the OS.
    Pine green and warm gold on a cool bone ground; Instrument Serif over Hanken Grotesk,
@@ -37,9 +37,9 @@
   --shadow-s:0 1px 2px rgba(14,42,38,.06);
   --shadow-m:0 1px 2px rgba(14,42,38,.05), 0 10px 28px -18px rgba(14,42,38,.35);
   --shadow-l:0 2px 6px rgba(14,42,38,.07), 0 24px 48px -28px rgba(11,74,64,.55);
-  --fs:"Instrument Serif",Georgia,"Times New Roman",serif;
-  --fd:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
-  --fm:"Martian Mono",ui-monospace,Menlo,monospace;
+  --fs:"Newsreader",Georgia,"Times New Roman",serif;
+  --fd:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;
+  --fm:"IBM Plex Mono",ui-monospace,Menlo,monospace;
   --maxw:74rem;
   color-scheme:light;
 }
@@ -51,8 +51,11 @@ body{margin:0;color:var(--ink);font-family:var(--fd);font-size:16.5px;line-heigh
     radial-gradient(760px 460px at -8% 104%, rgba(184,134,43,.10), transparent 58%),
     var(--paper);
   background-attachment:fixed}
-h1,h2,h3{margin:0;font-family:var(--fs);font-weight:400;line-height:1.06;
-  letter-spacing:-.012em;text-wrap:balance}
+h1,h2,h3{margin:0;font-family:var(--fs);font-weight:400;line-height:1.1;
+  letter-spacing:-.008em;text-wrap:balance;font-optical-sizing:auto}
+/* IBM Plex Mono уже уже Martian Mono, поэтому межбуквенное чуть шире */
+.eyebrow,.chip,.crumbs,figcaption,.lanes th,.facts th,.num span,.step .k,.pblock .k,
+.cap .n,.cat ul,.fgrid dt,.step .out{font-feature-settings:"tnum" 1}
 p{margin:0}
 a{color:inherit}
 .wrap{max-width:var(--maxw);margin:0 auto;padding-inline:22px}
@@ -99,7 +102,7 @@ nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;
 
 /* sections */
 section{padding-block:clamp(56px,7vw,94px);border-bottom:1px solid var(--rule)}
-section h2{font-size:clamp(1.95rem,4vw,3rem);max-width:19ch}
+section h2{font-size:clamp(1.85rem,3.7vw,2.8rem);max-width:20ch;line-height:1.1}
 .intro{margin-top:18px;max-width:60ch;color:var(--ink-2);font-size:1.05rem}
 
 /* photography */
@@ -136,7 +139,7 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
   width:min(720px,56%);aspect-ratio:1/1;height:auto;display:block}
 @media(max-width:940px){#globe{top:-7%;right:-26%;transform:none;width:62%;opacity:.45}}
 .hero .wrap{position:relative;z-index:2;padding-block:clamp(56px,8.5vw,108px)}
-.hero h1{font-size:clamp(2.7rem,7vw,5.4rem);max-width:15ch;letter-spacing:-.02em}
+.hero h1{font-size:clamp(2.55rem,6.4vw,4.9rem);max-width:16ch;letter-spacing:-.018em;line-height:1.05}
 .hero h1 em{font-style:italic;color:var(--brand)}
 .hero .sub{margin-top:24px;max-width:44ch;font-size:clamp(1.04rem,2vw,1.2rem);color:var(--ink-2)}
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
@@ -483,7 +486,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </section>
 
-<section><div class="wrap"><figure class="mediafig" style="margin-bottom:44px"><div class="shot"><span class="pz"><img src="media/terminal.jpg" width="1023" height="438" loading="lazy" alt="Portiques à conteneurs sur un terminal maritime"></span></div><figcaption>Un seul interlocuteur, de la sortie d’usine à votre port</figcaption></figure>
+<section><div class="wrap"><figure class="mediafig" style="margin-bottom:44px"><div class="shot"><span class="pz"><img src="media/terminal.webp" width="1023" height="438" loading="lazy" alt="Portiques à conteneurs sur un terminal maritime"></span></div><figcaption>Un seul interlocuteur, de la sortie d’usine à votre port</figcaption></figure>
 <div class="lede"><h2>La partie d’un achat transfrontière dont personne ne veut</h2><p class="intro">Trouver une usine est la moitié facile. La moitié difficile consiste à prouver qu’elle existe, à la faire produire selon votre cahier des charges, à faire passer les documents par deux douanes et à s’assurer que l’argent arrive. C’est cette partie que nous prenons.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>Pourquoi les acheteurs passent par nous</h2><div class="ptext"><ul class="plist"><li><b>Nous vérifions avant de coter.</b> Les numéros d’agrément et de licence sont contrôlés auprès des registres du pays importateur, et non repris du site du vendeur. Les domaines imitant de vrais exportateurs sont courants dans ce métier et nous les filtrons.</li><li><b>Nous cotons à partir des statistiques douanières.</b> Nous comparons ce que des marchandises semblables ont réellement payé au dédouanement sur votre ligne avant de négocier. Une offre se juge ainsi par rapport au marché et non par rapport à elle-même.</li><li><b>Nous prenons la propriété de la marchandise.</b> Nous sommes l’acheteur sur un contrat et le vendeur sur l’autre. Un seul interlocuteur, une seule facture, une seule devise.</li><li><b>Nous reflétons les conditions.</b> Délais d’inspection, tolérances de poids, délais de réclamation et frais bancaires sont identiques sur les deux contrats, pour que rien ne tombe dans l’intervalle.</li></ul></div></div><div class="pblock"><span class="k">02</span><h2>Ce que nous fournissons</h2><div class="ptext"><p>Nous ne sommes pas liés à une seule marchandise. Volaille et protéines congelées, denrées de base et ingrédients alimentaires, matériaux de construction et de finition, équipements industriels, outillage et quincaillerie, métaux et tubes, papier, emballage et consommables.</p><p>Notre métier est le sourcing et l’exécution. Un produit hors de ces catégories est un projet de sourcing, pas un refus.</p></div></div><div class="pblock"><span class="k">03</span><h2>L’Afrique de l’Ouest</h2><div class="ptext"><p>Nous livrons des programmes de conteneurs frigorifiques depuis les Amériques et l’Union européenne vers Lomé et Cotonou. Sur cette ligne, trois questions passent avant le prix : l’agrément de l’établissement pour le pays de destination, la désignation exacte de la découpe, et la chaîne du froid.</p><p>Le détail figure sur la page <a href="afrique-ouest">Afrique de l’Ouest</a>, et la nomenclature des découpes sur <a href="decoupes-volaille">découpes de volaille</a>.</p><p class="pnote">« Ailes » n’est pas un produit. L’aile entière à trois phalanges, l’aile à deux phalanges, le manchon et l’aileron sont quatre produits différents, à quatre prix différents.</p></div></div><div class="pblock"><span class="k">04</span><h2>Comment commencer</h2><div class="ptext"><p>Écrivez-nous le produit, la quantité et le port de destination. Vous recevez sous un jour ouvré un accusé de réception avec les questions restantes, et sous une dizaine de jours ouvrés un prix rendu : au moins trois offres comparables de producteurs vérifiés, fret, assurance, frais portuaires, droits et certification inclus, avec la date de validité indiquée.</p><p>Pas de frais de cotation et pas de commission sur la facture d’un producteur. Nous achetons en notre nom propre et revendons.</p></div></div></div>
 
@@ -555,16 +558,33 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     el.style.opacity='0';
     el.style.transform='perspective(1300px) rotateX(7deg) translate3d(0,36px,-70px)';
   });
+  function show(el){
+    el.style.transition='opacity .75s '+EASE+' '+el.__d+'ms, transform .95s '+EASE+' '+el.__d+'ms';
+    el.style.opacity=''; el.style.transform='';
+    setTimeout(function(){ el.style.transition=''; el.style.willChange=''; }, el.__d+1200);
+  }
   var io=new IntersectionObserver(function(es){
     es.forEach(function(e){
       if(!e.isIntersecting) return;
-      var el=e.target; io.unobserve(el);
-      el.style.transition='opacity .75s '+EASE+' '+el.__d+'ms, transform .95s '+EASE+' '+el.__d+'ms';
-      el.style.opacity=''; el.style.transform='';
-      setTimeout(function(){ el.style.transition=''; el.style.willChange=''; }, el.__d+1200);
+      var el=e.target; io.unobserve(el); show(el);
     });
   },{rootMargin:'0px 0px -9% 0px', threshold:0.05});
   items.forEach(function(el){ io.observe(el); });
+
+  /* Подстраховка. Наблюдатель изредка не срабатывает, и тогда блок остаётся
+     невидимым навсегда. Раз в полторы секунды показываем всё, что уже в кадре,
+     и прекращаем, когда скрытого не осталось. */
+  var sweeps=0;
+  var timer=setInterval(function(){
+    var left=0, h=window.innerHeight||0;
+    for(var i=0;i<items.length;i++){
+      var el=items[i];
+      if(el.style.opacity!=='0') continue;
+      left++;
+      if(el.getBoundingClientRect().top < h+140){ io.unobserve(el); show(el); }
+    }
+    if(!left || ++sweeps>40) clearInterval(timer);
+  },1500);
 
   /* параллакс фотографий */
   var live=[];

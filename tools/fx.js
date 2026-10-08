@@ -31,16 +31,33 @@
     el.style.opacity='0';
     el.style.transform='perspective(1300px) rotateX(7deg) translate3d(0,36px,-70px)';
   });
+  function show(el){
+    el.style.transition='opacity .75s '+EASE+' '+el.__d+'ms, transform .95s '+EASE+' '+el.__d+'ms';
+    el.style.opacity=''; el.style.transform='';
+    setTimeout(function(){ el.style.transition=''; el.style.willChange=''; }, el.__d+1200);
+  }
   var io=new IntersectionObserver(function(es){
     es.forEach(function(e){
       if(!e.isIntersecting) return;
-      var el=e.target; io.unobserve(el);
-      el.style.transition='opacity .75s '+EASE+' '+el.__d+'ms, transform .95s '+EASE+' '+el.__d+'ms';
-      el.style.opacity=''; el.style.transform='';
-      setTimeout(function(){ el.style.transition=''; el.style.willChange=''; }, el.__d+1200);
+      var el=e.target; io.unobserve(el); show(el);
     });
   },{rootMargin:'0px 0px -9% 0px', threshold:0.05});
   items.forEach(function(el){ io.observe(el); });
+
+  /* Подстраховка. Наблюдатель изредка не срабатывает, и тогда блок остаётся
+     невидимым навсегда. Раз в полторы секунды показываем всё, что уже в кадре,
+     и прекращаем, когда скрытого не осталось. */
+  var sweeps=0;
+  var timer=setInterval(function(){
+    var left=0, h=window.innerHeight||0;
+    for(var i=0;i<items.length;i++){
+      var el=items[i];
+      if(el.style.opacity!=='0') continue;
+      left++;
+      if(el.getBoundingClientRect().top < h+140){ io.unobserve(el); show(el); }
+    }
+    if(!left || ++sweeps>40) clearInterval(timer);
+  },1500);
 
   /* параллакс фотографий */
   var live=[];

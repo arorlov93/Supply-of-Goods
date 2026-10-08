@@ -18,7 +18,7 @@
 <title>Building and finishing materials | import and supply</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@300;400;500;600;700&family=Martian+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;1,400&family=Schibsted+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 /* Single light theme by choice: the page commits to one look and never follows the OS.
    Pine green and warm gold on a cool bone ground; Instrument Serif over Hanken Grotesk,
@@ -34,9 +34,9 @@
   --shadow-s:0 1px 2px rgba(14,42,38,.06);
   --shadow-m:0 1px 2px rgba(14,42,38,.05), 0 10px 28px -18px rgba(14,42,38,.35);
   --shadow-l:0 2px 6px rgba(14,42,38,.07), 0 24px 48px -28px rgba(11,74,64,.55);
-  --fs:"Instrument Serif",Georgia,"Times New Roman",serif;
-  --fd:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
-  --fm:"Martian Mono",ui-monospace,Menlo,monospace;
+  --fs:"Newsreader",Georgia,"Times New Roman",serif;
+  --fd:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;
+  --fm:"IBM Plex Mono",ui-monospace,Menlo,monospace;
   --maxw:74rem;
   color-scheme:light;
 }
@@ -48,8 +48,11 @@ body{margin:0;color:var(--ink);font-family:var(--fd);font-size:16.5px;line-heigh
     radial-gradient(760px 460px at -8% 104%, rgba(184,134,43,.10), transparent 58%),
     var(--paper);
   background-attachment:fixed}
-h1,h2,h3{margin:0;font-family:var(--fs);font-weight:400;line-height:1.06;
-  letter-spacing:-.012em;text-wrap:balance}
+h1,h2,h3{margin:0;font-family:var(--fs);font-weight:400;line-height:1.1;
+  letter-spacing:-.008em;text-wrap:balance;font-optical-sizing:auto}
+/* IBM Plex Mono уже уже Martian Mono, поэтому межбуквенное чуть шире */
+.eyebrow,.chip,.crumbs,figcaption,.lanes th,.facts th,.num span,.step .k,.pblock .k,
+.cap .n,.cat ul,.fgrid dt,.step .out{font-feature-settings:"tnum" 1}
 p{margin:0}
 a{color:inherit}
 .wrap{max-width:var(--maxw);margin:0 auto;padding-inline:22px}
@@ -96,7 +99,7 @@ nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;
 
 /* sections */
 section{padding-block:clamp(56px,7vw,94px);border-bottom:1px solid var(--rule)}
-section h2{font-size:clamp(1.95rem,4vw,3rem);max-width:19ch}
+section h2{font-size:clamp(1.85rem,3.7vw,2.8rem);max-width:20ch;line-height:1.1}
 .intro{margin-top:18px;max-width:60ch;color:var(--ink-2);font-size:1.05rem}
 
 /* photography */
@@ -133,7 +136,7 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
   width:min(720px,56%);aspect-ratio:1/1;height:auto;display:block}
 @media(max-width:940px){#globe{top:-7%;right:-26%;transform:none;width:62%;opacity:.45}}
 .hero .wrap{position:relative;z-index:2;padding-block:clamp(56px,8.5vw,108px)}
-.hero h1{font-size:clamp(2.7rem,7vw,5.4rem);max-width:15ch;letter-spacing:-.02em}
+.hero h1{font-size:clamp(2.55rem,6.4vw,4.9rem);max-width:16ch;letter-spacing:-.018em;line-height:1.05}
 .hero h1 em{font-style:italic;color:var(--brand)}
 .hero .sub{margin-top:24px;max-width:44ch;font-size:clamp(1.04rem,2vw,1.2rem);color:var(--ink-2)}
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
@@ -439,6 +442,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <button class="navtoggle" id="navtoggle" type="button"
       aria-expanded="false" aria-controls="navmenu" aria-label="Menu"><span></span></button>
     <div class="navlinks" id="navmenu">
+      <a href="services">What we do</a>
       <a href="supply">What we supply</a>
       <a href="corridors">Corridors</a>
       <a href="guides">Guides</a>
@@ -463,13 +467,13 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 </header>
 
 <main>
-<section><div class="wrap"><figure class="mediafig" style="margin-bottom:44px"><div class="shot"><span class="pz"><img src="media/pipe.jpg" width="922" height="691" loading="lazy" alt="Stacked construction material seen end on"></span></div><figcaption>Materials bought to a named standard, with the certificate attached</figcaption></figure>
+<section><div class="wrap"><figure class="mediafig" style="margin-bottom:44px"><div class="shot"><span class="pz"><img src="media/pipe.webp" width="922" height="691" loading="lazy" alt="Stacked construction material seen end on"></span></div><figcaption>Materials bought to a named standard, with the certificate attached</figcaption></figure>
 <div class="lede"><h2>Finishing materials fail on tolerance, not on price</h2><p class="intro">A tile that is two millimetres out of square, a batch of slabs from three different blocks, a cable that does not carry the reaction-to-fire class the building needs. None of these shows in a quotation, and all of them are discovered on site.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>What we buy in this category</h2><div class="ptext"><ul class="plist"><li><b>Natural stone</b> in blocks, slabs cut to 2 cm or 3 cm, and finished pieces. Polished, honed or brushed, bundled by block so a run matches.</li><li><b>Porcelain and ceramic tile</b> to ISO 13006 and EN 14411, specified by water absorption group and by abrasion class rather than by trade name.</li><li><b>Cement products and dry mixes</b>, cement to EN 197-1 class, adhesives and screeds with the batch certificate.</li><li><b>Insulation</b> to the EN 13162 to 13171 family, specified by declared thermal conductivity and by thickness, not by brand.</li><li><b>Sanitary ware</b>, ceramics and fittings, with the pressure and flush tests stated.</li><li><b>Cable and electrical goods</b>, with the reaction-to-fire classification the destination building code requires.</li></ul></div></div><div class="pblock"><span class="k">02</span><h2>The specification that makes offers comparable</h2><div class="ptext"><p>Tile is the clearest example. “600 by 600 porcelain, grey” is not a specification: it leaves out the water absorption group, which decides whether the tile can go outside; the abrasion class, which decides whether it survives a commercial floor; the rectification, which decides the joint width; the surface slip rating; and the calibre and shade batch, which decide whether two pallets laid side by side look like one floor.</p><p>We write those into the order before asking for a price, and we ask for the shade and calibre batch to be held across the whole quantity. A second shipment from the same factory in a different batch will not match the first, and no discount fixes it.</p></div></div><div class="pblock"><span class="k">03</span><h2>Natural stone is three different purchases</h2><div class="ptext"><p>A quarry sells blocks by the cubic metre. A factory sells slabs by the square metre, bundled by block. A fabricator sells pieces cut to a drawing. Different prices, different packing, different waste and different people to argue with.</p><p>If the buyer intends to fabricate, bundle integrity matters more than the unit price, because slabs from different blocks will not match across a run. Most commercial travertine and much marble is resin treated and often mesh backed, which is normal and has to be declared. Stone sold as unfilled that arrives resin filled is a claim. The detail is on the <a href="turkiye">Türkiye corridor page</a>.</p></div></div><div class="pblock"><span class="k">04</span><h2>Packing decides what arrives saleable</h2><div class="ptext"><p>Tile travels on pallets and is lost to corner damage; the pallet has to be strapped and corner-protected and the stretch wrap has to be real wrap, not three turns. Stone travels on A-frames or in wooden bundles with the faces separated, and a sealed crate that cannot breathe marks light material with trapped moisture.</p><p>Cement products and dry mixes are hygroscopic: they want a liner and they want to be loaded last and discharged first. We write the breakage and moisture allowance into both contracts in the same words, with the same inspection window and the same evidence standard.</p></div></div><div class="pblock"><span class="k">05</span><h2>What the destination will ask for</h2><div class="ptext"><p>Which certificates matter depends entirely on where the goods are going, and this is settled before the order rather than at the border. In the European Union, construction products in scope carry a declaration of performance and CE marking. In the Eurasian customs union the equivalent is the EAC conformity regime. In the United States the question is usually the HTS classification and whether a trade remedy order touches the product.</p><p class="pnote">We agree the classification in writing before the order is placed, because the importer of record is liable for a wrong one and the seller is not.</p></div></div></div>
 
 </div></section>
 <section id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>What buyers ask about this category</h2><p class="intro">The three that come up before a first order.</p></div><div style="margin-top:34px"><details><summary>Can you match a tile we already have?</summary><p>Usually, from a sample or from the original manufacturer's reference. What cannot be promised is a shade match across batches, because shade is a batch property. If matching matters, the whole quantity has to come from one batch and that has to be in the order.</p></details><details><summary>Do you supply stone by the block or by the slab?</summary><p>Both, but they are different purchases with different economics. If you are not running your own saw, buy slabs bundled by block. If you are, blocks can be cheaper per square metre and you carry the yield risk.</p></details><details><summary>Who certifies that the material meets the standard?</summary><p>The producer issues the test report or declaration; we check that the document names the standard the destination actually requires, which is not always the one the producer is used to issuing. Where the value justifies it we add third-party testing before shipment.</p></details></div></div></section>
-<section><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Other categories</h2><p class="intro">The same method, applied to different goods.</p></div><div class="lanelinks"><a class="lanelink" href="building-materials"><b>Building and finishing materials</b><span>Stone, tile, cement products, insulation, dry mixes, sanitary ware, cable.</span></a><a class="lanelink" href="industrial-equipment"><b>Industrial equipment and machinery</b><span>Production lines, compressors, pumps, generators, material handling.</span></a><a class="lanelink" href="tools-hardware"><b>Tools, hardware and fasteners</b><span>Power and hand tools, abrasives, measuring instruments, fixings.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
+<section><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Other categories</h2><p class="intro">The same method, applied to different goods.</p></div><div class="lanelinks"><a class="lanelink" href="industrial-equipment"><b>Industrial equipment and machinery</b><span>Production lines, compressors, pumps, generators, material handling.</span></a><a class="lanelink" href="tools-hardware"><b>Tools, hardware and fasteners</b><span>Power and hand tools, abrasives, measuring instruments, fixings.</span></a><a class="lanelink" href="metals-pipe"><b>Metals and pipe</b><span>Sections, sheet and plate, seamless and welded pipe, fittings and flanges.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
 <section class="cta">
   <div class="wrap">
     <span class="eyebrow">Get started</span>
@@ -537,16 +541,33 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     el.style.opacity='0';
     el.style.transform='perspective(1300px) rotateX(7deg) translate3d(0,36px,-70px)';
   });
+  function show(el){
+    el.style.transition='opacity .75s '+EASE+' '+el.__d+'ms, transform .95s '+EASE+' '+el.__d+'ms';
+    el.style.opacity=''; el.style.transform='';
+    setTimeout(function(){ el.style.transition=''; el.style.willChange=''; }, el.__d+1200);
+  }
   var io=new IntersectionObserver(function(es){
     es.forEach(function(e){
       if(!e.isIntersecting) return;
-      var el=e.target; io.unobserve(el);
-      el.style.transition='opacity .75s '+EASE+' '+el.__d+'ms, transform .95s '+EASE+' '+el.__d+'ms';
-      el.style.opacity=''; el.style.transform='';
-      setTimeout(function(){ el.style.transition=''; el.style.willChange=''; }, el.__d+1200);
+      var el=e.target; io.unobserve(el); show(el);
     });
   },{rootMargin:'0px 0px -9% 0px', threshold:0.05});
   items.forEach(function(el){ io.observe(el); });
+
+  /* Подстраховка. Наблюдатель изредка не срабатывает, и тогда блок остаётся
+     невидимым навсегда. Раз в полторы секунды показываем всё, что уже в кадре,
+     и прекращаем, когда скрытого не осталось. */
+  var sweeps=0;
+  var timer=setInterval(function(){
+    var left=0, h=window.innerHeight||0;
+    for(var i=0;i<items.length;i++){
+      var el=items[i];
+      if(el.style.opacity!=='0') continue;
+      left++;
+      if(el.getBoundingClientRect().top < h+140){ io.unobserve(el); show(el); }
+    }
+    if(!left || ++sweeps>40) clearInterval(timer);
+  },1500);
 
   /* параллакс фотографий */
   var live=[];

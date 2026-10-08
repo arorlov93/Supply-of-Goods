@@ -110,6 +110,8 @@ def pretty_urls(host):
         # Cloudflare по умолчанию подменяет почту на [email protected] и
         # прячет её за скриптом. Для B2B-контакта это вред: адрес перестают
         # видеть и посетитель без JS, и поисковик. Отключаем для всей страницы.
+        # WebP на 28 % легче; og:image оставляем JPEG ради соцсетей
+        t = _re.sub(r'(<img[^>]*src="media/[a-z0-9]+)\.jpg', r"\1.webp", t)
         if "<!--email_off-->" not in t:
             t = t.replace("<body>", "<body>\n<!--email_off-->", 1)
             t = t.replace("</body>", "<!--/email_off-->\n</body>", 1)

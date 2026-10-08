@@ -3,7 +3,11 @@
 from content_core import HOST, ORG, GUIDE_LINKS
 
 def rel(slug):
-    items = [x for x in GUIDE_LINKS if x[0] != slug + ".html"][:3]
+    """Три следующих руководства по кругу: при выборке «первые три» девять
+    страниц из двенадцати оставались с одной входящей ссылкой."""
+    order = [x[0] for x in GUIDE_LINKS]
+    i = order.index(slug + ".html") if slug + ".html" in order else 0
+    items = [GUIDE_LINKS[(i + k) % len(GUIDE_LINKS)] for k in range(1, 4)]
     items.append(("contact.html", "Send a requirement",
                   "Product, quantity and destination port is enough to start."))
     return ("Related guides", "The ones that usually get read next.", items)

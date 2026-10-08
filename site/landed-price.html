@@ -18,7 +18,7 @@
 <title>What a landed price must include | ISP Group</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@300;400;500;600;700&family=Martian+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;1,400&family=Schibsted+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 /* Single light theme by choice: the page commits to one look and never follows the OS.
    Pine green and warm gold on a cool bone ground; Instrument Serif over Hanken Grotesk,
@@ -34,9 +34,9 @@
   --shadow-s:0 1px 2px rgba(14,42,38,.06);
   --shadow-m:0 1px 2px rgba(14,42,38,.05), 0 10px 28px -18px rgba(14,42,38,.35);
   --shadow-l:0 2px 6px rgba(14,42,38,.07), 0 24px 48px -28px rgba(11,74,64,.55);
-  --fs:"Instrument Serif",Georgia,"Times New Roman",serif;
-  --fd:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
-  --fm:"Martian Mono",ui-monospace,Menlo,monospace;
+  --fs:"Newsreader",Georgia,"Times New Roman",serif;
+  --fd:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;
+  --fm:"IBM Plex Mono",ui-monospace,Menlo,monospace;
   --maxw:74rem;
   color-scheme:light;
 }
@@ -48,8 +48,11 @@ body{margin:0;color:var(--ink);font-family:var(--fd);font-size:16.5px;line-heigh
     radial-gradient(760px 460px at -8% 104%, rgba(184,134,43,.10), transparent 58%),
     var(--paper);
   background-attachment:fixed}
-h1,h2,h3{margin:0;font-family:var(--fs);font-weight:400;line-height:1.06;
-  letter-spacing:-.012em;text-wrap:balance}
+h1,h2,h3{margin:0;font-family:var(--fs);font-weight:400;line-height:1.1;
+  letter-spacing:-.008em;text-wrap:balance;font-optical-sizing:auto}
+/* IBM Plex Mono уже уже Martian Mono, поэтому межбуквенное чуть шире */
+.eyebrow,.chip,.crumbs,figcaption,.lanes th,.facts th,.num span,.step .k,.pblock .k,
+.cap .n,.cat ul,.fgrid dt,.step .out{font-feature-settings:"tnum" 1}
 p{margin:0}
 a{color:inherit}
 .wrap{max-width:var(--maxw);margin:0 auto;padding-inline:22px}
@@ -96,7 +99,7 @@ nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;
 
 /* sections */
 section{padding-block:clamp(56px,7vw,94px);border-bottom:1px solid var(--rule)}
-section h2{font-size:clamp(1.95rem,4vw,3rem);max-width:19ch}
+section h2{font-size:clamp(1.85rem,3.7vw,2.8rem);max-width:20ch;line-height:1.1}
 .intro{margin-top:18px;max-width:60ch;color:var(--ink-2);font-size:1.05rem}
 
 /* photography */
@@ -133,7 +136,7 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
   width:min(720px,56%);aspect-ratio:1/1;height:auto;display:block}
 @media(max-width:940px){#globe{top:-7%;right:-26%;transform:none;width:62%;opacity:.45}}
 .hero .wrap{position:relative;z-index:2;padding-block:clamp(56px,8.5vw,108px)}
-.hero h1{font-size:clamp(2.7rem,7vw,5.4rem);max-width:15ch;letter-spacing:-.02em}
+.hero h1{font-size:clamp(2.55rem,6.4vw,4.9rem);max-width:16ch;letter-spacing:-.018em;line-height:1.05}
 .hero h1 em{font-style:italic;color:var(--brand)}
 .hero .sub{margin-top:24px;max-width:44ch;font-size:clamp(1.04rem,2vw,1.2rem);color:var(--ink-2)}
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
@@ -439,6 +442,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <button class="navtoggle" id="navtoggle" type="button"
       aria-expanded="false" aria-controls="navmenu" aria-label="Menu"><span></span></button>
     <div class="navlinks" id="navmenu">
+      <a href="services">What we do</a>
       <a href="supply">What we supply</a>
       <a href="corridors">Corridors</a>
       <a href="guides">Guides</a>
@@ -468,7 +472,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 
 </div></section>
 <section id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>Questions on this</h2><p class="intro">The ones we are asked most often.</p></div><div style="margin-top:34px"><details><summary>Why does your landed price look higher than a FOB quote I have?</summary><p>Because a FOB quote stops at the origin port rail and a landed price stops at your gate. Add freight, surcharges, insurance, destination handling, duty, broker and the inland leg to the FOB number and then compare.</p></details><details><summary>Can you fix the price for a whole year?</summary><p>The goods portion, often. The freight portion, rarely, because carriers do not offer it on most lanes and anyone who does is pricing in the risk. We split the two so you can fix what is fixable.</p></details><details><summary>Is duty included in your quote?</summary><p>Yes, at the classification we have agreed in writing with you before the order. If a trade remedy order touches the product, the deposit is shown as a separate line because it is not an ordinary duty and it may not be the final liability.</p></details></div></div></section>
-<section><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Related guides</h2><p class="intro">The ones that usually get read next.</p></div><div class="lanelinks"><a class="lanelink" href="incoterms"><b>Incoterms 2020 explained</b><span>Who pays for what, where risk passes, and why CFR splits the two.</span></a><a class="lanelink" href="verify-supplier"><b>How to verify a supplier is a factory</b><span>Licence, export right and the bank account name that gives it away.</span></a><a class="lanelink" href="letter-of-credit"><b>A letter of credit at sight</b><span>What it protects, what it costs and where it fails.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
+<section><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Related guides</h2><p class="intro">The ones that usually get read next.</p></div><div class="lanelinks"><a class="lanelink" href="verify-supplier"><b>How to verify a supplier is a factory</b><span>Licence, export right and the bank account name that gives it away.</span></a><a class="lanelink" href="letter-of-credit"><b>A letter of credit at sight</b><span>What it protects, what it costs and where it fails.</span></a><a class="lanelink" href="customs-data-pricing"><b>How customs data shows the real price</b><span>Why a quotation and a transacted value are different numbers.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
 <section class="cta">
   <div class="wrap">
     <span class="eyebrow">Get started</span>
@@ -536,16 +540,33 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     el.style.opacity='0';
     el.style.transform='perspective(1300px) rotateX(7deg) translate3d(0,36px,-70px)';
   });
+  function show(el){
+    el.style.transition='opacity .75s '+EASE+' '+el.__d+'ms, transform .95s '+EASE+' '+el.__d+'ms';
+    el.style.opacity=''; el.style.transform='';
+    setTimeout(function(){ el.style.transition=''; el.style.willChange=''; }, el.__d+1200);
+  }
   var io=new IntersectionObserver(function(es){
     es.forEach(function(e){
       if(!e.isIntersecting) return;
-      var el=e.target; io.unobserve(el);
-      el.style.transition='opacity .75s '+EASE+' '+el.__d+'ms, transform .95s '+EASE+' '+el.__d+'ms';
-      el.style.opacity=''; el.style.transform='';
-      setTimeout(function(){ el.style.transition=''; el.style.willChange=''; }, el.__d+1200);
+      var el=e.target; io.unobserve(el); show(el);
     });
   },{rootMargin:'0px 0px -9% 0px', threshold:0.05});
   items.forEach(function(el){ io.observe(el); });
+
+  /* Подстраховка. Наблюдатель изредка не срабатывает, и тогда блок остаётся
+     невидимым навсегда. Раз в полторы секунды показываем всё, что уже в кадре,
+     и прекращаем, когда скрытого не осталось. */
+  var sweeps=0;
+  var timer=setInterval(function(){
+    var left=0, h=window.innerHeight||0;
+    for(var i=0;i<items.length;i++){
+      var el=items[i];
+      if(el.style.opacity!=='0') continue;
+      left++;
+      if(el.getBoundingClientRect().top < h+140){ io.unobserve(el); show(el); }
+    }
+    if(!left || ++sweeps>40) clearInterval(timer);
+  },1500);
 
   /* параллакс фотографий */
   var live=[];

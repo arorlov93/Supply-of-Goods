@@ -18,7 +18,7 @@
 <title>Tools, hardware and fasteners | import and supply</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@300;400;500;600;700&family=Martian+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;1,400&family=Schibsted+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 /* Single light theme by choice: the page commits to one look and never follows the OS.
    Pine green and warm gold on a cool bone ground; Instrument Serif over Hanken Grotesk,
@@ -34,9 +34,9 @@
   --shadow-s:0 1px 2px rgba(14,42,38,.06);
   --shadow-m:0 1px 2px rgba(14,42,38,.05), 0 10px 28px -18px rgba(14,42,38,.35);
   --shadow-l:0 2px 6px rgba(14,42,38,.07), 0 24px 48px -28px rgba(11,74,64,.55);
-  --fs:"Instrument Serif",Georgia,"Times New Roman",serif;
-  --fd:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
-  --fm:"Martian Mono",ui-monospace,Menlo,monospace;
+  --fs:"Newsreader",Georgia,"Times New Roman",serif;
+  --fd:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;
+  --fm:"IBM Plex Mono",ui-monospace,Menlo,monospace;
   --maxw:74rem;
   color-scheme:light;
 }
@@ -48,8 +48,11 @@ body{margin:0;color:var(--ink);font-family:var(--fd);font-size:16.5px;line-heigh
     radial-gradient(760px 460px at -8% 104%, rgba(184,134,43,.10), transparent 58%),
     var(--paper);
   background-attachment:fixed}
-h1,h2,h3{margin:0;font-family:var(--fs);font-weight:400;line-height:1.06;
-  letter-spacing:-.012em;text-wrap:balance}
+h1,h2,h3{margin:0;font-family:var(--fs);font-weight:400;line-height:1.1;
+  letter-spacing:-.008em;text-wrap:balance;font-optical-sizing:auto}
+/* IBM Plex Mono уже уже Martian Mono, поэтому межбуквенное чуть шире */
+.eyebrow,.chip,.crumbs,figcaption,.lanes th,.facts th,.num span,.step .k,.pblock .k,
+.cap .n,.cat ul,.fgrid dt,.step .out{font-feature-settings:"tnum" 1}
 p{margin:0}
 a{color:inherit}
 .wrap{max-width:var(--maxw);margin:0 auto;padding-inline:22px}
@@ -96,7 +99,7 @@ nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;
 
 /* sections */
 section{padding-block:clamp(56px,7vw,94px);border-bottom:1px solid var(--rule)}
-section h2{font-size:clamp(1.95rem,4vw,3rem);max-width:19ch}
+section h2{font-size:clamp(1.85rem,3.7vw,2.8rem);max-width:20ch;line-height:1.1}
 .intro{margin-top:18px;max-width:60ch;color:var(--ink-2);font-size:1.05rem}
 
 /* photography */
@@ -133,7 +136,7 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
   width:min(720px,56%);aspect-ratio:1/1;height:auto;display:block}
 @media(max-width:940px){#globe{top:-7%;right:-26%;transform:none;width:62%;opacity:.45}}
 .hero .wrap{position:relative;z-index:2;padding-block:clamp(56px,8.5vw,108px)}
-.hero h1{font-size:clamp(2.7rem,7vw,5.4rem);max-width:15ch;letter-spacing:-.02em}
+.hero h1{font-size:clamp(2.55rem,6.4vw,4.9rem);max-width:16ch;letter-spacing:-.018em;line-height:1.05}
 .hero h1 em{font-style:italic;color:var(--brand)}
 .hero .sub{margin-top:24px;max-width:44ch;font-size:clamp(1.04rem,2vw,1.2rem);color:var(--ink-2)}
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
@@ -439,6 +442,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <button class="navtoggle" id="navtoggle" type="button"
       aria-expanded="false" aria-controls="navmenu" aria-label="Menu"><span></span></button>
     <div class="navlinks" id="navmenu">
+      <a href="services">What we do</a>
       <a href="supply">What we supply</a>
       <a href="corridors">Corridors</a>
       <a href="guides">Guides</a>
@@ -463,13 +467,13 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 </header>
 
 <main>
-<section><div class="wrap"><figure class="mediafig" style="margin-bottom:44px"><div class="shot"><span class="pz"><img src="media/machinery.jpg" width="910" height="683" loading="lazy" alt="Workshop tooling and drive components"></span></div><figcaption>Tooling is bought on the grade of its consumable, not on the body</figcaption></figure>
+<section><div class="wrap"><figure class="mediafig" style="margin-bottom:44px"><div class="shot"><span class="pz"><img src="media/machinery.webp" width="910" height="683" loading="lazy" alt="Workshop tooling and drive components"></span></div><figcaption>Tooling is bought on the grade of its consumable, not on the body</figcaption></figure>
 <div class="lede"><h2>The cheap part of the tool is the tool</h2><p class="intro">On almost everything in this category the purchase price is a small fraction of the running cost. An abrasive that lasts two thirds as long is not thirty per cent cheaper, it is fifty per cent more expensive, and nothing in a product photograph shows which one you are being offered.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>Three different ways to buy the same box</h2><div class="ptext"><ul class="plist"><li><b>To a named brand.</b> You know what you are getting and you pay for it. Our job is authenticity and landed cost, and the first check is whether the seller is an authorised channel.</li><li><b>To specification, unbranded.</b> A factory builds to your written specification and your packaging. Cheaper per unit, slower to set up, and only works if the specification is real.</li><li><b>Own brand.</b> The same as above with your mark, your carton and your manual. Minimum quantities rise, and the artwork and the safety text become part of the order.</li></ul><p>Most disappointments in this category come from buying the second while thinking about the first: a specification that says “equivalent to” a brand, with nothing measurable after it.</p></div></div><div class="pblock"><span class="k">02</span><h2>What makes a tool specification measurable</h2><div class="ptext"><p>For power tools: input power and, more usefully, output power; no-load speed; the bearing type; the switch and brush assembly by make; the cable length and plug type for the destination; the voltage and frequency; the insulation class; and the electrical safety standard the destination enforces, which for most of the world is the IEC 62841 family.</p><p>For abrasives: the grit, the bond, the maximum operating speed and the safety standard, because a cutting disc is a safety-critical product and EN 12413 exists for a reason. For measuring instruments: the accuracy class and whether a calibration certificate is supplied and traceable.</p><p>For fixings: the grade and the coating, which together decide both the strength and the service life. A property class 8.8 bolt and a 4.6 bolt look identical in a photograph and are not interchangeable in a structure.</p></div></div><div class="pblock"><span class="k">03</span><h2>Personal protective equipment is a legal product</h2><div class="ptext"><p>Gloves, footwear, eye protection and hearing protection are not ordinary consumables. They are sold against harmonised standards, they carry a mark, and in most destinations supplying them without valid conformity documentation is an offence rather than a commercial problem.</p><p>We ask for the test report from a named laboratory, not a certificate image, and we check the standard cited is the one in force at the destination. This is the single most counterfeited document category in the hardware trade.</p></div></div><div class="pblock"><span class="k">04</span><h2>Assortment, minimums and the consolidated container</h2><div class="ptext"><p>Hardware is bought as an assortment, and an assortment rarely fills a container from one factory. We consolidate several producers into one container at the port of loading, which keeps a mixed order on full container economics and produces one bill of lading instead of six.</p><p>Consolidation adds about a week to the schedule and it has to be in the plan rather than discovered. It also means one packing list has to reconcile against several suppliers' cartons, which is exactly the kind of discrepancy customs resolves by inspecting, so the counting is done at the consolidation warehouse and photographed.</p><p class="pnote">Deliverable on this category: a written specification per line, the conformity documents checked against the destination's standard, and a consolidated packing list reconciled carton by carton before the container is sealed.</p></div></div></div>
 
 </div></section>
 <section id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>What buyers ask about this category</h2><p class="intro">The three that come up before a first order.</p></div><div style="margin-top:34px"><details><summary>Can you make it under our own brand?</summary><p>Yes. Minimum quantities rise and the artwork, the manual and the safety text become part of the order rather than an afterthought. We ask for a pre-production sample of the printed carton, not just of the product.</p></details><details><summary>How do we know PPE certificates are genuine?</summary><p>By asking for the test report from the named laboratory and checking the laboratory exists and issued it, rather than accepting an image of a certificate. This category is the most counterfeited in the trade.</p></details><details><summary>Our order is small and mixed. Is that a problem?</summary><p>No, it is the normal case. We consolidate several producers into one container at the port of loading. It adds roughly a week to the schedule and keeps the economics of a full container.</p></details></div></div></section>
-<section><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Other categories</h2><p class="intro">The same method, applied to different goods.</p></div><div class="lanelinks"><a class="lanelink" href="building-materials"><b>Building and finishing materials</b><span>Stone, tile, cement products, insulation, dry mixes, sanitary ware, cable.</span></a><a class="lanelink" href="industrial-equipment"><b>Industrial equipment and machinery</b><span>Production lines, compressors, pumps, generators, material handling.</span></a><a class="lanelink" href="tools-hardware"><b>Tools, hardware and fasteners</b><span>Power and hand tools, abrasives, measuring instruments, fixings.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
+<section><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Other categories</h2><p class="intro">The same method, applied to different goods.</p></div><div class="lanelinks"><a class="lanelink" href="metals-pipe"><b>Metals and pipe</b><span>Sections, sheet and plate, seamless and welded pipe, fittings and flanges.</span></a><a class="lanelink" href="paper-packaging"><b>Paper, packaging and consumables</b><span>Newsprint, kraft and containerboard in reels, corrugated, PPE and workwear.</span></a><a class="lanelink" href="food-agricultural"><b>Food and agricultural goods</b><span>Frozen and chilled protein, bulk staples and ingredients under veterinary certification.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
 <section class="cta">
   <div class="wrap">
     <span class="eyebrow">Get started</span>
@@ -537,16 +541,33 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     el.style.opacity='0';
     el.style.transform='perspective(1300px) rotateX(7deg) translate3d(0,36px,-70px)';
   });
+  function show(el){
+    el.style.transition='opacity .75s '+EASE+' '+el.__d+'ms, transform .95s '+EASE+' '+el.__d+'ms';
+    el.style.opacity=''; el.style.transform='';
+    setTimeout(function(){ el.style.transition=''; el.style.willChange=''; }, el.__d+1200);
+  }
   var io=new IntersectionObserver(function(es){
     es.forEach(function(e){
       if(!e.isIntersecting) return;
-      var el=e.target; io.unobserve(el);
-      el.style.transition='opacity .75s '+EASE+' '+el.__d+'ms, transform .95s '+EASE+' '+el.__d+'ms';
-      el.style.opacity=''; el.style.transform='';
-      setTimeout(function(){ el.style.transition=''; el.style.willChange=''; }, el.__d+1200);
+      var el=e.target; io.unobserve(el); show(el);
     });
   },{rootMargin:'0px 0px -9% 0px', threshold:0.05});
   items.forEach(function(el){ io.observe(el); });
+
+  /* Подстраховка. Наблюдатель изредка не срабатывает, и тогда блок остаётся
+     невидимым навсегда. Раз в полторы секунды показываем всё, что уже в кадре,
+     и прекращаем, когда скрытого не осталось. */
+  var sweeps=0;
+  var timer=setInterval(function(){
+    var left=0, h=window.innerHeight||0;
+    for(var i=0;i<items.length;i++){
+      var el=items[i];
+      if(el.style.opacity!=='0') continue;
+      left++;
+      if(el.getBoundingClientRect().top < h+140){ io.unobserve(el); show(el); }
+    }
+    if(!left || ++sweeps>40) clearInterval(timer);
+  },1500);
 
   /* параллакс фотографий */
   var live=[];
