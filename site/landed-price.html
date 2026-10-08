@@ -128,6 +128,12 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band .eyebrow{color:var(--gold-soft)}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 <style>
 /* hero */
@@ -313,6 +319,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* числовая полоса: объём и счётчик */
+.nums{perspective:1300px;perspective-origin:50% 40%}
+.num{transform-style:preserve-3d;will-change:transform,opacity}
+.num b{display:block;transform-origin:50% 90%;
+  text-shadow:0 1px 0 rgba(255,255,255,.65), 0 10px 26px rgba(11,74,64,.16);
+  font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.num{transform:none!important;opacity:1!important}}
 </style>
 
 <style>
@@ -432,10 +446,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* ссылка для клавиатуры: видна только при фокусе */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 </head>
 <body>
 <!--email_off-->
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <div class="wrap navin">
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
@@ -465,7 +488,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <section><div class="wrap">
 <div class="lede"><h2>Why two quotations are almost never comparable</h2><p class="intro">Not because anyone is dishonest, but because each quotation stops at a different point on the journey. Until both are extended to the same point, the cheaper one is simply the one that stops earlier.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>The full list, origin to gate</h2><div class="ptext"><ul class="plist"><li><b>Ex-works price</b> of the goods, at the agreed specification and pack.</li><li><b>Origin inland</b>, factory to port or terminal, including waiting time if the factory loads slowly.</li><li><b>Export clearance</b> and any origin documentation: certificate of origin, fumigation, inspection, phytosanitary or veterinary certification.</li><li><b>Terminal handling at origin</b>, which is quoted separately from freight far more often than buyers expect.</li><li><b>Ocean or air freight</b> for the actual equipment type, not a generic rate.</li><li><b>Surcharges</b>: bunker, currency, congestion, peak season, low-sulphur. These move independently of the base rate and are the usual reason a quoted price and an invoice disagree.</li><li><b>Insurance</b>, with the cover level stated rather than the word “insured”.</li><li><b>Terminal handling at destination</b> and port charges, which differ by port on the same lane.</li><li><b>Customs duty</b> at the correct classification, plus any trade remedy deposit.</li><li><b>Import VAT or GST</b>, usually recoverable for a registered importer but still cash out of the door on the day.</li><li><b>Customs broker</b> and any inspection or examination fee the authority raises.</li><li><b>Inland delivery</b> to your own gate, plus unloading if you have no dock.</li></ul></div></div><div class="pblock"><span class="k">02</span><h2>The three that are always missing</h2><div class="ptext"><p><b>Demurrage and detention.</b> Free time at the destination is finite, and the clock runs whether or not your paperwork is ready. On a lane where clearance is slow this is not an edge case, it is a budget line. Ask how many free days the quoted rate includes and what the daily rate is afterwards.</p><p><b>Bank charges on both legs.</b> A letter of credit, a documentary collection and even a plain transfer all carry charges at the issuing bank, the advising bank and any intermediary. They are small individually and they are allocated in writing or they are argued about later.</p><p><b>The cost of the specification being wrong.</b> Not a line you can quote, but it is the largest number on this page when it happens. It is why the specification work comes before the pricing work and not after it.</p></div></div><div class="pblock"><span class="k">03</span><h2>Rate validity is part of the price</h2><div class="ptext"><p>Freight rates are quoted with an expiry and they move sharply. A landed price without a validity date is a landed price for an unknown day. We state the date the freight component is good until, and we say which lines are fixed and which float.</p><p class="pnote">On most lanes the goods price is firm for longer than the freight price. Splitting the two in the quotation lets a buyer lock the part that can be locked instead of re-tendering the whole thing.</p></div></div><div class="pblock"><span class="k">04</span><h2>Where VAT confuses the comparison</h2><div class="ptext"><p>Import VAT or GST is usually recoverable by a registered importer, so it does not belong in a margin calculation. It absolutely belongs in a cash flow calculation, because it is paid at clearance and recovered weeks or months later. A buyer who nets it out of the landed price and forgets the timing runs out of working capital on the third container rather than the first.</p></div></div><div class="pblock"><span class="k">05</span><h2>What we hand over</h2><div class="ptext"><p>One number at your door, the build-up behind it line by line, the validity date on the freight component, and the Incoterm and named place the number is quoted at. If we are quoting two bases, the difference between them is the honest cost of the logistics portion, which is the most useful single figure a buyer can have.</p></div></div></div>

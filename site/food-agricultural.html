@@ -128,6 +128,12 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band .eyebrow{color:var(--gold-soft)}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 <style>
 /* hero */
@@ -313,6 +319,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* числовая полоса: объём и счётчик */
+.nums{perspective:1300px;perspective-origin:50% 40%}
+.num{transform-style:preserve-3d;will-change:transform,opacity}
+.num b{display:block;transform-origin:50% 90%;
+  text-shadow:0 1px 0 rgba(255,255,255,.65), 0 10px 26px rgba(11,74,64,.16);
+  font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.num{transform:none!important;opacity:1!important}}
 </style>
 
 <style>
@@ -432,10 +446,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* ссылка для клавиатуры: видна только при фокусе */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 </head>
 <body>
 <!--email_off-->
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <div class="wrap navin">
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
@@ -466,7 +489,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <section><div class="wrap"><figure class="mediafig" style="margin-bottom:44px"><div class="shot"><span class="pz"><img src="media/vessel2.webp" width="774" height="581" loading="lazy" alt="Container vessel alongside with boxes loaded"></span></div><figcaption>Reefer programmes run to a schedule, not to a spot booking</figcaption></figure>
 <div class="lede"><h2>Admissibility, nomenclature, cold chain, then price</h2><p class="intro">Those four, in that order. Most of the cheap offers in this trade fail one of the first three, and a buyer who starts at the fourth will spend a month discovering it.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>Admissibility comes before price</h2><div class="ptext"><p>Frozen meat does not enter a country on a commercial invoice. It enters on a veterinary health certificate issued for a specific producing establishment, in a form the destination accepts. An establishment approved for one country is not automatically approved for its neighbour, and the requirements change.</p><p>The first question to any seller is the establishment number and written confirmation that it is cleared for the destination, before price is discussed. How certification works for United States and European Union origin, which form is issued and who signs it, is in the <a href="veterinary-certificate">veterinary certificate guide</a>, and the lane itself on the <a href="west-africa">West Africa corridor page</a>.</p></div></div><div class="pblock"><span class="k">02</span><h2>Specify the cut by anatomy, not by category</h2><div class="ptext"><p>Every enquiry we send names the anatomy explicitly, names the pack and asks for the price per line on the same Incoterm, because a category name covers several products at several prices. The same discipline applies to grading on staples and to piece weight on anything portioned.</p><p>The full nomenclature, and why two offers using the same word are not comparable, is in <a href="poultry-cuts">the cuts guide</a>.</p></div></div><div class="pblock"><span class="k">03</span><h2>Pack and cold chain are part of the specification</h2><div class="ptext"><p>Many destination markets buy block frozen product in 10 kg cartons, which is not the standard pack in the United States or in the European Union. Repacking is possible and it costs money, so the price has to be asked for in the producer's own pack as well; the difference is what the non-standard format is actually worth.</p><p>A 40ft reefer carries about 25 tonnes net. The temperature is set at loading, recorded throughout and read at discharge, and the recorder tape belongs in the document set rather than in a drawer. Plug time at the transhipment port and at the destination is the part of the chain nobody books and everybody assumes.</p></div></div><div class="pblock"><span class="k">04</span><h2>Bulk staples and ingredients</h2><div class="ptext"><p>Rice, sugar, pulses, flour and oils move on specification and on sanitary documentation rather than on veterinary certification, which makes them simpler to originate and no simpler to land. The lines that decide a claim are moisture, broken percentage or equivalent grading, foreign matter, packing weight tolerance and the sampling method at discharge. Those are agreed in the contract or they are argued about afterwards.</p></div></div><div class="pblock"><span class="k">05</span><h2>Compare the market, not the quotations</h2><div class="ptext"><p>A quotation is what a seller would like to receive. Customs statistics show what the goods actually crossed a border at, because the declared value is divided by the declared net weight and every discount the seller really gave is already inside that number. Before we negotiate a lane we pull the destination's import values by origin and by commodity code for the most recent full periods and negotiate against that.</p><p class="pnote">On this category that exercise regularly moves the target by a fifth or more, and it changes which origin we approach first. The method is set out in <a href="customs-data-pricing">how customs data shows the real price</a>.</p></div></div></div>

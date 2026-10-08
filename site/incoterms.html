@@ -128,6 +128,12 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band .eyebrow{color:var(--gold-soft)}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 <style>
 /* hero */
@@ -313,6 +319,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* числовая полоса: объём и счётчик */
+.nums{perspective:1300px;perspective-origin:50% 40%}
+.num{transform-style:preserve-3d;will-change:transform,opacity}
+.num b{display:block;transform-origin:50% 90%;
+  text-shadow:0 1px 0 rgba(255,255,255,.65), 0 10px 26px rgba(11,74,64,.16);
+  font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.num{transform:none!important;opacity:1!important}}
 </style>
 
 <style>
@@ -432,10 +446,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* ссылка для клавиатуры: видна только при фокусе */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 </head>
 <body>
 <!--email_off-->
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <div class="wrap navin">
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
@@ -465,7 +488,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <section><div class="wrap">
 <div class="lede"><h2>Why this matters before the price, not after</h2><p class="intro">Two quotes cannot be compared until both carry the same Incoterm and the same named place. A FOB price and a CIF price for the same goods can differ by a third, and neither seller is wrong. The buyer who treats them as the same number is.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>The whole set on one page</h2><div class="ptext"><p>Eleven rules in the 2020 edition. Each one answers three questions: how far the seller pays, where the risk transfers, and who handles clearance. Read the risk column before the cost column.</p><div class="scroller"><table class="ptable">

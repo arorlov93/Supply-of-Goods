@@ -131,6 +131,12 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band .eyebrow{color:var(--gold-soft)}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 <style>
 /* hero */
@@ -316,6 +322,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* числовая полоса: объём и счётчик */
+.nums{perspective:1300px;perspective-origin:50% 40%}
+.num{transform-style:preserve-3d;will-change:transform,opacity}
+.num b{display:block;transform-origin:50% 90%;
+  text-shadow:0 1px 0 rgba(255,255,255,.65), 0 10px 26px rgba(11,74,64,.16);
+  font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.num{transform:none!important;opacity:1!important}}
 </style>
 
 <style>
@@ -435,10 +449,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* ссылка для клавиатуры: видна только при фокусе */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 </head>
 <body>
 <!--email_off-->
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <div class="wrap navin">
     <a class="logo" href="/fr">ISP Group <em>Global Commerce</em></a>
@@ -447,7 +470,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <div class="navlinks" id="navmenu">
       <a href="afrique-ouest">Afrique de l'Ouest</a>
       <a href="decoupes-volaille">Découpes</a>
-      <a href="certificat-veterinaire">Certificat</a>
+      <a href="certificat-veterinaire" aria-current="page">Certificat</a>
       <a href="contact-fr">Contact</a>
       <a href="/">English</a>
     </div>
@@ -467,7 +490,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <section><div class="wrap">
 <div class="lede"><h2>L’agrément est accordé usine par usine et pays par pays</h2><p class="intro">Un établissement autorisé pour un pays ouest-africain ne l’est pas automatiquement pour son voisin, et les listes évoluent.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>Ce qu’est le certificat</h2><div class="ptext"><p>Un certificat sanitaire vétérinaire est un document officiel délivré par l’autorité compétente du pays exportateur, attestant que l’envoi provient d’un établissement agréé, qu’il a été produit sous inspection officielle et qu’il répond aux conditions sanitaires fixées par le pays importateur.</p><p>Ce n’est pas un document commercial et le vendeur ne peut pas l’émettre. Il accompagne l’envoi, il est présenté au poste frontière d’entrée, et sans lui la marchandise ne dédouane pas, quelle que soit la facture.</p></div></div><div class="pblock"><span class="k">02</span><h2>Origine États-Unis</h2><div class="ptext"><p>La certification à l’export passe par le service fédéral d’inspection de la sécurité alimentaire. Les exigences propres à chaque pays de destination, y compris le modèle de certificat et les attestations supplémentaires, sont publiées dans une bibliothèque à l’export tenue à cet effet et mise à jour lorsque les destinations modifient leurs règles.</p><p>Deux conséquences pratiques. Certaines destinations sont traitées par voie électronique et d’autres exigent encore un certificat papier, ce qui change le délai au chargement. Et une destination non répertoriée n’est pas nécessairement fermée, mais les exigences doivent alors être établies par écrit avant tout chargement plutôt que supposées.</p></div></div><div class="pblock"><span class="k">03</span><h2>Origine Union européenne</h2><div class="ptext"><p>L’équivalent est l’autorité compétente de l’État membre, les certificats étant émis via le système de contrôle des échanges de l’Union. L’établissement doit détenir l’agrément correspondant, et pour l’export vers un pays tiers le modèle de certificat est celui convenu entre l’Union et la destination.</p></div></div><div class="pblock"><span class="k">04</span><h2>Ce qu’il faut demander, dans cet ordre</h2><div class="ptext"><ul class="plist"><li><b>Le numéro d’agrément de l’établissement</b>, tel qu’enregistré, et non la raison commerciale.</li><li><b>La confirmation écrite que l’établissement est agréé pour la destination</b>, pas pour la région ni pour un pays voisin.</li><li><b>Le modèle de certificat</b> qui sera émis, et s’il est électronique ou papier, car cela détermine le délai.</li><li><b>Qui le signe</b> et combien de temps prend la signature dans cette usine.</li><li><b>Ce qui se passe si la destination modifie ses exigences</b> entre le contrat et la date de chargement.</li></ul><p class="pnote">Nous ne considérons pas une assurance verbale du vendeur comme une réponse. Le numéro est vérifié, et lorsque la destination est ambiguë le modèle de certificat est identifié par écrit avant tout mouvement d’argent.</p></div></div><div class="pblock"><span class="k">05</span><h2>Pourquoi c’est la première question</h2><div class="ptext"><p>Parce que c’est la seule variable commerciale qui ne peut pas être corrigée ensuite. Un prix se renégocie, un conditionnement se change, une date glisse. Un établissement non agréé ne peut pas être rendu agréé dans le temps d’un cycle d’expédition, et un conteneur de produits congelés immobilisé à un poste frontière est l’échec le plus coûteux disponible sur cette ligne.</p></div></div></div>

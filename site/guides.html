@@ -128,6 +128,12 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band .eyebrow{color:var(--gold-soft)}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 <style>
 /* hero */
@@ -313,6 +319,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* числовая полоса: объём и счётчик */
+.nums{perspective:1300px;perspective-origin:50% 40%}
+.num{transform-style:preserve-3d;will-change:transform,opacity}
+.num b{display:block;transform-origin:50% 90%;
+  text-shadow:0 1px 0 rgba(255,255,255,.65), 0 10px 26px rgba(11,74,64,.16);
+  font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.num{transform:none!important;opacity:1!important}}
 </style>
 
 <style>
@@ -432,10 +446,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* ссылка для клавиатуры: видна только при фокусе */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 </head>
 <body>
 <!--email_off-->
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <div class="wrap navin">
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
@@ -445,7 +468,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
       <a href="services">What we do</a>
       <a href="supply">What we supply</a>
       <a href="corridors">Corridors</a>
-      <a href="guides">Guides</a>
+      <a href="guides" aria-current="page">Guides</a>
       <a href="about">About</a>
       <a href="contact">Contact</a>
     </div>
@@ -465,7 +488,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <section><div class="wrap">
 <div class="lede"><h2>Why a trading company publishes this</h2><p class="intro">Half of what goes wrong in a first import goes wrong because nobody explained the rule before the order was placed. A buyer who understands where risk passes and who is liable for a classification is a better counterparty, and a better counterparty is cheaper for us too.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>Start here if you have never imported</h2><div class="ptext"><p>Read <a href="incoterms">Incoterms</a> first, then <a href="landed-price">what a landed price must include</a>. Between them they cover the two things that make quotations incomparable: the terms they are quoted on and the costs they leave out.</p></div></div><div class="pblock"><span class="k">02</span><h2>If you already have a supplier</h2><div class="ptext"><p>Read <a href="verify-supplier">how to verify a supplier is a factory</a> and <a href="letter-of-credit">the letter of credit at sight</a>. The first catches the counterparty problem, the second is how you stop paying for a promise.</p></div></div><div class="pblock"><span class="k">03</span><h2>If you are buying food</h2><div class="ptext"><p>Read <a href="veterinary-certificate">veterinary certificates</a> before anything else, because an inadmissible establishment makes the price irrelevant. Then <a href="poultry-cuts">cut nomenclature</a> and <a href="reefer-cold-chain">the cold chain</a>.</p></div></div></div>

@@ -128,6 +128,12 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band .eyebrow{color:var(--gold-soft)}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 <style>
 /* hero */
@@ -313,6 +319,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* числовая полоса: объём и счётчик */
+.nums{perspective:1300px;perspective-origin:50% 40%}
+.num{transform-style:preserve-3d;will-change:transform,opacity}
+.num b{display:block;transform-origin:50% 90%;
+  text-shadow:0 1px 0 rgba(255,255,255,.65), 0 10px 26px rgba(11,74,64,.16);
+  font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.num{transform:none!important;opacity:1!important}}
 </style>
 
 <style>
@@ -432,10 +446,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* ссылка для клавиатуры: видна только при фокусе */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 </head>
 <body>
 <!--email_off-->
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <div class="wrap navin">
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
@@ -466,7 +489,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <section><div class="wrap"><figure class="mediafig" style="margin-bottom:44px"><div class="shot"><span class="pz"><img src="media/pipe.webp" width="922" height="691" loading="lazy" alt="Stacked construction material seen end on"></span></div><figcaption>Materials bought to a named standard, with the certificate attached</figcaption></figure>
 <div class="lede"><h2>Finishing materials fail on tolerance, not on price</h2><p class="intro">A tile that is two millimetres out of square, a batch of slabs from three different blocks, a cable that does not carry the reaction-to-fire class the building needs. None of these shows in a quotation, and all of them are discovered on site.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>What we buy in this category</h2><div class="ptext"><ul class="plist"><li><b>Natural stone</b> in blocks, slabs cut to 2 cm or 3 cm, and finished pieces. Polished, honed or brushed, bundled by block so a run matches.</li><li><b>Porcelain and ceramic tile</b> to ISO 13006 and EN 14411, specified by water absorption group and by abrasion class rather than by trade name.</li><li><b>Cement products and dry mixes</b>, cement to EN 197-1 class, adhesives and screeds with the batch certificate.</li><li><b>Insulation</b> to the EN 13162 to 13171 family, specified by declared thermal conductivity and by thickness, not by brand.</li><li><b>Sanitary ware</b>, ceramics and fittings, with the pressure and flush tests stated.</li><li><b>Cable and electrical goods</b>, with the reaction-to-fire classification the destination building code requires.</li></ul></div></div><div class="pblock"><span class="k">02</span><h2>The specification that makes offers comparable</h2><div class="ptext"><p>Tile is the clearest example. “600 by 600 porcelain, grey” is not a specification: it leaves out the water absorption group, which decides whether the tile can go outside; the abrasion class, which decides whether it survives a commercial floor; the rectification, which decides the joint width; the surface slip rating; and the calibre and shade batch, which decide whether two pallets laid side by side look like one floor.</p><p>We write those into the order before asking for a price, and we ask for the shade and calibre batch to be held across the whole quantity. A second shipment from the same factory in a different batch will not match the first, and no discount fixes it.</p></div></div><div class="pblock"><span class="k">03</span><h2>Natural stone is three different purchases</h2><div class="ptext"><p>A quarry sells blocks by the cubic metre. A factory sells slabs by the square metre, bundled by block. A fabricator sells pieces cut to a drawing. Different prices, different packing, different waste and different people to argue with.</p><p>If the buyer intends to fabricate, bundle integrity matters more than the unit price, because slabs from different blocks will not match across a run. Most commercial travertine and much marble is resin treated and often mesh backed, which is normal and has to be declared. Stone sold as unfilled that arrives resin filled is a claim. The detail is on the <a href="turkiye">Türkiye corridor page</a>.</p></div></div><div class="pblock"><span class="k">04</span><h2>Packing decides what arrives saleable</h2><div class="ptext"><p>Tile travels on pallets and is lost to corner damage; the pallet has to be strapped and corner-protected and the stretch wrap has to be real wrap, not three turns. Stone travels on A-frames or in wooden bundles with the faces separated, and a sealed crate that cannot breathe marks light material with trapped moisture.</p><p>Cement products and dry mixes are hygroscopic: they want a liner and they want to be loaded last and discharged first. We write the breakage and moisture allowance into both contracts in the same words, with the same inspection window and the same evidence standard.</p></div></div><div class="pblock"><span class="k">05</span><h2>What the destination will ask for</h2><div class="ptext"><p>Which certificates matter depends entirely on where the goods are going, and this is settled before the order rather than at the border. In the European Union, construction products in scope carry a declaration of performance and CE marking. In the Eurasian customs union the equivalent is the EAC conformity regime. In the United States the question is usually the HTS classification and whether a trade remedy order touches the product.</p><p class="pnote">We agree the classification in writing before the order is placed, because the importer of record is liable for a wrong one and the seller is not.</p></div></div></div>

@@ -132,6 +132,12 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band .eyebrow{color:var(--gold-soft)}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 <style>
 /* hero */
@@ -328,6 +334,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <!--email_off-->
 <nav>
   <div class="wrap navin">
@@ -372,7 +379,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <section id="numbers">
   <div class="wrap">
     <span class="eyebrow">In numbers</span>
@@ -391,6 +398,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     </div>
   </div>
 </section>
+
 
 
 

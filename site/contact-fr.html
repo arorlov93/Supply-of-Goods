@@ -131,6 +131,12 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band .eyebrow{color:var(--gold-soft)}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 <style>
 /* hero */
@@ -316,6 +322,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* числовая полоса: объём и счётчик */
+.nums{perspective:1300px;perspective-origin:50% 40%}
+.num{transform-style:preserve-3d;will-change:transform,opacity}
+.num b{display:block;transform-origin:50% 90%;
+  text-shadow:0 1px 0 rgba(255,255,255,.65), 0 10px 26px rgba(11,74,64,.16);
+  font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.num{transform:none!important;opacity:1!important}}
 </style>
 
 <style>
@@ -435,10 +449,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* ссылка для клавиатуры: видна только при фокусе */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 </head>
 <body>
 <!--email_off-->
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <div class="wrap navin">
     <a class="logo" href="/fr">ISP Group <em>Global Commerce</em></a>
@@ -448,7 +471,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
       <a href="afrique-ouest">Afrique de l'Ouest</a>
       <a href="decoupes-volaille">Découpes</a>
       <a href="certificat-veterinaire">Certificat</a>
-      <a href="contact-fr">Contact</a>
+      <a href="contact-fr" aria-current="page">Contact</a>
       <a href="/">English</a>
     </div>
     <a class="btn" href="contact-fr#enquiry"><span class="btn-long">Demander un </span>devis</a>
@@ -487,7 +510,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <section><div class="wrap">
 <div class="lede"><h2>Ce qu’il faut mettre dans le premier message</h2><p class="intro">Plus vite un besoin devient un cahier des charges, plus vite il devient un prix. Vous n’avez pas besoin de tout cela pour nous écrire, mais chaque ligne que vous pouvez remplir supprime un aller-retour.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>Les quatre lignes qui lancent une cotation</h2><div class="ptext"><ul class="plist"><li><b>Ce qu’est le produit</b>, avec vos propres mots. Une photo, un plan, une référence concurrente ou un échantillon valent mieux qu’une catégorie.</li><li><b>Quelle quantité</b>, par expédition et par mois si cela se répète.</li><li><b>Où cela doit arriver.</b> Port, ville ou la porte de votre entrepôt. Le transport intérieur est souvent le poste le plus lourd d’un prix rendu.</li><li><b>Sur quelles conditions</b>, si vous le savez déjà. Sinon, dites-le et nous coterons deux bases côte à côte.</li></ul></div></div><div class="pblock"><span class="k">02</span><h2>Ce qui se passe ensuite</h2><div class="ptext"><p>Sous un jour ouvré, un accusé de réception avec les questions qui restent. Ces questions sont le cahier des charges en train de se former, et c’est la partie qui décide si l’expédition fonctionne.</p><p>Sous une dizaine de jours ouvrés, un prix rendu : au moins trois offres comparables de producteurs vérifiés sur une même base, fret, assurance, frais portuaires, droits et certification inclus, avec la date de validité indiquée.</p><p class="pnote">Pas de frais de cotation, et aucune commission ajoutée à la facture d’un producteur. Nous achetons en notre nom propre et revendons.</p></div></div><div class="pblock"><span class="k">03</span><h2>Si vous êtes producteur</h2><div class="ptext"><p>Écrivez à la même adresse. Envoyez le numéro d’agrément ou de licence, la gamme avec les formats de conditionnement, les ports de chargement habituels et les pays pour lesquels vous êtes déjà autorisé. Cela nous suffit pour vous dire sous un jour si nous avons un acheteur.</p></div></div><div class="pblock"><span class="k">04</span><h2>Où nous sommes</h2><div class="ptext"><p>ISP GROUP LLC est une société américaine. Siège au 16395 Biscayne Blvd, North Miami Beach, Floride 33160. Correspondance en français, en anglais et en russe ; une demande écrite reçoit une réponse plus vite que tout autre canal.</p></div></div></div>

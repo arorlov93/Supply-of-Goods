@@ -128,6 +128,12 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band .eyebrow{color:var(--gold-soft)}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 <style>
 /* hero */
@@ -313,6 +319,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* числовая полоса: объём и счётчик */
+.nums{perspective:1300px;perspective-origin:50% 40%}
+.num{transform-style:preserve-3d;will-change:transform,opacity}
+.num b{display:block;transform-origin:50% 90%;
+  text-shadow:0 1px 0 rgba(255,255,255,.65), 0 10px 26px rgba(11,74,64,.16);
+  font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.num{transform:none!important;opacity:1!important}}
 </style>
 
 <style>
@@ -432,10 +446,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* ссылка для клавиатуры: видна только при фокусе */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 </head>
 <body>
 <!--email_off-->
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <div class="wrap navin">
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
@@ -465,7 +488,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <section><div class="wrap">
 <div class="lede"><h2>Two documents with the same name and different jobs</h2><p class="intro">A non-preferential certificate says where the goods came from. A preferential one claims a reduced or zero duty under a trade agreement. The second is worth money and is therefore checked properly.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>Non-preferential: who made it</h2><div class="ptext"><p>This is the ordinary certificate, usually issued by a chamber of commerce in the exporting country on the exporter's declaration. It is used for customs statistics, for government procurement rules, for labelling requirements, for quotas and for establishing whether a trade remedy applies to the goods.</p><p>It carries no duty benefit by itself. It is still the document that decides whether an antidumping order reaches your consignment, which makes it quietly important on any lane where such an order exists.</p></div></div><div class="pblock"><span class="k">02</span><h2>Preferential: why it is worth money</h2><div class="ptext"><p>A preferential certificate claims the reduced duty available under a specific trade agreement between the exporting and importing countries. Because it has a cash value it is issued under stricter conditions, often on a prescribed form, and it is the one customs authorities audit after the fact.</p><p>Several modern agreements have moved away from a stamped certificate to <b>self-certification</b>: the exporter makes a statement of origin on the invoice or on a separate declaration, sometimes only if registered in an official exporter system. That shifts the burden entirely onto the exporter's records, and it means a buyer should ask what evidence sits behind the statement, not just whether the statement exists.</p></div></div><div class="pblock"><span class="k">03</span><h2>How origin is actually decided</h2><div class="ptext"><ul class="plist"><li><b>Wholly obtained.</b> Mined, grown, harvested, caught or born and raised in one country. Unambiguous and rare outside agriculture and raw materials.</li><li><b>Substantial transformation.</b> For anything made from imported inputs, origin is where the last substantial transformation happened. Agreements define that in one of three ways, and sometimes more than one at once.</li><li><b>Change of tariff classification.</b> The finished good sits under a different heading from its imported inputs. Mechanical and easy to test.</li><li><b>Value-added threshold.</b> A stated percentage of the value has to originate locally. Requires a costing the exporter may not want to show.</li><li><b>Specific process rule.</b> A named operation must occur, common in textiles and chemicals.</li><li><b>Insufficient operations.</b> Repacking, labelling, simple assembly, mixing and sorting never confer origin, whatever the invoice says.</li></ul><p class="pnote">Assembling imported parts in a third country to change the stated origin and escape a duty is circumvention, not planning. It reaches back to the importer, with penalties, and the goods are usually traceable.</p></div></div><div class="pblock"><span class="k">04</span><h2>What voids a certificate in practice</h2><div class="ptext"><ul class="plist"><li><b>Issued by the wrong body.</b> Preferential forms generally have one competent authority per country; a chamber certificate will not substitute.</li><li><b>Names the trading company as producer.</b> If the exporter on the certificate is not the manufacturer, the manufacturer still has to be identifiable and the origin still has to be theirs.</li><li><b>Details disagree with the other documents.</b> Quantities, marks, container numbers and invoice references all have to reconcile with the bill of lading and the packing list.</li><li><b>Issued after shipment without being marked as such.</b> Retrospective issue is allowed in most schemes but has to be declared on the face of the document.</li><li><b>Nothing behind it.</b> On audit the exporter has to produce the costing or the bill of materials that supports the claim. A statement with no file behind it is where self-certification goes wrong.</li></ul></div></div><div class="pblock"><span class="k">05</span><h2>What we do</h2><div class="ptext"><p>We establish before the order which certificate the destination needs, which body issues it in the country of production, and whether the product meets the rule of origin as a matter of fact rather than as a matter of assertion. Where a preference is material to the price, we say in the quotation what the landed cost is with and without it, so a failed claim is a known risk rather than a surprise.</p><p>Where a trade remedy order may be in scope, origin is the first thing we pin down, for the reason set out in the <a href="antidumping-check">trade remedy guide</a>.</p></div></div></div>

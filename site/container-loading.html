@@ -128,6 +128,12 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band .eyebrow{color:var(--gold-soft)}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 <style>
 /* hero */
@@ -313,6 +319,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* числовая полоса: объём и счётчик */
+.nums{perspective:1300px;perspective-origin:50% 40%}
+.num{transform-style:preserve-3d;will-change:transform,opacity}
+.num b{display:block;transform-origin:50% 90%;
+  text-shadow:0 1px 0 rgba(255,255,255,.65), 0 10px 26px rgba(11,74,64,.16);
+  font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.num{transform:none!important;opacity:1!important}}
 </style>
 
 <style>
@@ -432,10 +446,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* ссылка для клавиатуры: видна только при фокусе */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 </head>
 <body>
 <!--email_off-->
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <div class="wrap navin">
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
@@ -465,7 +488,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <section><div class="wrap">
 <div class="lede"><h2>The question to answer before asking for a freight rate</h2><p class="intro">Is this cargo heavy or bulky. Steel, tile, cement and paper reach the weight limit with the box half empty. Packaging, insulation and finished consumer goods run out of space with tonnes to spare. The two are priced in opposite directions.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>What the boxes hold</h2><div class="ptext"><p>Approximate working figures, which vary by operator, by equipment age and by the road weight limits at each end. Confirm them against the actual booking rather than planning to the last kilogram.</p><ul class="plist"><li><b>20ft general purpose</b>: roughly 33 cubic metres of space. Dense cargo normally reaches its weight limit well before that, which is why a 20ft box that looks half empty is often the correct and cheaper choice for steel or tile.</li><li><b>40ft general purpose</b>: roughly twice the volume of a 20ft, and not twice the payload. For heavy cargo two 20ft boxes usually beat one 40ft.</li><li><b>40ft high cube</b>: around nine or ten cubic metres more than a standard 40ft, for the same payload. The right box for light, bulky cargo.</li><li><b>40ft reefer</b>: less internal volume than a dry box because of the insulation and the machinery, and about 25 tonnes net on a typical frozen food loading plan.</li></ul><p class="pnote">Road weight limits at origin and destination often bind before the container's own rating does. A box that is legal at sea can be illegal on the road at one end, and that is discovered by the haulier, not by the carrier.</p></div></div><div class="pblock"><span class="k">02</span><h2>Verified gross mass is not optional</h2><div class="ptext"><p>Under the international convention on safety of life at sea, the shipper must declare a verified gross mass for every packed container before it is loaded on a vessel, obtained either by weighing the packed container or by weighing the cargo and adding the certified tare. A container without a declared VGM does not get loaded.</p><p>In practice this is handled by the forwarder, and in practice it occasionally is not, with a container rolled to the next vessel as the result. On a new lane we confirm who is producing the VGM figure before the booking rather than on the cut-off day.</p></div></div><div class="pblock"><span class="k">03</span><h2>When LCL is false economy</h2><div class="ptext"><p>Less than container load looks cheaper because you pay for a share. The problem is what is attached to that share: destination charges on LCL are per cubic metre and they are high, the consignment is handled at a deconsolidation warehouse at both ends, and the transit time is longer because the box waits for other cargo.</p><p>The rough rule is that below about a third of a container, LCL wins. Above about half, a full container usually wins even if some of it is air. In between it depends entirely on the destination charges at that specific port, and those are worth asking for by name rather than assuming.</p></div></div><div class="pblock"><span class="k">04</span><h2>Consolidation: a middle option most buyers do not ask for</h2><div class="ptext"><p>Several suppliers in the same region can be loaded into one container at the port of loading. The buyer gets full container economics and one bill of lading instead of four, which also means one customs entry instead of four.</p><p>Two costs come with it. Consolidation adds roughly a week to the schedule, because the box waits for the slowest supplier. And one packing list has to reconcile against several suppliers' cartons, which is exactly the kind of discrepancy a customs authority resolves by inspecting, so the counting and the photography at the consolidation warehouse are not optional.</p></div></div><div class="pblock"><span class="k">05</span><h2>Loading practice that prevents claims</h2><div class="ptext"><ul class="plist"><li>Dunnage so the load cannot shift, and a photograph showing it in place.</li><li>Product off the walls and the floor on anything hygroscopic, because the mechanism for wet cargo is condensation on the container roof at night, not rain.</li><li>Heavy items low and evenly distributed, not all against one wall; an unbalanced container is a road safety problem at the far end.</li><li>Wood packaging treated and marked, checked and photographed before sealing.</li><li>The seal number recorded and photographed, and matched against the bill of lading.</li></ul></div></div></div>

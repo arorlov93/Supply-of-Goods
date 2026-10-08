@@ -128,6 +128,12 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band .eyebrow{color:var(--gold-soft)}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 <style>
 /* hero */
@@ -313,6 +319,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* числовая полоса: объём и счётчик */
+.nums{perspective:1300px;perspective-origin:50% 40%}
+.num{transform-style:preserve-3d;will-change:transform,opacity}
+.num b{display:block;transform-origin:50% 90%;
+  text-shadow:0 1px 0 rgba(255,255,255,.65), 0 10px 26px rgba(11,74,64,.16);
+  font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.num{transform:none!important;opacity:1!important}}
 </style>
 
 <style>
@@ -432,10 +446,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* ссылка для клавиатуры: видна только при фокусе */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 </head>
 <body>
 <!--email_off-->
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <div class="wrap navin">
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
@@ -465,7 +488,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <section><div class="wrap">
 <div class="lede"><h2>A rule about insects that behaves like a rule about money</h2><p class="intro">Solid wood carries pests between continents. The international standard that addresses it is adopted by most trading nations, and enforcement is at the border, where the only available remedies are expensive.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>What is covered</h2><div class="ptext"><p>Wood packaging material: pallets, crates, cases, boxes, drums, dunnage, blocking and bracing. If it is solid wood and it is holding your cargo in place, it is in scope.</p><p>Processed wood-based materials are out of scope, because the manufacturing process already destroys pests. That includes plywood, oriented strand board, particle board and veneer, and in general thin wood below the thickness threshold the standard sets. Wood that has been fully stripped of bark and processed into panels is not the problem the rule addresses.</p></div></div><div class="pblock"><span class="k">02</span><h2>The treatments and the mark</h2><div class="ptext"><p>Approved treatments are heat treatment to a specified core temperature and duration, dielectric heating, and fumigation, with the fumigant in question being phased out in many jurisdictions on environmental grounds. Heat treatment is the normal commercial answer.</p><p>Treated material carries a stamp with four elements: the IPPC wheat symbol, the two-letter country code, a unique number identifying the treatment provider, and the treatment code. The mark must be legible, permanent and on at least two opposite sides of the item.</p><p class="pnote">A hand-written stamp, a mark on one side only, a mark that is illegible, or a pallet that has been repaired with untreated timber after being marked: each of these fails, and each is common.</p></div></div><div class="pblock"><span class="k">03</span><h2>What happens when it fails</h2><div class="ptext"><p>The options at the border are all bad and all at the importer's cost: treatment at the port where that is available, re-export of the packaging, destruction of the packaging, or in the worst case refusal of the whole consignment. On top of the direct cost the container sits, and demurrage accrues from the day it lands.</p><p>The timing is what makes this expensive. A non-compliant pallet costs a few tens of dollars to replace at the factory and several thousand to resolve at the destination.</p></div></div><div class="pblock"><span class="k">04</span><h2>Where the check belongs</h2><div class="ptext"><ul class="plist"><li>At loading, before the container is sealed, not at arrival.</li><li>Photograph the mark on the pallets actually used, not on a sample pallet in the corner of the warehouse.</li><li>Photograph the dunnage and the bracing too, because loose timber used to chock a machine is wood packaging and is caught by the same rule.</li><li>Where a factory repairs pallets in house, confirm that repair timber is also treated and that the pallet is re-marked.</li><li>Put the requirement in the purchase order in writing, with the treatment and the mark named, so a failure is a breach rather than a misunderstanding.</li></ul></div></div><div class="pblock"><span class="k">05</span><h2>Who actually gets caught</h2><div class="ptext"><p>Not usually the exporters who ship every week on standard pallets. It is first-time shippers, factories that normally sell domestically, out-of-gauge machinery crated specially for one shipment, and consolidated loads where one of six suppliers used its own timber. All four are situations we see at the start of a new lane, which is exactly when nobody is looking for it.</p></div></div></div>

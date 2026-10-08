@@ -131,6 +131,12 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band .eyebrow{color:var(--gold-soft)}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 <style>
 /* hero */
@@ -316,6 +322,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* числовая полоса: объём и счётчик */
+.nums{perspective:1300px;perspective-origin:50% 40%}
+.num{transform-style:preserve-3d;will-change:transform,opacity}
+.num b{display:block;transform-origin:50% 90%;
+  text-shadow:0 1px 0 rgba(255,255,255,.65), 0 10px 26px rgba(11,74,64,.16);
+  font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.num{transform:none!important;opacity:1!important}}
 </style>
 
 <style>
@@ -435,10 +449,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* ссылка для клавиатуры: видна только при фокусе */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 </head>
 <body>
 <!--email_off-->
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <div class="wrap navin">
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
@@ -468,7 +491,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <section><div class="wrap">
 <div class="lede"><h2>The commonest reason two offers cannot be compared</h2><p class="intro">Not the Incoterm, not the pack, not the payment terms. It is that the two sellers are quoting different parts of the bird and both are calling it the same thing.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>The anatomy, once, clearly</h2><div class="ptext"><p>A whole wing has three sections joined end to end. Closest to the body is the <b>drumette</b>, the small drumstick-shaped piece with a single bone. In the middle is the <b>mid-joint</b>, also called the flat or the wingette, with two parallel bones. At the end is the <b>tip</b>, which has very little meat.</p><ul class="plist"><li><b>Whole wing, three joint</b>: all three sections, intact.</li><li><b>Two joint wing</b>: drumette plus flat, tip removed. This is what most markets mean by a wing for retail or food service.</li><li><b>Drumette</b> alone: the premium section, priced accordingly.</li><li><b>Mid-joint flat</b> alone: sold separately, strong demand in some markets and almost none in others.</li><li><b>Tips</b>: a by-product with its own narrow market, mostly for stock and processing.</li></ul><p class="pnote">A seller quoting “wings” without naming the configuration can be offering any of the first four, and the difference between the cheapest and the dearest is not a rounding error.</p></div></div><div class="pblock"><span class="k">02</span><h2>Tom and hen are not grades of the same thing</h2><div class="ptext"><p>In turkey the male and female lines are raised to different weights and give different piece sizes. For a processor buying to a portion weight, they are not interchangeable, and a shipment of the wrong one is unusable rather than merely disappointing. Specify which line, and specify the piece weight range.</p></div></div><div class="pblock"><span class="k">03</span><h2>The other parts, and why they have their own markets</h2><div class="ptext"><p>Legs, thighs, drumsticks, backs, necks, tails and paws all trade separately and each has a geography. A cut that is a by-product in one market is a staple in another, which is the whole reason the international trade in poultry parts exists: a bird is disassembled and each part sold where it is worth most.</p><p>Two commercial consequences. First, prices for different parts of the same bird move independently, so a basket quoted as a single average price hides which line is expensive. Second, availability is driven by what the rest of the world is buying, which is why a line can be unobtainable in a month when the whole bird is cheap.</p></div></div><div class="pblock"><span class="k">04</span><h2>What a usable enquiry looks like</h2><div class="ptext"><ul class="plist"><li>The cut named by anatomy, not by category.</li><li>Tom or hen for turkey, and the piece weight range.</li><li>The pack: carton weight, block frozen or individually quick frozen, net or gross.</li><li>The Incoterm and the named port, per destination port if there is more than one.</li><li>Quantity per line, per month, not as a single basket figure.</li><li>The establishment number, because an inadmissible plant makes all of the above irrelevant.</li></ul><p>We send every enquiry on this corridor in that form and ask for the price per line on the same basis. It takes one extra paragraph to write and it removes two weeks of correspondence.</p></div></div><div class="pblock"><span class="k">05</span><h2>Why the basket matters more than the discount</h2><div class="ptext"><p>On a mixed programme the mix is worth more than the negotiation. Shifting the proportion of the container towards the lines with the widest spread between the buying market and the selling market can be worth more per month than every cent squeezed out of the supplier. That conversation belongs with the buyer at the start, not after the first shipment.</p></div></div></div>

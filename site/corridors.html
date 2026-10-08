@@ -128,6 +128,12 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band .eyebrow{color:var(--gold-soft)}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 <style>
 /* hero */
@@ -313,6 +319,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* числовая полоса: объём и счётчик */
+.nums{perspective:1300px;perspective-origin:50% 40%}
+.num{transform-style:preserve-3d;will-change:transform,opacity}
+.num b{display:block;transform-origin:50% 90%;
+  text-shadow:0 1px 0 rgba(255,255,255,.65), 0 10px 26px rgba(11,74,64,.16);
+  font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.num{transform:none!important;opacity:1!important}}
 </style>
 
 <style>
@@ -432,10 +446,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* ссылка для клавиатуры: видна только при фокусе */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 </head>
 <body>
 <!--email_off-->
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <div class="wrap navin">
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
@@ -444,7 +467,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <div class="navlinks" id="navmenu">
       <a href="services">What we do</a>
       <a href="supply">What we supply</a>
-      <a href="corridors">Corridors</a>
+      <a href="corridors" aria-current="page">Corridors</a>
       <a href="guides">Guides</a>
       <a href="about">About</a>
       <a href="contact">Contact</a>
@@ -465,7 +488,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <section><div class="wrap"><figure class="mediafig" style="margin-bottom:44px"><div class="shot"><span class="pz"><img src="media/vessel.webp" width="1023" height="575" loading="lazy" alt="Container vessel under way"></span></div><figcaption>Cargo moves under our contract from the plant gate to the discharge port</figcaption></figure>
 <div class="lede"><h2>Why we organise the business by route and not by product</h2><p class="intro">Setting up a first shipment on a new route is most of the work: finding producers that survive a check, finding a forwarder who actually calls back, learning which customs office wants which paper. The second shipment on the same route costs a fraction of that. So the asset is the route.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>What a working corridor contains</h2><div class="ptext"><ul class="plist"><li><b>Producers that have been checked</b>, with licence or establishment numbers verified against the importing country's register rather than their own websites.</li><li><b>A forwarder with real rates</b> on that specific leg, not a quote desk that sends a number three days later.</li><li><b>A customs broker physically present</b> at the office or border post the cargo will actually cross.</li><li><b>A document set that has already cleared</b> at that destination, so the next one is a copy rather than an experiment.</li><li><b>A settlement route</b> the banks on both ends already accept.</li></ul></div></div><div class="pblock"><span class="k">02</span><h2>The four we run now</h2><div class="ptext"><p>Each corridor page goes into what is specific to that route: the cargo that moves well on it, the terms we lead with, the documents, and the one check on that lane that turns a good purchase into a loss.</p><p>They are deliberately different in character. China is about specification and verification. Türkiye is about grading, crating and a customs classification. West Africa is about veterinary admissibility and payment terms. Southern Africa is about a road leg and which trade regime the goods are moving under.</p></div></div><div class="pblock"><span class="k">03</span><h2>A route that is not here</h2><div class="ptext"><p>We open new lanes, and most of the four below started as one. What we will tell you at the start is how long it takes to build the producer shortlist and whether the destination has a certification regime we have not worked under before. A buyer who is told the truth about a twelve week lead time plans around it.</p></div></div></div>

@@ -128,6 +128,12 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band .eyebrow{color:var(--gold-soft)}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 <style>
 /* hero */
@@ -313,6 +319,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* числовая полоса: объём и счётчик */
+.nums{perspective:1300px;perspective-origin:50% 40%}
+.num{transform-style:preserve-3d;will-change:transform,opacity}
+.num b{display:block;transform-origin:50% 90%;
+  text-shadow:0 1px 0 rgba(255,255,255,.65), 0 10px 26px rgba(11,74,64,.16);
+  font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.num{transform:none!important;opacity:1!important}}
 </style>
 
 <style>
@@ -432,10 +446,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* ссылка для клавиатуры: видна только при фокусе */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 </head>
 <body>
 <!--email_off-->
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <div class="wrap navin">
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
@@ -465,7 +488,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <section><div class="wrap">
 <div class="lede"><h2>Why we benchmark before we negotiate</h2><p class="intro">Three quotations tell you what three sellers hope for. They do not tell you whether the best of the three is good. Customs statistics do, because they are built from declarations that someone signed and a customs authority accepted.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>What the number is</h2><div class="ptext"><p>Trade statistics record, for each commodity code and each partner country, the declared value and the declared net weight of what actually moved in a period. Dividing one by the other gives a unit value: the average price per kilogram at which that commodity crossed that border from that origin.</p><p>It is an average rather than a quotation, and that is the point. It already contains the volume discounts, the seasonal softness and the deals that were never published. A seller quoting well above the running unit value for the same code and the same lane is asking you to pay for something, and the conversation starts there.</p></div></div><div class="pblock"><span class="k">02</span><h2>Where to get it</h2><div class="ptext"><ul class="plist"><li><b>UN Comtrade</b> covers most countries at the six-digit level and is the fastest way to compare several origins into one destination.</li><li><b>National sources</b> are more detailed. The United States publishes down to ten digits, the European Union eight, and several countries, Brazil among them, run open query tools over their own export data at full code level.</li><li><b>Mirror statistics</b>, meaning the exporter's declaration of what it sent you, are often published faster than the importer's own figures and are a useful cross-check when a destination reports slowly.</li></ul></div></div><div class="pblock"><span class="k">03</span><h2>The four traps</h2><div class="ptext"><p><b>Trap one: CIF against FOB.</b> Most countries record imports at CIF value and exports at FOB. Comparing an import unit value with an export unit value therefore compares a delivered price with a factory-gate price, and the gap is the freight, not the margin. Compare like with like or adjust for it explicitly.</p><p><b>Trap two: the basket inside the code.</b> A six-digit code can hold several commercial products at very different prices. A code covering frozen poultry cuts holds wings, legs and tails together, and the average moves with the mix rather than with the market. Go as deep as the national code allows and read the description.</p><p><b>Trap three: thin flows.</b> A unit value built on fifty tonnes in a year is one or two shipments and can be anything, including a sample consignment or a gift. We set a weight floor before we look at a number, and we ignore everything below it.</p><p><b>Trap four: related-party pricing.</b> Shipments between two arms of the same group are declared at transfer prices that serve a tax purpose, not a market one. On lanes dominated by a single integrated producer this can pull the whole average.</p><p class="pnote">None of the four makes the data useless. They make it data that has to be read rather than quoted. Used properly it is still the only published number in this trade that someone had to sign.</p></div></div><div class="pblock"><span class="k">04</span><h2>How we use it in a negotiation</h2><div class="ptext"><p>Before approaching producers on a lane we pull the destination's import unit values by origin and by code for the most recent full periods, drop the thin flows, and set a target band rather than a target number. The band is what we negotiate against, and we say to the seller what it is based on.</p><p>That changes the conversation from haggling to arithmetic, and it regularly moves the achievable price by a fifth or more. It also decides which origin to approach first, which is often worth more than the discount itself.</p></div></div></div>

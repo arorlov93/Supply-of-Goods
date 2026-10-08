@@ -128,6 +128,12 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band .eyebrow{color:var(--gold-soft)}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 <style>
 /* hero */
@@ -313,6 +319,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* числовая полоса: объём и счётчик */
+.nums{perspective:1300px;perspective-origin:50% 40%}
+.num{transform-style:preserve-3d;will-change:transform,opacity}
+.num b{display:block;transform-origin:50% 90%;
+  text-shadow:0 1px 0 rgba(255,255,255,.65), 0 10px 26px rgba(11,74,64,.16);
+  font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.num{transform:none!important;opacity:1!important}}
 </style>
 
 <style>
@@ -432,10 +446,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* ссылка для клавиатуры: видна только при фокусе */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 </head>
 <body>
 <!--email_off-->
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <div class="wrap navin">
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
@@ -446,7 +469,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
       <a href="supply">What we supply</a>
       <a href="corridors">Corridors</a>
       <a href="guides">Guides</a>
-      <a href="about">About</a>
+      <a href="about" aria-current="page">About</a>
       <a href="contact">Contact</a>
     </div>
     <a class="btn" href="contact#enquiry"><span class="btn-long">Request a </span>quote</a>
@@ -465,7 +488,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <section><div class="wrap"><figure class="mediafig" style="margin-bottom:44px"><div class="shot"><span class="pz"><img src="media/terminal.webp" width="1023" height="438" loading="lazy" alt="Ship-to-shore gantry cranes working a container vessel"></span></div><figcaption>We carry the goods on our own balance sheet until they are yours</figcaption></figure>
 <div class="lede"><h2>What the difference between a trader and an agent actually means</h2><p class="intro">An agent introduces you to a factory and takes a percentage. If the factory fails, the agent is a witness. We are the buyer on one contract and the seller on the next, which means the failure is ours to fix and ours to pay for.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>Who we are</h2><div class="ptext"><p>ISP GROUP LLC is a United States company with its registered office in North Miami Beach, Florida. We source materials, products and industrial equipment from verified producers and deliver them to the buyer's port or gate on agreed Incoterms.</p><p>Behind the company are twenty years of supply work across four continents: container programmes out of China, delivery to unequipped shorelines in the Russian north where there is no quay and the navigation window is measured in weeks, and food and equipment into the European Union under its own certification regime. Different cargo, different continents, the same discipline. That account is written out in full on <a href="experience">twenty years of supply work</a>.</p></div></div><div class="pblock"><span class="k">02</span><h2>How we work</h2><div class="ptext"><p>Our work splits into four things we do on every shipment, in this order.</p><ul class="plist"><li><b>We verify before we quote.</b> Establishment and licence numbers are checked against the registers of the importing country, not taken from the seller's website. Lookalike exporter domains are common in this trade and we screen for them.</li><li><b>We price from customs data.</b> We benchmark what comparable goods actually cleared customs at on your lane before we negotiate, so an offer can be judged against the market rather than against itself.</li><li><b>We take title.</b> We are the buyer on one contract and the seller on the next. You deal with one counterparty, one invoice and one currency, in your own jurisdiction.</li><li><b>We mirror the terms.</b> Inspection windows, weight tolerances, claim periods and bank charges are matched on both contracts, so nothing falls into the gap between supplier and buyer.</li></ul></div></div><div class="pblock"><span class="k">03</span><h2>Why we are not tied to one commodity</h2><div class="ptext"><p>Because the asset is not the product, it is the lane. A trade lane is the set of verified producers, the forwarder, the customs broker and the document set on a given route. Once a lane works, the product travelling down it can change, and the second shipment costs a fraction of the first to set up.</p><p>That is why our pages are organised by <a href="corridors">corridor</a> rather than by catalogue, and why a product outside our usual categories is a sourcing project rather than a refusal. What transfers between products is the method: specification, producer verification, landed costing, documents and settlement. What has to be rebuilt each time is the producer shortlist.</p></div></div><div class="pblock"><span class="k">04</span><h2>What we do not do</h2><div class="ptext"><p>We do not quote on a specification we have not read, we do not prepay a producer in full, and we do not put a commission on top of someone else's invoice and call it a service.</p><p>We also do not claim capability we have not got. If a lane is new to us we say so, we say what we will have to build, and we say how long that takes. A buyer who is told the truth about a twelve week lead time plans around it. A buyer who is told six and gets twelve does not come back.</p></div></div><div class="pblock"><span class="k">05</span><h2>Where to find the detail</h2><div class="ptext"><p>The <a href="services">services page</a> sets out each step as a separate piece of work with a named deliverable. The <a href="corridors">corridor pages</a> go into what is specific to each route. The <a href="guides">guides</a> answer the questions that come up before a first order, from Incoterms to what a landed price has to include.</p></div></div></div>

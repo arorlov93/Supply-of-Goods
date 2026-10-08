@@ -128,6 +128,12 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band .eyebrow{color:var(--gold-soft)}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 <style>
 /* hero */
@@ -313,6 +319,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* числовая полоса: объём и счётчик */
+.nums{perspective:1300px;perspective-origin:50% 40%}
+.num{transform-style:preserve-3d;will-change:transform,opacity}
+.num b{display:block;transform-origin:50% 90%;
+  text-shadow:0 1px 0 rgba(255,255,255,.65), 0 10px 26px rgba(11,74,64,.16);
+  font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.num{transform:none!important;opacity:1!important}}
 </style>
 
 <style>
@@ -432,10 +446,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* ссылка для клавиатуры: видна только при фокусе */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 </head>
 <body>
 <!--email_off-->
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <div class="wrap navin">
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
@@ -466,7 +489,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <section><div class="wrap"><figure class="mediafig" style="margin-bottom:44px"><div class="shot"><span class="pz"><img src="media/machinery.webp" width="910" height="683" loading="lazy" alt="Workshop tooling and drive components"></span></div><figcaption>Tooling is bought on the grade of its consumable, not on the body</figcaption></figure>
 <div class="lede"><h2>The cheap part of the tool is the tool</h2><p class="intro">On almost everything in this category the purchase price is a small fraction of the running cost. An abrasive that lasts two thirds as long is not thirty per cent cheaper, it is fifty per cent more expensive, and nothing in a product photograph shows which one you are being offered.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>Three different ways to buy the same box</h2><div class="ptext"><ul class="plist"><li><b>To a named brand.</b> You know what you are getting and you pay for it. Our job is authenticity and landed cost, and the first check is whether the seller is an authorised channel.</li><li><b>To specification, unbranded.</b> A factory builds to your written specification and your packaging. Cheaper per unit, slower to set up, and only works if the specification is real.</li><li><b>Own brand.</b> The same as above with your mark, your carton and your manual. Minimum quantities rise, and the artwork and the safety text become part of the order.</li></ul><p>Most disappointments in this category come from buying the second while thinking about the first: a specification that says “equivalent to” a brand, with nothing measurable after it.</p></div></div><div class="pblock"><span class="k">02</span><h2>What makes a tool specification measurable</h2><div class="ptext"><p>For power tools: input power and, more usefully, output power; no-load speed; the bearing type; the switch and brush assembly by make; the cable length and plug type for the destination; the voltage and frequency; the insulation class; and the electrical safety standard the destination enforces, which for most of the world is the IEC 62841 family.</p><p>For abrasives: the grit, the bond, the maximum operating speed and the safety standard, because a cutting disc is a safety-critical product and EN 12413 exists for a reason. For measuring instruments: the accuracy class and whether a calibration certificate is supplied and traceable.</p><p>For fixings: the grade and the coating, which together decide both the strength and the service life. A property class 8.8 bolt and a 4.6 bolt look identical in a photograph and are not interchangeable in a structure.</p></div></div><div class="pblock"><span class="k">03</span><h2>Personal protective equipment is a legal product</h2><div class="ptext"><p>Gloves, footwear, eye protection and hearing protection are not ordinary consumables. They are sold against harmonised standards, they carry a mark, and in most destinations supplying them without valid conformity documentation is an offence rather than a commercial problem.</p><p>We ask for the test report from a named laboratory, not a certificate image, and we check the standard cited is the one in force at the destination. This is the single most counterfeited document category in the hardware trade.</p></div></div><div class="pblock"><span class="k">04</span><h2>Assortment, minimums and the consolidated container</h2><div class="ptext"><p>Hardware is bought as an assortment, and an assortment rarely fills a container from one factory. We consolidate several producers into one container at the port of loading, which keeps a mixed order on full container economics and produces one bill of lading instead of six.</p><p>Consolidation adds about a week to the schedule and it has to be in the plan rather than discovered. It also means one packing list has to reconcile against several suppliers' cartons, which is exactly the kind of discrepancy customs resolves by inspecting, so the counting is done at the consolidation warehouse and photographed.</p><p class="pnote">Deliverable on this category: a written specification per line, the conformity documents checked against the destination's standard, and a consolidated packing list reconciled carton by carton before the container is sealed.</p></div></div></div>

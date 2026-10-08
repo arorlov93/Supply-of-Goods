@@ -131,6 +131,12 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band .eyebrow{color:var(--gold-soft)}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 <style>
 /* hero */
@@ -316,6 +322,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* числовая полоса: объём и счётчик */
+.nums{perspective:1300px;perspective-origin:50% 40%}
+.num{transform-style:preserve-3d;will-change:transform,opacity}
+.num b{display:block;transform-origin:50% 90%;
+  text-shadow:0 1px 0 rgba(255,255,255,.65), 0 10px 26px rgba(11,74,64,.16);
+  font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.num{transform:none!important;opacity:1!important}}
 </style>
 
 <style>
@@ -435,10 +449,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* ссылка для клавиатуры: видна только при фокусе */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 </head>
 <body>
 <!--email_off-->
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <div class="wrap navin">
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
@@ -450,7 +473,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
       <a href="corridors">Corridors</a>
       <a href="guides">Guides</a>
       <a href="about">About</a>
-      <a href="contact">Contact</a>
+      <a href="contact" aria-current="page">Contact</a>
     </div>
     <a class="btn" href="contact#enquiry"><span class="btn-long">Request a </span>quote</a>
   </div>
@@ -488,7 +511,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <section><div class="wrap">
 <div class="lede"><h2>What to put in the first message</h2><p class="intro">The faster a requirement becomes a specification, the faster it becomes a price. You do not need all of this to write to us, but each line you can answer removes a round trip.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>The four lines that start a quotation</h2><div class="ptext"><p>Everything else we can work out together. These four decide whether we can go straight to producers or have to come back with questions first.</p><ul class="plist"><li><b>What the product is</b>, in whatever words you use for it. A photograph, a drawing, a competitor's part number or a sample are all better than a category.</li><li><b>How much</b>, per shipment and per month if it repeats. A one-off container and a monthly programme are priced differently and sourced differently.</li><li><b>Where it has to arrive.</b> Port, city or the gate of your own warehouse. The inland leg is often the largest single line in a landed price.</li><li><b>On what terms</b>, if you already know. If you do not, say so and we will quote two bases side by side so the logistics portion is visible.</li></ul></div></div><div class="pblock"><span class="k">02</span><h2>What happens after you write</h2><div class="ptext"><p>Within one working day you get an acknowledgement with the questions we still need answered. Those questions are the specification taking shape, and they are the part that decides whether the shipment works.</p><p>Within about ten working days you get a landed price: at least three comparable offers from verified producers on one basis, with freight, insurance, port charges, duty and certification added, and with the rate validity stated. If a lane is new to us it takes longer, and we say so at the start rather than at the end.</p><p class="pnote">We do not ask for a fee to quote, and we do not take a commission on a producer's invoice. We buy in our own name and resell, so our price is our price.</p></div></div><div class="pblock"><span class="k">03</span><h2>If you are a producer, not a buyer</h2><div class="ptext"><p>Write to the same address. We are interested in producers who can hold a specification and a loading date, in any of the categories we supply, and particularly in frozen protein, paper and packaging, stone and industrial equipment.</p><p>Send the establishment or licence number, the product range with pack formats, the ports you normally load, and the countries you are already approved to ship to. That is enough for us to tell you within a day whether we have a buyer for it.</p></div></div><div class="pblock"><span class="k">04</span><h2>Where we are</h2><div class="ptext"><p>ISP GROUP LLC is a United States company. The registered office is at 16395 Biscayne Blvd, North Miami Beach, Florida 33160. Correspondence in English and Russian; written enquiries are answered faster than any other channel.</p></div></div></div>

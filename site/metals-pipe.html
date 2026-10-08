@@ -128,6 +128,12 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band .eyebrow{color:var(--gold-soft)}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 <style>
 /* hero */
@@ -313,6 +319,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* числовая полоса: объём и счётчик */
+.nums{perspective:1300px;perspective-origin:50% 40%}
+.num{transform-style:preserve-3d;will-change:transform,opacity}
+.num b{display:block;transform-origin:50% 90%;
+  text-shadow:0 1px 0 rgba(255,255,255,.65), 0 10px 26px rgba(11,74,64,.16);
+  font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.num{transform:none!important;opacity:1!important}}
 </style>
 
 <style>
@@ -432,10 +446,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* ссылка для клавиатуры: видна только при фокусе */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 </head>
 <body>
 <!--email_off-->
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <div class="wrap navin">
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
@@ -466,7 +489,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <section><div class="wrap"><figure class="mediafig" style="margin-bottom:44px"><div class="shot"><span class="pz"><img src="media/pipe.webp" width="922" height="691" loading="lazy" alt="Stacked steel pipe seen end on"></span></div><figcaption>Pipe is bought on the certificate as much as on the dimension</figcaption></figure>
 <div class="lede"><h2>In metals the document is half the product</h2><p class="intro">Two lengths of pipe can be dimensionally identical and commercially worth very different money, because one has a mill test certificate traceable to the heat it was rolled from and the other has a piece of paper. On anything that will be welded, pressurised or inspected, the certificate is the product.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>What we buy</h2><div class="ptext"><ul class="plist"><li><b>Structural sections</b>: beams, channels, angles and hollow sections to EN 10025 grades or the ASTM equivalents, in the profile series the design actually calls for.</li><li><b>Sheet and plate</b>, hot and cold rolled, by grade, thickness tolerance and surface condition.</li><li><b>Seamless and welded pipe</b>, by outside diameter and wall thickness or by schedule, to the pressure standard the application requires.</li><li><b>Fittings and flanges</b> to ANSI or ASME B16.5, EN 1092-1 or the GOST series, matched to the pipe standard rather than assumed to fit.</li><li><b>Fasteners and structural bolting</b> by property class and coating.</li></ul></div></div><div class="pblock"><span class="k">02</span><h2>The certificate, and why 3.1 is the line</h2><div class="ptext"><p>EN 10204 defines the inspection documents. A type 2.2 test report is the producer's own statement of general conformity. A type 3.1 certificate is issued by the producer's own inspection function, independent of the manufacturing department, and states the actual test results for the material supplied, traceable to the heat number. A type 3.2 adds a third party.</p><p>On anything structural or pressure-bearing, 3.1 is normally the minimum that an engineer, an insurer or a customs authority will accept. Asking for “a certificate” and receiving a 2.2 is the commonest quiet downgrade in this trade, and it is invisible until the material is already on site.</p><p class="pnote">We state the required document type in the order, we check the heat numbers on the certificate against the markings on the material at loading, and we photograph both.</p></div></div><div class="pblock"><span class="k">03</span><h2>Three standards families that do not map one to one</h2><div class="ptext"><p>EN, ASTM and GOST are not translations of each other. Grades that are commonly treated as equivalent differ in chemistry, in impact testing temperature and in permitted tolerance. A material sold as “analogue of” a grade is not that grade, and if the destination's inspector works to one family, that is the family the certificate has to be issued under.</p><p>Where a project genuinely needs cross-standard supply, the right move is to name the standard in the purchase order and have the mill certify to it, which most mills of reasonable size can do if it is agreed before rolling rather than after.</p></div></div><div class="pblock"><span class="k">04</span><h2>Tolerance, length and what arrives bent</h2><div class="ptext"><p>Thickness tolerance, straightness, ovality on pipe and end condition are all negotiable and all routinely unstated. Mill lengths differ by producer, and a specification that asks for exact lengths carries a cutting cost and a yield loss that has to be priced rather than discovered.</p><p>Pipe and sections are loaded in bundles and damaged on the ends. Bundles are strapped, end caps are specified where the application needs clean ends, and dunnage is written into the order because a container of steel that has shifted in transit is both a claim and a discharge problem.</p></div></div><div class="pblock"><span class="k">05</span><h2>Weight, not pieces</h2><div class="ptext"><p>Metals are invoiced by weight and a container fills on weight long before it fills on volume. A 20ft container is usually the right box for dense cargo even when it looks half empty, and the theoretical weight against actual weighbridge weight is a line that has to be agreed in the contract, because the two are never identical.</p></div></div></div>

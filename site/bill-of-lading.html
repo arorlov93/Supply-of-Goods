@@ -128,6 +128,12 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band .eyebrow{color:var(--gold-soft)}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 <style>
 /* hero */
@@ -313,6 +319,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* числовая полоса: объём и счётчик */
+.nums{perspective:1300px;perspective-origin:50% 40%}
+.num{transform-style:preserve-3d;will-change:transform,opacity}
+.num b{display:block;transform-origin:50% 90%;
+  text-shadow:0 1px 0 rgba(255,255,255,.65), 0 10px 26px rgba(11,74,64,.16);
+  font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.num{transform:none!important;opacity:1!important}}
 </style>
 
 <style>
@@ -432,10 +446,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* ссылка для клавиатуры: видна только при фокусе */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 </head>
 <body>
 <!--email_off-->
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <div class="wrap navin">
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
@@ -465,7 +488,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <section><div class="wrap">
 <div class="lede"><h2>Three jobs in one piece of paper</h2><p class="intro">A bill of lading is a receipt that the carrier took the goods, the contract of carriage on which it carries them, and, when it is negotiable, a document of title. The third job is the one that creates all the drama, because it means the paper controls the steel box.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>Negotiable original or sea waybill</h2><div class="ptext"><p>A negotiable bill of lading is usually issued in a set of three originals, and surrendering any one of them releases the cargo; the other two then become void. The set exists because paper used to travel by post on different ships, and the practice survived the reason for it.</p><p>A sea waybill is not a document of title. It names a consignee, the carrier releases to that named party on identification, and nothing has to travel. It is faster and safer, and it is the right choice whenever the seller is already paid or is content to be paid against something other than the document.</p><p class="pnote">The rule of thumb: if payment depends on controlling the goods, you need a negotiable original. If it does not, a sea waybill removes an entire category of problem.</p></div></div><div class="pblock"><span class="k">02</span><h2>Who is the consignee, and why “to order” matters</h2><div class="ptext"><ul class="plist"><li><b>Straight consigned</b> to a named buyer: only that buyer can collect. Simple, and it gives the seller no leverage after shipment.</li><li><b>To order</b> of the shipper: the shipper endorses the bill to transfer control, which is what makes a documentary credit work.</li><li><b>To order of the issuing bank</b>: the bank holds control until the buyer pays or accepts. The strongest position for the bank and the most common under a credit.</li><li><b>Notify party</b> is not the consignee. It is who the carrier telephones on arrival, and it has no rights over the cargo at all.</li></ul></div></div><div class="pblock"><span class="k">03</span><h2>Telex release, which is not a telex</h2><div class="ptext"><p>On a short voyage the vessel arrives before the paperwork, and originals posted from the origin will not be at the destination in time. A telex release solves it: the shipper surrenders all originals to the carrier at the origin, and the carrier instructs its own office at the destination to release without presentation.</p><p>Two things follow. The seller gives up control the moment the originals are surrendered, so it should only be done when payment is secure. And because it is a carrier process rather than a legal instrument, every line does it slightly differently, charges differently for it, and takes a different amount of time, which has to be asked about before the booking rather than during the crisis.</p><p>An express release is the same idea built in from the start: the bill is issued non-negotiable and no original is ever printed.</p></div></div><div class="pblock"><span class="k">04</span><h2>House and master bills</h2><div class="ptext"><p>When a freight forwarder consolidates, the ocean carrier issues a master bill to the forwarder, and the forwarder issues a house bill to each shipper. The house bill is the document the buyer deals with, and it is only as good as the forwarder behind it.</p><p>That matters at the destination: the cargo is released by the forwarder's own agent, not by the shipping line. A forwarder with no real agent at the discharge port is the commonest cause of a consignment sitting on the quay while two offices email each other.</p></div></div><div class="pblock"><span class="k">05</span><h2>When the paper goes wrong</h2><div class="ptext"><ul class="plist"><li><b>Cargo arrives before documents.</b> Either arrange a telex release, or the buyer provides a bank guarantee to the carrier, which the bank will charge for and will not love.</li><li><b>Originals lost.</b> Replacement requires an indemnity, usually bank-backed, for a multiple of the cargo value, held for years. Expensive and slow.</li><li><b>Details differ from the credit.</b> A spelling difference between the bill and the letter of credit is a discrepancy, and the protection the seller paid for is gone until the buyer waives it.</li><li><b>A switch bill is requested.</b> Issuing a second set at a different port, usually to hide the original supplier, is a real commercial practice and also the mechanism behind a lot of fraud. We only do it with the first set physically surrendered, and we do not do it to misstate origin.</li></ul></div></div><div class="pblock"><span class="k">06</span><h2>What we put in the contract</h2><div class="ptext"><p>Which document type will be issued, who is consignee and notify, how many originals, where they are to be couriered and at whose cost, whether telex release is permitted and who authorises it, and the deadline for the document set to reach the buyer relative to the vessel's arrival. All five are settled before loading, because none of them can be fixed while a container accrues demurrage.</p></div></div></div>

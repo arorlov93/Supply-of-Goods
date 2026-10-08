@@ -128,6 +128,12 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band .eyebrow{color:var(--gold-soft)}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 <style>
 /* hero */
@@ -313,6 +319,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* числовая полоса: объём и счётчик */
+.nums{perspective:1300px;perspective-origin:50% 40%}
+.num{transform-style:preserve-3d;will-change:transform,opacity}
+.num b{display:block;transform-origin:50% 90%;
+  text-shadow:0 1px 0 rgba(255,255,255,.65), 0 10px 26px rgba(11,74,64,.16);
+  font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.num{transform:none!important;opacity:1!important}}
 </style>
 
 <style>
@@ -432,10 +446,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* ссылка для клавиатуры: видна только при фокусе */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 </head>
 <body>
 <!--email_off-->
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <div class="wrap navin">
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
@@ -465,7 +488,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <section><div class="wrap">
 <div class="lede"><h2>The document where the deal is actually written</h2><p class="intro">Most of what later goes wrong in a shipment was decided, or left undecided, on the proforma. It costs nothing to make it complete and it is the cheapest risk control available in this trade.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>What it is for</h2><div class="ptext"><ul class="plist"><li><b>Agreeing the deal.</b> Specification, quantity, price, terms and dates in one place, before a purchase order exists.</li><li><b>Opening a letter of credit.</b> The buyer's bank builds the credit from it, which is why an incomplete proforma produces a credit the seller cannot comply with.</li><li><b>Obtaining an import licence or permit</b>, where the destination requires one before shipment.</li><li><b>Applying for finance</b> or for a foreign currency allocation in countries that control it.</li><li><b>Customs valuation in advance</b>, for an estimate of duty before the order is placed.</li></ul></div></div><div class="pblock"><span class="k">02</span><h2>What has to be on it</h2><div class="ptext"><p>A proforma that is missing any of these will cost a round trip, and under a documentary credit it can cost a discrepancy.</p><ul class="plist"><li>Seller and buyer legal names and addresses, as registered, not trading names.</li><li>A proforma number and a date, and a <b>validity date</b> for the price.</li><li>The goods described the way the specification describes them, with grade, standard, pack and unit.</li><li>Quantity and unit price, and the currency written out.</li><li>The <b>Incoterm with the named place and the edition</b>, for example CIF Lomé, Incoterms 2020.</li><li>The <b>HS code</b> the seller believes applies, so it can be checked against the importing country's tariff before the order.</li><li>Country of origin and the producing establishment or plant, where that matters.</li><li>Port of loading and port of discharge.</li><li>Whether partial shipment and transhipment are allowed.</li><li>Lead time, expressed from a trigger rather than from a calendar date: so many days from receipt of deposit, or from approval of a sample.</li><li>Payment terms in full, including who pays which bank charges.</li><li>Full bank details, including the beneficiary name.</li></ul><p class="pnote">That last line is the one that matters most. The beneficiary name on the proforma must match the seller's registered name exactly. A mismatch is the mechanism behind almost every payment-diversion fraud in this trade, and it is explained in <a href="verify-supplier">verifying a supplier</a>.</p></div></div><div class="pblock"><span class="k">03</span><h2>Proforma, commercial invoice, packing list</h2><div class="ptext"><p>The <b>proforma</b> is the offer, issued before anything happens. The <b>commercial invoice</b> is the demand for payment, issued when the goods ship, and it is the document customs values the consignment on. The <b>packing list</b> says what is physically in each carton and each container and carries no prices.</p><p>All three have to agree with each other and with the bill of lading, down to the carton count and the marks, because a customs authority anywhere in the world resolves a discrepancy between them by inspecting the container.</p></div></div><div class="pblock"><span class="k">04</span><h2>Reading one critically</h2><div class="ptext"><ul class="plist"><li><b>No validity date.</b> The price is good until the seller says otherwise, which means it is not a price.</li><li><b>Lead time from a calendar date.</b> It will slip with the deposit and the argument will be about whose fault that is.</li><li><b>Incoterm without a named place.</b> “CIF” alone means nothing.</li><li><b>Bank in a third country</b> with no explanation on company letterhead.</li><li><b>Specification by model name only.</b> The model will be built down to the price unless the specification is attached.</li><li><b>No mention of tolerance.</b> On weight, dimension or count, the tolerance is whatever the seller decides at loading if it is not written.</li></ul></div></div><div class="pblock"><span class="k">05</span><h2>What we issue</h2><div class="ptext"><p>Our proforma to a buyer mirrors our purchase contract with the producer line for line: the same specification, the same tolerances, the same inspection window and the same claim period, so nothing falls into the gap between the two contracts. Where we are quoting more than one Incoterm, each basis is a separate line with its own total, not a footnote.</p></div></div></div>

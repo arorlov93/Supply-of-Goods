@@ -128,6 +128,12 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band .eyebrow{color:var(--gold-soft)}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 <style>
 /* hero */
@@ -313,6 +319,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* числовая полоса: объём и счётчик */
+.nums{perspective:1300px;perspective-origin:50% 40%}
+.num{transform-style:preserve-3d;will-change:transform,opacity}
+.num b{display:block;transform-origin:50% 90%;
+  text-shadow:0 1px 0 rgba(255,255,255,.65), 0 10px 26px rgba(11,74,64,.16);
+  font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.num{transform:none!important;opacity:1!important}}
 </style>
 
 <style>
@@ -432,10 +446,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* ссылка для клавиатуры: видна только при фокусе */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 </head>
 <body>
 <!--email_off-->
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <div class="wrap navin">
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
@@ -466,7 +489,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <section><div class="wrap"><figure class="mediafig" style="margin-bottom:44px"><div class="shot"><span class="pz"><img src="media/machinery.webp" width="910" height="683" loading="lazy" alt="Industrial drive assembly and chain gearing"></span></div><figcaption>A machine is bought on its drive, its controller and its spares, not on its price</figcaption></figure>
 <div class="lede"><h2>A machine is the one purchase where the cheapest offer is usually the most expensive</h2><p class="intro">Equipment is bought once and run for ten years. The price difference between two offers is almost always smaller than the cost of a single week of unplanned downtime in year three, and the thing that decides which you get is the specification, not the invoice.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>What has to be in the specification</h2><div class="ptext"><p>A purchase order that says “machine, 50 kW, 380 V” leaves the motor brand, the controller, the duty cycle, the finish, the spares pack and the manual language entirely to the seller, and the seller resolves every one of them in the direction of cost. These are the lines we insist on before asking for a price.</p><ul class="plist"><li><b>Drive and controller by make and model.</b> Two machines with identical output figures and different controllers are different machines when a board fails.</li><li><b>Electrical supply.</b> Voltage and frequency at the destination, and whether that means 380 to 400 V at 50 Hz or 480 V at 60 Hz. Conversion after the fact costs more than specifying it.</li><li><b>Certification mark the destination requires.</b> CE for the European Union, EAC for the Eurasian customs union, UL or CSA where the insurer or the inspector asks for it.</li><li><b>Ingress protection and ambient.</b> An IP rating and the design ambient temperature. Equipment specified for a temperate workshop fails in a West African one.</li><li><b>Duty cycle.</b> Continuous, intermittent or short-time. The single most commonly omitted line, and the one that decides service life.</li><li><b>Spares pack and consumables</b> for the first period of operation, priced separately so it can be compared.</li><li><b>Documentation language</b> and whether the electrical schematic is included.</li></ul></div></div><div class="pblock"><span class="k">02</span><h2>New or factory refurbished</h2><div class="ptext"><p>Refurbished equipment is a real market and it is not a lesser one, but it has to be bought differently. What matters is who refurbished it, what was replaced, what was only cleaned, whether the control system was updated or merely made to work, and whether there is a warranty attached to the refurbishment rather than to the original manufacture.</p><p>We ask for the refurbishment report line by line and for a witnessed run before payment. On a machine with a known service history, that combination is often better value than a new machine from an unfamiliar producer.</p></div></div><div class="pblock"><span class="k">03</span><h2>Inspection means a witnessed run</h2><div class="ptext"><p>For a commodity, inspection is a sampling plan. For a machine it is a factory acceptance test: the equipment is run under load, against the specification, with someone present who is not the seller, and the result is recorded with photographs and readings.</p><p>That is also the moment to confirm the spares pack is physically in the crate and that the schematic is in the document folder, because both are routinely promised and occasionally shipped.</p></div></div><div class="pblock"><span class="k">04</span><h2>Commissioning and what happens after</h2><div class="ptext"><p>Machinery arrives in pieces and the gap between delivery and production is where most of the disappointment lives. Before the order we settle who assembles it, who commissions it, whether the producer sends an engineer or supplies instructions, who pays for the visa and the flights, and what the response time is on a warranty call.</p><p class="pnote">Deliverable on this category: a specification the producer has signed, a witnessed run report, a spares list priced separately, and a written commissioning arrangement with named responsibilities.</p></div></div><div class="pblock"><span class="k">05</span><h2>Packing and the inland leg</h2><div class="ptext"><p>Heavy equipment is out-of-gauge more often than buyers expect, and an item that does not fit a standard container changes the freight cost by a multiple rather than a percentage. Dimensions and weights are confirmed from the drawing before we quote, not from the brochure. Wood packaging is heat treated and marked under ISPM 15, checked at loading rather than at arrival.</p></div></div></div>

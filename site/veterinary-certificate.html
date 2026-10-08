@@ -131,6 +131,12 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band .eyebrow{color:var(--gold-soft)}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 <style>
 /* hero */
@@ -316,6 +322,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* числовая полоса: объём и счётчик */
+.nums{perspective:1300px;perspective-origin:50% 40%}
+.num{transform-style:preserve-3d;will-change:transform,opacity}
+.num b{display:block;transform-origin:50% 90%;
+  text-shadow:0 1px 0 rgba(255,255,255,.65), 0 10px 26px rgba(11,74,64,.16);
+  font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.num{transform:none!important;opacity:1!important}}
 </style>
 
 <style>
@@ -435,10 +449,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* ссылка для клавиатуры: видна только при фокусе */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 </head>
 <body>
 <!--email_off-->
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <div class="wrap navin">
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
@@ -468,7 +491,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <section><div class="wrap">
 <div class="lede"><h2>The cheapest offer in this trade is usually the one that cannot ship</h2><p class="intro">Approval is granted plant by plant and destination by destination. An establishment cleared for one West African country is not automatically cleared for its neighbour, and the lists change.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>What the certificate is</h2><div class="ptext"><p>A veterinary health certificate is an official document issued by the competent authority of the exporting country, attesting that the consignment comes from an approved establishment, was produced under official inspection and meets the animal and public health conditions the importing country has set.</p><p>It is not a commercial document and the seller cannot issue it. It travels with the consignment, it is presented at the border post of entry, and without it the cargo does not clear, whatever the invoice says.</p></div></div><div class="pblock"><span class="k">02</span><h2>United States origin</h2><div class="ptext"><p>Export certification runs through the federal food safety inspection service. The requirements for each destination country, including the certificate form and any additional attestations, are published in an export library maintained for that purpose and updated as destinations change their rules.</p><p>Two practical points follow. Some destinations are handled through the electronic system and some still require a paper certificate, which changes the lead time at the loading end. And a destination that is not listed is not necessarily closed, but it does mean the requirements have to be established in writing before anything is loaded rather than assumed.</p></div></div><div class="pblock"><span class="k">03</span><h2>European Union origin</h2><div class="ptext"><p>The equivalent is the competent authority of the member state, with certificates issued through the Union's own trade control system. The establishment has to hold the relevant approval, and for third-country export the certificate model is the one agreed between the Union and the destination.</p></div></div><div class="pblock"><span class="k">04</span><h2>What to ask a seller, in this order</h2><div class="ptext"><ul class="plist"><li><b>The establishment number</b>, as registered, not the company's trading name.</li><li><b>Written confirmation that the establishment is approved for the destination</b>, not for the region and not for a neighbouring country.</li><li><b>Which certificate form will be issued</b>, and whether it is electronic or paper, because that sets the lead time.</li><li><b>Who signs it</b> and how long signature normally takes at that plant.</li><li><b>What happens if the destination changes its requirements</b> between the contract and the loading date, which on some corridors is a live possibility.</li></ul><p class="pnote">We do not treat a seller's verbal assurance on admissibility as an answer. The number is checked, and where the destination is ambiguous the certificate form is identified in writing before any money moves.</p></div></div><div class="pblock"><span class="k">05</span><h2>Why this is the first question and not the fifth</h2><div class="ptext"><p>Because it is the only one of the commercial variables that cannot be fixed later. A price can be renegotiated, a pack can be changed, a shipment date can slip. An inadmissible establishment cannot be made admissible inside a shipment cycle, and a container of frozen product sitting at a border post while someone investigates is the most expensive single failure available on this lane.</p><p>The rest of what matters on this corridor, from cut nomenclature to the cold chain, is on the <a href="west-africa">West Africa corridor page</a>.</p></div></div></div>

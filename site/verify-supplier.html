@@ -128,6 +128,12 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band .eyebrow{color:var(--gold-soft)}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 <style>
 /* hero */
@@ -313,6 +319,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* числовая полоса: объём и счётчик */
+.nums{perspective:1300px;perspective-origin:50% 40%}
+.num{transform-style:preserve-3d;will-change:transform,opacity}
+.num b{display:block;transform-origin:50% 90%;
+  text-shadow:0 1px 0 rgba(255,255,255,.65), 0 10px 26px rgba(11,74,64,.16);
+  font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.num{transform:none!important;opacity:1!important}}
 </style>
 
 <style>
@@ -432,10 +446,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* ссылка для клавиатуры: видна только при фокусе */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 </head>
 <body>
 <!--email_off-->
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <div class="wrap navin">
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
@@ -465,7 +488,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <section><div class="wrap">
 <div class="lede"><h2>Why it matters, in one sentence</h2><p class="intro">A factory can re-run a batch. A trading company has to persuade someone else to re-run it, at its own cost, with no leverage, which is why the difference shows up only when something has already gone wrong.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>Check one: the registration document</h2><div class="ptext"><p>Every registered company has one, and it names the legal entity, the registration number, the registered capital and the scope of business. In China that is the business licence with its unified social credit code; elsewhere it has a different name and the same function.</p><p>Read the scope of business rather than the letterhead. A company whose registered scope is wholesale and import-export is not a manufacturer, whatever the website says. This is not a hidden fact, it is printed on the document they will send you if you ask.</p></div></div><div class="pblock"><span class="k">02</span><h2>Check two: the right to export</h2><div class="ptext"><p>Manufacturing and exporting are separate permissions in many jurisdictions. A real factory may have no export right at all and may ship through an agent, which is legitimate and changes who your contract is with, who issues the invoice and who is named on the bill of lading.</p><p>If the entity that signs your contract is not the entity that manufactures and not the entity that exports, there are three parties and you are relying on the relationships between two of them that you cannot see.</p></div></div><div class="pblock"><span class="k">03</span><h2>Check three: the beneficiary name on the proforma</h2><div class="ptext"><p>This is the one that catches almost everything. The bank account on the proforma invoice has to carry the same name as the registration document. Not a similar name, not the trading name, not the name of a director, not an account in a third country “because of currency controls”.</p><p class="pnote">A mismatch between the seller name and the beneficiary name is not an administrative detail to be smoothed over. It is the whole question. Every payment-diversion fraud in this trade runs through exactly that gap.</p><p>The related problem is the lookalike domain. Around well-known exporters there is a layer of sites that copy the name and offer their own sales addresses. The rule is simple: write only to the domain published on the company's own official site, and treat any address on a different domain as unverified until proven otherwise.</p></div></div><div class="pblock"><span class="k">04</span><h2>Check four: something only a factory can answer</h2><div class="ptext"><p>Ask a production question that a trader cannot answer without a phone call: the cycle time on the line that would make your item, the changeover time between sizes, the name of the controller on the main machine, how many shifts run in a normal week, and what the minimum run is before a changeover stops being worth it.</p><p>A factory answers in one message. A trader answers tomorrow, in different words from the ones they used yesterday.</p></div></div><div class="pblock"><span class="k">05</span><h2>What an audit adds, and when it is worth it</h2><div class="ptext"><p>A physical factory audit by a third party adds what documents cannot: that the plant exists at the registered address, that the equipment matches the claim, and that the quality system is operated rather than framed. It costs a fraction of a container and it is worth it on a first order of any size, on anything safety-critical, and on any supplier found through a marketplace rather than through a reference.</p><p>We do these checks before quoting rather than before ordering, because a price from a counterparty that will not survive the check is not information.</p></div></div></div>

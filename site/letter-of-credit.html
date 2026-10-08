@@ -128,6 +128,12 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band .eyebrow{color:var(--gold-soft)}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 <style>
 /* hero */
@@ -313,6 +319,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* числовая полоса: объём и счётчик */
+.nums{perspective:1300px;perspective-origin:50% 40%}
+.num{transform-style:preserve-3d;will-change:transform,opacity}
+.num b{display:block;transform-origin:50% 90%;
+  text-shadow:0 1px 0 rgba(255,255,255,.65), 0 10px 26px rgba(11,74,64,.16);
+  font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.num{transform:none!important;opacity:1!important}}
 </style>
 
 <style>
@@ -432,10 +446,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* ссылка для клавиатуры: видна только при фокусе */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 </head>
 <body>
 <!--email_off-->
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <div class="wrap navin">
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
@@ -465,7 +488,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <section><div class="wrap">
 <div class="lede"><h2>The instrument solves one problem and only one</h2><p class="intro">A seller does not want to ship before being paid. A buyer does not want to pay before being shipped to. A documentary credit puts a bank between them so that neither has to go first. Everything else people expect from it, it does not do.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>Banks deal in documents, not in goods</h2><div class="ptext"><p>This is the governing principle of the rules that almost every credit is issued under, the ICC Uniform Customs and Practice for Documentary Credits. The bank never sees the cargo. It examines whether the presented documents comply on their face with the credit, and if they do it pays, even if the container turns out to hold the wrong goods.</p><p>Which means the protection a credit gives a buyer is exactly as good as the document list written into it. A credit that calls for an inspection certificate issued by a named third party protects the buyer. A credit that calls only for an invoice and a bill of lading protects the seller.</p></div></div><div class="pblock"><span class="k">02</span><h2>Sight, usance and what each one costs the other side</h2><div class="ptext"><p>A credit payable <b>at sight</b> pays on presentation of compliant documents, which in practice is a few banking days after shipment. A <b>usance</b> credit pays a stated number of days later, typically 30, 60 or 90 from the bill of lading date.</p><p>The difference is not a formality, it is the whole financing question. At sight, the seller is funded while the vessel is at sea. At 90 days, the seller is lending the buyer the value of the cargo for three months and will price that in, openly or otherwise. A buyer asking for long usance is asking for credit, and credit has a price whether or not it appears as a line.</p></div></div><div class="pblock"><span class="k">03</span><h2>Confirmed or unconfirmed</h2><div class="ptext"><p>An unconfirmed credit carries the risk of the issuing bank and of its country. A confirmed credit adds a second bank, usually in the seller's country, which undertakes to pay independently. Confirmation costs a fee that scales with the perceived risk of the issuing bank, and on some corridors that fee is the honest market price of the country risk.</p><p class="pnote">If a seller insists on confirmation and the buyer finds the cost unreasonable, the disagreement is not really about the fee. It is about what the market thinks of the issuing bank, and that is worth knowing before the first shipment.</p></div></div><div class="pblock"><span class="k">04</span><h2>Discrepancies, which is where credits actually fail</h2><div class="ptext"><p>Compliance is strict. A spelling difference between the invoice and the credit, a bill of lading dated one day outside the shipment window, a certificate signed by the wrong function, an amount expressed in a different form of words: any of these is a discrepancy, and a discrepant presentation can be refused.</p><p>In practice most discrepancies are waived by the buyer, but the waiver is the buyer's to give, which means a discrepant seller has lost the protection they paid for and is back to trusting the buyer. Each discrepancy also carries a bank fee.</p><p>Two mechanical points prevent most of it. The presentation period is finite, normally 21 calendar days after shipment and always within the credit's expiry, so documents have to be assembled fast. And the draft of the credit should be reviewed by the beneficiary before it is issued, not after, because amending a credit costs money and time and needs both sides to agree.</p></div></div><div class="pblock"><span class="k">05</span><h2>When a credit is the wrong instrument</h2><div class="ptext"><ul class="plist"><li><b>Small shipments.</b> The bank charges on both legs can be a visible share of a small container's value. A documentary collection is cheaper and gives less protection; staged transfer against milestones gives different protection again.</li><li><b>Trusted repeat business.</b> After a dozen clean shipments the credit is paying for a risk neither side believes in.</li><li><b>A counterparty you have not verified.</b> A credit does not make an unverified producer safe. It only ensures you pay against paper. Verification comes first.</li></ul></div></div><div class="pblock"><span class="k">06</span><h2>What we do</h2><div class="ptext"><p>We contract with the producer in our own name and with the buyer separately, and we mirror the settlement terms on both legs so the gap between them does not become our working capital by accident. We review the credit draft before issuance, we allocate the bank charges on each leg in writing, and we prefer the document list to include something the buyer actually cares about rather than only what the bank needs.</p></div></div></div>

@@ -128,6 +128,12 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band .eyebrow{color:var(--gold-soft)}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 <style>
 /* hero */
@@ -313,6 +319,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* числовая полоса: объём и счётчик */
+.nums{perspective:1300px;perspective-origin:50% 40%}
+.num{transform-style:preserve-3d;will-change:transform,opacity}
+.num b{display:block;transform-origin:50% 90%;
+  text-shadow:0 1px 0 rgba(255,255,255,.65), 0 10px 26px rgba(11,74,64,.16);
+  font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.num{transform:none!important;opacity:1!important}}
 </style>
 
 <style>
@@ -432,17 +446,26 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* ссылка для клавиатуры: видна только при фокусе */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 </head>
 <body>
 <!--email_off-->
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <div class="wrap navin">
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
     <button class="navtoggle" id="navtoggle" type="button"
       aria-expanded="false" aria-controls="navmenu" aria-label="Menu"><span></span></button>
     <div class="navlinks" id="navmenu">
-      <a href="services">What we do</a>
+      <a href="services" aria-current="page">What we do</a>
       <a href="supply">What we supply</a>
       <a href="corridors">Corridors</a>
       <a href="guides">Guides</a>
@@ -465,7 +488,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <section><div class="wrap">
 <div class="lede"><h2>Why we describe the work and not the goods</h2><p class="intro">Any trader can list products. What a buyer is actually paying for is the sequence below, because that is where a purchase survives or fails. We can run the whole sequence or step in at any point in it.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>Specification</h2><div class="ptext"><p>We turn a request into something a factory can quote against and a laboratory can test against: grade, dimension or cut, pack, tolerance, standard and the certificates the destination country requires.</p><p>Most failed imports fail here, before anyone has quoted. A purchase order that says “machine, 50 kW, 380 V” leaves the motor brand, the controller, the duty cycle, the finish, the spares pack and the manual language to the seller, and the seller resolves every one of them in the direction of cost. Once a specification exists, three quotes against it are comparable and a fourth supplier can be added without starting again.</p><p class="pnote">Deliverable: a specification sheet and the list of certificates the destination requires, in a form you can send to any producer, including ones we did not find.</p></div></div><div class="pblock"><span class="k">02</span><h2>Producer verification</h2><div class="ptext"><p>We approach producers directly rather than through intermediaries, and we check each one against the register of the importing country rather than against its own website. For food that means the establishment number and written confirmation of admissibility. For manufactured goods it means the business licence, the export licence and the certification mark the destination requires.</p><p>One check catches more fraud than all the others combined: the beneficiary name on the proforma invoice has to match the name on the licence. Lookalike exporter domains are endemic in this trade, and a mismatch between the seller and the bank account is the whole question, not a detail.</p><p class="pnote">Deliverable: at least three comparable offers from verified producers, quoted on one basis, with the registration evidence attached.</p></div></div><div class="pblock"><span class="k">03</span><h2>Landed price</h2><div class="ptext"><p>A factory price is not a price. Freight, insurance, port charges, duty, certification and the inland leg are added so you see one number at your own door, with the rate validity stated on it.</p><p>We benchmark that number against what comparable goods actually cleared customs at on your lane. Customs statistics show the transacted value divided by the net weight, which means every discount the seller really gave is already inside the figure. A quotation is what a seller would like to receive; customs data is what the market paid. Negotiating against the second rather than the first regularly moves a target by a fifth or more.</p><p class="pnote">Deliverable: one landed number per option, with the cost build-up shown and the validity date stated.</p></div></div><div class="pblock"><span class="k">04</span><h2>Contract and settlement</h2><div class="ptext"><p>We contract with the producer in our own name and with the buyer on a mirrored set of terms. Inspection windows, weight tolerances, claim periods and bank charges are written the same way on both legs, so nothing falls into the gap between them.</p><p>Settlement is by irrevocable letter of credit, documentary collection or staged transfer. Every stage is tied to something observable: a deposit releases production, a second instalment falls due against a passed inspection, the balance against the document set. A date pays for a date. An event pays for goods.</p><p class="pnote">Deliverable: two mirrored contracts and a payment schedule in which every stage has an observable trigger.</p></div></div><div class="pblock"><span class="k">05</span><h2>Inspection and loading</h2><div class="ptext"><p>Where the value justifies it, production is inspected before full payment and before loading: a sampling plan against the specification for a commodity, a witnessed run for equipment, photographs of the goods, the carton, the pallet and the loaded container in every case, taken by someone who is not the seller.</p><p>Wood packaging is checked for heat treatment and ISPM 15 marking at loading, not at arrival, because a container that reaches the destination port with untreated pallets is refused there at the importer's expense.</p><p class="pnote">Deliverable: an inspection report with photographs, and confirmation of pack and marking before the container is sealed.</p></div></div><div class="pblock"><span class="k">06</span><h2>Documents and delivery</h2><div class="ptext"><p>The document set is where the money is quietly lost. The HS code decides the duty rate and the importer of record is liable for a wrong one, not the seller who typed it. The certificate of origin decides whether a preference applies. The packing list has to agree with the invoice, the bill of lading and the physical container down to the carton count, because customs anywhere resolves a discrepancy by inspecting.</p><p>We issue the set through a nominated forwarder, agree the classification before the order rather than at entry, and hand over a file that a customs broker can clear without calling anyone.</p><p class="pnote">Deliverable: a complete document set issued before arrival, and a classification agreed in writing before the order was placed.</p></div></div></div>

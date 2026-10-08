@@ -128,6 +128,12 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band .eyebrow{color:var(--gold-soft)}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 <style>
 /* hero */
@@ -313,6 +319,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* числовая полоса: объём и счётчик */
+.nums{perspective:1300px;perspective-origin:50% 40%}
+.num{transform-style:preserve-3d;will-change:transform,opacity}
+.num b{display:block;transform-origin:50% 90%;
+  text-shadow:0 1px 0 rgba(255,255,255,.65), 0 10px 26px rgba(11,74,64,.16);
+  font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.num{transform:none!important;opacity:1!important}}
 </style>
 
 <style>
@@ -432,10 +446,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* ссылка для клавиатуры: видна только при фокусе */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 </head>
 <body>
 <!--email_off-->
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <div class="wrap navin">
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
@@ -465,7 +488,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <section><div class="wrap">
 <div class="lede"><h2>The largest cost that never appears in a quotation</h2><p class="intro">Freight is negotiated to the dollar and these are discovered on an invoice weeks later. On a lane where clearance is slow they are not an edge case, they are a line in the budget.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>Which clock is which</h2><div class="ptext"><p><b>Demurrage</b> is charged for the container occupying space in the terminal after the free time ends. It is the port's or the carrier's charge for storage, and it runs whether or not your paperwork is ready.</p><p><b>Detention</b> is charged for the container being away from the terminal, at your yard, after the free time for unpacking ends. It is the carrier's charge for its box not being back in circulation.</p><p>Some carriers merge the two into a single combined free time, which sounds generous and is usually shorter in total. Read which model the quotation uses before comparing two offers.</p><p class="pnote">A third charge, port storage, can run alongside demurrage and is billed by the terminal rather than the line. On congested ports it is the larger of the two.</p></div></div><div class="pblock"><span class="k">02</span><h2>Free time is a negotiated number, not a fact</h2><div class="ptext"><p>Free time varies by carrier, by trade lane, by season and by how much volume you give the line. It is routinely extendable at the time of booking and almost never extendable afterwards, which is the whole point: ask for it when you still have something to trade.</p><p>Reefer free time is dramatically shorter than dry, often a small fraction of it, and reefer demurrage is charged at a higher rate because the box is drawing power. On a frozen programme this is the single most expensive thing to get wrong, and it is why the clearance file has to be complete before the vessel arrives rather than after.</p></div></div><div class="pblock"><span class="k">03</span><h2>Why the clock usually runs</h2><div class="ptext"><ul class="plist"><li><b>Documents late.</b> Originals still in the post, a telex release not yet actioned, a certificate missing a signature.</li><li><b>Classification queried.</b> Customs disagrees with the code and the entry is held while it is resolved, which is why the code is agreed before the order.</li><li><b>Inspection.</b> A physical examination adds days and is not under anyone's control; it is a budget line with a probability, not an exception.</li><li><b>No haulier booked.</b> The box is cleared and nobody arranged a truck, which happens more often than anyone admits.</li><li><b>Receiving site cannot unload.</b> No forklift for the weight, no dock, nobody on site on Friday afternoon.</li><li><b>Port congestion.</b> Not your fault and still your invoice.</li></ul></div></div><div class="pblock"><span class="k">04</span><h2>Merchant haulage and carrier haulage</h2><div class="ptext"><p>If the carrier arranges the inland leg, the free time and the charges sit inside its contract and it has an interest in moving the box. If you arrange your own haulier, the line's detention clock still runs and nobody on the carrier's side is watching it for you.</p><p>Neither is always cheaper. What matters is knowing which one you bought, because the two put the risk of a slow truck in completely different places.</p></div></div><div class="pblock"><span class="k">05</span><h2>How we keep the clock stopped</h2><div class="ptext"><ul class="plist"><li>Negotiate free time at the booking, in writing, as part of the rate rather than as a favour afterwards.</li><li>Have the full document set with the broker before the vessel arrives, not when it berths.</li><li>Agree the tariff classification before the order so a query is unlikely.</li><li>Book the haulier against the estimated arrival and re-confirm when the schedule moves, which it will.</li><li>Confirm the receiving site can take the weight and has someone there on the day.</li><li>On reefer, treat the shorter free time as the binding constraint on the whole schedule, because it is.</li></ul><p>Where we quote DAP, as on the <a href="southern-africa">Durban corridor</a>, these risks sit with us rather than with the buyer, which is the honest reason a DAP price is higher than a port price.</p></div></div></div>

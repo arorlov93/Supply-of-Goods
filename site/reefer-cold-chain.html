@@ -128,6 +128,12 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band .eyebrow{color:var(--gold-soft)}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 <style>
 /* hero */
@@ -313,6 +319,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* числовая полоса: объём и счётчик */
+.nums{perspective:1300px;perspective-origin:50% 40%}
+.num{transform-style:preserve-3d;will-change:transform,opacity}
+.num b{display:block;transform-origin:50% 90%;
+  text-shadow:0 1px 0 rgba(255,255,255,.65), 0 10px 26px rgba(11,74,64,.16);
+  font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.num{transform:none!important;opacity:1!important}}
 </style>
 
 <style>
@@ -432,10 +446,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* ссылка для клавиатуры: видна только при фокусе */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 </head>
 <body>
 <!--email_off-->
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <div class="wrap navin">
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
@@ -465,7 +488,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <section><div class="wrap">
 <div class="lede"><h2>Equipment is the easy part</h2><p class="intro">A modern reefer holds its set point reliably for weeks. What it cannot do is hold it while it is standing on a chassis at a transhipment port waiting for a plug, and that is a scheduling decision somebody made, not an equipment failure.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>The set point and what it means</h2><div class="ptext"><p>The set point is written into the booking and into the contract, and it is the temperature the machine maintains for the air it delivers. For block frozen product the commercial standard is well below freezing with a stated tolerance, and the tolerance matters as much as the number.</p><p>Two mistakes recur. Loading product that is not already at temperature, because a reefer maintains temperature and does not pull it down from warm, so warm product arrives warm and everything downstream is a claim. And setting a temperature appropriate for chilled cargo on a frozen booking, which is a clerical error that ruins a container.</p></div></div><div class="pblock"><span class="k">02</span><h2>The recorder belongs in the document set</h2><div class="ptext"><p>The machine logs its own performance and the data can be downloaded at discharge. On top of that an independent recorder placed inside the load gives the temperature of the cargo rather than of the delivery air.</p><p>Both outputs belong in the document file, handed over with the bill of lading and the certificates, not kept in a drawer by whoever happened to download them. A claim without a temperature record is an argument. A claim with one is arithmetic.</p><p class="pnote">Where the value justifies it, the independent recorder should be placed by someone who is not the seller, and its position in the load should be photographed.</p></div></div><div class="pblock"><span class="k">03</span><h2>Plug time, the part nobody books</h2><div class="ptext"><ul class="plist"><li><b>At the port of loading</b>, between the arrival of the packed container and the vessel: is it plugged, and who confirms it.</li><li><b>At transhipment</b>, which on many routes into West Africa and Southern Africa means a day or more in a hub port. This is where the chain is most often broken and least often checked.</li><li><b>At the discharge port</b>, between landing and customs release. Clearance delays and plug availability are separate problems that arrive together.</li><li><b>On the inland leg</b>, if there is one, and whether the vehicle is genset equipped or the container travels unpowered.</li></ul><p>We ask these four questions at booking rather than at arrival, and on a programme we ask who at the terminal confirms the plug status and how that confirmation reaches the file.</p></div></div><div class="pblock"><span class="k">04</span><h2>Pack format is part of the cold chain</h2><div class="ptext"><p>Block frozen product in cartons behaves differently from individually frozen product in bags: the block is thermally slow and forgiving, the loose product is fast and unforgiving. Carton strength matters because a crushed carton in the middle of a stack restricts air flow, and restricted air flow is the mechanism behind most uneven-temperature claims.</p><p>Loading practice follows from that. The load has to be stowed so that the delivery air can travel: product off the floor channels where the design requires it, nothing blocking the return air path at the top, and the load not stacked above the red line painted inside the box for exactly this reason.</p></div></div><div class="pblock"><span class="k">05</span><h2>What a 40ft reefer actually carries</h2><div class="ptext"><p>Less volume than a dry box of the same length, because of the insulation and the machinery, and on a typical frozen food loading plan about 25 tonnes net. That figure is the planning number for a programme: five containers a month is roughly 125 tonnes, ten is roughly 250.</p></div></div></div>

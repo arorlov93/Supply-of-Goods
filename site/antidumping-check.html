@@ -128,6 +128,12 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band .eyebrow{color:var(--gold-soft)}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 <style>
 /* hero */
@@ -313,6 +319,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* числовая полоса: объём и счётчик */
+.nums{perspective:1300px;perspective-origin:50% 40%}
+.num{transform-style:preserve-3d;will-change:transform,opacity}
+.num b{display:block;transform-origin:50% 90%;
+  text-shadow:0 1px 0 rgba(255,255,255,.65), 0 10px 26px rgba(11,74,64,.16);
+  font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.num{transform:none!important;opacity:1!important}}
 </style>
 
 <style>
@@ -432,10 +446,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* ссылка для клавиатуры: видна только при фокусе */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 </head>
 <body>
 <!--email_off-->
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <div class="wrap navin">
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
@@ -465,7 +488,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <section><div class="wrap">
 <div class="lede"><h2>Why this deserves its own check</h2><p class="intro">An ordinary duty rate of a few per cent is a line in a cost model. A trade remedy rate in the hundreds of per cent is not a line in a cost model, it is the end of the transaction, and it attaches to the importer.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>What the two remedies are</h2><div class="ptext"><p>An <b>antidumping</b> duty answers a finding that goods were sold into the market below their normal value. A <b>countervailing</b> duty answers a finding that the production was subsidised. They are imposed per country of origin and usually per producer, so two factories in the same country can carry very different rates and one can carry none.</p><p>They sit on top of the ordinary tariff, not instead of it, and they are collected from the importer of record.</p></div></div><div class="pblock"><span class="k">02</span><h2>Scope is a description, not a code</h2><div class="ptext"><p>This is the part that catches people. An order defines the subject merchandise in words: what it is made of, how it is processed, what it is used for, and what is expressly excluded. Commodity codes are listed for convenience and the text says so; goods outside the listed codes can still be in scope and goods inside them can be out of it.</p><p>A worked example from a lane we run: quartz surface products from a particular origin carry orders, while quarried stone such as granite, marble, soapstone and quartzite is expressly excluded from that scope. Two slabs that a buyer would describe the same way sit on opposite sides of the line, and the difference is in the material and the processing, not in the appearance.</p><p class="pnote">Where the answer is genuinely unclear, administrations issue scope rulings. Asking for one before a programme starts costs a fraction of discovering the answer at entry.</p></div></div><div class="pblock"><span class="k">03</span><h2>In the United States the deposit is not the bill</h2><div class="ptext"><p>Most systems assess the final duty at entry. The United States operates retrospectively: the amount paid at entry is a cash deposit at the current rate, and the final liability is determined later in an administrative review covering that period, which can take years.</p><p>The consequence is uncomfortable and frequently missed. If the review sets a higher rate than the deposit, the importer owes the difference with interest, long after the goods were sold and the margin was spent. A buyer running a programme under an order has an open liability on the books, and should know that before the first container, not during an audit.</p></div></div><div class="pblock"><span class="k">04</span><h2>Rates change, so the check has a date on it</h2><div class="ptext"><p>Rates are revised in administrative reviews, new producers can obtain their own rates, and the orders themselves are reviewed periodically to decide whether they continue. A rate confirmed six months ago is not a rate confirmed today, and the only date that matters is the date of entry.</p></div></div><div class="pblock"><span class="k">05</span><h2>How we run the check</h2><div class="ptext"><ul class="plist"><li>Identify the classification and read the scope text of any order touching that product and origin, rather than relying on the code alone.</li><li>Identify the specific producer, because rates are producer-specific and a company-specific rate can be zero where the country-wide rate is not.</li><li>Confirm the live rate as at the planned entry date, not as at the enquiry date.</li><li>Where the product sits near a scope boundary, recommend a scope ruling and say what the delay costs against what the exposure is.</li><li>Show any deposit as a separate line in the landed price, flagged as a deposit rather than as a duty, so nobody treats it as final.</li></ul></div></div></div>

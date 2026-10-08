@@ -107,6 +107,16 @@ def pretty_urls(host):
         # абсолютные адреса в canonical, og:url, hreflang и структурных данных
         t = t.replace(host + "index.html", host)
         t = _re.sub(r'(%s)([a-z0-9][a-z0-9\-]*)\.html' % _re.escape(host), r"\1\2", t)
+        # клавиатурный пропуск навигации и пометка текущего пункта меню
+        if 'class="skip"' not in t:
+            t = t.replace("<body>", '<body>\n<a class="skip" href="#main">Skip to content</a>', 1)
+        t = t.replace("<main>", '<main id="main" tabindex="-1">', 1)
+        slug = os.path.basename(f)[:-5]
+        t = _re.sub(r'(<div class="navlinks" id="navmenu">)(.*?)(</div>)',
+                    lambda m: m.group(1) + _re.sub(
+                        r'<a href="(%s)">' % _re.escape(slug),
+                        r'<a href="\1" aria-current="page">', m.group(2)) + m.group(3),
+                    t, count=1, flags=_re.S)
         # Cloudflare по умолчанию подменяет почту на [email protected] и
         # прячет её за скриптом. Для B2B-контакта это вред: адрес перестают
         # видеть и посетитель без JS, и поисковик. Отключаем для всей страницы.

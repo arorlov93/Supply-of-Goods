@@ -128,6 +128,12 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band .eyebrow{color:var(--gold-soft)}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 <style>
 /* hero */
@@ -313,6 +319,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* числовая полоса: объём и счётчик */
+.nums{perspective:1300px;perspective-origin:50% 40%}
+.num{transform-style:preserve-3d;will-change:transform,opacity}
+.num b{display:block;transform-origin:50% 90%;
+  text-shadow:0 1px 0 rgba(255,255,255,.65), 0 10px 26px rgba(11,74,64,.16);
+  font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.num{transform:none!important;opacity:1!important}}
 </style>
 
 <style>
@@ -432,10 +446,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* ссылка для клавиатуры: видна только при фокусе */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
+  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 20px;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+.navlinks a[aria-current]{color:var(--ink)}
+.navlinks a[aria-current]::after{right:0}
 </style>
 </head>
 <body>
 <!--email_off-->
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <div class="wrap navin">
     <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
@@ -466,7 +489,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <section><div class="wrap"><figure class="mediafig" style="margin-bottom:44px"><div class="shot"><span class="pz"><img src="media/crane.webp" width="834" height="625" loading="lazy" alt="Quayside crane against an open sky"></span></div><figcaption>Paper is bought by the tonne and lost on the edge of a reel</figcaption></figure>
 <div class="lede"><h2>Reels are a handling specification before they are a product</h2><p class="intro">A reel with a crushed edge is downgraded or scrapped, and most of that damage happens in handling rather than in transit. Which means the right questions are about the receiving end, not about the mill.</p></div>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>What the grade actually means</h2><div class="ptext"><p>Paper is specified by grammage in grams per square metre and by the strength property that matters for its use. For containerboard that is usually burst strength or edge crush resistance, measured to ISO methods, and for anything that will be printed or glued it is also the surface sizing, measured by the Cobb test.</p><p>A quotation that gives only the grammage is giving one of three numbers. Two reels at the same grammage with different edge crush values make boxes with different stacking strength, and the box is where the customer notices.</p><ul class="plist"><li><b>Newsprint</b> by grammage and brightness.</li><li><b>Kraft and containerboard</b> by grammage, burst or edge crush, and Cobb.</li><li><b>Corrugated packaging</b> by flute, board combination and box compression, with a sample board specified rather than described.</li><li><b>Cleaning and facility consumables</b> on a schedule, because they fail on stockout rather than on price.</li><li><b>Workwear and protective equipment</b> on a standard mark, which is worthless without a traceable test report.</li></ul></div></div><div class="pblock"><span class="k">02</span><h2>Reel diameter, core and weight</h2><div class="ptext"><p>Three dimensions decide whether a reel can be used at all: the width, which has to match the machine; the core diameter, which has to match the shaft; and the reel diameter and weight, which have to match the lifting equipment at the receiving end.</p><p>The last one is the one that gets missed. A mill will happily supply a reel at its standard diameter, and a buyer whose site has no clamp truck will then be unable to move it off the vehicle. Clamp handling also needs a reel that can take clamp pressure without ovalising, and a facility without clamps needs reels on pallets, which changes both the price and the loading plan.</p><p class="pnote">We ask three questions before quoting reels: what lifts it at your end, what is the maximum weight that equipment handles, and is there a dock or is it a ground level discharge.</p></div></div><div class="pblock"><span class="k">03</span><h2>Moisture is the whole risk in transit</h2><div class="ptext"><p>Paper is hygroscopic and a container crossing the tropics condenses on its roof at night. Reels loaded against a bare steel wall arrive with a wet edge. The pack has to include a liner or desiccant and the loading plan has to keep product off the walls and the floor, which means dunnage and a loading photograph showing it.</p><p>Corrugated packaging arrives flat and is ruined by the same mechanism, with the added problem that nobody discovers it until the boxes are being erected weeks later. The inspection window in the contract has to be long enough to be real and short enough to be provable.</p></div></div><div class="pblock"><span class="k">04</span><h2>Consumables are a schedule, not a purchase</h2><div class="ptext"><p>Cleaning and facility supply has a different failure mode from everything else on this page: the cost of being out of stock is far higher than any price difference. The useful structure is a standing programme with an agreed call-off and a safety stock held either at origin or at destination, priced accordingly.</p><p>On the <a href="southern-africa">Durban corridor</a> we usually quote this category DAP at the buyer's own gate, because on a long inland leg the port price tells the buyer very little.</p></div></div></div>
