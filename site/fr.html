@@ -13,7 +13,7 @@
 <meta property="og:url" content="https://ispgroupgc.com/fr">
 <meta property="og:title" content="Nommez le produit. Nous rendons trois producteurs vérifiés et un prix rendu.">
 <meta property="og:description" content="Société de négoce américaine. Nous trouvons des producteurs vérifiés, achetons en notre nom propre et livrons à votre port au prix rendu.">
-<meta property="og:image" content="https://ispgroupgc.com/media/terminal.jpg">
+<meta property="og:image" content="https://ispgroupgc.com/media/port-wide.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#eef1ef">
@@ -130,6 +130,37 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band p{color:var(--on-shot-2);max-width:54ch;margin-top:18px;font-size:1.05rem}
 .band .eyebrow{color:var(--gold-soft)}
 
+/* Тёмный блок на фотографии: «почему покупатели идут к нам». Раньше этот
+   раздел был обычной светлой сеткой карточек и терялся между соседями. */
+.feat{position:relative;isolation:isolate;background:#071c19;border-bottom:1px solid var(--rule)}
+.feat>.shot{position:absolute;inset:0;z-index:0}
+.feat>.shot::after{background:
+  linear-gradient(to bottom,rgba(5,24,21,.30) 0%,rgba(5,24,21,0) 26%,rgba(5,24,21,.62) 100%),
+  linear-gradient(104deg,rgba(5,24,21,.95) 0%,rgba(5,24,21,.88) 46%,rgba(5,24,21,.70) 100%)}
+.feat>.shot::before{background:radial-gradient(90% 70% at 88% 6%,rgba(184,134,43,.34),transparent 62%)}
+.feat>.wrap{position:relative;z-index:2}
+.feat h2,.feat h3{color:var(--on-shot)}
+.feat .intro{color:var(--on-shot-2)}
+.feat .eyebrow{color:var(--gold-soft)}
+.feat .cap{background:rgba(255,255,255,.06);border:1px solid rgba(232,217,180,.24);
+  box-shadow:none;backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);
+  transition:transform .22s ease,background .22s ease,border-color .22s ease}
+.feat .cap:hover{transform:translateY(-5px);background:rgba(255,255,255,.11);
+  border-color:var(--gold);box-shadow:0 22px 46px -26px rgba(0,0,0,.8)}
+.feat .cap .n{color:var(--gold-soft)}
+.feat .cap p{color:var(--on-shot-2)}
+.featfoot{margin-top:clamp(34px,4vw,52px);padding-top:28px;
+  border-top:1px solid rgba(232,217,180,.26);display:grid;
+  grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(20px,3vw,48px);align-items:center}
+@media(max-width:820px){.featfoot{grid-template-columns:1fr}}
+.featfoot h3{font-family:var(--fs);font-weight:400;font-size:clamp(1.5rem,2.6vw,2.1rem);
+  line-height:1.15;letter-spacing:-.01em}
+.featfoot p{color:var(--on-shot-2);font-size:1rem;margin-top:14px}
+.feat .btn-ghost{color:var(--on-shot);box-shadow:inset 0 0 0 1.5px rgba(232,217,180,.55)}
+.feat .btn-ghost:hover{background:var(--gold);color:#1b1206;
+  box-shadow:inset 0 0 0 1.5px var(--gold),0 16px 30px -18px rgba(0,0,0,.85)}
+.feat .mail{color:var(--gold-soft)}
+
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 .skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:#fff;
   font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
@@ -141,16 +172,25 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 <style>
 /* hero */
 .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--rule)}
-#globe,#globe-still{position:absolute;top:50%;right:-5%;transform:translateY(-50%);
-  pointer-events:none;width:min(720px,56%);aspect-ratio:1/1;height:auto;display:block}
+.hero .wrap{position:relative;z-index:2;padding-block:clamp(56px,8.5vw,108px)}
+/* Шар держит собственную колонку сетки и выходит за правый край окна.
+   Раньше он лежал абсолютом поверх всей шапки, и на ширине около 1200 px
+   заголовок налезал на него: колонка это исключает при любой ширине. */
+.hero-g{display:grid;grid-template-columns:minmax(0,1fr) clamp(300px,42%,620px);
+  gap:clamp(14px,2.4vw,44px);align-items:center}
+.hero-copy{position:relative;z-index:2;min-width:0}
+.hero-orb{position:relative;aspect-ratio:1/1;min-width:0;pointer-events:none;
+  margin-right:calc(-1*clamp(10px,6vw,150px))}
+#globe,#globe-still{position:absolute;inset:0;width:100%;height:100%;display:block}
 #globe-still{object-fit:contain;transition:opacity .6s ease}
 #globe{opacity:0;transition:opacity .8s ease}
 #globe.live{opacity:1}
 #globe-still.gone{opacity:0}
-@media(max-width:940px){#globe,#globe-still{top:-7%;right:-26%;transform:none;width:62%}
-  #globe-still{opacity:.45}#globe.live{opacity:.45}}
-.hero .wrap{position:relative;z-index:2;padding-block:clamp(56px,8.5vw,108px)}
-.hero h1{font-size:clamp(2.55rem,6.4vw,4.9rem);max-width:16ch;letter-spacing:-.018em;line-height:1.05}
+@media(max-width:1040px){
+  .hero-g{grid-template-columns:1fr}
+  .hero-orb{position:absolute;top:-3%;right:-24%;width:64%;margin:0;z-index:0}
+  #globe-still{opacity:.42}#globe.live{opacity:.42}}
+.hero h1{font-size:clamp(2.5rem,5.4vw,4.5rem);max-width:15ch;letter-spacing:-.018em;line-height:1.05}
 .hero h1 em{font-style:italic;color:var(--brand)}
 .hero .sub{margin-top:24px;max-width:44ch;font-size:clamp(1.04rem,2vw,1.2rem);color:var(--ink-2)}
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
@@ -283,6 +323,22 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .chero .sub{margin-top:22px;max-width:48ch;font-size:clamp(1rem,1.7vw,1.14rem);color:var(--ink-2)}
 .factcard{background:var(--surface);border:1px solid var(--rule);padding:26px 24px;
   box-shadow:var(--shadow-m)}
+/* Снимок в шапке внутренней страницы. Каждая страница открывается кадром,
+   а карточка фактов ложится поверх его нижнего края. */
+.heroside{position:relative;min-width:0;align-self:center}
+.heroside .shot{aspect-ratio:4/5;border:1px solid var(--rule);box-shadow:var(--shadow-l)}
+.heroside .shot img{transform:scale(1.01)}
+.heroside:hover .shot img{transform:scale(1.04)}
+.heroside .factcard{position:relative;z-index:3;
+  margin:clamp(-86px,-7vw,-48px) clamp(-16px,-1.4vw,0px) 0 clamp(16px,3.4vw,46px);
+  background:rgba(255,255,255,.94);backdrop-filter:blur(9px);
+  -webkit-backdrop-filter:blur(9px);box-shadow:var(--shadow-l)}
+.heroside .caption{display:block;font-family:var(--fm);font-size:.57rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-3);padding-top:11px}
+@media(max-width:900px){
+  .heroside{order:2;margin-top:34px}
+  .heroside .shot{aspect-ratio:16/10}
+  .heroside .factcard{margin:-44px 0 0 clamp(14px,5vw,40px)}}
 .facts{width:100%;border-collapse:collapse;font-size:.92rem;margin-top:4px}
 .facts th{text-align:left;font-family:var(--fm);font-weight:500;font-size:.56rem;
   letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);
@@ -335,6 +391,31 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   text-shadow:0 1px 0 rgba(255,255,255,.65), 0 10px 26px rgba(11,74,64,.16);
   font-variant-numeric:tabular-nums}
 @media (prefers-reduced-motion:reduce){.num{transform:none!important;opacity:1!important}}
+
+/* поиск */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.navsearch{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;
+  margin-left:4px;padding:0;border:1px solid var(--rule);background:var(--surface);
+  color:var(--ink-2);cursor:pointer;border-radius:1px;box-shadow:var(--shadow-s);
+  transition:border-color .18s,color .18s}
+.navsearch:hover{border-color:var(--brand);color:var(--brand)}
+.searchpanel{position:sticky;top:68px;z-index:39;background:var(--surface);
+  border-bottom:1px solid var(--rule);box-shadow:var(--shadow-m);padding:22px 0 26px}
+.searchpanel[hidden]{display:none}
+.searchpanel input{width:100%;background:var(--paper);border:1px solid var(--rule);
+  color:var(--ink);font-family:var(--fs);font-size:clamp(1.3rem,2.6vw,1.9rem);
+  padding:14px 16px;transition:border-color .18s,box-shadow .18s}
+.searchpanel input:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-wash)}
+.searchhint{margin-top:10px;font-family:var(--fm);font-size:.55rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink-3)}
+.searchres{list-style:none;margin:16px 0 0;padding:0;max-height:52vh;overflow:auto}
+.searchres li{border-top:1px solid var(--rule)}
+.searchres a{display:block;padding:14px 0;text-decoration:none;color:var(--ink)}
+.searchres a:hover,.searchres a:focus-visible{background:var(--surface-2)}
+.searchres b{display:block;font-family:var(--fs);font-weight:400;font-size:1.18rem;margin-bottom:4px}
+.searchres span{display:block;color:var(--ink-2);font-size:.92rem}
+.searchres mark{background:var(--gold-soft);color:inherit;padding:0 2px}
+@media(max-width:940px){.searchpanel{top:68px}}
 </style>
 
 <style>
@@ -539,7 +620,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 </div>
 
 <header class="hero chero" id="top">
-  <div class="wrap chero-g chero-1">
+  <div class="wrap chero-g">
     <div>
       <span class="eyebrow">Sourcing et négoce international · États-Unis</span>
 
@@ -548,6 +629,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
       <div class="chips"><span class="chip"><b>20</b> ans d’expérience</span><span class="chip"><b>10</b> jours ouvrés jusqu’au prix rendu</span><span class="chip">FOB &middot; CFR &middot; CIF &middot; DAP</span><span class="chip">Principal, <b>pas courtier</b></span></div>
       <div class="ctarow" style="margin-top:28px"><a class="btn" href="contact-fr#enquiry">Demander un devis</a></div>
     </div>
+    <div class="heroside"><div class="shot"><span class="pz"><img src="media/port-wide.webp" width="1040" height="1300" alt="Porte-conteneurs à quai" fetchpriority="high" decoding="async"></span></div></div>
   </div>
 </header>
 

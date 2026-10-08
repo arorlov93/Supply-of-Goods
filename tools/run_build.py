@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import os, glob, importlib
 import build as B, gen_pages as G, content_core as C
+import heroes as H
 
 mods = []
 try:
@@ -23,6 +24,7 @@ for spec in [C.CONTACT, C.ABOUT, C.SERVICES, C.INCOTERMS, C.NOTFOUND,
         sp["updated"] = UPD
     if sp["slug"] == "incoterms" and GU:
         sp["ld"] = GU.article_ld(sp)
+    sp["hero_img"] = H.HERO.get(sp["slug"])
     B.write(sp, extra_js=C.CONTACT_JS if sp["slug"] == "contact" else "")
 
 # ── этап 2: товарные группы
@@ -30,6 +32,7 @@ if CAT:
     for spec in CAT.CATS:
         s = dict(spec)
         s["hero_right"] = G.factcard("Category at a glance", spec["facts"])
+        s["hero_img"] = H.HERO.get(spec["slug"])
         s["related"] = CAT.rel(spec["slug"])
         s["faq_h2"] = "What buyers ask about this category"
         s["faq_sub"] = "The three that come up before a first order."
@@ -41,6 +44,7 @@ if CAT:
 if GU:
     for spec in GU.GUIDES_PAGES:
         s = dict(spec)
+        s["hero_img"] = H.HERO.get(spec["slug"])
         s.setdefault("faq_h2", "Questions on this")
         s.setdefault("faq_sub", "The ones we are asked most often.")
         s["related"] = GU.rel(spec["slug"])
@@ -52,6 +56,7 @@ if GU:
 # ── этап 4: французская версия
 if FR:
     for spec in FR.PAGES_FR:
+        spec = dict(spec); spec["hero_img"] = H.HERO.get(spec["slug"])
         B.write(spec, lang="fr", extra_js=C.CONTACT_JS if "contact" in spec["slug"] else "")
 
 print("собрано страниц:", len(B.built))

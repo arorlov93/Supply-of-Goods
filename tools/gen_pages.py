@@ -226,6 +226,18 @@ def build(spec, extra_css="", lang="en"):
                    % json.dumps(d, ensure_ascii=False) for d in ld)
 
     hero_right = spec.get("hero_right", "")
+    # Снимок в шапке: страница открывается кадром, а не одним текстом.
+    # Карточка фактов, если она есть, ложится поверх нижнего края снимка.
+    hero_img = spec.get("hero_img")
+    if hero_img:
+        f, alt = hero_img[0], hero_img[1]
+        cap = hero_img[2] if len(hero_img) > 2 else ""
+        hero_right = ('<div class="heroside">'
+                      '<div class="shot"><span class="pz"><img src="media/%s" width="1040" '
+                      'height="1300" alt="%s" fetchpriority="high" decoding="async"></span></div>'
+                      '%s%s</div>'
+                      % (f, alt, hero_right,
+                         ('<span class="caption">%s</span>' % cap) if cap and not hero_right else ""))
     body = ['<header class="hero chero" id="top">',
             '  <div class="wrap chero-g%s">' % ("" if hero_right else " chero-1"),
             "    <div>",
@@ -283,7 +295,8 @@ def build(spec, extra_css="", lang="en"):
     body.append(CTA if lang == "en" else CTA_FR)
     body.append("</main>")
 
-    og_img = HOST + "media/" + (img[0] if img else "terminal.jpg")
+    og_src = hero_img[0] if hero_img else (img[0] if img else "terminal.jpg")
+    og_img = HOST + "media/" + og_src.replace(".webp", ".jpg")
     alts = spec.get("alts", "")
     return """<!doctype html>
 <html lang="{lang}">

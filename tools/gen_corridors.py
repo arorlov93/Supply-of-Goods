@@ -190,6 +190,8 @@ def footer_for(page):
 def build(p):
     url = HOST + p["slug"] + ".html"
     img, w, h, alt, cap = p["photo"]
+    import heroes as H
+    hero, heroalt = H.HERO.get(p["slug"], (img, alt))
     facts = "".join("<tr><th scope=\"row\">%s</th><td>%s</td></tr>" % (k, v) for k, v in p["facts"])
     chips = "".join('<span class="chip">%s%s</span>' %
                     (("<b>%s</b> " % a) if b else a, b or "") for a, b in p["chips"])
@@ -250,7 +252,7 @@ def build(p):
 <meta property="og:url" content="{url}">
 <meta property="og:title" content="{otitle}">
 <meta property="og:description" content="{sdesc}">
-<meta property="og:image" content="{host}media/{img}">
+<meta property="og:image" content="{host}media/{ogimg}">
 <meta property="og:image:alt" content="{alt}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="robots" content="index,follow,max-image-preview:large">
@@ -279,10 +281,14 @@ def build(p):
         <a class="btn btn-ghost" href="index.html#corridors">All corridors</a>
       </div>
     </div>
-    <aside class="factcard">
-      <span class="eyebrow">Lane at a glance</span>
-      <table class="facts"><tbody>{facts}</tbody></table>
-    </aside>
+    <div class="heroside">
+      <div class="shot"><span class="pz"><img src="media/{hero}" width="1040" height="1300"
+        alt="{heroalt}" fetchpriority="high" decoding="async"></span></div>
+      <aside class="factcard">
+        <span class="eyebrow">Lane at a glance</span>
+        <table class="facts"><tbody>{facts}</tbody></table>
+      </aside>
+    </div>
   </div>
 </header>
 
@@ -350,6 +356,7 @@ def build(p):
 {ldjs}{navjs}{fxjs}</body>
 </html>
 """.format(desc=p["desc"], url=url, host=HOST, img=img, alt=alt, cap=cap, w=w, h=h,
+           hero=hero, heroalt=heroalt, ogimg=hero.replace(".webp", ".jpg"),
            otitle=plain(p["h1"]), title=p["title"], icon=ICON, assets=ASSETS, fx=FX,
            nav=nav_for(p["slug"]), h1=p["h1"], sub=p["sub"], chips=chips, facts=facts,
            ledeh=p["lede"][0], ledep=p["lede"][1], prose=prose, others=others,
