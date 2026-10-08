@@ -3,236 +3,626 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="ISP GROUP LLC, Global Commodities. We buy and resell bulk food and industrial commodities for our own account: frozen poultry, paper, stone and tile, construction materials.">
-<title>ISP Group Global Commodities</title>
+<meta name="description" content="ISP Group is an international sourcing and trading company. We source materials, products and industrial equipment from verified producers worldwide, buy in our own name and deliver to your port on FOB, CFR, CIF or DAP terms.">
+<link rel="canonical" href="https://ispgroupgc.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ispgroupgc.com/">
+<meta property="og:site_name" content="ISP Group">
+<meta property="og:title" content="ISP Group — international sourcing and trading">
+<meta property="og:description" content="Name the product. We return three verified producers and a landed price. Materials, products and industrial equipment, delivered to your port.">
+<meta property="og:image" content="https://ispgroupgc.com/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0a1420">
+<title>ISP Group Global Commerce</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: one document column. Masthead left, trade lines as a desk sheet, terms as plain prose. */
+/* Layout: dark instrument panel. Globe behind the hero, everything after it quiet and ruled.
+   Palette is maritime brass on ink navy, not a tech accent on black. */
 :root{
-  --paper:#eceff1;        /* cool grey ground, blue bias */
-  --card:#f7f9fa;
-  --ink:#0d1b2a;          /* navy ink */
-  --ink-2:#4a5c6b;
-  --rule:#c6ced4;
-  --accent:#9c3a17;       /* oxide red, used only on rules and figures */
-  --accent-soft:#e8d9d2;
-  --font-display:"IBM Plex Sans Condensed","Helvetica Neue",Arial,sans-serif;
-  --font-body:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
-  --font-data:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --bg:#0a1420; --surface:#11202e; --surface-2:#16293a;
+  --ink:#edf1f4; --ink-2:#8da2b3; --rule:#1e3245;
+  --accent:#c08a42; --accent-2:#6fa8c9;
+  --accent-wash:rgba(192,138,66,.12);
+  --fd:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --fm:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --maxw:72rem;
+  color-scheme:dark;
 }
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --paper:#0b1620; --card:#132230; --ink:#e3e9ed; --ink-2:#93a5b2;
-    --rule:#283a49; --accent:#e0754a; --accent-soft:#2d2019; color-scheme:dark;
+@media (prefers-color-scheme:light){
+  :root:not([data-theme="dark"]){
+    --bg:#f1f3f5; --surface:#ffffff; --surface-2:#e8ecef;
+    --ink:#0a1420; --ink-2:#55697a; --rule:#d2dae0;
+    --accent:#8a5f22; --accent-2:#2c6a8f; --accent-wash:rgba(138,95,34,.10);
+    color-scheme:light;
   }
 }
-:root[data-theme="dark"]{
-  --paper:#0b1620; --card:#132230; --ink:#e3e9ed; --ink-2:#93a5b2;
-  --rule:#283a49; --accent:#e0754a; --accent-soft:#2d2019; color-scheme:dark;
+:root[data-theme="light"]{
+  --bg:#f1f3f5; --surface:#ffffff; --surface-2:#e8ecef;
+  --ink:#0a1420; --ink-2:#55697a; --rule:#d2dae0;
+  --accent:#8a5f22; --accent-2:#2c6a8f; --accent-wash:rgba(138,95,34,.10);
+  color-scheme:light;
 }
 *{box-sizing:border-box}
-body{
-  margin:0; background:var(--paper); color:var(--ink);
-  font-family:var(--font-body); font-size:16px; line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-}
-.wrap{max-width:68rem; margin:0 auto; padding-inline:20px; padding-block:0}
-h1,h2,h3{font-family:var(--font-display); text-wrap:balance; margin:0; line-height:1.15}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--fd);
+  font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{margin:0;line-height:1.1;text-wrap:balance;font-weight:700;letter-spacing:-.02em}
+p{margin:0}
+a{color:inherit}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-inline:22px}
+.eyebrow{font-family:var(--fm);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--accent);display:block;margin-bottom:14px}
 
-/* masthead */
-.masthead{padding-block:56px 40px; border-bottom:2px solid var(--accent)}
-.mark{font-family:var(--font-data); font-size:.72rem; letter-spacing:.16em;
-  text-transform:uppercase; color:var(--ink-2); margin:0 0 18px}
-h1{font-size:clamp(2.3rem,7vw,4.1rem); font-weight:700; letter-spacing:-.015em}
-h1 .gc{color:var(--accent); display:block; font-weight:600;
-  font-size:clamp(1.15rem,3.2vw,1.9rem); letter-spacing:.02em; margin-top:6px}
-.lede{margin:22px 0 0; max-width:40em; font-size:clamp(1.02rem,2.2vw,1.18rem); color:var(--ink-2)}
+/* ---------- nav ---------- */
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;
+  background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--rule)}
+.navin{display:flex;align-items:center;gap:26px;height:62px}
+.logo{font-weight:700;letter-spacing:-.02em;font-size:1.06rem;white-space:nowrap}
+.logo em{font-style:normal;color:var(--accent)}
+.navlinks{display:flex;gap:22px;margin-left:auto;font-size:.9rem}
+.navlinks a{text-decoration:none;color:var(--ink-2)}
+.navlinks a:hover{color:var(--ink)}
+.btn{font-family:var(--fm);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+  border:1px solid var(--accent);color:var(--accent);background:transparent;
+  padding:9px 16px;cursor:pointer;text-decoration:none;white-space:nowrap;display:inline-block}
+.btn:hover{background:var(--accent);color:var(--bg)}
+.btn-solid{background:var(--accent);color:var(--bg)}
+.btn-solid:hover{filter:brightness(1.12)}
+@media(max-width:860px){.navlinks{display:none}}
 
-/* facts strip */
-.facts{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-  gap:1px; background:var(--rule); border:1px solid var(--rule); margin-block:40px}
-.fact{background:var(--card); padding:16px 18px}
-.fact dt{font-family:var(--font-data); font-size:.68rem; letter-spacing:.14em;
-  text-transform:uppercase; color:var(--ink-2); margin:0 0 6px}
-.fact dd{margin:0; font-family:var(--font-display); font-size:1.05rem; font-weight:600}
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--rule)}
+#globe{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero .wrap{position:relative;z-index:2;padding-block:clamp(56px,9vw,104px)}
+.hero h1{font-size:clamp(2.5rem,6.6vw,4.9rem);max-width:17ch}
+.hero h1 .brass{color:var(--accent)}
+.hero .sub{margin-top:22px;max-width:46ch;font-size:clamp(1.03rem,2vw,1.2rem);color:var(--ink-2)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.chip{font-family:var(--fm);font-size:.72rem;letter-spacing:.08em;border:1px solid var(--rule);
+  background:var(--surface);padding:7px 12px;color:var(--ink-2)}
+.chip b{color:var(--accent);font-weight:500}
 
-section{padding-block:40px; border-top:1px solid var(--rule)}
-h2{font-size:1.45rem; font-weight:600; letter-spacing:-.01em}
-.sec-no{font-family:var(--font-data); font-size:.68rem; letter-spacing:.14em;
-  color:var(--accent); text-transform:uppercase; display:block; margin-bottom:10px}
-section > p{max-width:62ch; color:var(--ink-2); margin:14px 0 0}
+/* enquiry card */
+.ask{margin-top:34px;max-width:36rem;background:var(--surface);border:1px solid var(--rule);padding:20px}
+.ask h2{font-size:1.02rem;letter-spacing:-.01em}
+.ask p{color:var(--ink-2);font-size:.9rem;margin-top:6px}
+.askrow{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.askrow input{flex:1 1 13rem;min-width:0;background:var(--bg);border:1px solid var(--rule);
+  color:var(--ink);font:inherit;font-size:.95rem;padding:11px 13px}
+.askrow input:focus{outline:2px solid var(--accent);outline-offset:1px}
+.result{margin-top:14px;font-size:.93rem;color:var(--ink-2)}
+.result[hidden]{display:none}
+.mail{font-family:var(--fm);border-bottom:2px solid var(--accent);padding-bottom:1px;white-space:nowrap}
 
-/* trade sheet */
-.sheet{width:100%; border-collapse:collapse; margin-top:24px; font-size:.95rem}
-.sheet caption{text-align:left; font-family:var(--font-data); font-size:.68rem;
-  letter-spacing:.14em; text-transform:uppercase; color:var(--ink-2); padding-bottom:10px}
-.sheet th{text-align:left; font-family:var(--font-data); font-weight:500; font-size:.68rem;
-  letter-spacing:.12em; text-transform:uppercase; color:var(--ink-2);
-  border-bottom:1px solid var(--rule); padding:0 14px 8px 0; white-space:nowrap}
-.sheet td{border-bottom:1px solid var(--rule); padding:13px 14px 13px 0; vertical-align:top}
-.sheet tr td:first-child{font-family:var(--font-display); font-weight:600; white-space:nowrap}
-.sheet td:last-child, .sheet th:last-child{padding-right:0}
-.scroller{overflow-x:auto; -webkit-overflow-scrolling:touch}
-.hs{font-family:var(--font-data); font-size:.82rem; color:var(--ink-2); display:block}
+/* ---------- generic section ---------- */
+section{padding-block:clamp(54px,7vw,92px);border-bottom:1px solid var(--rule)}
+section h2{font-size:clamp(1.7rem,3.4vw,2.5rem);max-width:20ch}
+.intro{margin-top:16px;max-width:60ch;color:var(--ink-2);font-size:1.03rem}
 
-/* terms list */
-.terms{list-style:none; padding:0; margin:24px 0 0; display:grid; gap:0;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-.terms li{padding:18px 20px 18px 0; border-top:1px solid var(--rule); min-width:0}
-.terms b{font-family:var(--font-display); font-size:1rem; font-weight:600; display:block; margin-bottom:5px}
-.terms span{color:var(--ink-2); font-size:.94rem}
+/* numbered capability cards */
+.caps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;
+  background:var(--rule);border:1px solid var(--rule);margin-top:40px}
+.cap{background:var(--bg);padding:26px 22px}
+.cap .n{font-family:var(--fm);font-size:.72rem;color:var(--accent);letter-spacing:.14em;display:block;margin-bottom:14px}
+.cap h3{font-size:1.1rem;margin-bottom:9px}
+.cap p{color:var(--ink-2);font-size:.94rem}
 
-/* contact */
-.contact{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:28px; margin-top:24px}
-.contact div{min-width:0}
-.contact dt{font-family:var(--font-data); font-size:.68rem; letter-spacing:.14em;
-  text-transform:uppercase; color:var(--ink-2); margin-bottom:7px}
-.contact dd{margin:0; font-size:1.05rem; word-break:break-word}
-.mailrow{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
-.mail{font-family:var(--font-data); font-size:1rem; border-bottom:2px solid var(--accent); padding-bottom:1px}
-button{font:inherit; font-family:var(--font-data); font-size:.72rem; letter-spacing:.1em;
-  text-transform:uppercase; cursor:pointer; background:transparent; color:var(--ink);
-  border:1px solid var(--rule); padding:5px 11px}
-button:hover{border-color:var(--accent); color:var(--accent)}
-button:focus-visible, a:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
-.todo{color:var(--accent); font-family:var(--font-data); font-size:.9rem}
+/* category grid */
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:18px;margin-top:40px}
+.cat{background:var(--surface);border:1px solid var(--rule);padding:24px 22px;min-width:0}
+.cat h3{font-size:1.12rem;margin-bottom:10px}
+.cat p{color:var(--ink-2);font-size:.93rem}
+.cat ul{margin:14px 0 0;padding:0;list-style:none;font-family:var(--fm);font-size:.78rem;
+  color:var(--ink-2);display:flex;flex-wrap:wrap;gap:6px}
+.cat li{border:1px solid var(--rule);padding:3px 8px;background:var(--bg)}
 
-footer{border-top:2px solid var(--accent); padding-block:26px 50px; color:var(--ink-2); font-size:.86rem}
-@media (prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
+/* corridors */
+.lanes{width:100%;border-collapse:collapse;margin-top:38px;font-size:.96rem}
+.lanes th{text-align:left;font-family:var(--fm);font-weight:500;font-size:.68rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink-2);border-bottom:1px solid var(--rule);padding:0 16px 10px 0;white-space:nowrap}
+.lanes td{border-bottom:1px solid var(--rule);padding:15px 16px 15px 0;vertical-align:top;color:var(--ink-2)}
+.lanes td:first-child{color:var(--ink);font-weight:600;white-space:nowrap}
+.lanes td:last-child,.lanes th:last-child{padding-right:0}
+.scroller{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+/* process */
+.steps{counter-reset:s;margin-top:40px;display:grid;gap:0}
+.step{display:grid;grid-template-columns:4.4rem 1fr;gap:20px;padding:24px 0;border-top:1px solid var(--rule);align-items:start}
+.step:last-child{border-bottom:1px solid var(--rule)}
+.step .k{font-family:var(--fm);font-size:.78rem;color:var(--accent);letter-spacing:.1em;padding-top:4px}
+.step h3{font-size:1.14rem;margin-bottom:7px}
+.step p{color:var(--ink-2);font-size:.95rem;max-width:62ch}
+@media(max-width:560px){.step{grid-template-columns:1fr;gap:6px}}
+
+/* media slot */
+.media{margin-top:36px;border:1px dashed var(--rule);background:var(--surface);
+  aspect-ratio:16/9;max-width:100%;display:grid;place-items:center;text-align:center;padding:24px}
+.media p{font-family:var(--fm);font-size:.78rem;letter-spacing:.08em;color:var(--ink-2);max-width:40ch}
+
+/* faq */
+details{border-top:1px solid var(--rule)}
+details:last-of-type{border-bottom:1px solid var(--rule)}
+summary{cursor:pointer;list-style:none;padding:20px 40px 20px 0;position:relative;
+  font-weight:600;font-size:1.03rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:18px;color:var(--accent);
+  font-family:var(--fm);font-size:1.25rem}
+details[open] summary::after{content:"\2013"}
+details p{color:var(--ink-2);font-size:.96rem;padding-bottom:22px;max-width:70ch}
+summary:focus-visible,.btn:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* cta + footer */
+.cta{text-align:left;background:var(--surface)}
+.cta h2{max-width:18ch}
+.ctarow{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px;align-items:center}
+footer{padding-block:34px 56px;color:var(--ink-2);font-size:.88rem}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:26px}
+.fgrid dt{font-family:var(--fm);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-2);margin-bottom:7px}
+.fgrid dd{margin:0;color:var(--ink)}
+.todo{color:var(--accent);font-family:var(--fm);font-size:.9rem}
+.fbottom{margin-top:34px;padding-top:20px;border-top:1px solid var(--rule);font-size:.82rem}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
 
-<div class="wrap">
+<nav>
+  <div class="wrap navin">
+    <span class="logo">ISP GROUP <em>/ GC</em></span>
+    <div class="navlinks">
+      <a href="#capabilities">Capabilities</a>
+      <a href="#categories">What we supply</a>
+      <a href="#corridors">Corridors</a>
+      <a href="#process">Process</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="btn btn-solid" href="#enquiry">Request a quote</a>
+  </div>
+</nav>
 
-  <header class="masthead">
-    <p class="mark">Incorporated in the United States</p>
-    <h1>ISP Group<span class="gc">Global Commodities</span></h1>
-    <p class="lede">We buy and resell bulk food and industrial commodities for our own account.
-      We contract with producers directly, take title to the goods, and deliver to the
-      buyer's port on agreed Incoterms.</p>
-  </header>
+<header class="hero">
+  <canvas id="globe" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <span class="eyebrow">Global Commerce &middot; United States</span>
+    <h1>Name the product.<br>We return <span class="brass">three verified
+      producers</span> and a landed price.</h1>
+    <p class="sub">ISP Group is an international trading and sourcing company. We find the
+      factory, check that it can legally ship to your country, buy the goods in our own name
+      and deliver them to your port.</p>
 
-  <dl class="facts">
-    <div class="fact"><dt>Position</dt><dd>Principal, not agent</dd></div>
-    <div class="fact"><dt>Unit of trade</dt><dd>Full container loads</dd></div>
-    <div class="fact"><dt>Terms quoted</dt><dd>FOB &middot; CFR &middot; CIF</dd></div>
-    <div class="fact"><dt>Settlement</dt><dd>L/C at sight, T/T</dd></div>
-  </dl>
+    <div class="chips">
+      <span class="chip"><b>10</b> working days to a quoted landed price</span>
+      <span class="chip">Full container loads &middot; <b>FOB CFR CIF DAP</b></span>
+      <span class="chip">Principal, <b>not a broker</b></span>
+    </div>
 
-  <section>
-    <span class="sec-no">What we trade</span>
-    <h2>Four commodity lines</h2>
-    <p>Each line runs as a standing monthly programme rather than one-off lots, so
-      producers get a predictable offtake and buyers get a predictable arrival.</p>
+    <form class="ask" id="enquiry" novalidate>
+      <h2>Tell us what you need</h2>
+      <p>Product, quantity and destination port is enough to start. No account, no fee.</p>
+      <div class="askrow">
+        <input id="q-product" name="product" type="text" placeholder="Product or equipment" autocomplete="off">
+        <input id="q-port" name="port" type="text" placeholder="Destination port or city" autocomplete="off">
+        <button class="btn" type="submit">Continue</button>
+      </div>
+      <p class="result" id="q-result" hidden></p>
+    </form>
+  </div>
+</header>
+
+<main>
+
+<section id="capabilities">
+  <div class="wrap">
+    <span class="eyebrow">Why buyers use us</span>
+    <h2>The part of a cross-border purchase nobody wants to own</h2>
+    <p class="intro">Finding a factory is the easy half. The hard half is proving it is real,
+      getting it to produce to your specification, moving the paperwork through two customs
+      authorities and making sure the money lands safely. That is the part we take.</p>
+
+    <div class="caps">
+      <div class="cap">
+        <span class="n">01</span>
+        <h3>We verify before we quote</h3>
+        <p>Establishment and licence numbers checked against the registers of the importing
+          country, not taken from the seller's website. Lookalike exporter domains are
+          common in this trade and we screen for them.</p>
+      </div>
+      <div class="cap">
+        <span class="n">02</span>
+        <h3>We price from customs data</h3>
+        <p>We benchmark what comparable goods actually cleared customs at on your lane
+          before we negotiate, so an offer can be judged against the market instead of
+          against itself.</p>
+      </div>
+      <div class="cap">
+        <span class="n">03</span>
+        <h3>We take title</h3>
+        <p>We are the buyer on one contract and the seller on the next. You deal with one
+          counterparty, one invoice and one currency, in your own jurisdiction.</p>
+      </div>
+      <div class="cap">
+        <span class="n">04</span>
+        <h3>We mirror the terms</h3>
+        <p>Inspection windows, weight tolerances, claim periods and bank charges are matched
+          on both contracts, so nothing falls into the gap between supplier and buyer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="categories">
+  <div class="wrap">
+    <span class="eyebrow">What we supply</span>
+    <h2>Materials, products and equipment</h2>
+    <p class="intro">We are not tied to one commodity. Our work is sourcing and execution,
+      and the categories below are where we already have producer relationships and a
+      documented lane. A product outside them is a sourcing project, not a refusal.</p>
+
+    <div class="cats">
+      <div class="cat">
+        <h3>Building and finishing materials</h3>
+        <p>Natural stone, porcelain and ceramic tile, cement products, insulation, dry
+          mixes, sanitary ware, cable and electrical goods.</p>
+        <ul><li>Slabs</li><li>Tile</li><li>Cable</li><li>Fittings</li></ul>
+      </div>
+      <div class="cat">
+        <h3>Industrial equipment and machinery</h3>
+        <p>Production lines, compressors, pumps, generators, material handling and workshop
+          equipment, new and factory refurbished, with spares and commissioning arranged.</p>
+        <ul><li>New</li><li>Refurbished</li><li>Spares</li><li>Install</li></ul>
+      </div>
+      <div class="cat">
+        <h3>Tools, hardware and fasteners</h3>
+        <p>Power and hand tools, abrasives, measuring instruments, fixings and consumables,
+          supplied to specification or to brand.</p>
+        <ul><li>Power tools</li><li>Fixings</li><li>Abrasives</li></ul>
+      </div>
+      <div class="cat">
+        <h3>Metals and pipe</h3>
+        <p>Structural sections, sheet and plate, seamless and welded pipe, fittings and
+          flanges, to EN, ASTM or GOST, with mill certificates.</p>
+        <ul><li>Sections</li><li>Pipe</li><li>Fittings</li><li>Mill certs</li></ul>
+      </div>
+      <div class="cat">
+        <h3>Paper, packaging and consumables</h3>
+        <p>Newsprint, kraft and containerboard in reels, corrugated packaging, cleaning and
+          facility consumables, workwear and protective equipment.</p>
+        <ul><li>Reels</li><li>Corrugated</li><li>PPE</li><li>Workwear</li></ul>
+      </div>
+      <div class="cat">
+        <h3>Food and agricultural goods</h3>
+        <p>Frozen and chilled protein, bulk staples and food ingredients, handled under
+          veterinary and sanitary certification for the destination country.</p>
+        <ul><li>Frozen</li><li>Bulk</li><li>Vet cert</li><li>Reefer</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="corridors">
+  <div class="wrap">
+    <span class="eyebrow">Corridors</span>
+    <h2>We run lanes, not a catalogue</h2>
+    <p class="intro">A trade lane is the real asset: the producers, the forwarder, the customs
+      broker and the document set on a given route. Once a lane works, the product travelling
+      down it can change. These are the lanes we operate.</p>
 
     <div class="scroller">
-      <table class="sheet">
-        <caption>Commodity lines, form and lanes</caption>
+      <table class="lanes">
         <thead>
-          <tr><th scope="col">Line</th><th scope="col">Form</th>
-              <th scope="col">Sourced from</th><th scope="col">Delivered to</th></tr>
+          <tr><th scope="col">Corridor</th><th scope="col">Typical cargo</th>
+              <th scope="col">Terms</th><th scope="col">Gateways</th></tr>
         </thead>
         <tbody>
           <tr>
-            <td>Frozen poultry<span class="hs">HS 0207</span></td>
-            <td>Turkey and chicken cuts, block frozen, bulk cartons</td>
-            <td>Brazil, Chile, Poland, Germany, United States</td>
-            <td>West Africa &mdash; Lom&eacute;, Cotonou</td>
+            <td>T&uuml;rkiye &rarr; United States</td>
+            <td>Stone and tile, building materials, finished products</td>
+            <td>FOB, CIF</td>
+            <td>Izmir, Istanbul &rarr; New York, Savannah, Houston</td>
           </tr>
           <tr>
-            <td>Paper<span class="hs">HS 4801 / 4804</span></td>
-            <td>Newsprint and sack kraft, reels</td>
-            <td>South Africa, India</td>
-            <td>Southern Africa &mdash; Gaborone</td>
+            <td>Americas &amp; EU &rarr; West Africa</td>
+            <td>Food and agricultural goods, consumables, equipment</td>
+            <td>CIF, CFR</td>
+            <td>Santos, Valpara&iacute;so, Gdańsk, Houston &rarr; Lom&eacute;, Cotonou</td>
           </tr>
           <tr>
-            <td>Stone and tile<span class="hs">HS 2515 / 6802 / 6907</span></td>
-            <td>Marble and travertine slabs, porcelain tile</td>
-            <td>T&uuml;rkiye</td>
-            <td>United States</td>
+            <td>Intra-Africa</td>
+            <td>Paper and packaging, industrial supply</td>
+            <td>DAP</td>
+            <td>Durban, Johannesburg &rarr; Gaborone and SADC</td>
           </tr>
           <tr>
-            <td>Construction<span class="hs">various</span></td>
-            <td>Building materials, tools, workwear, municipal supply</td>
-            <td>European Union, T&uuml;rkiye, Asia</td>
-            <td>By tender and contract</td>
+            <td>Asia &amp; EU &rarr; Eurasia</td>
+            <td>Tools, hardware, metals, municipal and utility supply</td>
+            <td>FCA, DAP</td>
+            <td>By contract and tender</td>
           </tr>
         </tbody>
       </table>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section>
-    <span class="sec-no">How we work</span>
-    <h2>Terms a producer can check before replying</h2>
-    <ul class="terms">
-      <li><b>We take title</b><span>We are the buyer on the contract and the seller on the
-        onward sale. No commission, no introduction fee, no triangular invoicing for the producer to manage.</span></li>
-      <li><b>One currency per deal</b><span>We buy and sell in the same currency so neither
-        side carries the conversion. Bank charges outside the beneficiary's country are for the payer.</span></li>
-      <li><b>Documents through our forwarder</b><span>We nominate the forwarder and the
-        bill of lading is issued by them. Health certificates and certificates of origin stay with the producing plant.</span></li>
-      <li><b>Trial before programme</b><span>Every new line starts with a trial shipment on
-        full commercial terms. Volume follows performance, not the other way round.</span></li>
-      <li><b>Mirrored claim windows</b><span>The inspection and claim period we grant our
-        buyer never exceeds the one we hold with the producer.</span></li>
-      <li><b>Plant approval first</b><span>We confirm the establishment number and its
-        approval for the destination country before we place an order, not after.</span></li>
-    </ul>
-  </section>
+<section id="process">
+  <div class="wrap">
+    <span class="eyebrow">Process</span>
+    <h2>From enquiry to delivered cargo</h2>
 
-  <section>
-    <span class="sec-no">Contact</span>
-    <h2>Enquiries and offers</h2>
-    <p>Producers and mills are welcome to send an offer directly. Please include the
-      establishment number, the pack, and the terms you quote on.</p>
+    <div class="steps">
+      <div class="step"><span class="k">STEP 1</span><div>
+        <h3>Specification</h3>
+        <p>We turn a request into a buyable specification: grade, dimension or cut, pack,
+          tolerance, standard and the certificates the destination country requires. Most
+          failed imports fail here, before anyone has quoted.</p></div></div>
+      <div class="step"><span class="k">STEP 2</span><div>
+        <h3>Sourcing and verification</h3>
+        <p>We approach producers directly, not through intermediaries, and check each one
+          against the importing country's register. You receive at least three comparable
+          offers on the same basis.</p></div></div>
+      <div class="step"><span class="k">STEP 3</span><div>
+        <h3>Landed price</h3>
+        <p>Freight, insurance, port charges, duty and certification are added to the factory
+          price so you see one number at your door, with the rate validity stated.</p></div></div>
+      <div class="step"><span class="k">STEP 4</span><div>
+        <h3>Contract and payment</h3>
+        <p>We contract with the producer in our own name. Settlement by irrevocable letter of
+          credit, documentary collection or staged transfer, with bank charges allocated in
+          writing on both legs.</p></div></div>
+      <div class="step"><span class="k">STEP 5</span><div>
+        <h3>Production, inspection, shipment</h3>
+        <p>Pre-shipment inspection where the value justifies it, photographs of the goods and
+          pack before loading, and a full document set issued through our nominated
+          forwarder.</p></div></div>
+    </div>
 
-    <dl class="contact">
-      <div>
-        <dt>Email</dt>
-        <dd class="mailrow">
-          <span class="mail" id="addr">info@ispgroupgc.com</span>
-          <button id="copy" type="button" aria-label="Copy email address">Copy</button>
-        </dd>
-      </div>
-      <div>
-        <dt>Telephone</dt>
-        <dd class="todo">[ to be filled in ]</dd>
-      </div>
-      <div>
-        <dt>Registered office</dt>
-        <dd class="todo">[ street, city, FL, ZIP ]</dd>
-      </div>
-      <div>
-        <dt>Entity</dt>
-        <dd>ISP GROUP LLC<br><span style="color:var(--ink-2);font-size:.92rem">United States</span></dd>
-      </div>
+    <div class="media">
+      <p>Video slot &mdash; 16:9. Loading, plant walkthrough or corridor map animation.
+        Supply an MP4 and a poster frame and it drops in here.</p>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <span class="eyebrow">Questions</span>
+    <h2>What buyers and producers ask first</h2>
+    <div style="margin-top:34px">
+      <details>
+        <summary>Do you only handle large volumes?</summary>
+        <p>We work in full container loads, because that is where the economics hold. For a
+          first order we normally run a trial of one or two containers on full commercial
+          terms before a monthly programme starts.</p>
+      </details>
+      <details>
+        <summary>Are you a broker or an agent?</summary>
+        <p>Neither. We buy the goods in our own name and resell them. There is no commission
+          on top of a producer's invoice, and the producer is not asked to manage a
+          triangular billing arrangement.</p>
+      </details>
+      <details>
+        <summary>Can you source a product you have never traded?</summary>
+        <p>Yes, and most of our lanes started that way. What transfers between products is
+          the method: specification, producer verification, landed costing, documents and
+          settlement. What has to be built each time is the producer shortlist.</p>
+      </details>
+      <details>
+        <summary>How do you protect the buyer against a factory that does not ship?</summary>
+        <p>By never prepaying in full, by staging payment against production milestones and
+          documents, and by checking the counterparty before any money moves. Where the
+          value justifies it we add pre-shipment inspection by a third party.</p>
+      </details>
+      <details>
+        <summary>Which Incoterms do you quote?</summary>
+        <p>FOB, CFR, CIF, FCA and DAP. We prefer to quote at least two bases side by side so
+          the buyer can see what the logistics portion actually costs.</p>
+      </details>
+      <details>
+        <summary>We are a producer. Why work with you instead of selling direct?</summary>
+        <p>Because we take the credit risk and the paperwork off your desk. You sell to one
+          counterparty on terms you have agreed in advance, in one currency, and you are not
+          asked to learn a new import regime.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <span class="eyebrow">Get started</span>
+    <h2>Send a specification. Get a landed price.</h2>
+    <p class="intro">If you already have a specification, send it. If you only have a problem,
+      describe it and we will write the specification with you.</p>
+    <div class="ctarow">
+      <a class="btn btn-solid" href="#enquiry">Request a quote</a>
+      <span class="mail" id="addr2">info@ispgroupgc.com</span>
+      <button class="btn" id="copy2" type="button">Copy address</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <dl class="fgrid">
+      <div><dt>Entity</dt><dd>ISP GROUP LLC<br><span style="color:var(--ink-2)">United States</span></dd></div>
+      <div><dt>Email</dt><dd>info@ispgroupgc.com</dd></div>
+      <div><dt>Telephone</dt><dd class="todo">[ to be filled in ]</dd></div>
+      <div><dt>Registered office</dt><dd class="todo">[ street, city, FL, ZIP ]</dd></div>
     </dl>
-  </section>
+    <p class="fbottom">ISP GROUP LLC &middot; Global Commerce &middot; International sourcing,
+      trading and supply of materials, products and industrial equipment.</p>
+  </div>
+</footer>
 
-  <footer>
-    <p style="margin:0">ISP GROUP LLC &middot; Global Commodities &middot; info@ispgroupgc.com</p>
-  </footer>
-</div>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"ISP GROUP LLC",
+"alternateName":"ISP Group Global Commerce","url":"https://ispgroupgc.com/",
+"email":"info@ispgroupgc.com","address":{"@type":"PostalAddress","addressCountry":"US","addressRegion":"FL"},
+"description":"International trading and sourcing company. We source materials, products and industrial equipment from verified producers worldwide and deliver them to the buyer's port on agreed Incoterms.",
+"knowsAbout":["international trade","commodity sourcing","supplier verification","import and export","landed cost","Incoterms","letter of credit","container shipping"],
+"areaServed":[{"@type":"Place","name":"United States"},{"@type":"Place","name":"West Africa"},{"@type":"Place","name":"Southern Africa"},{"@type":"Place","name":"Türkiye"},{"@type":"Place","name":"European Union"},{"@type":"Place","name":"South America"}]}
+</script>
 
 <script>
 (function(){
-  var btn = document.getElementById('copy');
-  var addr = document.getElementById('addr');
-  if(!btn || !addr) return;
-  btn.addEventListener('click', function(){
-    var text = addr.textContent.trim();
-    var done = function(){ btn.textContent = 'Copied'; setTimeout(function(){ btn.textContent = 'Copy'; }, 1600); };
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(done, select);
-    } else { select(); }
-    function select(){
-      var r = document.createRange(); r.selectNodeContents(addr);
-      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
-      btn.textContent = 'Selected'; setTimeout(function(){ btn.textContent = 'Copy'; }, 1600);
+  /* ---------- hero globe: Fibonacci point sphere + great-circle arcs, Canvas 2D ---------- */
+  var cv = document.getElementById('globe');
+  if (cv && cv.getContext) {
+    var ctx = cv.getContext('2d'), W=0, H=0, DPR=1;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function css(n){ return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); }
+
+    var N = 1250, pts = [];
+    for (var i=0;i<N;i++){
+      var y = 1 - (i/(N-1))*2, r = Math.sqrt(Math.max(0,1-y*y));
+      var th = i * Math.PI * (3 - Math.sqrt(5));
+      pts.push([Math.cos(th)*r, y, Math.sin(th)*r]);
     }
+    function ll(lat,lon){
+      var a = lat*Math.PI/180, b = lon*Math.PI/180;
+      return [Math.cos(a)*Math.cos(b), Math.sin(a), Math.cos(a)*Math.sin(b)];
+    }
+    var ports = [
+      ['Izmir',38.42,27.14],['Istanbul',41.01,28.98],['Gdansk',54.35,18.65],
+      ['Houston',29.76,-95.37],['Miami',25.76,-80.19],['Santos',-23.96,-46.33],
+      ['Valparaiso',-33.05,-71.62],['Lome',6.13,1.22],['Cotonou',6.37,2.42],
+      ['Durban',-29.86,31.02],['Mumbai',19.08,72.88]
+    ].map(function(p){ var v=ll(p[1],p[2]); return {name:p[0], v:v}; });
+    var lanes = [[0,4],[1,3],[5,7],[6,8],[2,7],[9,10],[3,8]];
+
+    function slerp(a,b,t){
+      var d = a[0]*b[0]+a[1]*b[1]+a[2]*b[2];
+      d = Math.max(-1,Math.min(1,d));
+      var o = Math.acos(d);
+      if (o < 1e-6) return a.slice();
+      var s = Math.sin(o), k1 = Math.sin((1-t)*o)/s, k2 = Math.sin(t*o)/s;
+      return [a[0]*k1+b[0]*k2, a[1]*k1+b[1]*k2, a[2]*k1+b[2]*k2];
+    }
+    function rot(p, ry, rx){
+      var x=p[0], y=p[1], z=p[2];
+      var c=Math.cos(ry), s=Math.sin(ry);
+      var x1=x*c - z*s, z1=x*s + z*c;
+      var c2=Math.cos(rx), s2=Math.sin(rx);
+      var y1=y*c2 - z1*s2, z2=y*s2 + z1*c2;
+      return [x1,y1,z2];
+    }
+    function resize(){
+      DPR = Math.min(window.devicePixelRatio||1, 2);
+      W = cv.clientWidth; H = cv.clientHeight;
+      cv.width = Math.max(1,Math.floor(W*DPR)); cv.height = Math.max(1,Math.floor(H*DPR));
+      ctx.setTransform(DPR,0,0,DPR,0,0);
+    }
+    var t0 = performance.now();
+    function frame(now){
+      if (!W || !H) resize();
+      var t = reduce ? 0.6 : (now - t0)/1000;
+      var ry = t*0.075, rx = -0.33;
+      /* globe sits right of centre on wide screens, behind text; centred and faint on phones */
+      var narrow = W < 820;
+      var R  = narrow ? Math.min(W,H)*0.52 : Math.min(W*0.42, H*0.86);
+      var cx = narrow ? W*0.5 : W*0.74;
+      var cy = narrow ? H*0.5 : H*0.52;
+      var fade = narrow ? 0.4 : 1;
+
+      ctx.clearRect(0,0,W,H);
+      var net = css('--accent-2') || '#6fa8c9';
+      var br  = css('--accent')   || '#c08a42';
+
+      for (var i=0;i<pts.length;i++){
+        var p = rot(pts[i], ry, rx);
+        var depth = (p[2]+1)/2;
+        var persp = 1/(1.9 - p[2]*0.42);
+        var x = cx + p[0]*R*persp, y = cy - p[1]*R*persp;
+        var a = (0.08 + depth*0.42) * fade;
+        ctx.beginPath();
+        ctx.arc(x, y, (0.55 + depth*1.0), 0, 6.2832);
+        ctx.fillStyle = net; ctx.globalAlpha = a; ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+
+      for (var L=0; L<lanes.length; L++){
+        var A = ports[lanes[L][0]].v, B = ports[lanes[L][1]].v;
+        var seg = 46, path = [];
+        for (var s2=0; s2<=seg; s2++){
+          var u = s2/seg;
+          var m = slerp(A,B,u);
+          var lift = 1 + 0.17*Math.sin(Math.PI*u);
+          var p2 = rot([m[0]*lift, m[1]*lift, m[2]*lift], ry, rx);
+          var pe = 1/(1.9 - p2[2]*0.42);
+          path.push([cx + p2[0]*R*pe, cy - p2[1]*R*pe, p2[2]]);
+        }
+        ctx.lineWidth = 1.1; ctx.lineJoin = 'round';
+        for (var k=0;k<path.length-1;k++){
+          var vis = (path[k][2]+1)/2;
+          if (vis < 0.42) continue;
+          ctx.globalAlpha = (vis-0.42)/0.58 * 0.5 * fade;
+          ctx.strokeStyle = br;
+          ctx.beginPath(); ctx.moveTo(path[k][0],path[k][1]);
+          ctx.lineTo(path[k+1][0],path[k+1][1]); ctx.stroke();
+        }
+        if (!reduce){
+          var ph = ((t*0.21) + L*0.14) % 1;
+          var idx = Math.floor(ph*(path.length-1));
+          var pp = path[idx];
+          if ((pp[2]+1)/2 > 0.45){
+            ctx.globalAlpha = 0.95*fade; ctx.fillStyle = br;
+            ctx.beginPath(); ctx.arc(pp[0],pp[1],2.2,0,6.2832); ctx.fill();
+          }
+        }
+      }
+      ctx.globalAlpha = 1;
+
+      for (var q=0;q<ports.length;q++){
+        var pv = rot(ports[q].v, ry, rx);
+        if (pv[2] < 0.1) continue;
+        var pe2 = 1/(1.9 - pv[2]*0.42);
+        var px = cx + pv[0]*R*pe2, py = cy - pv[1]*R*pe2;
+        ctx.globalAlpha = Math.min(1,(pv[2]-0.1)*2.4)*0.9*fade;
+        ctx.strokeStyle = br; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.arc(px,py,3.1,0,6.2832); ctx.stroke();
+        ctx.fillStyle = br;
+        ctx.beginPath(); ctx.arc(px,py,1.1,0,6.2832); ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+      requestAnimationFrame(frame);
+    }
+    window.addEventListener('resize', resize, {passive:true});
+    resize(); requestAnimationFrame(frame);
+  }
+
+  /* ---------- enquiry form ---------- */
+  var f = document.getElementById('enquiry');
+  if (f) f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var prod = (document.getElementById('q-product').value || '').trim();
+    var port = (document.getElementById('q-port').value || '').trim();
+    var r = document.getElementById('q-result');
+    var what = prod ? ('"' + prod + '"') : 'your requirement';
+    var where = port ? (' to ' + port) : '';
+    r.innerHTML = 'Send ' + what + where + ' to <span class="mail">info@ispgroupgc.com</span> '
+      + 'with the quantity and the terms you want quoted. We reply within one working day.';
+    r.hidden = false;
+  });
+
+  /* ---------- copy ---------- */
+  var b2 = document.getElementById('copy2'), a2 = document.getElementById('addr2');
+  if (b2 && a2) b2.addEventListener('click', function(){
+    var txt = a2.textContent.trim();
+    var ok = function(){ b2.textContent='Copied'; setTimeout(function(){ b2.textContent='Copy address'; },1600); };
+    var sel = function(){
+      var rg=document.createRange(); rg.selectNodeContents(a2);
+      var s=window.getSelection(); s.removeAllRanges(); s.addRange(rg);
+      b2.textContent='Selected'; setTimeout(function(){ b2.textContent='Copy address'; },1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(ok, sel);
+    else sel();
   });
 })();
 </script>
