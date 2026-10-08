@@ -53,5 +53,22 @@ if FR:
 B.retrofit_nav(["site/index.html", "site/experience.html", "site/china.html",
                 "site/turkiye.html", "site/west-africa.html", "site/southern-africa.html"])
 
+import nums
+NUMCSS = """
+.nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(142px,1fr));
+  gap:clamp(16px,2.6vw,34px);margin-top:40px}
+.num{border-top:1px solid var(--rule);padding-top:17px}
+.num b{display:block;font-family:var(--fs);font-weight:400;letter-spacing:-.02em;
+  font-size:clamp(2.5rem,5vw,4rem);line-height:.9;color:var(--brand)}
+.num span{display:block;margin-top:11px;font-family:var(--fm);font-size:.57rem;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);line-height:1.85}
+.num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
+  transition:border-color .2s,color .2s}
+.num a:hover{color:var(--brand);border-color:var(--gold)}
+"""
+nums.inject("site/index.html", nums.EN, NUMCSS)
+nums.inject("site/index-fr.html", nums.FR)
+print("числовая полоса добавлена на главные")
+
 allslugs = sorted({os.path.basename(p)[:-5] for p in glob.glob("site/*.html")})
 print("в sitemap адресов:", B.sitemap(allslugs))
