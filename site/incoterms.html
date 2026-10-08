@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="FOB, CFR, CIF, FCA, DAP and the rest in plain language: who pays, where risk passes, which rules are sea-only, and why CFR and CIF split cost from risk.">
-<link rel="canonical" href="https://ispgroupgc.com/incoterms.html">
+<link rel="canonical" href="https://ispgroupgc.com/incoterms">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="ISP Group Global Commerce">
-<meta property="og:url" content="https://ispgroupgc.com/incoterms.html">
+<meta property="og:url" content="https://ispgroupgc.com/incoterms">
 <meta property="og:title" content="Incoterms, and the two columns people confuse">
 <meta property="og:description" content="FOB, CFR, CIF, FCA, DAP and the rest in plain language: who pays, where risk passes, which rules are sea-only, and why CFR and CIF split cost from risk.">
 <meta property="og:image" content="https://ispgroupgc.com/media/terminal.jpg">
@@ -299,6 +299,17 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .pz{position:absolute;inset:-8% 0;display:block;will-change:transform}
 .pz img{width:100%;height:100%;object-fit:cover}
 @media (prefers-reduced-motion:reduce){.pz{inset:0}}
+
+.nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(142px,1fr));
+  gap:clamp(16px,2.6vw,34px);margin-top:40px}
+.num{border-top:1px solid var(--rule);padding-top:17px}
+.num b{display:block;font-family:var(--fs);font-weight:400;letter-spacing:-.02em;
+  font-size:clamp(2.5rem,5vw,4rem);line-height:.9;color:var(--brand)}
+.num span{display:block;margin-top:11px;font-family:var(--fm);font-size:.57rem;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);line-height:1.85}
+.num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
+  transition:border-color .2s,color .2s}
+.num a:hover{color:var(--brand);border-color:var(--gold)}
 </style>
 
 <style>
@@ -421,30 +432,31 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 </style>
 </head>
 <body>
+<!--email_off-->
 <nav>
   <div class="wrap navin">
-    <a class="logo" href="index.html">ISP Group <em>Global Commerce</em></a>
+    <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
     <button class="navtoggle" id="navtoggle" type="button"
       aria-expanded="false" aria-controls="navmenu" aria-label="Menu"><span></span></button>
     <div class="navlinks" id="navmenu">
-      <a href="supply.html">What we supply</a>
-      <a href="corridors.html">Corridors</a>
-      <a href="guides.html">Guides</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="supply">What we supply</a>
+      <a href="corridors">Corridors</a>
+      <a href="guides">Guides</a>
+      <a href="about">About</a>
+      <a href="contact">Contact</a>
     </div>
-    <a class="btn" href="contact.html#enquiry"><span class="btn-long">Request a </span>quote</a>
+    <a class="btn" href="contact#enquiry"><span class="btn-long">Request a </span>quote</a>
   </div>
 </nav>
 
 <header class="hero chero" id="top">
   <div class="wrap chero-g chero-1">
     <div>
-      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">ISP Group</a> <span>/</span> <a href="guides.html">Guides</a> <span>/</span> <b>Incoterms</b></nav>
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">ISP Group</a> <span>/</span> <a href="guides">Guides</a> <span>/</span> <b>Incoterms</b></nav>
       <h1>Incoterms, and the two columns <em>people confuse</em></h1>
       <p class="sub">An Incoterm says who pays for what and where the risk passes. Those are two different questions, and on CFR and CIF the answers are in different countries.</p>
       <div class="chips"><span class="chip">Incoterms 2020</span><span class="chip">11 rules</span><span class="chip">4 sea-only</span><span class="chip">Cost &ne; risk</span></div>
-      <div class="ctarow" style="margin-top:28px"><a class="btn" href="contact.html#enquiry">Request a quote</a></div>
+      <div class="ctarow" style="margin-top:28px"><a class="btn" href="contact#enquiry">Request a quote</a></div>
     </div>
   </div>
 </header>
@@ -478,11 +490,11 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 <td>After unloading</td><td>Seller exports, buyer imports</td><td>Any</td></tr>
 <tr><td>DDP</td><td>Arrival, cleared for import, duty paid</td>
 <td>At the named place</td><td>Seller does both</td><td>Any</td></tr>
-</tbody></table></div><p>Every rule has to be written with a named place after it. “CIF” means nothing; “CIF Lomé, Incoterms 2020” means something. The named place is where the seller's obligation ends, and on the C rules it is not where the risk ends.</p></div></div><div class="pblock"><span class="k">02</span><h2>The mistake that costs the most: CFR and CIF</h2><div class="ptext"><p>On CFR and CIF the seller pays the freight all the way to the destination port, but the risk passes to the buyer when the goods are on board at the origin port. The two columns are deliberately in different places, and it is the only family of rules where that is true.</p><p>In practice: if the vessel is lost mid-voyage on a CFR shipment, the goods were already the buyer's, and the buyer still owes the seller for them. The freight being prepaid changes nothing about that. This is why CIF exists, and why the insurance clause in a CIF contract deserves more attention than the price.</p><p class="pnote">Under Incoterms 2020, CIF requires only minimum cover, Institute Cargo Clauses (C), while CIP requires all-risks cover, Institute Cargo Clauses (A). A buyer who assumes CIF means fully insured is assuming something the rule does not say.</p></div></div><div class="pblock"><span class="k">03</span><h2>FOB is being used for containers, and it should not be</h2><div class="ptext"><p>FOB, CFR and CIF are sea and inland waterway rules written for cargo handed over the ship's side. For a container the seller loses physical control days earlier, at the container terminal, and has no practical way to affect anything between the gate and the vessel.</p><p>The correct container equivalents are FCA, CPT and CIP, where the risk passes on handover to the carrier. The trade has used FOB for containers for decades out of habit, and most of the time nothing goes wrong. When something does go wrong in the terminal, the contract does not say who owns it.</p></div></div><div class="pblock"><span class="k">04</span><h2>Which rule to ask for, by situation</h2><div class="ptext"><ul class="plist"><li><b>You have your own forwarder and good rates.</b> Ask for FCA at the named terminal, or FOB if the seller will not move off it. You control the main carriage.</li><li><b>You want one number and no logistics.</b> Ask for CIF or CFR at your port, and read the insurance clause. You still clear the import.</li><li><b>You want it at your own gate.</b> Ask for DAP. The seller carries the inland leg and its risk; you still clear the import and pay the duty.</li><li><b>You want nothing to do with customs.</b> DDP, and expect to pay for it. The seller is taking on an import clearance in a country where it may not be established, and prices that risk accordingly.</li><li><b>You are collecting from the factory yourself.</b> EXW, and understand that export clearance is now yours, which in some countries a foreign buyer cannot do.</li></ul></div></div><div class="pblock"><span class="k">05</span><h2>What we quote and why</h2><div class="ptext"><p>We quote FOB, CFR, CIF, FCA and DAP, and we prefer to show at least two bases side by side. The gap between a FOB number and a DAP number is the honest cost of the logistics portion, and a buyer who can see it is in a far better position than one looking at a single landed figure.</p><p>On corridors where the inland leg carries most of the risk, such as <a href="southern-africa.html">Durban into landlocked SADC</a>, we lead with DAP. On <a href="west-africa.html">reefer programmes into West Africa</a> we lead with CIF or CFR per port, because the ports price differently. On <a href="china.html">China</a> we usually show FOB and CIF together.</p></div></div></div>
+</tbody></table></div><p>Every rule has to be written with a named place after it. “CIF” means nothing; “CIF Lomé, Incoterms 2020” means something. The named place is where the seller's obligation ends, and on the C rules it is not where the risk ends.</p></div></div><div class="pblock"><span class="k">02</span><h2>The mistake that costs the most: CFR and CIF</h2><div class="ptext"><p>On CFR and CIF the seller pays the freight all the way to the destination port, but the risk passes to the buyer when the goods are on board at the origin port. The two columns are deliberately in different places, and it is the only family of rules where that is true.</p><p>In practice: if the vessel is lost mid-voyage on a CFR shipment, the goods were already the buyer's, and the buyer still owes the seller for them. The freight being prepaid changes nothing about that. This is why CIF exists, and why the insurance clause in a CIF contract deserves more attention than the price.</p><p class="pnote">Under Incoterms 2020, CIF requires only minimum cover, Institute Cargo Clauses (C), while CIP requires all-risks cover, Institute Cargo Clauses (A). A buyer who assumes CIF means fully insured is assuming something the rule does not say.</p></div></div><div class="pblock"><span class="k">03</span><h2>FOB is being used for containers, and it should not be</h2><div class="ptext"><p>FOB, CFR and CIF are sea and inland waterway rules written for cargo handed over the ship's side. For a container the seller loses physical control days earlier, at the container terminal, and has no practical way to affect anything between the gate and the vessel.</p><p>The correct container equivalents are FCA, CPT and CIP, where the risk passes on handover to the carrier. The trade has used FOB for containers for decades out of habit, and most of the time nothing goes wrong. When something does go wrong in the terminal, the contract does not say who owns it.</p></div></div><div class="pblock"><span class="k">04</span><h2>Which rule to ask for, by situation</h2><div class="ptext"><ul class="plist"><li><b>You have your own forwarder and good rates.</b> Ask for FCA at the named terminal, or FOB if the seller will not move off it. You control the main carriage.</li><li><b>You want one number and no logistics.</b> Ask for CIF or CFR at your port, and read the insurance clause. You still clear the import.</li><li><b>You want it at your own gate.</b> Ask for DAP. The seller carries the inland leg and its risk; you still clear the import and pay the duty.</li><li><b>You want nothing to do with customs.</b> DDP, and expect to pay for it. The seller is taking on an import clearance in a country where it may not be established, and prices that risk accordingly.</li><li><b>You are collecting from the factory yourself.</b> EXW, and understand that export clearance is now yours, which in some countries a foreign buyer cannot do.</li></ul></div></div><div class="pblock"><span class="k">05</span><h2>What we quote and why</h2><div class="ptext"><p>We quote FOB, CFR, CIF, FCA and DAP, and we prefer to show at least two bases side by side. The gap between a FOB number and a DAP number is the honest cost of the logistics portion, and a buyer who can see it is in a far better position than one looking at a single landed figure.</p><p>On corridors where the inland leg carries most of the risk, such as <a href="southern-africa">Durban into landlocked SADC</a>, we lead with DAP. On <a href="west-africa">reefer programmes into West Africa</a> we lead with CIF or CFR per port, because the ports price differently. On <a href="china">China</a> we usually show FOB and CIF together.</p></div></div></div>
 
 </div></section>
 <section id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>Incoterms questions we get</h2><p class="intro">The four that come up on almost every first contract.</p></div><div style="margin-top:34px"><details><summary>Does CIF mean my goods are insured for their full value?</summary><p>Not automatically. Under Incoterms 2020 the seller's obligation on CIF is minimum cover, Institute Cargo Clauses (C), which is a restricted named-perils cover. CIP requires Institute Cargo Clauses (A), which is all risks. If you want full cover on a CIF shipment, it has to be written into the contract.</p></details><details><summary>Who pays the duty on DAP?</summary><p>The buyer. DAP means delivered at the named place ready for unloading, with import clearance and duty still on the buyer. Only DDP puts the import clearance and duty on the seller.</p></details><details><summary>Is FOB wrong for containers?</summary><p>Technically yes. FOB is written for goods placed on board a vessel, and with a container the seller hands over at the terminal days earlier. FCA is the correct rule. In practice FOB is used constantly for containers, and the problem only surfaces when something happens between the terminal gate and the ship.</p></details><details><summary>Can I compare a FOB price with a CIF price?</summary><p>Not directly. You have to add freight, insurance and origin charges to the FOB number first, and those depend on the route, the season and the carrier. We quote two bases side by side precisely so the difference is visible rather than assumed.</p></details></div></div></section>
-<section><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Keep reading</h2><p class="intro">The guides that follow from this one.</p></div><div class="lanelinks"><a class="lanelink" href="landed-price.html"><b>What a landed price must include</b><span>Every line between a factory price and your gate.</span></a><a class="lanelink" href="letter-of-credit.html"><b>A letter of credit at sight</b><span>How it protects both sides and what it costs.</span></a><a class="lanelink" href="guides.html"><b>All guides</b><span>Everything we have written down.</span></a><a class="lanelink" href="corridors.html"><b>Corridors</b><span>Which terms we lead with on each route.</span></a></div></div></section>
+<section><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Keep reading</h2><p class="intro">The guides that follow from this one.</p></div><div class="lanelinks"><a class="lanelink" href="landed-price"><b>What a landed price must include</b><span>Every line between a factory price and your gate.</span></a><a class="lanelink" href="letter-of-credit"><b>A letter of credit at sight</b><span>How it protects both sides and what it costs.</span></a><a class="lanelink" href="guides"><b>All guides</b><span>Everything we have written down.</span></a><a class="lanelink" href="corridors"><b>Corridors</b><span>Which terms we lead with on each route.</span></a></div></div></section>
 <section class="cta">
   <div class="wrap">
     <span class="eyebrow">Get started</span>
@@ -492,7 +504,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
         have a problem, describe it and we will write the specification with you.</p>
     </div>
     <div class="ctarow">
-      <a class="btn" href="contact.html#enquiry">Request a quote</a>
+      <a class="btn" href="contact#enquiry">Request a quote</a>
       <span class="mail">info@ispgroupgc.com</span>
     </div>
   </div>
@@ -505,8 +517,8 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
       <div><dt>Entity</dt><dd>ISP GROUP LLC<br><span style="color:var(--ink-2)">United States</span></dd></div>
       <div><dt>Email</dt><dd><a href="mailto:info@ispgroupgc.com">info@ispgroupgc.com</a></dd></div>
       <div><dt>Registered office</dt><dd>16395 Biscayne Blvd<br><span style="color:var(--ink-2)">North Miami Beach, FL 33160<br>United States</span></dd></div>
-      <div><dt>Corridors</dt><dd style="line-height:1.95"><a href="china.html" style="display:block">China &rarr; worldwide</a><a href="turkiye.html" style="display:block">T&uuml;rkiye &rarr; United States</a><a href="west-africa.html" style="display:block">Americas &amp; EU &rarr; West Africa</a><a href="southern-africa.html" style="display:block">Intra-Africa</a></dd></div>
-      <div><dt>Reading</dt><dd style="line-height:1.95"><a href="guides.html" style="display:block">Guides</a><a href="experience.html" style="display:block">Twenty years of supply work</a><a href="supply.html" style="display:block">What we supply</a></dd></div>
+      <div><dt>Corridors</dt><dd style="line-height:1.95"><a href="china" style="display:block">China &rarr; worldwide</a><a href="turkiye" style="display:block">T&uuml;rkiye &rarr; United States</a><a href="west-africa" style="display:block">Americas &amp; EU &rarr; West Africa</a><a href="southern-africa" style="display:block">Intra-Africa</a></dd></div>
+      <div><dt>Reading</dt><dd style="line-height:1.95"><a href="guides" style="display:block">Guides</a><a href="experience" style="display:block">Twenty years of supply work</a><a href="supply" style="display:block">What we supply</a></dd></div>
     </dl>
     <p class="credits">Photography: pipe by JWPhotowerks; straddle carrier by Lars K. Jensen (CC BY).
       All other images CC0 or public domain. Full list with links in media/CREDITS.json.</p>
@@ -515,7 +527,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   </div>
 </footer>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does CIF mean my goods are insured for their full value?", "acceptedAnswer": {"@type": "Answer", "text": "Not automatically. Under Incoterms 2020 the seller's obligation on CIF is minimum cover, Institute Cargo Clauses (C), which is a restricted named-perils cover. CIP requires Institute Cargo Clauses (A), which is all risks. If you want full cover on a CIF shipment, it has to be written into the contract."}}, {"@type": "Question", "name": "Who pays the duty on DAP?", "acceptedAnswer": {"@type": "Answer", "text": "The buyer. DAP means delivered at the named place ready for unloading, with import clearance and duty still on the buyer. Only DDP puts the import clearance and duty on the seller."}}, {"@type": "Question", "name": "Is FOB wrong for containers?", "acceptedAnswer": {"@type": "Answer", "text": "Technically yes. FOB is written for goods placed on board a vessel, and with a container the seller hands over at the terminal days earlier. FCA is the correct rule. In practice FOB is used constantly for containers, and the problem only surfaces when something happens between the terminal gate and the ship."}}, {"@type": "Question", "name": "Can I compare a FOB price with a CIF price?", "acceptedAnswer": {"@type": "Answer", "text": "Not directly. You have to add freight, insurance and origin charges to the FOB number first, and those depend on the route, the season and the carrier. We quote two bases side by side precisely so the difference is visible rather than assumed."}}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ISP Group", "item": "https://ispgroupgc.com/index.html"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://ispgroupgc.com/guides.html"}, {"@type": "ListItem", "position": 3, "name": "Incoterms", "item": "https://ispgroupgc.com/incoterms.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ISP Group", "item": "https://ispgroupgc.com/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://ispgroupgc.com/guides"}, {"@type": "ListItem", "position": 3, "name": "Incoterms", "item": "https://ispgroupgc.com/incoterms"}]}</script>
 <script>
 (function(){
   var nt=document.getElementById('navtoggle'), nm=document.getElementById('navmenu');
@@ -587,5 +599,6 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   par();
 })();
 </script>
+<!--/email_off-->
 </body>
 </html>

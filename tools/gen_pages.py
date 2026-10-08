@@ -41,7 +41,7 @@ def assets():
 
 
 def navbar(lang="en"):
-    home = "index.html" if lang == "en" else "index-fr.html"
+    home = "/" if lang == "en" else "/fr"
     items = "".join('      <a href="%s">%s</a>\n' % (h, t)
                      for t, h in (NAV if lang == "en" else NAV_FR))
     quote = "Request a " if lang == "en" else "Demander un "

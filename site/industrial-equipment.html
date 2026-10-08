@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Production lines, compressors, pumps, generators and material handling, with mark, voltage and spares specified.">
-<link rel="canonical" href="https://ispgroupgc.com/industrial-equipment.html">
+<link rel="canonical" href="https://ispgroupgc.com/industrial-equipment">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="ISP Group Global Commerce">
-<meta property="og:url" content="https://ispgroupgc.com/industrial-equipment.html">
+<meta property="og:url" content="https://ispgroupgc.com/industrial-equipment">
 <meta property="og:title" content="Industrial equipment and machinery">
 <meta property="og:description" content="Production lines, compressors, pumps, generators and material handling, with mark, voltage and spares specified.">
 <meta property="og:image" content="https://ispgroupgc.com/media/machinery.jpg">
@@ -299,6 +299,17 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .pz{position:absolute;inset:-8% 0;display:block;will-change:transform}
 .pz img{width:100%;height:100%;object-fit:cover}
 @media (prefers-reduced-motion:reduce){.pz{inset:0}}
+
+.nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(142px,1fr));
+  gap:clamp(16px,2.6vw,34px);margin-top:40px}
+.num{border-top:1px solid var(--rule);padding-top:17px}
+.num b{display:block;font-family:var(--fs);font-weight:400;letter-spacing:-.02em;
+  font-size:clamp(2.5rem,5vw,4rem);line-height:.9;color:var(--brand)}
+.num span{display:block;margin-top:11px;font-family:var(--fm);font-size:.57rem;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);line-height:1.85}
+.num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
+  transition:border-color .2s,color .2s}
+.num a:hover{color:var(--brand);border-color:var(--gold)}
 </style>
 
 <style>
@@ -421,30 +432,31 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 </style>
 </head>
 <body>
+<!--email_off-->
 <nav>
   <div class="wrap navin">
-    <a class="logo" href="index.html">ISP Group <em>Global Commerce</em></a>
+    <a class="logo" href="/">ISP Group <em>Global Commerce</em></a>
     <button class="navtoggle" id="navtoggle" type="button"
       aria-expanded="false" aria-controls="navmenu" aria-label="Menu"><span></span></button>
     <div class="navlinks" id="navmenu">
-      <a href="supply.html">What we supply</a>
-      <a href="corridors.html">Corridors</a>
-      <a href="guides.html">Guides</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="supply">What we supply</a>
+      <a href="corridors">Corridors</a>
+      <a href="guides">Guides</a>
+      <a href="about">About</a>
+      <a href="contact">Contact</a>
     </div>
-    <a class="btn" href="contact.html#enquiry"><span class="btn-long">Request a </span>quote</a>
+    <a class="btn" href="contact#enquiry"><span class="btn-long">Request a </span>quote</a>
   </div>
 </nav>
 
 <header class="hero chero" id="top">
   <div class="wrap chero-g">
     <div>
-      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">ISP Group</a> <span>/</span> <a href="supply.html">What we supply</a> <span>/</span> <b>Industrial equipment</b></nav>
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">ISP Group</a> <span>/</span> <a href="supply">What we supply</a> <span>/</span> <b>Industrial equipment</b></nav>
       <h1>Industrial equipment <em>and machinery</em></h1>
       <p class="sub">Production lines, compressors, pumps, generators, material handling and workshop equipment. New and factory refurbished, with spares and commissioning arranged before the machine ships, not after it arrives.</p>
       <div class="chips"><span class="chip">New and refurbished</span><span class="chip">CE &middot; EAC &middot; UL</span><span class="chip">Spares and commissioning</span><span class="chip">China &middot; EU &middot; T&uuml;rkiye</span></div>
-      <div class="ctarow" style="margin-top:28px"><a class="btn" href="contact.html#enquiry">Request a quote</a></div>
+      <div class="ctarow" style="margin-top:28px"><a class="btn" href="contact#enquiry">Request a quote</a></div>
     </div>
     <aside class="factcard"><span class="eyebrow">Category at a glance</span><table class="facts"><tbody><tr><th scope="row">Typical cargo</th><td>Production lines, compressors, pumps, generators, material handling, workshop equipment</td></tr><tr><th scope="row">Condition</th><td>New and factory refurbished, with the refurbishment report line by line</td></tr><tr><th scope="row">Specified by</th><td>Drive and controller by make, voltage and frequency, certification mark, IP rating, duty cycle</td></tr><tr><th scope="row">Before payment</th><td>Factory acceptance test under load, witnessed, with readings and photographs</td></tr><tr><th scope="row">Included</th><td>Spares pack priced separately, schematic, manual in the agreed language</td></tr><tr><th scope="row">Corridors</th><td>China to worldwide, European Union, Tükiye</td></tr></tbody></table></aside>
   </div>
@@ -457,7 +469,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 
 </div></section>
 <section id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>What buyers ask about this category</h2><p class="intro">The three that come up before a first order.</p></div><div style="margin-top:34px"><details><summary>Can you arrange commissioning at our site?</summary><p>We arrange it with the producer and write it into the contract: who travels, who pays for the travel, how long they stay and what the warranty response time is. That is settled before the order, because afterwards it is a negotiation with no leverage.</p></details><details><summary>What voltage will the machine be built for?</summary><p>Whatever you specify, if it is specified before the order. Say the voltage and the frequency at the destination. Converting after delivery costs more than the difference ever did.</p></details><details><summary>Is refurbished equipment worth the risk?</summary><p>It can be clearly better value, but only against a refurbishment report that says what was replaced rather than what was serviced, a warranty attached to the refurbishment, and a witnessed run before payment.</p></details></div></div></section>
-<section><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Other categories</h2><p class="intro">The same method, applied to different goods.</p></div><div class="lanelinks"><a class="lanelink" href="building-materials.html"><b>Building and finishing materials</b><span>Stone, tile, cement products, insulation, dry mixes, sanitary ware, cable.</span></a><a class="lanelink" href="industrial-equipment.html"><b>Industrial equipment and machinery</b><span>Production lines, compressors, pumps, generators, material handling.</span></a><a class="lanelink" href="tools-hardware.html"><b>Tools, hardware and fasteners</b><span>Power and hand tools, abrasives, measuring instruments, fixings.</span></a><a class="lanelink" href="contact.html"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
+<section><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Other categories</h2><p class="intro">The same method, applied to different goods.</p></div><div class="lanelinks"><a class="lanelink" href="building-materials"><b>Building and finishing materials</b><span>Stone, tile, cement products, insulation, dry mixes, sanitary ware, cable.</span></a><a class="lanelink" href="industrial-equipment"><b>Industrial equipment and machinery</b><span>Production lines, compressors, pumps, generators, material handling.</span></a><a class="lanelink" href="tools-hardware"><b>Tools, hardware and fasteners</b><span>Power and hand tools, abrasives, measuring instruments, fixings.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
 <section class="cta">
   <div class="wrap">
     <span class="eyebrow">Get started</span>
@@ -467,7 +479,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
         have a problem, describe it and we will write the specification with you.</p>
     </div>
     <div class="ctarow">
-      <a class="btn" href="contact.html#enquiry">Request a quote</a>
+      <a class="btn" href="contact#enquiry">Request a quote</a>
       <span class="mail">info@ispgroupgc.com</span>
     </div>
   </div>
@@ -480,8 +492,8 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
       <div><dt>Entity</dt><dd>ISP GROUP LLC<br><span style="color:var(--ink-2)">United States</span></dd></div>
       <div><dt>Email</dt><dd><a href="mailto:info@ispgroupgc.com">info@ispgroupgc.com</a></dd></div>
       <div><dt>Registered office</dt><dd>16395 Biscayne Blvd<br><span style="color:var(--ink-2)">North Miami Beach, FL 33160<br>United States</span></dd></div>
-      <div><dt>Corridors</dt><dd style="line-height:1.95"><a href="china.html" style="display:block">China &rarr; worldwide</a><a href="turkiye.html" style="display:block">T&uuml;rkiye &rarr; United States</a><a href="west-africa.html" style="display:block">Americas &amp; EU &rarr; West Africa</a><a href="southern-africa.html" style="display:block">Intra-Africa</a></dd></div>
-      <div><dt>Reading</dt><dd style="line-height:1.95"><a href="guides.html" style="display:block">Guides</a><a href="experience.html" style="display:block">Twenty years of supply work</a><a href="supply.html" style="display:block">What we supply</a></dd></div>
+      <div><dt>Corridors</dt><dd style="line-height:1.95"><a href="china" style="display:block">China &rarr; worldwide</a><a href="turkiye" style="display:block">T&uuml;rkiye &rarr; United States</a><a href="west-africa" style="display:block">Americas &amp; EU &rarr; West Africa</a><a href="southern-africa" style="display:block">Intra-Africa</a></dd></div>
+      <div><dt>Reading</dt><dd style="line-height:1.95"><a href="guides" style="display:block">Guides</a><a href="experience" style="display:block">Twenty years of supply work</a><a href="supply" style="display:block">What we supply</a></dd></div>
     </dl>
     <p class="credits">Photography: pipe by JWPhotowerks; straddle carrier by Lars K. Jensen (CC BY).
       All other images CC0 or public domain. Full list with links in media/CREDITS.json.</p>
@@ -489,9 +501,9 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
       trading and supply of materials, products and industrial equipment.</p>
   </div>
 </footer>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Industrial equipment and machinery", "description": "Production lines, compressors, pumps, generators and material handling, new and factory refurbished, with the certification mark, voltage and spares pack specified.", "provider": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "url": "https://ispgroupgc.com/industrial-equipment.html", "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Industrial equipment and machinery", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Production lines, compressors, pumps, generators, material handling, workshop equipment"}}]}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Industrial equipment and machinery", "description": "Production lines, compressors, pumps, generators and material handling, new and factory refurbished, with the certification mark, voltage and spares pack specified.", "provider": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "url": "https://ispgroupgc.com/industrial-equipment", "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Industrial equipment and machinery", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Production lines, compressors, pumps, generators, material handling, workshop equipment"}}]}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can you arrange commissioning at our site?", "acceptedAnswer": {"@type": "Answer", "text": "We arrange it with the producer and write it into the contract: who travels, who pays for the travel, how long they stay and what the warranty response time is. That is settled before the order, because afterwards it is a negotiation with no leverage."}}, {"@type": "Question", "name": "What voltage will the machine be built for?", "acceptedAnswer": {"@type": "Answer", "text": "Whatever you specify, if it is specified before the order. Say the voltage and the frequency at the destination. Converting after delivery costs more than the difference ever did."}}, {"@type": "Question", "name": "Is refurbished equipment worth the risk?", "acceptedAnswer": {"@type": "Answer", "text": "It can be clearly better value, but only against a refurbishment report that says what was replaced rather than what was serviced, a warranty attached to the refurbishment, and a witnessed run before payment."}}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ISP Group", "item": "https://ispgroupgc.com/index.html"}, {"@type": "ListItem", "position": 2, "name": "What we supply", "item": "https://ispgroupgc.com/supply.html"}, {"@type": "ListItem", "position": 3, "name": "Industrial equipment", "item": "https://ispgroupgc.com/industrial-equipment.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ISP Group", "item": "https://ispgroupgc.com/"}, {"@type": "ListItem", "position": 2, "name": "What we supply", "item": "https://ispgroupgc.com/supply"}, {"@type": "ListItem", "position": 3, "name": "Industrial equipment", "item": "https://ispgroupgc.com/industrial-equipment"}]}</script>
 <script>
 (function(){
   var nt=document.getElementById('navtoggle'), nm=document.getElementById('navmenu');
@@ -563,5 +575,6 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   par();
 })();
 </script>
+<!--/email_off-->
 </body>
 </html>

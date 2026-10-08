@@ -1,2 +1,3 @@
-https://www.ispgroupgc.com/*  https://ispgroupgc.com/:splat  301
-/index.html                   /                              301
+# Pages сам отдаёт /page вместо /page.html, отдельное правило не нужно.
+# Редирект www на апекс в _redirects невозможен: здесь матчинг по пути,
+# а не по хосту. Он сделан правилом редиректа на уровне зоны.

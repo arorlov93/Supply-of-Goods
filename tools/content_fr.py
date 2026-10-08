@@ -8,7 +8,7 @@ def tr(last):
 
 PAGES_FR = [
 {
- "slug": "index-fr",
+ "slug": "fr",
  "title": "ISP Group | sourcing et négoce international",
  "desc": "Société de négoce américaine. Nous trouvons des producteurs vérifiés, "
          "achetons en notre nom propre et livrons à votre port au prix rendu.",
@@ -461,7 +461,7 @@ for _p in PAGES_FR:
         _p["hero_right"] = FORM_FR
 
 # пары страниц для hreflang: английская, французская
-HREFLANG = [("index.html", "index-fr.html"),
+HREFLANG = [("index.html", "fr.html"),
             ("west-africa.html", "afrique-ouest.html"),
             ("poultry-cuts.html", "decoupes-volaille.html"),
             ("veterinary-certificate.html", "certificat-veterinaire.html"),

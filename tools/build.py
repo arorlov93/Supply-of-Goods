@@ -85,13 +85,45 @@ def hreflang(pairs, host):
     print("   hreflang проставлен на парах:", len(pairs))
 
 
+def pretty_urls(host):
+    """Cloudflare Pages отдаёт /page.html как 308 на /page. Поэтому ссылки,
+    canonical, og:url и hreflang должны сразу указывать на конечный адрес,
+    иначе canonical сам оказывается редиректом."""
+    import re as _re, glob as _glob
+    files = _glob.glob(os.path.join(SITE, "*.html"))
+    known = {os.path.basename(f) for f in files}
+
+    def href(m):
+        q, name, rest = m.group(1), m.group(2), m.group(3)
+        if name not in known:
+            return m.group(0)
+        if name == "index.html":
+            return 'href=%s/%s%s' % (q, rest, q)
+        return 'href=%s%s%s%s' % (q, name[:-5], rest, q)
+
+    for f in files:
+        t = open(f, encoding="utf-8").read()
+        t = _re.sub(r'href=(")([a-z0-9][a-z0-9\-]*\.html)((?:#[^"]*)?)\1', href, t)
+        # абсолютные адреса в canonical, og:url, hreflang и структурных данных
+        t = t.replace(host + "index.html", host)
+        t = _re.sub(r'(%s)([a-z0-9][a-z0-9\-]*)\.html' % _re.escape(host), r"\1\2", t)
+        # Cloudflare по умолчанию подменяет почту на [email protected] и
+        # прячет её за скриптом. Для B2B-контакта это вред: адрес перестают
+        # видеть и посетитель без JS, и поисковик. Отключаем для всей страницы.
+        if "<!--email_off-->" not in t:
+            t = t.replace("<body>", "<body>\n<!--email_off-->", 1)
+            t = t.replace("</body>", "<!--/email_off-->\n</body>", 1)
+        open(f, "w", encoding="utf-8").write(t)
+    print("   адреса без .html и email_off проставлены на", len(files), "страницах")
+
+
 def sitemap(slugs, extra=()):
     rows = [(G.HOST, "1.0", "monthly")]
     for s in slugs:
         if s in ("index", "404"): continue
         pr = "0.9" if s in ("supply", "corridors", "guides", "contact", "about",
                             "services") else "0.8"
-        rows.append((G.HOST + s + ".html", pr, "monthly"))
+        rows.append((G.HOST + s, pr, "monthly"))
     for u, pr, c in extra: rows.append((u, pr, c))
     out = ['<?xml version="1.0" encoding="UTF-8"?>',
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']

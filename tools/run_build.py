@@ -67,8 +67,10 @@ NUMCSS = """
 .num a:hover{color:var(--brand);border-color:var(--gold)}
 """
 nums.inject("site/index.html", nums.EN, NUMCSS)
-nums.inject("site/index-fr.html", nums.FR)
+nums.inject("site/fr.html", nums.FR)
 print("числовая полоса добавлена на главные")
+
+B.pretty_urls(G.HOST)
 
 allslugs = sorted({os.path.basename(p)[:-5] for p in glob.glob("site/*.html")})
 print("в sitemap адресов:", B.sitemap(allslugs))
