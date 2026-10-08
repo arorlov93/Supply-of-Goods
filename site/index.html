@@ -3,18 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="ISP Group is an international sourcing and trading company with twenty years of supply experience. We source materials, products and industrial equipment from verified producers worldwide, buy in our own name and deliver to your port on FOB, CFR, CIF or DAP terms.">
+<meta name="description" content="International sourcing and trading company in Miami. We find verified producers for materials, products and industrial equipment, buy in our own name and deliver to your port.">
 <link rel="canonical" href="https://ispgroupgc.com/">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="ISP Group Global Commerce">
 <meta property="og:url" content="https://ispgroupgc.com/">
-<meta property="og:site_name" content="ISP Group">
-<meta property="og:title" content="ISP Group — international sourcing and trading">
-<meta property="og:description" content="Name the product. We return three verified producers and a landed price. Twenty years of supply work across China, the Russian north and the European Union.">
+<meta property="og:title" content="Name the product. We return three verified producers and a landed price.">
+<meta property="og:description" content="Twenty years of international sourcing and supply: materials, products and industrial equipment, bought in our own name and delivered to your port.">
 <meta property="og:image" content="https://ispgroupgc.com/media/terminal.jpg">
+<meta property="og:image:alt" content="Container terminal with ship to shore cranes">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#eef1ef">
-<title>ISP Group Global Commerce</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%230b4a40'/><text x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='400' fill='%23e8d9b4' text-anchor='middle'>IG</text></svg>">
+<title>ISP Group Global Commerce &mdash; international sourcing, trading and supply</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@300;400;500;600;700&family=Martian+Mono:wght@400;500&display=swap">
 <style>
@@ -87,7 +89,10 @@ nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;
   background:var(--gold);transition:right .26s ease}
 .navlinks a:hover{color:var(--ink)}
 .navlinks a:hover::after{right:0}
-@media(max-width:940px){.navlinks{display:none}}
+@media(max-width:940px){.navlinks{display:none}
+  .navin{gap:12px}.navin .btn{margin-left:auto;padding:10px 15px;font-size:.62rem}
+  .logo{font-size:1.08rem}}
+@media(max-width:560px){.btn-long{display:none}}
 
 /* sections */
 section{padding-block:clamp(56px,7vw,94px);border-bottom:1px solid var(--rule)}
@@ -121,12 +126,12 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
-</head>
-<body>
 <style>
 /* hero */
 .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--rule)}
-#globe{position:absolute;inset:0;width:100%;height:100%;display:block}
+#globe{position:absolute;top:50%;right:-5%;transform:translateY(-50%);pointer-events:none;
+  width:min(720px,56%);aspect-ratio:1/1;height:auto;display:block}
+@media(max-width:940px){#globe{top:-7%;right:-26%;transform:none;width:62%;opacity:.45}}
 .hero .wrap{position:relative;z-index:2;padding-block:clamp(56px,8.5vw,108px)}
 .hero h1{font-size:clamp(2.7rem,7vw,5.4rem);max-width:15ch;letter-spacing:-.02em}
 .hero h1 em{font-style:italic;color:var(--brand)}
@@ -156,7 +161,7 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
   display:block;margin-bottom:16px}
 .cap h3{font-size:1.4rem;margin-bottom:10px}
 .cap p{color:var(--ink-2);font-size:.95rem}
-.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:18px;margin-top:22px}
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin-top:22px}
 .cat{background:var(--surface);border:1px solid var(--rule);padding:26px 24px;min-width:0;
   box-shadow:var(--shadow-s);transition:transform .22s ease,box-shadow .22s ease}
 .cat:hover{transform:translateY(-4px);box-shadow:var(--shadow-l)}
@@ -217,6 +222,8 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .yrs small{font-family:var(--fm);font-size:.6rem;letter-spacing:.17em;text-transform:uppercase;
   color:var(--ink-3);display:block;margin-top:14px}
 </style>
+</head>
+<body>
 <nav>
   <div class="wrap navin">
     <a class="logo" href="#top">ISP Group <em>Global Commerce</em></a>
@@ -227,7 +234,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
       <a href="experience.html">Twenty years</a>
       <a href="#faq">FAQ</a>
     </div>
-    <a class="btn" href="#enquiry">Request a quote</a>
+    <a class="btn" href="#enquiry"><span class="btn-long">Request a </span>quote</a>
   </div>
 </nav>
 
@@ -500,114 +507,203 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 "areaServed":[{"@type":"Place","name":"United States"},{"@type":"Place","name":"China"},{"@type":"Place","name":"Russia"},{"@type":"Place","name":"European Union"},{"@type":"Place","name":"West Africa"},{"@type":"Place","name":"Türkiye"}]}
 </script>
 
+<script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
 <script>
 (function(){
-  /* Контуры суши Natural Earth 110m, упрощённые по Дугласу-Пекеру и упакованные
-     в дельты десятых долей градуса: 47 колец, 1375 точек. Библиотек нет. */
-  var LAND = "-1800,690 51,-18 6,-9 -3,8 27,-2 20,-9 -26,-6 -5,-11 -54,11 -3,7 -12,-2 5,-5 -6,-4 3600,0 -26,-4 20,-16 -2,-7 -55,-6 -34,-18 -14,7 -54,-7 -15,-17 12,-6 -1,-14 -14,-9 4,-4 -17,-6 -4,-11 -15,-2 -17,-20 -14,44 5,14 78,43 8,15 -44,-21 -8,13 -26,-4 -25,-16 8,-7 -37,-3 0,7 -15,2 -76,-7 -71,-43 31,-9 17,4 15,-20 -13,-38 -19,-21 -33,-29 -14,-6 -12,5 -48,-35 20,-30 -4,-17 -26,-7 -4,23 8,2 -22,12 6,15 -10,3 -32,-10 11,15 -6,5 -36,-17 -5,-5 14,-13 35,1 1,-6 -33,-20 27,-32 -6,-10 8,-9 -4,-16 -30,-37 -28,-17 -51,-14 -4,-11 -5,0 0,11 -14,3 -26,-19 -2,-7 32,-38 4,-19 -1,-17 -40,-31 -1,13 -16,7 -9,16 -18,4 2,8 -9,0 -9,-42 38,-37 12,-42 -28,15 -13,37 -16,19 -2,-6 5,36 -16,55 -18,-12 -12,3 1,22 -29,46 -9,0 -2,-10 -33,-3 -5,-13 -43,-36 -19,-7 -4,-55 -24,-24 -40,80 -9,54 -21,-5 -41,45 -49,-3 -41,6 -9,14 -18,-6 -32,14 -14,22 -21,-1 28,-52 2,12 6,-2 2,-18 22,1 24,23 4,-22 30,-19 -20,-21 -1,-13 -24,-17 -29,-8 -2,-8 -35,-16 -52,-14 -8,42 -36,45 -6,24 -39,44 3,14 -10,-19 -15,23 31,-68 14,-11 6,-34 18,-27 40,-35 -6,-7 19,-13 65,16 -1,-14 -33,-64 -74,-68 -11,-21 -4,-18 17,-43 3,-39 -13,-20 -47,-31 7,-43 -29,-16 -4,-31 -40,-40 -24,-11 -32,0 -30,-9 -14,9 0,22 -30,46 -9,50 -25,40 0,23 19,51 -18,57 -31,39 6,48 -9,11 -26,-5 -16,20 -63,-16 -70,1 -34,25 -24,36 -18,13 -10,25 15,34 -9,38 26,44 48,36 3,27 24,15 10,17 37,-6 37,14 80,8 16,-5 -8,-31 88,-35 10,7 0,12 14,6 74,-19 21,7 28,-6 22,36 2,21 -37,-6 -49,6 -14,28 30,17 43,8 48,-11 21,1 13,10 -50,32 24,21 -41,-10 13,-12 -24,-7 -14,9 8,8 -26,5 -19,-17 -11,-23 11,-15 -24,-9 -15,7 -12,-2 7,-6 -5,-1 -13,3 14,-26 -9,2 1,-15 -7,0 -31,39 1,14 -64,40 -8,-3 3,-13 59,-39 -16,2 2,-15 -10,-9 -7,20 -65,44 -24,-13 -34,0 -1,-12 -22,-9 -11,-17 4,-6 -22,-20 -33,-8 -11,10 -24,0 -5,61 14,7 61,-3 5,6 2,20 -33,20 -1,7 30,-1 -3,12 9,-5 23,8 3,8 22,7 9,15 34,4 7,5 -7,15 4,16 21,6 -3,-8 6,-4 -13,-10 13,-15 16,5 16,-7 35,11 21,-5 16,8 3,22 25,-4 3,14 -11,8 58,8 -10,5 -52,-7 -16,9 2,25 39,19 -15,9 -17,-3 -8,-13 -36,-17 -7,-14 17,-12 -20,-14 -9,-26 -30,-7 -25,41 -20,-12 -27,3 -7,34 9,6 46,19 43,33 44,20 53,12 37,2 31,-7 -13,-3 11,-6 10,3 82,-20 8,-11 -11,-5 -68,3 16,-7 1,-15 21,-5 -5,9 7,3 24,-6 8,3 -6,7 23,10 19,-4 5,7 -10,18 28,-4 5,-5 -12,-7 7,-3 74,22 8,-1 -10,-6 53,7 11,-6 12,6 -11,6 6,4 79,-18 7,5 -23,9 -2,15 25,18 34,0 -8,-14 10,-10 -2,-14 11,-6 -24,-21 11,-1 27,16 -6,5 4,7 -13,6 8,10 -13,8 18,7 -2,7 10,-5 -4,-10 11,-1 -5,7 17,4 39,-6 -10,19 63,3 -8,6 12,6 136,13 36,13 28,-12 39,2 30,-9 -47,-16 138,-12 1,7 37,-1 16,-6 5,-6 -6,-4 28,-12 10,10 76,-3 -8,9 14,4 90,-6 35,-14 60,1 19,-15 69,2 18,-9 12,3 -8,7 5,4 81,-7 -3586,-4|-905,695 0,-10 13,8 19,-21 17,16 1,11 29,-2 13,-5 -7,-11 7,-5 -20,-12 -25,2 -15,-18 -59,-28 -15,-31 15,-1 9,-17 100,-20 2,-18 22,-21 13,14 -12,21 33,18 -20,23 12,11 -8,24 43,1 42,-13 3,-21 16,-8 31,21 32,-33 -4,-7 45,-17 15,-13 1,-12 -43,-19 -64,0 -47,-34 60,24 9,-5 -9,-6 6,-19 30,-3 10,11 7,-11 -56,-24 -7,1 -1,9 18,8 -27,-2 -36,-21 7,-14 -37,-7 18,0 -21,-1 -9,-19 -6,6 4,-11 -8,-12 -5,19 1,-10 -7,1 13,-26 -56,-42 12,-45 -3,-17 -13,7 -12,32 -12,10 -51,2 0,-10 -10,-2 -36,6 -28,-14 -8,-9 -5,-50 16,-31 19,-12 24,6 12,6 5,17 32,5 -18,-56 39,1 16,-7 -4,-42 24,-23 18,8 28,-10 19,25 31,13 7,-3 -8,-7 2,-23 7,8 -4,11 15,12 17,-16 33,-5 30,6 -8,-3 3,-5 53,-39 31,-2 27,-16 13,-25 -4,-18 18,-1 0,-10 8,6 29,-10 3,-11 46,-2 44,-22 9,-22 -4,-17 -36,-41 -6,-48 -16,-40 -11,-11 -56,-19 -13,-38 -49,-57 -24,-5 -22,10 16,-30 -24,-18 -31,-1 2,-19 -6,-3 -24,-1 1,-10 15,-5 -17,-9 -4,-15 -17,-6 -3,-7 20,-9 -4,-9 -31,-26 9,-17 -26,-5 -2,-9 -39,15 -7,36 15,18 -15,3 12,25 12,-4 5,21 -7,3 -3,-13 -6,2 11,39 -4,21 22,48 12,126 -13,24 -45,28 -38,74 -15,11 -1,14 16,20 -12,5 1,11 38,49 -11,45 -14,6 -13,-17 -48,27 0,12 -18,22 -37,6 -35,23 -19,-5 -69,26 -20,16 -5,29 -33,28 0,8 -29,26 -17,26 -9,2 1,-16 53,-68 -6,-6 -22,19 -1,13 -28,17 9,9 -13,10 -18,34 -33,16 -38,57 5,52 -8,27 16,-2 5,-9 -2,19 -46,18 -4,15 -13,5 -50,53 -130,28 -11,-2 2,-7 -37,-8 11,21 -34,-19 7,-5 -9,-8 -42,-21 -64,-16 71,32 7,13 -50,-2 1,9 -19,2 -23,17 15,16 38,7 -7,6 7,4 -42,-4 -31,13 36,9 28,-5 -51,23 49,19 53,11 201,-25 74,9 10,7 23,-10 14,7 1,-8 28,4 63,-9 13,-5 -14,-5 54,1 10,-6 11,5 -10,4 6,4 21,1 46,-12 31,2 -2,6 9,2 16,-4 0,-9 19,18 -23,10 1,11 12,7 23,-6 14,-11 -9,-5 19,-2|-1800,-847 100,8 119,-15 150,4 -105,13 7,17 -39,9 62,-2 42,10 -31,9 -58,3 -28,11 -3,11 71,-5 52,9 -1,11 13,2 310,15 16,-10 117,-6 5,4 -24,8 -12,15 74,-10 62,3 9,7 130,-14 73,10 18,10 -14,23 12,28 43,23 52,13 2,-6 -44,-9 -6,-7 5,-7 -36,-18 39,-27 10,-30 -98,-29 -66,-1 35,-12 -42,-5 -1,-8 26,-11 157,-21 15,-8 84,15 70,-4 142,18 -11,10 -59,-2 3,14 178,30 18,6 -8,6 11,8 51,18 29,-4 5,8 67,-7 79,17 31,-9 26,8 137,-5 49,8 19,12 47,-13 159,40 69,-22 27,6 48,-5 8,-13 -19,-11 13,-4 -12,-12 20,-4 40,24 37,4 52,23 40,1 12,9 17,-9 61,-3 39,2 31,16 34,-13 74,10 62,-14 34,8 116,3 3,9 24,-17 80,1 33,-15 55,-2 73,-20 96,-11 -19,-20 -32,-7 -25,-18 11,-20 23,-6 -52,-4 -20,-17 96,-29 89,-7 -3583,-2|-271,835 63,-8 -106,-7 85,1 8,-4 -11,-5 74,7 36,-6 -78,-11 23,-1 -20,-13 0,-12 12,-6 -32,-4 19,-5 2,-9 -11,0 13,-9 -42,-10 13,-11 -25,1 27,-8 3,-8 -17,-2 -20,9 3,-6 -12,-6 41,-1 -175,-46 -14,-20 -16,-8 4,-8 -10,-18 -49,8 -33,27 -24,36 31,27 -38,-3 3,12 30,-2 -44,11 11,9 -39,29 -99,6 -29,9 46,4 -65,6 76,14 -23,7 58,12 -4,5 122,6 59,-7 -23,9 34,6 163,3|1436,-138 18,-12 10,-40 24,-14 9,-19 10,-1 24,-37 0,-48 -31,-65 -37,-16 -13,11 -14,-9 -30,8 -10,19 -15,5 1,12 -14,-9 10,24 -18,-20 -17,23 -30,11 -52,-7 -24,-17 -38,-1 -19,-11 -30,9 7,26 -24,55 5,-4 -4,9 8,-7 -8,19 7,26 1,-7 25,18 42,10 21,33 9,-7 -4,5 22,24 14,4 25,-12 10,25 20,4 -8,8 6,2 29,-11 12,3 5,-5 -15,-26 47,-27 15,27 4,40 7,-2 8,-26|-866,732 8,-7 35,13 17,-11 -2,-6 30,7 37,-15 19,3 43,-15 9,-9 -18,-5 69,-18 -20,-19 -28,14 -13,-1 -1,-6 34,-23 -3,-7 -38,10 26,-18 -48,10 -38,18 -29,-5 -9,4 7,7 39,2 11,22 -61,25 -97,2 -8,4 10,4 -14,0 -3,10 18,13 26,3 -8,-6|-685,831 66,-7 -58,-9 22,0 -57,-17 -57,-5 14,-1 -7,-2 8,-5 -44,-13 19,-4 -27,-6 -89,3 17,7 -5,7 33,-4 -30,9 29,9 -18,10 51,2 -58,0 -40,14 123,12 108,0|1341,-12 3,-16 11,-6 28,17 63,-22 30,-22 -4,-13 35,-32 -28,5 -32,25 -21,-17 -35,12 -15,-3 11,11 -8,19 -42,19 -7,-6 -10,13 17,6 -15,0 -17,13 19,5 17,-8|-1142,731 -5,-4 36,-2 12,5 17,-13 5,4 -7,10 19,0 11,-4 9,-17 35,-10 -17,-5 3,-7 -109,-3 -28,7 -12,8 49,4 -55,1 -5,4 23,4 -33,3 15,11 37,4|-30,586 -11,-10 21,1 -11,-17 10,-1 26,-30 12,-2 -3,-14 -66,-13 18,14 -19,6 11,3 -4,12 15,-1 2,6 -19,8 -2,10 -6,-5 -6,15 12,18 20,0|1410,371 -7,-20 -31,-5 -14,-11 -7,11 -41,-7 10,-8 -7,-16 -11,-1 2,9 -10,10 32,21 31,1 10,18 7,-5 20,14 9,30 11,2 5,-14 -9,-29|1252,14 -15,-12 -35,0 7,-16 24,8 -18,-13 17,-34 -10,0 5,8 -12,-1 -5,20 -7,-3 1,-26 -10,1 1,19 -7,7 12,34 9,7 43,1|1213,185 9,0 3,-14 -8,-12 0,-16 23,-5 1,-13 -12,11 -23,3 4,6 -9,5 -2,14 4,-4 4,25 6,0|-561,507 -7,-9 33,-6 -3,-7 7,2 5,-12 -5,-8 -11,1 0,10 -12,-9 -9,7 -30,0 19,31 15,9 -2,-9|1179,18 11,-9 -12,-1 -17,-48 -59,11 -11,24 6,25 15,-1 2,8 16,4 37,38 25,-15 -19,-22 6,-14|1264,84 1,-12 -3,-9 -4,10 -4,-5 0,-12 -12,6 -6,16 -17,-6 16,15 3,-5 17,8 -1,8 10,-14|1746,-362 22,-17 17,2 -5,-15 -8,1 -20,-26 -5,4 2,14 -11,4 9,21 -21,29 17,-8 3,-9|575,707 -59,8 8,13 20,8 -9,2 24,8 -3,5 106,17 27,-3 -104,-22 -31,-19 2,-9 19,-8|501,-136 3,-21 -7,0 -26,-92 -17,-7 -14,6 -7,29 11,20 0,39 33,16 15,26 9,-16|-145,665 -2,-7 11,-7 -51,-16 -41,5 10,4 -22,5 18,5 -21,2 22,8 15,-7 61,8|1439,442 14,2 2,-11 -23,-13 -16,7 -5,-11 -11,0 -2,10 16,8 6,22 19,-14|-726,199 26,-3 17,-10 -24,-2 -7,-8 -25,4 -5,7 21,0 -11,9 8,3|1436,507 11,-17 -15,3 -6,-14 9,-18 -8,6 -6,-7 -4,73 10,11 9,-37|-1004,738 30,0 -7,-8 16,-4 -2,-9 -26,-3 -32,11 21,2 -11,7 11,4|-1082,762 23,-2 -4,-10 -74,-6 19,8 -59,0 23,13 63,-10 -14,9 23,-2|-870,797 12,-4 -50,-11 -21,1 -11,5 9,6 -36,8 20,10 23,1 54,-16|-685,-710 -3,-12 -23,-3 -31,1 -8,7 29,5 4,17 14,6 18,-21|1730,-409 12,-4 -15,-21 4,-5 -16,-3 -22,-24 -26,4 3,11 60,42|1058,-59 -11,0 -21,17 -73,97 22,-3 63,-51 -4,-8 27,-24 -3,-28|-797,228 55,-25 -36,-4 7,5 -16,12 -31,10 -32,-7 27,13 26,-4|-1205,714 -26,-5 -28,10 20,18 -10,6 73,-1 21,-7 -37,-10 -13,-11|1520,-55 -18,-8 -19,6 18,7 7,-5 7,13 8,-1 -3,-12|-947,771 55,-15 81,1 13,-8 -126,-1 -15,15 -32,5 24,3|-452,-780 13,-5 6,-15 -72,-10 -37,4 55,26 35,0|-678,-538 27,-9 -41,-8 -55,27 36,-13 18,16 15,-13|1086,-68 22,3 49,-19 -74,6 -29,9 7,10 25,-9|-68,523 -32,-5 8,11 -5,10 30,13 10,-6 -11,-23|-852,657 51,-20 -30,4 -24,-10 -17,4 13,22 7,0|183,797 32,-7 -25,-4 -19,-18 -12,0 -55,29 79,0|1454,-408 29,-1 -4,-23 -19,-3 -13,23 7,4|812,62 -9,-2 -4,8 2,30 17,-23 -6,-13|-1530,571 -10,-4 -7,8 21,4 5,-3 -9,-5|-932,728 -22,-7 -6,13 15,7 40,-2 -27,-11|1451,756 -8,-8 -53,-2 -20,7 18,8 63,-5|-985,767 8,-4 -5,-13 -43,6 -1,7 41,4|247,779 -40,-2 7,2 -6,4 21,2 18,-6|999,789 -49,1 -38,13 47,10 43,-15 -3,-9";
-  var cv=document.getElementById('globe');
-  if (cv && cv.getContext){
-    var ctx=cv.getContext('2d'), W=0,H=0,DPR=1;
-    var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    function css(n){ return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); }
-    var rings=LAND.split('|').map(function(r){
-      var px=0,py=0,out=[];
-      r.split(' ').forEach(function(p){ var c=p.split(','); px+=+c[0]; py+=+c[1]; out.push([px/10,py/10]); });
-      return out;
-    }).filter(function(r){ var s=0; for(var i=0;i<r.length;i++) s+=r[i][1]; return (s/r.length)>-58; });
-    function v3(lat,lon){ var a=lat*Math.PI/180,b=lon*Math.PI/180,c=Math.cos(a);
-      return [c*Math.cos(b),Math.sin(a),c*Math.sin(b)]; }
-    var ports=[['Izmir',38.4,27.1],['Istanbul',41.0,29.0],['Gdansk',54.4,18.7],['Rotterdam',51.9,4.1],
-      ['Houston',29.8,-95.4],['Miami',25.8,-80.2],['Santos',-24.0,-46.3],['Valparaiso',-33.0,-71.6],
-      ['Lome',6.1,1.2],['Cotonou',6.4,2.4],['Durban',-29.9,31.0],['Mumbai',19.1,72.9],
-      ['Ningbo',29.9,121.8],['Murmansk',68.9,33.1]].map(function(p){return {v:v3(p[1],p[2])};});
-    var lanes=[[0,5],[1,4],[6,8],[7,9],[2,8],[10,11],[4,9],[12,3],[12,13],[11,10],[12,5]];
-    function slerp(a,b,t){ var d=Math.max(-1,Math.min(1,a[0]*b[0]+a[1]*b[1]+a[2]*b[2])),o=Math.acos(d);
-      if(o<1e-6) return a.slice();
-      var s=Math.sin(o),k1=Math.sin((1-t)*o)/s,k2=Math.sin(t*o)/s;
-      return [a[0]*k1+b[0]*k2,a[1]*k1+b[1]*k2,a[2]*k1+b[2]*k2]; }
-    var TILT=-0.38, ct=Math.cos(TILT), st=Math.sin(TILT);
-    function rot(p,ry){ var c=Math.cos(ry),s=Math.sin(ry);
-      var x=p[0]*c-p[2]*s, z=p[0]*s+p[2]*c, y=p[1];
-      return [x, y*ct-z*st, y*st+z*ct]; }
-    function resize(){ DPR=Math.min(window.devicePixelRatio||1,2);
-      W=cv.clientWidth; H=cv.clientHeight;
-      cv.width=Math.max(1,Math.round(W*DPR)); cv.height=Math.max(1,Math.round(H*DPR));
-      ctx.setTransform(DPR,0,0,DPR,0,0); }
-    var t0=performance.now();
-    function frame(now){
-      if(!W||!H) resize();
-      var t=reduce?42:(now-t0)/1000, ry=t*0.05;
-      var narrow=W<900;
-      var R=narrow?Math.min(W*0.44,H*0.38):Math.min(W*0.29,H*0.76);
-      var cx=narrow?W*0.52:W*0.76, cy=narrow?H*0.36:H*0.52, fade=narrow?0.45:1;
-      ctx.clearRect(0,0,W,H);
-      var BR=css('--brand')||'#116b5c', GL=css('--gold')||'#b8862b';
-      var O1=css('--g-ocean1'),O2=css('--g-ocean2'),O3=css('--g-ocean3');
-      var LC=css('--g-land')||'#0f5a4d', LN=css('--g-line'), GW=css('--g-glow');
-      var atm=ctx.createRadialGradient(cx,cy,R*0.93,cx,cy,R*1.28);
-      atm.addColorStop(0,GW); atm.addColorStop(1,'rgba(17,107,92,0)');
-      ctx.globalAlpha=fade; ctx.fillStyle=atm;
-      ctx.beginPath(); ctx.arc(cx,cy,R*1.28,0,6.2832); ctx.fill();
-      ctx.save(); ctx.beginPath(); ctx.arc(cx,cy,R,0,6.2832); ctx.clip();
-      var oc=ctx.createRadialGradient(cx-R*0.36,cy-R*0.44,R*0.05,cx,cy,R*1.1);
-      oc.addColorStop(0,O1); oc.addColorStop(0.55,O2); oc.addColorStop(1,O3);
-      ctx.fillStyle=oc; ctx.beginPath(); ctx.arc(cx,cy,R,0,6.2832); ctx.fill();
-      ctx.strokeStyle=LN; ctx.lineWidth=0.6; ctx.globalAlpha=0.7*fade;
-      for(var la=-60;la<=60;la+=30){ ctx.beginPath(); var s1=false;
-        for(var lo=-180;lo<=180;lo+=4){ var q=rot(v3(la,lo),ry);
-          if(q[2]<0){s1=false;continue;} var X=cx+q[0]*R,Y=cy-q[1]*R;
-          if(!s1){ctx.moveTo(X,Y);s1=true;} else ctx.lineTo(X,Y);} ctx.stroke(); }
-      for(var lo2=-180;lo2<180;lo2+=30){ ctx.beginPath(); var s2=false;
-        for(var la2=-80;la2<=80;la2+=4){ var q2=rot(v3(la2,lo2),ry);
-          if(q2[2]<0){s2=false;continue;} var X2=cx+q2[0]*R,Y2=cy-q2[1]*R;
-          if(!s2){ctx.moveTo(X2,Y2);s2=true;} else ctx.lineTo(X2,Y2);} ctx.stroke(); }
-      ctx.globalAlpha=fade;
-      for(var r=0;r<rings.length;r++){
-        var rg=rings[r], path=[], vis=0;
-        for(var i=0;i<rg.length;i++){ var q3=rot(v3(rg[i][1],rg[i][0]),ry);
-          if(q3[2]<0.02) continue; vis++; path.push([cx+q3[0]*R, cy-q3[1]*R]); }
-        if(vis<3) continue;
-        ctx.beginPath(); ctx.moveTo(path[0][0],path[0][1]);
-        for(var k=1;k<path.length;k++) ctx.lineTo(path[k][0],path[k][1]);
-        ctx.closePath(); ctx.fillStyle=LC; ctx.fill();
-        ctx.strokeStyle=BR; ctx.globalAlpha=0.45*fade; ctx.lineWidth=0.7; ctx.stroke();
-        ctx.globalAlpha=fade;
-      }
-      var sh=ctx.createRadialGradient(cx-R*0.42,cy-R*0.48,R*0.1,cx+R*0.26,cy+R*0.3,R*1.5);
-      sh.addColorStop(0,'rgba(0,0,0,0)'); sh.addColorStop(1,'rgba(9,32,28,.34)');
-      ctx.fillStyle=sh; ctx.beginPath(); ctx.arc(cx,cy,R,0,6.2832); ctx.fill();
-      ctx.restore();
-      ctx.globalAlpha=0.65*fade; ctx.strokeStyle=BR; ctx.lineWidth=1.2;
-      ctx.beginPath(); ctx.arc(cx,cy,R,0,6.2832); ctx.stroke();
-      for(var L=0;L<lanes.length;L++){
-        var A=ports[lanes[L][0]].v, B=ports[lanes[L][1]].v, seg=54, pth=[];
-        for(var s3=0;s3<=seg;s3++){ var u=s3/seg,m=slerp(A,B,u),lf=1+0.19*Math.sin(Math.PI*u);
-          var pr=rot([m[0]*lf,m[1]*lf,m[2]*lf],ry); pth.push([cx+pr[0]*R,cy-pr[1]*R,pr[2]]); }
-        ctx.lineWidth=1.5; ctx.lineCap='round'; ctx.strokeStyle=BR;
-        for(var k2=0;k2<pth.length-1;k2++){ if(pth[k2][2]<-0.02) continue;
-          var vv=Math.min(1,Math.max(0,(pth[k2][2]+0.02)/0.5));
-          ctx.globalAlpha=vv*0.6*fade; ctx.beginPath();
-          ctx.moveTo(pth[k2][0],pth[k2][1]); ctx.lineTo(pth[k2+1][0],pth[k2+1][1]); ctx.stroke(); }
-        if(!reduce){ var ph=((t*0.16)+L*0.1)%1, ix=Math.floor(ph*(pth.length-1)), pp=pth[ix];
-          if(pp[2]>0){ ctx.globalAlpha=0.95*fade;
-            var g2=ctx.createRadialGradient(pp[0],pp[1],0,pp[0],pp[1],7);
-            g2.addColorStop(0,GL); g2.addColorStop(1,'rgba(184,134,43,0)');
-            ctx.fillStyle=g2; ctx.beginPath(); ctx.arc(pp[0],pp[1],7,0,6.2832); ctx.fill(); } }
-      }
-      for(var q4=0;q4<ports.length;q4++){
-        var pv=rot(ports[q4].v,ry); if(pv[2]<0.08) continue;
-        var X3=cx+pv[0]*R, Y3=cy-pv[1]*R, al=Math.min(1,(pv[2]-0.08)*3)*fade;
-        ctx.globalAlpha=al*0.9; ctx.strokeStyle=GL; ctx.lineWidth=1.4;
-        ctx.beginPath(); ctx.arc(X3,Y3,3.6,0,6.2832); ctx.stroke();
-        ctx.globalAlpha=al; ctx.fillStyle=GL;
-        ctx.beginPath(); ctx.arc(X3,Y3,1.4,0,6.2832); ctx.fill();
-      }
-      ctx.globalAlpha=1; requestAnimationFrame(frame);
-    }
-    window.addEventListener('resize',resize,{passive:true});
-    resize(); requestAnimationFrame(frame);
+  /* Глобус на three.js. Точки суши взяты из контуров Natural Earth 110m:
+     равномерная по площади решётка Фибоначчи, проверка «точка внутри полигона»,
+     4183 точки, упакованы по три символа base64 на координату, 12 КБ. */
+  var DOTS = "8348g-8io8W-8Ku8MY8LX8Av71G7o17qe7pd7e17jI7fd7TM7SM7T17Hk7IM67769k68j6x76w66mS6lR6m66rN6l66bS6ek6b66ZQ6Pp6Oo6QR6Uk6Eo6I76Kk6Dn6H66FQ6Jj55n59756Q5t-5un5y65r95hV5i+5nR5jm5n55X95cQ5VT5c45Xl5b45SR5LU5Pn5M95RQ5KT5R45K75Mk5Q35HQ5GP4-S5A75FO4-65Bj5F245l47O40R41646N47240542j4624z54ul4q64vN4w24p54nP4v14o44qh4u04lN4eQ4f54kM4dP4l14k04d34fg4jz4aM4TP4Ql4ZL4SO4Wh4YK4Z04Ug4Yz4ac4Tf4Xy4Fl4OL4P04I34NK4Oz4Jf4Ny4G14LI4Mx4F038N4Ag39237M3-f38136L3+e3704Ea39d36z3-G38c4Av35y3+F3wL3x13vL3ze3w031H3yd3vz30G3xc3uy3zF3wb3yE3kK3od3lz3qG3jJ3nc3ky3pF3mb3jx3oE3la3nD3kZ3os3mC3YI3cb3Zx3ba3ft3Yw3dD3aZ3es3cC3ZZ3ds3bC3YY3cr3aB3Qa3Nw3SD3PZ3Mv3RC3OY3QB3NX3Rq3PA3Qp3N-3SS3EY3Bu3GB3DX3FA3CW3Gp3D-3Fo3C+3HR3En3B93GQ3Dm26A23W27p24-22V26o23+25n22927Q24m28526P23l27425O2rU2vn2s92um2r82wP2tl2vO2sk2uN2rj2v22tM2xf2u12g72lO2ik2f72kO2hk2l32jN2gj2pJ2iM2mf2j12oI2hL2px2i02nH2gK2kd2ow2Wj2a22fJ2cf2Vi2eI2XL2be2dH2WK2ad2ew2Xz2cG2VJ2dv2Wy2bF2fY2Yb2cu2Vx2eX2Qd2SG2LJ2Pc2Tv2RF2KI2Sv2Ly2QF2Ru2Kx2PE2TX2Ma2Qt2Jw2OD2SW2LZ2Ps2T-2NC2RV1-I2Hu2FE2Gt1-w2IW2Fs1+v2HV2AY2Er2CB2GU1-X2Dq2H92FT1+W2G81--2ES2Il16r1zu18U15q17T10W14p18812A16T1zW17810-15S19l12o1671z+18k15617j1pW1tp1x81vS1oV1w71p+1uR1v61o91tQ1xj1u51n81wi1pl1t41yL1vh1ok1xK1ug1k51d81mi1j41c71lh1ek1i31gN1kh1dk1h31mK1fN1jg1cj1lJ1eM1if1my1kI1dL1lx1jH1Zg1Sj1W21bJ1Yf1Ri1aI1TL1Xe1bx1ZH1SK1aw1YG1Zv1Sy1XF1bY1Yu1Rx1aX1Ta1Xt1OG1HJ1Lc1Pv1Iy1NF1GI1Ou1Hx1MF1QY1Nu1Gx1PX1Mt1OW1HZ1P-1NV1GY1O+1IB1BE0+a1Ct07w1AD1EW1Bs06v1DV08Y1Ar1E+1CU07X1D91BT1C807-1AS1El09o1B706+1Dk08n1A605903T0wW04802S0380w-0270v+04k0xn01603j0wm00505M0yP02i0vl04L0xO01h0r60k90tj0q50si0ll0p40uL0rh0kk0tK0mN0qg0sJ0lM0ty0rI0sx0l00ua0gg0iK0fg0hJ0aM0ef0b10gI0ZL0hx0a00fH0gw0iZ0fv0hY0ab0cE0gX0Ww0Pz0UG0Vv0Oy0TF0Uu0WX0Pa0Tt0VW0W-0UV0V+0PB0TU0Qr0U+0OB0Wn0Pq0It0KW0L-0JV0K+0EB0Mn0Fq0J90Lm0Ep0I80Kl0Do0FR0Jk0LN0EQ0Ijz+80Alz97z-kz4nz6Qz+jz3m0AMz5Pz9iz-Mz4Pz+Lz-0z43z9K0Bdz+zz1MzuPzyiz0LztOzxhzu3zzKzsNz0zzt2zyJzzyz1bzyxz0aztdz2DzvGzzZz1CzuFzyYzoxzh0znwzpZziczmwzoZzlvzqCzjFznYzpBziEzmXzjtzoAzppziszm-zoozcXzeAzXDzbWzfpzYszc-zeozXrzb+zdnzWqzYTzcmzVpzePzXSzblzdOze3zX6zcNzd3zLqzUQzNTzRmzTPzMSzQlzSOzLRzRNzS2zL5zQMzR1zTezMhzQ0zSdzLgzNJzRczH1zA4zFLzG0zBgzFzzHczAfzEyzJFzCIzGbzIFzBIzFbzHEzAHzEazBwzGDzHszAvzFCy7by4xy9Ey2Hy6ay8Dy1Gy2vy7Cy8ry1uy6By7qy6py8Sy1Vy5oy2+y7Ry4ny86y19y6Qywpypsyt-yrWyvpyxSyqVyuoywRytnyx6yq9yvQyw5yp8yuPyyiyrlyv4yxhyqkyu3ywgyrMykPyl4ye7yjOygkyk3ymgyfjyj2ylfyeiyi1ygLykeymHyfKyjdylHymwyfzykGylvyeyyjFynYyVLyZeybHyUKyYdyaGyTJyXcyUyyZFyauyTxyYEyZtyXDybWyUZyYsyaVyTYyXryVByZUya9yUAyYTyOsyMCyQVyNryPUyIXyMryKByOUyLqyP9yJAyNTyO8yH-yMSyJoyN7yPkyInyM6yOjyL5yQMyJPyNiyD7x8+yBRx+nyC6yEjx9myB5yDiyA4x+OyChyEKx9NyBgx+2yDJyAfyEyx91yCIyDyx81yBIx+eyCxyEaxyNx2gx4Jx5yxy1x3Ix4xxx0x2Hxzdx3wx5Zxycx2vx4Yxxbx1uxzEx3Xx5AxyDx2Wx3-x1Vx5oxyrxruxtXxmaxqtxoDxsWxuAxnDxrWxs-xqVxnrxr+xtnxmqxq9xoTxsmxuPxnSxrlxtOxmRxqkxn6xsNximxbpxf8xhlxe7xjOxcRxgkxiNxbQxfjxc5xhMxi1xb4xgLxh0xfKxchxg0xidxbgxfzxhcxjFxcIxVLxW0xP3xUKxRgxVzxXcxQfxUyxWbxTxxYExRHxVaxXDxQGxUZxWCxXrxQuxVBxWqxUAxRWxVpxMCxFFxJYxLCxMrxFuxKBxLqxEtxJAxKpxMSxFVxJoxLRxInxF9xKQxL5xE8xJPxGlxK4xMhxFkxJ3xAQw5Tw9mw68w-PxA4w57w+Ow-3w9NxBgw6jw+2xAfw5iw92w-fxBIw6Lw+exAHw9dw6zw-GxAvw5ywy1wwLw0ew2HwvKwzdw1GwuJwycw0Fw1uwuxwzEw0twyDwvZwzsw1VwuYwyrw0Uw19wvAwzTw09wnDwkZwoswqVwjYwnrwpUwmqwq9wkAwoTwp8wi-wnSwo7wqkwjnwn6wpjwm5wkPwoiwqLwjOwnhwk3wpKwbQwfjwYmwc5weiwXlwb4wZOwdhwfLwYOwchweKwbgwY2wdJweywX1wcIwdxwfawYdwcwweZwbvwZFwdYwTxwM0wRHwOdwSwwQGwUZwNcwRvwTYwMbwQuwOEwSXwUAwNDwRWwS-wQVwNswR-wTowMrwQ+wSnwUQwNTwRmwH-wBCwFVwCrwG+wInwBqwF9wHmwE8wCSwGlwIOwBRwFkwHNwI2wB5wGMwH1wFLwChwG0wIdwBgwFzv8Nv92v25v7Mv81v14v6Lv3hv70v9dv2gv8cv5yv3Iv7bv9Ev2Hv6av3wv8Dv9sv2vv7Cv8rv6Bv3Xv7qvyDvrGvxCvuYvruvwBvxqvqtvvBvsXvwqvyTvrWvvpvxSvuovr+vwRvx6vq9vvQvw5vyivrlvv4vmRvfUvjnvg9vlQvm5vf8vkPvl4vjOvgkvk3vmgvfjvj2vlfvnIvgLvkevmIvjevg0vlHvmwvfzvlvvcIvVLvZevbHvUKvYdvaGvbvvUyvZFvauvYEvVavZtvbWvUZvYsvaVvb+vVBvZUva9vUAvVpvZ8vbmvUpvPVvMrvKBvOUvP9vJAvNTvO8vQlvJovN7vPkvKQvOjvQMvJPvPLvQ0vJ3vOKvPzvI2vNJvDivFLu+OvEKvBgvFzu+3vDKvEzu92vCJvDyvBIvFbu+evCxvEavBwu-GvDZvFCu+FvEBvBXu+tvDAvEpuycu2vu4Yu6BuzEu5Au6puzsu3-u5ouyru2+u4ou1+uzUu3nu5QuyTu4Pu54uy7u43u2NuzjusmuuPunSurlutOuu3un6usNut2uoius1uueunhutduqzuoJuscuuFunIutFuuuunxuttukGudJuhcujFucIugbuiEufaujtucwuhDuisugCudYuhrujUucXuiTufpuc-uhSui7ub+ugRuh6ujjucmuXTuR-uWSuX7uQ+uVRuW6uUQuRmuV5uXiuQluU4uWhuYKuRNuXJuR1uWIuXxuQ0uVHuWwuUGuYZuGMuKfuMIuG0uLHuMxuF0uKHuLwuJGuGcuKvuMYuFbuLXuNAuGDuKWuL-uGruK+uMnuFquJ9uLmt9st7Ct-VuA+t6Bt-9uBmt6pt+8uAlt7St-luBOt6Rt+kuANuB2t65t-MuA1t7ht-0uBdt6gt+zt1Mtyitv4t0Lt10tu3t0zt2ctvftzyt1btwHt0at2DtvGt1DtyZtvvt0Ct1rt0qt2TtvWtzptqCtnYtkutpBtqqtjttoAtpptkVtootqRtk9tpQtq5tj8toPtp4tnOtkkto3tqgtjjtpgtkMtdPte4tghtZktd3tfgtYjtc2teftgItZLtdetfHteGtfvtYytdFteutcEtZatdttfWtYZteVtNxtSEtTutOatSttUWtNZtTVtQrtOBtSUtT9tS8tNotR7tTktOQtSjtUMtNPtRitTLtU0tCntG6tIjtHitJMtCPtGitILtFhtC3tHKtIztB2tHytCetGxtIatDGtHZtJCtCFtIBtFXs3ds7ws9Zs8Ys+Bs3Es7Xs9As3ts8As9ps2ss8os3Us7ns9Qs38s8Ps94s27s83s6NssTswmsyPsxOsy3sr6swNsx2szfssisw1syesrhsv0sxeszHssKswdsyGsvcsxFsyusrxswEsxtsvDssZslcsnFsgIsmEsgwslDsmsskCshYslrsnUsgXsmTsg-slSsm7sl7snksgnsk6smjsoMshPslisb7sU+sa6sVmsZ5sbisY4sWOsahscKsVNsbJsV1saIsbxsawscZsVcsbZsYvsWFsaYsQxsJ0sPwsRZsKcsOvsQYsPXsRAsKDsP-sRosKrsO+sQnsJqsPmsKSsOlsQOsNksK6sPNsQ3r+qsEmsB8r-SsDlsFOsENsF2r+5sE1sCLsGer-hsD0sFdr+gsEcsGFr-IsDbsFEsCasEDsFsr+vr5br2xr7Er0Ir4br6Er5Drzvr4Cr5rr3Br0Xr4qr6TrzWr5Srz+r4Rr56r45r6irzlr5hrrnro9rtQru5rn8rt5rolrs4ruhrr3rtgrvJroMruIrrero0rtHruwrtvrvYrobruXrrtrdzriGrjvrcyriurdarhtrjWrgtriWrj-rdCri+rgUrdqrh9rjmrilrdRrhkrjNrgjrd5riMrYlrRorXkrU6rZNrSQrWjrYMrXLrY0rR3rX0rVKrSgrWzrYcrRfrXbrSHrWarYDrVZrXCrYrrRurMarJwrHGrLZrNCrMBrGtrLArMprJ-rHVrLorNSrGVrMRrJnrG9rLQrM5rKPrL4rNhrGkrMgq+mq78rAPrB4rA3q7jq-2rBfq+1rAerCHq7KrBGq+cq7zrAGrBvq-FrAurCXq7aq-trBWq+sq8CrAVq2uqvxq0Eq1tqwZq0sq2Vqzrq1Uq29qwAq18qzSqwoq07q2kq1kqwQq0jq2Mqziq1Lq20qv3qo6qqjqn5qlPqpiqrLqohqqKqrzqk2qpJqqyqoIqleqpxqraqowqqZqlFqpYqrBqoYqqBqrqqktqpAqqpqcvqaFqeYqgBqdXqfAqgpqZsqd-qfoqc+qaUqenqgQqdmqfPqclqZ7qeOqf3qdNqe2qgfqZiqd1qffqc1qaLqeeqU3qSNqT2qOiqS1qUeqR0qTdqVGqOJqScqUFqRbqOxqTEqUtqSDqTsqVVqOYqSrqUUqRqqTTqU9qSTqIsqDYqHrqJUqGqqITqJ8qC-qHSqI7qGRqJjqG5qIiqKLqDOqHhqJKqGgqD2qIJqJyqHIqIxqGHp8hp+Kp7gp9Jp+yp31p8Ip9xp7Hp8wp+Zp7vp9Yp4Ep8Xp+Ap7Wp8-p+op3rp7+p9np69p8mp+Pp7lpx-pzopsrpw+pynpv9ptTpxmpzPpwlpyOpvkpxNpy2pwMpx1pzepshpw0pydpvzpzFpwbpyEpswplzpncpkzpmcpoFplbpnEpkapmDpnsplCpmrpoUphXplqpnTpkppmSpn7plRpm6pkQpl5pnipk4pbRpc6pV9paQpb6pZQpa5pcipZ4pbhpdKpWNpagpcJpZfpW1pbIpcxpV0paHpbwpZGpavpcYpZupbXpdApWDpPGpQvpOFpRYpOupQXpLDpPWpQ-pOVpP+pRnpO9pQmpN8pPlpROpOkpQNpR2pK5pQ1pOLpEkpGNpDjpFMpCipEMpF1pDLpE0pGdo-gpDzpFcpCypEbpGEpDapFDo-vpECpFrpDBpAXpEqpGTpDpo6Co3Yo5Bo6qo4Ao5qo7To0Wo4po6So3oo66o4Qo55o3Po0lo44o6ho33o5go7Jo4fo6Io3eo5Hovgos2oufopLovHoseovwotGouvosFotuovXostouWov-opCotVou+osUovmos8oulogroeBoiUoj9ohToklodooh7ojlog7oikokNohjok1od4oiLoj0ohKokcohyojbogxoiaokDoWJoZboWxoYaoVwoXZoZDoWZoYCoSuoYqoWAoXpoZSoWooYRoVnoXQoY5oWPoZhoSkoLnoNQoKmoMPoN4oLOoM3oKNoHkoL3oNgoK2oOIoHLoLeoNHoKdoMGoNvoLFoHaoLtoNWoKsoMVoCuoAEoBtn-DoAsoCVn-roC+oAUoB9n-ToA8oCln-7oBkn+6n8QoCMn-ioBLoC0oAKoBznz5n1in3Ln0hnw2n1Jn2yn0Jn1yn3bn0xn2anzwn1Zn3Cn0Yn3qn1An2pnz-n1on3Rn0nnlsnp-nrono+nmUnqnnsQnpmnrQnomnqPnr4npOnp2nrfno1nqensHnpdnrGnocnlynd0nbKnfdnhGnecngFndbnfEnguneEnaZnesngVndrnfUng9neTnf8ndSne7ngknd6nTSnU7nSRnT6nVjnS5nR4nPPnTinShnUKnTJnUynSInTxnVanSwnPFnTYnVBnSXnUAnKZnHvnGunEEnIXnHWnEsnH-nJonG+nEUnInnKQnHmnD7nIOnHNnI2nH1nJenG0m9Nm+2m8Mm80m+dm70m9dm-Gm8cm7bm4xm8Dm9sm8rm+Um7qm9Tm+8m8SmtXmxqmzTmwpmySmz7mxRmy7mwRmtnmx6mzjmw5mxhmzKmwgmt2myJmzymxImwHmtdmxwmwvmnImmHmnwmlGmmvmoZmlvmmXmoAmlWmm-mooml+mk9miTmllmmNmn2mZ8mXSmblmdOmakmX6mW6mbNmaMmb1ma0mcdmZzmbcmdFmabmbDmcsmaCmbrmdUmaqmOZmLvmQCmPBmQrmPqmRTmOpmQSmR7mPRmMnmP5mO4mQhmSKmPgmOfmL1mPHmEfmGImDfmA1mFImGxmEHmAcmEvmDumFXmEWmF-mDVmArmE+mGnmD9mElmGOl4Ul59l7ml48l38l1Sl4kl5Ml61l4Ll1hl50l7dl4zl5bl4al6Dl7sl5ClvblsxlqHltaluClvrltBlqXluqlwTltplsolw7luRltQlt4lvhls3lqNluglwJltfli4lh3ljgllJliflhele0liGliulkXlhtlfDljWlk-liVli9lh8lZ-lXVlY+lWUlTqlZmlW8lXklWjlYMlZ1lXLlWKlXzlWylXalZDlLKlIglMzlOclLylMalLZlIvlOrlMBlLAlLolMQlLPlIllM4lOhlL3k-nlD6lBQlAPlDhlA3lCgk-2lBflAelBGlAFk9blDXlAtk-slBVlAVk1tk3Wk0skyCk2Vk3+k1Uk18k07k4Nk1jk0ik1Kk1zk0ykyIks0kqKkpJktckqykpxkqZksCkpYkrBkqAkqokpnkm9ks6kqQkpPkfokenkfPkg4keOkhgke2kfekedkhvkfFkgukeFketkUFkTEkQakWWkTskSrkUUkTTkT7kVkkS6kTikULkTKkQgkWckIikHhkJKkIJkIxkHwkIYkHXkJAkIAkLSkIokKRkHnj8-j9nj8mj58j-4j9Oj8Nj92j81j9ej-Hj8dj-vj9Fj9tjxcj0ujyEjxDjysjxrjyTjxSjy8jx7jw6jyjjxijyKjzzjl5jmhjj3jnJjmIjjejpajmwjlwjnZjmYjnAjl-jnojmnjj9jb-ja+jbmjaljcOjbNjYkjb2ja1jcejbdjacjcFjbEjQcjSFjPbjREjStjQDjQrjPrjNBjS9jQTjNpjPSjQ7jP6jQijPhjRKjE5jCPjFhjEgjFJjGyjEIjFxjEwjCGjFYjEXjE-jCVjD+jFni5Wi5+i49i6ni5mi28i6Oi5Ni2ji51i3Li40i6di5ci2yi6Ei5DiubirxivEiuDiuriwUitqivTiuSiroiu6it5iuhir3itgixzij5ii4igPijhilKiigikJijIigeijwiivigFijXigtiiWij-ii+igUiYWiXWiX+iVUibQiYmiXliYNiXMiY1iX0iVKiYciXbiYEiKKiLziNciMbiJxiNDiMCiMqiKAiNSiMRiM5iKPiL4iNiiMhiJ3iB5iA4iBgh+2iEyiCIiBHh+diBviDYiAuiCXiEAiBWh+siB-iA+h2Whzsh1Vh2+h19hzTh2lh1kh2Mhzih20h1zh2chzyh1bh3EhqzhoJhuFhrbhqahrChoYhrqhqphn-hrRhoohqRhtjhq5hoPhrhhf4hdOhe3hgghiJhffhc1hixhgHhddhfvhdFhgXhfWhf+hdUhe9hVWhUVhRrhU9hUkhR6hVNhUMhRihXehU0hSKhXFhUbhRxhJzhJahGwhKChLrhJBhGXhMUhJqhHAhJRhGnhJ5hGOhJgg7mg93g7Ng+fg+Hg7dg+vg9ug7EhBAg+Wg7shAng99gwDgzVgy8gwTgzlg1Ogykgv6gzMgwigyzgwJgzbgvwgqcgnyglIgqDgnagkwgoCgnpgk-goRgnQgkmgqign4glOgcPgZlgc4gZNgfJgcfgZ1gewgcGgZcgcugcVgZrgc9gQsgOCgT-gRVgOrgQ8gOSgRkgT1gRLgOhgQygOIgUEgRagOwgFygDIgGagCvgIrgGBgDXgISgFogC+gI6gGQgF3gDOf7Qf6Pf3lf9hf63f4Nf6ef30f9wf7Gf3bf9Xf6tf4Df8+f6Vf3rf69ftDfvUfsqfv8fu7fsRfyNfvjfs5fx0fvKfsgfvzfyEfvafswfjxfhHfkZfhvfkAfhWfkofg9fm6fkQfhmfnifmhfj3fhNfb5fZPfWlfY2fWMfYdfVzfbvfZFfWbfbXfYtfWDfZVfWrfVqfbmfNsfLCfNTfKpfN7fLRfNifK5fOLfKgfQcfNyfLIfREfQDfNZe-ffFbfCxfAHe-GfCYe-ufCAe-WfCoe-+fE5fCPe-lfC3fANe-Me54e3Oe0ke21e0Le6He3ee00e6we3Fe0be0Ce5+e3Ue0qeuVerrepBesTeppeooer7epRerieo4esKepgevceuberxepHepvedeejaegweeGekDegYeduehAeeWekSegned9eelegOedkejgeg2eeMeY4eX3eVNeSkeV2eTMeZIeSLeVdeSzeTbeVEeSaeVseTCeY+eVTeSpeIBeHBeKTeHpeJ6eHQeNMeKieH4eN0eG3eKJeHfeIHeJweHGd-Jd8feCbeBad+wd8Gd8ueCqd7td+-d8Vd89d+md78eB4d-Od8keCgd+2dw8dxkdwjdz1dxLdzcdwyd0Edxad3WdwZdzrdxBdxqdzTd3mdwpdordmBdr9doSdlodmQdsMdlPdohdl3dmfdoIdlfdoxdmHdsDddIdaedbGdaFddXdatdc+daUda8dg5dZ8ddOdakdbMdRldO7dSNdPjdVfdUedR0dPKdPydVudOxdSEdPadQCdRrdPBdSTdPpdKVdJUdGqdEAdEodDndG5dEPdGhdD3dEfdKbdDedJadGwdEGc5ec7Hc4dc7vc5Fc-Bc7Wc4sc5Vc4Uc7mc48c7Nc4jcwlct7cz3cs6cwMcticuKcvzctKcwcctycwDctZcuBcz9ctAclCciYcjAckpch-clRcincokck5ciPci3ch2clIcieckvcW1caHcXdcWccZvcXFcXtcZWcWscZ+cXUcZlcW7cXjcdfcLScOkcL6cOMcLicO0cMKcObcLxcMZcLYcOqcMAcDBcAXcBAb--cDRcAncBPcC4cAOcDgcA2cDHcAdb11b01b4Hb1db3ub1Eb4Wb1sb39b1Tb17b3kb06b4MbqSbskbp6bqibphbszbqJbsabpwbtCbqYbwUbsqbewbfYbeXbhpbe-bhQbembh4bfObhfbe1bkxbhHbTNbWfbT1bWGbTcbUEbTDbWVbTrbZnbV8bTSbWlbT7bK8bISbOObI6bKjbH5bLLbIhbKybIIbIwbHwbLCbIYbDEbAaa-Za8vbABa9Xa-oa8+a9ma8la-3a9Na-fa81a03ayNa0eax0a3wa0Faxba0tayDa0Vaxra3nayTaxSapUamqasmap8ao7amRapjam5as1apKamgascanJaoyamIapaamwadxabHahDaeZabvaeAabWahSaeoadnaa9aeQabmad3abNahJaQlaPkaS2aQMaWIaSdaPzaTFaQbaWXaStaQDaV-aTVaSUaPqaS8aFCaHTaEpaKlaFRaHiaE4aK1aILaHKaEgaHyaFIaLEZ8JZ5fZ-bZ8xZ6HZ7wZ5GZ8YZ5uZ-qZ8AZ5WZ-SZ5+Z-6Z8PZ5lZ-hZ83ZwmZt8ZxOZukZw1ZuLZ0HZu0ZxFZubZ0XZwsZuCZz+ZxUZuqZpWZlrZjBZo9ZmTZjpZlSZl7ZjRZpNZliZi4Zo0ZjgZpcZlxZX3ZdzZbJZaIZXeZawZYGZeCZaYZXuZdqZYWZanZX9Zd5ZO+ZMUZSQZM8ZS4ZPNZMjZSgZP2ZO1ZMLZPdZMzZSvZPEZMaZSWZNCZEDZBZZHVZDrZBBZG9ZBpZHlZD6ZBQZHMZEiZB4ZDhZEJY2PY8LY4gY12Y7yY2fY8bY4wY2GY8CY5YY4XY1tY2VY8RYtWYqsYwoYrUYtmYq8Yw4YtNYqjYwfYrLYxHYtcYqyYwuYuEYhzYlFYibYfxYltYiDYfZYlVYgBYl9YiSYfoYlkYh5YfPYlLYUnYajYW4YUOYaLYXhYU3YZyYXIYUeYaaYWvYUFYaBYUtYapYLuYJEYPAYMWYLWYIsYOoYL+YJUYPQYLlYI7YO3YJjYPfYL0YJKYD2YALX9hYDdX+KYEGYAbX9xYDtYBDYDUYAqX+AYD8YARX9nX4TXy-X47X1RXynX4jX04XyOX4KXy2X4yX1HXydX4ZX1vXtxXswXqGXncXtYXpuXnEXtAXnsXtoXp9XnTXtPXqlXs2XqMXcSXiOXejXb5Xh2XieXhdXezXcJXiFXeaXbwXhsXcYXiUXTZXQvXWrXUBXXUXWTXTpXQ-XW7XTQXQmXWiXXKXTfXQ1XLhXH2XFMXLIXF1XLxXIGXFcXLYXMAXK-XIVXFrXLnXH8W6CW-+XAmW88W6SXAOW9kXA2W-1W9LW6hXAdW8yW6IXAEW1cWxxWvHW1DWxZWuvW0rWvXW1TWxoWu+W06W1iWpRWmnWj9Wp5WmOWjkWphWqJWmeWj0WpwWqYWjbWpXWkDWevWbEWYaWeWWe-Wd+WbUWYqWemWa7WYRWeNWe1WP6WNQWTMWT0WSzWNgWTcWPxWNHWTDWTrWQAWNWWICWEXWBtWHpWCVWIRWEnWB9WH5WIhWHgWE2WCMWIIV5NV2jV8fV9HV5cV2yV8uV9XV8WV3CV8+V5TV2pVxVVx9VuSVroVxkVt5VrPVxMVx0VuJVrfVxbVmzVlyVjIVgeVmaVivVgFVmBVmqVi-VgVVmRVm5Vf8VaoVVUVbQVXlVU7Va3VbfVaeVX0VVLVbHVXcVUyVauVQGVMbVJxVPtVQVVPUVKAVP8VMSVJoVPkVQMVBRU+nVEjU+OVEKVEyVBHU+dVEZVFCVEBUzdU5ZU1uUzEU5AU5oU19UzTU5PU53Uy6U43UuPUqkUn6Ut2UueUoJUuFUnwUtsUuVUfaUcwUjUUiTUc-Ui7UfQUcmUiiUjKUffURmURNUXJUXxUUGURcUYAUW-URrUMXUItUGDUL-UMnUI8UGSUM2UF5UL1UMdT9iT64UBdT7IT6vUArUBTTyYTvuT2ST1STyPTvlT2JTkLTqwTkbTq-TZBTflTZRTf1TY4TN3TUbTNuTUSTCtTJRTCjTJIS3jS3KS3ZS99SsASzlSykSsPSyzSr2Sg2SnaSgsSVsScQSViSR3SQ2SKhSKJSKYR++Rz0R7ZRobRoqRdRRk2RdHRSHRYrRR9ROSRGzQ7ZRC-Q29QwPQlFQZsQhRQOiQDIQKtP3+P30P0KPhaPo2PWQPWHO-tO-jO0iOpJOd-Od1OHbOHSNw4NltNaUNPKM4mMtcMXC";
+  var B="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+-";
+  var IDX={}; for (var i=0;i<64;i++) IDX[B[i]]=i;
+
+  var cv = document.getElementById('globe');
+  if (!cv || typeof THREE === 'undefined') return;
+
+  var css=function(n){ return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); };
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var C_LAND = new THREE.Color(css('--brand')   || '#116b5c');
+  var C_DOT  = new THREE.Color('#06302a');
+  var C_SEA  = new THREE.Color('#bfd5cd');
+  var C_SEA2 = new THREE.Color('#467a6e');
+  var C_GOLD = new THREE.Color(css('--gold')    || '#b8862b');
+
+  var R = 1;
+  function v3(lat,lon,r){
+    var a=lat*Math.PI/180, b=lon*Math.PI/180, c=Math.cos(a);
+    return new THREE.Vector3(c*Math.cos(b)*(r||R), Math.sin(a)*(r||R), c*Math.sin(b)*(r||R));
   }
+
+  var scene = new THREE.Scene();
+  var camera = new THREE.PerspectiveCamera(32, 1, 0.1, 100);
+  camera.position.set(0, 0.62, 3.25);
+  camera.lookAt(0,0,0);
+  var renderer = new THREE.WebGLRenderer({canvas:cv, alpha:true, antialias:true});
+  renderer.setClearColor(0x000000, 0);
+
+  var world = new THREE.Group();
+  world.rotation.z = -0.36;
+  scene.add(world);
+
+  /* океан: мягкая растушёвка от освещённой стороны к терминатору */
+  var sea = new THREE.Mesh(
+    new THREE.SphereGeometry(R*0.995, 72, 48),
+    new THREE.ShaderMaterial({
+      uniforms:{ cA:{value:C_SEA}, cB:{value:C_SEA2} },
+      vertexShader:'varying vec3 vN; void main(){ vN=normalize(normalMatrix*normal);'+
+        ' gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }',
+      fragmentShader:'uniform vec3 cA; uniform vec3 cB; varying vec3 vN;'+
+        ' void main(){ float l=clamp(dot(vN,normalize(vec3(-0.55,0.62,0.78)))*0.5+0.5,0.0,1.0);'+
+        ' gl_FragColor=vec4(mix(cB,cA,pow(l,1.75)),1.0); }'
+    })
+  );
+  world.add(sea);
+
+  /* атмосфера: френель по задней грани */
+  var atmo = new THREE.Mesh(
+    new THREE.SphereGeometry(R*1.19, 64, 42),
+    new THREE.ShaderMaterial({
+      uniforms:{ c:{value:C_LAND} }, side:THREE.BackSide, transparent:true,
+      blending:THREE.NormalBlending, depthWrite:false,
+      vertexShader:'varying vec3 vN; varying vec3 vP; void main(){ vN=normalize(normalMatrix*normal);'+
+        ' vec4 mv=modelViewMatrix*vec4(position,1.0); vP=mv.xyz;'+
+        ' gl_Position=projectionMatrix*mv; }',
+      fragmentShader:'uniform vec3 c; varying vec3 vN; varying vec3 vP;'+
+        ' void main(){ float f=pow(clamp(1.0-abs(dot(normalize(vN),normalize(-vP))),0.0,1.0),2.6);'+
+        ' gl_FragColor=vec4(c, f*0.34); }'
+    })
+  );
+  world.add(atmo);
+
+  /* точки суши */
+  var n = DOTS.length/3, pos = new Float32Array(n*3), ph = new Float32Array(n);
+  for (var k=0;k<n;k++){
+    var v = (IDX[DOTS[k*3]]<<12) | (IDX[DOTS[k*3+1]]<<6) | IDX[DOTS[k*3+2]];
+    var xi = v % 720, yi = (v - xi)/720;
+    var lon = xi/2 - 180, lat = yi/2 - 90;
+    var p = v3(lat, lon, R*1.004);
+    pos[k*3]=p.x; pos[k*3+1]=p.y; pos[k*3+2]=p.z;
+    ph[k] = lon;
+  }
+  var g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.BufferAttribute(pos,3));
+  g.setAttribute('aLon', new THREE.BufferAttribute(ph,1));
+
+  /* круглый спрайт точки, рисуем сами, чтобы не тянуть картинку */
+  var dc = document.createElement('canvas'); dc.width=dc.height=64;
+  var dx = dc.getContext('2d');
+  var rg = dx.createRadialGradient(32,32,0,32,32,32);
+  rg.addColorStop(0,'rgba(255,255,255,1)'); rg.addColorStop(0.45,'rgba(255,255,255,0.95)');
+  rg.addColorStop(1,'rgba(255,255,255,0)');
+  dx.fillStyle=rg; dx.beginPath(); dx.arc(32,32,32,0,6.2832); dx.fill();
+  var sprite = new THREE.CanvasTexture(dc);
+
+  var dotMat = new THREE.ShaderMaterial({
+    uniforms:{ uT:{value:0}, uC:{value:C_DOT}, uG:{value:C_GOLD}, uTex:{value:sprite},
+               uPR:{value:1}, uSize:{value:5.2} },
+    transparent:true, depthWrite:false,
+    vertexShader:
+      'attribute float aLon; uniform float uT; uniform float uPR; uniform float uSize;'+
+      'varying float vW; varying float vFront;'+
+      'void main(){'+
+      ' vec4 mv=modelViewMatrix*vec4(position,1.0);'+
+      ' vec3 nw=normalize((modelViewMatrix*vec4(position,0.0)).xyz);'+
+      ' vFront=smoothstep(-0.15,0.35,dot(nw,normalize(-mv.xyz)));'+
+      /* волна бежит по долготе, точки на её гребне крупнее и золотистее */
+      ' float w=sin((aLon*0.0349)-uT*1.25);'+
+      ' vW=smoothstep(0.86,1.0,w);'+
+      ' gl_PointSize=(uSize+vW*4.2)*uPR*(2.2/-mv.z);'+
+      ' gl_Position=projectionMatrix*mv; }',
+    fragmentShader:
+      'uniform sampler2D uTex; uniform vec3 uC; uniform vec3 uG;'+
+      'varying float vW; varying float vFront;'+
+      'void main(){ vec4 t=texture2D(uTex, gl_PointCoord);'+
+      ' if(t.a<0.08) discard;'+
+      ' vec3 c=mix(uC,uG,vW*0.85);'+
+      ' gl_FragColor=vec4(c, t.a*(0.10+vFront*0.90)*(0.80+vW*0.20)); }'
+  });
+  world.add(new THREE.Points(g, dotMat));
+
+  /* маршруты */
+  var ports = [[38.4,27.1],[41.0,29.0],[54.4,18.7],[51.9,4.1],[29.8,-95.4],[25.8,-80.2],
+    [-24.0,-46.3],[-33.0,-71.6],[6.1,1.2],[6.4,2.4],[-29.9,31.0],[19.1,72.9],[29.9,121.8],[68.9,33.1]]
+    .map(function(p){ return v3(p[0],p[1],R*1.012); });
+  var lanes=[[0,5],[1,4],[6,8],[7,9],[2,8],[10,11],[4,9],[12,3],[12,13],[11,10],[12,5]];
+  var movers=[];
+  lanes.forEach(function(L,li){
+    var a=ports[L[0]], b=ports[L[1]];
+    var pts=[], SEG=64;
+    for (var s=0;s<=SEG;s++){
+      var t=s/SEG;
+      var p=new THREE.Vector3().copy(a).lerp(b,t).normalize()
+             .multiplyScalar(R*(1.012+0.21*Math.sin(Math.PI*t)));
+      pts.push(p);
+    }
+    var cg=new THREE.BufferGeometry().setFromPoints(pts);
+    var cols=new Float32Array(pts.length*3);
+    for (var q=0;q<pts.length;q++){
+      var f=Math.sin(Math.PI*(q/(pts.length-1)));
+      cols[q*3]=C_LAND.r*(0.45+f*0.55); cols[q*3+1]=C_LAND.g*(0.45+f*0.55); cols[q*3+2]=C_LAND.b*(0.45+f*0.55);
+    }
+    cg.setAttribute('color', new THREE.BufferAttribute(cols,3));
+    world.add(new THREE.Line(cg, new THREE.LineBasicMaterial({
+      vertexColors:true, transparent:true, opacity:0.62 })));
+
+    var sm=new THREE.Sprite(new THREE.SpriteMaterial({
+      map:sprite, color:C_GOLD, transparent:true, opacity:0.95,
+      blending:THREE.AdditiveBlending, depthWrite:false }));
+    sm.scale.setScalar(0.055);
+    world.add(sm);
+    movers.push({s:sm, pts:pts, off:li*0.09});
+  });
+
+  /* отметки портов */
+  var pg=new THREE.BufferGeometry().setFromPoints(ports);
+  world.add(new THREE.Points(pg, new THREE.PointsMaterial({
+    map:sprite, color:C_GOLD, size:0.075, transparent:true,
+    depthWrite:false, sizeAttenuation:true })));
+
+  function layout(){
+    var w=cv.clientWidth, h=cv.clientHeight;
+    if (!w || !h) return;
+    var pr=Math.min(window.devicePixelRatio||1, 2);
+    renderer.setPixelRatio(pr);
+    renderer.setSize(w,h,false);
+    dotMat.uniforms.uPR.value = pr;
+    camera.aspect=w/h;
+    var narrow = w < 940;
+    /* канвас квадратный, поэтому отводим камеру ровно настолько, чтобы шар
+       вместе с ореолом занимал заданную долю кадра по меньшей стороне */
+    var frac = narrow ? 0.90 : 0.94;
+    var fit  = Math.min(1, camera.aspect);
+    var dist = (R*1.19*2/(frac*fit)) / (2*Math.tan(camera.fov*Math.PI/360));
+    camera.position.set(0, 0.30, dist);
+    camera.lookAt(0,0,0);
+    dotMat.uniforms.uSize.value = narrow ? 5.0 : 7.4;
+    camera.updateProjectionMatrix();
+  }
+  var t0=performance.now();
+  function tick(now){
+    /* now у rAF это метка начала кадра: в первом кадре она может оказаться
+       на доли миллисекунды раньше t0, отсюда отрицательное время. Отсекаем. */
+    var t = reduce ? 1.2 : Math.max(0, (now-t0)/1000);
+    world.rotation.y = 0.5 + t*0.055;
+    dotMat.uniforms.uT.value = t;
+    movers.forEach(function(m){
+      var last=m.pts.length-1;
+      var u=(((t*0.085)+m.off)%1+1)%1;
+      var i=Math.min(last, Math.max(0, Math.floor(u*last)));
+      m.s.position.copy(m.pts[i]);
+    });
+    renderer.render(scene,camera);
+    requestAnimationFrame(tick);
+  }
+  window.addEventListener('resize', layout, {passive:true});
+  layout(); requestAnimationFrame(tick);
+})();
+</script>
+<script>
+(function(){
   var f=document.getElementById('enquiry');
   if(f) f.addEventListener('submit',function(e){ e.preventDefault();
     var pr=(document.getElementById('q-product').value||'').trim();
@@ -626,5 +722,8 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(tx).then(ok,se); else se(); });
 })();
 </script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "ISP Group Global Commerce", "url": "https://ispgroupgc.com/", "publisher": {"@type": "Organization", "name": "ISP GROUP LLC"}, "inLanguage": "en"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do you only handle large volumes?", "acceptedAnswer": {"@type": "Answer", "text": "We work in full container loads, because that is where the economics hold. For a first order we normally run a trial of one or two containers on full commercial terms before a monthly programme starts."}}, {"@type": "Question", "name": "Are you a broker or an agent?", "acceptedAnswer": {"@type": "Answer", "text": "Neither. We buy the goods in our own name and resell them. There is no commission on top of a producer's invoice, and the producer is not asked to manage a triangular billing arrangement."}}, {"@type": "Question", "name": "Can you source a product you have never traded?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, and most of our lanes started that way. What transfers between products is the method: specification, producer verification, landed costing, documents and settlement. What has to be built each time is the producer shortlist."}}, {"@type": "Question", "name": "How do you protect the buyer against a factory that does not ship?", "acceptedAnswer": {"@type": "Answer", "text": "By never prepaying in full, by staging payment against production milestones and documents, and by checking the counterparty before any money moves. Where the value justifies it we add pre-shipment inspection by a third party."}}, {"@type": "Question", "name": "Which Incoterms do you quote?", "acceptedAnswer": {"@type": "Answer", "text": "FOB, CFR, CIF, FCA and DAP. We prefer to quote at least two bases side by side so the buyer can see what the logistics portion actually costs."}}, {"@type": "Question", "name": "We are a producer. Why work with you instead of selling direct?", "acceptedAnswer": {"@type": "Answer", "text": "Because we take the credit risk and the paperwork off your desk. You sell to one counterparty on terms you have agreed in advance, in one currency, and you are not asked to learn a new import regime."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "serviceType": "International sourcing, trading and supply", "provider": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/"}, "areaServed": [{"@type": "Place", "name": "United States"}, {"@type": "Place", "name": "European Union"}, {"@type": "Place", "name": "China"}, {"@type": "Place", "name": "Türkiye"}, {"@type": "Place", "name": "West Africa"}, {"@type": "Place", "name": "Russia"}, {"@type": "Place", "name": "Southern Africa"}], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "What we supply", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Building and finishing materials"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Industrial equipment and machinery"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tools, hardware and fasteners"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Metals and pipe"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Paper, packaging and consumables"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Food and agricultural goods"}}]}}</script>
 </body>
 </html>
