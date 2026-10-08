@@ -17,6 +17,12 @@ NAV = [("What we supply", "supply.html"),
        ("About",          "about.html"),
        ("Contact",        "contact.html")]
 
+NAV_FR = [("Afrique de l\'Ouest", "afrique-ouest.html"),
+          ("D\u00e9coupes",         "decoupes-volaille.html"),
+          ("Certificat",           "certificat-veterinaire.html"),
+          ("Contact",              "contact-fr.html"),
+          ("English",              "index.html")]
+
 CORRIDORS = [("china.html",           "China &rarr; worldwide"),
              ("turkiye.html",         "T&uuml;rkiye &rarr; United States"),
              ("west-africa.html",     "Americas &amp; EU &rarr; West Africa"),
@@ -36,21 +42,40 @@ def assets():
 
 def navbar(lang="en"):
     home = "index.html" if lang == "en" else "index-fr.html"
-    items = "".join('      <a href="%s">%s</a>\n' % (h, t) for t, h in NAV)
+    items = "".join('      <a href="%s">%s</a>\n' % (h, t)
+                     for t, h in (NAV if lang == "en" else NAV_FR))
     quote = "Request a " if lang == "en" else "Demander un "
     word = "quote" if lang == "en" else "devis"
+    anchor = "contact.html#enquiry" if lang == "en" else "contact-fr.html#enquiry"
     return ('<nav>\n  <div class="wrap navin">\n'
             '    <a class="logo" href="%s">ISP Group <em>Global Commerce</em></a>\n'
             '    <button class="navtoggle" id="navtoggle" type="button"\n'
             '      aria-expanded="false" aria-controls="navmenu" aria-label="Menu">'
             '<span></span></button>\n'
             '    <div class="navlinks" id="navmenu">\n%s    </div>\n'
-            '    <a class="btn" href="contact.html#enquiry">'
+            '    <a class="btn" href="%s">'
             '<span class="btn-long">%s</span>%s</a>\n'
-            '  </div>\n</nav>' % (home, items, quote, word))
+            '  </div>\n</nav>' % (home, items, anchor, quote, word))
+
+
+FOOT_FR = """<footer>
+  <div class="wrap">
+    <dl class="fgrid">
+      <div><dt>Soci&eacute;t&eacute;</dt><dd>ISP GROUP LLC<br><span style="color:var(--ink-2)">&Eacute;tats-Unis</span></dd></div>
+      <div><dt>Courriel</dt><dd><a href="mailto:info@ispgroupgc.com">info@ispgroupgc.com</a></dd></div>
+      <div><dt>Si&egrave;ge</dt><dd>16395 Biscayne Blvd<br><span style="color:var(--ink-2)">North Miami Beach, FL 33160<br>&Eacute;tats-Unis</span></dd></div>
+      <div><dt>Pages</dt><dd style="line-height:1.95"><a href="afrique-ouest.html" style="display:block">Afrique de l&rsquo;Ouest</a><a href="decoupes-volaille.html" style="display:block">D&eacute;coupes de volaille</a><a href="certificat-veterinaire.html" style="display:block">Certificat v&eacute;t&eacute;rinaire</a></dd></div>
+      <div><dt>English</dt><dd style="line-height:1.95"><a href="index.html" style="display:block">Full site in English</a><a href="guides.html" style="display:block">Guides</a></dd></div>
+    </dl>
+    <p class="fbottom">ISP GROUP LLC &middot; Global Commerce &middot; Sourcing, n&eacute;goce et
+      approvisionnement international en mati&eacute;riaux, produits et &eacute;quipements industriels.</p>
+  </div>
+</footer>"""
 
 
 def footer(lang="en"):
+    if lang != "en":
+        return FOOT_FR
     cor = "".join('<a href="%s" style="display:block">%s</a>' % (h, t) for h, t in CORRIDORS)
     return """<footer>
   <div class="wrap">
@@ -140,6 +165,22 @@ def factcard(title, rows):
             '<table class="facts"><tbody>%s</tbody></table></aside>' % (title, body))
 
 
+CTA_FR = """<section class="cta">
+  <div class="wrap">
+    <span class="eyebrow">Pour commencer</span>
+    <div class="lede">
+      <h2>Envoyez un cahier des charges. Recevez un prix rendu.</h2>
+      <p class="intro">Le produit, la quantit&eacute; et le port de destination suffisent pour
+        d&eacute;marrer. Si vous n&rsquo;avez qu&rsquo;un probl&egrave;me &agrave; r&eacute;soudre,
+        d&eacute;crivez-le et nous r&eacute;digerons le cahier des charges avec vous.</p>
+    </div>
+    <div class="ctarow">
+      <a class="btn" href="contact-fr.html#enquiry">Demander un devis</a>
+      <span class="mail">info@ispgroupgc.com</span>
+    </div>
+  </div>
+</section>"""
+
 CTA = """<section class="cta">
   <div class="wrap">
     <span class="eyebrow">Get started</span>
@@ -178,8 +219,9 @@ def build(spec, extra_css="", lang="en"):
     if spec.get("chips"):
         body.append('      <div class="chips">%s</div>' %
                     "".join('<span class="chip">%s</span>' % c for c in spec["chips"]))
-    body.append('      <div class="ctarow" style="margin-top:28px">'
-                '<a class="btn" href="contact.html#enquiry">Request a quote</a>'
+    cta1 = ('<a class="btn" href="contact.html#enquiry">Request a quote</a>' if lang == "en"
+            else '<a class="btn" href="contact-fr.html#enquiry">Demander un devis</a>')
+    body.append('      <div class="ctarow" style="margin-top:28px">' + cta1
                 + spec.get("hero_cta", "") + "</div>")
     body.append("    </div>")
     if hero_right: body.append("    " + hero_right)
@@ -219,7 +261,7 @@ def build(spec, extra_css="", lang="en"):
                        spec["related"][0], spec["related"][1],
                        linkgrid(spec["related"][2])))
 
-    body.append(CTA)
+    body.append(CTA if lang == "en" else CTA_FR)
     body.append("</main>")
 
     og_img = HOST + "media/" + (img[0] if img else "terminal.jpg")

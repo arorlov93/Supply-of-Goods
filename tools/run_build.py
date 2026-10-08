@@ -47,6 +47,9 @@ if FR:
 
 print("собрано страниц:", len(B.built))
 
+if FR:
+    B.hreflang(FR.HREFLANG, G.HOST)
+
 B.retrofit_nav(["site/index.html", "site/experience.html", "site/china.html",
                 "site/turkiye.html", "site/west-africa.html", "site/southern-africa.html"])
 
