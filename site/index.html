@@ -221,13 +221,50 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   display:block;margin-bottom:8px}
 .yrs small{font-family:var(--fm);font-size:.6rem;letter-spacing:.17em;text-transform:uppercase;
   color:var(--ink-3);display:block;margin-top:14px}
+
+/* заголовок и вводный абзац в две колонки: правая половина полосы больше не пустует */
+.lede{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,1fr);
+  gap:clamp(26px,5vw,66px);align-items:end}
+.lede h2{max-width:18ch}
+.lede .intro{margin-top:0;max-width:50ch;padding-bottom:5px}
+@media(max-width:860px){.lede{grid-template-columns:1fr;align-items:start}
+  .lede .intro{margin-top:18px}}
+/* третья колонка шага: что покупатель получает на выходе */
+.step .out{font-family:var(--fm);font-size:.57rem;letter-spacing:.09em;text-transform:uppercase;
+  line-height:1.75;color:var(--ink-3);border-left:2px solid var(--gold-soft);
+  padding:2px 0 2px 14px;align-self:start;margin-top:9px}
+@media(min-width:861px){.step{grid-template-columns:5rem minmax(0,1.55fr) minmax(0,1fr);gap:26px}}
+@media(max-width:860px){.step .out{margin-top:14px;grid-column:1}}
+/* мобильное меню */
+.navtoggle{display:none;margin-left:auto;width:42px;height:42px;padding:0;border:1px solid var(--rule);
+  background:var(--surface);cursor:pointer;position:relative;border-radius:1px;
+  box-shadow:var(--shadow-s);transition:border-color .18s}
+.navtoggle:hover{border-color:var(--brand)}
+.navtoggle span,.navtoggle::before,.navtoggle::after{content:"";position:absolute;left:11px;right:11px;
+  height:1.6px;background:var(--ink);transition:transform .22s ease,opacity .18s ease}
+.navtoggle::before{top:14px}.navtoggle span{top:20.2px}.navtoggle::after{top:26.4px}
+.navtoggle[aria-expanded="true"]::before{transform:translateY(6.2px) rotate(45deg)}
+.navtoggle[aria-expanded="true"] span{opacity:0}
+.navtoggle[aria-expanded="true"]::after{transform:translateY(-6.4px) rotate(-45deg)}
+@media(max-width:940px){
+  .navtoggle{display:block}
+  .navlinks{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;
+    background:var(--paper);border-bottom:1px solid var(--rule);padding:4px 22px 16px;
+    box-shadow:var(--shadow-m)}
+  .navlinks.open{display:flex}
+  .navlinks a{padding:14px 0;border-top:1px solid var(--rule);font-size:1.02rem;color:var(--ink)}
+  .navlinks a::after{display:none}
+  .navin .btn{margin-left:0}
+}
 </style>
 </head>
 <body>
 <nav>
   <div class="wrap navin">
     <a class="logo" href="#top">ISP Group <em>Global Commerce</em></a>
-    <div class="navlinks">
+    <button class="navtoggle" id="navtoggle" type="button"
+      aria-expanded="false" aria-controls="navmenu" aria-label="Menu"><span></span></button>
+    <div class="navlinks" id="navmenu">
       <a href="#capabilities">Capabilities</a>
       <a href="#categories">What we supply</a>
       <a href="#corridors">Corridors</a>
@@ -268,10 +305,12 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 <section id="capabilities">
   <div class="wrap">
     <span class="eyebrow">Why buyers use us</span>
-    <h2>The part of a cross-border purchase nobody wants to own</h2>
-    <p class="intro">Finding a factory is the easy half. The hard half is proving it is real,
+    <div class="lede">
+      <h2>The part of a cross-border purchase nobody wants to own</h2>
+      <p class="intro">Finding a factory is the easy half. The hard half is proving it is real,
       getting it to produce to your specification, moving the paperwork through two customs
       authorities and making sure the money lands safely. That is the part we take.</p>
+    </div>
     <div class="caps">
       <div class="cap"><span class="n">01</span><h3>We verify before we quote</h3>
         <p>Establishment and licence numbers checked against the registers of the importing
@@ -329,10 +368,12 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 <section id="categories">
   <div class="wrap">
     <span class="eyebrow">What we supply</span>
-    <h2>Materials, products and equipment</h2>
-    <p class="intro">We are not tied to one commodity. Our work is sourcing and execution,
+    <div class="lede">
+      <h2>Materials, products and equipment</h2>
+      <p class="intro">We are not tied to one commodity. Our work is sourcing and execution,
       and the categories below are where we already have producer relationships and a
       documented lane. A product outside them is a sourcing project, not a refusal.</p>
+    </div>
     <div class="figrow">
       <figure><div class="shot"><img src="media/pipe.jpg" width="922" height="691" loading="lazy"
         alt="Stacked steel pipe seen end on"></div><figcaption>Metals and pipe</figcaption></figure>
@@ -373,10 +414,12 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 <section id="corridors">
   <div class="wrap">
     <span class="eyebrow">Corridors</span>
-    <h2>We run lanes, not a catalogue</h2>
-    <p class="intro">A trade lane is the real asset: the producers, the forwarder, the customs
+    <div class="lede">
+      <h2>We run lanes, not a catalogue</h2>
+      <p class="intro">A trade lane is the real asset: the producers, the forwarder, the customs
       broker and the document set on a given route. Once a lane works, the product travelling
       down it can change.</p>
+    </div>
     <div class="scroller">
       <table class="lanes">
         <thead><tr><th scope="col">Corridor</th><th scope="col">Typical cargo</th>
@@ -394,8 +437,8 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
       </table>
     </div>
     <div class="figrow">
-      <figure><div class="shot"><img src="media/freight.jpg" width="1000" height="750" loading="lazy"
-        alt="Heavy goods vehicles on a haulage run"></div><figcaption>Inland leg</figcaption></figure>
+      <figure><div class="shot"><img src="media/straddle.jpg" width="1024" height="768" loading="lazy"
+        alt="Straddle carrier moving a container across a terminal apron"></div><figcaption>Terminal handling</figcaption></figure>
       <figure><div class="shot"><img src="media/vessel2.jpg" width="774" height="581" loading="lazy"
         alt="Container vessel alongside with boxes loaded"></div><figcaption>Ocean leg</figcaption></figure>
     </div>
@@ -410,22 +453,22 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
       <div class="step"><span class="k">STEP 1</span><div><h3>Specification</h3>
         <p>We turn a request into a buyable specification: grade, dimension or cut, pack,
         tolerance, standard and the certificates the destination country requires. Most
-        failed imports fail here, before anyone has quoted.</p></div></div>
+        failed imports fail here, before anyone has quoted.</p></div><span class="out">Specification sheet and certificate list</span></div>
       <div class="step"><span class="k">STEP 2</span><div><h3>Sourcing and verification</h3>
         <p>We approach producers directly, not through intermediaries, and check each one
         against the importing country's register. You receive at least three comparable
-        offers on the same basis.</p></div></div>
+        offers on the same basis.</p></div><span class="out">Three comparable offers on one basis</span></div>
       <div class="step"><span class="k">STEP 3</span><div><h3>Landed price</h3>
         <p>Freight, insurance, port charges, duty and certification are added to the factory
-        price so you see one number at your door, with the rate validity stated.</p></div></div>
+        price so you see one number at your door, with the rate validity stated.</p></div><span class="out">One landed number, validity stated</span></div>
       <div class="step"><span class="k">STEP 4</span><div><h3>Contract and payment</h3>
         <p>We contract with the producer in our own name. Settlement by irrevocable letter of
         credit, documentary collection or staged transfer, with bank charges allocated in
-        writing on both legs.</p></div></div>
+        writing on both legs.</p></div><span class="out">Mirrored contracts, charges allocated</span></div>
       <div class="step"><span class="k">STEP 5</span><div><h3>Production, inspection, shipment</h3>
         <p>Pre-shipment inspection where the value justifies it, photographs of the goods and
         pack before loading, and a full document set issued through our nominated
-        forwarder.</p></div></div>
+        forwarder.</p></div><span class="out">Full document set and inspection report</span></div>
     </div>
     <figure class="mediafig" style="margin-top:40px">
       <div class="shot"><img src="media/vessel.jpg" width="1023" height="575" loading="lazy"
@@ -470,9 +513,11 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 <section class="cta">
   <div class="wrap">
     <span class="eyebrow">Get started</span>
-    <h2>Send a specification. Get a landed price.</h2>
-    <p class="intro">If you already have a specification, send it. If you only have a problem,
+    <div class="lede">
+      <h2>Send a specification. Get a landed price.</h2>
+      <p class="intro">If you already have a specification, send it. If you only have a problem,
       describe it and we will write the specification with you.</p>
+    </div>
     <div class="ctarow">
       <a class="btn" href="#enquiry">Request a quote</a>
       <span class="mail" id="addr2">info@ispgroupgc.com</span>
@@ -490,7 +535,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
       <div><dt>Registered office</dt><dd>16395 Biscayne Blvd<br><span style="color:var(--ink-2)">North Miami Beach, FL 33160<br>United States</span></dd></div>
       <div><dt>Reading</dt><dd><a href="experience.html">Twenty years of supply work</a></dd></div>
     </dl>
-    <p class="credits">Photography: pipe by JWPhotowerks; freight by Sir Hectimere (CC BY).
+    <p class="credits">Photography: pipe by JWPhotowerks; straddle carrier by Lars K. Jensen (CC BY).
       All other images CC0 or public domain. Full list with links in media/CREDITS.json.</p>
     <p class="fbottom">ISP GROUP LLC &middot; Global Commerce &middot; International sourcing,
       trading and supply of materials, products and industrial equipment.</p>
@@ -610,7 +655,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
       ' vec3 nw=normalize((modelViewMatrix*vec4(position,0.0)).xyz);'+
       ' vFront=smoothstep(-0.15,0.35,dot(nw,normalize(-mv.xyz)));'+
       /* волна бежит по долготе, точки на её гребне крупнее и золотистее */
-      ' float w=sin((aLon*0.0349)-uT*1.25);'+
+      ' float w=sin((aLon*0.0349)-uT*3.4);'+
       ' vW=smoothstep(0.86,1.0,w);'+
       ' gl_PointSize=(uSize+vW*4.2)*uPR*(2.2/-mv.z);'+
       ' gl_Position=projectionMatrix*mv; }',
@@ -632,7 +677,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   var movers=[];
   lanes.forEach(function(L,li){
     var a=ports[L[0]], b=ports[L[1]];
-    var pts=[], SEG=64;
+    var pts=[], SEG=128;
     for (var s=0;s<=SEG;s++){
       var t=s/SEG;
       var p=new THREE.Vector3().copy(a).lerp(b,t).normalize()
@@ -649,12 +694,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     world.add(new THREE.Line(cg, new THREE.LineBasicMaterial({
       vertexColors:true, transparent:true, opacity:0.62 })));
 
-    var sm=new THREE.Sprite(new THREE.SpriteMaterial({
-      map:sprite, color:C_GOLD, transparent:true, opacity:0.95,
-      blending:THREE.AdditiveBlending, depthWrite:false }));
-    sm.scale.setScalar(0.055);
-    world.add(sm);
-    movers.push({s:sm, pts:pts, off:li*0.09});
+    for (var j=0;j<3;j++){
+      var sm=new THREE.Sprite(new THREE.SpriteMaterial({
+        map:sprite, color:C_GOLD, transparent:true, opacity:0.95,
+        blending:THREE.AdditiveBlending, depthWrite:false }));
+      sm.scale.setScalar(0.052);
+      world.add(sm);
+      movers.push({s:sm, pts:pts, off:(li*0.137+j/3)%1, spd:0.30+((li*7+j)%5)*0.035});
+    }
   });
 
   /* отметки портов */
@@ -666,7 +713,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   function layout(){
     var w=cv.clientWidth, h=cv.clientHeight;
     if (!w || !h) return;
-    var pr=Math.min(window.devicePixelRatio||1, 2);
+    var pr=Math.min(window.devicePixelRatio||1, 1.75);
     renderer.setPixelRatio(pr);
     renderer.setSize(w,h,false);
     dotMat.uniforms.uPR.value = pr;
@@ -687,13 +734,17 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     /* now у rAF это метка начала кадра: в первом кадре она может оказаться
        на доли миллисекунды раньше t0, отсюда отрицательное время. Отсекаем. */
     var t = reduce ? 1.2 : Math.max(0, (now-t0)/1000);
-    world.rotation.y = 0.5 + t*0.055;
+    world.rotation.y = 0.5 + t*0.20;
     dotMat.uniforms.uT.value = t;
     movers.forEach(function(m){
       var last=m.pts.length-1;
-      var u=(((t*0.085)+m.off)%1+1)%1;
-      var i=Math.min(last, Math.max(0, Math.floor(u*last)));
-      m.s.position.copy(m.pts[i]);
+      var u=(((t*m.spd)+m.off)%1+1)%1;
+      var f=u*last, i=Math.min(last-1, Math.max(0, Math.floor(f)));
+      /* едем между узлами дуги, иначе спрайт прыгает по 128 ступеням */
+      m.s.position.lerpVectors(m.pts[i], m.pts[i+1], f-i);
+      var k=Math.sin(Math.PI*u);
+      m.s.material.opacity = 0.95*Math.min(1, k*3.2);
+      m.s.scale.setScalar(0.030 + 0.034*k);
     });
     renderer.render(scene,camera);
     requestAnimationFrame(tick);
@@ -725,5 +776,18 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "ISP Group Global Commerce", "url": "https://ispgroupgc.com/", "publisher": {"@type": "Organization", "name": "ISP GROUP LLC"}, "inLanguage": "en"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do you only handle large volumes?", "acceptedAnswer": {"@type": "Answer", "text": "We work in full container loads, because that is where the economics hold. For a first order we normally run a trial of one or two containers on full commercial terms before a monthly programme starts."}}, {"@type": "Question", "name": "Are you a broker or an agent?", "acceptedAnswer": {"@type": "Answer", "text": "Neither. We buy the goods in our own name and resell them. There is no commission on top of a producer's invoice, and the producer is not asked to manage a triangular billing arrangement."}}, {"@type": "Question", "name": "Can you source a product you have never traded?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, and most of our lanes started that way. What transfers between products is the method: specification, producer verification, landed costing, documents and settlement. What has to be built each time is the producer shortlist."}}, {"@type": "Question", "name": "How do you protect the buyer against a factory that does not ship?", "acceptedAnswer": {"@type": "Answer", "text": "By never prepaying in full, by staging payment against production milestones and documents, and by checking the counterparty before any money moves. Where the value justifies it we add pre-shipment inspection by a third party."}}, {"@type": "Question", "name": "Which Incoterms do you quote?", "acceptedAnswer": {"@type": "Answer", "text": "FOB, CFR, CIF, FCA and DAP. We prefer to quote at least two bases side by side so the buyer can see what the logistics portion actually costs."}}, {"@type": "Question", "name": "We are a producer. Why work with you instead of selling direct?", "acceptedAnswer": {"@type": "Answer", "text": "Because we take the credit risk and the paperwork off your desk. You sell to one counterparty on terms you have agreed in advance, in one currency, and you are not asked to learn a new import regime."}}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "serviceType": "International sourcing, trading and supply", "provider": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/"}, "areaServed": [{"@type": "Place", "name": "United States"}, {"@type": "Place", "name": "European Union"}, {"@type": "Place", "name": "China"}, {"@type": "Place", "name": "Türkiye"}, {"@type": "Place", "name": "West Africa"}, {"@type": "Place", "name": "Russia"}, {"@type": "Place", "name": "Southern Africa"}], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "What we supply", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Building and finishing materials"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Industrial equipment and machinery"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tools, hardware and fasteners"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Metals and pipe"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Paper, packaging and consumables"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Food and agricultural goods"}}]}}</script>
+<script>
+(function(){
+  var nt=document.getElementById('navtoggle'), nm=document.getElementById('navmenu');
+  if(!nt||!nm) return;
+  nt.addEventListener('click',function(){
+    var open=nm.classList.toggle('open');
+    nt.setAttribute('aria-expanded', open?'true':'false');
+  });
+  nm.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){ nm.classList.remove('open'); nt.setAttribute('aria-expanded','false'); }
+  });
+})();
+</script>
 </body>
 </html>

@@ -37,10 +37,14 @@ GC раскрыто как **Global Commerce**, а не Global Commodities: «co
 
 | Файл | Где стоит | Размер |
 |---|---|---|
-| `terminal.jpg` | полоса после блока Capabilities | 988x423 |
+| `terminal.jpg` | полоса после блока Capabilities | 1023x438 |
+| `aerial.jpg` | блок «Twenty years» | 794x340 |
+| `pipe.jpg` | тройка снимков в разделе категорий | 922x691 |
+| `machinery.jpg` | там же | 910x683 |
+| `crane.jpg` | там же | 834x625 |
+| `straddle.jpg` | пара снимков в разделе Corridors | 1024x768 |
+| `vessel2.jpg` | там же | 774x581 |
 | `vessel.jpg` | раздел Process, слот 16:9 | 1023x575 |
-| `machinery.jpg` | пара снимков в разделе категорий | 900x675 |
-| `materials.jpg` | там же | 900x675 |
 
 ## Видео
 

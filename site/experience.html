@@ -158,12 +158,49 @@ article ul li::before{content:"";position:absolute;left:4px;top:.72em;width:9px;
 .backlink{font-family:var(--fm);font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;
   color:var(--ink-3);text-decoration:none}
 .backlink:hover{color:var(--brand)}
+
+/* заголовок и вводный абзац в две колонки: правая половина полосы больше не пустует */
+.lede{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,1fr);
+  gap:clamp(26px,5vw,66px);align-items:end}
+.lede h2{max-width:18ch}
+.lede .intro{margin-top:0;max-width:50ch;padding-bottom:5px}
+@media(max-width:860px){.lede{grid-template-columns:1fr;align-items:start}
+  .lede .intro{margin-top:18px}}
+/* третья колонка шага: что покупатель получает на выходе */
+.step .out{font-family:var(--fm);font-size:.57rem;letter-spacing:.09em;text-transform:uppercase;
+  line-height:1.75;color:var(--ink-3);border-left:2px solid var(--gold-soft);
+  padding:2px 0 2px 14px;align-self:start;margin-top:9px}
+@media(min-width:861px){.step{grid-template-columns:5rem minmax(0,1.55fr) minmax(0,1fr);gap:26px}}
+@media(max-width:860px){.step .out{margin-top:14px;grid-column:1}}
+/* мобильное меню */
+.navtoggle{display:none;margin-left:auto;width:42px;height:42px;padding:0;border:1px solid var(--rule);
+  background:var(--surface);cursor:pointer;position:relative;border-radius:1px;
+  box-shadow:var(--shadow-s);transition:border-color .18s}
+.navtoggle:hover{border-color:var(--brand)}
+.navtoggle span,.navtoggle::before,.navtoggle::after{content:"";position:absolute;left:11px;right:11px;
+  height:1.6px;background:var(--ink);transition:transform .22s ease,opacity .18s ease}
+.navtoggle::before{top:14px}.navtoggle span{top:20.2px}.navtoggle::after{top:26.4px}
+.navtoggle[aria-expanded="true"]::before{transform:translateY(6.2px) rotate(45deg)}
+.navtoggle[aria-expanded="true"] span{opacity:0}
+.navtoggle[aria-expanded="true"]::after{transform:translateY(-6.4px) rotate(-45deg)}
+@media(max-width:940px){
+  .navtoggle{display:block}
+  .navlinks{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;
+    background:var(--paper);border-bottom:1px solid var(--rule);padding:4px 22px 16px;
+    box-shadow:var(--shadow-m)}
+  .navlinks.open{display:flex}
+  .navlinks a{padding:14px 0;border-top:1px solid var(--rule);font-size:1.02rem;color:var(--ink)}
+  .navlinks a::after{display:none}
+  .navin .btn{margin-left:0}
+}
 </style>
 
 <nav>
   <div class="wrap navin">
     <a class="logo" href="index.html">ISP Group <em>Global Commerce</em></a>
-    <div class="navlinks">
+    <button class="navtoggle" id="navtoggle" type="button"
+      aria-expanded="false" aria-controls="navmenu" aria-label="Menu"><span></span></button>
+    <div class="navlinks" id="navmenu">
       <a href="index.html#capabilities">Capabilities</a>
       <a href="index.html#categories">What we supply</a>
       <a href="index.html#corridors">Corridors</a>
@@ -372,5 +409,18 @@ article ul li::before{content:"";position:absolute;left:4px;top:.72em;width:9px;
 "mainEntityOfPage":"https://ispgroupgc.com/experience.html"}
 </script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ISP Group Global Commerce", "item": "https://ispgroupgc.com/"}, {"@type": "ListItem", "position": 2, "name": "Twenty years of supply work", "item": "https://ispgroupgc.com/experience.html"}]}</script>
+<script>
+(function(){
+  var nt=document.getElementById('navtoggle'), nm=document.getElementById('navmenu');
+  if(!nt||!nm) return;
+  nt.addEventListener('click',function(){
+    var open=nm.classList.toggle('open');
+    nt.setAttribute('aria-expanded', open?'true':'false');
+  });
+  nm.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){ nm.classList.remove('open'); nt.setAttribute('aria-expanded','false'); }
+  });
+})();
+</script>
 </body>
 </html>

@@ -103,7 +103,7 @@ globe = r'''<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.
       ' vec3 nw=normalize((modelViewMatrix*vec4(position,0.0)).xyz);'+
       ' vFront=smoothstep(-0.15,0.35,dot(nw,normalize(-mv.xyz)));'+
       /* волна бежит по долготе, точки на её гребне крупнее и золотистее */
-      ' float w=sin((aLon*0.0349)-uT*1.25);'+
+      ' float w=sin((aLon*0.0349)-uT*3.4);'+
       ' vW=smoothstep(0.86,1.0,w);'+
       ' gl_PointSize=(uSize+vW*4.2)*uPR*(2.2/-mv.z);'+
       ' gl_Position=projectionMatrix*mv; }',
@@ -125,7 +125,7 @@ globe = r'''<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.
   var movers=[];
   lanes.forEach(function(L,li){
     var a=ports[L[0]], b=ports[L[1]];
-    var pts=[], SEG=64;
+    var pts=[], SEG=128;
     for (var s=0;s<=SEG;s++){
       var t=s/SEG;
       var p=new THREE.Vector3().copy(a).lerp(b,t).normalize()
@@ -142,12 +142,14 @@ globe = r'''<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.
     world.add(new THREE.Line(cg, new THREE.LineBasicMaterial({
       vertexColors:true, transparent:true, opacity:0.62 })));
 
-    var sm=new THREE.Sprite(new THREE.SpriteMaterial({
-      map:sprite, color:C_GOLD, transparent:true, opacity:0.95,
-      blending:THREE.AdditiveBlending, depthWrite:false }));
-    sm.scale.setScalar(0.055);
-    world.add(sm);
-    movers.push({s:sm, pts:pts, off:li*0.09});
+    for (var j=0;j<3;j++){
+      var sm=new THREE.Sprite(new THREE.SpriteMaterial({
+        map:sprite, color:C_GOLD, transparent:true, opacity:0.95,
+        blending:THREE.AdditiveBlending, depthWrite:false }));
+      sm.scale.setScalar(0.052);
+      world.add(sm);
+      movers.push({s:sm, pts:pts, off:(li*0.137+j/3)%1, spd:0.30+((li*7+j)%5)*0.035});
+    }
   });
 
   /* отметки портов */
@@ -159,7 +161,7 @@ globe = r'''<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.
   function layout(){
     var w=cv.clientWidth, h=cv.clientHeight;
     if (!w || !h) return;
-    var pr=Math.min(window.devicePixelRatio||1, 2);
+    var pr=Math.min(window.devicePixelRatio||1, 1.75);
     renderer.setPixelRatio(pr);
     renderer.setSize(w,h,false);
     dotMat.uniforms.uPR.value = pr;
@@ -180,13 +182,16 @@ globe = r'''<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.
     /* now у rAF это метка начала кадра: в первом кадре она может оказаться
        на доли миллисекунды раньше t0, отсюда отрицательное время. Отсекаем. */
     var t = reduce ? 1.2 : Math.max(0, (now-t0)/1000);
-    world.rotation.y = 0.5 + t*0.055;
+    world.rotation.y = 0.5 + t*0.20;
     dotMat.uniforms.uT.value = t;
     movers.forEach(function(m){
       var last=m.pts.length-1;
-      var u=(((t*0.085)+m.off)%1+1)%1;
-      var i=Math.min(last, Math.max(0, Math.floor(u*last)));
-      m.s.position.copy(m.pts[i]);
+      var u=(((t*m.spd)+m.off)%1+1)%1;
+      var f=u*last, i=Math.min(last-1, Math.max(0, Math.floor(f)));
+      m.s.position.lerpVectors(m.pts[i], m.pts[i+1], f-i);
+      var k=Math.sin(Math.PI*u);
+      m.s.material.opacity = 0.95*Math.min(1, k*3.2);
+      m.s.scale.setScalar(0.030 + 0.034*k);
     });
     renderer.render(scene,camera);
     requestAnimationFrame(tick);
