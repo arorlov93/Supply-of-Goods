@@ -25,9 +25,9 @@
    Martian Mono for anything that behaves like data. */
 :root{
   --paper:#eef1ef; --surface:#ffffff; --surface-2:#e4eae7; --surface-3:#d8e1dd;
-  --ink:#0e2a26; --ink-2:#4a635d; --ink-3:#738a84; --rule:#ccd8d3;
+  --ink:#0e2a26; --ink-2:#4a635d; --ink-3:#5e706c; --rule:#ccd8d3;
   --brand:#116b5c; --brand-2:#0f766e; --brand-deep:#0b4a40; --brand-wash:rgba(17,107,92,.09);
-  --gold:#b8862b; --gold-soft:#e8d9b4;
+  --gold:#b8862b; --gold-soft:#e8d9b4; --gold-ink:#8b6521;
   --on-shot:#f4f6f4; --on-shot-2:#cbd8d3;
   --g-ocean1:#dfe9e5; --g-ocean2:#bfd1cb; --g-ocean3:#9bb2ab;
   --g-land:#0f5a4d; --g-line:rgba(14,42,38,.26); --g-glow:rgba(17,107,92,.22);
@@ -160,7 +160,7 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .cap{background:var(--surface);border:1px solid var(--rule);padding:28px 24px;min-width:0;
   box-shadow:var(--shadow-s);transition:transform .22s ease,box-shadow .22s ease}
 .cap:hover{transform:translateY(-4px);box-shadow:var(--shadow-l)}
-.cap .n{font-family:var(--fm);font-size:.62rem;color:var(--gold);letter-spacing:.16em;
+.cap .n{font-family:var(--fm);font-size:.62rem;color:var(--gold-ink);letter-spacing:.16em;
   display:block;margin-bottom:16px}
 .cap h3{font-size:1.4rem;margin-bottom:10px}
 .cap p{color:var(--ink-2);font-size:.95rem}
@@ -188,7 +188,7 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .step{display:grid;grid-template-columns:5rem 1fr;gap:22px;padding:26px 0;
   border-top:1px solid var(--rule);align-items:start}
 .step:last-child{border-bottom:1px solid var(--rule)}
-.step .k{font-family:var(--fm);font-size:.6rem;color:var(--gold);letter-spacing:.12em;padding-top:7px}
+.step .k{font-family:var(--fm);font-size:.6rem;color:var(--gold-ink);letter-spacing:.12em;padding-top:7px}
 .step h3{font-size:1.4rem;margin-bottom:8px}
 .step p{color:var(--ink-2);font-size:.96rem;max-width:62ch}
 @media(max-width:560px){.step{grid-template-columns:1fr;gap:6px}}
@@ -213,7 +213,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .fgrid dt{font-family:var(--fm);font-size:.57rem;letter-spacing:.15em;text-transform:uppercase;
   color:var(--ink-3);margin-bottom:8px}
 .fgrid dd{margin:0;color:var(--ink)}
-.todo{color:var(--gold);font-family:var(--fm);font-size:.78rem}
+.todo{color:var(--gold-ink);font-family:var(--fm);font-size:.78rem}
 .fbottom{margin-top:36px;padding-top:22px;border-top:1px solid var(--rule);font-size:.84rem}
 .credits{margin-top:10px;font-size:.74rem;color:var(--ink-3)}
 /* experience teaser */
@@ -279,7 +279,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .pblock{display:grid;grid-template-columns:4.4rem minmax(0,.92fr) minmax(0,1.28fr);
   gap:0 30px;padding:34px 0;border-top:1px solid var(--rule);align-items:start}
 .pblock:last-child{border-bottom:1px solid var(--rule)}
-.pblock .k{font-family:var(--fm);font-size:.6rem;color:var(--gold);letter-spacing:.12em;padding-top:10px}
+.pblock .k{font-family:var(--fm);font-size:.6rem;color:var(--gold-ink);letter-spacing:.12em;padding-top:10px}
 .pblock h2{font-size:clamp(1.5rem,2.3vw,1.92rem);max-width:20ch}
 .pblock .ptext p{color:var(--ink-2);font-size:1rem}
 .pblock .ptext p+p{margin-top:15px}
@@ -350,7 +350,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .pblock{display:grid;grid-template-columns:4.4rem minmax(0,.92fr) minmax(0,1.28fr);
   gap:0 30px;padding:34px 0;border-top:1px solid var(--rule);align-items:start}
 .pblock:last-child{border-bottom:1px solid var(--rule)}
-.pblock .k{font-family:var(--fm);font-size:.6rem;color:var(--gold);letter-spacing:.12em;padding-top:10px}
+.pblock .k{font-family:var(--fm);font-size:.6rem;color:var(--gold-ink);letter-spacing:.12em;padding-top:10px}
 .pblock h2{font-size:clamp(1.5rem,2.3vw,1.92rem);max-width:20ch}
 .pblock .ptext p{color:var(--ink-2);font-size:1rem}
 .pblock .ptext p+p{margin-top:15px}
@@ -471,7 +471,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 <div class="prose"><div class="pblock"><span class="k">01</span><h2>Start here if you have never imported</h2><div class="ptext"><p>Read <a href="incoterms">Incoterms</a> first, then <a href="landed-price">what a landed price must include</a>. Between them they cover the two things that make quotations incomparable: the terms they are quoted on and the costs they leave out.</p></div></div><div class="pblock"><span class="k">02</span><h2>If you already have a supplier</h2><div class="ptext"><p>Read <a href="verify-supplier">how to verify a supplier is a factory</a> and <a href="letter-of-credit">the letter of credit at sight</a>. The first catches the counterparty problem, the second is how you stop paying for a promise.</p></div></div><div class="pblock"><span class="k">03</span><h2>If you are buying food</h2><div class="ptext"><p>Read <a href="veterinary-certificate">veterinary certificates</a> before anything else, because an inadmissible establishment makes the price irrelevant. Then <a href="poultry-cuts">cut nomenclature</a> and <a href="reefer-cold-chain">the cold chain</a>.</p></div></div></div>
 
 </div></section>
-<section><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>All guides</h2><p class="intro">Twelve, in the order we would read them.</p></div><div class="lanelinks"><a class="lanelink" href="incoterms"><b>Incoterms 2020 explained</b><span>Who pays for what, where risk passes, and why CFR splits the two.</span></a><a class="lanelink" href="landed-price"><b>What a landed price must include</b><span>Every line between a factory price and your own gate.</span></a><a class="lanelink" href="verify-supplier"><b>How to verify a supplier is a factory</b><span>Licence, export right and the bank account name that gives it away.</span></a><a class="lanelink" href="letter-of-credit"><b>A letter of credit at sight</b><span>What it protects, what it costs and where it fails.</span></a><a class="lanelink" href="customs-data-pricing"><b>How customs data shows the real price</b><span>Why a quotation and a transacted value are different numbers.</span></a><a class="lanelink" href="hs-code"><b>Who is liable for the HS code</b><span>The importer of record, and what that means in money.</span></a><a class="lanelink" href="ispm-15"><b>ISPM 15: how a pallet stops a container</b><span>Heat treatment, the mark, and where the check belongs.</span></a><a class="lanelink" href="container-loading"><b>FCL, LCL and consolidation</b><span>What fits, what it costs, and when to share a box.</span></a><a class="lanelink" href="veterinary-certificate"><b>Veterinary certificates for frozen meat</b><span>Establishment approval, the certificate form and who issues it.</span></a><a class="lanelink" href="poultry-cuts"><b>Wing, drumette, flat: four different products</b><span>The cut nomenclature that makes two offers incomparable.</span></a><a class="lanelink" href="reefer-cold-chain"><b>What a reefer programme requires</b><span>Temperature, recorders, plug time and the pack nobody checks.</span></a><a class="lanelink" href="antidumping-check"><b>The trade remedy check before you order</b><span>Why a deposit can exceed the value of the goods.</span></a></div></div></section>
+<section><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>All guides</h2><p class="intro">Twelve, in the order we would read them.</p></div><div class="lanelinks"><a class="lanelink" href="incoterms"><b>Incoterms 2020 explained</b><span>Who pays for what, where risk passes, and why CFR splits the two.</span></a><a class="lanelink" href="landed-price"><b>What a landed price must include</b><span>Every line between a factory price and your own gate.</span></a><a class="lanelink" href="verify-supplier"><b>How to verify a supplier is a factory</b><span>Licence, export right and the bank account name that gives it away.</span></a><a class="lanelink" href="letter-of-credit"><b>A letter of credit at sight</b><span>What it protects, what it costs and where it fails.</span></a><a class="lanelink" href="customs-data-pricing"><b>How customs data shows the real price</b><span>Why a quotation and a transacted value are different numbers.</span></a><a class="lanelink" href="hs-code"><b>Who is liable for the HS code</b><span>The importer of record, and what that means in money.</span></a><a class="lanelink" href="ispm-15"><b>ISPM 15: how a pallet stops a container</b><span>Heat treatment, the mark, and where the check belongs.</span></a><a class="lanelink" href="container-loading"><b>FCL, LCL and consolidation</b><span>What fits, what it costs, and when to share a box.</span></a><a class="lanelink" href="veterinary-certificate"><b>Veterinary certificates for frozen meat</b><span>Establishment approval, the certificate form and who issues it.</span></a><a class="lanelink" href="poultry-cuts"><b>Wing, drumette, flat: four different products</b><span>The cut nomenclature that makes two offers incomparable.</span></a><a class="lanelink" href="reefer-cold-chain"><b>What a reefer programme requires</b><span>Temperature, recorders, plug time and the pack nobody checks.</span></a><a class="lanelink" href="antidumping-check"><b>The trade remedy check before you order</b><span>Why a deposit can exceed the value of the goods.</span></a><a class="lanelink" href="bill-of-lading"><b>Bill of lading and telex release</b><span>Receipt, contract and title in one document, and how to release cargo.</span></a><a class="lanelink" href="demurrage-detention"><b>Demurrage and detention</b><span>The two clocks that run after arrival, and who stops them.</span></a><a class="lanelink" href="certificate-of-origin"><b>Certificates of origin</b><span>Preferential and non-preferential, who issues them, what breaks them.</span></a><a class="lanelink" href="proforma-invoice"><b>The proforma invoice</b><span>An offer, not an accounting document. What it has to contain.</span></a></div></div></section>
 <section class="cta">
   <div class="wrap">
     <span class="eyebrow">Get started</span>
@@ -503,7 +503,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
       trading and supply of materials, products and industrial equipment.</p>
   </div>
 </footer>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "url": "https://ispgroupgc.com/guides", "name": "Guides to importing", "hasPart": [{"@type": "Article", "name": "Incoterms 2020 explained", "url": "https://ispgroupgc.com/incoterms"}, {"@type": "Article", "name": "What a landed price must include", "url": "https://ispgroupgc.com/landed-price"}, {"@type": "Article", "name": "How to verify a supplier is a factory", "url": "https://ispgroupgc.com/verify-supplier"}, {"@type": "Article", "name": "A letter of credit at sight", "url": "https://ispgroupgc.com/letter-of-credit"}, {"@type": "Article", "name": "How customs data shows the real price", "url": "https://ispgroupgc.com/customs-data-pricing"}, {"@type": "Article", "name": "Who is liable for the HS code", "url": "https://ispgroupgc.com/hs-code"}, {"@type": "Article", "name": "ISPM 15: how a pallet stops a container", "url": "https://ispgroupgc.com/ispm-15"}, {"@type": "Article", "name": "FCL, LCL and consolidation", "url": "https://ispgroupgc.com/container-loading"}, {"@type": "Article", "name": "Veterinary certificates for frozen meat", "url": "https://ispgroupgc.com/veterinary-certificate"}, {"@type": "Article", "name": "Wing, drumette, flat: four different products", "url": "https://ispgroupgc.com/poultry-cuts"}, {"@type": "Article", "name": "What a reefer programme requires", "url": "https://ispgroupgc.com/reefer-cold-chain"}, {"@type": "Article", "name": "The trade remedy check before you order", "url": "https://ispgroupgc.com/antidumping-check"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "url": "https://ispgroupgc.com/guides", "name": "Guides to importing", "hasPart": [{"@type": "Article", "name": "Incoterms 2020 explained", "url": "https://ispgroupgc.com/incoterms"}, {"@type": "Article", "name": "What a landed price must include", "url": "https://ispgroupgc.com/landed-price"}, {"@type": "Article", "name": "How to verify a supplier is a factory", "url": "https://ispgroupgc.com/verify-supplier"}, {"@type": "Article", "name": "A letter of credit at sight", "url": "https://ispgroupgc.com/letter-of-credit"}, {"@type": "Article", "name": "How customs data shows the real price", "url": "https://ispgroupgc.com/customs-data-pricing"}, {"@type": "Article", "name": "Who is liable for the HS code", "url": "https://ispgroupgc.com/hs-code"}, {"@type": "Article", "name": "ISPM 15: how a pallet stops a container", "url": "https://ispgroupgc.com/ispm-15"}, {"@type": "Article", "name": "FCL, LCL and consolidation", "url": "https://ispgroupgc.com/container-loading"}, {"@type": "Article", "name": "Veterinary certificates for frozen meat", "url": "https://ispgroupgc.com/veterinary-certificate"}, {"@type": "Article", "name": "Wing, drumette, flat: four different products", "url": "https://ispgroupgc.com/poultry-cuts"}, {"@type": "Article", "name": "What a reefer programme requires", "url": "https://ispgroupgc.com/reefer-cold-chain"}, {"@type": "Article", "name": "The trade remedy check before you order", "url": "https://ispgroupgc.com/antidumping-check"}, {"@type": "Article", "name": "Bill of lading and telex release", "url": "https://ispgroupgc.com/bill-of-lading"}, {"@type": "Article", "name": "Demurrage and detention", "url": "https://ispgroupgc.com/demurrage-detention"}, {"@type": "Article", "name": "Certificates of origin", "url": "https://ispgroupgc.com/certificate-of-origin"}, {"@type": "Article", "name": "The proforma invoice", "url": "https://ispgroupgc.com/proforma-invoice"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ISP Group", "item": "https://ispgroupgc.com/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://ispgroupgc.com/guides"}]}</script>
 <script>
 (function(){

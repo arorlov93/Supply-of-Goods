@@ -29,9 +29,9 @@
    Martian Mono for anything that behaves like data. */
 :root{
   --paper:#eef1ef; --surface:#ffffff; --surface-2:#e4eae7; --surface-3:#d8e1dd;
-  --ink:#0e2a26; --ink-2:#4a635d; --ink-3:#738a84; --rule:#ccd8d3;
+  --ink:#0e2a26; --ink-2:#4a635d; --ink-3:#5e706c; --rule:#ccd8d3;
   --brand:#116b5c; --brand-2:#0f766e; --brand-deep:#0b4a40; --brand-wash:rgba(17,107,92,.09);
-  --gold:#b8862b; --gold-soft:#e8d9b4;
+  --gold:#b8862b; --gold-soft:#e8d9b4; --gold-ink:#8b6521;
   --on-shot:#f4f6f4; --on-shot-2:#cbd8d3;
   --g-ocean1:#dfe9e5; --g-ocean2:#bfd1cb; --g-ocean3:#9bb2ab;
   --g-land:#0f5a4d; --g-line:rgba(14,42,38,.26); --g-glow:rgba(17,107,92,.22);
@@ -164,7 +164,7 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .cap{background:var(--surface);border:1px solid var(--rule);padding:28px 24px;min-width:0;
   box-shadow:var(--shadow-s);transition:transform .22s ease,box-shadow .22s ease}
 .cap:hover{transform:translateY(-4px);box-shadow:var(--shadow-l)}
-.cap .n{font-family:var(--fm);font-size:.62rem;color:var(--gold);letter-spacing:.16em;
+.cap .n{font-family:var(--fm);font-size:.62rem;color:var(--gold-ink);letter-spacing:.16em;
   display:block;margin-bottom:16px}
 .cap h3{font-size:1.4rem;margin-bottom:10px}
 .cap p{color:var(--ink-2);font-size:.95rem}
@@ -192,7 +192,7 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .step{display:grid;grid-template-columns:5rem 1fr;gap:22px;padding:26px 0;
   border-top:1px solid var(--rule);align-items:start}
 .step:last-child{border-bottom:1px solid var(--rule)}
-.step .k{font-family:var(--fm);font-size:.6rem;color:var(--gold);letter-spacing:.12em;padding-top:7px}
+.step .k{font-family:var(--fm);font-size:.6rem;color:var(--gold-ink);letter-spacing:.12em;padding-top:7px}
 .step h3{font-size:1.4rem;margin-bottom:8px}
 .step p{color:var(--ink-2);font-size:.96rem;max-width:62ch}
 @media(max-width:560px){.step{grid-template-columns:1fr;gap:6px}}
@@ -217,7 +217,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .fgrid dt{font-family:var(--fm);font-size:.57rem;letter-spacing:.15em;text-transform:uppercase;
   color:var(--ink-3);margin-bottom:8px}
 .fgrid dd{margin:0;color:var(--ink)}
-.todo{color:var(--gold);font-family:var(--fm);font-size:.78rem}
+.todo{color:var(--gold-ink);font-family:var(--fm);font-size:.78rem}
 .fbottom{margin-top:36px;padding-top:22px;border-top:1px solid var(--rule);font-size:.84rem}
 .credits{margin-top:10px;font-size:.74rem;color:var(--ink-3)}
 /* experience teaser */
@@ -283,7 +283,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .pblock{display:grid;grid-template-columns:4.4rem minmax(0,.92fr) minmax(0,1.28fr);
   gap:0 30px;padding:34px 0;border-top:1px solid var(--rule);align-items:start}
 .pblock:last-child{border-bottom:1px solid var(--rule)}
-.pblock .k{font-family:var(--fm);font-size:.6rem;color:var(--gold);letter-spacing:.12em;padding-top:10px}
+.pblock .k{font-family:var(--fm);font-size:.6rem;color:var(--gold-ink);letter-spacing:.12em;padding-top:10px}
 .pblock h2{font-size:clamp(1.5rem,2.3vw,1.92rem);max-width:20ch}
 .pblock .ptext p{color:var(--ink-2);font-size:1rem}
 .pblock .ptext p+p{margin-top:15px}
@@ -317,6 +317,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
+
+/* числовая полоса: объём и счётчик */
+.nums{perspective:1300px;perspective-origin:50% 40%}
+.num{transform-style:preserve-3d;will-change:transform,opacity}
+.num b{display:block;transform-origin:50% 90%;
+  text-shadow:0 1px 0 rgba(255,255,255,.65), 0 10px 26px rgba(11,74,64,.16);
+  font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.num{transform:none!important;opacity:1!important}}
 </style>
 </head>
 <body>
@@ -383,6 +391,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     </div>
   </div>
 </section>
+
 
 
 
@@ -966,5 +975,68 @@ document.addEventListener('DOMContentLoaded',function(){
 })();
 </script>
 <!--/email_off-->
+<script>
+(function(){
+  /* Цифры выезжают из глубины и досчитываются, затем переходят на лёгкий
+     параллакс. Без JS и при prefers-reduced-motion блок просто виден. */
+  var wrap=document.querySelector('.nums'); if(!wrap) return;
+  var nums=[].slice.call(wrap.querySelectorAll('.num'));
+  if(!nums.length) return;
+  var EASE='cubic-bezier(.16,.74,.22,1)';
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  nums.forEach(function(n){
+    var b=n.querySelector('b'); if(!b) return;
+    b.setAttribute('data-to', b.textContent.trim());
+  });
+  if(reduce || !('IntersectionObserver' in window)) return;
+  nums.forEach(function(n){
+    n.style.opacity='0';
+    n.style.transform='rotateX(-74deg) translate3d(0,30px,-70px)';
+  });
+  function run(n,i){
+    var b=n.querySelector('b');
+    var to=parseInt(b.getAttribute('data-to'),10);
+    if(isNaN(to)) to=null; else b.textContent='0';
+    setTimeout(function(){
+      n.style.transition='opacity .55s '+EASE+', transform .95s '+EASE;
+      n.style.opacity=''; n.style.transform='';
+      if(to!==null){
+        var t0=performance.now(), dur=760+i*70;
+        (function tick(now){
+          var p=Math.min(1,(now-t0)/dur), e=1-Math.pow(1-p,3);
+          b.textContent=Math.round(to*e);
+          if(p<1) requestAnimationFrame(tick); else b.textContent=to;
+        })(t0);
+      }
+      setTimeout(function(){ n.style.transition=''; n.__ready=1; }, 1100);
+    }, i*105);
+  }
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting) return;
+      io.unobserve(e.target); run(e.target, nums.indexOf(e.target));
+    });
+  },{threshold:0.35});
+  nums.forEach(function(n){ io.observe(n); });
+  /* страховка: если наблюдатель промолчал, всё равно показать */
+  setTimeout(function(){
+    nums.forEach(function(n,i){ if(n.style.opacity==='0' &&
+      n.getBoundingClientRect().top < (window.innerHeight||0)+140){ io.unobserve(n); run(n,i); } });
+  }, 2600);
+  var q=false;
+  function par(){
+    q=false;
+    var r=wrap.getBoundingClientRect(), h=window.innerHeight||1;
+    var p=((r.top+r.height/2)-h/2)/h;
+    if(p>1.5||p<-1.5) return;
+    for(var i=0;i<nums.length;i++){
+      var n=nums[i]; if(!n.__ready) continue;
+      var k=1+(i-(nums.length-1)/2)*0.17;
+      n.style.transform='translate3d(0,'+(p*-9*k).toFixed(2)+'px,0) rotateX('+(p*2.6).toFixed(2)+'deg)';
+    }
+  }
+  window.addEventListener('scroll',function(){ if(!q){q=true;requestAnimationFrame(par);} },{passive:true});
+})();
+</script>
 </body>
 </html>

@@ -880,4 +880,360 @@ GUIDES_PAGES = [
           "difference payable with interest. That open liability belongs in the decision "
           "before the first order.")],
 },
+{
+ "slug": "bill-of-lading",
+ "title": "Bill of lading and telex release | ISP Group",
+ "desc": "Receipt, contract of carriage and document of title in one piece of paper. "
+         "Originals, seaway bills, telex release and what happens when cargo beats documents.",
+ "trail": t("Bill of lading"),
+ "h1": "The bill of lading <em>is the cargo</em>",
+ "sub": "Whoever holds an original endorsed bill of lading can collect the goods. That one "
+        "sentence explains every rule, every delay and every argument around this document.",
+ "chips": ["Receipt", "Contract", "Document of title", "Telex release"],
+ "lede": ("Three jobs in one piece of paper",
+   "A bill of lading is a receipt that the carrier took the goods, the contract of carriage "
+   "on which it carries them, and, when it is negotiable, a document of title. The third job "
+   "is the one that creates all the drama, because it means the paper controls the steel box."),
+ "body": [
+  ("h2","Negotiable original or sea waybill"),
+  ("p","A negotiable bill of lading is usually issued in a set of three originals, and "
+       "surrendering any one of them releases the cargo; the other two then become void. The "
+       "set exists because paper used to travel by post on different ships, and the practice "
+       "survived the reason for it."),
+  ("p","A sea waybill is not a document of title. It names a consignee, the carrier releases "
+       "to that named party on identification, and nothing has to travel. It is faster and "
+       "safer, and it is the right choice whenever the seller is already paid or is content "
+       "to be paid against something other than the document."),
+  ("note","The rule of thumb: if payment depends on controlling the goods, you need a "
+          "negotiable original. If it does not, a sea waybill removes an entire category of "
+          "problem."),
+  ("h2","Who is the consignee, and why “to order” matters"),
+  ("ul",["<b>Straight consigned</b> to a named buyer: only that buyer can collect. Simple, "
+         "and it gives the seller no leverage after shipment.",
+         "<b>To order</b> of the shipper: the shipper endorses the bill to transfer control, "
+         "which is what makes a documentary credit work.",
+         "<b>To order of the issuing bank</b>: the bank holds control until the buyer pays or "
+         "accepts. The strongest position for the bank and the most common under a credit.",
+         "<b>Notify party</b> is not the consignee. It is who the carrier telephones on "
+         "arrival, and it has no rights over the cargo at all."]),
+  ("h2","Telex release, which is not a telex"),
+  ("p","On a short voyage the vessel arrives before the paperwork, and originals posted from "
+       "the origin will not be at the destination in time. A telex release solves it: the "
+       "shipper surrenders all originals to the carrier at the origin, and the carrier "
+       "instructs its own office at the destination to release without presentation."),
+  ("p","Two things follow. The seller gives up control the moment the originals are "
+       "surrendered, so it should only be done when payment is secure. And because it is a "
+       "carrier process rather than a legal instrument, every line does it slightly "
+       "differently, charges differently for it, and takes a different amount of time, which "
+       "has to be asked about before the booking rather than during the crisis."),
+  ("p","An express release is the same idea built in from the start: the bill is issued "
+       "non-negotiable and no original is ever printed."),
+  ("h2","House and master bills"),
+  ("p","When a freight forwarder consolidates, the ocean carrier issues a master bill to the "
+       "forwarder, and the forwarder issues a house bill to each shipper. The house bill is "
+       "the document the buyer deals with, and it is only as good as the forwarder behind it."),
+  ("p","That matters at the destination: the cargo is released by the forwarder's own agent, "
+       "not by the shipping line. A forwarder with no real agent at the discharge port is "
+       "the commonest cause of a consignment sitting on the quay while two offices email "
+       "each other."),
+  ("h2","When the paper goes wrong"),
+  ("ul",["<b>Cargo arrives before documents.</b> Either arrange a telex release, or the "
+         "buyer provides a bank guarantee to the carrier, which the bank will charge for and "
+         "will not love.",
+         "<b>Originals lost.</b> Replacement requires an indemnity, usually bank-backed, for "
+         "a multiple of the cargo value, held for years. Expensive and slow.",
+         "<b>Details differ from the credit.</b> A spelling difference between the bill and "
+         "the letter of credit is a discrepancy, and the protection the seller paid for is "
+         "gone until the buyer waives it.",
+         "<b>A switch bill is requested.</b> Issuing a second set at a different port, "
+         "usually to hide the original supplier, is a real commercial practice and also the "
+         "mechanism behind a lot of fraud. We only do it with the first set physically "
+         "surrendered, and we do not do it to misstate origin."]),
+  ("h2","What we put in the contract"),
+  ("p","Which document type will be issued, who is consignee and notify, how many originals, "
+       "where they are to be couriered and at whose cost, whether telex release is permitted "
+       "and who authorises it, and the deadline for the document set to reach the buyer "
+       "relative to the vessel's arrival. All five are settled before loading, because none "
+       "of them can be fixed while a container accrues demurrage."),
+ ],
+ "faq": [("What is the difference between a bill of lading and a sea waybill?",
+          "A negotiable bill of lading is a document of title: whoever holds an endorsed "
+          "original can take the goods. A sea waybill is not; the carrier releases to the "
+          "named consignee on identification and nothing has to be presented. Use the first "
+          "when payment depends on controlling the cargo, the second when it does not."),
+         ("How long does a telex release take?",
+          "It is a carrier procedure, not a legal instrument, so it varies by line and by "
+          "office, from a few hours to a couple of days. Ask the carrier before the booking "
+          "rather than on the day the vessel berths."),
+         ("Can I get my cargo without the original bill of lading?",
+          "Only with the carrier's agreement, normally against a bank guarantee for a "
+          "multiple of the cargo value. It is expensive and the bank will want security. "
+          "Preventing the situation costs nothing by comparison.")],
+},
+{
+ "slug": "demurrage-detention",
+ "title": "Demurrage and detention | the two clocks after arrival",
+ "desc": "Demurrage runs while the container sits in the terminal, detention while you have "
+         "it outside. Free time, reefer rates, who pays and how to stop the clock.",
+ "trail": t("Demurrage and detention"),
+ "h1": "Two clocks start <em>the day the vessel berths</em>",
+ "sub": "Demurrage runs while the container is still in the terminal. Detention runs while "
+        "you have the container outside it. They are different charges, from different "
+        "parties, and almost nobody budgets for either.",
+ "chips": ["Demurrage: inside", "Detention: outside", "Free time", "Reefer is shorter"],
+ "lede": ("The largest cost that never appears in a quotation",
+   "Freight is negotiated to the dollar and these are discovered on an invoice weeks later. "
+   "On a lane where clearance is slow they are not an edge case, they are a line in the "
+   "budget."),
+ "body": [
+  ("h2","Which clock is which"),
+  ("p","<b>Demurrage</b> is charged for the container occupying space in the terminal after "
+       "the free time ends. It is the port's or the carrier's charge for storage, and it "
+       "runs whether or not your paperwork is ready."),
+  ("p","<b>Detention</b> is charged for the container being away from the terminal, at your "
+       "yard, after the free time for unpacking ends. It is the carrier's charge for its box "
+       "not being back in circulation."),
+  ("p","Some carriers merge the two into a single combined free time, which sounds generous "
+       "and is usually shorter in total. Read which model the quotation uses before comparing "
+       "two offers."),
+  ("note","A third charge, port storage, can run alongside demurrage and is billed by the "
+          "terminal rather than the line. On congested ports it is the larger of the two."),
+  ("h2","Free time is a negotiated number, not a fact"),
+  ("p","Free time varies by carrier, by trade lane, by season and by how much volume you "
+       "give the line. It is routinely extendable at the time of booking and almost never "
+       "extendable afterwards, which is the whole point: ask for it when you still have "
+       "something to trade."),
+  ("p","Reefer free time is dramatically shorter than dry, often a small fraction of it, and "
+       "reefer demurrage is charged at a higher rate because the box is drawing power. On a "
+       "frozen programme this is the single most expensive thing to get wrong, and it is why "
+       "the clearance file has to be complete before the vessel arrives rather than after."),
+  ("h2","Why the clock usually runs"),
+  ("ul",["<b>Documents late.</b> Originals still in the post, a telex release not yet "
+         "actioned, a certificate missing a signature.",
+         "<b>Classification queried.</b> Customs disagrees with the code and the entry is "
+         "held while it is resolved, which is why the code is agreed before the order.",
+         "<b>Inspection.</b> A physical examination adds days and is not under anyone's "
+         "control; it is a budget line with a probability, not an exception.",
+         "<b>No haulier booked.</b> The box is cleared and nobody arranged a truck, which "
+         "happens more often than anyone admits.",
+         "<b>Receiving site cannot unload.</b> No forklift for the weight, no dock, nobody "
+         "on site on Friday afternoon.",
+         "<b>Port congestion.</b> Not your fault and still your invoice."]),
+  ("h2","Merchant haulage and carrier haulage"),
+  ("p","If the carrier arranges the inland leg, the free time and the charges sit inside its "
+       "contract and it has an interest in moving the box. If you arrange your own haulier, "
+       "the line's detention clock still runs and nobody on the carrier's side is watching "
+       "it for you."),
+  ("p","Neither is always cheaper. What matters is knowing which one you bought, because the "
+       "two put the risk of a slow truck in completely different places."),
+  ("h2","How we keep the clock stopped"),
+  ("ul",["Negotiate free time at the booking, in writing, as part of the rate rather than as "
+         "a favour afterwards.",
+         "Have the full document set with the broker before the vessel arrives, not when it "
+         "berths.",
+         "Agree the tariff classification before the order so a query is unlikely.",
+         "Book the haulier against the estimated arrival and re-confirm when the schedule "
+         "moves, which it will.",
+         "Confirm the receiving site can take the weight and has someone there on the day.",
+         "On reefer, treat the shorter free time as the binding constraint on the whole "
+         "schedule, because it is."]),
+  ("p","Where we quote DAP, as on the "
+      "<a href=\"southern-africa.html\">Durban corridor</a>, these risks sit with us rather "
+      "than with the buyer, which is the honest reason a DAP price is higher than a port "
+      "price."),
+ ],
+ "faq": [("What is the difference between demurrage and detention?",
+          "Demurrage is charged while the container is still inside the terminal after free "
+          "time expires. Detention is charged while the container is outside the terminal, "
+          "at your premises, after the unpacking free time expires. Different clocks, often "
+          "different invoices."),
+         ("How much free time should I ask for?",
+          "More than the default, and ask at booking. The number depends on the lane and "
+          "your volume. What matters is that it is written into the rate, because after "
+          "arrival nobody extends it."),
+         ("Who pays if the port is congested?",
+          "Normally the importer, which feels unfair and is how the contracts are written. "
+          "The practical defences are a longer free time negotiated up front and a complete "
+          "document set lodged before arrival.")],
+},
+{
+ "slug": "certificate-of-origin",
+ "title": "Certificates of origin | preferential and non-preferential",
+ "desc": "Who issues a certificate of origin, what preferential and non-preferential mean, "
+         "how rules of origin are actually tested, and the mistakes that void one.",
+ "trail": t("Certificates of origin"),
+ "h1": "Where goods are <em>from</em> is a legal test, not a shipping address",
+ "sub": "Origin is not where the container was loaded, not where the seller is registered "
+        "and not where the invoice was printed. It is where the goods were produced, or "
+        "last substantially transformed, and the test is written down.",
+ "chips": ["Preferential", "Non-preferential", "Substantial transformation", "Chamber or authority"],
+ "lede": ("Two documents with the same name and different jobs",
+   "A non-preferential certificate says where the goods came from. A preferential one claims "
+   "a reduced or zero duty under a trade agreement. The second is worth money and is "
+   "therefore checked properly."),
+ "body": [
+  ("h2","Non-preferential: who made it"),
+  ("p","This is the ordinary certificate, usually issued by a chamber of commerce in the "
+       "exporting country on the exporter's declaration. It is used for customs statistics, "
+       "for government procurement rules, for labelling requirements, for quotas and for "
+       "establishing whether a trade remedy applies to the goods."),
+  ("p","It carries no duty benefit by itself. It is still the document that decides whether "
+       "an antidumping order reaches your consignment, which makes it quietly important on "
+       "any lane where such an order exists."),
+  ("h2","Preferential: why it is worth money"),
+  ("p","A preferential certificate claims the reduced duty available under a specific trade "
+       "agreement between the exporting and importing countries. Because it has a cash value "
+       "it is issued under stricter conditions, often on a prescribed form, and it is the "
+       "one customs authorities audit after the fact."),
+  ("p","Several modern agreements have moved away from a stamped certificate to "
+       "<b>self-certification</b>: the exporter makes a statement of origin on the invoice "
+       "or on a separate declaration, sometimes only if registered in an official exporter "
+       "system. That shifts the burden entirely onto the exporter's records, and it means a "
+       "buyer should ask what evidence sits behind the statement, not just whether the "
+       "statement exists."),
+  ("h2","How origin is actually decided"),
+  ("ul",["<b>Wholly obtained.</b> Mined, grown, harvested, caught or born and raised in one "
+         "country. Unambiguous and rare outside agriculture and raw materials.",
+         "<b>Substantial transformation.</b> For anything made from imported inputs, origin "
+         "is where the last substantial transformation happened. Agreements define that in "
+         "one of three ways, and sometimes more than one at once.",
+         "<b>Change of tariff classification.</b> The finished good sits under a different "
+         "heading from its imported inputs. Mechanical and easy to test.",
+         "<b>Value-added threshold.</b> A stated percentage of the value has to originate "
+         "locally. Requires a costing the exporter may not want to show.",
+         "<b>Specific process rule.</b> A named operation must occur, common in textiles and "
+         "chemicals.",
+         "<b>Insufficient operations.</b> Repacking, labelling, simple assembly, mixing and "
+         "sorting never confer origin, whatever the invoice says."]),
+  ("note","Assembling imported parts in a third country to change the stated origin and "
+          "escape a duty is circumvention, not planning. It reaches back to the importer, "
+          "with penalties, and the goods are usually traceable."),
+  ("h2","What voids a certificate in practice"),
+  ("ul",["<b>Issued by the wrong body.</b> Preferential forms generally have one competent "
+         "authority per country; a chamber certificate will not substitute.",
+         "<b>Names the trading company as producer.</b> If the exporter on the certificate "
+         "is not the manufacturer, the manufacturer still has to be identifiable and the "
+         "origin still has to be theirs.",
+         "<b>Details disagree with the other documents.</b> Quantities, marks, container "
+         "numbers and invoice references all have to reconcile with the bill of lading and "
+         "the packing list.",
+         "<b>Issued after shipment without being marked as such.</b> Retrospective issue is "
+         "allowed in most schemes but has to be declared on the face of the document.",
+         "<b>Nothing behind it.</b> On audit the exporter has to produce the costing or the "
+         "bill of materials that supports the claim. A statement with no file behind it is "
+         "where self-certification goes wrong."]),
+  ("h2","What we do"),
+  ("p","We establish before the order which certificate the destination needs, which body "
+       "issues it in the country of production, and whether the product meets the rule of "
+       "origin as a matter of fact rather than as a matter of assertion. Where a preference "
+       "is material to the price, we say in the quotation what the landed cost is with and "
+       "without it, so a failed claim is a known risk rather than a surprise."),
+  ("p","Where a trade remedy order may be in scope, origin is the first thing we pin down, "
+       "for the reason set out in the <a href=\"antidumping-check.html\">trade remedy "
+       "guide</a>."),
+ ],
+ "faq": [("Who issues a certificate of origin?",
+          "For non-preferential certificates, usually a chamber of commerce in the exporting "
+          "country, on the exporter's declaration. For preferential claims it is the "
+          "designated competent authority, or under newer agreements the registered exporter "
+          "itself by a statement on the invoice."),
+         ("Does repacking in another country change origin?",
+          "No. Repacking, relabelling, simple assembly, sorting and mixing are insufficient "
+          "operations and do not confer origin under any mainstream rule set, whatever "
+          "appears on the invoice."),
+         ("What happens if the preference claim is rejected later?",
+          "The importer pays the full duty with interest, usually on an audit years after "
+          "the goods were sold. This is why we quote the landed cost both with and without "
+          "the preference when it materially changes the price.")],
+},
+{
+ "slug": "proforma-invoice",
+ "title": "The proforma invoice | what it has to contain",
+ "desc": "A proforma invoice is an offer, not an accounting document. What belongs on it, "
+         "how it differs from a commercial invoice, and the single line that catches fraud.",
+ "trail": t("Proforma invoice"),
+ "h1": "A proforma invoice is <em>an offer</em>",
+ "sub": "It is not a bill, it does not go into anyone's books, and nothing is owed on it. "
+        "It exists so that two parties can agree exactly what is being sold before money "
+        "or goods move.",
+ "chips": ["Offer, not a bill", "Opens a credit", "Validity date", "Beneficiary name"],
+ "lede": ("The document where the deal is actually written",
+   "Most of what later goes wrong in a shipment was decided, or left undecided, on the "
+   "proforma. It costs nothing to make it complete and it is the cheapest risk control "
+   "available in this trade."),
+ "body": [
+  ("h2","What it is for"),
+  ("ul",["<b>Agreeing the deal.</b> Specification, quantity, price, terms and dates in one "
+         "place, before a purchase order exists.",
+         "<b>Opening a letter of credit.</b> The buyer's bank builds the credit from it, "
+         "which is why an incomplete proforma produces a credit the seller cannot comply "
+         "with.",
+         "<b>Obtaining an import licence or permit</b>, where the destination requires one "
+         "before shipment.",
+         "<b>Applying for finance</b> or for a foreign currency allocation in countries that "
+         "control it.",
+         "<b>Customs valuation in advance</b>, for an estimate of duty before the order is "
+         "placed."]),
+  ("h2","What has to be on it"),
+  ("p","A proforma that is missing any of these will cost a round trip, and under a "
+       "documentary credit it can cost a discrepancy."),
+  ("ul",["Seller and buyer legal names and addresses, as registered, not trading names.",
+         "A proforma number and a date, and a <b>validity date</b> for the price.",
+         "The goods described the way the specification describes them, with grade, "
+         "standard, pack and unit.",
+         "Quantity and unit price, and the currency written out.",
+         "The <b>Incoterm with the named place and the edition</b>, for example CIF Lomé, "
+         "Incoterms 2020.",
+         "The <b>HS code</b> the seller believes applies, so it can be checked against the "
+         "importing country's tariff before the order.",
+         "Country of origin and the producing establishment or plant, where that matters.",
+         "Port of loading and port of discharge.",
+         "Whether partial shipment and transhipment are allowed.",
+         "Lead time, expressed from a trigger rather than from a calendar date: so many days "
+         "from receipt of deposit, or from approval of a sample.",
+         "Payment terms in full, including who pays which bank charges.",
+         "Full bank details, including the beneficiary name."]),
+  ("note","That last line is the one that matters most. The beneficiary name on the proforma "
+          "must match the seller's registered name exactly. A mismatch is the mechanism "
+          "behind almost every payment-diversion fraud in this trade, and it is explained "
+          "in <a href=\"verify-supplier.html\">verifying a supplier</a>."),
+  ("h2","Proforma, commercial invoice, packing list"),
+  ("p","The <b>proforma</b> is the offer, issued before anything happens. The <b>commercial "
+       "invoice</b> is the demand for payment, issued when the goods ship, and it is the "
+       "document customs values the consignment on. The <b>packing list</b> says what is "
+       "physically in each carton and each container and carries no prices."),
+  ("p","All three have to agree with each other and with the bill of lading, down to the "
+       "carton count and the marks, because a customs authority anywhere in the world "
+       "resolves a discrepancy between them by inspecting the container."),
+  ("h2","Reading one critically"),
+  ("ul",["<b>No validity date.</b> The price is good until the seller says otherwise, which "
+         "means it is not a price.",
+         "<b>Lead time from a calendar date.</b> It will slip with the deposit and the "
+         "argument will be about whose fault that is.",
+         "<b>Incoterm without a named place.</b> “CIF” alone means nothing.",
+         "<b>Bank in a third country</b> with no explanation on company letterhead.",
+         "<b>Specification by model name only.</b> The model will be built down to the "
+         "price unless the specification is attached.",
+         "<b>No mention of tolerance.</b> On weight, dimension or count, the tolerance is "
+         "whatever the seller decides at loading if it is not written."]),
+  ("h2","What we issue"),
+  ("p","Our proforma to a buyer mirrors our purchase contract with the producer line for "
+       "line: the same specification, the same tolerances, the same inspection window and "
+       "the same claim period, so nothing falls into the gap between the two contracts. "
+       "Where we are quoting more than one Incoterm, each basis is a separate line with its "
+       "own total, not a footnote."),
+ ],
+ "faq": [("Is a proforma invoice legally binding?",
+          "It is an offer, and it becomes binding when it is accepted, typically by a "
+          "purchase order or by payment of the deposit against it. By itself it creates no "
+          "debt and does not belong in anyone's accounts."),
+         ("Can customs use a proforma invoice?",
+          "For an advance duty estimate or for a licence application, often yes. For the "
+          "actual entry, no: customs values the consignment on the commercial invoice issued "
+          "when the goods ship."),
+         ("What is the single most important line on it?",
+          "The bank beneficiary name, which has to match the seller's registered name "
+          "exactly. Every payment-diversion fraud in this trade runs through a mismatch "
+          "there.")],
+},
 ]

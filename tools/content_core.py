@@ -559,6 +559,14 @@ GUIDE_LINKS = [
   "Temperature, recorders, plug time and the pack nobody checks."),
  ("antidumping-check.html", "The trade remedy check before you order",
   "Why a deposit can exceed the value of the goods."),
+ ("bill-of-lading.html", "Bill of lading and telex release",
+  "Receipt, contract and title in one document, and how to release cargo."),
+ ("demurrage-detention.html", "Demurrage and detention",
+  "The two clocks that run after arrival, and who stops them."),
+ ("certificate-of-origin.html", "Certificates of origin",
+  "Preferential and non-preferential, who issues them, what breaks them."),
+ ("proforma-invoice.html", "The proforma invoice",
+  "An offer, not an accounting document. What it has to contain."),
 ]
 
 # ───────────────────────────────────────────────────────── хабы

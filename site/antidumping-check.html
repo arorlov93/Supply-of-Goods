@@ -25,9 +25,9 @@
    Martian Mono for anything that behaves like data. */
 :root{
   --paper:#eef1ef; --surface:#ffffff; --surface-2:#e4eae7; --surface-3:#d8e1dd;
-  --ink:#0e2a26; --ink-2:#4a635d; --ink-3:#738a84; --rule:#ccd8d3;
+  --ink:#0e2a26; --ink-2:#4a635d; --ink-3:#5e706c; --rule:#ccd8d3;
   --brand:#116b5c; --brand-2:#0f766e; --brand-deep:#0b4a40; --brand-wash:rgba(17,107,92,.09);
-  --gold:#b8862b; --gold-soft:#e8d9b4;
+  --gold:#b8862b; --gold-soft:#e8d9b4; --gold-ink:#8b6521;
   --on-shot:#f4f6f4; --on-shot-2:#cbd8d3;
   --g-ocean1:#dfe9e5; --g-ocean2:#bfd1cb; --g-ocean3:#9bb2ab;
   --g-land:#0f5a4d; --g-line:rgba(14,42,38,.26); --g-glow:rgba(17,107,92,.22);
@@ -160,7 +160,7 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .cap{background:var(--surface);border:1px solid var(--rule);padding:28px 24px;min-width:0;
   box-shadow:var(--shadow-s);transition:transform .22s ease,box-shadow .22s ease}
 .cap:hover{transform:translateY(-4px);box-shadow:var(--shadow-l)}
-.cap .n{font-family:var(--fm);font-size:.62rem;color:var(--gold);letter-spacing:.16em;
+.cap .n{font-family:var(--fm);font-size:.62rem;color:var(--gold-ink);letter-spacing:.16em;
   display:block;margin-bottom:16px}
 .cap h3{font-size:1.4rem;margin-bottom:10px}
 .cap p{color:var(--ink-2);font-size:.95rem}
@@ -188,7 +188,7 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .step{display:grid;grid-template-columns:5rem 1fr;gap:22px;padding:26px 0;
   border-top:1px solid var(--rule);align-items:start}
 .step:last-child{border-bottom:1px solid var(--rule)}
-.step .k{font-family:var(--fm);font-size:.6rem;color:var(--gold);letter-spacing:.12em;padding-top:7px}
+.step .k{font-family:var(--fm);font-size:.6rem;color:var(--gold-ink);letter-spacing:.12em;padding-top:7px}
 .step h3{font-size:1.4rem;margin-bottom:8px}
 .step p{color:var(--ink-2);font-size:.96rem;max-width:62ch}
 @media(max-width:560px){.step{grid-template-columns:1fr;gap:6px}}
@@ -213,7 +213,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .fgrid dt{font-family:var(--fm);font-size:.57rem;letter-spacing:.15em;text-transform:uppercase;
   color:var(--ink-3);margin-bottom:8px}
 .fgrid dd{margin:0;color:var(--ink)}
-.todo{color:var(--gold);font-family:var(--fm);font-size:.78rem}
+.todo{color:var(--gold-ink);font-family:var(--fm);font-size:.78rem}
 .fbottom{margin-top:36px;padding-top:22px;border-top:1px solid var(--rule);font-size:.84rem}
 .credits{margin-top:10px;font-size:.74rem;color:var(--ink-3)}
 /* experience teaser */
@@ -279,7 +279,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .pblock{display:grid;grid-template-columns:4.4rem minmax(0,.92fr) minmax(0,1.28fr);
   gap:0 30px;padding:34px 0;border-top:1px solid var(--rule);align-items:start}
 .pblock:last-child{border-bottom:1px solid var(--rule)}
-.pblock .k{font-family:var(--fm);font-size:.6rem;color:var(--gold);letter-spacing:.12em;padding-top:10px}
+.pblock .k{font-family:var(--fm);font-size:.6rem;color:var(--gold-ink);letter-spacing:.12em;padding-top:10px}
 .pblock h2{font-size:clamp(1.5rem,2.3vw,1.92rem);max-width:20ch}
 .pblock .ptext p{color:var(--ink-2);font-size:1rem}
 .pblock .ptext p+p{margin-top:15px}
@@ -350,7 +350,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .pblock{display:grid;grid-template-columns:4.4rem minmax(0,.92fr) minmax(0,1.28fr);
   gap:0 30px;padding:34px 0;border-top:1px solid var(--rule);align-items:start}
 .pblock:last-child{border-bottom:1px solid var(--rule)}
-.pblock .k{font-family:var(--fm);font-size:.6rem;color:var(--gold);letter-spacing:.12em;padding-top:10px}
+.pblock .k{font-family:var(--fm);font-size:.6rem;color:var(--gold-ink);letter-spacing:.12em;padding-top:10px}
 .pblock h2{font-size:clamp(1.5rem,2.3vw,1.92rem);max-width:20ch}
 .pblock .ptext p{color:var(--ink-2);font-size:1rem}
 .pblock .ptext p+p{margin-top:15px}
@@ -472,7 +472,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 
 </div></section>
 <section id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>Questions on this</h2><p class="intro">The ones we are asked most often.</p></div><div style="margin-top:34px"><details><summary>Does an antidumping duty apply to the product or to the supplier?</summary><p>To both. Scope defines the product and the origin; rates are then set per producer, so the same goods from two factories in one country can carry very different rates and one of them may carry none.</p></details><details><summary>Can I avoid it by shipping through another country?</summary><p>No, and attempting it is circumvention, which carries its own penalties and reaches back to the importer. Origin for these purposes is where the goods were produced, not where they were last loaded.</p></details><details><summary>Is the duty I pay at entry final?</summary><p>Not in every system. The United States assesses retrospectively: what you pay at entry is a deposit, and the final rate is set later in a review, with the difference payable with interest. That open liability belongs in the decision before the first order.</p></details></div></div></section>
-<section><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Related guides</h2><p class="intro">The ones that usually get read next.</p></div><div class="lanelinks"><a class="lanelink" href="incoterms"><b>Incoterms 2020 explained</b><span>Who pays for what, where risk passes, and why CFR splits the two.</span></a><a class="lanelink" href="landed-price"><b>What a landed price must include</b><span>Every line between a factory price and your own gate.</span></a><a class="lanelink" href="verify-supplier"><b>How to verify a supplier is a factory</b><span>Licence, export right and the bank account name that gives it away.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
+<section><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Related guides</h2><p class="intro">The ones that usually get read next.</p></div><div class="lanelinks"><a class="lanelink" href="bill-of-lading"><b>Bill of lading and telex release</b><span>Receipt, contract and title in one document, and how to release cargo.</span></a><a class="lanelink" href="demurrage-detention"><b>Demurrage and detention</b><span>The two clocks that run after arrival, and who stops them.</span></a><a class="lanelink" href="certificate-of-origin"><b>Certificates of origin</b><span>Preferential and non-preferential, who issues them, what breaks them.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
 <section class="cta">
   <div class="wrap">
     <span class="eyebrow">Get started</span>

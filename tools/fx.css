@@ -33,7 +33,7 @@
 .pblock{display:grid;grid-template-columns:4.4rem minmax(0,.92fr) minmax(0,1.28fr);
   gap:0 30px;padding:34px 0;border-top:1px solid var(--rule);align-items:start}
 .pblock:last-child{border-bottom:1px solid var(--rule)}
-.pblock .k{font-family:var(--fm);font-size:.6rem;color:var(--gold);letter-spacing:.12em;padding-top:10px}
+.pblock .k{font-family:var(--fm);font-size:.6rem;color:var(--gold-ink);letter-spacing:.12em;padding-top:10px}
 .pblock h2{font-size:clamp(1.5rem,2.3vw,1.92rem);max-width:20ch}
 .pblock .ptext p{color:var(--ink-2);font-size:1rem}
 .pblock .ptext p+p{margin-top:15px}
