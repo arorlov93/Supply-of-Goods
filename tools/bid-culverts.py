@@ -28,9 +28,9 @@ ADDR2   = "North Miami Beach, FL 33160"
 UEI     = "WA46PAMTYMQ7"
 CAGE    = "217F4"
 EMAIL   = "info@ispgroupgc.com"
-PHONE   = ""              # заполняет человек: проверенного номера у меня нет
+PHONE   = "(929) 830-0038"
 REP     = "Aleksandr Orlov"
-TITLE   = ""              # заполняет человек: Member, Manager или иное
+TITLE   = "Member"
 DATE    = os.environ.get("BID_DATE", "")   # оставляем пустым под подпись
 ORIGIN  = "United States"  # по всем восьми позициям, пока поставщик не сказал иное
 
