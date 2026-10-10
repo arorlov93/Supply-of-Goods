@@ -77,6 +77,12 @@ def val(x):
 
 COMMERCIAL_ONLY = os.environ.get("ALL_ITEMS") != "1"
 
+# Отдельный список на присмотр: федеральные тюрьмы Флориды закупают
+# продовольствие поквартально, Коулман ещё и помесячно. Это местный,
+# повторяющийся и небольшой заказ, то есть лучший кандидат в первый контракт.
+WATCH_OFFICES = ("FCC COLEMAN", "FCI MARIANNA", "FCI TALLAHASSEE", "FDC MIAMI",
+                 "FCI MIAMI", "FPC PENSACOLA", "FDC TALLAHASSEE")
+
 
 def main():
     lo = int(sys.argv[1]) if len(sys.argv) > 1 else 5
@@ -109,7 +115,8 @@ def main():
                     continue
                 oh = r.get("organizationHierarchy") or []
                 office = oh[-1].get("name", "") if len(oh) > 1 else ""
-                if COMMERCIAL_ONLY and is_nsn(title, office):
+                watched = any(k in (office or "").upper() for k in WATCH_OFFICES)
+                if COMMERCIAL_ONLY and not watched and is_nsn(title, office):
                     continue
                 seen.add(nid)
                 out.append({
@@ -120,6 +127,7 @@ def main():
                     "deadline": dl, "days": days,
                     "setaside": val(r.get("typeOfSetAside")) or "unrestricted",
                     "naics": r.get("naics") or "",
+                    "watch": watched,
                     "url": "https://sam.gov/opp/%s/view" % nid,
                 })
             time.sleep(.25)
@@ -129,7 +137,13 @@ def main():
     json.dump(out, open(os.path.join(here, "..", "sam-live.json"), "w"),
               ensure_ascii=False, indent=1)
 
-    print("подать можно на:", len(out))
+    hot = [x for x in out if x.get("watch")]
+    if hot:
+        print("!! ЗАКУПКИ ТЮРЕМ ФЛОРИДЫ, СМОТРЕТЬ ПЕРВЫМ ДЕЛОМ:")
+        for x in hot:
+            print("   %3d дн  %-16s %s\n      %s" % (
+                x["days"], x["office"][:16], x["title"][:70], x["url"]))
+    print("\nподать можно на:", len(out))
     for g in PSC:
         rows = [x for x in out if x["group"] == g]
         if not rows:
