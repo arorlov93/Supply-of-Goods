@@ -2,6 +2,141 @@
  {
   "group": "metals-pipe",
   "psc": "4710",
+  "id": "726ea72f382d4e0faf9527a754a3fc23",
+  "title": "E3 Flowmeter Piping & Fitting",
+  "type": "Solicitation",
+  "agency": "NATIONAL AERONAUTICS AND SPACE ADMINISTRATION",
+  "office": "NASA SHARED SERVICES CENTER",
+  "deadline": "2026-10-12T15:00:00-05:00",
+  "days": 2,
+  "setaside": "unrestricted",
+  "naics": "",
+  "watch": false,
+  "url": "https://sam.gov/opp/726ea72f382d4e0faf9527a754a3fc23/view"
+ },
+ {
+  "group": "metals-pipe",
+  "psc": "9540",
+  "id": "00ae51f1335c4605b3cb9d2270a11fef",
+  "title": "Custom Aluminum Corner and Top Extrusions, Mill Finish, 6005A-T61 Alloy",
+  "type": "Combined Synopsis/Solicitation",
+  "agency": "ENERGY, DEPARTMENT OF",
+  "office": "ORNL UT-BATTELLE LLC-DOE CONTRACTOR",
+  "deadline": "2026-10-12T17:00:00-04:00",
+  "days": 2,
+  "setaside": "unrestricted",
+  "naics": "",
+  "watch": false,
+  "url": "https://sam.gov/opp/00ae51f1335c4605b3cb9d2270a11fef/view"
+ },
+ {
+  "group": "food-agricultural",
+  "psc": "8915",
+  "id": "4d328c40a1ee4b2d82a93bae08e3ad79",
+  "title": "FCC COLEMAN FY-2027 NOVEMBER PRODUCE",
+  "type": "Combined Synopsis/Solicitation",
+  "agency": "JUSTICE, DEPARTMENT OF",
+  "office": "FCC COLEMAN",
+  "deadline": "2026-10-12T11:00:00-04:00",
+  "days": 2,
+  "setaside": "unrestricted",
+  "naics": "",
+  "watch": true,
+  "url": "https://sam.gov/opp/4d328c40a1ee4b2d82a93bae08e3ad79/view"
+ },
+ {
+  "group": "tools-hardware",
+  "psc": "5340",
+  "id": "184c09d93388406db88ad7e9431726f9",
+  "title": "Link 16 Multifunctional Information Distribution System (MIDS) Monitor Adapter Plate Manufacturing",
+  "type": "Combined Synopsis/Solicitation",
+  "agency": "DEPT OF DEFENSE",
+  "office": "DEFENSE MICROELECTRONICS ACTIVITY",
+  "deadline": "2026-10-13T14:00:00-07:00",
+  "days": 3,
+  "setaside": "unrestricted",
+  "naics": "",
+  "watch": false,
+  "url": "https://sam.gov/opp/184c09d93388406db88ad7e9431726f9/view"
+ },
+ {
+  "group": "industrial-equipment",
+  "psc": "4310",
+  "id": "379fe8cab7004b0e87c0fca25481c9aa",
+  "title": "4310--NEW - CTX Oil-Free Scroll Air Compressor",
+  "type": "Combined Synopsis/Solicitation",
+  "agency": "VETERANS AFFAIRS, DEPARTMENT OF",
+  "office": "257-NETWORK CONTRACT OFFICE 17 (36C257)",
+  "deadline": "2026-10-13T10:00:00-05:00",
+  "days": 3,
+  "setaside": "unrestricted",
+  "naics": "",
+  "watch": false,
+  "url": "https://sam.gov/opp/379fe8cab7004b0e87c0fca25481c9aa/view"
+ },
+ {
+  "group": "industrial-equipment",
+  "psc": "4320",
+  "id": "e87924db86c947848d0ea1c058c4e401",
+  "title": "John H. Kerr and Philpott Sump Pumps",
+  "type": "Solicitation",
+  "agency": "DEPT OF DEFENSE",
+  "office": "W074 ENDIST WILMINGTON",
+  "deadline": "2026-10-13T15:00:00-04:00",
+  "days": 3,
+  "setaside": "unrestricted",
+  "naics": "",
+  "watch": false,
+  "url": "https://sam.gov/opp/e87924db86c947848d0ea1c058c4e401/view"
+ },
+ {
+  "group": "industrial-equipment",
+  "psc": "4120",
+  "id": "21f1b539bfaa401b863895ba13240d2b",
+  "title": "Modular Integrated Terminals (MIT)",
+  "type": "Solicitation",
+  "agency": "STATE, DEPARTMENT OF",
+  "office": "ACQUISITIONS - AQM MOMENTUM",
+  "deadline": "2026-10-13T12:00:00-04:00",
+  "days": 3,
+  "setaside": "unrestricted",
+  "naics": "",
+  "watch": false,
+  "url": "https://sam.gov/opp/21f1b539bfaa401b863895ba13240d2b/view"
+ },
+ {
+  "group": "industrial-equipment",
+  "psc": "3930",
+  "id": "78e6cd8e0a5c415eb4c31422ebf7ac9e",
+  "title": "Various Maintenance Parts",
+  "type": "Combined Synopsis/Solicitation",
+  "agency": "DEPT OF DEFENSE",
+  "office": "W31R ENDIS MIDDLE EAST",
+  "deadline": "2026-10-13T12:00:00-04:00",
+  "days": 3,
+  "setaside": "unrestricted",
+  "naics": "",
+  "watch": false,
+  "url": "https://sam.gov/opp/78e6cd8e0a5c415eb4c31422ebf7ac9e/view"
+ },
+ {
+  "group": "paper-packaging",
+  "psc": "8115",
+  "id": "e5a8d9c32c71421d8c6fcb24ca97765e",
+  "title": "8115 - Shipping Boxes for Tobyhanna",
+  "type": "Solicitation",
+  "agency": "DEPT OF DEFENSE",
+  "office": "DLA DISTRIBUTION",
+  "deadline": "2026-10-13T17:00:00-04:00",
+  "days": 3,
+  "setaside": "unrestricted",
+  "naics": "",
+  "watch": false,
+  "url": "https://sam.gov/opp/e5a8d9c32c71421d8c6fcb24ca97765e/view"
+ },
+ {
+  "group": "metals-pipe",
+  "psc": "4710",
   "id": "b96348b5f53c4948a217976e94193cd6",
   "title": "Manti-LaSal National Forest Culverts",
   "type": "Combined Synopsis/Solicitation",
@@ -11,6 +146,7 @@
   "days": 4,
   "setaside": "unrestricted",
   "naics": "",
+  "watch": false,
   "url": "https://sam.gov/opp/b96348b5f53c4948a217976e94193cd6/view"
  },
  {
@@ -25,6 +161,7 @@
   "days": 5,
   "setaside": "unrestricted",
   "naics": "",
+  "watch": false,
   "url": "https://sam.gov/opp/51ebf41a9b4e482c82411d433a725f92/view"
  },
  {
@@ -39,6 +176,7 @@
   "days": 5,
   "setaside": "unrestricted",
   "naics": "",
+  "watch": false,
   "url": "https://sam.gov/opp/dda699d24bc44124ba5e97088068da56/view"
  },
  {
@@ -53,6 +191,7 @@
   "days": 5,
   "setaside": "unrestricted",
   "naics": "",
+  "watch": false,
   "url": "https://sam.gov/opp/b5659ee9a0664640b21c25af3297ab8c/view"
  },
  {
@@ -67,6 +206,7 @@
   "days": 5,
   "setaside": "unrestricted",
   "naics": "",
+  "watch": false,
   "url": "https://sam.gov/opp/c487051a6b5d481c878bdfd957428450/view"
  },
  {
@@ -81,6 +221,7 @@
   "days": 6,
   "setaside": "unrestricted",
   "naics": "",
+  "watch": false,
   "url": "https://sam.gov/opp/dc5d6aa8885b4cc1a68673f2d29dd112/view"
  },
  {
@@ -95,6 +236,7 @@
   "days": 6,
   "setaside": "unrestricted",
   "naics": "",
+  "watch": false,
   "url": "https://sam.gov/opp/d34e86e43e8947328b815289008f7270/view"
  },
  {
@@ -109,6 +251,7 @@
   "days": 9,
   "setaside": "unrestricted",
   "naics": "",
+  "watch": false,
   "url": "https://sam.gov/opp/29290018f4974a6e8ea5f55d54997870/view"
  },
  {
@@ -123,6 +266,7 @@
   "days": 9,
   "setaside": "unrestricted",
   "naics": "",
+  "watch": false,
   "url": "https://sam.gov/opp/48676e10e33042c3bd450db60eb16c79/view"
  },
  {
@@ -137,6 +281,7 @@
   "days": 10,
   "setaside": "unrestricted",
   "naics": "",
+  "watch": false,
   "url": "https://sam.gov/opp/913f00b778924dfdb004d8c6552bd515/view"
  },
  {
@@ -151,6 +296,7 @@
   "days": 10,
   "setaside": "unrestricted",
   "naics": "",
+  "watch": false,
   "url": "https://sam.gov/opp/6f726f626f8041fc8bd5935f6b2ebe5c/view"
  },
  {
@@ -165,6 +311,7 @@
   "days": 12,
   "setaside": "unrestricted",
   "naics": "",
+  "watch": false,
   "url": "https://sam.gov/opp/21597e75189d44c9a8a7499643f4fb79/view"
  },
  {
@@ -179,6 +326,7 @@
   "days": 18,
   "setaside": "unrestricted",
   "naics": "",
+  "watch": false,
   "url": "https://sam.gov/opp/11dbc178615a42639729e0a0f6e97504/view"
  },
  {
@@ -193,62 +341,7 @@
   "days": 20,
   "setaside": "unrestricted",
   "naics": "",
+  "watch": false,
   "url": "https://sam.gov/opp/651a7ee4e3be4cbdb3b7d70186a66e87/view"
- },
- {
-  "group": "building-materials",
-  "psc": "5660",
-  "id": "02fdc748f70d471abfba3cc6f8ac5a06",
-  "title": "Design-Build Services – STM Security Fencing - North Boundary",
-  "type": "Solicitation",
-  "agency": "ENERGY, DEPARTMENT OF",
-  "office": "ALLIANCE SUSTAINABLE ENRGY-DOECONTR",
-  "deadline": "2026-11-11T17:00:00-07:00",
-  "days": 32,
-  "setaside": "unrestricted",
-  "naics": "",
-  "url": "https://sam.gov/opp/02fdc748f70d471abfba3cc6f8ac5a06/view"
- },
- {
-  "group": "food-agricultural",
-  "psc": "8945",
-  "id": "24263d7012054354a6c2f04d87819734",
-  "title": "FCC Lompoc FY26 QTR 1 Subsistence Solicitation",
-  "type": "Combined Synopsis/Solicitation",
-  "agency": "JUSTICE, DEPARTMENT OF",
-  "office": "FCC LOMPOC",
-  "deadline": "2026-12-02T14:00:00-08:00",
-  "days": 53,
-  "setaside": "unrestricted",
-  "naics": "",
-  "url": "https://sam.gov/opp/24263d7012054354a6c2f04d87819734/view"
- },
- {
-  "group": "food-agricultural",
-  "psc": "8910",
-  "id": "d03ab852e30e40e1965aeb93326b3250",
-  "title": "FCI Three Rivers - Q2 FY26 -  Dairy",
-  "type": "Combined Synopsis/Solicitation",
-  "agency": "JUSTICE, DEPARTMENT OF",
-  "office": "FAO",
-  "deadline": "2026-12-10T11:30:00-05:00",
-  "days": 61,
-  "setaside": "unrestricted",
-  "naics": "",
-  "url": "https://sam.gov/opp/d03ab852e30e40e1965aeb93326b3250/view"
- },
- {
-  "group": "tools-hardware",
-  "psc": "5340",
-  "id": "cf679278221f4d1f9a99c27db3747ed1",
-  "title": "Prefabrication Training Venues and Construction Supplies",
-  "type": "Combined Synopsis/Solicitation",
-  "agency": "HOMELAND SECURITY, DEPARTMENT OF",
-  "office": "FLETC GLYNCO PROCUREMENT OFFICE",
-  "deadline": "2026-12-29T12:00:00-05:00",
-  "days": 80,
-  "setaside": "unrestricted",
-  "naics": "",
-  "url": "https://sam.gov/opp/cf679278221f4d1f9a99c27db3747ed1/view"
  }
 ]
