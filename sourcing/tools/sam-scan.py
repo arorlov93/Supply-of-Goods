@@ -38,6 +38,27 @@ PSC = {
 BAD = ("ammunition", "missile", "warhead", "ordnance", "explosive", "flare",
        "countermeasure", "weapon", "torpedo", "grenade", "cartridge")
 
+# Закупочные центры, которые покупают запчасти к технике по номерам NSN.
+# Там действует одобренный источник и техдокументация, новой торговой
+# компании там делать нечего, поэтому отсекаем их целиком.
+NSN_OFFICES = ("NAVSUP", "DLA AVIATION", "DLA LAND", "DLA MARITIME", "DLA TROOP",
+               "NUWC", "NSWC", "MSC ", "FLEET READINESS", "AFSC", "AFLCMC",
+               "ACC-", "W6Q", "TACOM", "CECOM", "DEFENSE LOGISTICS",
+               "DLA MECHANICSBURG", "SPRMM", "SPRRA", "SPRDL", "SPE",
+               "COMMANDING OFFICER", "FA8", "FA5", "FA2", "NAVFAC", "NAVAIR")
+
+# Признаки позиции по номеру NSN прямо в заголовке.
+import re as _re
+NSN_TITLE = _re.compile(
+    r"(^\d{2}--)|(\bNSN\b)|(\bP/?N[: ])|(\bNIIN\b)|(,\s?[A-Z]{2,}\b.*,)")
+
+
+def is_nsn(title, office):
+    up = (office or "").upper()
+    if any(k in up for k in NSN_OFFICES):
+        return True
+    return bool(NSN_TITLE.search(title or ""))
+
 
 def fetch(psc, size=100, page=0):
     url = BASE + "?" + urllib.parse.urlencode({
@@ -52,6 +73,9 @@ def fetch(psc, size=100, page=0):
 
 def val(x):
     return x.get("value") if isinstance(x, dict) else x
+
+
+COMMERCIAL_ONLY = os.environ.get("ALL_ITEMS") != "1"
 
 
 def main():
@@ -84,12 +108,15 @@ def main():
                 if days is None or not (lo <= days <= hi):
                     continue
                 oh = r.get("organizationHierarchy") or []
+                office = oh[-1].get("name", "") if len(oh) > 1 else ""
+                if COMMERCIAL_ONLY and is_nsn(title, office):
+                    continue
                 seen.add(nid)
                 out.append({
                     "group": group, "psc": code, "id": nid, "title": title,
                     "type": val(r.get("type")),
                     "agency": oh[0].get("name", "") if oh else "",
-                    "office": oh[-1].get("name", "") if len(oh) > 1 else "",
+                    "office": office,
                     "deadline": dl, "days": days,
                     "setaside": val(r.get("typeOfSetAside")) or "unrestricted",
                     "naics": r.get("naics") or "",
