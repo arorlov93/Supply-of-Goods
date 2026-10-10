@@ -47,9 +47,11 @@ BAD = ("ammunition", "missile", "warhead", "ordnance", "explosive", "flare",
 # компании там делать нечего, поэтому отсекаем их целиком.
 NSN_OFFICES = ("NAVSUP", "DLA AVIATION", "DLA LAND", "DLA MARITIME", "DLA TROOP",
                "NUWC", "NSWC", "MSC ", "FLEET READINESS", "AFSC", "AFLCMC",
-               "ACC-", "W6Q", "TACOM", "CECOM", "DEFENSE LOGISTICS",
-               "DLA MECHANICSBURG", "SPRMM", "SPRRA", "SPRDL", "SPE",
-               "COMMANDING OFFICER", "FA8", "FA5", "FA2", "NAVFAC", "NAVAIR")
+               "TACOM", "CECOM", "DLA MECHANICSBURG", "SPRMM", "SPRDL",
+               "NAVAIR")
+# DLA Troop Support намеренно НЕ в списке: там продовольствие, одежда,
+# стройматериалы и медицина, то есть обычная товарная поставка, а не
+# запчасти к технике по одобренному источнику.
 
 # Признаки позиции по номеру NSN прямо в заголовке.
 import re as _re
