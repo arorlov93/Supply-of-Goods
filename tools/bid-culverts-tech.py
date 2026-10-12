@@ -18,13 +18,14 @@ OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..",
                    "bids", "1240LS26Q0079",
                    "04 Technical Information - 1240LS26Q0079.pdf")
 
-PIPE_SPEC = ("Corrugated steel pipe, 16 gauge (0.064 in nominal wall), hot dip "
-             "galvanized, 2-2/3 in x 1/2 in corrugation, ends rerolled annular "
-             "for standard coupling bands. Manufactured to ASTM A760 and "
-             "AASHTO M36, zinc coated sheet to ASTM A929.")
-BAND_SPEC = ("Hugger type coupling band, galvanized steel, width and corrugation "
-             "matched to the pipe, furnished complete with bolts and nuts. "
-             "Manufactured to ASTM A760 and AASHTO M36.")
+PIPE_SPEC = ("Helical corrugated steel pipe, 16 gauge (0.064 in nominal wall), "
+             "2-2/3 in x 1/2 in corrugation, ends rerolled annular to mate with "
+             "annular hugger bands. Conforms to AASHTO M 36 with AASHTO M 218 "
+             "galvanizing, as confirmed acceptable in Amendment 0001.")
+BAND_SPEC = ("Annular hugger band, approximately 12 in wide, H-12 style, "
+             "galvanized steel, bolt-bar-strap connectors, furnished complete "
+             "with bolts. Conforms to AASHTO M 36 and AASHTO M 218. O-ring "
+             "gaskets not included, which Amendment 0002 confirms is correct.")
 
 ROWS = [
     ("0001", '18 in dia. x 12 ft culvert, 16 ga galvanized, CMP ends for standard bands', "10 EA", PIPE_SPEC),
@@ -81,27 +82,35 @@ def main():
         ("BOTTOMPADDING", (0, 0), (-1, -1), 3),
     ]))
     f.append(t)
-    f.append(Paragraph("Every offered item meets or exceeds the diameter, length, "
-                       "gauge, coating and end treatment stated in the Schedule of "
-                       "Items. O-ring gaskets are not included, which Amendment 0002 "
-                       "confirms is acceptable.", body))
+    f.append(Paragraph("Every offered item meets the diameter, length, gauge, coating "
+                       "and end treatment stated in the Schedule of Items, and the "
+                       "standards named in the Amendment 0001 answers: AASHTO M 36 for "
+                       "the pipe and AASHTO M 218 for the metallic coating. Band "
+                       "quantities are quoted as written in the Schedule of Items. "
+                       "A manufacturer technical data sheet is enclosed, which "
+                       "Amendment 0001 confirms is sufficient technical documentation.", body))
 
     f.append(Paragraph("2. Delivery", h2))
     f.append(Paragraph("All items will be delivered within 60 days after award, "
                        "F.o.b. destination, to the Forest Service Yard, 900 North "
                        "1100 East, Price, UT 84501. Our answer to the delivery "
-                       "question in the Schedule of Items is Y. We will telephone "
-                       "ahead to agree the delivery date so that the gate is open "
-                       "and an offloading operator is present, and we will deliver "
-                       "in as few shipments as the load allows. Earlier delivery "
-                       "will be offered if the mill releases sooner.", body))
+                       "question in the Schedule of Items is Y. The load is "
+                       "approximately 25 short tons, so it will arrive in more than "
+                       "one truckload; Amendment 0001 confirms that multiple and "
+                       "partial shipments are acceptable within the 60 day window. We "
+                       "will telephone ahead of each shipment to agree the date and a "
+                       "window with the contracting officer representative, so that "
+                       "the gate is open and an offloading operator is present. "
+                       "Earlier delivery will be offered if the mill releases sooner.", body))
 
     f.append(Paragraph("3. Country of origin and Buy American", h2))
     f.append(Paragraph("All items offered under CLIN 0001 through 0008 are domestic "
                        "end products of the United States, as entered in the Country "
-                       "of Origin table. The Buy American, Free Trade Agreements, "
-                       "Israeli Trade Act Certificate at 52.225-4 is completed on "
-                       "that basis.", body))
+                       "of Origin table on page 10 under 52.225-4, which Amendment "
+                       "0001 confirms is the correct table. No Canadian origin product "
+                       "is offered on any line. The Buy American, Free Trade "
+                       "Agreements, Israeli Trade Act Certificate at 52.225-4 is "
+                       "completed on that basis.", body))
 
     f.append(Paragraph("4. Offer validity, amendments and registration", h2))
     f.append(Paragraph("Prices are firm for 90 calendar days from the date set for "
