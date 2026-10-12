@@ -64,7 +64,7 @@ PNG сделаны с прозрачным фоном, кроме `logo-email.pn
 ```
 Aleksandr Orlov · Member
 ISP GROUP LLC
-16395 Biscayne Blvd, North Miami Beach, FL 33160
+16395 Biscayne Blvd Apt 818, Aventura, FL 33160-5743
 (929) 830-0038 · info@ispgroupgc.com · ispgroupgc.com
 ```
 

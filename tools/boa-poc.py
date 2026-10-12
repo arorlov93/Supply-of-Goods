@@ -17,7 +17,7 @@ ROWS = [
     ("Company Name:", "ISP GROUP LLC"),
     ("UEI:", "WA46PAMTYMQ7"),
     ("CAGE:", "217F4"),
-    ("Address:", "16395 Biscayne Blvd, North Miami Beach, FL 33160, United States"),
+    ("Address:", "16395 Biscayne Blvd Apt 818, Aventura, FL 33160-5743, United States"),
     ("Name:", "Aleksandr Orlov, Member"),
     ("Email:", "info@ispgroupgc.com"),
     ("Phone Number:", "(929) 830-0038"),

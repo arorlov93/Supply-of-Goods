@@ -78,7 +78,9 @@ filters: recipient_search_text = ["ИМЯ КОМПАНИИ"], award_type_codes A
 
 ## 6. Реквизиты компании
 
-ISP GROUP LLC, 16395 Biscayne Blvd, North Miami Beach, FL 33160
+ISP GROUP LLC, 16395 Biscayne Blvd Apt 818, Aventura, FL 33160-5743
+(адрес должен совпадать с карточкой SAM буква в букву, на сайте указан
+North Miami Beach, это допустимое почтовое имя того же индекса)
 UEI WA46PAMTYMQ7, CAGE 217F4, SAM активен до 28.07.2027
 Представитель: Aleksandr Orlov, Member, (929) 830-0038, info@ispgroupgc.com
 
