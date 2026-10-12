@@ -1,22 +1,27 @@
 # -*- coding: utf-8 -*-
-"""Экспорт логотипа в PNG через chromium. Фон прозрачный.
+"""Экспорт логотипа в PNG. Фон прозрачный.
+
+Растеризация идёт через cairosvg, а не скриншотом браузера: скриншот обрезал
+низ картинки, из-за чего пропадал дескриптор и срезался шар.
 
 Запуск: python3.13 tools/logo-png.py
 """
-import os, re, subprocess, tempfile
+import os
+import re
+import cairosvg
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 BRAND = os.path.abspath(os.path.join(HERE, "..", "brand"))
-CHROME = "/opt/pw-browsers/chromium"
 
 JOBS = [
-    ("logo-light.svg",         "logo-light.png",        1400),
-    ("logo-dark.svg",          "logo-dark.png",         1400),
-    ("logo-light-plain.svg",   "logo-light-plain.png",  1200),
-    ("logo-dark-plain.svg",    "logo-dark-plain.png",   1200),
+    ("logo-light.svg",         "logo-light.png",        1600),
+    ("logo-dark.svg",          "logo-dark.png",         1600),
+    ("logo-light-plain.svg",   "logo-light-plain.png",  1400),
+    ("logo-dark-plain.svg",    "logo-dark-plain.png",   1400),
     ("logo-stacked-light.svg", "logo-stacked-light.png", 900),
     ("logo-stacked-dark.svg",  "logo-stacked-dark.png",  900),
-    ("logo-light.svg",         "logo-email.png",         720),
+    # подпись в письме: без дескриптора, он на такой высоте нечитаем
+    ("logo-light-plain.svg",   "logo-email.png",         760),
     ("mark-ink.svg",           "mark-ink.png",           420),
     ("mark-cream.svg",         "mark-cream.png",         420),
     ("icon.svg",               "favicon-512.png",        512),
@@ -36,21 +41,9 @@ def main():
         sp = os.path.join(BRAND, src)
         vw, vh = viewbox(sp)
         h = round(width * vh / vw)
-        html = ('<!doctype html><meta charset="utf-8">'
-                '<style>html,body{margin:0;background:transparent}'
-                'img{display:block;width:%dpx;height:%dpx}</style>'
-                '<img src="file://%s">' % (width, h, sp))
-        with tempfile.NamedTemporaryFile("w", suffix=".html", delete=False,
-                                         encoding="utf8") as f:
-            f.write(html)
-            tmp = f.name
         out = os.path.join(BRAND, dst)
-        subprocess.run([CHROME, "--headless", "--disable-gpu", "--no-sandbox",
-                        "--hide-scrollbars", "--default-background-color=00000000",
-                        "--window-size=%d,%d" % (width, h),
-                        "--screenshot=" + out, "file://" + tmp],
-                       capture_output=True)
-        os.unlink(tmp)
+        cairosvg.svg2png(url=sp, write_to=out,
+                         output_width=width, output_height=h)
         print("  -> brand/%s  %dx%d" % (dst, width, h))
 
 
