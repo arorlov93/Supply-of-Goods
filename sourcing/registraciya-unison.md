@@ -28,27 +28,78 @@
 
 ---
 
-## Что вводить, копировать отсюда
+## Что вводить, по разделам реальной формы
+
+Форма открывается по адресу `marketplace.unisonglobal.com/sellerregistration.flow`
+после ввода UEI. В шапке она сама пишет, что компании под нашим UEI у них
+нет, значит регистрируемся как организация и администратором счёта
+становится тот, кто заполняет. Там же написано, что CAGE для регистрации не
+обязателен, но обязателен для присуждения контракта. У нас он есть, вписываем.
+
+### Company Address
 
 | Поле | Значение |
 |---|---|
-| UEI | `WA46PAMTYMQ7` |
-| CAGE | `217F4` |
-| Название компании | `ISP GROUP LLC` |
-| Адрес | `16395 Biscayne Blvd Apt 818` |
-| Город, штат, индекс | `Aventura, FL 33160-5743` |
-| Страна | `United States` |
-| Телефон | `(929) 830-0038` |
-| Почта компании | `info@ispgroupgc.com` |
-| Сайт | `ispgroupgc.com` |
-| Представитель, имя | `Aleksandr Orlov` |
-| Должность | `Member` |
-| Почта представителя | `info@ispgroupgc.com` |
-| Размер бизнеса | `Small Business` |
+| UEI # | `WA46PAMTYMQ7`, подставляется само |
+| Federal Tax ID | EIN, см. `tender-system/registrations/REGISTRATION-DATA.md` |
+| CAGE Code | `217F4` |
+| SAM Legal Entity Name | `ISP GROUP LLC` |
+| Physical Address, строка 1 | `16395 Biscayne Blvd` |
+| Physical Address, строка 2 | `Apt 818` |
+| City | `Aventura` |
+| State | `FL` |
+| Zip / Postal Code | `33160` и `5743` в два поля |
+| Province | пусто |
+| Country | `United States` |
+| Area Code / Phone | `929` и `8300038` |
+| Extension, Fax | пусто |
+| Business Size | `Small Business` |
+| Revenue | реальный диапазон |
+
+### Company POC
+
+| Email | `info@ispgroupgc.com` |
+|---|---|
+| First Name | `Aleksandr` |
+| Last Name | `Orlov` |
+| Area Code / Phone | `929` и `8300038` |
+
+### Federal Classification
+
+Отметить **только `Small Business`**. Остальные галочки это статусы,
+подтверждаемые сертификацией: 8(a), HUBZone, SDVOSB, WOSB, EDWOSB и прочие.
+Ни одного из них у нас нет, а ложное заявление о статусе это основание для
+отстранения от федеральных закупок.
+
+### Accounts Payable и Seller Representative
+
+В обоих разделах поставить галочки **Same as Company Address** и **Same as
+Company POC**, поля заполнятся сами. Руками остаётся только **Title** в
+разделе представителя: `Member`. Prefix и Division можно не трогать.
+
+### Security Question
+
+Выбрать вопрос, ответ на который не выясняется из открытых данных о
+компании. **Ответ записать в менеджер паролей, не в репозиторий и не в
+переписку.** Эта пара восстанавливает доступ к счёту, с которого подаются
+котировки.
+
+### How Did You Hear About Unison Marketplace
+
+Выбрать вариант про государственного заказчика или контрактного офицера,
+если он есть в списке: нас направила Стефани Макберни из Бюро тюрем. Если
+такого варианта нет, `Other`.
+
+---
 
 **Адрес должен совпадать с карточкой SAM буква в букву.** Unison сверяет
 данные с SAM автоматически. Если написать North Miami Beach вместо Aventura
 или потерять Apt 818, проверка может не пройти и придётся переделывать.
+
+**Federal Tax ID сверять с документом, а не по памяти.** Unison проверяет
+связку EIN плюс UEI. Опечатка означает отказ и разбирательство с их
+поддержкой на несколько дней. Пара «ISP GROUP LLC + наш EIN» прошла сверку
+с налоговой через SAM 30.07.2026, запись в `registrations/sam/status.md`.
 
 ---
 
