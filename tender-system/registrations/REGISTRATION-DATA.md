@@ -20,8 +20,35 @@ Texas CMBL, платные пакеты BidNet, подписка DemandStar — 
 ## Товарные коды (выбирать в профиле каждой площадки)
 - **NIGP:** 750 (Road/Highway Building Materials: sand, gravel, crushed stone), 020 (Agricultural/Construction Equipment), 545 (Machinery & Heavy Hardware), 755, 760, 420 (Furniture, Office), 425 (Furniture, School/Institutional)
 - **UNSPSC:** сегменты 11 (Minerals/Ores — aggregates), 30 (Structural Materials), 22 (Building/Construction Machinery), 56 (Furniture & Furnishings)
-- **NAICS:** 212319, 212321, 423810, 337127
 - **PSC:** 5610, 3805, 3810, 7105, 7110, 7125
+
+### NAICS в карточке SAM, сверено 13.10.2026 по экрану Goods & Services
+
+Прежняя запись «212319, 212321, 423810, 337127» была **неверной**, таких
+кодов в карточке нет. Фактически компания заведена как строительный
+подрядчик и сервисная служба, товарных кодов нет ни одного:
+
+| NAICS | |
+|---|---|
+| 236118 | Residential Remodelers |
+| **236220** | **Commercial and Institutional Building Construction, PRIMARY** |
+| 238140 | Masonry Contractors |
+| 238310 | Drywall and Insulation Contractors |
+| 238320 | Painting and Wall Covering Contractors |
+| 238350 | Finish Carpentry Contractors |
+| 238390 | Other Building Finishing Contractors |
+| 238910 | Site Preparation Contractors |
+| 238990 | All Other Specialty Trade Contractors (исключения 1 и 2) |
+| 561210 | Facilities Support Services |
+| 561720 | Janitorial Services |
+| 561730 | Landscaping Services |
+| 561790 | Other Services to Buildings and Dwellings |
+| 562910 | Remediation Services (исключения 1 и 2) |
+
+Отсюда следует: по всем товарным закупкам, которые мы готовили, карточка
+нас не покрывала. Что добавлять, см. `sourcing/kody-sam.md`. Строительные и
+сервисные коды **не удалять**: они открывают уборку, озеленение и
+обслуживание объектов, где закупки есть.
 
 ## Очередь бесплатных регистраций
 1. **BidNet Direct** — bidnetdirect.com/registration → free-tier, группы FL/TX/CA/NY/NJ, NIGP-коды выше
