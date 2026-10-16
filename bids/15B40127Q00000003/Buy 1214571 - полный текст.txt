@@ -1,0 +1,309 @@
+Buy View
+To place a bid or register go to Unison Marketplace
+View Details for Buy
+#
+1214571
+General Buy Information
+Buy #:
+1214571
+Solicitation #:
+15B40127Q00000003
+Buy Description:
+MCC CHICAGO FY 27 1ST QUARTER HALAL AND KOSHER
+Category:
+89 -- Subsistence
+Sub Category:
+8945 -- Food, Oils and Fats
+NAICS:
+311999 -- All Other Miscellaneous Food Manufacturing
+SAM Contract Opportunity:
+Yes
+Set-Aside Requirement:
+Small Business
+Buyer:
+DOJ BOP FIELD OFFICES - MCC CHICAGO
+End Date:
+10/21/2026
+End Time:
+15:00 ET
+Seller Question Deadline:
+No Seller Question Deadline Set
+Delivery:
+30 Day(s) - Required (No. of calendar days after receipt of order (ARO) by which Buyer requires Seller to deliver)
+View Question & Responses
+LOG IN TO START BID
+Line Item(s) Template - Optional
+You have the option of entering Bid information manually by clicking Start Bid or you can prepare your Bid in an Excel spreadsheet by clicking Download Template . Complete the template using the instructions provided in the spreadsheet and save the file to your computer. When complete, login to Unison Marketplace and click Start Bid . Proceed to the Line Items screen to upload the information.
+Download Template
+Line Item(s)
+Item No
+Description
+Qty
+Unit
+001
+Kosher Meat - 12 ounce Roasted Chicken Breast Meal (Bone-in)
+consisting of:
+- 5 ounce weight – Bone-in Roasted Chicken Breast-
+1 ounce weight – chicken gravy with spices
+- 3 ounce weight – Potato
+Kugel- 3 ounce weight – Carrot Tzimmes
+75
+EA
+002
+Kosher Parve - 12 ounce Filet of Sole consisting of:
+- 4 ounce-weight Fish Fillet cut from solid muscle filet of sole flesh
+fillet (not Breaded)
+- 2 ounce-weight Lemon Parsley Sauce
+- 3 ounce-weight Shell Pasta
+- 3 ounce-weight Green Beans
+150
+EA
+003
+Kosher Parve - 12 Ounce Vegetarian Stuffed Peppers Meal
+consisting of:
+Vegetable Protein Meat Sauce filling from:
+- 1 ounce weight – Peppers
+- 3 ounce weight – Pre-Flavored Textured Soy Protein blended
+with cooked White Rice. Pre-flavored to
+mimic Beef and Italian Sausage. -
+2 ounce weight – Tomato Sauce with spices
+- 3 ounce-weight Bow Tie Pasta-
+3 ounce-weight Sweet Peas
+75
+EA
+004
+Kosher Meat - 12 Ounce Beef Pot Roast Meal consisting of:
+- 3 ounce Beef Pot Roast (not fully cooked)
+- 2 ounce-weight Savory Pot Roast Gravy with spices
+- 4 ounce-weight Roasted Potatoes
+- 3 ounce-weight Mixed Vegetables
+75
+EA
+005
+Kosher Parve - 12 Ounce Vegetarian Eggplant Creole Meal
+consisting of:
+- 4 ounce weight – Eggplant
+- 2 ounce weight – Soy Vegetable Protein enhanced Creole Sauce
+with diced/crushed Tomatoes, diced
+Red & Green Peppers, and spices
+- 3 ounce-weight Cooked White Rice
+- 3 ounce-weight Sweet Peas & Carrot
+75
+EA
+006
+Kosher Meat - 12 Ounce Beef Goulash Meal consisting of:
+- 4 ounce-weight Beef Goulash
+- 2 ounce-weight Goulash gravy with spices
+- 3 ounce-weight Mashed Potatoes
+- 3 ounce-weight Mixed Vegetables
+75
+EA
+007
+Kosher Dairy - 7 Ounce Cheese Omelet Meal consisting of:-
+3 ounce-weight Plain Egg Omelet- 1 ounce cheese- 3 ounce
+Potatoes
+450
+EA
+008
+Kosher Dairy - 7 Ounce Spanish Omelet Meal consisting of:- 3
+ounce-weight Plain Egg Omelet- 1 ounce Spanish Sauce- 3 ounce
+Potatoes
+100
+EA
+009
+Certified Halal - 7 Ounce Spanish Omelet Meal consisting of:- 3
+ounce-weight Plain Egg Omelet- 1 ounce Spanish Sauce- 3 ounce
+Potatoes
+100
+EA
+010
+Certified Halal - 7 Ounce Cheese Omelet Meal consisting of:-
+3 ounce-weight Plain Egg Omelet- 1 ounce cheese- 3 ounce
+Potatoes
+400
+EA
+011
+Certified Halal Meat - 12 ounce Roasted Chicken Breast Meal
+(Bone-in) consisting of:
+- 5 ounce weight – Bone-in Roasted Chicken Breast-
+1 ounce weight – chicken gravy with spices
+- 3 ounce weight – Potato Kugel-
+3 ounce weight – Carrot Tzimmes
+75
+EA
+012
+Certified Halal Meat - 12 ounce Filet of Sole consisting of:
+- 4 ounce-weight Fish Fillet cut from solid muscle filet of sole flesh
+fillet (not Breaded)
+- 2 ounce-weight Lemon Parsley Sauce
+- 3 ounce-weight Shell Pasta
+- 3 ounce-weight Green Beans
+150
+EA
+013
+Certified Halal Meat - 12 Ounce Beef Pot Roast Meal consisting of:
+- 3 ounce Beef Pot Roast (not fully cooked)
+- 2 ounce-weight Savory Pot Roast Gravy with spices
+- 4 ounce-weight Roasted Potatoes
+- 3 ounce-weight Mixed Vegetables
+75
+EA
+014
+Certified Halal Meat- 12 Ounce Beef Goulash Meal consisting of:
+- 4 ounce-weight Beef Goulash
+- 2 ounce-weight Goulash gravy with spices
+- 3 ounce-weight Mashed Potatoes
+- 3 ounce-weight Mixed Vegetables
+75
+EA
+015
+Certified Halal Meat - 16 ounce Chicken Wing Meal consisting of:
+- 5 ounce-weight Bone-in Chicken Wings
+- 2 ounce-weight BBQ Sauce
+- 5 ounce-weight Mashed Potatoes
+- 4 ounce-weight Mixed Vegetables
+175
+EA
+016
+Certified Halal Meat - 16 Ounce Meatloaf Meal consisting of:- 4
+ounce-weight Meatloaf (made with ground beef with not more than:
+20% fat; 20% added
+ingredients)- 2 ounce-weight Brown Gravy- 6 ounce-weight Mashed
+Potatoes- 4 ounce-weight Mixed Vegetables- finished product of
+the Meatloaf may not contain more than 3.5% of a non-dairy/nonmeat
+binders
+and extenders or 2% isolated soy protein may be used, but must
+be shown in the ingredients
+statement on the product's label by its common name.
+175
+EA
+017
+Kosher Sardines in Soybean Oil, Individual. 3 to 6 ounce each
+package. EACH. *Each individual package
+must be marked with the kosher certification hechsher. Total
+amount may be adjusted to the next highest
+case count. Pouches only. Specify pack size on bid.
+300
+EA
+018
+Kosher Potato Chips, Individual Package. EACH. 1 Ounce Sealed
+Individual Package, Certified Kosher
+Parve, See Delivery Schedule. *Each individual package must be
+marked with the kosher certification
+hechsher. Total amount may be adjusted to the next highest case
+count.
+4000
+EA
+019
+Kosher Tuna, Chunk Light in Water, Individual. 4 - 6 ounce each
+package. EACH. Tuna can be a product
+of the U.S. or other foreign country that meets the requirements of
+21CFR123.12. Product may contain
+soy and/or vegetable broth. *Each individual package must be
+marked with the kosher certification
+hechsher. Total amount may be adjusted to the next highest case
+count. Pouches only. Specify pack size
+on bid.
+300
+EA
+020
+Kosher Vegetable Juice, 5 to 7 ounce Sealed Pouch or Can.
+EACH. Certified Kosher Parve. Can must have
+easy open top. Juice must be tomato based with at least five
+additional vegetable products in the juice.
+*Each individual package must be marked with the kosher
+certification hechsher. Total amount may be
+adjusted to the next highest case count.
+850
+EA
+Bidding Requirements
+Instructions
+Open Market:
+Open Market bids are accepted in this solicitation; however, please refer to the specifications below, including 'Set-Aside Requirement' provision, for additional requirements.
+Contracting Method - Lowest Price Technically Acceptable (LPTA):
+The Government intends to select for award the one responsible quote which conforms to the Bidding Requirements and Buy Terms in the auction, proposes a price that is fair and reasonable, and provides the Lowest Priced, Technically Acceptable (LPTA) quote meeting the specifications of the requirement. If the lowest priced quote is not found to be Technically Acceptable, the government will evaluate the next lowest priced quote, and so on. Quotes determined to be incomplete, unreasonable, or unrealistic will not be considered for award.
+Meet or Exceed:
+The Buyer is allowing Sellers to submit bids that either meet or exceed the requested specification. Sellers MUST enter exactly what they are bidding (including make, model, and description) into the blank description field in order for the bid to be considered.
+Purchase Order, Delivery Order, or Purchase Card:
+Buyer intends to issue award using a purchase order, delivery order, or purchase card. If utilizing a purchase card, Buyer will communicate account information to Selected Seller outside of the Marketplace.
+Set-Aside Requirement:
+This solicitation is a Small Business Set-Aside and only qualified Sellers can bid.
+Use of Unison Marketplace:
+Buyers and Sellers agree to conduct this transaction through Unison Marketplace in compliance with the Unison Marketplace Terms of Use. Failure to comply with the below terms and conditions may result in offer being determined as non-responsive.
+Question Submission:
+Interested offerors must submit any questions concerning the solicitation at the earliest time possible to enable the buyer to respond. Questions can be submitted by using the 'Questions & Responses' link. Questions not received within a reasonable time prior to close of the solicitation may not be considered.
+Default Terms:
+Unless otherwise specified in the Buy Terms, below, Bid must be good for 30 calendar days after close of Buy and shipping must be free on board (FOB) destination CONUS (Continental U.S.)
+Price All Line Items:
+The Buyer is requiring interested Sellers submit Bids with pricing inclusive of all Line Items.
+Buy Terms
+Name
+Description
+Subsistence Delivery Buy Term
+Delivery of awarded items will be on or before November 30th, 2026, on Monday thru Friday 6:30am-12:30pm excluding federal holidays. Deliveries after November 30th may be subject to a cancellation.
+Terminology
+As defined in the Federal Acquisition Regulation (FAR) 2.101, the terms “offer” and “offeror” refer to a response to a solicitation that, if accepted, would bind the submitter to perform the resultant contract. The terms “bid” and “bidder” refer to an offer submitted in response to an Invitation for Bid (IFB). The term “proposal” refers to an offer submitted in response to a Request for Proposal (RFP). The terms “quotation,” “quote,” and “quoter” refer to a non-binding submission in response to a Request for Quotation (RFQ) which is not an offer.
+Pricing Instructions
+Unless the Buyer indicates otherwise within a particular line item description, each Seller shall include in its online Bid/Proposal/Quotation individual pricing for all required line items in order to be considered for award (i.e., Do not use the Included in another line item function when pricing each line item). If a line item cannot be separately priced, you must notify the buyer through the FedBid Submit a Question feature regarding which line item(s) should be included in which other line item(s) and request reposting. Failure to comply with this term may result in the Bid/Proposal/Quotation being determined to be unacceptable.
+Equipment Condition
+New Equipment ONLY; NO remanufactured or "gray market" items. All items must be covered by the manufacturer's warranty.
+Bid/Offer Acceptance Period (Applicable to Invitations for Bid (IFB) or Requests for Proposal (RFP)
+Bid/Offer MUST be good for 60 calendar days after close of Buy, unless otherwise indicated.
+Shipping Condition
+Shipping must be free on board (FOB) destination CONUS (Continental U.S.), which means that the seller must deliver the goods on its conveyance at the destination specified by the buyer, and the seller is responsible for the cost of shipping and risk of loss prior to actual delivery at the specified destination.
+SAM Requirement
+This solicitation requires registration with the System for Award Management (SAM) at the time an offer or quotation is submitted, excluding the exceptions outlined in FAR 4.1102(a). Registration information can be found at www.sam.gov.
+Delivery Requirement
+No partial shipments are permitted unless specifically authorized at the time of award.
+Q&A Instructions
+Q&A -Please submit all questions by using the 'Submit a Question' button. This buy will then be reposted with Q&A based on the questions that come in (if applicable).
+Award Criteria
+The Contracting Officer will indicate elsewhere in this Buy as to whether responses will be evaluated for award based either upon (a) price and pricing factors only (Bids/Quotes) or (b) price and other factors (Proposals/Quotes). All Bids/Proposals/Quotations must conform to the listed specifications or the Statement of Work. If award criteria are based upon (b) price and other factors, the Contracting Officer shall clearly indicate the criteria to be applied elsewhere in this Buy.
+Supplemental Bid/Proposal/Quotation Information
+In addition to providing pricing at www.FedBid.com for this solicitation, each Bidder/Offeror/Quoter must provide any required, NON-PRICING responses (e.g. technical proposal, representations and certifications, etc.) so that they are received no later than the closing date and time for this Buy. Submissions can be sent to clientservices@fedbid.com.
+For Exact Match Only Commodity Buys
+For Exact Match Only Commodity Buys- NO SUBSTITUTIONS, EXACT MATCH ONLY. The Bidder/Offeror/Quoter may not substitute any item/service listed on this order without prior written approval from the BOP Contracting Officer. No other individual is authorized, either verbally or in writing to change part numbers, manufacturer, quantity, delivery dates, or any other specifications of this Buy. Items/services that do not conform to descriptions and part numbers found in this Buy will be rejected at the time of delivery causing a return at the contractor's expense.
+For Buys other than Exact Match
+For all buys other than Exact Match Sellers MUST document what they are bidding for evaluation for award. Sellers must include, extended specs and/or manufacturer name and part numbers (if applicable). Failure to do this may result in non-consideration of the Bid/Proposal/Quotation. This information is REQUIRED in order for a seller’s Bid/Proposal/Quotation to be evaluated for award. FAR 52.211-6.
+52.217-10 Reverse Auction
+(a) Definitions. As used in this provision—
+Reverse auction means the process for obtaining pricing, usually supported by an electronic tool, in which offerors see competing offerors'' price(s), without disclosure of the competing offerors'' identity, and have the opportunity to submit lower priced offers until the close of the auction.'
+Reverse auction service provider means a commercial or Government entity that provides a means for conducting reverse auctions when acquiring supplies or services to be used by the Government.'
+(b) Reverse auction. The Government intends to conduct a reverse auction under this solicitation to award a contract or blanket purchase agreement.'
+(c) Offeror agreement. By submission of a quote or proposal in response to the solicitation, the Offeror agrees to participate in the reverse auction and agrees that the Government may reveal to all Offerors the offered price(s) in the auction, without revealing any Offeror''s identity, except for the awardee''s identity subsequent to an award resulting from the auction. The Offeror may withdraw its agreement to further participate in the process by withdrawing its offer before the close of the auction by notifying the Contracting Officer via the contact method identified in the solicitation.'
+(d) Only one offer. If the reverse auction produces only one offer, the Government reserves the right to cancel the auction.'
+(e) Release of information. The Government may use a reverse auction service provider to conduct the reverse auction. Any price or proposal information or source selection information received by the reverse auction service provider in relation to the reverse auction shall not be released, outside of the Government, unless otherwise required by law. However, this does not prevent the Government from revealing to all Offerors the offered price(s) in the auction, without revealing any Offeror''s identity. Price or proposal information includes, but is not limited to—'
+(1) Contractor bid or proposal information, as defined at Federal Acquisition Regulation 3.104-1; and'
+(2) Information identified by the Offeror as restricted from duplication, use, or disclosure—in whole or in part—for any purpose other than to evaluate the Offeror''s price or proposal.'
+(End of provision)
+Individual Pricing Instructions
+Vendors will submit pricing only on line items that they want to be considered for award. All line items that the vendor will not provide must include a description indicating that they are not providing pricing (i.e., n/a, not providing line item, no pricing, no bid). Additionally, all line items that will not be provided must use the "Included in line item". Please bid on the entire amount requested in the line item description.
+Multiple Award
+Notice to vendors- This Opportunity is a Multiple Award Opportunity based on best per line-item pricing.
+Shipping Information
+City
+State
+Zip Code
+MCC Chicago Outside Warehouse
+-->
+Chicago
+IL
+60638
+Seller Attachment(s): Optional
+The attachment(s) could include the following non-pricing information:
+Buy Attachment(s)
+No.
+Document Name
+Document Size
+There are no attachments.
+© 2026
+Unison Marketplace Inc., All Rights Reserved
+Toll-free: 877-933-3243 |
+Privacy |
+Terms |
+Feedback |
+Contact Us
+title
+message
+Cancel -->
+Continue
