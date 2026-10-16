@@ -54,7 +54,61 @@
 
 ---
 
-## Не отправлено, и почему именно
+---
+
+## Вторая очередь: ещё восемь писем, 16.10
+
+Команда пользователя: «проверь сайты и пиши на общие ящики». Я прошёл по
+сайтам заводов и собрал адреса **только те, что опубликованы на их
+собственных страницах**, через тег mailto и текст страницы контактов.
+Угаданных шаблонов нет ни одного.
+
+| Направление | Завод | Адрес | Откуда взят |
+|---|---|---|---|
+| курица, 22 500 фунтов | **Koch Foods**, Парк-Ридж IL | info@kochfoods.com | kochfoods.com |
+| курица | **Crider Foods**, Стиллмор GA | info@criderfoods.com | criderfoods.com |
+| курица | **House of Raeford** | chan.windham@ (вице-президент по продажам, свежая курица), копия michael.teachey@ (генеральный менеджер, глубокая переработка) | страница контактов houseofraeford.com |
+| курица | Pilgrim's Pride | wecare@pilgrims.com | pilgrims.com, это общий ящик, в письме просьба передать в отдел продаж |
+| **рыба, 7 000 фунтов** | **High Liner Foods** | info@highlinerfoodservice.com, копия info@highlinerfoods.com | highlinerfoods.com |
+| рыба | **Channel Fish Processing**, Брейнтри MA | jmonti@channelfish.com | channelfish.com |
+| кошер и халяль, 3 300 единиц | **Midamar** | info@midamar.com, копия customerservice@midamar.com | midamar.com |
+| арахисовое масло, 8 000 единиц | Algood Food, Луисвилл KY | consumerinquiry@algoodfood.com | algoodfood.com, с просьбой передать в отдел частных марок |
+| моцарелла 500 фунтов и пармезан 20 ящиков | Masters Gallery Foods, Плимут WI | marketing@mastersgalleryfoods.com | mastersgalleryfoods.com |
+
+**Рыба закрыта, и это важно.** High Liner Foods работает с тилапией,
+треской и минтаем, то есть именно по той позиции, где у нас не было ни
+цены, ни поставщика. В письме прямо сказано, что тилапия интересует в
+первую очередь, и вынесено отдельно требование **100 процентов чистого
+веса без льда и глазури**, на котором поставщики рыбы валятся чаще всего.
+
+**House of Raeford разделён правильно:** позиции 1 и 2 это сырая курица,
+её ведёт Chan Windham, позиция 3 это панировка, её ведёт Michael Teachey.
+Письмо адресовано первому, второй в копии, и это объяснено в первой
+строке.
+
+## Чего не нашлось даже на сайтах
+
+У этих заводов на собственных сайтах **нет ни одного опубликованного
+адреса**, только веб-формы:
+
+Jennie-O (варёная индейка, 4 000 фунтов), Lakeside Foods, Seneca Foods,
+Pacific Coast Producers, Packers Canning, Neil Jones Food (консервы,
+718 ящиков), Winland Foods и Pasta Montana (макароны), Tony Downs Foods,
+George's, Gold Creek Foods, Foster Farms (курица), JTM Food Group
+(отдаёт 403), Crescent Foods, Alle Processing и Meal Mart (халяль и
+кошер), America's Catch и Consolidated Catfish (сом), Great Lakes Cheese,
+Sargento, AMPI (сыр), American Blanching (арахис).
+
+**Открытыми остаются две крупные позиции:**
+
+| Позиция | Объём | Оценка | Чем закрывать |
+|---|---|---|---|
+| индейка варёная, грудка | 4 000 фунтов | около $16 200 - 17 000 | звонок Jennie-O или Virginia Poultry Growers |
+| консервы овощные и фруктовые | 718 ящиков | около $25 000 | звонок Lakeside Foods, (920) 684-3356, номер из каталога, не с их сайта |
+
+---
+
+## Прежняя запись: что было не отправлено в первой очереди
 
 По птице, индейке, рыбе, консервам, бакалее и кошеру **проверенных
 адресов электронной почты нет.** Список AMS, из которого я взял мясные
