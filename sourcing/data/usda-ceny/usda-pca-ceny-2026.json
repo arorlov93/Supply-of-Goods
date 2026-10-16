@@ -1,0 +1,4475 @@
+[
+{
+"sol": "2000011099",
+"date": "2026-01-05",
+"material": "GRAPEFRUIT FRESH CTN-34-39 LB",
+"qty": 387280.0,
+"uom": "CS",
+"lo": 17.2,
+"hi": 42.37
+},
+{
+"sol": "2000011099",
+"date": "2026-01-05",
+"material": "ORANGES CTN-34-39 LB",
+"qty": 642276.0,
+"uom": "CS",
+"lo": 13.26,
+"hi": 28.8
+},
+{
+"sol": "2000011100",
+"date": "2026-01-05",
+"material": "TURKEY BREAST DELI SLC FRZ PKG",
+"qty": 537600.0,
+"uom": "LB",
+"lo": 5.27,
+"hi": 5.27
+},
+{
+"sol": "2000011101",
+"date": "2026-01-05",
+"material": "MANDARIN TANGERINE FRESH BAG",
+"qty": 171600.0,
+"uom": "CS",
+"lo": 24.83,
+"hi": 42.13
+},
+{
+"sol": "2000011103",
+"date": "2026-01-05",
+"material": "BEEF CRUMBLES W/SPP PKG-4/10 LB",
+"qty": 40000.0,
+"uom": "LB",
+"lo": 4.3667,
+"hi": 4.3667
+},
+{
+"sol": "2000011104",
+"date": "2026-01-06",
+"material": "TURKEY THIGHS BNLS SKNLS",
+"qty": 72000.0,
+"uom": "LB",
+"lo": 3.69,
+"hi": 3.69
+},
+{
+"sol": "2000011109",
+"date": "2026-01-05",
+"material": "BEEF PATTY CKD FRZ 2.0 MMA",
+"qty": 152000.0,
+"uom": "LB",
+"lo": 5.467,
+"hi": 5.667
+},
+{
+"sol": "2000011109",
+"date": "2026-01-05",
+"material": "BEEF SPP PTY HSTYLE CKD 2.0MMA",
+"qty": 38000.0,
+"uom": "LB",
+"lo": 4.056,
+"hi": 4.056
+},
+{
+"sol": "2000011112",
+"date": "2026-01-06",
+"material": "GRAPE CONCORD JUICE PLST",
+"qty": 68675.0,
+"uom": "CS",
+"lo": 21.43,
+"hi": 24.43
+},
+{
+"sol": "2000011115",
+"date": "2026-01-06",
+"material": "CHICKEN LARGE CHILLED -BULK",
+"qty": 14616000.0,
+"uom": "LB",
+"lo": 1.5833,
+"hi": 1.83
+},
+{
+"sol": "2000011115",
+"date": "2026-01-06",
+"material": "CHICKEN LEGS CHILLED -BULK",
+"qty": 1908000.0,
+"uom": "LB",
+"lo": 0.68,
+"hi": 0.8
+},
+{
+"sol": "2000011118",
+"date": "2026-01-21",
+"material": "CORN-SOY BLEND PLUS BAG-HP-25",
+"qty": 410.0,
+"uom": "MT",
+"lo": 691.9,
+"hi": 710.32
+},
+{
+"sol": "2000011118",
+"date": "2026-01-21",
+"material": "LENTILS BAG-50 KG",
+"qty": 500.0,
+"uom": "MT",
+"lo": 477.4,
+"hi": 524.19
+},
+{
+"sol": "2000011118",
+"date": "2026-01-21",
+"material": "OIL, VEGETABLE BOTTLE, PLS-6/4 L",
+"qty": 40.012,
+"uom": "MT",
+"lo": 1746.91,
+"hi": 1746.91
+},
+{
+"sol": "2000011118",
+"date": "2026-01-21",
+"material": "OIL, VEGETABLE CAN-6/4 L",
+"qty": 200.057,
+"uom": "MT",
+"lo": 1785.58,
+"hi": 2260.86
+},
+{
+"sol": "2000011118",
+"date": "2026-01-21",
+"material": "PEAS, YELLOW, SPLIT BAG-50 KG",
+"qty": 280.0,
+"uom": "MT",
+"lo": 446.74,
+"hi": 446.74
+},
+{
+"sol": "2000011118",
+"date": "2026-01-21",
+"material": "RICE, 5/20 LG, W-MLD, FORT BAG-50",
+"qty": 1830.0,
+"uom": "MT",
+"lo": 477.74,
+"hi": 528.03
+},
+{
+"sol": "2000011124",
+"date": "2026-01-27",
+"material": "POTATOES DEHYDRATED FLKS",
+"qty": 95000.0,
+"uom": "CS",
+"lo": 12.95,
+"hi": 15.19
+},
+{
+"sol": "2000011124",
+"date": "2026-01-27",
+"material": "VEG BLEND STIRFRY FRZ CTN-12/1 LB",
+"qty": 9216.0,
+"uom": "CS",
+"lo": 18.61,
+"hi": 20.14
+},
+{
+"sol": "2000011129",
+"date": "2026-01-26",
+"material": "APPLE SLICES CAN-6/10",
+"qty": 7296.0,
+"uom": "CS",
+"lo": 38.21,
+"hi": 45.05
+},
+{
+"sol": "2000011129",
+"date": "2026-01-26",
+"material": "APPLE SLICES FRZ CTN-12/2.5 LB",
+"qty": 2640.0,
+"uom": "CS",
+"lo": 38.8,
+"hi": 39.1
+},
+{
+"sol": "2000011129",
+"date": "2026-01-26",
+"material": "APPLESAUCE CAN-24/300",
+"qty": 124740.0,
+"uom": "CS",
+"lo": 17.73,
+"hi": 20.24
+},
+{
+"sol": "2000011129",
+"date": "2026-01-26",
+"material": "APPLESAUCE CUP SLEEVE-6/4 OZ",
+"qty": 12740.0,
+"uom": "CS",
+"lo": 14.17,
+"hi": 15.45
+},
+{
+"sol": "2000011129",
+"date": "2026-01-26",
+"material": "APPLESAUCE CUP-96/4.5",
+"qty": 86800.0,
+"uom": "CS",
+"lo": 18.19,
+"hi": 20.59
+},
+{
+"sol": "2000011129",
+"date": "2026-01-26",
+"material": "APPLESAUCE UNSWEETENED",
+"qty": 6384.0,
+"uom": "CS",
+"lo": 25.08,
+"hi": 26.99
+},
+{
+"sol": "2000011129",
+"date": "2026-01-26",
+"material": "BLUEBERRY HIGHBUSH FRZ",
+"qty": 9240.0,
+"uom": "CS",
+"lo": 45.21,
+"hi": 50.73
+},
+{
+"sol": "2000011131",
+"date": "2026-01-22",
+"material": "APPLE JUICE PLST BTL-8/64 FL OZ",
+"qty": 209100.0,
+"uom": "CS",
+"lo": 16.28,
+"hi": 22.82
+},
+{
+"sol": "2000011131",
+"date": "2026-01-22",
+"material": "CHERRY APPLE JUICE PLST BTL-8/64",
+"qty": 75850.0,
+"uom": "CS",
+"lo": 22.16,
+"hi": 27.33
+},
+{
+"sol": "2000011131",
+"date": "2026-01-22",
+"material": "CRANBERRYAPPLE JUICE PLST",
+"qty": 88150.0,
+"uom": "CS",
+"lo": 17.64,
+"hi": 24.16
+},
+{
+"sol": "2000011131",
+"date": "2026-01-22",
+"material": "GRAPE CONCORD JUICE PLST",
+"qty": 130175.0,
+"uom": "CS",
+"lo": 17.87,
+"hi": 23.36
+},
+{
+"sol": "2000011131",
+"date": "2026-01-22",
+"material": "ORANGE JUICE PLST BTL-8/64 FL OZ",
+"qty": 82000.0,
+"uom": "CS",
+"lo": 25.09,
+"hi": 31.85
+},
+{
+"sol": "2000011131",
+"date": "2026-01-22",
+"material": "TOMATO JUICE PLST BTL-8/64 FL OZ",
+"qty": 30750.0,
+"uom": "CS",
+"lo": 11.7,
+"hi": 19.58
+},
+{
+"sol": "2000011132",
+"date": "2026-01-14",
+"material": "BUTTERY SPREAD LIGHT TUBS-12/15",
+"qty": 298080.0,
+"uom": "LB",
+"lo": 2.32,
+"hi": 2.32
+},
+{
+"sol": "2000011143",
+"date": "2026-01-26",
+"material": "APPLE JUICE SINGLE FRZ CUP-96/4",
+"qty": 22528.0,
+"uom": "CS",
+"lo": 18.0,
+"hi": 21.54
+},
+{
+"sol": "2000011146",
+"date": "2026-01-29",
+"material": "CHEESE CHED YEL CHUNKS-PKG 12/1",
+"qty": 151200.0,
+"uom": "LB",
+"lo": 1.8347,
+"hi": 1.9094
+},
+{
+"sol": "2000011146",
+"date": "2026-01-29",
+"material": "CHEESE CHED YEL SHRED-PKG 6/2 LB",
+"qty": 302400.0,
+"uom": "LB",
+"lo": 1.7833,
+"hi": 1.9161
+},
+{
+"sol": "2000011146",
+"date": "2026-01-29",
+"material": "CHEESE MOZ LM PT SKM STRING",
+"qty": 60480.0,
+"uom": "LB",
+"lo": 2.5088,
+"hi": 2.5214
+},
+{
+"sol": "2000011153",
+"date": "2026-01-28",
+"material": "OIL VEGETABLE BTL-6/1 GAL",
+"qty": 110880.0,
+"uom": "LB",
+"lo": 0.8439,
+"hi": 1.08
+},
+{
+"sol": "2000011153",
+"date": "2026-01-28",
+"material": "OIL VEGETABLE BTL-9/48 OZ",
+"qty": 2806650.004,
+"uom": "LB",
+"lo": 0.8571,
+"hi": 1.46
+},
+{
+"sol": "2000011156",
+"date": "2026-02-03",
+"material": "CHICKEN BONED CAN-24/12.5 OZ",
+"qty": 2565000.0,
+"uom": "LB",
+"lo": 2.3454,
+"hi": 2.4486
+},
+{
+"sol": "2000011156",
+"date": "2026-02-03",
+"material": "CHICKEN BONED POUCH-36/10 OZ",
+"qty": 33600.0,
+"uom": "CS",
+"lo": 44.0199,
+"hi": 46.3406
+},
+{
+"sol": "2000011157",
+"date": "2026-01-30",
+"material": "EGGNOODLE 1/2 INCH WIDE PKG-12/1",
+"qty": 483840.0,
+"uom": "LB",
+"lo": 2.3,
+"hi": 2.72
+},
+{
+"sol": "2000011157",
+"date": "2026-01-30",
+"material": "MACARONI AND CHEESE PKG-24/7.25",
+"qty": 1745698.5,
+"uom": "LB",
+"lo": 0.8114,
+"hi": 0.956
+},
+{
+"sol": "2000011157",
+"date": "2026-01-30",
+"material": "PASTA MACARONI PLAIN ELBOW",
+"qty": 4546560.0,
+"uom": "LB",
+"lo": 1.22,
+"hi": 1.9107
+},
+{
+"sol": "2000011157",
+"date": "2026-01-30",
+"material": "PASTA SPAGHETTI BOX-20/1 LB",
+"qty": 2208000.0,
+"uom": "LB",
+"lo": 0.7447,
+"hi": 1.99
+},
+{
+"sol": "2000011157",
+"date": "2026-01-30",
+"material": "WHOLE GRAIN PASTA ROTINI MAC",
+"qty": 518400.0,
+"uom": "LB",
+"lo": 1.8617,
+"hi": 1.9507
+},
+{
+"sol": "2000011158",
+"date": "2026-02-04",
+"material": "APPLES FRESH PKG-12/3 LB",
+"qty": 16660.0,
+"uom": "CS",
+"lo": 18.77,
+"hi": 22.73
+},
+{
+"sol": "2000011158",
+"date": "2026-02-04",
+"material": "APPLES FUJI FRESH F CARTON-40 LB",
+"qty": 11088.0,
+"uom": "CS",
+"lo": 18.59,
+"hi": 23.9
+},
+{
+"sol": "2000011158",
+"date": "2026-02-04",
+"material": "APPLES GALA FRESH G CARTON-40",
+"qty": 2772.0,
+"uom": "CS",
+"lo": 19.06,
+"hi": 20.76
+},
+{
+"sol": "2000011158",
+"date": "2026-02-04",
+"material": "APPLES GRANNY SMITH FRESH",
+"qty": 924.0,
+"uom": "CS",
+"lo": 21.7,
+"hi": 21.7
+},
+{
+"sol": "2000011158",
+"date": "2026-02-04",
+"material": "APPLES RED DELICIOUS FRESH",
+"qty": 2772.0,
+"uom": "CS",
+"lo": 20.17,
+"hi": 22.3
+},
+{
+"sol": "2000011158",
+"date": "2026-02-04",
+"material": "PEARS FRESH PKG-12/3 LB",
+"qty": 3920.0,
+"uom": "CS",
+"lo": 18.95,
+"hi": 19.4
+},
+{
+"sol": "2000011160",
+"date": "2026-02-04",
+"material": "ALMOND NATURAL WHOLE SHELL",
+"qty": 1540.0,
+"uom": "CS",
+"lo": 83.9,
+"hi": 83.9
+},
+{
+"sol": "2000011160",
+"date": "2026-02-04",
+"material": "CRANBERRIES DRIED PKG-300/1.16 OZ",
+"qty": 1500.0,
+"uom": "CS",
+"lo": 58.72,
+"hi": 58.72
+},
+{
+"sol": "2000011160",
+"date": "2026-02-04",
+"material": "FRUIT AND NUT MIX DRIED PKG-24/1",
+"qty": 5824.0,
+"uom": "CS",
+"lo": 91.94,
+"hi": 94.14
+},
+{
+"sol": "2000011160",
+"date": "2026-02-04",
+"material": "PLUMS PITTED DRIED PKG-24/1 LB",
+"qty": 3000.0,
+"uom": "CS",
+"lo": 45.12,
+"hi": 45.36
+},
+{
+"sol": "2000011160",
+"date": "2026-02-04",
+"material": "RAISINS BOX-144/1.33 OZ",
+"qty": 17784.0,
+"uom": "CS",
+"lo": 20.2,
+"hi": 21.96
+},
+{
+"sol": "2000011160",
+"date": "2026-02-04",
+"material": "RAISINS PKG-24/15 OZ",
+"qty": 17280.0,
+"uom": "CS",
+"lo": 32.68,
+"hi": 34.25
+},
+{
+"sol": "2000011161",
+"date": "2026-01-30",
+"material": "BUTTER PRINT SALTED CTN-36/1 LB",
+"qty": 123120.0,
+"uom": "LB",
+"lo": 2.45,
+"hi": 2.45
+},
+{
+"sol": "2000011161",
+"date": "2026-01-30",
+"material": "YOGURT HI PROTEIN BLUEBERRY",
+"qty": 299496.0,
+"uom": "LB",
+"lo": 1.524,
+"hi": 1.74
+},
+{
+"sol": "2000011161",
+"date": "2026-01-30",
+"material": "YOGURT HI PROTEIN STRAWBERRY",
+"qty": 245946.0,
+"uom": "LB",
+"lo": 1.524,
+"hi": 1.74
+},
+{
+"sol": "2000011161",
+"date": "2026-01-30",
+"material": "YOGURT HI PROTEIN VANILLA",
+"qty": 492246.0,
+"uom": "LB",
+"lo": 1.524,
+"hi": 1.74
+},
+{
+"sol": "2000011161",
+"date": "2026-01-30",
+"material": "YOGURT HI PROTEIN",
+"qty": 117456.0,
+"uom": "LB",
+"lo": 1.94,
+"hi": 1.94
+},
+{
+"sol": "2000011162",
+"date": "2026-02-04",
+"material": "CHICKEN BREAST BNLS IQF PKG-10/3",
+"qty": 27456.0,
+"uom": "CS",
+"lo": 75.0,
+"hi": 75.0
+},
+{
+"sol": "2000011162",
+"date": "2026-02-04",
+"material": "CHICKEN CUT UP FRZ CTN-40 LB",
+"qty": 38000.0,
+"uom": "LB",
+"lo": 1.6874,
+"hi": 1.6874
+},
+{
+"sol": "2000011162",
+"date": "2026-02-04",
+"material": "CHICKEN DRUMSTICKS FROZEN",
+"qty": 112100.0,
+"uom": "CS",
+"lo": 27.1094,
+"hi": 27.99
+},
+{
+"sol": "2000011162",
+"date": "2026-02-04",
+"material": "CHICKEN OVEN ROASTED FRZ 8 PC",
+"qty": 252000.0,
+"uom": "LB",
+"lo": 4.7395,
+"hi": 4.7722
+},
+{
+"sol": "2000011162",
+"date": "2026-02-04",
+"material": "CHICKEN STRIPS FRZ CTN-30 LB",
+"qty": 78000.0,
+"uom": "LB",
+"lo": 2.45,
+"hi": 2.45
+},
+{
+"sol": "2000011162",
+"date": "2026-02-04",
+"material": "CHICKEN WHOLE BAGGED FRZ",
+"qty": 3524400.0,
+"uom": "LB",
+"lo": 0.9204,
+"hi": 1.0149
+},
+{
+"sol": "2000011162",
+"date": "2026-02-04",
+"material": "K CHICKEN LEG QTRS FRZ BAG-4/10",
+"qty": 38000.0,
+"uom": "LB",
+"lo": 2.975,
+"hi": 2.975
+},
+{
+"sol": "2000011165",
+"date": "2026-02-05",
+"material": "BEEF SPP PTY HSTYLE CKD 2.0MMA",
+"qty": 38000.0,
+"uom": "LB",
+"lo": 4.7342,
+"hi": 4.7342
+},
+{
+"sol": "2000011165",
+"date": "2026-02-05",
+"material": "CHICKEN BONED CAN-24/12.5 OZ",
+"qty": 675000.0,
+"uom": "LB",
+"lo": 2.4022,
+"hi": 2.4356
+},
+{
+"sol": "2000011165",
+"date": "2026-02-05",
+"material": "PORK CAN-24/24 OZ",
+"qty": 36000.0,
+"uom": "LB",
+"lo": 2.0682,
+"hi": 2.0682
+},
+{
+"sol": "2000011166",
+"date": "2026-02-04",
+"material": "BEEF CRUMBLES W/SPP PKG-4/10 LB",
+"qty": 80000.0,
+"uom": "LB",
+"lo": 4.571,
+"hi": 4.756
+},
+{
+"sol": "2000011166",
+"date": "2026-02-04",
+"material": "CHICKEN PULLED CKD FRZ CTN-30 LB",
+"qty": 117000.0,
+"uom": "LB",
+"lo": 3.4146,
+"hi": 3.6197
+},
+{
+"sol": "2000011166",
+"date": "2026-02-04",
+"material": "PORK PULLED CKD PKG-8/5 LB",
+"qty": 80000.0,
+"uom": "LB",
+"lo": 2.4987,
+"hi": 2.6362
+},
+{
+"sol": "2000011168",
+"date": "2026-02-09",
+"material": "TURKEY CHILLED -BULK",
+"qty": 3996000.0,
+"uom": "LB",
+"lo": 1.84,
+"hi": 1.84
+},
+{
+"sol": "2000011168",
+"date": "2026-02-09",
+"material": "TURKEY THIGHS BNLS SKNLS",
+"qty": 216000.0,
+"uom": "LB",
+"lo": 3.5,
+"hi": 3.74
+},
+{
+"sol": "2000011169",
+"date": "2026-02-09",
+"material": "CHICKEN LARGE CHILLED -BULK",
+"qty": 12780000.0,
+"uom": "LB",
+"lo": 1.5884,
+"hi": 1.83
+},
+{
+"sol": "2000011169",
+"date": "2026-02-09",
+"material": "CHICKEN LEGS CHILLED -BULK",
+"qty": 1404000.0,
+"uom": "LB",
+"lo": 0.78,
+"hi": 0.8
+},
+{
+"sol": "2000011171",
+"date": "2026-02-06",
+"material": "K PEANUT BUTTER SMOOTH",
+"qty": 1969920.0,
+"uom": "LB",
+"lo": 1.0882,
+"hi": 2.04
+},
+{
+"sol": "2000011171",
+"date": "2026-02-06",
+"material": "PEANUT BUTTER SMOOTH JAR-12/16",
+"qty": 4354560.0,
+"uom": "LB",
+"lo": 1.0732,
+"hi": 1.2007
+},
+{
+"sol": "2000011171",
+"date": "2026-02-06",
+"material": "PEANUT BUTTER SMOOTH",
+"qty": 31185.0,
+"uom": "LB",
+"lo": 1.739,
+"hi": 1.739
+},
+{
+"sol": "2000011171",
+"date": "2026-02-06",
+"material": "PEANUTS ROASTED REG UNSL",
+"qty": 51840.0,
+"uom": "LB",
+"lo": 1.565,
+"hi": 1.573
+},
+{
+"sol": "2000011172",
+"date": "2026-02-09",
+"material": "BEEF CAN-24/24 OZ",
+"qty": 1440000.0,
+"uom": "LB",
+"lo": 4.9379,
+"hi": 5.175
+},
+{
+"sol": "2000011172",
+"date": "2026-02-09",
+"material": "BEEF CHILI W/BEANS PKG-12/15 OZ",
+"qty": 734400.0,
+"uom": "LB",
+"lo": 1.5347,
+"hi": 1.6037
+},
+{
+"sol": "2000011172",
+"date": "2026-02-09",
+"material": "BEEF STEW CAN-24/24 OZ",
+"qty": 2484000.0,
+"uom": "LB",
+"lo": 2.0387,
+"hi": 2.1697
+},
+{
+"sol": "2000011172",
+"date": "2026-02-09",
+"material": "PORK CAN-24/24 OZ",
+"qty": 504000.0,
+"uom": "LB",
+"lo": 2.0343,
+"hi": 2.1434
+},
+{
+"sol": "2000011174",
+"date": "2026-02-12",
+"material": "GRAPE CONCORD JUICE PLST",
+"qty": 800525.0,
+"uom": "CS",
+"lo": 17.17,
+"hi": 26.66
+},
+{
+"sol": "2000011175",
+"date": "2026-02-12",
+"material": "RAISINS BOX-144/1.33 OZ",
+"qty": 477204.0,
+"uom": "CS",
+"lo": 19.54,
+"hi": 26.41
+},
+{
+"sol": "2000011175",
+"date": "2026-02-12",
+"material": "RAISINS PKG-24/15 OZ",
+"qty": 300672.0,
+"uom": "CS",
+"lo": 28.37,
+"hi": 37.26
+},
+{
+"sol": "2000011176",
+"date": "2026-02-05",
+"material": "BEEF 100% PTY 90/10 FRZ 2.0MMA",
+"qty": 38000.0,
+"uom": "LB",
+"lo": 4.88,
+"hi": 4.88
+},
+{
+"sol": "2000011176",
+"date": "2026-02-05",
+"material": "BEEF COARSE GROUND FRZ CTN-60",
+"qty": 3276000.0,
+"uom": "LB",
+"lo": 4.15,
+"hi": 4.32
+},
+{
+"sol": "2000011176",
+"date": "2026-02-05",
+"material": "BEEF FINE GROUND FRZ CTN-40 LB",
+"qty": 320000.0,
+"uom": "LB",
+"lo": 4.2,
+"hi": 4.41
+},
+{
+"sol": "2000011176",
+"date": "2026-02-05",
+"material": "BEEF FINE GROUND FRZ PKG-40/1 LB",
+"qty": 480000.0,
+"uom": "LB",
+"lo": 4.32,
+"hi": 4.45
+},
+{
+"sol": "2000011176",
+"date": "2026-02-05",
+"material": "BEEF FRESH BNLS BULK",
+"qty": 520000.0,
+"uom": "LB",
+"lo": 4.1388,
+"hi": 4.15
+},
+{
+"sol": "2000011183",
+"date": "2026-02-18",
+"material": "BEANS, GARBANZO, KABULI BAG-50",
+"qty": 80.0,
+"uom": "MT",
+"lo": 696.04,
+"hi": 696.04
+},
+{
+"sol": "2000011183",
+"date": "2026-02-18",
+"material": "BEANS, GREAT NORTHERN BAG-50",
+"qty": 80.0,
+"uom": "MT",
+"lo": 932.74,
+"hi": 932.74
+},
+{
+"sol": "2000011183",
+"date": "2026-02-18",
+"material": "BEANS, SMALL RED BAG-50 KG",
+"qty": 80.0,
+"uom": "MT",
+"lo": 949.39,
+"hi": 949.39
+},
+{
+"sol": "2000011183",
+"date": "2026-02-18",
+"material": "CORN-SOY BLEND PLUS BAG-HP-25",
+"qty": 610.0,
+"uom": "MT",
+"lo": 866.22,
+"hi": 879.47
+},
+{
+"sol": "2000011183",
+"date": "2026-02-18",
+"material": "LENTILS BAG-50 KG",
+"qty": 550.0,
+"uom": "MT",
+"lo": 478.13,
+"hi": 564.95
+},
+{
+"sol": "2000011183",
+"date": "2026-02-18",
+"material": "OIL, VEGETABLE CAN-6/4 L",
+"qty": 250.056,
+"uom": "MT",
+"lo": 1955.12,
+"hi": 2446.34
+},
+{
+"sol": "2000011183",
+"date": "2026-02-18",
+"material": "PEAS, YELLOW, SPLIT BAG-50 KG",
+"qty": 80.0,
+"uom": "MT",
+"lo": 482.87,
+"hi": 482.87
+},
+{
+"sol": "2000011183",
+"date": "2026-02-18",
+"material": "RICE, 5/20 LG, W-MLD, FORT BAG-50",
+"qty": 1940.0,
+"uom": "MT",
+"lo": 494.28,
+"hi": 494.28
+},
+{
+"sol": "2000011183",
+"date": "2026-02-18",
+"material": "WHEAT, HARD RED WINTER BAG-50",
+"qty": 820.0,
+"uom": "MT",
+"lo": 352.75,
+"hi": 352.75
+},
+{
+"sol": "2000011183",
+"date": "2026-02-18",
+"material": "WHEAT, SOFT WHITE BAG-50 KG",
+"qty": 470.0,
+"uom": "MT",
+"lo": 349.75,
+"hi": 349.75
+},
+{
+"sol": "2000011187",
+"date": "2026-02-12",
+"material": "APPLES FOR FURTHER PROCESSING -",
+"qty": 1464154.0,
+"uom": "LB",
+"lo": 0.449,
+"hi": 0.549
+},
+{
+"sol": "2000011195",
+"date": "2026-03-03",
+"material": "BEANS, PINTO BAG-50 KG",
+"qty": 210.0,
+"uom": "MT",
+"lo": 723.75,
+"hi": 733.19
+},
+{
+"sol": "2000011195",
+"date": "2026-03-03",
+"material": "BULGUR    BAG-50 KG",
+"qty": 390.0,
+"uom": "MT",
+"lo": 824.0,
+"hi": 824.0
+},
+{
+"sol": "2000011195",
+"date": "2026-03-03",
+"material": "LENTILS BAG-50 KG",
+"qty": 140.0,
+"uom": "MT",
+"lo": 691.0,
+"hi": 691.0
+},
+{
+"sol": "2000011195",
+"date": "2026-03-03",
+"material": "OIL, VEGETABLE CAN-6/4 L",
+"qty": 90.031,
+"uom": "MT",
+"lo": 2077.77,
+"hi": 2587.25
+},
+{
+"sol": "2000011195",
+"date": "2026-03-03",
+"material": "RICE, 5/20 LG, W-MLD, FORT BAG-50",
+"qty": 460.0,
+"uom": "MT",
+"lo": 505.08,
+"hi": 505.08
+},
+{
+"sol": "2000011205",
+"date": "2026-02-27",
+"material": "FLOUR WHITE WHOLE WHEAT 100%",
+"qty": 40000.0,
+"uom": "LB",
+"lo": 0.35,
+"hi": 0.35
+},
+{
+"sol": "2000011205",
+"date": "2026-02-27",
+"material": "PASTA MACARONI PLAIN ELBOW",
+"qty": 213120.0,
+"uom": "LB",
+"lo": 0.7829,
+"hi": 0.8545
+},
+{
+"sol": "2000011205",
+"date": "2026-02-27",
+"material": "PASTA SPAGHETTI BOX-20/1 LB",
+"qty": 147200.0,
+"uom": "LB",
+"lo": 0.7974,
+"hi": 0.8124
+},
+{
+"sol": "2000011207",
+"date": "2026-03-09",
+"material": "BEEF 100% PTY 85/15 FRZ 2.0MMA",
+"qty": 38000.0,
+"uom": "LB",
+"lo": 4.56,
+"hi": 4.56
+},
+{
+"sol": "2000011207",
+"date": "2026-03-09",
+"material": "BEEF 100% PTY 90/10 FRZ 2.0MMA",
+"qty": 38000.0,
+"uom": "LB",
+"lo": 5.34,
+"hi": 5.34
+},
+{
+"sol": "2000011207",
+"date": "2026-03-09",
+"material": "BEEF BNLS SPECIAL TRM FRZ CTN-60",
+"qty": 42000.0,
+"uom": "LB",
+"lo": 5.32,
+"hi": 5.32
+},
+{
+"sol": "2000011207",
+"date": "2026-03-09",
+"material": "BEEF COARSE GROUND FRZ CTN-60",
+"qty": 2940000.0,
+"uom": "LB",
+"lo": 4.1215,
+"hi": 4.35
+},
+{
+"sol": "2000011207",
+"date": "2026-03-09",
+"material": "BEEF FINE GROUND FRZ CTN-40 LB",
+"qty": 40000.0,
+"uom": "LB",
+"lo": 4.38,
+"hi": 4.38
+},
+{
+"sol": "2000011207",
+"date": "2026-03-09",
+"material": "BEEF FINE GROUND FRZ PKG-40/1 LB",
+"qty": 280000.0,
+"uom": "LB",
+"lo": 4.34,
+"hi": 4.46
+},
+{
+"sol": "2000011207",
+"date": "2026-03-09",
+"material": "BEEF FRESH BNLS BULK",
+"qty": 320000.0,
+"uom": "LB",
+"lo": 4.2415,
+"hi": 4.2415
+},
+{
+"sol": "2000011210",
+"date": "2026-03-18",
+"material": "CHICKEN LARGE CHILLED -BULK",
+"qty": 12420000.0,
+"uom": "LB",
+"lo": 1.595,
+"hi": 1.83
+},
+{
+"sol": "2000011210",
+"date": "2026-03-18",
+"material": "CHICKEN LEGS CHILLED -BULK",
+"qty": 108000.0,
+"uom": "LB",
+"lo": 0.82,
+"hi": 0.82
+},
+{
+"sol": "2000011214",
+"date": "2026-03-20",
+"material": "CHICKEN CONSUMER SPLT BREAST",
+"qty": 5200.0,
+"uom": "CS",
+"lo": 125.4,
+"hi": 125.4
+},
+{
+"sol": "2000011214",
+"date": "2026-03-20",
+"material": "CHICKEN DRUMSTICKS FROZEN",
+"qty": 3800.0,
+"uom": "CS",
+"lo": 34.7317,
+"hi": 34.7317
+},
+{
+"sol": "2000011215",
+"date": "2026-03-19",
+"material": "TURKEY CHILLED -BULK",
+"qty": 1440000.0,
+"uom": "LB",
+"lo": 1.84,
+"hi": 1.84
+},
+{
+"sol": "2000011215",
+"date": "2026-03-19",
+"material": "TURKEY THIGHS BNLS SKNLS",
+"qty": 72000.0,
+"uom": "LB",
+"lo": 3.74,
+"hi": 3.74
+},
+{
+"sol": "2000011217",
+"date": "2026-03-17",
+"material": "PEARS BOSC FRESH CTN-40 LB",
+"qty": 90160.0,
+"uom": "CS",
+"lo": 18.891,
+"hi": 46.878
+},
+{
+"sol": "2000011217",
+"date": "2026-03-17",
+"material": "PEARS FRESH PKG-12/3 LB",
+"qty": 240100.0,
+"uom": "CS",
+"lo": 23.326,
+"hi": 43.208
+},
+{
+"sol": "2000011225",
+"date": "2026-04-03",
+"material": "CHEESE CHED YEL CHUNKS-PKG 12/1",
+"qty": 3553200.0,
+"uom": "LB",
+"lo": 2.1483,
+"hi": 2.42
+},
+{
+"sol": "2000011225",
+"date": "2026-04-03",
+"material": "CHEESE CHED YEL CHUNKS-PKG 12/2",
+"qty": 2574000.0,
+"uom": "LB",
+"lo": 2.1645,
+"hi": 2.42
+},
+{
+"sol": "2000011225",
+"date": "2026-04-03",
+"material": "CHEESE CHED YEL SHRED-PKG 12/1",
+"qty": 2129400.0,
+"uom": "LB",
+"lo": 2.1975,
+"hi": 2.5999
+},
+{
+"sol": "2000011225",
+"date": "2026-04-03",
+"material": "CHEESE CHED YEL SHRED-PKG 6/2 LB",
+"qty": 3528000.0,
+"uom": "LB",
+"lo": 2.0936,
+"hi": 2.2986
+},
+{
+"sol": "2000011225",
+"date": "2026-04-03",
+"material": "CHEESE PROCESS YEL SLC LVS-6/5",
+"qty": 1980000.0,
+"uom": "LB",
+"lo": 2.2207,
+"hi": 2.3715
+},
+{
+"sol": "2000011225",
+"date": "2026-04-03",
+"material": "NATURAL SWISS CHEESE SLICES-PKG",
+"qty": 2702700.0,
+"uom": "LB",
+"lo": 2.91,
+"hi": 3.9
+},
+{
+"sol": "2000011229",
+"date": "2026-04-02",
+"material": "BUTTER PRINT SALTED CTN-36/1 LB",
+"qty": 29836080.0,
+"uom": "LB",
+"lo": 2.1444,
+"hi": 2.8862
+},
+{
+"sol": "2000011238",
+"date": "2026-04-09",
+"material": "BEEF COARSE GROUND FRZ CTN-60",
+"qty": 1176000.0,
+"uom": "LB",
+"lo": 4.29,
+"hi": 4.4327
+},
+{
+"sol": "2000011238",
+"date": "2026-04-09",
+"material": "BEEF FINE GROUND FRZ PKG-40/1 LB",
+"qty": 560000.0,
+"uom": "LB",
+"lo": 4.52,
+"hi": 4.67
+},
+{
+"sol": "2000011238",
+"date": "2026-04-09",
+"material": "BEEF FRESH BNLS BULK",
+"qty": 40000.0,
+"uom": "LB",
+"lo": 4.4,
+"hi": 4.4
+},
+{
+"sol": "2000011245",
+"date": "2026-04-09",
+"material": "CHICKEN LARGE CHILLED -BULK",
+"qty": 972000.0,
+"uom": "LB",
+"lo": 1.595,
+"hi": 1.6569
+},
+{
+"sol": "2000011245",
+"date": "2026-04-09",
+"material": "CHICKEN LEGS CHILLED -BULK",
+"qty": 36000.0,
+"uom": "LB",
+"lo": 0.96,
+"hi": 0.96
+},
+{
+"sol": "2000011259",
+"date": "2026-04-30",
+"material": "BLK BEAN BGR PTY IQF 2.0 MMA",
+"qty": 7644.0,
+"uom": "CS",
+"lo": 111.0,
+"hi": 116.1
+},
+{
+"sol": "2000011259",
+"date": "2026-04-30",
+"material": "BROCCOLI FRZ CTN-30 LB",
+"qty": 174636.0,
+"uom": "CS",
+"lo": 51.51,
+"hi": 61.31
+},
+{
+"sol": "2000011259",
+"date": "2026-04-30",
+"material": "CARROTS DICED FRZ CTN-30 LB",
+"qty": 10560.0,
+"uom": "CS",
+"lo": 15.93,
+"hi": 20.52
+},
+{
+"sol": "2000011263",
+"date": "2026-04-15",
+"material": "GRAPE CONCORD JUICE PLST",
+"qty": 205000.0,
+"uom": "CS",
+"lo": 17.05,
+"hi": 23.05
+},
+{
+"sol": "2000011274",
+"date": "2026-04-21",
+"material": "CORN-SOY BLEND PLUS BAG-HP-25",
+"qty": 520.0,
+"uom": "MT",
+"lo": 871.09,
+"hi": 1029.87
+},
+{
+"sol": "2000011274",
+"date": "2026-04-21",
+"material": "OIL, VEGETABLE BOTTLE, PLS-6/4 L",
+"qty": 20.017,
+"uom": "MT",
+"lo": 2240.04,
+"hi": 2240.04
+},
+{
+"sol": "2000011274",
+"date": "2026-04-21",
+"material": "OIL, VEGETABLE CAN-6/4 L",
+"qty": 120.035,
+"uom": "MT",
+"lo": 2366.5,
+"hi": 2588.25
+},
+{
+"sol": "2000011274",
+"date": "2026-04-21",
+"material": "RICE, 5/20 LG, W-MLD, FORT BAG-50",
+"qty": 600.0,
+"uom": "MT",
+"lo": 505.08,
+"hi": 505.08
+},
+{
+"sol": "2000011277",
+"date": "2026-04-28",
+"material": "CHEESE CHED YEL CHUNKS-PKG 12/1",
+"qty": 415800.0,
+"uom": "LB",
+"lo": 2.2333,
+"hi": 2.3263
+},
+{
+"sol": "2000011277",
+"date": "2026-04-28",
+"material": "CHEESE CHED YEL SHRED-PKG 6/2 LB",
+"qty": 235200.0,
+"uom": "LB",
+"lo": 2.1221,
+"hi": 2.2039
+},
+{
+"sol": "2000011277",
+"date": "2026-04-28",
+"material": "CHEESE MOZ LM PT SKM STRING",
+"qty": 1263150.0,
+"uom": "LB",
+"lo": 2.6898,
+"hi": 2.9966
+},
+{
+"sol": "2000011277",
+"date": "2026-04-28",
+"material": "CHEESE PEPPER JACK SHRED-PKG 4/5",
+"qty": 38800.0,
+"uom": "LB",
+"lo": 2.1712,
+"hi": 2.1712
+},
+{
+"sol": "2000011278",
+"date": "2026-04-27",
+"material": "TURKEY CHILLED -BULK",
+"qty": 396000.0,
+"uom": "LB",
+"lo": 1.84,
+"hi": 1.84
+},
+{
+"sol": "2000011278",
+"date": "2026-04-27",
+"material": "TURKEY THIGHS BNLS SKNLS",
+"qty": 72000.0,
+"uom": "LB",
+"lo": 3.64,
+"hi": 3.64
+},
+{
+"sol": "2000011280",
+"date": "2026-04-28",
+"material": "APPLE SLICES FRZ CTN-12/2.5 LB",
+"qty": 2640.0,
+"uom": "CS",
+"lo": 37.62,
+"hi": 40.98
+},
+{
+"sol": "2000011280",
+"date": "2026-04-28",
+"material": "APPLE SLICES FRZ CTN-30 LB",
+"qty": 1320.0,
+"uom": "CS",
+"lo": 28.61,
+"hi": 28.61
+},
+{
+"sol": "2000011280",
+"date": "2026-04-28",
+"material": "APPLESAUCE CAN-24/300",
+"qty": 105300.0,
+"uom": "CS",
+"lo": 17.63,
+"hi": 20.42
+},
+{
+"sol": "2000011280",
+"date": "2026-04-28",
+"material": "APPLESAUCE CUP SLEEVE-6/4 OZ",
+"qty": 1820.0,
+"uom": "CS",
+"lo": 15.5,
+"hi": 15.5
+},
+{
+"sol": "2000011280",
+"date": "2026-04-28",
+"material": "APPLESAUCE CUP-96/4.5",
+"qty": 343000.0,
+"uom": "CS",
+"lo": 17.3,
+"hi": 21.69
+},
+{
+"sol": "2000011280",
+"date": "2026-04-28",
+"material": "APPLESAUCE UNSWEETENED",
+"qty": 117648.0,
+"uom": "CS",
+"lo": 25.51,
+"hi": 31.05
+},
+{
+"sol": "2000011280",
+"date": "2026-04-28",
+"material": "BLUEBERRY HIGHBUSH FRZ",
+"qty": 30360.0,
+"uom": "CS",
+"lo": 41.49,
+"hi": 51.15
+},
+{
+"sol": "2000011280",
+"date": "2026-04-28",
+"material": "BLUEBERRY HIGHBUSH FRZ CTN-30",
+"qty": 17160.0,
+"uom": "CS",
+"lo": 40.59,
+"hi": 43.53
+},
+{
+"sol": "2000011280",
+"date": "2026-04-28",
+"material": "CHERRIES SWEET PITTED IQF",
+"qty": 2640.0,
+"uom": "CS",
+"lo": 68.99,
+"hi": 75.9
+},
+{
+"sol": "2000011280",
+"date": "2026-04-28",
+"material": "CRANBERRY SAUCE CAN-24/300",
+"qty": 4590.0,
+"uom": "CS",
+"lo": 30.56,
+"hi": 31.91
+},
+{
+"sol": "2000011280",
+"date": "2026-04-28",
+"material": "PLUMS PURPLE CAN-24/300",
+"qty": 14580.0,
+"uom": "CS",
+"lo": 16.69,
+"hi": 21.82
+},
+{
+"sol": "2000011282",
+"date": "2026-04-28",
+"material": "EGGNOODLE 1/2 INCH WIDE PKG-12/1",
+"qty": 552960.0,
+"uom": "LB",
+"lo": 2.42,
+"hi": 2.66
+},
+{
+"sol": "2000011282",
+"date": "2026-04-28",
+"material": "MACARONI AND CHEESE PKG-24/7.25",
+"qty": 3277638.0,
+"uom": "LB",
+"lo": 0.8205,
+"hi": 0.9758
+},
+{
+"sol": "2000011282",
+"date": "2026-04-28",
+"material": "PASTA MACARONI PLAIN ELBOW",
+"qty": 3587520.0,
+"uom": "LB",
+"lo": 0.7968,
+"hi": 0.948
+},
+{
+"sol": "2000011282",
+"date": "2026-04-28",
+"material": "PASTA SPAGHETTI BOX-20/1 LB",
+"qty": 4820800.0,
+"uom": "LB",
+"lo": 0.7263,
+"hi": 0.9175
+},
+{
+"sol": "2000011282",
+"date": "2026-04-28",
+"material": "PASTA SPAGHETTI CTN-20 LB",
+"qty": 280000.0,
+"uom": "LB",
+"lo": 0.91,
+"hi": 1.0
+},
+{
+"sol": "2000011282",
+"date": "2026-04-28",
+"material": "WHOLE GRAIN BLEND MACARONI",
+"qty": 280000.0,
+"uom": "LB",
+"lo": 1.18,
+"hi": 1.34
+},
+{
+"sol": "2000011282",
+"date": "2026-04-28",
+"material": "WHOLE GRAIN BLEND PENNE",
+"qty": 340200.0,
+"uom": "LB",
+"lo": 1.16,
+"hi": 1.3
+},
+{
+"sol": "2000011282",
+"date": "2026-04-28",
+"material": "WHOLE GRAIN BLEND ROTINI MAC",
+"qty": 140000.0,
+"uom": "LB",
+"lo": 1.2,
+"hi": 1.25
+},
+{
+"sol": "2000011282",
+"date": "2026-04-28",
+"material": "WHOLE GRAIN BLEND SPAGHETTI",
+"qty": 280000.0,
+"uom": "LB",
+"lo": 1.26,
+"hi": 1.34
+},
+{
+"sol": "2000011282",
+"date": "2026-04-28",
+"material": "WHOLE GRAIN PASTA ROTINI MAC",
+"qty": 810000.0,
+"uom": "LB",
+"lo": 1.86,
+"hi": 1.93
+},
+{
+"sol": "2000011284",
+"date": "2026-04-30",
+"material": "APPLE JUICE PLST BTL-8/64 FL OZ",
+"qty": 149650.0,
+"uom": "CS",
+"lo": 15.03,
+"hi": 22.04
+},
+{
+"sol": "2000011284",
+"date": "2026-04-30",
+"material": "APPLE JUICE SINGLE FRZ CUP-96/4",
+"qty": 177408.0,
+"uom": "CS",
+"lo": 15.91,
+"hi": 20.95
+},
+{
+"sol": "2000011284",
+"date": "2026-04-30",
+"material": "CHERRY APPLE JUICE PLST BTL-8/64",
+"qty": 56375.0,
+"uom": "CS",
+"lo": 20.83,
+"hi": 26.72
+},
+{
+"sol": "2000011284",
+"date": "2026-04-30",
+"material": "CRANBERRYAPPLE JUICE PLST",
+"qty": 74825.0,
+"uom": "CS",
+"lo": 18.49,
+"hi": 26.94
+},
+{
+"sol": "2000011284",
+"date": "2026-04-30",
+"material": "GRAPE CONCORD JUICE PLST",
+"qty": 63550.0,
+"uom": "CS",
+"lo": 16.88,
+"hi": 20.86
+},
+{
+"sol": "2000011284",
+"date": "2026-04-30",
+"material": "ORANGE JUICE PLST BTL-8/64 FL OZ",
+"qty": 75850.0,
+"uom": "CS",
+"lo": 25.95,
+"hi": 32.36
+},
+{
+"sol": "2000011284",
+"date": "2026-04-30",
+"material": "TOMATO JUICE PLST BTL-8/64 FL OZ",
+"qty": 29725.0,
+"uom": "CS",
+"lo": 12.6,
+"hi": 16.92
+},
+{
+"sol": "2000011285",
+"date": "2026-05-01",
+"material": "YOGURT HI PROTEIN BLUEBERRY",
+"qty": 525384.0,
+"uom": "LB",
+"lo": 1.497,
+"hi": 1.715
+},
+{
+"sol": "2000011285",
+"date": "2026-05-01",
+"material": "YOGURT HI PROTEIN STRAWBERRY",
+"qty": 412782.0,
+"uom": "LB",
+"lo": 1.497,
+"hi": 1.715
+},
+{
+"sol": "2000011285",
+"date": "2026-05-01",
+"material": "YOGURT HI PROTEIN VANILLA",
+"qty": 457602.0,
+"uom": "LB",
+"lo": 1.497,
+"hi": 1.715
+},
+{
+"sol": "2000011285",
+"date": "2026-05-01",
+"material": "YOGURT HI PROTEIN",
+"qty": 47700.0,
+"uom": "LB",
+"lo": 1.95,
+"hi": 1.95
+},
+{
+"sol": "2000011287",
+"date": "2026-04-29",
+"material": "OIL EXTRA VIRGIN OLIVE BTL-6/16.9",
+"qty": 23520.0,
+"uom": "CS",
+"lo": 63.0,
+"hi": 63.0
+},
+{
+"sol": "2000011289",
+"date": "2026-04-30",
+"material": "K OIL VEGETABLE BTL-6/1 GAL",
+"qty": 295680.0,
+"uom": "LB",
+"lo": 1.0679,
+"hi": 1.0679
+},
+{
+"sol": "2000011289",
+"date": "2026-04-30",
+"material": "OIL VEGETABLE BTL-6/1 GAL",
+"qty": 1145760.0,
+"uom": "LB",
+"lo": 1.064,
+"hi": 1.2176
+},
+{
+"sol": "2000011289",
+"date": "2026-04-30",
+"material": "OIL VEGETABLE BTL-9/48 OZ",
+"qty": 2956338.007,
+"uom": "LB",
+"lo": 1.0915,
+"hi": 1.2313
+},
+{
+"sol": "2000011298",
+"date": "2026-06-12",
+"material": "K APPLESAUCE CAN-6/10",
+"qty": 8208.0,
+"uom": "CS",
+"lo": 29.99,
+"hi": 29.99
+},
+{
+"sol": "2000011298",
+"date": "2026-06-12",
+"material": "K BEANS GARBANZO CAN-6/10",
+"qty": 2592.0,
+"uom": "CS",
+"lo": 29.98,
+"hi": 29.98
+},
+{
+"sol": "2000011298",
+"date": "2026-06-12",
+"material": "K BEANS GREAT NORTHERN DRY",
+"qty": 1600.0,
+"uom": "CS",
+"lo": 18.25,
+"hi": 18.25
+},
+{
+"sol": "2000011298",
+"date": "2026-06-12",
+"material": "K CORN WHOLE KERNEL(LIQ)",
+"qty": 8208.0,
+"uom": "CS",
+"lo": 26.32,
+"hi": 29.07
+},
+{
+"sol": "2000011298",
+"date": "2026-06-12",
+"material": "K PEACH FREESTONEDICED FRZ",
+"qty": 4200.0,
+"uom": "CS",
+"lo": 40.25,
+"hi": 40.25
+},
+{
+"sol": "2000011298",
+"date": "2026-06-12",
+"material": "K PEACHES CLING CAN-6/10",
+"qty": 9120.0,
+"uom": "CS",
+"lo": 50.46,
+"hi": 50.46
+},
+{
+"sol": "2000011298",
+"date": "2026-06-12",
+"material": "K PEARS SLICES CAN-6/10",
+"qty": 6384.0,
+"uom": "CS",
+"lo": 48.81,
+"hi": 48.81
+},
+{
+"sol": "2000011298",
+"date": "2026-06-12",
+"material": "K TOMATO PASTE CAN-6/10",
+"qty": 912.0,
+"uom": "CS",
+"lo": 45.66,
+"hi": 45.66
+},
+{
+"sol": "2000011298",
+"date": "2026-06-12",
+"material": "K TOMATO SAUCE CAN-6/10",
+"qty": 1824.0,
+"uom": "CS",
+"lo": 34.33,
+"hi": 34.33
+},
+{
+"sol": "2000011299",
+"date": "2026-05-07",
+"material": "TURKEY BREAST DELI SLC FRZ PKG",
+"qty": 76800.0,
+"uom": "LB",
+"lo": 5.57,
+"hi": 5.57
+},
+{
+"sol": "2000011299",
+"date": "2026-05-07",
+"material": "TURKEY BREAST DELI SLICED FRZ",
+"qty": 1036800.0,
+"uom": "LB",
+"lo": 4.78,
+"hi": 5.12
+},
+{
+"sol": "2000011299",
+"date": "2026-05-07",
+"material": "TURKEY BREAST SMKD SLC FRZ PKG",
+"qty": 153600.0,
+"uom": "LB",
+"lo": 5.15,
+"hi": 5.15
+},
+{
+"sol": "2000011299",
+"date": "2026-05-07",
+"material": "TURKEY ROASTS FRZ CTN-32-48 LB",
+"qty": 480000.0,
+"uom": "LB",
+"lo": 4.25,
+"hi": 4.25
+},
+{
+"sol": "2000011299",
+"date": "2026-05-07",
+"material": "TURKEY TACO FILLING CTN-30 LB",
+"qty": 1365000.0,
+"uom": "LB",
+"lo": 2.961,
+"hi": 3.128
+},
+{
+"sol": "2000011300",
+"date": "2026-05-05",
+"material": "NECTARINES FRESH BAG PKG-12/2 LB",
+"qty": 244800.0,
+"uom": "CS",
+"lo": 23.56,
+"hi": 40.72
+},
+{
+"sol": "2000011300",
+"date": "2026-05-05",
+"material": "PLUMS FRESH CTN-28 LB",
+"qty": 303280.0,
+"uom": "CS",
+"lo": 20.41,
+"hi": 56.84
+},
+{
+"sol": "2000011302",
+"date": "2026-04-29",
+"material": "STRAWBERRY WHOLE UNSWT IQF",
+"qty": 248160.0,
+"uom": "CS",
+"lo": 43.83,
+"hi": 54.77
+},
+{
+"sol": "2000011303",
+"date": "2026-05-08",
+"material": "BEEF CAN-24/24 OZ",
+"qty": 1188000.0,
+"uom": "LB",
+"lo": 5.188,
+"hi": 5.3061
+},
+{
+"sol": "2000011303",
+"date": "2026-05-08",
+"material": "BEEF CHILI W/BEANS PKG-12/15 OZ",
+"qty": 881280.0,
+"uom": "LB",
+"lo": 1.543,
+"hi": 1.69
+},
+{
+"sol": "2000011303",
+"date": "2026-05-08",
+"material": "BEEF STEW CAN-24/24 OZ",
+"qty": 2160000.0,
+"uom": "LB",
+"lo": 2.1807,
+"hi": 2.4671
+},
+{
+"sol": "2000011303",
+"date": "2026-05-08",
+"material": "CHICKEN BONED CAN-24/12.5 OZ",
+"qty": 2801250.0,
+"uom": "LB",
+"lo": 2.3609,
+"hi": 2.5443
+},
+{
+"sol": "2000011303",
+"date": "2026-05-08",
+"material": "CHICKEN BONED POUCH-36/10 OZ",
+"qty": 43200.0,
+"uom": "CS",
+"lo": 45.0231,
+"hi": 47.365
+},
+{
+"sol": "2000011303",
+"date": "2026-05-08",
+"material": "PORK CAN-24/24 OZ",
+"qty": 720000.0,
+"uom": "LB",
+"lo": 2.0437,
+"hi": 2.1891
+},
+{
+"sol": "2000011304",
+"date": "2026-05-05",
+"material": "CRANBERRIES DRIED PKG-300/1.16 OZ",
+"qty": 55500.0,
+"uom": "CS",
+"lo": 57.71,
+"hi": 70.25
+},
+{
+"sol": "2000011304",
+"date": "2026-05-05",
+"material": "FRUIT AND NUT MIX DRIED PKG-24/1",
+"qty": 1456.0,
+"uom": "CS",
+"lo": 101.68,
+"hi": 101.68
+},
+{
+"sol": "2000011304",
+"date": "2026-05-05",
+"material": "PLUMS PITTED DRIED PKG-24/1 LB",
+"qty": 3000.0,
+"uom": "CS",
+"lo": 44.4,
+"hi": 46.32
+},
+{
+"sol": "2000011304",
+"date": "2026-05-05",
+"material": "RAISINS BOX-144/1.33 OZ",
+"qty": 88920.0,
+"uom": "CS",
+"lo": 18.44,
+"hi": 21.54
+},
+{
+"sol": "2000011304",
+"date": "2026-05-05",
+"material": "RAISINS PKG-24/15 OZ",
+"qty": 15552.0,
+"uom": "CS",
+"lo": 26.25,
+"hi": 31.11
+},
+{
+"sol": "2000011306",
+"date": "2026-05-08",
+"material": "BEEF PATTY CKD FRZ 2.0 MMA",
+"qty": 380000.0,
+"uom": "LB",
+"lo": 6.151,
+"hi": 6.368
+},
+{
+"sol": "2000011306",
+"date": "2026-05-08",
+"material": "BEEF SPP PTY HSTYLE CKD 2.0MMA",
+"qty": 190000.0,
+"uom": "LB",
+"lo": 4.577,
+"hi": 4.612
+},
+{
+"sol": "2000011308",
+"date": "2026-05-06",
+"material": "BEANS, BLACK BAG-50 KG",
+"qty": 800.0,
+"uom": "MT",
+"lo": 675.0,
+"hi": 964.45
+},
+{
+"sol": "2000011308",
+"date": "2026-05-06",
+"material": "BEANS, PINTO BAG-50 KG",
+"qty": 2100.0,
+"uom": "MT",
+"lo": 683.54,
+"hi": 839.95
+},
+{
+"sol": "2000011308",
+"date": "2026-05-06",
+"material": "CORN-SOY BLEND PLUS BAG-HP-25",
+"qty": 260.0,
+"uom": "MT",
+"lo": 986.76,
+"hi": 986.76
+},
+{
+"sol": "2000011308",
+"date": "2026-05-06",
+"material": "CORNMEAL BAG-HP-25 KG",
+"qty": 8000.0,
+"uom": "MT",
+"lo": 552.25,
+"hi": 781.98
+},
+{
+"sol": "2000011308",
+"date": "2026-05-06",
+"material": "CSB SUPER CEREAL PLUS BOX-10/1.5",
+"qty": 2290.035,
+"uom": "MT",
+"lo": 2046.11,
+"hi": 2842.23
+},
+{
+"sol": "2000011308",
+"date": "2026-05-06",
+"material": "EMERGNCY FD, LNS-MQ",
+"qty": 40.005,
+"uom": "MT",
+"lo": 3000.0,
+"hi": 3000.0
+},
+{
+"sol": "2000011308",
+"date": "2026-05-06",
+"material": "EMERGNCY FD, RUSF POUCH-150/100",
+"qty": 1200.015,
+"uom": "MT",
+"lo": 2680.0,
+"hi": 2820.0
+},
+{
+"sol": "2000011308",
+"date": "2026-05-06",
+"material": "LENTILS BAG-50 KG",
+"qty": 150.0,
+"uom": "MT",
+"lo": 582.99,
+"hi": 582.99
+},
+{
+"sol": "2000011308",
+"date": "2026-05-06",
+"material": "OIL, VEGETABLE CAN-6/4 L",
+"qty": 3560.068,
+"uom": "MT",
+"lo": 2408.91,
+"hi": 2998.78
+},
+{
+"sol": "2000011308",
+"date": "2026-05-06",
+"material": "PEAS, GREEN, SPLIT BAG-50 KG",
+"qty": 290.0,
+"uom": "MT",
+"lo": 532.0,
+"hi": 740.0
+},
+{
+"sol": "2000011308",
+"date": "2026-05-06",
+"material": "RICE, 5/20 LG, W-MLD, FORT BAG-50",
+"qty": 8910.0,
+"uom": "MT",
+"lo": 491.57,
+"hi": 495.17
+},
+{
+"sol": "2000011311",
+"date": "2026-05-06",
+"material": "CHICKEN BREAST BNLS IQF PKG-10/3",
+"qty": 33696.0,
+"uom": "CS",
+"lo": 70.5,
+"hi": 70.5
+},
+{
+"sol": "2000011311",
+"date": "2026-05-06",
+"material": "CHICKEN CUT UP FRZ CTN-40 LB",
+"qty": 684000.0,
+"uom": "LB",
+"lo": 1.95,
+"hi": 1.95
+},
+{
+"sol": "2000011311",
+"date": "2026-05-06",
+"material": "CHICKEN DRUMSTICKS FROZEN",
+"qty": 109250.0,
+"uom": "CS",
+"lo": 26.4,
+"hi": 26.4
+},
+{
+"sol": "2000011311",
+"date": "2026-05-06",
+"material": "CHICKEN FILLETS UNBRD FRZ CTN-30",
+"qty": 390000.0,
+"uom": "LB",
+"lo": 2.7806,
+"hi": 5.269
+},
+{
+"sol": "2000011311",
+"date": "2026-05-06",
+"material": "CHICKEN OVEN ROASTED FRZ 8 PC",
+"qty": 1476000.0,
+"uom": "LB",
+"lo": 4.7069,
+"hi": 4.7069
+},
+{
+"sol": "2000011311",
+"date": "2026-05-06",
+"material": "CHICKEN STRIPS FRZ CTN-30 LB",
+"qty": 1326000.0,
+"uom": "LB",
+"lo": 2.4,
+"hi": 2.4459
+},
+{
+"sol": "2000011311",
+"date": "2026-05-06",
+"material": "CHICKEN WHOLE BAGGED FRZ",
+"qty": 4197600.0,
+"uom": "LB",
+"lo": 0.88,
+"hi": 0.88
+},
+{
+"sol": "2000011312",
+"date": "2026-05-18",
+"material": "TURKEY CHILLED -BULK",
+"qty": 2304000.0,
+"uom": "LB",
+"lo": 1.84,
+"hi": 1.84
+},
+{
+"sol": "2000011312",
+"date": "2026-05-18",
+"material": "TURKEY THIGHS BNLS SKNLS",
+"qty": 216000.0,
+"uom": "LB",
+"lo": 3.44,
+"hi": 3.49
+},
+{
+"sol": "2000011315",
+"date": "2026-05-11",
+"material": "K PEANUT BUTTER SMOOTH",
+"qty": 2177280.0,
+"uom": "LB",
+"lo": 1.0903,
+"hi": 1.2365
+},
+{
+"sol": "2000011315",
+"date": "2026-05-11",
+"material": "PEANUT BUTTER SMOOTH JAR-12/16",
+"qty": 4734720.0,
+"uom": "LB",
+"lo": 1.0807,
+"hi": 1.1762
+},
+{
+"sol": "2000011315",
+"date": "2026-05-11",
+"material": "PEANUT BUTTER SMOOTH JAR-6/5 LB",
+"qty": 517440.0,
+"uom": "LB",
+"lo": 1.13,
+"hi": 1.17
+},
+{
+"sol": "2000011315",
+"date": "2026-05-11",
+"material": "PEANUT BUTTER SMOOTH",
+"qty": 155925.0,
+"uom": "LB",
+"lo": 1.69,
+"hi": 1.74
+},
+{
+"sol": "2000011315",
+"date": "2026-05-11",
+"material": "PEANUTS ROASTED REG UNSL",
+"qty": 25920.0,
+"uom": "LB",
+"lo": 1.753,
+"hi": 1.753
+},
+{
+"sol": "2000011316",
+"date": "2026-05-12",
+"material": "PEARS DICED EX LT CAN-6/10",
+"qty": 59280.0,
+"uom": "CS",
+"lo": 39.67,
+"hi": 47.95
+},
+{
+"sol": "2000011316",
+"date": "2026-05-12",
+"material": "PEARS HALVES EX LT CAN-6/10",
+"qty": 41952.0,
+"uom": "CS",
+"lo": 37.64,
+"hi": 48.08
+},
+{
+"sol": "2000011316",
+"date": "2026-05-12",
+"material": "PEARS SLICES EX LT CAN-6/10",
+"qty": 62016.0,
+"uom": "CS",
+"lo": 38.52,
+"hi": 46.48
+},
+{
+"sol": "2000011318",
+"date": "2026-05-08",
+"material": "CHICKEN FAJITA STRIPS CTN-30 LB",
+"qty": 1365000.0,
+"uom": "LB",
+"lo": 2.23,
+"hi": 2.3838
+},
+{
+"sol": "2000011319",
+"date": "2026-05-18",
+"material": "CHICKEN LARGE CHILLED -BULK",
+"qty": 22824000.0,
+"uom": "LB",
+"lo": 1.5907,
+"hi": 1.72
+},
+{
+"sol": "2000011319",
+"date": "2026-05-18",
+"material": "CHICKEN LEGS CHILLED -BULK",
+"qty": 2268000.0,
+"uom": "LB",
+"lo": 0.8,
+"hi": 0.98
+},
+{
+"sol": "2000011320",
+"date": "2026-05-15",
+"material": "FISH AK PLCK FILLETS FRZ PKG-20/2",
+"qty": 380000.0,
+"uom": "LB",
+"lo": 3.602,
+"hi": 3.86
+},
+{
+"sol": "2000011320",
+"date": "2026-05-15",
+"material": "FISH AK PLCK FRZ BULK CTN-49.5 LB",
+"qty": 158400.0,
+"uom": "LB",
+"lo": 2.45,
+"hi": 2.45
+},
+{
+"sol": "2000011320",
+"date": "2026-05-15",
+"material": "FISH AK POLLOCK STICKS BRD FRZ",
+"qty": 1064000.0,
+"uom": "LB",
+"lo": 3.214,
+"hi": 3.462
+},
+{
+"sol": "2000011320",
+"date": "2026-05-15",
+"material": "FISH AK POLLOCK STICKS FRZ",
+"qty": 342000.0,
+"uom": "LB",
+"lo": 3.06,
+"hi": 3.274
+},
+{
+"sol": "2000011320",
+"date": "2026-05-15",
+"material": "HADDOCK FILLET FRZ PKG-20/2 LB",
+"qty": 1800.0,
+"uom": "CS",
+"lo": 440.0,
+"hi": 440.0
+},
+{
+"sol": "2000011321",
+"date": "2026-05-14",
+"material": "CATFISH FLTS UNBRD RAW PKG-20/2",
+"qty": 152000.0,
+"uom": "LB",
+"lo": 4.08,
+"hi": 4.08
+},
+{
+"sol": "2000011321",
+"date": "2026-05-14",
+"material": "CATFISH STRIPS BRD OVN RDY",
+"qty": 40000.0,
+"uom": "LB",
+"lo": 5.7,
+"hi": 5.7
+},
+{
+"sol": "2000011322",
+"date": "2026-05-14",
+"material": "BEEF COARSE GROUND FRZ CTN-60",
+"qty": 8946000.0,
+"uom": "LB",
+"lo": 4.6315,
+"hi": 4.9489
+},
+{
+"sol": "2000011322",
+"date": "2026-05-14",
+"material": "BEEF PATTY LEAN FRZ CTN-40 LB",
+"qty": 76000.0,
+"uom": "LB",
+"lo": 5.45,
+"hi": 5.52
+},
+{
+"sol": "2000011323",
+"date": "2026-05-15",
+"material": "CHICKEN BREAST BNLS IQF PKG-10/3",
+"qty": 52416.0,
+"uom": "CS",
+"lo": 66.6,
+"hi": 66.6
+},
+{
+"sol": "2000011323",
+"date": "2026-05-15",
+"material": "CHICKEN DRUMSTICKS FROZEN",
+"qty": 152950.0,
+"uom": "CS",
+"lo": 26.4,
+"hi": 26.4
+},
+{
+"sol": "2000011323",
+"date": "2026-05-15",
+"material": "CHICKEN LEG QTRS FROZEN PKG-8/5",
+"qty": 176700.0,
+"uom": "CS",
+"lo": 22.472,
+"hi": 25.856
+},
+{
+"sol": "2000011324",
+"date": "2026-05-29",
+"material": "MIXED FRUIT CAN-24/300",
+"qty": 61560.0,
+"uom": "CS",
+"lo": 27.86,
+"hi": 31.82
+},
+{
+"sol": "2000011324",
+"date": "2026-05-29",
+"material": "MIXED FRUIT EX LT CAN-6/10",
+"qty": 107616.0,
+"uom": "CS",
+"lo": 43.52,
+"hi": 49.67
+},
+{
+"sol": "2000011324",
+"date": "2026-05-29",
+"material": "PEACHES CLING DICED EX LT",
+"qty": 342000.0,
+"uom": "CS",
+"lo": 43.01,
+"hi": 50.82
+},
+{
+"sol": "2000011324",
+"date": "2026-05-29",
+"material": "PEACHES CLING SLICES CAN-24/300",
+"qty": 103680.0,
+"uom": "CS",
+"lo": 30.72,
+"hi": 35.03
+},
+{
+"sol": "2000011324",
+"date": "2026-05-29",
+"material": "PEACHES CLING SLICES EX LT",
+"qty": 87552.0,
+"uom": "CS",
+"lo": 42.66,
+"hi": 49.05
+},
+{
+"sol": "2000011324",
+"date": "2026-05-29",
+"material": "PEARS CAN-24/300",
+"qty": 100440.0,
+"uom": "CS",
+"lo": 27.38,
+"hi": 31.85
+},
+{
+"sol": "2000011324",
+"date": "2026-05-29",
+"material": "PEARS DICED EX LT CAN-6/10",
+"qty": 284544.0,
+"uom": "CS",
+"lo": 32.51,
+"hi": 48.7
+},
+{
+"sol": "2000011324",
+"date": "2026-05-29",
+"material": "PEARS HALVES EX LT CAN-6/10",
+"qty": 3648.0,
+"uom": "CS",
+"lo": 42.4,
+"hi": 46.04
+},
+{
+"sol": "2000011324",
+"date": "2026-05-29",
+"material": "PEARS SLICES EX LT CAN-6/10",
+"qty": 45600.0,
+"uom": "CS",
+"lo": 38.51,
+"hi": 47.02
+},
+{
+"sol": "2000011331",
+"date": "2026-05-19",
+"material": "BEANS, BLACK BAG-50 KG",
+"qty": 410.0,
+"uom": "MT",
+"lo": 958.62,
+"hi": 1004.36
+},
+{
+"sol": "2000011331",
+"date": "2026-05-19",
+"material": "BEANS, PINTO BAG-50 KG",
+"qty": 3000.0,
+"uom": "MT",
+"lo": 852.56,
+"hi": 896.5
+},
+{
+"sol": "2000011331",
+"date": "2026-05-19",
+"material": "BEANS, SMALL RED BAG-50 KG",
+"qty": 330.0,
+"uom": "MT",
+"lo": 1016.13,
+"hi": 1016.13
+},
+{
+"sol": "2000011331",
+"date": "2026-05-19",
+"material": "CORN-SOY BLEND PLUS BAG-HP-25",
+"qty": 1430.0,
+"uom": "MT",
+"lo": 978.53,
+"hi": 1309.46
+},
+{
+"sol": "2000011331",
+"date": "2026-05-19",
+"material": "CORNMEAL BAG-HP-25 KG",
+"qty": 7300.0,
+"uom": "MT",
+"lo": 731.33,
+"hi": 824.96
+},
+{
+"sol": "2000011331",
+"date": "2026-05-19",
+"material": "CSB SUPER CEREAL PLUS BOX-10/1.5",
+"qty": 2200.035,
+"uom": "MT",
+"lo": 2047.41,
+"hi": 2871.64
+},
+{
+"sol": "2000011331",
+"date": "2026-05-19",
+"material": "EMERGNCY FD, RUSF POUCH-150/100",
+"qty": 2260.035,
+"uom": "MT",
+"lo": 2680.0,
+"hi": 2820.0
+},
+{
+"sol": "2000011331",
+"date": "2026-05-19",
+"material": "OIL, VEGETABLE BOTTLE, PLS-6/4 L",
+"qty": 70.015,
+"uom": "MT",
+"lo": 2304.68,
+"hi": 2304.68
+},
+{
+"sol": "2000011331",
+"date": "2026-05-19",
+"material": "OIL, VEGETABLE CAN-6/4 L",
+"qty": 2050.075,
+"uom": "MT",
+"lo": 2383.1,
+"hi": 3119.84
+},
+{
+"sol": "2000011331",
+"date": "2026-05-19",
+"material": "PEAS, YELLOW, SPLIT BAG-50 KG",
+"qty": 2500.0,
+"uom": "MT",
+"lo": 422.72,
+"hi": 462.72
+},
+{
+"sol": "2000011331",
+"date": "2026-05-19",
+"material": "RICE, 5/20 LG, W-MLD, FORT BAG-50",
+"qty": 1760.0,
+"uom": "MT",
+"lo": 479.07,
+"hi": 479.07
+},
+{
+"sol": "2000011339",
+"date": "2026-05-29",
+"material": "GRAPES VARIETY FRESH CTN-19 LB",
+"qty": 1080300.0,
+"uom": "CS",
+"lo": 16.41,
+"hi": 26.91
+},
+{
+"sol": "2000011340",
+"date": "2026-05-29",
+"material": "PEACHES FRESH BAG PKG-12/2 LB",
+"qty": 782210.0,
+"uom": "CS",
+"lo": 21.91,
+"hi": 42.49
+},
+{
+"sol": "2000011341",
+"date": "2026-05-29",
+"material": "APRICOT FRZ CUP-96/4.5 OZ",
+"qty": 176400.0,
+"uom": "CS",
+"lo": 41.0,
+"hi": 55.19
+},
+{
+"sol": "2000011341",
+"date": "2026-05-29",
+"material": "APRICOT HALVES CAN-24/300",
+"qty": 173340.0,
+"uom": "CS",
+"lo": 34.88,
+"hi": 39.49
+},
+{
+"sol": "2000011343",
+"date": "2026-06-05",
+"material": "BEEF CRUMBLES W/SPP PKG-4/10 LB",
+"qty": 520000.0,
+"uom": "LB",
+"lo": 4.55,
+"hi": 4.9
+},
+{
+"sol": "2000011343",
+"date": "2026-06-05",
+"material": "PORK PULLED CKD PKG-8/5 LB",
+"qty": 520000.0,
+"uom": "LB",
+"lo": 2.4055,
+"hi": 2.97
+},
+{
+"sol": "2000011344",
+"date": "2026-06-04",
+"material": "TURKEY BREAST DELI SLICED FRZ",
+"qty": 768000.0,
+"uom": "LB",
+"lo": 4.489,
+"hi": 4.628
+},
+{
+"sol": "2000011344",
+"date": "2026-06-04",
+"material": "TURKEY BREAST SMKD SLC FRZ PKG",
+"qty": 268800.0,
+"uom": "LB",
+"lo": 4.589,
+"hi": 4.589
+},
+{
+"sol": "2000011344",
+"date": "2026-06-04",
+"material": "TURKEY HAM SMKD SLC FRZ PKG",
+"qty": 307200.0,
+"uom": "LB",
+"lo": 3.889,
+"hi": 4.43
+},
+{
+"sol": "2000011344",
+"date": "2026-06-04",
+"material": "TURKEY ROASTS FRZ CTN-32-48 LB",
+"qty": 1200000.0,
+"uom": "LB",
+"lo": 4.049,
+"hi": 4.049
+},
+{
+"sol": "2000011348",
+"date": "2026-06-26",
+"material": "CHICKEN LARGE CHILLED -BULK",
+"qty": 22068000.0,
+"uom": "LB",
+"lo": 1.595,
+"hi": 1.83
+},
+{
+"sol": "2000011348",
+"date": "2026-06-26",
+"material": "CHICKEN LEGS CHILLED -BULK",
+"qty": 3240000.0,
+"uom": "LB",
+"lo": 0.76,
+"hi": 0.88
+},
+{
+"sol": "2000011350",
+"date": "2026-06-05",
+"material": "K SALMON PINK CAN-24/14.75 OZ",
+"qty": 24320.0,
+"uom": "CS",
+"lo": 85.45,
+"hi": 99.85
+},
+{
+"sol": "2000011350",
+"date": "2026-06-05",
+"material": "SALMON PINK CAN-24/14.75 OZ",
+"qty": 94240.0,
+"uom": "CS",
+"lo": 85.95,
+"hi": 107.2
+},
+{
+"sol": "2000011352",
+"date": "2026-06-03",
+"material": "BEANS, BLACK BAG-50 KG",
+"qty": 2090.0,
+"uom": "MT",
+"lo": 993.86,
+"hi": 1058.06
+},
+{
+"sol": "2000011352",
+"date": "2026-06-03",
+"material": "BEANS, PINTO BAG-50 KG",
+"qty": 3000.0,
+"uom": "MT",
+"lo": 851.0,
+"hi": 884.75
+},
+{
+"sol": "2000011352",
+"date": "2026-06-03",
+"material": "CORN, YELLOW BAG-50 KG",
+"qty": 210.0,
+"uom": "MT",
+"lo": 349.0,
+"hi": 349.0
+},
+{
+"sol": "2000011352",
+"date": "2026-06-03",
+"material": "CORN-SOY BLEND PLUS BAG-HP-25",
+"qty": 560.0,
+"uom": "MT",
+"lo": 1256.05,
+"hi": 1256.05
+},
+{
+"sol": "2000011352",
+"date": "2026-06-03",
+"material": "CORNMEAL BAG-HP-25 KG",
+"qty": 7310.0,
+"uom": "MT",
+"lo": 720.0,
+"hi": 832.93
+},
+{
+"sol": "2000011352",
+"date": "2026-06-03",
+"material": "CSB SUPER CEREAL PLUS BOX-10/1.5",
+"qty": 4730.07,
+"uom": "MT",
+"lo": 2009.58,
+"hi": 2871.64
+},
+{
+"sol": "2000011352",
+"date": "2026-06-03",
+"material": "EMERGNCY FD, LNS-MQ",
+"qty": 1760.025,
+"uom": "MT",
+"lo": 2900.0,
+"hi": 3150.0
+},
+{
+"sol": "2000011352",
+"date": "2026-06-03",
+"material": "EMERGNCY FD, RUSF POUCH-150/100",
+"qty": 1760.025,
+"uom": "MT",
+"lo": 2680.0,
+"hi": 2820.0
+},
+{
+"sol": "2000011352",
+"date": "2026-06-03",
+"material": "OIL, VEGETABLE CAN-6/4 L",
+"qty": 7060.131,
+"uom": "MT",
+"lo": 2486.42,
+"hi": 3122.7
+},
+{
+"sol": "2000011352",
+"date": "2026-06-03",
+"material": "PEAS, YELLOW, SPLIT BAG-50 KG",
+"qty": 11880.0,
+"uom": "MT",
+"lo": 458.0,
+"hi": 520.0
+},
+{
+"sol": "2000011352",
+"date": "2026-06-03",
+"material": "RICE, 2/7 MG, W-MLD, FORT BAG-50",
+"qty": 1070.0,
+"uom": "MT",
+"lo": 683.09,
+"hi": 683.09
+},
+{
+"sol": "2000011352",
+"date": "2026-06-03",
+"material": "RICE, 5/20 LG, W-MLD, FORT BAG-50",
+"qty": 3180.0,
+"uom": "MT",
+"lo": 483.15,
+"hi": 483.92
+},
+{
+"sol": "2000011354",
+"date": "2026-06-09",
+"material": "PLUMS FRESH CTN-28 LB",
+"qty": 81600.0,
+"uom": "CS",
+"lo": 20.0,
+"hi": 41.91
+},
+{
+"sol": "2000011355",
+"date": "2026-06-26",
+"material": "BEEF 100% PTY 85/15 FRZ 2.0MMA",
+"qty": 228000.0,
+"uom": "LB",
+"lo": 5.24,
+"hi": 5.33
+},
+{
+"sol": "2000011355",
+"date": "2026-06-26",
+"material": "BEEF 100% PTY 90/10 FRZ 2.0MMA",
+"qty": 380000.0,
+"uom": "LB",
+"lo": 5.5,
+"hi": 6.08
+},
+{
+"sol": "2000011355",
+"date": "2026-06-26",
+"material": "BEEF BNLS SPECIAL TRM FRZ CTN-60",
+"qty": 84000.0,
+"uom": "LB",
+"lo": 5.37,
+"hi": 5.37
+},
+{
+"sol": "2000011355",
+"date": "2026-06-26",
+"material": "BEEF FINE GROUND FRZ CTN-40 LB",
+"qty": 3880000.0,
+"uom": "LB",
+"lo": 4.9,
+"hi": 5.51
+},
+{
+"sol": "2000011355",
+"date": "2026-06-26",
+"material": "BEEF FINE GROUND FRZ PKG-40/1 LB",
+"qty": 560000.0,
+"uom": "LB",
+"lo": 5.07,
+"hi": 5.27
+},
+{
+"sol": "2000011355",
+"date": "2026-06-26",
+"material": "BEEF FRESH BNLS BULK",
+"qty": 640000.0,
+"uom": "LB",
+"lo": 4.79,
+"hi": 4.9477
+},
+{
+"sol": "2000011355",
+"date": "2026-06-26",
+"material": "BEEF PATTY LEAN FRZ CTN-40 LB",
+"qty": 38000.0,
+"uom": "LB",
+"lo": 5.96,
+"hi": 5.96
+},
+{
+"sol": "2000011355",
+"date": "2026-06-26",
+"material": "BEEF ROAST ROUND FRZ CTN-36-40",
+"qty": 80000.0,
+"uom": "LB",
+"lo": 6.69,
+"hi": 6.69
+},
+{
+"sol": "2000011355",
+"date": "2026-06-26",
+"material": "BEEF SPP PTY 85/15 FRZ 2.0 MMA",
+"qty": 228000.0,
+"uom": "LB",
+"lo": 4.42,
+"hi": 4.56
+},
+{
+"sol": "2000011356",
+"date": "2026-06-12",
+"material": "TURKEY CHILLED -BULK",
+"qty": 1944000.0,
+"uom": "LB",
+"lo": 1.84,
+"hi": 1.84
+},
+{
+"sol": "2000011356",
+"date": "2026-06-12",
+"material": "TURKEY THIGHS BNLS SKNLS",
+"qty": 216000.0,
+"uom": "LB",
+"lo": 3.25,
+"hi": 3.28
+},
+{
+"sol": "2000011360",
+"date": "2026-06-16",
+"material": "BEEF PATTY CKD FRZ 2.0 MMA",
+"qty": 418000.0,
+"uom": "LB",
+"lo": 6.359,
+"hi": 6.709
+},
+{
+"sol": "2000011360",
+"date": "2026-06-16",
+"material": "BEEF SPP PTY HSTYLE CKD 2.0MMA",
+"qty": 114000.0,
+"uom": "LB",
+"lo": 5.0,
+"hi": 5.1
+},
+{
+"sol": "2000011362",
+"date": "2026-06-08",
+"material": "CORNMEAL DEGERMED YELLOW",
+"qty": 85680.0,
+"uom": "LB",
+"lo": 0.3675,
+"hi": 0.375
+},
+{
+"sol": "2000011362",
+"date": "2026-06-08",
+"material": "GRITS CORN YELLOW BAG-12/2 LB",
+"qty": 82944.0,
+"uom": "LB",
+"lo": 0.535,
+"hi": 0.535
+},
+{
+"sol": "2000011366",
+"date": "2026-06-18",
+"material": "CHERRIES DRIED SWEET PKG - 8/2 LB",
+"qty": 34560.0,
+"uom": "CS",
+"lo": 80.02,
+"hi": 90.19
+},
+{
+"sol": "2000011369",
+"date": "2026-06-18",
+"material": "PEACH FREESTONE DICED FRZ",
+"qty": 338800.0,
+"uom": "CS",
+"lo": 36.5,
+"hi": 48.15
+},
+{
+"sol": "2000011369",
+"date": "2026-06-18",
+"material": "PEACHES FREESTONE SLICES FRZ",
+"qty": 451572.0,
+"uom": "CS",
+"lo": 40.16,
+"hi": 53.2592
+},
+{
+"sol": "2000011374",
+"date": "2026-06-16",
+"material": "BEANS, BLACK BAG-50 KG",
+"qty": 1350.0,
+"uom": "MT",
+"lo": 993.86,
+"hi": 1050.08
+},
+{
+"sol": "2000011374",
+"date": "2026-06-16",
+"material": "CORN-SOY BLEND PLUS BAG-HP-25",
+"qty": 540.0,
+"uom": "MT",
+"lo": 1488.05,
+"hi": 1488.05
+},
+{
+"sol": "2000011374",
+"date": "2026-06-16",
+"material": "CORNMEAL BAG-HP-25 KG",
+"qty": 6820.0,
+"uom": "MT",
+"lo": 736.69,
+"hi": 857.85
+},
+{
+"sol": "2000011374",
+"date": "2026-06-16",
+"material": "CSB SUPER CEREAL PLUS BOX-10/1.5",
+"qty": 2950.035,
+"uom": "MT",
+"lo": 2039.76,
+"hi": 2246.0
+},
+{
+"sol": "2000011374",
+"date": "2026-06-16",
+"material": "OIL, VEGETABLE CAN-6/4 L",
+"qty": 400.05,
+"uom": "MT",
+"lo": 2445.32,
+"hi": 3135.42
+},
+{
+"sol": "2000011374",
+"date": "2026-06-16",
+"material": "RICE, 5/20 LG, W-MLD, FORT BAG-50",
+"qty": 4410.0,
+"uom": "MT",
+"lo": 503.94,
+"hi": 503.94
+},
+{
+"sol": "2000011384",
+"date": "2026-06-26",
+"material": "BEEF COARSE GROUND FRZ CTN-60",
+"qty": 16716000.0,
+"uom": "LB",
+"lo": 4.79,
+"hi": 5.18
+},
+{
+"sol": "2000011386",
+"date": "2026-07-10",
+"material": "TURKEY CHILLED -BULK",
+"qty": 2016000.0,
+"uom": "LB",
+"lo": 1.84,
+"hi": 1.84
+},
+{
+"sol": "2000011386",
+"date": "2026-07-10",
+"material": "TURKEY THIGHS BNLS SKNLS",
+"qty": 216000.0,
+"uom": "LB",
+"lo": 2.35,
+"hi": 2.74
+},
+{
+"sol": "2000011387",
+"date": "2026-07-14",
+"material": "BEEF CRUMBLES W/SPP PKG-4/10 LB",
+"qty": 440000.0,
+"uom": "LB",
+"lo": 4.7,
+"hi": 4.8
+},
+{
+"sol": "2000011387",
+"date": "2026-07-14",
+"material": "PORK PULLED CKD PKG-8/5 LB",
+"qty": 520000.0,
+"uom": "LB",
+"lo": 2.3443,
+"hi": 2.4907
+},
+{
+"sol": "2000011391",
+"date": "2026-07-14",
+"material": "BEANS, GARBANZO, KABULI BAG-50",
+"qty": 70.0,
+"uom": "MT",
+"lo": 740.0,
+"hi": 740.0
+},
+{
+"sol": "2000011391",
+"date": "2026-07-14",
+"material": "BEANS, SMALL RED BAG-50 KG",
+"qty": 70.0,
+"uom": "MT",
+"lo": 1079.28,
+"hi": 1079.28
+},
+{
+"sol": "2000011391",
+"date": "2026-07-14",
+"material": "CORN-SOY BLEND PLUS BAG-HP-25",
+"qty": 1240.0,
+"uom": "MT",
+"lo": 1265.22,
+"hi": 1440.57
+},
+{
+"sol": "2000011391",
+"date": "2026-07-14",
+"material": "CORNMEAL BAG-HP-25 KG",
+"qty": 7260.0,
+"uom": "MT",
+"lo": 754.34,
+"hi": 935.7
+},
+{
+"sol": "2000011391",
+"date": "2026-07-14",
+"material": "CSB SUPER CEREAL PLUS BOX-10/1.5",
+"qty": 150.0,
+"uom": "MT",
+"lo": 2135.43,
+"hi": 2135.43
+},
+{
+"sol": "2000011391",
+"date": "2026-07-14",
+"material": "LENTILS BAG-50 KG",
+"qty": 480.0,
+"uom": "MT",
+"lo": 482.77,
+"hi": 482.77
+},
+{
+"sol": "2000011391",
+"date": "2026-07-14",
+"material": "OIL, VEGETABLE CAN-6/4 L",
+"qty": 200.036,
+"uom": "MT",
+"lo": 2379.18,
+"hi": 2908.41
+},
+{
+"sol": "2000011391",
+"date": "2026-07-14",
+"material": "PEAS, YELLOW, SPLIT BAG-50 KG",
+"qty": 70.0,
+"uom": "MT",
+"lo": 512.27,
+"hi": 512.27
+},
+{
+"sol": "2000011391",
+"date": "2026-07-14",
+"material": "RICE, 3/15 LG, W-MLD, FORT BAG-50",
+"qty": 1990.0,
+"uom": "MT",
+"lo": 548.04,
+"hi": 548.04
+},
+{
+"sol": "2000011391",
+"date": "2026-07-14",
+"material": "WHEAT, HARD RED WINTER BAG-50",
+"qty": 450.0,
+"uom": "MT",
+"lo": 402.5,
+"hi": 402.5
+},
+{
+"sol": "2000011393",
+"date": "2026-07-08",
+"material": "CHICKEN LEG QTRS FROZEN PKG-8/5",
+"qty": 51300.0,
+"uom": "CS",
+"lo": 27.372,
+"hi": 30.464
+},
+{
+"sol": "2000011394",
+"date": "2026-07-08",
+"material": "GRAPES VARIETY FRESH CTN-19 LB",
+"qty": 105300.0,
+"uom": "CS",
+"lo": 15.25,
+"hi": 25.74
+},
+{
+"sol": "2000011404",
+"date": "2026-07-14",
+"material": "BEEF PATTY CKD FRZ 2.0 MMA",
+"qty": 646000.0,
+"uom": "LB",
+"lo": 6.1252,
+"hi": 6.2177
+},
+{
+"sol": "2000011404",
+"date": "2026-07-14",
+"material": "BEEF SPP PTY HSTYLE CKD 2.0MMA",
+"qty": 570000.0,
+"uom": "LB",
+"lo": 4.989,
+"hi": 5.162
+},
+{
+"sol": "2000011405",
+"date": "2026-07-30",
+"material": "APPLES FOR FURTHER PROCESSING -",
+"qty": 27060199.0,
+"uom": "LB",
+"lo": 0.33,
+"hi": 0.66
+},
+{
+"sol": "2000011412",
+"date": "2026-07-16",
+"material": "CHICKEN LARGE CHILLED -BULK",
+"qty": 19188000.0,
+"uom": "LB",
+"lo": 1.6149,
+"hi": 1.83
+},
+{
+"sol": "2000011412",
+"date": "2026-07-16",
+"material": "CHICKEN LEGS CHILLED -BULK",
+"qty": 2916000.0,
+"uom": "LB",
+"lo": 0.76,
+"hi": 0.9
+},
+{
+"sol": "2000011413",
+"date": "2026-07-28",
+"material": "PEPPERS/ONION BLEND FRZ CTN-30",
+"qty": 30360.0,
+"uom": "CS",
+"lo": 45.56,
+"hi": 52.21
+},
+{
+"sol": "2000011413",
+"date": "2026-07-28",
+"material": "POTATOES DICED FRZ PKG-6/5 LB",
+"qty": 46200.0,
+"uom": "CS",
+"lo": 19.96,
+"hi": 26.19
+},
+{
+"sol": "2000011413",
+"date": "2026-07-28",
+"material": "POTATOES OVENS FRY PKG-6/5 LB",
+"qty": 158400.0,
+"uom": "CS",
+"lo": 28.62,
+"hi": 34.61
+},
+{
+"sol": "2000011413",
+"date": "2026-07-28",
+"material": "POTATOES WEDGE FAT FREE FRZ",
+"qty": 26400.0,
+"uom": "CS",
+"lo": 25.5,
+"hi": 32.22
+},
+{
+"sol": "2000011413",
+"date": "2026-07-28",
+"material": "POTATOES WEDGE FRZ PKG-6/5 LB",
+"qty": 81840.0,
+"uom": "CS",
+"lo": 26.38,
+"hi": 34.03
+},
+{
+"sol": "2000011413",
+"date": "2026-07-28",
+"material": "SPINACH CHOPPED FRZ IQF CTN-20",
+"qty": 11412.0,
+"uom": "CS",
+"lo": 18.41,
+"hi": 19.67
+},
+{
+"sol": "2000011413",
+"date": "2026-07-28",
+"material": "SWEET POTATOES CHUNK FRZ",
+"qty": 2640.0,
+"uom": "CS",
+"lo": 23.66,
+"hi": 23.69
+},
+{
+"sol": "2000011413",
+"date": "2026-07-28",
+"material": "VEG BLEND STIRFRY FRZ CTN-12/1 LB",
+"qty": 2304.0,
+"uom": "CS",
+"lo": 21.81,
+"hi": 21.81
+},
+{
+"sol": "2000011414",
+"date": "2026-08-12",
+"material": "CRANBERRIES DRIED PKG-300/1.16 OZ",
+"qty": 49500.0,
+"uom": "CS",
+"lo": 62.42,
+"hi": 87.07
+},
+{
+"sol": "2000011414",
+"date": "2026-08-12",
+"material": "RAISINS BOX-144/1.33 OZ",
+"qty": 80028.0,
+"uom": "CS",
+"lo": 16.52,
+"hi": 20.04
+},
+{
+"sol": "2000011414",
+"date": "2026-08-12",
+"material": "RAISINS PKG-24/15 OZ",
+"qty": 19008.0,
+"uom": "CS",
+"lo": 26.87,
+"hi": 31.99
+},
+{
+"sol": "2000011418",
+"date": "2026-07-22",
+"material": "BLUEBERRY HIGHBUSH FRZ",
+"qty": 34320.0,
+"uom": "CS",
+"lo": 52.59,
+"hi": 62.14
+},
+{
+"sol": "2000011418",
+"date": "2026-07-22",
+"material": "BLUEBERRY HIGHBUSH FRZ CTN-30",
+"qty": 6600.0,
+"uom": "CS",
+"lo": 44.52,
+"hi": 47.25
+},
+{
+"sol": "2000011418",
+"date": "2026-07-22",
+"material": "BLUEBERRY WILD FRZ CTN-20/1 LB",
+"qty": 10000.0,
+"uom": "CS",
+"lo": 43.09,
+"hi": 44.7
+},
+{
+"sol": "2000011418",
+"date": "2026-07-22",
+"material": "BLUEBERRY WILD FRZ CTN-30 LB",
+"qty": 22440.0,
+"uom": "CS",
+"lo": 48.08,
+"hi": 51.43
+},
+{
+"sol": "2000011418",
+"date": "2026-07-22",
+"material": "BLUEBERRY WILD FRZ CTN-8/3 LB",
+"qty": 66240.0,
+"uom": "CS",
+"lo": 40.29,
+"hi": 45.6
+},
+{
+"sol": "2000011418",
+"date": "2026-07-22",
+"material": "CHERRIES SWEET PITTED IQF",
+"qty": 3960.0,
+"uom": "CS",
+"lo": 72.6,
+"hi": 73.84
+},
+{
+"sol": "2000011419",
+"date": "2026-07-23",
+"material": "APPLESAUCE CAN-24/300",
+"qty": 136080.0,
+"uom": "CS",
+"lo": 16.93,
+"hi": 20.2
+},
+{
+"sol": "2000011419",
+"date": "2026-07-23",
+"material": "APPLESAUCE CUP SLEEVE-6/4 OZ",
+"qty": 9100.0,
+"uom": "CS",
+"lo": 17.12,
+"hi": 18.24
+},
+{
+"sol": "2000011419",
+"date": "2026-07-23",
+"material": "APPLESAUCE CUP-96/4.5",
+"qty": 373800.0,
+"uom": "CS",
+"lo": 18.03,
+"hi": 26.39
+},
+{
+"sol": "2000011419",
+"date": "2026-07-23",
+"material": "APPLESAUCE UNSWEETENED",
+"qty": 90288.0,
+"uom": "CS",
+"lo": 29.28,
+"hi": 36.64
+},
+{
+"sol": "2000011419",
+"date": "2026-07-23",
+"material": "PLUMS PURPLE CAN-24/300",
+"qty": 6480.0,
+"uom": "CS",
+"lo": 20.67,
+"hi": 22.87
+},
+{
+"sol": "2000011425",
+"date": "2026-08-18",
+"material": "APPLE JUICE PLST BTL-8/64 FL OZ",
+"qty": 138375.0,
+"uom": "CS",
+"lo": 15.98,
+"hi": 20.96
+},
+{
+"sol": "2000011425",
+"date": "2026-08-18",
+"material": "CHERRY APPLE JUICE PLST BTL-8/64",
+"qty": 41000.0,
+"uom": "CS",
+"lo": 22.22,
+"hi": 27.52
+},
+{
+"sol": "2000011425",
+"date": "2026-08-18",
+"material": "CRANBERRYAPPLE JUICE PLST",
+"qty": 72775.0,
+"uom": "CS",
+"lo": 18.31,
+"hi": 23.82
+},
+{
+"sol": "2000011425",
+"date": "2026-08-18",
+"material": "GRAPE CONCORD JUICE PLST",
+"qty": 34850.0,
+"uom": "CS",
+"lo": 16.61,
+"hi": 21.44
+},
+{
+"sol": "2000011425",
+"date": "2026-08-18",
+"material": "ORANGE JUICE PLST BTL-8/64 FL OZ",
+"qty": 89175.0,
+"uom": "CS",
+"lo": 27.45,
+"hi": 34.86
+},
+{
+"sol": "2000011425",
+"date": "2026-08-18",
+"material": "TOMATO JUICE PLST BTL-8/64 FL OZ",
+"qty": 33825.0,
+"uom": "CS",
+"lo": 12.45,
+"hi": 16.62
+},
+{
+"sol": "2000011426",
+"date": "2026-07-22",
+"material": "APPLE JUICE SINGLE FRZ CUP-96/4",
+"qty": 201344.0,
+"uom": "CS",
+"lo": 15.5,
+"hi": 20.67
+},
+{
+"sol": "2000011427",
+"date": "2026-07-29",
+"material": "OIL EXTRA VIRGIN OLIVE BTL-6/16.9",
+"qty": 3360.0,
+"uom": "CS",
+"lo": 63.0,
+"hi": 63.0
+},
+{
+"sol": "2000011427",
+"date": "2026-07-29",
+"material": "OIL VEGETABLE BTL-6/1 GAL",
+"qty": 517440.0,
+"uom": "LB",
+"lo": 1.052,
+"hi": 1.309
+},
+{
+"sol": "2000011427",
+"date": "2026-07-29",
+"material": "OIL VEGETABLE BTL-9/48 OZ",
+"qty": 3031182.009,
+"uom": "LB",
+"lo": 1.0236,
+"hi": 1.64
+},
+{
+"sol": "2000011428",
+"date": "2026-07-29",
+"material": "EGGNOODLE 1/2 INCH WIDE PKG-12/1",
+"qty": 460800.0,
+"uom": "LB",
+"lo": 2.1,
+"hi": 2.57
+},
+{
+"sol": "2000011428",
+"date": "2026-07-29",
+"material": "MACARONI AND CHEESE PKG-24/7.25",
+"qty": 3669529.5,
+"uom": "LB",
+"lo": 0.8298,
+"hi": 0.9727
+},
+{
+"sol": "2000011428",
+"date": "2026-07-29",
+"material": "PASTA MACARONI PLAIN ELBOW",
+"qty": 3552000.0,
+"uom": "LB",
+"lo": 0.7813,
+"hi": 0.929
+},
+{
+"sol": "2000011428",
+"date": "2026-07-29",
+"material": "PASTA SPAGHETTI BOX-20/1 LB",
+"qty": 5593600.0,
+"uom": "LB",
+"lo": 0.7299,
+"hi": 0.9221
+},
+{
+"sol": "2000011428",
+"date": "2026-07-29",
+"material": "WHOLE GRAIN BLEND MACARONI",
+"qty": 40000.0,
+"uom": "LB",
+"lo": 1.28,
+"hi": 1.28
+},
+{
+"sol": "2000011428",
+"date": "2026-07-29",
+"material": "WHOLE GRAIN BLEND PENNE",
+"qty": 37800.0,
+"uom": "LB",
+"lo": 1.28,
+"hi": 1.28
+},
+{
+"sol": "2000011428",
+"date": "2026-07-29",
+"material": "WHOLE GRAIN BLEND ROTINI MAC",
+"qty": 140000.0,
+"uom": "LB",
+"lo": 1.32,
+"hi": 1.32
+},
+{
+"sol": "2000011428",
+"date": "2026-07-29",
+"material": "WHOLE GRAIN BLEND SPAGHETTI",
+"qty": 160000.0,
+"uom": "LB",
+"lo": 1.2544,
+"hi": 1.3132
+},
+{
+"sol": "2000011428",
+"date": "2026-07-29",
+"material": "WHOLE GRAIN PASTA ROTINI MAC",
+"qty": 486000.0,
+"uom": "LB",
+"lo": 1.7293,
+"hi": 1.8816
+},
+{
+"sol": "2000011433",
+"date": "2026-07-29",
+"material": "YOGURT HI PROTEIN BLUEBERRY",
+"qty": 353886.0,
+"uom": "LB",
+"lo": 1.489,
+"hi": 1.715
+},
+{
+"sol": "2000011433",
+"date": "2026-07-29",
+"material": "YOGURT HI PROTEIN STRAWBERRY",
+"qty": 450978.0,
+"uom": "LB",
+"lo": 1.489,
+"hi": 1.715
+},
+{
+"sol": "2000011433",
+"date": "2026-07-29",
+"material": "YOGURT HI PROTEIN VANILLA",
+"qty": 590082.0,
+"uom": "LB",
+"lo": 1.489,
+"hi": 1.715
+},
+{
+"sol": "2000011433",
+"date": "2026-07-29",
+"material": "YOGURT HI PROTEIN",
+"qty": 21120.0,
+"uom": "LB",
+"lo": 1.99,
+"hi": 1.99
+},
+{
+"sol": "2000011434",
+"date": "2026-07-29",
+"material": "CHEESE CHED YEL 0.75 OZ SLICE",
+"qty": 37440.0,
+"uom": "LB",
+"lo": 2.3112,
+"hi": 2.3112
+},
+{
+"sol": "2000011434",
+"date": "2026-07-29",
+"material": "CHEESE CHED YEL CHUNKS-PKG 12/1",
+"qty": 302400.0,
+"uom": "LB",
+"lo": 2.09,
+"hi": 2.2105
+},
+{
+"sol": "2000011434",
+"date": "2026-07-29",
+"material": "CHEESE CHED YEL SHRED-PKG 6/2 LB",
+"qty": 504000.0,
+"uom": "LB",
+"lo": 2.0265,
+"hi": 2.1605
+},
+{
+"sol": "2000011434",
+"date": "2026-07-29",
+"material": "CHEESE MOZ LM PT SKM STRING",
+"qty": 733042.508,
+"uom": "LB",
+"lo": 2.7328,
+"hi": 3.51
+},
+{
+"sol": "2000011435",
+"date": "2026-07-23",
+"material": "BEEF 100% PTY 85/15 FRZ 2.0MMA",
+"qty": 228000.0,
+"uom": "LB",
+"lo": 5.18,
+"hi": 5.22
+},
+{
+"sol": "2000011435",
+"date": "2026-07-23",
+"material": "BEEF FINE GROUND FRZ CTN-40 LB",
+"qty": 1360000.0,
+"uom": "LB",
+"lo": 4.89,
+"hi": 6.0211
+},
+{
+"sol": "2000011435",
+"date": "2026-07-23",
+"material": "BEEF FINE GROUND FRZ PKG-40/1 LB",
+"qty": 200000.0,
+"uom": "LB",
+"lo": 5.08,
+"hi": 5.19
+},
+{
+"sol": "2000011440",
+"date": "2026-08-06",
+"material": "APPLES BRAEBURNN FRESH B",
+"qty": 924.0,
+"uom": "CS",
+"lo": 28.95,
+"hi": 28.95
+},
+{
+"sol": "2000011440",
+"date": "2026-08-06",
+"material": "APPLES EMPIRE FRESH CTN-40 LB",
+"qty": 7392.0,
+"uom": "CS",
+"lo": 24.9,
+"hi": 30.0
+},
+{
+"sol": "2000011440",
+"date": "2026-08-06",
+"material": "APPLES FRESH PKG-12/3 LB",
+"qty": 33320.0,
+"uom": "CS",
+"lo": 16.24,
+"hi": 24.51
+},
+{
+"sol": "2000011440",
+"date": "2026-08-06",
+"material": "APPLES FUJI FRESH F CARTON-40 LB",
+"qty": 3696.0,
+"uom": "CS",
+"lo": 20.5,
+"hi": 24.0
+},
+{
+"sol": "2000011440",
+"date": "2026-08-06",
+"material": "APPLES GALA FRESH G CARTON-40",
+"qty": 13860.0,
+"uom": "CS",
+"lo": 24.9,
+"hi": 26.9
+},
+{
+"sol": "2000011440",
+"date": "2026-08-06",
+"material": "APPLES GRANNY SMITH FRESH",
+"qty": 6468.0,
+"uom": "CS",
+"lo": 22.8,
+"hi": 28.44
+},
+{
+"sol": "2000011440",
+"date": "2026-08-06",
+"material": "APPLES HONEYCRISP FRESH CTN-40",
+"qty": 4620.0,
+"uom": "CS",
+"lo": 23.89,
+"hi": 29.45
+},
+{
+"sol": "2000011440",
+"date": "2026-08-06",
+"material": "APPLES RED DELICIOUS FRESH",
+"qty": 2772.0,
+"uom": "CS",
+"lo": 22.71,
+"hi": 24.9
+},
+{
+"sol": "2000011440",
+"date": "2026-08-06",
+"material": "PEARS BARTLETT FRESH CTN-40 LB",
+"qty": 9800.0,
+"uom": "CS",
+"lo": 22.6,
+"hi": 32.71
+},
+{
+"sol": "2000011440",
+"date": "2026-08-06",
+"material": "PEARS FRESH PKG-12/3 LB",
+"qty": 980.0,
+"uom": "CS",
+"lo": 28.77,
+"hi": 28.77
+},
+{
+"sol": "2000011441",
+"date": "2026-08-14",
+"material": "BEEF CRUMBLES W/SPP PKG-4/10 LB",
+"qty": 400000.0,
+"uom": "LB",
+"lo": 4.429,
+"hi": 4.689
+},
+{
+"sol": "2000011441",
+"date": "2026-08-14",
+"material": "CHICKEN PULLED CKD FRZ CTN-30 LB",
+"qty": 702000.0,
+"uom": "LB",
+"lo": 3.271,
+"hi": 3.431
+},
+{
+"sol": "2000011441",
+"date": "2026-08-14",
+"material": "PORK PULLED CKD PKG-8/5 LB",
+"qty": 440000.0,
+"uom": "LB",
+"lo": 2.271,
+"hi": 2.356
+},
+{
+"sol": "2000011450",
+"date": "2026-07-17",
+"material": "PEARS SLICES EX LT CAN-6/10",
+"qty": 48336.0,
+"uom": "CS",
+"lo": 38.29,
+"hi": 47.2
+},
+{
+"sol": "2000011452",
+"date": "2026-08-03",
+"material": "BEEF CAN-24/24 OZ",
+"qty": 72000.0,
+"uom": "LB",
+"lo": 5.3169,
+"hi": 5.3169
+},
+{
+"sol": "2000011452",
+"date": "2026-08-03",
+"material": "CHICKEN BONED CAN-24/12.5 OZ",
+"qty": 2565000.0,
+"uom": "LB",
+"lo": 2.0462,
+"hi": 2.3902
+},
+{
+"sol": "2000011452",
+"date": "2026-08-03",
+"material": "CHICKEN BONED POUCH-36/10 OZ",
+"qty": 46400.0,
+"uom": "CS",
+"lo": 36.7512,
+"hi": 41.3462
+},
+{
+"sol": "2000011452",
+"date": "2026-08-03",
+"material": "PORK CAN-24/24 OZ",
+"qty": 72000.0,
+"uom": "LB",
+"lo": 2.1833,
+"hi": 2.1833
+},
+{
+"sol": "2000011461",
+"date": "2026-08-13",
+"material": "CHICKEN BREAST BNLS IQF PKG-10/3",
+"qty": 24960.0,
+"uom": "CS",
+"lo": 61.8,
+"hi": 61.8
+},
+{
+"sol": "2000011461",
+"date": "2026-08-13",
+"material": "CHICKEN CONSUMER SPLT BREAST",
+"qty": 7800.0,
+"uom": "CS",
+"lo": 125.4,
+"hi": 125.4
+},
+{
+"sol": "2000011461",
+"date": "2026-08-13",
+"material": "CHICKEN CUT UP FRZ CTN-40 LB",
+"qty": 342000.0,
+"uom": "LB",
+"lo": 1.58,
+"hi": 1.62
+},
+{
+"sol": "2000011461",
+"date": "2026-08-13",
+"material": "CHICKEN DRUMSTICKS FROZEN",
+"qty": 45600.0,
+"uom": "CS",
+"lo": 23.82,
+"hi": 28.8
+},
+{
+"sol": "2000011461",
+"date": "2026-08-13",
+"material": "CHICKEN FILLETS UNBRD FRZ CTN-30",
+"qty": 234000.0,
+"uom": "LB",
+"lo": 2.7806,
+"hi": 2.7806
+},
+{
+"sol": "2000011461",
+"date": "2026-08-13",
+"material": "CHICKEN OVEN ROASTED FRZ 8 PC",
+"qty": 1008000.0,
+"uom": "LB",
+"lo": 4.7069,
+"hi": 4.7069
+},
+{
+"sol": "2000011461",
+"date": "2026-08-13",
+"material": "CHICKEN STRIPS FRZ CTN-30 LB",
+"qty": 624000.0,
+"uom": "LB",
+"lo": 2.41,
+"hi": 2.51
+},
+{
+"sol": "2000011461",
+"date": "2026-08-13",
+"material": "CHICKEN WHOLE BAGGED FRZ",
+"qty": 6256800.0,
+"uom": "LB",
+"lo": 0.86,
+"hi": 1.15
+},
+{
+"sol": "2000011464",
+"date": "2026-08-11",
+"material": "TURKEY CHILLED -BULK",
+"qty": 2160000.0,
+"uom": "LB",
+"lo": 1.84,
+"hi": 1.84
+},
+{
+"sol": "2000011464",
+"date": "2026-08-11",
+"material": "TURKEY THIGHS BNLS SKNLS",
+"qty": 144000.0,
+"uom": "LB",
+"lo": 1.87,
+"hi": 1.89
+},
+{
+"sol": "2000011476",
+"date": "2026-08-14",
+"material": "BEEF COARSE GROUND FRZ CTN-60",
+"qty": 7224000.0,
+"uom": "LB",
+"lo": 4.0627,
+"hi": 5.5
+},
+{
+"sol": "2000011477",
+"date": "2026-08-14",
+"material": "BEEF 100% PTY 85/15 FRZ 2.0MMA",
+"qty": 342000.0,
+"uom": "LB",
+"lo": 4.97,
+"hi": 5.15
+},
+{
+"sol": "2000011477",
+"date": "2026-08-14",
+"material": "BEEF 100% PTY 90/10 FRZ 2.0MMA",
+"qty": 76000.0,
+"uom": "LB",
+"lo": 5.45,
+"hi": 5.82
+},
+{
+"sol": "2000011477",
+"date": "2026-08-14",
+"material": "BEEF BNLS SPECIAL TRM FRZ CTN-60",
+"qty": 168000.0,
+"uom": "LB",
+"lo": 5.29,
+"hi": 5.5997
+},
+{
+"sol": "2000011477",
+"date": "2026-08-14",
+"material": "BEEF FINE GROUND FRZ CTN-40 LB",
+"qty": 2280000.0,
+"uom": "LB",
+"lo": 4.62,
+"hi": 5.82
+},
+{
+"sol": "2000011477",
+"date": "2026-08-14",
+"material": "BEEF FINE GROUND FRZ PKG-40/1 LB",
+"qty": 280000.0,
+"uom": "LB",
+"lo": 4.75,
+"hi": 5.3
+},
+{
+"sol": "2000011477",
+"date": "2026-08-14",
+"material": "BEEF FRESH BNLS BULK",
+"qty": 200000.0,
+"uom": "LB",
+"lo": 4.8397,
+"hi": 4.8477
+},
+{
+"sol": "2000011477",
+"date": "2026-08-14",
+"material": "BEEF ROAST ROUND FRZ CTN-36-40",
+"qty": 200000.0,
+"uom": "LB",
+"lo": 6.8,
+"hi": 7.1
+},
+{
+"sol": "2000011477",
+"date": "2026-08-14",
+"material": "BEEF SPP PTY 85/15 FRZ 2.0 MMA",
+"qty": 152000.0,
+"uom": "LB",
+"lo": 4.29,
+"hi": 4.593
+},
+{
+"sol": "2000011480",
+"date": "2026-08-13",
+"material": "PEACHES CLING SLICES CAN-24/300",
+"qty": 353160.0,
+"uom": "CS",
+"lo": 30.72,
+"hi": 35.03
+},
+{
+"sol": "2000011489",
+"date": "2026-08-21",
+"material": "CHICKEN LARGE CHILLED -BULK",
+"qty": 24012000.0,
+"uom": "LB",
+"lo": 1.6159,
+"hi": 1.83
+},
+{
+"sol": "2000011489",
+"date": "2026-08-21",
+"material": "CHICKEN LEGS CHILLED -BULK",
+"qty": 2520000.0,
+"uom": "LB",
+"lo": 0.65,
+"hi": 0.75
+},
+{
+"sol": "2000011493",
+"date": "2026-08-31",
+"material": "GRAPEFRUIT FRESH CTN-34-39 LB",
+"qty": 530160.0,
+"uom": "CS",
+"lo": 15.5,
+"hi": 28.681
+},
+{
+"sol": "2000011494",
+"date": "2026-08-31",
+"material": "ORANGES CTN-34-39 LB",
+"qty": 1197342.0,
+"uom": "CS",
+"lo": 11.32,
+"hi": 44.55
+},
+{
+"sol": "2000011495",
+"date": "2026-08-20",
+"material": "BEEF CAN-24/24 OZ",
+"qty": 648000.0,
+"uom": "LB",
+"lo": 5.2183,
+"hi": 5.3469
+},
+{
+"sol": "2000011495",
+"date": "2026-08-20",
+"material": "BEEF CHILI W/BEANS PKG-12/15 OZ",
+"qty": 293760.0,
+"uom": "LB",
+"lo": 1.6437,
+"hi": 1.7876
+},
+{
+"sol": "2000011495",
+"date": "2026-08-20",
+"material": "BEEF STEW CAN-24/24 OZ",
+"qty": 2700000.0,
+"uom": "LB",
+"lo": 2.2978,
+"hi": 2.4492
+},
+{
+"sol": "2000011495",
+"date": "2026-08-20",
+"material": "PORK CAN-24/24 OZ",
+"qty": 864000.0,
+"uom": "LB",
+"lo": 1.9552,
+"hi": 2.0996
+},
+{
+"sol": "2000011497",
+"date": "2026-08-19",
+"material": "PLUMS PITTED DRIED PKG-24/1 LB",
+"qty": 97500.0,
+"uom": "CS",
+"lo": 43.81,
+"hi": 56.65
+},
+{
+"sol": "2000011498",
+"date": "2026-08-31",
+"material": "CATFISH FLTS UNBRD RAW PKG-20/2",
+"qty": 3952000.0,
+"uom": "LB",
+"lo": 4.58,
+"hi": 5.38
+},
+{
+"sol": "2000011499",
+"date": "2026-08-31",
+"material": "ATLANTIC POLLOCK FILLET FRZ",
+"qty": 11700.0,
+"uom": "CS",
+"lo": 257.1,
+"hi": 385.0
+},
+{
+"sol": "2000011500",
+"date": "2026-09-01",
+"material": "BEANS, BLACK BAG-50 KG",
+"qty": 210.0,
+"uom": "MT",
+"lo": 1153.63,
+"hi": 1153.63
+},
+{
+"sol": "2000011500",
+"date": "2026-09-01",
+"material": "BEANS, PINTO BAG-50 KG",
+"qty": 150.0,
+"uom": "MT",
+"lo": 1006.64,
+"hi": 1153.63
+},
+{
+"sol": "2000011500",
+"date": "2026-09-01",
+"material": "LENTILS BAG-50 KG",
+"qty": 560.0,
+"uom": "MT",
+"lo": 495.0,
+"hi": 539.75
+},
+{
+"sol": "2000011500",
+"date": "2026-09-01",
+"material": "OIL, SUNFLOWERSEED CAN-6/4 L",
+"qty": 110.005,
+"uom": "MT",
+"lo": 4499.77,
+"hi": 4499.77
+},
+{
+"sol": "2000011500",
+"date": "2026-09-01",
+"material": "OIL, VEGETABLE CAN-6/4 L",
+"qty": 410.102,
+"uom": "MT",
+"lo": 2347.64,
+"hi": 2505.14
+},
+{
+"sol": "2000011500",
+"date": "2026-09-01",
+"material": "PEAS, GREEN, SPLIT BAG-50 KG",
+"qty": 100.0,
+"uom": "MT",
+"lo": 615.0,
+"hi": 615.0
+},
+{
+"sol": "2000011500",
+"date": "2026-09-01",
+"material": "PEAS, YELLOW, SPLIT BAG-50 KG",
+"qty": 820.0,
+"uom": "MT",
+"lo": 446.45,
+"hi": 446.45
+},
+{
+"sol": "2000011500",
+"date": "2026-09-01",
+"material": "RICE, 5/20 LG, W-MLD, FORT BAG-50",
+"qty": 4870.0,
+"uom": "MT",
+"lo": 544.77,
+"hi": 544.77
+},
+{
+"sol": "2000011503",
+"date": "2026-09-02",
+"material": "BLACKBERRY IQF CTN-12/2.5 LB",
+"qty": 35640.0,
+"uom": "CS",
+"lo": 43.5,
+"hi": 66.11
+},
+{
+"sol": "2000011505",
+"date": "2026-09-11",
+"material": "PLUMS PITTED DRIED PKG-24/1 LB",
+"qty": 93000.0,
+"uom": "CS",
+"lo": 45.88,
+"hi": 65.2
+},
+{
+"sol": "2000011510",
+"date": "2026-09-09",
+"material": "TURKEY CHILLED -BULK",
+"qty": 2808000.0,
+"uom": "LB",
+"lo": 1.84,
+"hi": 1.84
+},
+{
+"sol": "2000011510",
+"date": "2026-09-09",
+"material": "TURKEY THIGHS BNLS SKNLS",
+"qty": 252000.0,
+"uom": "LB",
+"lo": 1.58,
+"hi": 1.84
+},
+{
+"sol": "2000011514",
+"date": "2026-09-14",
+"material": "BEEF COARSE GROUND FRZ CTN-60",
+"qty": 11046000.0,
+"uom": "LB",
+"lo": 4.26,
+"hi": 4.88
+},
+{
+"sol": "2000011519",
+"date": "2026-09-11",
+"material": "BUTTER PRINT SALTED CTN-36/1 LB",
+"qty": 123120.0,
+"uom": "LB",
+"lo": 1.935,
+"hi": 2.0025
+},
+{
+"sol": "2000011519",
+"date": "2026-09-11",
+"material": "BUTTERY SPREAD LIGHT TUBS-12/15",
+"qty": 74520.0,
+"uom": "LB",
+"lo": 2.48,
+"hi": 2.48
+},
+{
+"sol": "2000011521",
+"date": "2026-09-11",
+"material": "BEEF CRUMBLES W/SPP PKG-4/10 LB",
+"qty": 400000.0,
+"uom": "LB",
+"lo": 4.317,
+"hi": 4.487
+},
+{
+"sol": "2000011521",
+"date": "2026-09-11",
+"material": "PORK PULLED CKD PKG-8/5 LB",
+"qty": 360000.0,
+"uom": "LB",
+"lo": 2.2357,
+"hi": 2.3699
+},
+{
+"sol": "2000011522",
+"date": "2026-09-15",
+"material": "BEEF PATTY CKD FRZ 2.0 MMA",
+"qty": 570000.0,
+"uom": "LB",
+"lo": 5.663,
+"hi": 5.8577
+},
+{
+"sol": "2000011522",
+"date": "2026-09-15",
+"material": "BEEF SPP PTY HSTYLE CKD 2.0MMA",
+"qty": 342000.0,
+"uom": "LB",
+"lo": 4.758,
+"hi": 5.028
+},
+{
+"sol": "2000011525",
+"date": "2026-09-11",
+"material": "GRAPE CONCORD JUICE PLST",
+"qty": 998350.0,
+"uom": "CS",
+"lo": 16.59,
+"hi": 31.79
+},
+{
+"sol": "2000011526",
+"date": "2026-09-11",
+"material": "RAISINS BOX-144/1.33 OZ",
+"qty": 1031472.0,
+"uom": "CS",
+"lo": 16.54,
+"hi": 23.98
+},
+{
+"sol": "2000011527",
+"date": "2026-09-11",
+"material": "SHRIMP PEELED & DVND 51-70",
+"qty": 187500.0,
+"uom": "CS",
+"lo": 87.0,
+"hi": 119.8
+},
+{
+"sol": "2000011528",
+"date": "2026-09-18",
+"material": "CHICKEN LARGE CHILLED -BULK",
+"qty": 27864000.0,
+"uom": "LB",
+"lo": 1.6256,
+"hi": 1.83
+},
+{
+"sol": "2000011528",
+"date": "2026-09-18",
+"material": "CHICKEN LEGS CHILLED -BULK",
+"qty": 4644000.0,
+"uom": "LB",
+"lo": 0.65,
+"hi": 0.74
+},
+{
+"sol": "2000011532",
+"date": "2026-09-14",
+"material": "MANDARIN TANGERINE FRESH BAG",
+"qty": 770400.0,
+"uom": "CS",
+"lo": 24.49,
+"hi": 36.55
+},
+{
+"sol": "2000011535",
+"date": "2026-09-15",
+"material": "BEANS, KIDNEY, DARK RED BAG-50",
+"qty": 450.0,
+"uom": "MT",
+"lo": 1268.58,
+"hi": 1268.58
+},
+{
+"sol": "2000011535",
+"date": "2026-09-15",
+"material": "CORN-SOY BLEND PLUS BAG-HP-25",
+"qty": 150.0,
+"uom": "MT",
+"lo": 1563.32,
+"hi": 1563.32
+},
+{
+"sol": "2000011535",
+"date": "2026-09-15",
+"material": "OIL, VEGETABLE CAN-6/4 L",
+"qty": 100.04,
+"uom": "MT",
+"lo": 2317.45,
+"hi": 2955.66
+},
+{
+"sol": "2000011535",
+"date": "2026-09-15",
+"material": "RICE, 2/7 LG, W-MLD, FORT BAG-50",
+"qty": 630.0,
+"uom": "MT",
+"lo": 715.82,
+"hi": 744.16
+},
+{
+"sol": "2000011541",
+"date": "2026-10-06",
+"material": "BEANS, PINTO BAG-50 KG",
+"qty": 500.0,
+"uom": "MT",
+"lo": 1005.73,
+"hi": 1242.21
+},
+{
+"sol": "2000011541",
+"date": "2026-10-06",
+"material": "CORN-SOY BLEND PLUS BAG-HP-25",
+"qty": 60.0,
+"uom": "MT",
+"lo": 1563.04,
+"hi": 1563.04
+},
+{
+"sol": "2000011541",
+"date": "2026-10-06",
+"material": "OIL, VEGETABLE BOTTLE, PLS-6/4 L",
+"qty": 50.02,
+"uom": "MT",
+"lo": 2152.88,
+"hi": 2152.88
+},
+{
+"sol": "2000011541",
+"date": "2026-10-06",
+"material": "OIL, VEGETABLE CAN-6/4 L",
+"qty": 120.013,
+"uom": "MT",
+"lo": 2251.31,
+"hi": 2923.33
+},
+{
+"sol": "2000011541",
+"date": "2026-10-06",
+"material": "RICE, 5/20 LG, W-MLD, FORT BAG-50",
+"qty": 1410.0,
+"uom": "MT",
+"lo": 667.18,
+"hi": 718.99
+},
+{
+"sol": "2000011545",
+"date": "2026-09-25",
+"material": "ATLANTIC POLLOCK FILLET FRZ",
+"qty": 7200.0,
+"uom": "CS",
+"lo": 250.0,
+"hi": 325.6
+},
+{
+"sol": "2000011547",
+"date": "2026-09-25",
+"material": "CARROTS CAN-6/10",
+"qty": 10032.0,
+"uom": "CS",
+"lo": 29.3,
+"hi": 32.05
+},
+{
+"sol": "2000011547",
+"date": "2026-09-25",
+"material": "CORN WHOLE KERNEL(LIQ) CAN-6/10",
+"qty": 86640.0,
+"uom": "CS",
+"lo": 26.5008,
+"hi": 33.1984
+},
+{
+"sol": "2000011547",
+"date": "2026-09-25",
+"material": "PEAS CAN-6/10",
+"qty": 5472.0,
+"uom": "CS",
+"lo": 33.5,
+"hi": 39.05
+}
+]
