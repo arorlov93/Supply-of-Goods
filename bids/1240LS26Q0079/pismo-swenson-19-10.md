@@ -111,64 +111,11 @@ Enterprises, St. Regis Culvert, TrueNorth и Metal Culverts, которым мы
 В плане на месяц ещё четыре закупки, где нужна труба и прокат. Счёт
 нужен к ним, а не к этой.
 
----
+## Решение пользователя 19.10: ничего не отправляем
 
-## Ответ Gabe: текст на согласование, НЕ отправлен
+Ответ Swenson не готовится и не отправляется. Черновик, который я начал
+писать, удалён.
 
-По правилу 3 показываю в диалоге, отправка по отдельной команде.
-
-Что в письме есть: благодарность, честное закрытие темы по Юте, просьба
-о кредитной заявке и о цене за фунт на условиях завода.
-
-Что в письме нет: номеров других закупок, названий заказчиков, сроков
-подачи, упоминания конкурсов. Про Юту номер назван только потому, что он
-уже в их собственной теме и закупка закрыта.
-
-```
-Hi Gabe,
-
-Thank you for following up, and for the letter.
-
-Straight answer on the Utah job: the response deadline was 10:00 AM
-Mountain on 14 October, so that one is closed. Nothing further is needed
-for it.
-
-Two things would be worth more to me than that job was.
-
-First, your credit application. We are a supply and trading company and
-we buy corrugated pipe, coupling bands and steel on a recurring basis. We
-pay by electronic transfer and we would rather be set up on an account
-before the next requirement lands than scramble when it does. Send me the
-form and the documents you need from us and I will turn it around the
-same day.
-
-Second, pricing on a dealer basis. On the Utah quantity your number came
-to about $2.18 per pound delivered. That is a retail number and it does
-not clear our ceiling. What I need to see going forward is your dealer
-column: price per pound FOB mill, freight quoted separately, and the lead
-time from purchase order. If the mill is ACE in Kearney, tell me so
-plainly and I will take the freight into my own calculation rather than
-guessing at it.
-
-One note on the compliance letter, said plainly so there is no confusion
-later. As written it states that the pipe "is represented as" meeting
-AASHTO M 36 and "is represented as" manufactured in the USA, and it makes
-those statements subject to verification by the manufacturer. For the
-work we do, origin has to be certified by the mill in writing, on the
-mill's letterhead, naming the heat or lot. If you can get that from your
-mill as a matter of routine, say so, because that alone decides whether
-we can use a supplier.
-
-We have four more requirements for pipe and steel in the next several
-weeks. I would rather bring them to someone who answers his email, and
-you did.
-
-Thank you,
-
-Aleksandr Orlov, Member
-ISP GROUP LLC
-16395 Biscayne Blvd Apt 818, Aventura, FL 33160-5743
-(929) 830-0038
-info@ispgroupgc.com
-www.ispgroupgc.com
-```
+Тема закрыта. Запись остаётся как факт: проверенный срок закупки,
+проверенная цена Swenson в $2,18 за фунт против нашего предела $1,45, и
+наблюдение про утечку номера солиситации в письмах 10 и 12 октября.
