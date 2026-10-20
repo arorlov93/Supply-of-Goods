@@ -1,0 +1,462 @@
+Buy View
+To place a bid or register go to Unison Marketplace
+View Details for Buy
+#
+RFI_1214592
+General Buy Information
+Buy #:
+RFI_1214592
+Solicitation #:
+RFI 12345
+Buy Description:
+RFI OPTION - Vehicle Decals
+Category:
+99 -- Miscellaneous
+Sub Category:
+9999 -- Miscellaneous Items
+NAICS:
+339999 -- All Other Miscellaneous Manufacturing
+SAM Contract Opportunity:
+No
+Set-Aside Requirement:
+Small Business
+Buyer:
+Department of State
+End Date:
+10/26/2026
+End Time:
+11:00 ET
+Seller Question Deadline:
+No Seller Question Deadline Set
+Delivery:
+Period of Performance - See below
+View Question & Responses
+LOG IN TO START BID
+Line Item(s) Template - Optional
+You have the option of entering Bid information manually by clicking Start Bid or you can prepare your Bid in an Excel spreadsheet by clicking Download Template . Complete the template using the instructions provided in the spreadsheet and save the file to your computer. When complete, login to Unison Marketplace and click Start Bid . Proceed to the Line Items screen to upload the information.
+Download Template
+Line Item(s)
+Base
+Base Period of Performance:
+01/08/2027 - 07/30/2027
+Item No
+Description
+Qty
+Unit
+Non-Priced
+Line Items
+001
+Vehicle Decals per the attached SOW
+24000
+EA
+Non-Priced
+Line Item(s)
+Option 1
+Option 1 Period of Performance:
+07/31/2027 - 07/30/2028
+Item No
+Description
+Qty
+Unit
+Non-Priced
+Line Items
+001
+Vehicle Decals per the attached SOW
+24000
+EA
+Non-Priced
+Line Item(s)
+Option 2
+Option 2 Period of Performance:
+07/31/2028 - 07/30/2029
+Item No
+Description
+Qty
+Unit
+Non-Priced
+Line Items
+001
+Vehicle Decals per the attached SOW
+24000
+EA
+Non-Priced
+Line Item(s)
+Option 3
+Option 3 Period of Performance:
+07/31/2029 - 07/30/2030
+Item No
+Description
+Qty
+Unit
+Non-Priced
+Line Items
+001
+Vehicle Decals per the attached SOW
+24000
+EA
+Non-Priced
+Line Item(s)
+Option 4
+Option 4 Period of Performance:
+07/31/2030 - 07/30/2031
+Item No
+Description
+Qty
+Unit
+Non-Priced
+Line Items
+001
+Vehicle Decals per the attached SOW
+24000
+EA
+Non-Priced
+Bidding Requirements
+Instructions
+Open Market:
+Open Market bids are accepted in this solicitation; however, please refer to the specifications below, including 'Set-Aside Requirement' provision, for additional requirements.
+Contracting Method - RFI/Sources Sought:
+(This is not a pre-solicitation notice pursuant to FAR Part 5) This Sources Sought Notice (SSN) is for planning/information purposes only and shall not be construed as a commitment or a promise of a contract by the Government. This is not a solicitation. This notice does not constitute a Request for Bid, Request for Quote, or Request for Proposal, nor does it restrict the Government as to the ultimate acquisition approach. The Government will not reimburse respondents for any costs incurred in preparation of a response to this notice.
+Brand Name or Equal:
+The Buyer is allowing Sellers to submit bids for alternate items, provided those items meet all of the salient physical, functional, or performance characteristics specified by this solicitation. Sellers MUST enter exactly what they are bidding (including make, model and description) into the blank description field in order for the bid to be considered. The Buyer will evaluate 'equal' items on the basis of information furnished by the Seller or identified in the bid and reasonably available to the Buyer. The Buyer is not responsible for locating or obtaining any information not identified in the Bid.
+RFI/Sources Sought:
+The Buyer intends to issue an RFI/Sources Sought.
+Set-Aside Requirement:
+This solicitation is a Small Business Set-Aside and only qualified Sellers can bid.
+Use of Unison Marketplace:
+Buyers and Sellers agree to conduct this transaction through Unison Marketplace in compliance with the Unison Marketplace Terms of Use. Failure to comply with the below terms and conditions may result in offer being determined as non-responsive.
+Question Submission:
+Interested offerors must submit any questions concerning the solicitation at the earliest time possible to enable the buyer to respond. Questions can be submitted by using the 'Questions & Responses' link. Questions not received within a reasonable time prior to close of the solicitation may not be considered.
+Default Terms:
+Unless otherwise specified in the Buy Terms, below, Bid must be good for 30 calendar days after close of Buy and shipping must be free on board (FOB) destination CONUS (Continental U.S.)
+Period of Performance:
+Base:
+01/08/2027 - 07/30/2027
+Option 1:
+07/31/2027 - 07/30/2028
+Option 2:
+07/31/2028 - 07/30/2029
+Option 3:
+07/31/2029 - 07/30/2030
+Option 4:
+07/31/2030 - 07/30/2031
+No pricing allowed:
+The Buyer is requiring interested Sellers submit Bids with no pricing.
+Buy Terms
+Name
+Description
+Product Certification
+If this is a “Brand Name Only” procurement, Seller certifies that it is an authorized distributer of the brand name product being sold to the Department of State and that it has the certification/specialization level required by the manufacturer, to support both the product sale and product pricing, in accordance with applicable manufacturer certification/specialization requirements. Unless otherwise specified, Seller warrants that the products are new and in their original box(es).
+Supplemental Bid Information
+In addition to providing pricing at www.UnisonMarketplace.com for this solicitation, each Offeror must provide any required, NON-PRICING responses (e.g. technical proposal, representations and certifications, etc.) so that they are received no later than the closing date and time for this solicitation; these shall be uploaded with the Offeror's bid via Unison Marketplace.
+52.204-7 System for Award Management—Registration
+The Offeror shall have an active Federal Government contracts registration in the System for Award Management (SAM) when submitting an offer or quotation in response to this solicitation and at the time of award. As part of the SAM registration process, the Government collects information, as described in paragraphs (b) through (d) of this provision, that is necessary to identify the Offeror and for the Offeror to be awarded Federal Government contracts. To register in SAM, go to https://www.sam.gov. Allow for processing time when registering in SAM. If the Offeror is not registered in SAM, it should register immediately after receiving this solicitation. See full text of this clause at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52.
+Bids Must Be Valid for 30 Days
+All Bids must be valid for 30 days from the closing date for this solicitation. No exceptions or qualifications.
+Equipment Requirement
+New equipment ONLY, NO grey market or refurbished products. Items must be in original packaging, never used, and not altered in any way. Components of the requested equipment, to include memory, must be manufacturer-approved and may not be compatible, remanufactured, or refurbished equipment. All items must be covered by manufacturer’s warranty and procured through a manufacturer approved distribution channel. Sellers must be able to document their ability to provide items through manufacturer approved distribution channels upon request.
+The Seller confirms to have sourced all products submitted in this Bid from manufacturer-approved channels for Federal sales, in accordance with all applicable laws and manufacturer’s current applicable policies at the time of purchase. Seller must be able to support both the product sale and product pricing, in accordance with applicable manufacturer certification / specialization requirements. If software is provided or included, Seller shall, upon request, provide Buyer with a copy of the End User License Agreement. Seller certifies that all software is licensed originally to Buyer as the original licensee authorized to use the software.
+Shipping Condition
+All bid prices must include shipping FOB Destination. No partial shipments are permitted, unless otherwise specified by Contracting Officer at time of award.
+Manufacturer Authorized Reseller/Distributor
+To be considered for award, all Sellers must be manufacturer federally authorized distributors/resellers of the equipment/services they are offering with a demonstrated capability of delivering the entire order within the timeframes specified by the Buyer on the award. Sellers shall be required to provide documentation as proof of authorization to be considered for award.
+52.204-24 Representation Regarding Certain Telecommunications & Video Surveillance Services or Equip
+The Offeror shall not complete the representation at paragraph (d)(1) of this provision if the Offeror has represented that it “does not provide covered telecommunications equipment or services as a part of its offered products or services to the Government in the performance of any contract, subcontract, or other contractual instrument” in the provision at 52.204-26, Covered Telecommunications Equipment or Services—Representation, or in paragraph (v) of the provision at 52.212-3, Offeror Representations and Certifications-Commercial Items. (a) Definitions. As used in this provision— Backhaul, covered telecommunications equipment or services, critical technology, interconnection arrangements, reasonable inquiry, roaming, and substantial or essential component have the meanings provided in the clause 52.204-25, Prohibition on Contracting for Certain Telecommunications and Video Surveillance Services or Equipment. (b) Prohibition. (1) Section 889(a)(1)(A) of the John S. McCain National Defense Authorization Act for Fiscal Year 2019 (Pub. L. 115-232) prohibits the head of an executive agency on or after August 13, 2019, from procuring or obtaining, or extending or renewing a contract to procure or obtain, any equipment, system, or service that uses covered telecommunications equipment or services as a substantial or essential component of any system, or as critical technology as part of any system. Nothing in the prohibition shall be construed to— (i)Prohibit the head of an executive agency from procuring with an entity to provide a service that connects to the facilities of a third-party, such as backhaul, roaming, or interconnection arrangements; or (ii)Cover telecommunications equipment that cannot route or redirect user data traffic or cannot permit visibility into any user data or packets that such equipment transmits or otherwise handles.
+52.204-24 Continued 2/4
+(2) Section 889(a)(1)(B) of the John S. McCain National Defense Authorization Act for Fiscal Year 2019 (Pub. L. 115-232) prohibits the head of an executive agency on or after August 13, 2020, from entering into a contract or extending or renewing a contract with an entity that uses any equipment, system, or service that uses covered telecommunications equipment or services as a substantial or essential component of any system, or as critical technology as part of any system. This prohibition applies to the use of covered telecommunications equipment or services, regardless of whether that use is in performance of work under a Federal contract. Nothing in the prohibition shall be construed to— (i)Prohibit the head of an executive agency from procuring with an entity to provide a service that connects to the facilities of a third-party, such as backhaul, roaming, or interconnection arrangements; or (ii)Cover telecommunications equipment that cannot route or redirect user data traffic or cannot permit visibility into any user data or packets that such equipment transmits or otherwise handles. (c) Procedures. The Offeror shall review the list of excluded parties in the System for Award Management (SAM) (https://www.sam.gov) for entities excluded from receiving federal awards for “covered telecommunications equipment or services”.
+52.204-24 Continued 3/4
+(d) Representation. The Offeror represents that— (1)It □ will, □ will not provide covered telecommunications equipment or services to the Government in the performance of any contract, subcontract or other contractual instrument resulting from this solicitation. The Offeror shall provide the additional disclosure information required at paragraph (e)(1) of this section if the Offeror responds “will” in paragraph (d)(1) of this section; and (2)After conducting a reasonable inquiry, for purposes of this representation, the Offeror represents that— It □ does, □ does not use covered telecommunications equipment or services, or use any equipment, system, or service that uses covered telecommunications equipment or services. The Offeror shall provide the additional disclosure information required at paragraph (e)(2) of this section if the Offeror responds “does” in paragraph (d)(2) of this section. (e) Disclosures. (1) Disclosure for the representation in paragraph (d)(1) of this provision. If the Offeror has responded “will” in the representation in paragraph (d)(1) of this provision, the Offeror shall provide the following information as part of the offer:
+52.204-24 Continued 4/4
+(i)For covered equipment— (A)The entity that produced the covered telecommunications equipment (include entity name, unique entity identifier, CAGE code, and whether the entity was the original equipment manufacturer (OEM) or a distributor, if known); (B)A description of all covered telecommunications equipment offered (include brand; model number, such as OEM number, manufacturer part number, or wholesaler number; and item description, as applicable); and (C)Explanation of the proposed use of covered telecommunications equipment and any factors relevant to determining if such use would be permissible under the prohibition in paragraph (b)(1) of this provision. (ii)For covered services— (A)If the service is related to item maintenance: A description of all covered telecommunications services offered (include on the item being maintained: Brand; model number, such as OEM number, manufacturer part number, or wholesaler number; and item description, as applicable); or (B)If not associated with maintenance, the Product Service Code (PSC) of the service being provided; and explanation of the proposed use of covered telecommunications services and any factors relevant to determining if such use would be permissible under the prohibition in paragraph (b)(1) of this provision. (2) Disclosure for the representation in paragraph (d)(2) of this provision. If the Offeror has responded “does” in the representation in paragraph (d)(2) of this provision, the Offeror shall provide the following information as part of the offer: (i)For covered equipment— (A)The entity that produced the covered telecommunications equipment (include entity name, unique entity identifier, CAGE code, and whether the entity was the OEM or a distributor, if known); (B)A description of all covered telecommunications equipment offered (include brand; model number, such as OEM number, manufacturer part number, or wholesaler number; and item description, as applicable); and (C)Explanation of the proposed use of covered telecommunications equipment and any factors relevant to determining if such use would be permissible under the prohibition in paragraph (b)(2) of this provision. (ii)For covered services— (A)If the service is related to item maintenance: A description of all covered telecommunications services offered (include on the item being maintained: Brand; model number, such as OEM number, manufacturer part number, or wholesaler number; and item description, as applicable); or (B)If not associated with maintenance, the PSC of the service being provided; and explanation of the proposed use of covered telecommunications services and any factors relevant to determining if such use would be permissible under the prohibition in paragraph (b)(2) of this provision. (End of provision)
+Required Documentation of Compliance with NDAA Section 889--FAR Interim Rule 2019-009
+To be considered for award, all vendors submitting bids for this requirement must self-certify conformance in their SAM.gov representations as required in FAR 52.204-24, FAR 52.204-25 and FAR 52.204-26 in accordance with FAR Interim Rule 2019-009. Vendors that fail to complete this self-certification or present with a record that does not reflect conformance at FAR 52.204-26 and FAR 52.212-3 (v) within SAM.gov will not be considered for award.
+52.204-26 Covered Telecommunications Equipment or Services-Representation
+(a) Definitions. As used in this provision, “covered telecommunications equipment or services” has the meaning provided in the clause 52.204-25, Prohibition on Contracting for Certain Telecommunications and Video Surveillance Services or Equipment.
+(b) Procedures. The Offeror shall review the list of excluded parties in the System for Award Management (SAM) (https://www.sam.gov) for entities excluded from receiving federal awards for “covered telecommunications equipment or services”.
+(c) Representation. The Offeror represents that it □ does, □ does not provide covered telecommunications equipment or services as a part of its offered products or services to the Government in the performance of any contract, subcontract, or other contractual instrument.
+652.206-70 Advocate for Competition/Ombudsman
+(a) The Department of State's Advocate for Competition is responsible for assisting industry in removing restrictive requirements from Department of State solicitations and removing barriers to full and open competition and use of commercial items. If such a solicitation is considered competitively restrictive or does not appear properly conducive to competition and commercial practices, potential offerors are encouraged first to contact the contracting officer for the solicitation. If concerns remain unresolved, contact:
+652.225-70 Arab League Boycott of Israel
+(a) Definitions. As used in this provision: “Foreign person” means any person other than a United States person as defined below. “United States person” means any United States resident or national (other than an individual resident outside the United States and employed by other than a United States person), any domestic concern (including any permanent domestic establishment of any foreign concern), and any foreign subsidiary or affiliate (including any permanent foreign establishment) of any domestic concern which is controlled in fact by such domestic concern, as provided under the Export Administration Act of 1979, as amended. (b) Certification. By submitting this offer, the offeror certifies that it is not: (1) Taking or knowingly agreeing to take any action, with respect to the boycott of Israel by Arab League countries, which Section 8(a) of the Export Administration Act of 1979, as amended (50 U.S.C. 2407(a)) prohibits a United States person from taking; or, (2) Discriminating in the award of subcontracts on the basis of religion. (End of provision)
+652.239-70 Information Technology Security Plan and Accreditation
+All offers/bids submitted in response to this solicitation must address the approach for completing the security plan and certification and accreditation requirements as required by the clause at 652.239-71, Security Requirements for Unclassified Information Technology Resources. (End of provision)
+652.239-71 Security Requirements for Unclassified Information Technology Resources (part 1)
+(a) General. The Contractor shall be responsible for information technology (IT) security, based on Department of State (DOS) risk assessments, for all systems connected to a Department of State (DOS) network or operated by the Contractor for DOS, regardless of location. This clause is applicable to all or any part of the contract that includes information technology resources or services in which the Contractor has physical or electronic access to DOS's information that directly supports the mission of DOS. The term “information technology”, as used in this clause, means any equipment, including telecommunications equipment, that is used in the automatic acquisition, storage, manipulation, management, movement, control, display, switching, interchange, transmission, or reception of data or information. This includes both major applications and general support systems as defined by OMB Circular A-130. Examples of tasks that require security provisions include: (1) Hosting of DOS e-Government sites or other IT operations; (2) Acquisition, transmission or analysis of data owned by DOS with significant replacement cost should the Contractor's copy be corrupted; and (3) Access to DOS general support systems/major applications at a level beyond that granted the general public; e.g., bypassing a firewall. (b) IT Security Plan. The Contractor shall develop, provide, implement, and maintain an IT Security Plan. This plan shall describe the processes and procedures that will be followed to ensure appropriate security of IT resources that are developed, processed, or used under this contract. The plan shall describe those parts of the contract to which this clause applies. The Contractor's IT Security Plan shall comply with applicable Federal laws that include, but are not limited to, 40 U.S.C. 11331, the Federal Information Security Management Act (FISMA) of 2002, and the E-Government Act of 2002. The plan shall meet IT security requirements in accordance with Federal and DOS policies and procedures, as they may be amended from time to time during the term of this contract that include, but are not limited to: (1) OMB Circular A-130, Management of Federal Information Resources, Appendix III, Security of Federal Automated Information Resources; (2) National Institute of Standards and Technology (NIST) Guidelines (see NIST Special Publication 800-37, Guide for the Security Certification and Accreditation of Federal Information Technology Systems (http://csrc.nist.gov/publications/nistpubs/800-37/SP800-37-final.pdf)); and (3) Department of State information security sections of the Foreign Affairs Manual (FAM) and Foreign Affairs Handbook (FAH) (http://foia.state.gov/Regs/Search.asp), specifically: (i) 12 FAM 230, Personnel Security; (ii) 12 FAM 500, Information Security (sections 540, 570, and 590); (iii) 12 FAM 600, Information Security Technology (section 620, and portions of 650); (iv) 5 FAM 1060, Information Assurance Management; and (v) 5 FAH 11, Information Assurance Handbook.
+652.239-71 Security Requirements for Unclassified Information Technology Resources (part 2)
+(c) Submittal of IT Security Plan. Within 30 days after contract award, the Contractor shall submit the IT Security Plan to the Contracting Officer and Contracting Officer's Representative (COR) for acceptance. This plan shall be consistent with and further detail the approach contained in the contractor's proposal or sealed bid that resulted in the award of this contract and in compliance with the requirements stated in this clause. The plan, as accepted by the Contracting Officer and COR, shall be incorporated into the contract as a compliance document. The Contractor shall comply with the accepted plan. (d) Accreditation. Within six (6) months after contract award, the Contractor shall submit written proof of IT security accreditation for acceptance by the Contracting Officer. Such written proof may be furnished either by the Contractor or by a third party. Accreditation must be in accordance with NIST Special Publication 800-37. This accreditation will include a final security plan, risk assessment, security test and evaluation, and disaster recovery plan/continuity of operations plan. This accreditation, when accepted by the Contracting Officer, shall be incorporated into the contract as a compliance document, and shall include a final security plan, a risk assessment, security test and evaluation, and disaster recovery/continuity of operations plan. The Contractor shall comply with the accepted accreditation documentation. (e) Annual verification. On an annual basis, the Contractor shall submit verification to the Contracting Officer that the IT Security Plan remains valid. (f) Warning notices. The Contractor shall ensure that the following banners are displayed on all DOS systems (both public and private) operated by the Contractor prior to allowing anyone access to the system
+652.225-71 Section 8(a) of the Export Admin Act of 1979, As Amended (Part 1)
+SECTION 8(A) OF THE EXPORT ADMINISTRATION ACT OF 1979, AS AMENDED (AUG 1999)
+(a) Section 8(a) of the U.S. Export Administration Act of 1979, as amended (50 U.S.C. 2407(a)), prohibits compliance by U.S. persons with any boycott fostered by a foreign country against a country which is friendly to the United States and which is not itself the object of any form of boycott pursuant to United States law or regulation. The Boycott of Israel by Arab League countries is such a boycott, and therefore, the following actions, if taken with intent to comply with, further, or support the Arab League Boycott of Israel, are prohibited activities under the Export Administration Act:
+(1) Refusing, or requiring any U.S. person to refuse to do business with or in Israel, with any Israeli concern, or with any national or resident of Israel, or with any other person, pursuant to an agreement of, or a request from or on behalf of a boycotting country;
+(2) Refusing, or requiring any U.S. person to refuse to employ or otherwise discriminating against any person on the basis of race, religion, sex, or national origin of that person or of any owner, officer, director, or employee of such person;
+(3) Furnishing information with respect to the race, religion, or national origin of any U.S. person or of any owner, officer, director, or employee of such U.S. person;
+(4) Furnishing information about whether any person has, has had, or proposes to have any business relationship (including a relationship by way of sale, purchase, legal or commercial representation, shipping or other transport, insurance, investment, or supply) with or in the State of Israel, with any business concern organized under the laws of the State of Israel, with any Israeli national or resident, or with any person which is known or believed to be restricted from having any business relationship with or in Israel;
+(5) Furnishing information about whether any person is a member of, has made contributions to, or is otherwise associated with or involved in the activities of any charitable or fraternal organization which supports the State of Israel; and,
+(6) Paying, honoring, confirming, or otherwise implementing letter of credit which contains any condition or requirement against doing business with the State of Israel.
+(b) Under Section 8(a), the following types of activities are not forbidden “compliance with the boycott”, and are therefore exempted from Section 8(a)’s prohibitions listed in paragraphs (a)(1) through (6) above:
+(1) Complying or agreeing to comply with requirements:
+(i) Prohibiting the import of goods or services from Israel or goods produced or services provided by any business concern organized under the laws of Israel or by nationals or residents of Israel; or,
+(ii) Prohibiting the shipment of goods to Israel on a carrier of Israel, or by a route other than that prescribed by the boycotting country or the recipient of the shipment;
+52.217-10 Reverse Auction
+(a) Definitions. As used in this provision—
+Reverse auction means the process for obtaining pricing, usually supported by an electronic tool, in which offerors see competing offerors'' price(s), without disclosure of the competing offerors'' identity, and have the opportunity to submit lower priced offers until the close of the auction.'
+Reverse auction service provider means a commercial or Government entity that provides a means for conducting reverse auctions when acquiring supplies or services to be used by the Government.'
+(b) Reverse auction. The Government intends to conduct a reverse auction under this solicitation to award a contract or blanket purchase agreement.'
+(c) Offeror agreement. By submission of a quote or proposal in response to the solicitation, the Offeror agrees to participate in the reverse auction and agrees that the Government may reveal to all Offerors the offered price(s) in the auction, without revealing any Offeror''s identity, except for the awardee''s identity subsequent to an award resulting from the auction. The Offeror may withdraw its agreement to further participate in the process by withdrawing its offer before the close of the auction by notifying the Contracting Officer via the contact method identified in the solicitation.'
+(d) Only one offer. If the reverse auction produces only one offer, the Government reserves the right to cancel the auction.'
+(e) Release of information. The Government may use a reverse auction service provider to conduct the reverse auction. Any price or proposal information or source selection information received by the reverse auction service provider in relation to the reverse auction shall not be released, outside of the Government, unless otherwise required by law. However, this does not prevent the Government from revealing to all Offerors the offered price(s) in the auction, without revealing any Offeror''s identity. Price or proposal information includes, but is not limited to—'
+(1) Contractor bid or proposal information, as defined at Federal Acquisition Regulation 3.104-1; and'
+(2) Information identified by the Offeror as restricted from duplication, use, or disclosure—in whole or in part—for any purpose other than to evaluate the Offeror''s price or proposal.'
+(End of provision)
+652.225-71 Section 8(a) of the Export Admin Act of 1979, As Amended (Part 2)
+(2) Complying or agreeing to comply with import and shipping document requirements with respect to the country of origin, the name of the carrier and route of shipment, the name of the supplier of the shipment or the name of the provider of other services, except that no information knowingly furnished or conveyed in response to such requirements may be stated in negative, blacklisting, or similar exclusionary terms, other than with respect to carriers or route of shipments as may be permitted by such regulations in order to comply with precautionary requirements protecting against war risks and confiscation;
+Applicable FAR Clauses
+The selected Offeror must comply with the following commercial item terms and conditions. FAR 52.212-: 52.222-21, 52.222-26, 52.222-35, 52.222-36, 52.222-37, 52.225-13, 52.232-34. The full text of a FAR clause may be accessed electronically at http://www.acquisition.gov/far/1, Instructions to Offerors - Commercial, applies to this acquisition. The selected Offeror must submit a completed copy of the provision at 52.212-3, Offeror Representations and Certifications - Commercial Items. FAR 52.212-4, Contract Terms and Conditions - Commercial Items, applies to this acquisition. The following FAR clauses in paragraph (b) of FAR clause 52.212-5, Contract Terms and Conditions Required To Implement Statutes or Executive Orders-Commercial Items, will apply
+CYBERSECURITY SUPPLY CHAIN RISK MANAGEMENT REQUIREMENTS (AUG 2024)
+(a) Definitions. As used in this clause:
+Covered article - The term "covered article" includes-
+(1) "Information and Communications technology" which is an industry term for information technology that is involved in integrating telecommunications (e.g., telephone lines and wireless signals) and computers to enable users to access, store, manipulate, transmit, and
+receive digital information. This includes software, software as a service,
+digital and data services, and hardware components that support
+information creation, storage, transfer, and management, like
+computers and smartphones.
+(2) "Telecommunications Equipment", which means equipment, other
+than customer premises equipment, used by a carrier to provide
+telecommunications services, and includes software integral to
+such equipment (including upgrades).
+(3) "Telecommunications Service", which means the offering of
+telecommunications for a fee directly to the public, or to such classes of
+users as to be effectively available directly to the public, regardless of the
+facilities used.
+(4) “Cybersecurity Supply Chain Risk”, which means the risk that a person
+may sabotage, maliciously introduce unwanted function, extract data, or
+otherwise manipulate the design, integrity, manufacturing, production,
+distribution, installation, operation, maintenance, disposition, or
+retirement of covered articles to surveil, deny, disrupt, or otherwise
+manipulate the function, use, or operation of the covered articles or
+information stored or transmitted on the covered articles.
+(5) “Incident,” which means, per the Federal Information Security
+Modernization Act of 2014, “an occurrence that (A) actually or
+imminently jeopardizes, without lawful authority, the integrity,
+confidentiality, or availability of information or an information system; or
+(B) constitutes a violation or imminent threat of violation of law, security policies, security procedures, or acceptable use policies.”
+(6) "Vulnerability,” means any weakness in an information system, system
+security procedures, internal controls, or implementation that could be
+exploited or triggered by a threat source.
+(b) Contractor Cybersecurity Supply Chain Risk Management Responsibilities. The Contractor must regularly identify, assess, monitor, and mitigate cybersecurity supply chain risks when providing covered articles or services to the Government. The Contractor shall maintain artifacts (i.e., any byproduct of hardware or software development that helps describe the architecture, design, and function of that hardware or software) that document its compliance with this paragraph and shall provide these artifacts to the Government within 48
+hours of request, which may be redacted to remove sensitive proprietary
+information.
+(c) Supporting Government Cybersecurity Supply Chain Risk Assessments. No more than an estimated once per year, the Contractor must provide any requested information related to its supply chain within 10 business days except information that is protected by a non-disclosure agreement with its
+customers (e.g., another federal agency).
+(d) Novation Agreement Notice. FAR 42.1203 require Government approval of novation agreements. For proposed novation agreements for this contract, the Contractor shall provide any information requested by the Government regarding the proposed successor’s identity and information regarding its supply
+chain.
+(e) Notification procedures for cybersecurity supply chain incidents. When an incident
+occurs, the Contractor must contact the CO or their designee within 72 hours of
+the incident.
+(f) Subcontracts. The Contractor shall insert the substance of this clause in all subcontracts and other contractual instruments in support of this contract.
+(g) Attestation following Major Version Change. For software provided under the contract that required an approved Secure Software Development Attestation Form, the responses on this form apply to the software’s major version changes (e.g., using a semantic versioning schema of Major.Minor.Patch, the software version number goes from 2.5 to 3.0) unless the Contractor otherwise notifies Contacting Officer that the form is no longer valid. This notification to the Contracting Officer must be submitted within 15 days of the major version change and must include a new completed and signed Secure Software Development Attestation Form.
+(End of clause)
+C-SCRM Proposal/Quote Instructions
+Cybersecurity Supply Chain Risk Management (C-SCRM) Forms
+The offeror shall include in its offer Attachment “C-SCRM Questionnaire.” In lieu of a completed C-SCRM Questionnaire, and the vendor may submit a
+third party authorizing official conducted assessment, such as ISO 27001, ISO 9000, SOC II, or
+FEDRAMP authorization.
+If the offeror is providing any software, the offeror must complete “State Department Secure Software Development Attestation Form” (or another agency’s equivalent form), and either include it in the offer, submit it to the CISA Repository for Software Attestations and Artifacts website (https://softwaresecurity.cisa.gov/login?callbackUrl=https%3A%2F%2Fsoftwaresecurity.cisa.gov%2Fsoftware) and indicate in its offer that the form is on this website, or upload the form to a public website and provide a link to the form in the offer. Both documents must be completed in accordance with each attachment’s instructions. Failure to follow the attachment’s instructions may result in rejection of the offer.
+C-SCRM Go/No-Go Evaluation Factor
+This factor is evaluated on a go/no-go basis. The Government will evaluate whether the submitted C-SCRM Questionnaire and State Department Secure Software Development Attestation Form meet the definition for the “Go” or “No-Go” ratings for this factor. The “Go” and “No-Go” ratings and their definitions are as follows: RATING DEFINITION -------- GO: The proposal meets the criteria in the following two (2) paragraphs. The C-SCRM Questionnaire contains both of the following: (1) C-SCRM Questionnaire instructions are completed; and (2) contains Yes answers for all questions in Sections 2 and 3 of the questionnaire; or the vendor has submitted a third party authorizing official conducted assessment such as, ISO 27001, ISO 9000, SOC II, or FEDRAMP authorization. For suppliers offering any software, the State Department Secure Software Development Attestation Form (or another federal agency’s equivalent form) is signed and submitted in accordance with the form’s instructions. In lieu of submitting the State Department Secure Software Development Attestation Form, the offeror provides the information required by section “Additional Information” of the form and the Government finds that this information satisfactory mitigates associated risks. ---------- NO GO: The proposal does not meet one (1) or more of the criteria in the following two (2) paragraphs. The C-SCRM Questionnaire contains both of the following: (1) C-SCRM Questionnaire instructions are completed; and (2) contains Yes answers for all questions in Sections 2 and 3 of the questionnaire; or the vendor has submitted a third party authorizing official conducted assessment such as, ISO 27001, ISO 9000, SOC II, or FEDRAMP authorization. For suppliers offering any software, the State Department Secure Software Development Attestation Form (or another federal agency’s equivalent form) is signed and submitted in accordance with the form’s instructions. In lieu of submitting the State Department Secure Software Development Attestation Form, the offeror provides the information required by section “Additional Information” of the form and the Government finds that this information satisfactory mitigates associated risks.
+52.222-50 Combating Trafficking in Persons
+52.222-50 Combating Trafficking in Persons applies to this solicitation and resulting order. The full clause can be found at: https://www.acquisition.gov/far/52.222-50.
+FAR 52.222-90 - Addressing DEI Discrimination by Federal Contractors
+Addressing DEI Discrimination by Federal Contractors (Deviation DATE)
+(a) Definitions. As used in this clause—
+Program participation means membership or participation in, or access or admission to: training, mentoring, or leadership development programs; educational opportunities; clubs; associations; or similar opportunities that are sponsored or established by the contractor or subcontractor.
+Racially discriminatory diversity, equity, and inclusion (DEI) activities means disparate treatment based on race or ethnicity in the recruitment, employment (e.g., hiring, promotions), contracting (e.g., vendor agreements), program participation, or allocation or deployment of an entity's resources.
+(b) In connection with the performance of work under this contract, the Contractor agrees as follows:
+(1) The Contractor will not engage in any racially discriminatory DEI activities;
+(2) The Contractor will furnish all information and reports, including providing access to books, records, and accounts, as required by the Contracting Officer, for purposes of ascertaining compliance with this clause;
+(3) In the event of the Contractor's or a subcontractor's noncompliance with this clause, this contract may be canceled, terminated, or suspended in whole or in part, and the Contractor or subcontractor may be declared ineligible for further Government contracts;
+(4) The Contractor will report any subcontractor's known or reasonably knowable conduct that may violate this clause to the Contracting Officer and take any appropriate remedial actions directed by the Contracting Officer; and
+(5) The Contractor will inform the Contracting Officer if a subcontractor sues the Contractor and the suit puts at issue, in any way, the validity of this clause.
+(6) The Contractor recognizes that compliance with the requirements of this clause are material to the Government's payment decisions for purposes of 31 U.S.C. 3729(b)(4).
+(c) The Contractor must include the substance of this clause, including this paragraph (c), in subcontracts at any tier, including those for commercial products and commercial services, except those where the place of delivery or performance is outside the United States.
+(End of clause)
+52.240-91 Security Prohibitions and Exclusions (January 30, 2026) PART 1
+(a) Definitions. As used in this clause—
+American Security Drone Act-covered foreign entity means an entity included on a list that the Federal Acquisition Security Council (FASC) develops and maintains and publishes in the System for Award Management (SAM) at https://www.sam.gov (section 1822 of Pub. L. 118-31, 41 U.S.C. 3901 note prec.).
+Backhaul means intermediate links between the core network, or backbone network, and the small subnetworks at the edge of the network (e.g., connecting cell phones/towers to the core telephone network). Backhaul can be wireless (e.g., microwave) or wired (e.g., fiber optic, coaxial cable, Ethernet).
+Covered application means the social networking service TikTok or any successor application or service developed or provided by ByteDance Limited or an entity owned by ByteDance Limited.
+Covered article, as defined in 41 U.S.C. 4713(k), means:
+(1) Information technology, as defined in 40 U.S.C. 11101, including cloud computing services of all types;
+(2) Telecommunications equipment or telecommunications service, as those terms are defined in section 3 of the Communications Act of 1934 (47 U.S.C. 153);
+(3) The processing of information on a Federal or non-Federal information system, subject to the requirements of the Controlled Unclassified Information program (see 32 CFR part 2002); or
+(4) Hardware, systems, devices, software, or services that include embedded or incidental information technology.
+Covered foreign country means The People’s Republic of China.
+Covered telecommunications equipment or services means—
+(1) Telecommunications equipment produced by Huawei Technologies Company or ZTE Corporation (or any subsidiary or affiliate of such entities);
+(2) For the purpose of public safety, security of Government facilities, physical security surveillance of critical infrastructure, and other national security purposes, video surveillance and telecommunications equipment produced by Hytera Communications Corporation, Hangzhou Hikvision Digital Technology Company, or Dahua Technology Company (or any subsidiary or affiliate of such entities);
+(3) Telecommunications or video surveillance services provided by such entities or using such equipment; or
+(4) Telecommunications or video surveillance equipment or services produced or provided by an entity that the Secretary of Defense, in consultation with the Director of National Intelligence or the Director of the Federal Bureau of Investigation, reasonably believes to be an entity owned or controlled by, or otherwise connected to, the government of a covered foreign country.
+Critical technology means—
+(1) Defense articles or defense services included on the United States Munitions List set forth in the International Traffic in Arms Regulations under subchapter M of chapter I of title 22, Code of Federal Regulations;
+(2) Items included on the Commerce Control List set forth in Supplement No. 1 to part 774 of the Export Administration Regulations under subchapter C of chapter VII of title 15, Code of Federal Regulations, and controlled—
+(i) Pursuant to multilateral regimes, including for reasons relating to national security, chemical and biological weapons proliferation, nuclear nonproliferation, or missile technology; or
+(ii) For reasons relating to regional stability or surreptitious listening;
+(3) Specially designed and prepared nuclear equipment, parts and components, materials, software, and technology covered by part 810 of title 10, Code of Federal Regulations (relating to assistance to foreign atomic energy activities);
+(4) Nuclear facilities, equipment, and material covered by part 110 of title 10, Code of Federal Regulations (relating to export and import of nuclear equipment and material);
+(5) Select agents and toxins covered by part 331 of title 7, Code of Federal Regulations, part 121 of title 9 of such Code, or part 73 of title 42 of such Code; or
+(6) Emerging and foundational technologies controlled pursuant to section 1758 of the Export Control Reform Act of 2018 (50 U.S.C. 4817).
+FASC-prohibited unmanned aircraft system means an unmanned aircraft system manufactured or assembled by an American Security Drone Act—covered foreign entity.
+FASCSA order means any of the following orders issued under the Federal Acquisition Supply Chain Security Act (FASCSA) requiring removing covered articles from executive agency information systems or excluding one or more named sources or named covered articles from executive agency procurement actions, as described in 41 CFR 201-1.303(d) and (e):
+(1) The Secretary of Homeland Security may issue FASCSA orders that apply to civilian agencies, to the extent not covered by paragraph (2) or (3) of this definition. This type of FASCSA order may be referred to as a Department of Homeland Security (DHS) FASCSA order.
+(2) The Secretary of Defense may issue FASCSA orders that apply to the Department of Defense (DoD) and national security systems other than sensitive compartmented information systems. This type of FASCSA order may be referred to as a DoD FASCSA order.
+(3) The Director of National Intelligence (DNI) may issue FASCSA orders that apply to the intelligence community and sensitive compartmented information systems, to the extent not covered by paragraph (2) of this definition. This type of FASCSA order may be referred to as a DNI FASCSA order.
+Information technology, as defined in 40 U.S.C. 11101(6)—
+(1) Means any equipment or interconnected system or subsystem of equipment, used in the automatic acquisition, storage, analysis, evaluation, manipulation, management, movement, control, display, switching, interchange, transmission, or reception of data or information by the executive agency, if the equipment is used by the executive agency directly or is used by a contractor under a contract with the executive agency that requires the use—
+(i) Of that equipment; or
+(ii) Of that equipment to a significant extent in the performance of a service or the furnishing of a product;
+(2) Includes computers, ancillary equipment (including imaging peripherals, input, output, and storage devices necessary for security and surveillance), peripheral equipment designed to be controlled by the central processing unit of a computer, software, firmware and similar procedures, services (including support services), and related resources; but
+(3) Does not include any equipment acquired by a Federal contractor incidental to a Federal contract.
+Intelligence community, as defined by 50 U.S.C. 3003(4), means the following—
+(1) The Office of the Director of National Intelligence;
+(2) The Central Intelligence Agency;
+(3) The National Security Agency;
+(4) The Defense Intelligence Agency;
+(5) The National Geospatial-Intelligence Agency;
+(6) The National Reconnaissance Office;
+(7) Other offices within the Department of Defense for the collection of specialized national intelligence through reconnaissance programs;
+(8) The intelligence elements of the Army, the Navy, the Air Force, the Marine Corps, the Coast Guard, the Federal Bureau of Investigation, the Drug Enforcement Administration, and the Department of Energy;
+(9) The Bureau of Intelligence and Research of the Department of State;
+(10) The Office of Intelligence and Analysis of the Department of the Treasury;
+(11) The Office of Intelligence and Analysis of the Department of Homeland Security; or
+(12) Such other elements of any department or agency as may be designated by the President, or designated jointly by the Director of National Intelligence and the head of the department or agency concerned, as an element of the intelligence community.
+Interconnection arrangements means arrangements governing the physical connection of two or more networks to allow the use of another’s network to hand off traffic where it is ultimately delivered (e.g., connecting a customer of telephone provider A to a customer of telephone company B) or sharing data and other information resources.
+Kaspersky Lab-covered article means any hardware, software, or service that—
+(1) Is developed or provided by a Kaspersky Lab-covered entity;
+(2) Includes any hardware, software, or service developed or provided in whole or in part by a Kaspersky Lab-covered entity; or
+(3) Contains components using any hardware or software developed in whole or in part by a Kaspersky Lab-covered entity.
+Kaspersky Lab-covered entity means—
+(1) Kaspersky Lab;
+(2) Any successor entity to Kaspersky Lab, including any change in name, e.g., “Kaspersky”;
+(3) Any entity that controls, is controlled by, or is under common control with Kaspersky Lab; or
+(4) Any entity of which Kaspersky Lab has a majority ownership.
+National security system, as defined in 44 U.S.C. 3552, means any information system (including any telecommunications system) used or operated by an agency or by a contractor of an agency, or other organization on behalf of an agency—
+(1) The function, operation, or use of which involves intelligence activities; involves cryptologic activities related to national security; involves command and control of military forces; involves equipment that is an integral part of a weapon or weapons system; or is critical to the direct fulfillment of military or intelligence missions, but does not include a system that is to be used for routine administrative and business applications (including payroll, finance, logistics, and personnel management applications); or
+(2) Is protected at all times by procedures established for information that have been specifically authorized under criteria established by an Executive order or an Act of Congress to be kept classified in the interest of national defense or foreign policy.
+52.240-91 Security Prohibitions and Exclusions (January 30, 2026) PART 2
+Roaming means cellular communications services (e.g., voice, video, data) received from a visited network when unable to connect to the facilities of the home network either because signal coverage is too weak or because traffic is too high.
+Sensitive compartmented information means classified information concerning or derived from intelligence sources, methods, or analytical processes, which is required to be handled within formal access control systems established by the Director of National Intelligence.
+Sensitive compartmented information system means a national security system authorized to process or store sensitive compartmented information.
+Source means a non-Federal supplier, or potential supplier, of products or services, at any tier.
+Subsidiary means an entity in which more than 50 percent of the entity is owned directly by a parent corporation or through another subsidiary of a parent corporation.
+Substantial or essential component means any component necessary for the proper function or performance of a piece of equipment, system, or service.
+Unmanned aircraft means an aircraft that is operated without the possibility of direct human intervention from within or on the aircraft (49 U.S.C. 44801(11)).
+Unmanned aircraft system means an unmanned aircraft and associated elements (including communication links and the components that control the unmanned aircraft) that are required for the operator to operate safely and efficiently in the national airspace system (49 U.S.C. 44801(12)).
+(b) Prohibitions on providing or using specific products or services in performance of contract. Unless a waiver or exception applies, the Contractor is prohibited from providing any products or services to the Government or using in the performance of the contract any of the following:
+(1) A covered application on any information technology owned or managed by the Government, or on any information technology used or provided by the Contractor under this contract, including equipment provided by the Contractor’s employees (section 102 of Division R of the Consolidated Appropriations Act, 2023 (Pub. L. 117-328));
+(2) A Kaspersky Lab-covered article (Section 1634 of Division A of the National Defense Authorization Act for Fiscal Year 2018 (Pub. L. 115-91));
+(3) Covered telecommunications equipment or services used as a substantial or essential component of any system, or as critical technology as part of any system (paragraphs (a)(1)(A) of section 889 of the John S. McCain National Defense Authorization Act for Fiscal Year 2019 (Pub. L. 115-232)). This does not prohibit contractors from providing—
+(i) A service that connects to the facilities of a third-party, such as backhaul, roaming, or interconnection arrangements; or
+(ii) Telecommunications equipment that cannot route or redirect user data traffic or cannot permit visibility into any user data or packets that such equipment transmits or otherwise handles.
+(c) Prohibition on unmanned aircraft systems manufactured or assembled by American Security Drone Act—covered foreign entities.
+(1) Prohibition. The Contractor is prohibited from—
+(i) Delivering any FASC-prohibited unmanned aircraft system, which includes unmanned aircraft (i.e., drones) and associated elements (sections 1823 and 1826 of American Security Drone Act of 2023, within the National Defense Authorization Act for Fiscal Year 2024, Pub. L. 118-31, Div. A, Title XVIII, Subtitle B, 41 U.S.C. 3901 note prec.);
+(ii) On or after December 22, 2025, operating a FASC-prohibited unmanned aircraft system in the performance of the contract (section 1824 of Pub. L. 118-31); and
+(iii) On or after December 22, 2025, using Federal funds to procure or operate a FASC-prohibited unmanned aircraft system (section 1825 of Pub. L. 118-31).
+(2) Procedures. The Contractor shall search SAM for the FASC-maintained list of American Security Drone Act—covered foreign entities before proposing, or using in performance of the contract, any unmanned aircraft system. Also, the Contractor shall ensure any effort or expenditure associated with a FASC-prohibited unmanned aircraft system is consistent with a corresponding exemption, exception, or waiver determination expressly stated in the contract.
+(3) Exemptions, exceptions, and waivers. The prohibitions in paragraph (c) of this clause do not apply where the agency has determined an exemption, exception, or waiver applies, and the contract indicates that such a determination has been made. See sections 1823 through 1825 and 1832 of Public Law 118-31 for statutory requirements pertaining to exemptions, exceptions, and waivers.
+(d) Prohibition on using or providing specific products or services or conducting certain transactions regardless of connection to contract.
+(1) Certain telecommunications and video surveillance equipment, systems, or services.
+(i) Unless an applicable waiver has been issued by the Government, the Contractor cannot use any equipment, systems, or services that uses covered telecommunications equipment or services as a substantial or essential component of any system, or as critical technology as part of any system (paragraph (a)(1)(B) of section 889 of the John S. McCain National Defense Authorization Act for Fiscal Year 2019 (Pub. L. 115-232)).
+(ii) This prohibition applies to using covered telecommunications equipment or services, regardless of whether that use is in performance of work under a Federal contract. This does not prohibit the contractor from using—
+(A) A service that connects to the facilities of a third party, such as backhaul, roaming, or interconnection arrangements; or
+(B) Telecommunications equipment that cannot route or redirect user data traffic or cannot permit visibility into any user data or packets that such equipment transmits or otherwise handles.
+(2) Office of Foreign Assets Control Restrictions.
+(i) Except as authorized by the Office of Foreign Assets Control (OFAC) in the Department of the Treasury, the Contractor shall not acquire, for use in the performance of this contract, any supplies or services if any proclamation, Executive order, or statute administered by OFAC, or if OFAC’s implementing regulations at 31 CFR chapter V, would prohibit such a transaction by a person subject to the jurisdiction of the United States.
+(ii) Except as authorized by OFAC, most transactions involving Cuba, Iran, and Sudan are prohibited, as are most imports from Burma or North Korea, into the United States or its outlying areas.
+(A) For lists of entities and individuals subject to economic sanctions, see OFAC’s List of Specially Designated Nationals and Blocked Persons at https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists.
+(B) For more information about these restrictions, as well as updates, see OFAC’s regulations at 31 CFR chapter V and at https://home.treasury.gov/policy-issues/office-of-foreign-assets-control-sanctions-programs-and-information.
+(C) To conduct electronic screens of potential parties to regulated transactions, see the consolidated screening list at https://www.trade.gov/consolidated-screening-list, which consolidates multiple export screening lists of the Departments of Commerce, State, and the Treasury.
+(3) Sudan prohibition. The Contractor is prohibited from conducting any restricted business operations in Sudan in accordance with Accountability and Divestment Act of 2007 (Pub. L. 110-174).
+(4) Iran prohibitions.
+(i) Unless an exception applies according to paragraph (d)(4)(iii) or the Government grants a waiver, the contractor shall not engage in certain activities or transactions relating to Iran (section 6(b)(1)(A) of Iran Sanctions Act (50 U.S.C. 1701 note).
+(ii) Unless an exception applies according to paragraph (d)(4)(iii) or the Government grants a waiver, contractor shall not export certain sensitive technology to Iran, as determined by the President, and has an active exclusion in SAM (22 U.S.C. 8515).
+(iii) The prohibition in paragraphs (d)(4)(i) and (d)(4)(ii) do not apply if the acquisition is subject to trade agreements and the offeror certifies that all the offered products are designated country end products or designated country construction material (see part 25).
+(iv) Unless an exception applies or the Government grants a waiver, contractors are prohibited from knowingly engaging in any significant transaction (i.e., over $15,000) with Iran’s Revolutionary Guard Corps or any of its officials, agents, or affiliates, the property and interests in property of which are blocked according to the International Emergency Economic Powers Act (section 6(b)(1)(B) of Iran Sanctions Act (50 U.S.C. 1701 note)).
+(e) Governmentwide exclusion and removal orders.
+(1) Unless the Government has issued an applicable waiver, contractors shall not provide or use as part of the performance of the contract any covered article, or any products or services produced or provided by a source, if the covered article or the source is prohibited by an applicable FASCSA order as follows:
+(i) For solicitations and contracts awarded by a Department of Defense contracting office, DoD FASCSA orders apply.
+(ii) For all other solicitations and contracts, DHS FASCSA orders apply.
+(2) The Contractor shall search for the phrase “FASCSA order” in the System for Award Management (SAM) at https://www.sam.gov to locate applicable FASCSA orders.
+(3) The Government may identify in the solicitation other FASCSA orders that are not in SAM, which are effective and apply to the solicitation and resulting contract.
+(4) A FASCSA order issued after the date of solicitation applies to this contract only if added by an amendment to the solicitation or modification to the contract (see FAR 40.204-1(c)).
+(f) Reasonable inquiry. The contractor shall conduct a reasonable inquiry to determine if there are any prohibited products or services. The inquiry will look at any information in the entity’s possession but does not need to include an internal or third-party audit.
+(g) Removal of prohibited products and services. For Federal Supply Schedules, Governmentwide acquisition contracts, multi-agency contracts or any other procurement instrument intended for use by multiple agencies, upon notification from the Contracting Officer, during the performance of the contract, the Contractor shall promptly make any necessary changes or modifications to remove any product or service produced or provided by a source that this clause prohibits.
+(h) General report.
+(1) If the Contractor identifies or is notified by any source, (including a subcontractor at any tier), that any product or service provided or used (or to be provided or used) during contract performance does not comply with any prohibition in this clause, then the Contractor shall report the following information, or as much information is known, in writing to the contracting office as identified in paragraph (h)(2) within 72 hours:
+(i) Contract number and order number, if applicable;
+(ii) The specific prohibition the product or service is not complying with;
+(iii) A description of the products or services that the Contractor identifies or has reason to suspect is prohibited (include brand; model number, such as the original equipment manufacturer (OEM) number, manufacturer part number, or wholesaler number; and item description, as applicable);
+(iv) The entity that produced the product or service (include entity name, unique entity identifier, Contractor and Government Entity (CAGE) code, facilities responsible for design, fabrication, assembly, packaging, and test of the product, and whether the entity was the OEM or a distributor (provide manufacturer codes and distributor codes used for the product));
+(v) Description of the functionality of the product or service and how that functionality impacts the risk to the product or service;
+(vi) An explanation of any factors relevant to determining if the product or service should be permitted by an applicable exception, exemption, or waiver (if the contractor would like the Government to consider a waiver, and asks for such a waiver);
+(vii) Whether alternative products or services are available that would comply with the prohibition;
+(viii) If the product or service is related to item maintenance, include the following information on the item being maintained:
+(A) Brand;
+(B) Model number, OEM number, manufacturer part number, or wholesaler number; and
+(C) Item description, as applicable.
+(ix) Any readily available information about mitigation actions implemented or recommended.
+(2) If a report must be submitted to a contracting office, the Contractor shall submit the report as follows:
+(i) If a Department of Defense contracting office, the Contractor shall report to the website at https://dibnet.dod.mil.
+(ii) For all other contracting offices, the Contractor shall report to the Contracting Officer.
+(iii) For indefinite delivery contracts, the Contractor shall report to both the contracting office for the indefinite delivery contract and the contracting office for any affected order.
+(3) If the report provided does not contain any of the information required by paragraph (h)(1) of this clause, and the contractor later discovers new information that is required by paragraph (h)(1) of this clause, then the contractor shall submit a subsequent report within 72 hours of discovering the new information.
+(4) The contractor shall also report the information in paragraph (h)(1) if the contractor wishes to ask for a waiver of the requirements of a new FASCSA order being applied through modification.
+(i) New FASCSA orders report.
+(1) During contract performance, the Contractor shall review SAM at least once every three months, or as advised by the Contracting Officer, to check for covered articles subject to FASCSA order(s), or for products or services produced by a source subject to FASCSA order(s) not currently identified under paragraph (e) of this clause.
+(2) If the Contractor identifies a new FASCSA order(s) that could impact their supply chain, then the Contractor shall conduct a reasonable inquiry to identify whether a covered article or product or service produced or provided by a source subject to the FASCSA order(s) was provided to the Government or used during contract performance. The inquiry will look at any information in the entity’s possession but does not need to include an internal or third-party audit.
+(3) The Contractor shall submit a report to the contracting office identified in paragraph (h)(2) of this clause if the Contractor identifies, including through any notification by a subcontractor at any tier, that a covered article or product or service produced or provided by a source was provided to the Government or used during contract performance and is subject to a FASCSA order(s). For indefinite delivery contracts, the Contractor shall report to both the contracting office for the indefinite delivery contract and the contracting office for any affected order. The Contractor shall report the following information within 72 hours for each covered article or each product or service produced or provided by a source, where the covered article or source is subject to a FASCSA order:
+(i) Contract number and order number, if applicable;
+(ii) Name of the covered article or source subject to a FASCSA order;
+(iii) The specific FASCSA order the product or service does not comply with;
+(iv) The elements of (h)(1)(iii) through (ix) of this clause.
+(j) Subcontracts. The Contractor shall insert the substance of this clause, including this paragraph (j) but excluding subparagraphs (d)(1) and (i)(1), in all subcontracts and other contractual instruments, including subcontracts for acquiring commercial products or commercial services.
+(End of clause)
+52.232-39 Unenforceability of Unauthorized Obligations.
+As prescribed in 32.706-3 , insert the following clause:
+Unenforceability of Unauthorized Obligations (Jun 2013)
+(a) Except as stated in paragraph (b) of this clause, when any supply or service acquired under this contract is subject to any End User License Agreement (EULA), Terms of Service (TOS), or similar legal instrument or agreement, that includes any clause requiring the Government to indemnify the Contractor or any person or entity for damages, costs, fees, or any other loss or liability that would create an Anti-Deficiency Act violation (31 U.S.C. 1341), the following shall govern:
+(1) Any such clause is unenforceable against the Government.
+(2) Neither the Government nor any Government authorized end user shall be deemed to have agreed to such clause by virtue of it appearing in the EULA, TOS, or similar legal instrument or agreement. If the EULA, TOS, or similar legal instrument or agreement is invoked through an "I agree" click box or other comparable mechanism (e.g., "click-wrap" or "browse-wrap" agreements), execution does not bind the Government or any Government authorized end user to such clause.
+(3) Any such clause is deemed to be stricken from the EULA, TOS, or similar legal instrument or agreement.
+(b) Paragraph (a) of this clause does not apply to indemnification by the Government that is expressly authorized by statute and specifically authorized under applicable agency regulations and procedures.
+(End of clause)
+32.706-3 Clause for unenforceability of unauthorized obligations.
+The contracting officer shall insert the clause at 52.232-39, Unenforceability of Unauthorized Obligations in all solicitations and contracts.
+Shipping Information
+City
+State
+Zip Code
+See
+-->
+See Statement of Work
+Seller Attachment(s): Optional
+The attachment(s) could include the following non-pricing information:
+Buy Attachment(s)
+Download Attachments
+No.
+Document Name
+Document Size
+001
+OFM_Decal_SOW_10202026-1.docx
+documentnamehere.docx -->
+581 KB
+© 2026
+Unison Marketplace Inc., All Rights Reserved
+Toll-free: 877-933-3243 |
+Privacy |
+Terms |
+Feedback |
+Contact Us
+title
+message
+Cancel -->
+Continue
