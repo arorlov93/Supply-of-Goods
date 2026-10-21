@@ -1,0 +1,151 @@
+Buy View
+To place a bid or register go to Unison Marketplace
+View Details for Buy
+#
+1214597
+General Buy Information
+Buy #:
+1214597
+Solicitation #:
+W911SD27QA005
+Buy Description:
+USMA Cadet Bathrobes
+Category:
+84 -- Clothing, Individual Equipment, and Insignia
+Sub Category:
+8415 -- Clothing, Special Purpose
+NAICS:
+315250 -- Cut and Sew Apparel Manufacturing (except Contractors)
+SAM Contract Opportunity:
+Yes
+Set-Aside Requirement:
+Small Business
+Buyer:
+MICC West Point
+End Date:
+11/10/2026
+End Time:
+12:00 ET
+Seller Question Deadline:
+No Seller Question Deadline Set
+Delivery:
+30 Day(s) - Required (No. of calendar days after receipt of order (ARO) by which Buyer requires Seller to deliver)
+View Question & Responses
+LOG IN TO START BID
+Line Item(s) Template - Optional
+You have the option of entering Bid information manually by clicking Start Bid or you can prepare your Bid in an Excel spreadsheet by clicking Download Template . Complete the template using the instructions provided in the spreadsheet and save the file to your computer. When complete, login to Unison Marketplace and click Start Bid . Proceed to the Line Items screen to upload the information.
+Download Template
+Line Item(s)
+Item No
+Description
+Qty
+Unit
+001
+Cadet Bathrobes See attached specifications
+Base Year: Delivery
+by March 1, 2027
+1800
+EA
+002
+Cadet Bathrobes See attached specifications Option Year 1:
+Delivery by March 1, 2028
+1800
+EA
+003
+Cadet Bathrobes See attached specifications Option Year 2:
+Delivery by March 1, 2029
+1800
+EA
+004
+Cadet Bathrobes See attached specifications Option Year 3:
+Delivery by March 1, 2030
+1800
+EA
+005
+Cadet Bathrobes See attached specifications Option Year 4:
+Delivery by March 1, 2031
+1800
+EA
+Bidding Requirements
+Instructions
+Open Market:
+Open Market bids are accepted in this solicitation; however, please refer to the specifications below, including 'Set-Aside Requirement' provision, for additional requirements.
+Meet or Exceed:
+The Buyer is allowing Sellers to submit bids that either meet or exceed the requested specification. Sellers MUST enter exactly what they are bidding (including make, model, and description) into the blank description field in order for the bid to be considered.
+Minimum Bid Decrement is $1:
+The Buyer is requiring that any rebid must be lower than the 'current bid price' by this amount. The reduction is based on the total order and must be satisfied within the rebid minimum.
+Purchase Order or Delivery Order:
+Buyer intends to issue award using a purchase order or delivery order. Bids from Sellers unable to accept purchase orders or delivery orders will not be considered for award.
+Set-Aside Requirement:
+This solicitation is a Small Business Set-Aside and only qualified Sellers can bid.
+Use of Unison Marketplace:
+Buyers and Sellers agree to conduct this transaction through Unison Marketplace in compliance with the Unison Marketplace Terms of Use. Failure to comply with the below terms and conditions may result in offer being determined as non-responsive.
+Question Submission:
+Interested offerors must submit any questions concerning the solicitation at the earliest time possible to enable the buyer to respond. Questions can be submitted by using the 'Questions & Responses' link. Questions not received within a reasonable time prior to close of the solicitation may not be considered.
+Default Terms:
+Unless otherwise specified in the Buy Terms, below, Bid must be good for 30 calendar days after close of Buy and shipping must be free on board (FOB) destination CONUS (Continental U.S.)
+Price All Line Items:
+The Buyer is requiring interested Sellers submit Bids with pricing inclusive of all Line Items.
+Buy Terms
+Name
+Description
+Equipment Condition
+New Equipment ONLY; NO remanufactured or "gray market" items. All items must be covered by the manufacturer's warranty.
+Offer Period
+Bid MUST be good for 90 calendar days after close of Buy.
+Shipping Condition
+Shipping must be free on board (FOB) destination CONUS (Continental U.S.), which means that the seller must deliver the goods on its conveyance at the destination specified by the buyer, and the seller is responsible for the cost of shipping and risk of loss prior to actual delivery at the specified destination.
+SAM Requirement
+This solicitation requires registration with the System for Award Management (SAM) at the time an offer or quotation is submitted, excluding the exceptions outlined in FAR 4.1102(a). Registration information can be found at www.sam.gov.
+Delivery Requirement
+No partial shipments are permitted unless specifically authorized at the time of award.
+Commercial Items Terms and Conditions 1
+The selected Offeror must comply with the following commercial item terms and conditions, which are incorporated herein by reference: FAR 52.212-1, Instructions to Offerors - Commercial Items, applies to this acquisition; FAR 52.212-3, Offeror Representations and Certifications - Commercial Items - the selected offeror must submit a completed copy of the listed representations and certifications; FAR 52.212-4, Contract Terms and Conditions - Commercial Items; FAR 52.212-5 (DEV), Contract Terms and Conditions Required To Implement Statutes or Executive Orders-Commercial Items, and the following clauses: 52.219-28, 52.222-19, 52.222-21, 52.22-22, 52.222-26, 52.222-35, 52.222-36, 52.222-37, 52.222-50, 52.225-13, 52.232-34, 52.232-99 (DEV), 52.233-4 and DFAR 252.212-7001, 252.232-7003, 252.232-7010, 252.232-7006 and 252.209-7999.
+Commercial Items Terms and Conditions 2
+The full text of the referenced FAR clauses may be accessed electronically at http://farsite.hill.af.mil/VFFAR1.htm
+52.217-10 Reverse Auction
+(a) Definitions. As used in this provision—
+Reverse auction means the process for obtaining pricing, usually supported by an electronic tool, in which offerors see competing offerors'' price(s), without disclosure of the competing offerors'' identity, and have the opportunity to submit lower priced offers until the close of the auction.'
+Reverse auction service provider means a commercial or Government entity that provides a means for conducting reverse auctions when acquiring supplies or services to be used by the Government.'
+(b) Reverse auction. The Government intends to conduct a reverse auction under this solicitation to award a contract or blanket purchase agreement.'
+(c) Offeror agreement. By submission of a quote or proposal in response to the solicitation, the Offeror agrees to participate in the reverse auction and agrees that the Government may reveal to all Offerors the offered price(s) in the auction, without revealing any Offeror''s identity, except for the awardee''s identity subsequent to an award resulting from the auction. The Offeror may withdraw its agreement to further participate in the process by withdrawing its offer before the close of the auction by notifying the Contracting Officer via the contact method identified in the solicitation.'
+(d) Only one offer. If the reverse auction produces only one offer, the Government reserves the right to cancel the auction.'
+(e) Release of information. The Government may use a reverse auction service provider to conduct the reverse auction. Any price or proposal information or source selection information received by the reverse auction service provider in relation to the reverse auction shall not be released, outside of the Government, unless otherwise required by law. However, this does not prevent the Government from revealing to all Offerors the offered price(s) in the auction, without revealing any Offeror''s identity. Price or proposal information includes, but is not limited to—'
+(1) Contractor bid or proposal information, as defined at Federal Acquisition Regulation 3.104-1; and'
+(2) Information identified by the Offeror as restricted from duplication, use, or disclosure—in whole or in part—for any purpose other than to evaluate the Offeror''s price or proposal.'
+(End of provision)
+Shipping Information
+City
+State
+Zip Code
+W6X1 USALRCTR US MIL WESTPOINT
+-->
+West Point
+NY
+10996 - 5000
+Seller Attachment(s): Optional
+The attachment(s) could include the following non-pricing information: ATTACH SF 1449 SIGNED AND COMPLETED
+Buy Attachment(s)
+Download Attachments
+No.
+Document Name
+Document Size
+001
+SOLICITATION-_W911SD27QA005.pdf
+documentnamehere.docx -->
+5,902 KB
+002
+SOLICITATION_INSTRUCTIONS.pdf
+documentnamehere.docx -->
+68 KB
+© 2026
+Unison Marketplace Inc., All Rights Reserved
+Toll-free: 877-933-3243 |
+Privacy |
+Terms |
+Feedback |
+Contact Us
+title
+message
+Cancel -->
+Continue
