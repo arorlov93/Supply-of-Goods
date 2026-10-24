@@ -65,7 +65,11 @@ ISP GROUP LLC это торговая компания, зарегистриро
      Drink, а не региональная версия с иным составом.
   3. Страна розлива. Для нас это справочная информация, а не условие
      отбора: мы готовы рассматривать товар любого происхождения.
-  4. Остаточный срок годности при отгрузке, в месяцах.
+  4. Остаточный срок годности при отгрузке. Нам требуется не менее
+     12 месяцев. Предложения с остатком менее 9 месяцев просим не
+     присылать: такой товар не принимается торговыми сетями, норма
+     которых составляет от 45 до 67 процентов общего срока годности.
+     Укажите дату производства и срок годности фактической партии.
 
 ОБЪЁМЫ И ЦЕНА
 
@@ -193,7 +197,11 @@ PRODUCT
      formulation.
   3. Country of filling. This is information for us, not a
      selection criterion: we will consider goods of any origin.
-  4. Remaining shelf life at dispatch, in months.
+  4. Remaining shelf life at dispatch. We require not less than
+     12 months. Please do not quote lots with less than 9 months
+     remaining: such goods are not accepted by retail chains, whose
+     threshold is 45 to 67 per cent of total shelf life. Please state
+     the production date and the best-before date of the actual lot.
 
 VOLUMES AND PRICE
 
