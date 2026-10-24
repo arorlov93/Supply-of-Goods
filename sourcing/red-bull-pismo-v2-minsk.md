@@ -47,8 +47,8 @@ ISP GROUP LLC это торговая компания, зарегистриро
 250 мл.
 
 Первая партия это одна полная фура, с последующим ежемесячным
-увеличением до пятнадцати фур в месяц. Просим учитывать эту
-перспективу при формировании цены.
+увеличением до десяти фур в месяц. Просим учитывать эту перспективу
+при формировании цены.
 
 Просим письменный ответ, а не разговор по телефону: мы сравниваем
 нескольких поставщиков на одинаковых условиях.
@@ -73,13 +73,16 @@ ISP GROUP LLC это торговая компания, зарегистриро
 
 ОБЪЁМЫ И ЦЕНА
 
-  Просим цену отдельно на каждый вариант:
+  Просим цену отдельно на каждый из трёх объёмов:
 
-    одна фура
-    три фуры в месяц
-    пять фур в месяц
-    десять фур в месяц
-    пятнадцать фур в месяц
+    одна фура                     85 536 банок
+    четыре фуры в месяц          342 144 банок
+    десять фур в месяц           855 360 банок
+
+  Наша целевая цена: не более 0,40 евро за банку без НДС на каждом из
+  этих объёмов. Если вы не выходите на эту цифру, просим всё равно
+  прислать вашу лучшую цену: нам важно понимать рынок, а не только
+  найти совпадение с целью.
 
   По каждому объёму:
 
@@ -168,7 +171,7 @@ info@ispgroupgc.com, (929) 830-0038
 **Тема:**
 
 ```
-Original Red Bull 250ml: quotation request, one truck now, up to 15 trucks per month
+Original Red Bull 250ml: quotation request, one truck now, up to 10 trucks per month
 ```
 
 ```
@@ -178,8 +181,8 @@ ISP GROUP LLC is a US registered trading company. We are selecting a
 supplier of original Red Bull Energy Drink in 250 ml cans.
 
 Our first order is one full truck load, with a planned monthly
-increase up to fifteen truck loads per month. Please take that
-prospect into account when you price.
+increase up to ten truck loads per month. Please take that prospect
+into account when you price.
 
 We ask for a written reply rather than a phone call, because we are
 comparing several suppliers on identical terms.
@@ -205,13 +208,16 @@ PRODUCT
 
 VOLUMES AND PRICE
 
-  Please quote each of the following separately:
+  Please quote each of the three volumes separately:
 
-    one truck load
-    three truck loads per month
-    five truck loads per month
-    ten truck loads per month
-    fifteen truck loads per month
+    one truck load                 85,536 cans
+    four truck loads per month    342,144 cans
+    ten truck loads per month     855,360 cans
+
+  Our target price is not more than EUR 0.40 per can, excluding VAT,
+  at each of these volumes. If you cannot reach that figure, please
+  still send us your best price: we need to understand the market, not
+  only to find a match to our target.
 
   For each volume:
 
