@@ -73,6 +73,17 @@
 
 ---
 
+
+> ## ⚠ 24.10: немецкая точка погрузки ИСКЛЮЧЕНА
+>
+> Проверка адресов (`red-bull-ADRESA-PROVERKA.md`) показала признаки
+> схемы: сайт не разрешается пятью способами, реестровых следов нет, а
+> **заявленный партнёр по отгрузке не существует в заявленном виде** —
+> настоящая Rögelein GmbH сидит на Motorstraße 47 и торгует
+> электродвигателями, а по Turbinenstraße 17 в справочниках стоит частное
+> лицо. **Вариант А не использовать до выписки из Handelsregister.**
+> Испанская точка, наоборот, подтверждена полностью и вписана в текст.
+
 # ТЕКСТ ЗАПРОСА ПЕРЕВОЗЧИКУ
 
 Отправлять двум-трём экспедиторам сразу, по-русски или по-английски.
@@ -114,13 +125,19 @@
   (кандидат, подлежит подтверждению отправителем:
    Rögelein GmbH, Turbinenstraße 17, 70499 Stuttgart-Weilimdorf)
 
-ТОЧКА ПОГРУЗКИ, ВАРИАНТ Б. ИСПАНИЯ
+ТОЧКА ПОГРУЗКИ, ВАРИАНТ Б. ИСПАНИЯ  [АДРЕС УСТАНОВЛЕН 24.10]
 
-  Название:      ______________________________
-  Адрес:         ______________________________
-  Индекс, город: ______________________________
-  Страна:        Испания
-  Контакт склада:______________________________
+  Название:       Sector Vending S.L.
+  NIF / VAT:      ESB70270061
+  Адрес:          Rua do Cobre, Parcela G16
+                  Parque Empresarial de Bertoa
+  Индекс, город:  15100 Carballo (A Coruna)
+  Страна:         Испания
+  Телефон:        +34 900 820 056 / +34 699 906 273
+  Почта:          info@sectorvending.com
+  Часы работы:    07:00 - 18:00
+  Примечание:     номер участка и индекс продавец подтверждает
+                  в подтверждении заказа
 
 ТОЧКА ВЫГРУЗКИ
 
@@ -228,12 +245,18 @@ LOADING POINT, OPTION A. GERMANY
   Country:        Germany
   Warehouse contact: ___________________________
 
-LOADING POINT, OPTION B. SPAIN
-  Name:           ______________________________
-  Address:        ______________________________
-  Postcode, city: ______________________________
+LOADING POINT, OPTION B. SPAIN  [ADDRESS CONFIRMED 24 OCT]
+  Name:           Sector Vending S.L.
+  NIF / VAT:      ESB70270061
+  Address:        Rua do Cobre, Parcela G16
+                  Parque Empresarial de Bertoa
+  Postcode, city: 15100 Carballo (A Coruna)
   Country:        Spain
-  Warehouse contact: ___________________________
+  Phone:          +34 900 820 056 / +34 699 906 273
+  Email:          info@sectorvending.com
+  Opening hours:  07:00 - 18:00
+  Note:           plot number and postcode to be confirmed by the
+                  seller on the order confirmation
 
 DELIVERY POINT
   City:           ______________________________
