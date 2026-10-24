@@ -114,16 +114,25 @@
   вес брутто          около 23,5 тонн
   стоимость груза     29 225 EUR (для страхования)
 
-ТОЧКА ПОГРУЗКИ, ВАРИАНТ А. ГЕРМАНИЯ
+ТОЧКА ПОГРУЗКИ, ВАРИАНТ А. НИДЕРЛАНДЫ  [АДРЕС ПОДТВЕРЖДЁН VIES 24.10]
 
-  Название:      ______________________________
-  Адрес:         ______________________________
-  Индекс, город: ______________________________
-  Страна:        Германия
-  Контакт склада:______________________________
+  Название:       Ridon Holding B.V.
+  VAT:            NL802898531B01
+  KvK:            27235695
+  Адрес:          Hoekeindseweg 146 A
+  Индекс, город:  2665 KH Bleiswijk
+  Страна:         Нидерланды
+  Сайт:           rholdingbv.com
+  Примечание:     на сайте продавца улица написана без буквы d,
+                  HOEKEINSEWEG. По данным налоговой службы в VIES и по
+                  картам правильно HOEKEINDSEWEG. Для навигации
+                  использовать написание с d, координаты
+                  51.9989 N, 4.5258 E
+  Примечание 2:   точные часы работы склада, способ погрузки и контакт
+                  склада запросить у продавца при подтверждении заказа
 
-  (кандидат, подлежит подтверждению отправителем:
-   Rögelein GmbH, Turbinenstraße 17, 70499 Stuttgart-Weilimdorf)
+  (германская точка из прежней версии ТЗ ИСКЛЮЧЕНА, см.
+   red-bull-ADRESA-PROVERKA.md)
 
 ТОЧКА ПОГРУЗКИ, ВАРИАНТ Б. ИСПАНИЯ  [АДРЕС УСТАНОВЛЕН 24.10]
 
@@ -238,12 +247,22 @@ Consignment:
   gross weight      approx. 23.5 tonnes
   cargo value       EUR 29,225 (for insurance)
 
-LOADING POINT, OPTION A. GERMANY
-  Name:           ______________________________
-  Address:        ______________________________
-  Postcode, city: ______________________________
-  Country:        Germany
-  Warehouse contact: ___________________________
+LOADING POINT, OPTION A. NETHERLANDS  [ADDRESS CONFIRMED VIA VIES 24 OCT]
+  Name:           Ridon Holding B.V.
+  VAT:            NL802898531B01
+  KvK:            27235695
+  Address:        Hoekeindseweg 146 A
+  Postcode, city: 2665 KH Bleiswijk
+  Country:        Netherlands
+  Website:        rholdingbv.com
+  Note:           the seller's website spells the street without the
+                  letter d (HOEKEINSEWEG). The Dutch tax authority
+                  (VIES) and the maps both give HOEKEINDSEWEG. Use the
+                  spelling with d for navigation; coordinates
+                  51.9989 N, 4.5258 E
+  Note 2:         exact warehouse opening hours, loading method and
+                  warehouse contact to be requested from the seller on
+                  the order confirmation
 
 LOADING POINT, OPTION B. SPAIN  [ADDRESS CONFIRMED 24 OCT]
   Name:           Sector Vending S.L.

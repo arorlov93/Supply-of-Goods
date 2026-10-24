@@ -194,3 +194,131 @@ FreshDI, где описание заполняет сама компания и
 не фурой.** Паллета или две, посмотреть товар, маркировку и документы, и
 только потом объём. Проверка личности снижает риск, но не отменяет
 правило первой маленькой сделки.
+
+---
+
+# ЗАПРОС КОТИРОВКИ: текст, НЕ ОТПРАВЛЕН
+
+Правило 3: текст показан, отправка по отдельной команде.
+
+**Кому:** через форму на `rholdingbv.com/contact-us/`. Отдельного адреса
+отдела продаж на сайте нет, поэтому форма, и в тексте просьба ответить
+письмом.
+
+**Тема:**
+
+```
+Red Bull 250ml, full truck load: request for written quotation
+```
+
+**Текст:**
+
+```
+Dear Sir or Madam,
+
+ISP GROUP LLC is a US registered trading company. We are sourcing Red
+Bull Energy Drink 250ml in full truck load volume and would like a
+written quotation.
+
+VOLUME
+
+  33 EUR pallets, which at 108 cases of 24 cans per pallet is
+  85,536 cans. Please confirm whether your pallet configuration
+  matches this, and correct the figures if it does not.
+
+Please also quote 1 pallet and 2 pallets separately. Our first order
+would be a trial pallet, not a full truck.
+
+WHAT WE NEED IN THE QUOTATION
+
+1. Price per can and per pallet, for the 250ml format, stated
+   excluding VAT, and the date until which the price is valid.
+
+2. Price on two bases side by side:
+     EXW Bleiswijk
+     DAP to a destination we will specify
+   This lets us compare your delivered price against our own freight.
+
+3. Confirmation that 85,536 cans of the 250ml format are actually
+   available in one lot, and the lead time from order confirmation.
+
+4. Country of filling, and confirmation that batch coding is printed
+   on the can.
+
+5. Can and tray marking. We specifically need to know whether the
+   cans carry a deposit scheme logo, for example the German DPG
+   logo, or whether they are export marked without it. This
+   materially affects our landed cost.
+
+6. Remaining shelf life at dispatch, in months.
+
+7. Pallet data for freight planning: cases per pallet, cans per
+   case, gross weight per pallet, pallet height, whether pallets are
+   stackable, and whether EUR pallet exchange is required.
+
+8. Payment terms. Your website states telegraphic transfer against
+   proforma invoice. Please confirm whether you also work with a
+   documentary letter of credit, or with part payment on order and
+   the balance against shipping documents.
+
+9. Documents you issue with the shipment: commercial invoice,
+   packing list, CMR, certificate of origin.
+
+ONE QUESTION ON DESTINATION, ASKED OPENLY
+
+Before we specify the delivery destination, please tell us whether
+you have any restrictions on destination countries for this product,
+and whether any destinations require additional documentation on
+your side. We would rather know your limits before we build a
+calculation on them.
+
+We would appreciate your reply by e-mail within five working days.
+
+Kind regards,
+
+ISP GROUP LLC
+16395 Biscayne Blvd Apt 818, Aventura, FL 33160-5743
+info@ispgroupgc.com, (929) 830-0038
+```
+
+## Почему письмо построено так
+
+**Пункт 5 про маркировку тары стоит отдельным требованием**, потому что
+немецкая тара с логотипом DPG добавляет €0,25, то есть **23,72 ₽ на
+банку**, больше четверти цены товара. Это не деталь, это строка
+себестоимости.
+
+**Пункт 2 просит EXW и DAP рядом.** У них опубликован базис DAP, и если
+их доставка окажется не дороже нашей фуры, то для первой сделки она
+лучше: с нас снимается организация транспорта и риск в пути.
+
+**Пункт 3 про фактическое наличие** нужен потому, что опубликованная
+ступень по объёму и наличие этого объёма на складе это разные вещи. У
+испанского продавца ступень на 3 564 ящика есть, а подтверждения наличия
+нет.
+
+**Пункт 8 про оплату.** На их сайте только телеграфный перевод по
+проформе, то есть предоплата. Спрашиваем про аккредитив прямо, и ответ
+сам по себе информативен: продавец, работающий с аккредитивом, сильно
+отличается от продавца, работающего только по предоплате.
+
+**Про первую паллету сказано в самом начале.** Это снимает неловкость
+позже и сразу показывает, что мы не выдумываем объём, которого не
+потянем.
+
+## И про последний абзац, он сознательный
+
+Я прошу их **назвать свои ограничения по странам назначения до того, как
+мы назовём страну.**
+
+Так правильнее по двум причинам. **Первая:** европейские продавцы с 2024
+года проверяют конечного получателя, и часть из них отказывается от
+отдельных направлений просто из осторожности. Узнать это одним вопросом
+дешевле, чем после согласования цены и объёма. **Вторая:** если
+ограничения есть, мы услышим их от продавца, а не будем строить расчёт на
+предположении.
+
+Правило 1 `CLAUDE.md` здесь не применяется: конкурса нет, забирать у нас
+нечего, а скрытность в этом вопросе работает против нас, потому что
+законность сделки зависит именно от происхождения товара и от того, что
+продавец готов подтвердить документами.
