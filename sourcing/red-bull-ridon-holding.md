@@ -242,8 +242,22 @@ WHAT WE NEED IN THE QUOTATION
 3. Confirmation that 85,536 cans of the 250ml format are actually
    available in one lot, and the lead time from order confirmation.
 
-4. Country of filling, and confirmation that batch coding is printed
-   on the can.
+4. PRODUCT IDENTIFICATION. This is the most important point for us,
+   because your TradeWheel listing shows 0.45 USD per can while
+   European trade prices for the Austrian product are around 0.88 to
+   0.90 EUR per can. Please state:
+     - the EAN / barcode of the exact article you are quoting;
+     - the country of filling and the filling plant;
+     - whether the drink is carbonated or non-carbonated;
+     - can or bottle, and the exact volume in ml;
+     - the label language, and whether the can carries EU nutritional
+       information;
+     - whether batch coding is printed on the can.
+   For reference, the Austrian Red Bull Energy Drink 250ml we are
+   looking for carries EAN 9002490100070. If the article you offer has
+   a different EAN, please say so plainly: we are interested in both,
+   but they are different products for us and we must price them
+   separately.
 
 5. Can and tray marking. We specifically need to know whether the
    cans carry a deposit scheme logo, for example the German DPG
