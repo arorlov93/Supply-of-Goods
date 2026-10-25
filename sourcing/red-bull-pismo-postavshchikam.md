@@ -81,9 +81,7 @@ ISP GROUP LLC это торговая компания, зарегистриро
     десять фур в месяц           855 360 банок
 
   Наша целевая цена: не более 0,40 евро за банку без НДС на каждом из
-  этих объёмов. Если вы не выходите на эту цифру, просим всё равно
-  прислать вашу лучшую цену: нам важно понимать рынок, а не только
-  найти совпадение с целью.
+  этих объёмов.
 
   По каждому объёму:
 
@@ -217,9 +215,7 @@ VOLUMES AND PRICE
     ten truck loads per month     855,360 cans
 
   Our target price is not more than EUR 0.40 per can, excluding VAT,
-  at each of these volumes. If you cannot reach that figure, please
-  still send us your best price: we need to understand the market, not
-  only to find a match to our target.
+  at each of these volumes.
 
   For each volume:
 
