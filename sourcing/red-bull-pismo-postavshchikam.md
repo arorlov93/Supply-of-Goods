@@ -160,7 +160,7 @@ ISP GROUP LLC это торговая компания, зарегистриро
 С уважением,
 
 ISP GROUP LLC
-16395 Biscayne Blvd Apt 818, Aventura, FL 33160-5743
+16395 Biscayne Blvd, Aventura, FL 33160-5743
 info@ispgroupgc.com, (929) 830-0038
 ```
 
@@ -292,7 +292,7 @@ the full volume, please state the maximum available now.
 Kind regards,
 
 ISP GROUP LLC
-16395 Biscayne Blvd Apt 818, Aventura, FL 33160-5743
+16395 Biscayne Blvd, Aventura, FL 33160-5743
 info@ispgroupgc.com, (929) 830-0038
 ```
 
