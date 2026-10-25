@@ -326,3 +326,27 @@ RFI закрывается **в понедельник 26.10 в 11:00 ET**, а �
 
 BuildingConnected дважды по автомойке AquaSonic в Лейк-Уорт (штукатурка и
 EIFS), BidNet по Санта-Кларите, HigherGov, Crexi, idealista, ArcticMile.
+
+---
+
+## 25.10.2026, отправка запросов по Red Bull
+
+Отправлено четыре письма, по команде пользователя. Текст одинаковый,
+английская версия, тема `Original Red Bull 250ml: quotation request, one
+truck now, up to 10 trucks per month`. Вставок по адресатам нет, убраны
+по указанию. Каждое письмо отправлено отдельно, список адресатов
+получателям не виден.
+
+| Кому | Адрес | ID сообщения |
+|---|---|---|
+| Getränke Geins | info@geins.de | 1a173a90bff56a8f |
+| Sector Vending | info@sectorvending.com | 1a173b5fcb924929 |
+| GLOBAL STOCKS | info@globalstock.lv | 1a173b64c59f445c |
+| WOOVE | sales@woovegmbh.com | 1a173b6a252f8a3e |
+
+**Ridon Holding и Ecopark Export не писали: почтовых адресов нет.**
+
+**По WOOVE ожидается отказ доставки:** домен `woovegmbh.com` не
+разрешался пятью способами при проверке 24.10. Проверить bounce.
+
+Срок ответа в письме: пять рабочих дней, то есть до 03.11.2026.
