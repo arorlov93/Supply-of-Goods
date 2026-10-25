@@ -79,8 +79,16 @@ Getränkefachgroßhandels.
 | KvK | **27235695** |
 
 **На их сайте улица написана с ошибкой, без буквы d.** Листинг на
-TradeWheel: 0,45 USD за банку. **Не авторизованный дистрибьютор**, их
-формулировка `Sourced through established supplier channels`.
+TradeWheel дословно: `0.4 - 0.45 USD / per can`, **это диапазон**.
+**Не авторизованный дистрибьютор**, их формулировка `Sourced through
+established supplier channels`.
+
+**Со страницы TradeWheel, проверено 25.10.2026:** основан 2005, 10
+сотрудников, экспорт 90 процентов, ближайший порт Роттердам, тип
+`Distributor/Wholesaler`, статус на площадке `Free Member`.
+Управляющий директор указан как **Deyton Williams**, проверить не
+удалось. Ассортимент в карточке: **RedBull, Nespresso Capsules,
+Heineken, Nutella, Pringles.**
 
 ## 6. Ecopark Export B.V., Нидерланды
 
