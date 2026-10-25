@@ -350,3 +350,20 @@ truck now, up to 10 trucks per month`. Вставок по адресатам н
 разрешался пятью способами при проверке 24.10. Проверить bounce.
 
 Срок ответа в письме: пять рабочих дней, то есть до 03.11.2026.
+
+### Отказ доставки по WOOVE, 25.10.2026 15:38 UTC
+
+Пришёл через две секунды после отправки, от `mailer-daemon@googlemail.com`,
+тема `Delivery Status Notification (Failure)`. Дословно:
+
+```
+Address not found
+Your message wasn't delivered to sales@woovegmbh.com because the domain
+woovegmbh.com couldn't be found.
+```
+
+**Это подтверждает проверку от 24.10:** домен не существует, а не просто
+не резолвился в тот момент. **WOOVE как контрагент закрыт.** Остаётся
+только телефон, но писать и платить некуда и некому.
+
+Три остальных письма доставлены, отказов нет.
