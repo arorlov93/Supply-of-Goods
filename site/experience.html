@@ -28,18 +28,38 @@
    Pine green and warm gold on a cool bone ground; Instrument Serif over Hanken Grotesk,
    Martian Mono for anything that behaves like data. */
 :root{
-  --black-rgb:8 10 13;--paper-rgb:244 243 239;--graphite-rgb:21 25 30;--steel-rgb:133 140 148;
+  --feat:#071c19;--feat-ink:#1b1206;--eyebrow-ink:#cdd4db;
+  --serif:"Newsreader",Georgia,serif;
+
+  --black-rgb:8 10 13;
+  --paper-rgb:244 243 239;
+  --graphite-rgb:21 25 30;
+  --steel-rgb:133 140 148;
+  --pure-black-rgb:0 0 0;
+  --pure-white-rgb:255 255 255;
+  --ink-rgb:11 14 18;
+  --ink-2-rgb:20 25 34;
+  --brand-deep-rgb:11 74 64;
+  --mint-rgb:54 166 143;
+  --forest-rgb:9 32 28;
+  --forest-2-rgb:14 42 38;
+  --forest-3-rgb:5 24 21;
+  --gold-rgb:184 134 43;
+  --gold-lite-rgb:217 164 65;
+  --gold-soft-rgb:232 217 180;
+  --haze-rgb:238 241 239;
+
 
   --paper:#0b0e12; --surface:#141922; --surface-2:#1b212b; --surface-3:#232b36;
   --ink:#f2f3f5; --ink-2:#aab2bc; --ink-3:#8a929c; --rule:rgba(242,243,245,.15);
-  --brand:#36a68f; --brand-2:#2f9c88; --brand-deep:#0f6153; --brand-wash:rgba(54,166,143,.13);
+  --brand:#36a68f; --brand-2:#2f9c88; --brand-deep:#0f6153; --brand-wash:rgb(var(--mint-rgb) / .13);
   --gold:#d9a441; --gold-soft:#eedcb4; --gold-ink:#f2cd86;
   --on-shot:#f4f6f4; --on-shot-2:#cbd8d3;
   --g-ocean1:#101c24; --g-ocean2:#16303a; --g-ocean3:#1d4350;
-  --g-land:#2f9c88; --g-line:rgba(200,220,215,.22); --g-glow:rgba(54,166,143,.30);
-  --shadow-s:0 1px 2px rgba(0,0,0,.45);
-  --shadow-m:0 1px 2px rgba(0,0,0,.4), 0 12px 30px -18px rgba(0,0,0,.85);
-  --shadow-l:0 2px 6px rgba(0,0,0,.5), 0 26px 52px -28px rgba(0,0,0,.95);
+  --g-land:#2f9c88; --g-line:rgba(200,220,215,.22); --g-glow:rgb(var(--mint-rgb) / .30);
+  --shadow-s:0 1px 2px rgb(var(--pure-black-rgb) / .45);
+  --shadow-m:0 1px 2px rgb(var(--pure-black-rgb) / .4), 0 12px 30px -18px rgb(var(--pure-black-rgb) / .85);
+  --shadow-l:0 2px 6px rgb(var(--pure-black-rgb) / .5), 0 26px 52px -28px rgb(var(--pure-black-rgb) / .95);
   --fs:"Newsreader",Georgia,"Times New Roman",serif;
   --fd:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;
   --fm:"IBM Plex Mono",ui-monospace,Menlo,monospace;
@@ -51,8 +71,8 @@ html{overflow-x:clip}
 body{margin:0;color:var(--ink);font-family:var(--fd);font-size:16.5px;line-height:1.66;
   font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:clip;
   background:
-    radial-gradient(1200px 680px at 92% -10%, rgba(54,166,143,.055), transparent 62%),
-    radial-gradient(760px 460px at -8% 104%, rgba(217,164,65,.04), transparent 58%),
+    radial-gradient(1200px 680px at 92% -10%, rgb(var(--mint-rgb) / .055), transparent 62%),
+    radial-gradient(760px 460px at -8% 104%, rgb(var(--gold-lite-rgb) / .04), transparent 58%),
     var(--paper);
 }
 h1,h2,h3{margin:0;font-family:var(--fs);font-weight:400;line-height:1.06;
@@ -68,24 +88,24 @@ a{color:inherit}
   font-family:var(--sans);font-size:0.8rem;
   padding:13px 22px;text-decoration:none;white-space:nowrap;color:var(--paper);border-radius:1px;
   background:linear-gradient(142deg,var(--brand-2) 0%,var(--brand-deep) 100%);
-  box-shadow:0 9px 22px -11px rgba(11,74,64,.9), inset 0 1px 0 rgba(255,255,255,.2);
+  box-shadow:0 9px 22px -11px rgb(var(--brand-deep-rgb) / .9), inset 0 1px 0 rgb(var(--pure-white-rgb) / .2);
   transition:transform .18s ease, box-shadow .24s ease, filter .18s ease}
 .btn::after{content:"";position:absolute;inset:0;transform:translateX(-135%);
-  background:linear-gradient(100deg,transparent 18%,rgba(232,217,180,.5) 50%,transparent 82%);
+  background:linear-gradient(100deg,transparent 18%,rgb(var(--gold-soft-rgb) / .5) 50%,transparent 82%);
   transition:transform .65s ease}
 .btn:hover{transform:translateY(-2px);filter:brightness(1.09);
-  box-shadow:0 16px 30px -13px rgba(11,74,64,.95), inset 0 1px 0 rgba(255,255,255,.28)}
+  box-shadow:0 16px 30px -13px rgb(var(--brand-deep-rgb) / .95), inset 0 1px 0 rgb(var(--pure-white-rgb) / .28)}
 .btn:hover::after{transform:translateX(135%)}
 .btn:active{transform:translateY(0)}
 .btn-ghost{background:transparent;color:var(--brand);
   box-shadow:inset 0 0 0 1.5px var(--brand)}
 .btn-ghost:hover{background:var(--brand);color:var(--paper);
-  box-shadow:inset 0 0 0 1.5px var(--brand), 0 14px 28px -16px rgba(11,74,64,.9)}
+  box-shadow:inset 0 0 0 1.5px var(--brand), 0 14px 28px -16px rgb(var(--brand-deep-rgb) / .9)}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 
 /* nav */
 nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;
-  background:rgba(11,14,18,.82);backdrop-filter:blur(8px);
+  background:rgb(var(--ink-rgb) / .82);backdrop-filter:blur(8px);
   border-bottom:1px solid var(--rule)}
 .navin{display:flex;align-items:center;gap:26px;height:68px}
 .logo{font-family:var(--fs);font-size:1.3rem;letter-spacing:-.01em;white-space:nowrap;text-decoration:none}
@@ -112,9 +132,9 @@ section h2{font-size:clamp(1.95rem,4vw,3rem);max-width:19ch}
   
   transition:transform .8s cubic-bezier(.2,.7,.3,1)}
 .shot::after{content:"";position:absolute;inset:0;pointer-events:none;
-  background:linear-gradient(168deg,rgba(14,42,38,.05) 0%,rgba(14,42,38,.46) 100%)}
+  background:linear-gradient(168deg,rgb(var(--forest-2-rgb) / .05) 0%,rgb(var(--forest-2-rgb) / .46) 100%)}
 .shot::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:radial-gradient(120% 85% at 80% 8%,rgba(184,134,43,.20),transparent 58%)}
+  background:radial-gradient(120% 85% at 80% 8%,rgb(var(--gold-rgb) / .20),transparent 58%)}
 figure:hover .shot img,.band:hover .shot img{transform:scale(1.035)}
 figure{margin:0}
 figure .shot{aspect-ratio:4/3;border:1px solid var(--rule)}
@@ -125,7 +145,7 @@ figcaption{font-family:var(--sans);font-size:0.8rem;
 
 .band{position:relative;border-bottom:1px solid var(--rule);display:grid;isolation:isolate}
 .band .shot{position:absolute;inset:0;z-index:0}
-.band .shot::after{background:linear-gradient(98deg,rgba(9,32,28,.88) 0%,rgba(9,32,28,.56) 56%,rgba(9,32,28,.34) 100%)}
+.band .shot::after{background:linear-gradient(98deg,rgb(var(--forest-rgb) / .88) 0%,rgb(var(--forest-rgb) / .56) 56%,rgb(var(--forest-rgb) / .34) 100%)}
 .band .wrap{position:relative;z-index:2;align-self:center;padding-block:clamp(64px,8vw,108px)}
 .band h2{color:var(--on-shot);max-width:18ch}
 .band p{color:var(--on-shot-2);max-width:54ch;margin-top:18px;font-size:1.05rem}

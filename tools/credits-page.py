@@ -122,8 +122,10 @@ def main():
 .pblock.wide .ptext{margin-top:18px}
 .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
 table.credits{width:100%;border-collapse:collapse;font-size:.88rem;margin-top:10px}
-table.credits th{text-align:left;font-family:var(--mono);font-size:10px;
-  letter-spacing:.16em;text-transform:uppercase;font-weight:400;
+/* заголовок столбца это роль подписи: основная гарнитура, без разрядки
+   и без принудительных прописных (правила Hallmark 67 и 64) */
+table.credits th{text-align:left;font-family:var(--sans);font-size:.82rem;
+  font-weight:500;opacity:.72;
   padding:0 14px 10px 0;border-bottom:1px solid var(--rule)}
 table.credits td{padding:11px 14px 11px 0;border-bottom:1px solid var(--rule);
   vertical-align:top}
