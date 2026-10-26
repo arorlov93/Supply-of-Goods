@@ -15,14 +15,18 @@
 <meta property="og:image" content="https://ispgroupgc.com/media/terminal.jpg">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#0b0e12">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%230b4a40'/><text x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='400' fill='%23e8d9b4' text-anchor='middle'>IG</text></svg>">
+<link rel="icon" href="/brand/icon.svg" type="image/svg+xml">
+<link rel="icon" href="/brand/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0f1216">
 <meta property="og:url" content="https://ispgroupgc.com/experience">
 <meta property="og:site_name" content="ISP Group Global Commerce">
 <meta property="og:image:alt" content="Container terminal with ship to shore cranes">
 <meta name="twitter:card" content="summary_large_image">
 <title>Twenty years of supply work | ISP Group</title>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@300;400;500;600;700&family=Martian+Mono:wght@400;500&display=swap">
+
+
 <style>
 /* Single light theme by choice: the page commits to one look and never follows the OS.
    Pine green and warm gold on a cool bone ground; Instrument Serif over Hanken Grotesk,
@@ -186,6 +190,8 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 
 </style>
 <noscript><style>.fade,.ln>span,[data-reveal],.svc-list li,.steps li,.content{opacity:1!important;transform:none!important}</style></noscript>
+<link rel="preload" href="/fonts/fonts.css" as="style">
+<link rel="stylesheet" href="/fonts/fonts.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -866,6 +872,18 @@ article ul li::before{content:"";position:absolute;left:4px;top:.72em;width:9px;
   .chero .wrap.chero-g{grid-template-columns:1fr}
   .chero .heroside{order:-1}
   .chero .heroside .shot{aspect-ratio:16/10}
+}
+</style>
+<style>/* цели нажатия */
+@media (max-width:760px){
+  footer a{display:inline-flex;align-items:center;min-height:44px;
+    padding-block:6px;line-height:1.25}
+  .crumbs a{display:inline-block;padding-block:15px}
+  nav .navtoggle,nav .navsearch,.navtoggle,.navsearch{min-width:44px;min-height:44px}
+  nav .logo,.wordmark,a.logo{display:inline-block;padding-block:7px}
+  nav a.btn,.cta{display:inline-flex;align-items:center;justify-content:center;
+    min-width:44px;min-height:44px;padding-block:10px}
+  .skip{padding:12px 16px}
 }
 </style>
 </body>
