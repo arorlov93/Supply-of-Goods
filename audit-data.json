@@ -2,8 +2,8 @@
  "pages": {
   "404.html": {
    "desktop": {
-    "height": 2294,
-    "dom": 147,
+    "height": 2323,
+    "dom": 148,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -29,8 +29,8 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 3071,
-    "dom": 147,
+    "height": 3057,
+    "dom": 148,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -58,8 +58,8 @@
   },
   "about.html": {
    "desktop": {
-    "height": 5702,
-    "dom": 248,
+    "height": 6176,
+    "dom": 252,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -79,7 +79,7 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 24,
+    "smallTargets": 22,
     "title": 52,
     "desc": 119,
     "canonical": true,
@@ -92,8 +92,8 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 7831,
-    "dom": 248,
+    "height": 7694,
+    "dom": 252,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -128,8 +128,8 @@
   },
   "afrique-ouest.html": {
    "desktop": {
-    "height": 5831,
-    "dom": 230,
+    "height": 6384,
+    "dom": 232,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -162,8 +162,8 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 8110,
-    "dom": 230,
+    "height": 7904,
+    "dom": 232,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -198,7 +198,7 @@
   },
   "antidumping-check.html": {
    "desktop": {
-    "height": 4976,
+    "height": 5492,
     "dom": 236,
     "h1count": 1,
     "headingJumps": 0,
@@ -225,7 +225,7 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 7561,
+    "height": 7415,
     "dom": 236,
     "h1count": 1,
     "headingJumps": 0,
@@ -254,7 +254,7 @@
   },
   "bill-of-lading.html": {
    "desktop": {
-    "height": 5383,
+    "height": 5952,
     "dom": 254,
     "h1count": 1,
     "headingJumps": 0,
@@ -268,7 +268,7 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 21,
+    "smallTargets": 20,
     "title": 44,
     "desc": 158,
     "canonical": true,
@@ -281,7 +281,7 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 8411,
+    "height": 8240,
     "dom": 254,
     "h1count": 1,
     "headingJumps": 0,
@@ -310,8 +310,8 @@
   },
   "building-materials.html": {
    "desktop": {
-    "height": 6492,
-    "dom": 268,
+    "height": 6901,
+    "dom": 272,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -344,8 +344,8 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 9003,
-    "dom": 268,
+    "height": 8922,
+    "dom": 272,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -380,7 +380,7 @@
   },
   "certificat-veterinaire.html": {
    "desktop": {
-    "height": 4777,
+    "height": 5169,
     "dom": 228,
     "h1count": 1,
     "headingJumps": 0,
@@ -394,7 +394,7 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 17,
+    "smallTargets": 16,
     "title": 52,
     "desc": 138,
     "canonical": true,
@@ -407,7 +407,7 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 7184,
+    "height": 6967,
     "dom": 228,
     "h1count": 1,
     "headingJumps": 0,
@@ -436,7 +436,7 @@
   },
   "certificate-of-origin.html": {
    "desktop": {
-    "height": 5402,
+    "height": 5943,
     "dom": 253,
     "h1count": 1,
     "headingJumps": 0,
@@ -450,7 +450,7 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 22,
+    "smallTargets": 21,
     "title": 58,
     "desc": 153,
     "canonical": true,
@@ -463,7 +463,7 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 8282,
+    "height": 8141,
     "dom": 253,
     "h1count": 1,
     "headingJumps": 0,
@@ -492,8 +492,8 @@
   },
   "china.html": {
    "desktop": {
-    "height": 6862,
-    "dom": 268,
+    "height": 7394,
+    "dom": 271,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -526,8 +526,8 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 9896,
-    "dom": 268,
+    "height": 9818,
+    "dom": 271,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -562,8 +562,8 @@
   },
   "contact-fr.html": {
    "desktop": {
-    "height": 4756,
-    "dom": 241,
+    "height": 5041,
+    "dom": 243,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -576,7 +576,7 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 17,
+    "smallTargets": 16,
     "title": 40,
     "desc": 139,
     "canonical": true,
@@ -589,8 +589,8 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 6873,
-    "dom": 241,
+    "height": 6700,
+    "dom": 243,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -603,7 +603,7 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 1,
+    "smallTargets": 0,
     "title": 40,
     "desc": 139,
     "canonical": true,
@@ -618,8 +618,8 @@
   },
   "contact.html": {
    "desktop": {
-    "height": 5387,
-    "dom": 259,
+    "height": 5690,
+    "dom": 262,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -645,8 +645,8 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 7720,
-    "dom": 259,
+    "height": 7630,
+    "dom": 262,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -659,7 +659,7 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 2,
+    "smallTargets": 1,
     "title": 38,
     "desc": 154,
     "canonical": true,
@@ -674,8 +674,8 @@
   },
   "container-loading.html": {
    "desktop": {
-    "height": 5240,
-    "dom": 243,
+    "height": 5732,
+    "dom": 245,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -701,8 +701,8 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 8046,
-    "dom": 243,
+    "height": 7900,
+    "dom": 245,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -730,8 +730,8 @@
   },
   "corridors.html": {
    "desktop": {
-    "height": 4037,
-    "dom": 190,
+    "height": 4242,
+    "dom": 195,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -764,8 +764,8 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 5450,
-    "dom": 190,
+    "height": 5411,
+    "dom": 195,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -800,8 +800,8 @@
   },
   "credits.html": {
    "desktop": {
-    "height": 5201,
-    "dom": 535,
+    "height": 5240,
+    "dom": 537,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -827,8 +827,8 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 7733,
-    "dom": 535,
+    "height": 7788,
+    "dom": 537,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -856,7 +856,7 @@
   },
   "customs-data-pricing.html": {
    "desktop": {
-    "height": 4760,
+    "height": 5218,
     "dom": 233,
     "h1count": 1,
     "headingJumps": 0,
@@ -883,7 +883,7 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 7303,
+    "height": 7183,
     "dom": 233,
     "h1count": 1,
     "headingJumps": 0,
@@ -912,8 +912,8 @@
   },
   "decoupes-volaille.html": {
    "desktop": {
-    "height": 4876,
-    "dom": 237,
+    "height": 5602,
+    "dom": 239,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -939,8 +939,8 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 7400,
-    "dom": 237,
+    "height": 7183,
+    "dom": 239,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -968,7 +968,7 @@
   },
   "demurrage-detention.html": {
    "desktop": {
-    "height": 5224,
+    "height": 5604,
     "dom": 252,
     "h1count": 1,
     "headingJumps": 0,
@@ -995,7 +995,7 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 7900,
+    "height": 7781,
     "dom": 252,
     "h1count": 1,
     "headingJumps": 0,
@@ -1024,8 +1024,8 @@
   },
   "experience.html": {
    "desktop": {
-    "height": 7048,
-    "dom": 180,
+    "height": 7134,
+    "dom": 184,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -1051,8 +1051,8 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 9442,
-    "dom": 180,
+    "height": 9491,
+    "dom": 184,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -1080,7 +1080,7 @@
   },
   "food-agricultural.html": {
    "desktop": {
-    "height": 6854,
+    "height": 7435,
     "dom": 271,
     "h1count": 1,
     "headingJumps": 0,
@@ -1101,7 +1101,7 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 25,
+    "smallTargets": 24,
     "title": 56,
     "desc": 186,
     "canonical": true,
@@ -1114,7 +1114,7 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 9770,
+    "height": 9622,
     "dom": 271,
     "h1count": 1,
     "headingJumps": 0,
@@ -1150,8 +1150,8 @@
   },
   "guides.html": {
    "desktop": {
-    "height": 3472,
-    "dom": 218,
+    "height": 3869,
+    "dom": 220,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -1164,7 +1164,7 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 26,
+    "smallTargets": 24,
     "title": 58,
     "desc": 123,
     "canonical": true,
@@ -1177,8 +1177,8 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 6376,
-    "dom": 218,
+    "height": 6326,
+    "dom": 220,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -1206,7 +1206,7 @@
   },
   "hs-code.html": {
    "desktop": {
-    "height": 4773,
+    "height": 5244,
     "dom": 238,
     "h1count": 1,
     "headingJumps": 0,
@@ -1233,7 +1233,7 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 7341,
+    "height": 7248,
     "dom": 238,
     "h1count": 1,
     "headingJumps": 0,
@@ -1262,7 +1262,7 @@
   },
   "incoterms.html": {
    "desktop": {
-    "height": 6028,
+    "height": 6922,
     "dom": 318,
     "h1count": 1,
     "headingJumps": 0,
@@ -1276,7 +1276,7 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 22,
+    "smallTargets": 24,
     "title": 44,
     "desc": 152,
     "canonical": true,
@@ -1289,7 +1289,7 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 9422,
+    "height": 9372,
     "dom": 318,
     "h1count": 1,
     "headingJumps": 0,
@@ -1318,8 +1318,8 @@
   },
   "index.html": {
    "desktop": {
-    "height": 12575,
-    "dom": 352,
+    "height": 12368,
+    "dom": 347,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -1436,8 +1436,8 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 11385,
-    "dom": 352,
+    "height": 11610,
+    "dom": 347,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -1484,10 +1484,10 @@
       "alt": true
      },
      {
-      "src": "j-arrival.jpg",
-      "nat": 0,
+      "src": "j-arrival.webp",
+      "nat": 2400,
       "css": 349,
-      "ratio": null,
+      "ratio": 0.15,
       "alt": true
      },
      {
@@ -1556,8 +1556,8 @@
   },
   "industrial-equipment.html": {
    "desktop": {
-    "height": 6667,
-    "dom": 270,
+    "height": 7092,
+    "dom": 273,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -1590,8 +1590,8 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 9161,
-    "dom": 270,
+    "height": 9065,
+    "dom": 273,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -1626,8 +1626,8 @@
   },
   "ispm-15.html": {
    "desktop": {
-    "height": 4840,
-    "dom": 234,
+    "height": 5192,
+    "dom": 236,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -1653,8 +1653,8 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 7403,
-    "dom": 234,
+    "height": 7310,
+    "dom": 236,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -1682,7 +1682,7 @@
   },
   "landed-price.html": {
    "desktop": {
-    "height": 5084,
+    "height": 5572,
     "dom": 255,
     "h1count": 1,
     "headingJumps": 0,
@@ -1709,7 +1709,7 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 7734,
+    "height": 7588,
     "dom": 255,
     "h1count": 1,
     "headingJumps": 0,
@@ -1738,7 +1738,7 @@
   },
   "letter-of-credit.html": {
    "desktop": {
-    "height": 5316,
+    "height": 5877,
     "dom": 246,
     "h1count": 1,
     "headingJumps": 0,
@@ -1752,7 +1752,7 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 21,
+    "smallTargets": 20,
     "title": 60,
     "desc": 157,
     "canonical": true,
@@ -1765,7 +1765,7 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 8392,
+    "height": 8220,
     "dom": 246,
     "h1count": 1,
     "headingJumps": 0,
@@ -1794,8 +1794,8 @@
   },
   "metals-pipe.html": {
    "desktop": {
-    "height": 6320,
-    "dom": 266,
+    "height": 6760,
+    "dom": 267,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -1828,8 +1828,8 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 8796,
-    "dom": 266,
+    "height": 8716,
+    "dom": 267,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -1864,8 +1864,8 @@
   },
   "paper-packaging.html": {
    "desktop": {
-    "height": 6273,
-    "dom": 261,
+    "height": 6643,
+    "dom": 264,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -1898,8 +1898,8 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 8538,
-    "dom": 261,
+    "height": 8468,
+    "dom": 264,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -1934,8 +1934,8 @@
   },
   "poultry-cuts.html": {
    "desktop": {
-    "height": 4986,
-    "dom": 247,
+    "height": 5620,
+    "dom": 251,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -1961,8 +1961,8 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 7635,
-    "dom": 247,
+    "height": 7489,
+    "dom": 251,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -1990,8 +1990,8 @@
   },
   "privacy.html": {
    "desktop": {
-    "height": 4936,
-    "dom": 248,
+    "height": 5691,
+    "dom": 249,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -2017,8 +2017,8 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 8096,
-    "dom": 248,
+    "height": 7905,
+    "dom": 249,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -2046,7 +2046,7 @@
   },
   "proforma-invoice.html": {
    "desktop": {
-    "height": 5410,
+    "height": 6009,
     "dom": 269,
     "h1count": 1,
     "headingJumps": 0,
@@ -2060,7 +2060,7 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 22,
+    "smallTargets": 21,
     "title": 45,
     "desc": 161,
     "canonical": true,
@@ -2073,7 +2073,7 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 8202,
+    "height": 8056,
     "dom": 269,
     "h1count": 1,
     "headingJumps": 0,
@@ -2102,7 +2102,7 @@
   },
   "reefer-cold-chain.html": {
    "desktop": {
-    "height": 4880,
+    "height": 5376,
     "dom": 238,
     "h1count": 1,
     "headingJumps": 0,
@@ -2129,7 +2129,7 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 7520,
+    "height": 7374,
     "dom": 238,
     "h1count": 1,
     "headingJumps": 0,
@@ -2158,7 +2158,7 @@
   },
   "services.html": {
    "desktop": {
-    "height": 5916,
+    "height": 6577,
     "dom": 246,
     "h1count": 1,
     "headingJumps": 0,
@@ -2172,7 +2172,7 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 19,
+    "smallTargets": 20,
     "title": 51,
     "desc": 155,
     "canonical": true,
@@ -2185,7 +2185,7 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 8886,
+    "height": 8734,
     "dom": 246,
     "h1count": 1,
     "headingJumps": 0,
@@ -2214,8 +2214,8 @@
   },
   "southern-africa.html": {
    "desktop": {
-    "height": 6416,
-    "dom": 257,
+    "height": 6810,
+    "dom": 256,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -2248,8 +2248,8 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 9132,
-    "dom": 257,
+    "height": 9018,
+    "dom": 256,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -2284,8 +2284,8 @@
   },
   "supply.html": {
    "desktop": {
-    "height": 4081,
-    "dom": 186,
+    "height": 4304,
+    "dom": 188,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -2318,8 +2318,8 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 5425,
-    "dom": 186,
+    "height": 5438,
+    "dom": 188,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -2354,8 +2354,8 @@
   },
   "terms.html": {
    "desktop": {
-    "height": 4729,
-    "dom": 236,
+    "height": 5298,
+    "dom": 237,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -2381,8 +2381,8 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 7754,
-    "dom": 236,
+    "height": 7563,
+    "dom": 237,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -2410,8 +2410,8 @@
   },
   "tools-hardware.html": {
    "desktop": {
-    "height": 6200,
-    "dom": 256,
+    "height": 6649,
+    "dom": 258,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -2444,8 +2444,8 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 8691,
-    "dom": 256,
+    "height": 8585,
+    "dom": 258,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -2480,8 +2480,8 @@
   },
   "turkiye.html": {
    "desktop": {
-    "height": 6632,
-    "dom": 265,
+    "height": 7033,
+    "dom": 268,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -2514,8 +2514,8 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 9323,
-    "dom": 265,
+    "height": 9204,
+    "dom": 268,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -2550,7 +2550,7 @@
   },
   "verify-supplier.html": {
    "desktop": {
-    "height": 4779,
+    "height": 5208,
     "dom": 231,
     "h1count": 1,
     "headingJumps": 0,
@@ -2577,7 +2577,7 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 7618,
+    "height": 7472,
     "dom": 231,
     "h1count": 1,
     "headingJumps": 0,
@@ -2606,7 +2606,7 @@
   },
   "veterinary-certificate.html": {
    "desktop": {
-    "height": 5029,
+    "height": 5434,
     "dom": 239,
     "h1count": 1,
     "headingJumps": 0,
@@ -2633,7 +2633,7 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 7534,
+    "height": 7388,
     "dom": 239,
     "h1count": 1,
     "headingJumps": 0,
@@ -2662,8 +2662,8 @@
   },
   "west-africa.html": {
    "desktop": {
-    "height": 6924,
-    "dom": 267,
+    "height": 7470,
+    "dom": 268,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -2696,8 +2696,8 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 9788,
-    "dom": 267,
+    "height": 9722,
+    "dom": 268,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -3092,6 +3092,13 @@
   "j-sea.webp": {
    "nat": 1600,
    "worst": 0.22,
+   "pages": [
+    "index.html"
+   ]
+  },
+  "j-arrival.webp": {
+   "nat": 2400,
+   "worst": 0.15,
    "pages": [
     "index.html"
    ]
