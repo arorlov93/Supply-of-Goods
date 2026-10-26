@@ -1,0 +1,376 @@
+/* Hallmark · shape: kept · genre: editorial · theme: Formwork (by request) · redesign: restyle
+ * hero: kept · nav: kept · footer: kept · imagery: photographs · signature: the cargo journey, six pours
+ * axes: mid/display-condensed/warm · posture: restrained · contrast: pass · fold: pass · v2.0.0
+ * formwork: cast
+ *
+ * Глубина restyle по их же таблице: содержание и раскладка остаются, меняется
+ * система - цвет, шрифт, радиусы, тени, движение, элементы управления.
+ * Полная перестройка выбросила бы раздел про путь груза и первый экран,
+ * которые заказаны отдельно и сознательно.
+ *
+ * Как это устроено. На сайте два набора имён токенов: на главной фоном
+ * служит --black, а текстом --paper, на внутренних страницах наоборот,
+ * --paper это тёмный фон, а текст --ink. Переписывать тысячи объявлений
+ * ради смены палитры незачем: здесь обоим наборам выдаются значения
+ * Formwork, и все существующие правила подхватывают новую систему сами.
+ */
+
+@import url("./tokens.css");
+@import url("/fonts/formwork.css");
+
+:root {
+  /* --- мост: имена главной страницы --- */
+  --black: var(--color-paper);          /* фон стал бетонной бумагой */
+  --graphite: var(--color-paper-2);
+  --graphite-2: var(--color-paper-3);
+  --paper: var(--color-ink);            /* текст стал почти чёрным */
+  --paper-2: var(--color-ink-2);
+  --steel: var(--color-muted);
+  --steel-2: var(--color-muted);
+  --brand: var(--color-accent);
+  --brand-lite: var(--color-accent-deep);
+  --gold: var(--color-accent);
+  --gold-soft: var(--color-ink-2);
+
+  /* --- мост: имена внутренних страниц --- */
+  --surface: var(--color-paper-2);
+  --surface-2: var(--color-plate);
+  --surface-3: var(--color-paper-3);
+  --ink: var(--color-ink);
+  --ink-2: var(--color-ink-2);
+  --ink-3: var(--color-muted);
+  --rule: var(--color-rule);
+  --gold-ink: var(--color-accent-deep);
+  --feat: var(--color-ink);
+  --feat-ink: var(--color-plate-ink);
+  --eyebrow-ink: var(--color-muted);
+
+  /* подложки на фотографиях остаются чернильными: тип на снимке
+     ставится только поверх чернильной заливки от края */
+  --black-rgb: 26 26 28;
+  --paper-rgb: 240 238 233;
+  --graphite-rgb: 40 40 42;
+  --steel-rgb: 92 90 86;
+  --ink-rgb: 26 26 28;
+  --ink-2-rgb: 58 56 52;
+  --pure-black-rgb: 0 0 0;
+  --pure-white-rgb: 255 255 255;
+  --brand-deep-rgb: 150 62 20;
+  --mint-rgb: 198 88 32;
+  --forest-rgb: 26 26 28;
+  --forest-2-rgb: 40 40 42;
+  --forest-3-rgb: 20 20 22;
+  --gold-rgb: 198 88 32;
+  --gold-lite-rgb: 214 112 48;
+  --gold-soft-rgb: 58 56 52;
+  --haze-rgb: 240 238 233;
+
+  /* гарнитуры темы вместо прежних */
+  --sans: var(--font-body);
+  --fm: var(--font-outlier);
+  --mono: var(--font-outlier);
+  --serif: var(--font-display);
+  --fs: var(--font-display);
+  --fd: var(--font-display);
+}
+
+/* ---------------------------------------------------------------- бумага */
+
+html, body { background: var(--color-paper); color: var(--color-ink-2); }
+body { font-family: var(--font-body); font-size: 17px; line-height: 1.5; }
+
+/* Зерно: оно и делает бумагу литой. Накладывается умножением поверх всей
+   страницы, не перехватывая нажатия. */
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: 9999; pointer-events: none;
+  mix-blend-mode: multiply; opacity: .05;
+  /* feTurbulence даёт шум по трём каналам, то есть цветной: без
+     обесцвечивания он красил чёрно-белые снимки в коричневое */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23g)'/%3E%3C/svg%3E");
+}
+
+/* ----------------------------------------------------------------- набор */
+
+h1, h2, h3, h4, h5, h6,
+.display, .display.sm, .yrs, .num, .chero h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
+  color: var(--color-ink);
+}
+h1, .display, .chero h1 { line-height: 1.02; }
+/* перенос по смыслу: условные капители Oswald иначе роняют
+   одно слово на последнюю строку */
+h1, h2, h3, .display { text-wrap: balance; }
+h2, h3, h4 { line-height: 1.05; }
+/* Один цвет на заголовок (38iii) и оранжевого меньше 5% экрана. Прежняя
+   вёрстка красила половину заголовка в акцент; здесь он снимается.
+   !important потому, что страничные правила вида .chero h1 em старше по
+   специфичности, а это решение системы, а не частный случай. */
+h1 em, h2 em, h3 em, .display em,
+h1 b, h2 b, h3 b, h1 span, h2 span, .display span {
+  font-style: normal;
+  color: var(--color-ink) !important;
+}
+
+/* Цифры и измерения: узкий Archivo, табличные, в своём регистре */
+.k, .n, .num span, .yrs small, .facts td, .lanes td, .ptable td {
+  font-family: var(--font-outlier);
+  font-variant-numeric: tabular-nums;
+  text-transform: none;
+}
+
+/* Подписи: Archivo 500 на ступень меньше, без разрядки, без прописных.
+   Моноширинного на странице нет вовсе. */
+.eyebrow, .crumbs, .crumbs a, .chip, .meta, .upd, .backlink, .searchhint,
+.card .cap span, .card .n, .heroside .caption, figcaption, label,
+.facts th, .lanes th, .ptable th, .fgrid dt, table.credits th,
+.scroll-hint, .chero .scroll-cue, .langsw, .svc-list i, .step .out {
+  font-family: var(--font-body);
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--color-muted);
+}
+
+/* ------------------------------------------------------------ поверхности */
+
+/* Радиус 0 на всём: бетон льют в прямую опалубку */
+*, *::before, *::after { border-radius: 0 !important; }
+
+/* Глубина литая, не мягкая. Размытых теней не бывает. */
+.card, .form-card, .why-grid > *, .chip, .heroside .shot, .teaser,
+.cat, .guide, .lane, .plate, .panel {
+  box-shadow: none;
+  border: var(--rule-hair) solid var(--color-rule);
+  background: var(--color-paper-2);
+}
+.plate, .form-card {
+  background: var(--color-plate);
+  border: var(--rule-bar) solid var(--color-ink);
+  box-shadow: var(--shadow-card);
+}
+.form-card { backdrop-filter: none; }
+
+/* Линейки: жирная по верху раздела, волосяная между строк */
+section > .wrap > h2:first-child,
+.rail-head, .jside h2 { border-top: none; }
+.facts tr + tr, .lanes tr + tr, .ptable tr + tr,
+table.credits tr + tr, .steps li + li, .svc-list li + li {
+  border-top: var(--rule-hair) solid var(--color-paper-3);
+}
+
+/* Фотографии: квадрат в чернильной рамке 2px, без тени, чёрно-белые */
+figure img, .shot img, .card img, .jsteps img, .media, .teaser img {
+  outline: 2px solid var(--color-ink);
+  outline-offset: -2px;
+  box-shadow: none;
+}
+/* Снимок стоит в рамке без тени: «depth is cast, never soft». Страничные
+   правила .chero .heroside .shot старше по специфичности, отсюда important */
+.shot, .heroside .shot, .chero .heroside .shot {
+  box-shadow: none !important;
+  border: none !important;
+  background: var(--color-paper-2) !important;
+}
+/* На снимке лежали золотой радиальный блик и зелёные градиенты. Тема
+   запрещает и то и другое: снимки печатаются чёрно-белыми, цветной
+   заливки на них не бывает, а пустая заливка это ещё и отдельное
+   замечание линтера (81). Вместо них рамка в 2 пикселя чернилами. */
+.shot::before, .shot::after,
+.heroside .shot::before, .heroside .shot::after {
+  background: none !important;
+  box-shadow: inset 0 0 0 2px var(--color-ink) !important;
+}
+
+/* Подпись карточки лежит на снимке поверх чернильной заливки от нижнего
+   края, значит набор светлый. Мост сделал её чернильной на чернильном. */
+.card .cap, .card .cap b, .card .cap span, .card .n {
+  color: var(--color-plate-ink) !important;
+}
+.card .cap { background: linear-gradient(180deg, transparent, rgb(var(--ink-rgb) / .92)); }
+.card .n { color: var(--color-accent) !important; }
+
+/* --------------------------------------------------------------- элементы */
+
+.btn, .btn-lg, .cta, button[type="submit"] {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: normal;
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+  border: none;
+  box-shadow: 0 3px 0 var(--color-accent-deep);
+  transition: translate var(--dur-micro, .12s) var(--ease-out, ease-out),
+              box-shadow var(--dur-micro, .12s) var(--ease-out, ease-out);
+}
+.btn:active, .btn-lg:active, .cta:active, button[type="submit"]:active {
+  translate: 0 3px;
+  box-shadow: 0 0 0 var(--color-accent-deep);
+}
+.btn-ghost, .btn.secondary {
+  background: var(--color-paper-2);
+  color: var(--color-ink);
+  border: 2px solid var(--color-ink);
+  box-shadow: inset 0 2px 3px color-mix(in oklab, var(--color-ink) 30%, transparent);
+}
+/* Поля вдавлены, как вторичная кнопка. Страничные правила задавали им
+   фон через --paper, который в мосте стал чернильным: получалось
+   чернильное на чернильном. Отсюда important. */
+input, select, textarea,
+.cform input, .cform select, .cform textarea,
+.form-card input, .form-card select, .form-card textarea {
+  background: var(--color-plate) !important;
+  color: var(--color-ink) !important;
+  border: 2px solid var(--color-ink) !important;
+  box-shadow: inset 0 2px 3px color-mix(in oklab, var(--color-ink) 30%, transparent) !important;
+}
+input::placeholder, textarea::placeholder { color: var(--color-muted) !important; }
+a { color: var(--color-ink); text-decoration-color: var(--color-rule); }
+
+/* Оранжевый держится под 5% экрана: первичное действие, одна цифра,
+   кольцо фокуса. В чипах и врезках он стоял на словах, это снимается. */
+.chip b, .chip em, .chip strong,
+.why-grid b, .svc-list b, .steps b, p b, li b, td b {
+  color: var(--color-ink) !important;
+  font-weight: 600;
+}
+.k, .n { color: var(--color-accent-deep); }
+a:hover { color: var(--color-accent-deep); }
+:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 2px; }
+
+/* ------------------------------------------------- тип поверх снимка */
+
+/* Тема допускает набор на фотографии только поверх чернильной заливки от
+   края, и тогда он светлый. Полноэкранные сцены главной именно такие:
+   заливка остаётся чернильной, а текст берёт цвет плиты. */
+.scene .content, .scene .content h1, .scene .content h2,
+.scene .content .lead, .scene .content p, .scene .content .eyebrow,
+.scene .content .scroll-hint, .hero .content, .hero .content h1 {
+  color: var(--color-plate-ink);
+}
+/* Заголовок героя набран строчными обёртками <span class="ln">, и общее
+   правило «один цвет на заголовок» через h1 span красило его чернильным
+   поверх тёмного снимка. Здесь оно перекрывается обратно на светлое. */
+.scene .content h1, .hero .content h1,
+.scene .content h1 span, .scene .content h1 em,
+.hero .content h1 span, .hero .content h1 em {
+  color: var(--color-plate-ink) !important;
+}
+.scene .content a:not(.btn):not(.cta):not(.btn-lg) { color: var(--color-plate-ink); }
+.scrim {
+  background: linear-gradient(180deg,
+    rgb(var(--ink-rgb) / .86) 0%, rgb(var(--ink-rgb) / .66) 34%,
+    rgb(var(--ink-rgb) / .80) 64%, rgb(var(--ink-rgb) / .94) 100%) !important;
+}
+.scene .stage::after {
+  background: linear-gradient(180deg,
+    rgb(var(--ink-rgb) / .40) 0%, rgb(var(--ink-rgb) / .30) 26%,
+    rgb(var(--ink-rgb) / .72) 62%, rgb(var(--ink-rgb) / .96) 100%) !important;
+}
+/* Одно залитое первичное действие на страницу: им остаётся оранжевое в
+   шапке. Кнопка на снимке переводится во вторичную, обведённую. */
+.scene .content .btn-lg {
+  background: transparent;
+  color: var(--color-plate-ink);
+  border: 2px solid var(--color-plate-ink);
+  box-shadow: none;
+}
+.scene .content .btn-lg:active { translate: 0 2px; }
+
+/* Сетка героя внутренних страниц центрировала колонки по вертикали. Там,
+   где в правой колонке стоит ещё и форма, левая проваливалась на пол-экрана
+   вниз. Тема это монтажный щит: всё равняется по верхней линейке. */
+.chero .wrap.chero-g, .chero-g { align-items: start !important; }
+
+/* ---------------------------------------------------------------- полосы */
+
+/* В исходной вёрстке --paper служил и цветом текста, и фоном светлых
+   полос, а --graphite фоном тёмных. Мост не может быть и тем и другим,
+   поэтому полосы задаются здесь явно.
+   Тема: «Bands: --color-paper-2 (a darker pour) or one --color-ink band
+   with --color-paper text; never an orange field. Two a page at most.» */
+#s-cats, #s-proc {
+  background: var(--color-paper-2) !important;
+  color: var(--color-ink) !important;
+}
+#s-cats h2, #s-proc h2, #s-cats h3, #s-proc h3,
+#s-cats .lead, #s-proc .lead, #s-cats p, #s-proc p {
+  color: var(--color-ink) !important;
+}
+/* единственная чернильная полоса на странице */
+#s-journey {
+  background: var(--color-ink) !important;
+  color: var(--color-plate-ink) !important;
+}
+#s-journey h2, #s-journey h3 { color: var(--color-plate-ink) !important; }
+#s-journey p, #s-journey .lead { color: var(--color-paper-3) !important; }
+#s-journey .k { color: var(--color-accent) !important; }
+#s-why {
+  background: var(--color-paper-2) !important;
+  color: var(--color-ink) !important;
+}
+#s-why h2, #s-why h3 { color: var(--color-ink) !important; }
+#s-why p { color: var(--color-ink-2) !important; }
+
+/* ---------------------------------------------------------------- шапка */
+
+/* На внутренних страницах шапка это голый <nav> без класса, с собственной
+   чернильной заливкой: без этого она осталась тёмной на бетонной бумаге */
+header.top, body > nav, nav.nav, .nav-wrap {
+  background: var(--color-paper) !important;
+  border-bottom: var(--rule-bar) solid var(--color-ink);
+  backdrop-filter: none;
+}
+body > nav a, nav.nav a { color: var(--color-ink); }
+body > nav a:hover, nav.nav a:hover { color: var(--color-accent-deep); }
+header.top::before { display: none; }
+header.top.solid::before { display: none; }
+.wordmark, nav .logo, a.logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-ink);
+}
+.wordmark em, nav .logo em, a.logo em {
+  font-style: normal !important;
+  font-family: var(--font-display) !important;
+  color: var(--color-accent-deep) !important;
+}
+
+/* ---------------------------------------------------------------- подвал */
+
+footer, .foot {
+  background: var(--color-ink);
+  color: var(--color-plate-ink);
+  border-top: none;
+}
+footer a, .foot a { color: var(--color-plate-ink); }
+footer a:hover, .foot a:hover { color: var(--color-accent); }
+.foot h3, .foot h4 { color: var(--color-plate-ink); }
+footer .fdesc, footer .credits, .foot-note { color: var(--color-paper-3); }
+
+/* ---------------------------------------------------------------- движение */
+
+/* «Бетон не движется.» Снимаются появления при прокрутке, параллакс и
+   масштабирование кадров: состояние наступает сразу. */
+.fade, .jsteps li, .steps li, .svc-list li, [data-reveal], .ln > span {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+.media, #s-open .media, #s-end .media, .rail {
+  transform: none !important;
+  transition: none !important;
+}
+.card img, .jsteps li:hover img, .card:hover img { transform: none !important; }
+.scroll-hint::before { animation: none !important; }
+
+/* --------------------------------------------- то, что рисует браузер */
+
+/* Выделение и полоса прокрутки берутся из палитры: иначе они остаются
+   системно-синими и выпадают из темы (F16). */
+::selection { background: color-mix(in oklab, var(--color-accent) 35%, transparent); }
+html { scrollbar-color: var(--color-ink) var(--color-paper-2); }

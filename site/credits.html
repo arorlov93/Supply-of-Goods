@@ -657,8 +657,6 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .searchres mark{background:var(--gold-soft);color:inherit;padding:0 2px}
 @media(max-width:940px){.searchpanel{top:68px}}
 </style>
-<link rel="preload" href="/fonts/fonts.css" as="style">
-<link rel="stylesheet" href="/fonts/fonts.css">
 <link rel="icon" href="/brand/icon.svg" type="image/svg+xml">
 <link rel="icon" href="/brand/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -958,6 +956,18 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .fbottom .fdesc{max-width:62ch}
 .fbottom .flinks{display:flex;gap:22px;margin-top:4px}
 </style>
+<style>/* цели нажатия */
+@media (max-width:760px){
+  footer a{display:inline-flex;align-items:center;min-height:44px;
+    padding-block:6px;line-height:1.25}
+  .crumbs a{display:inline-block;padding-block:15px}
+  nav .navtoggle,nav .navsearch,.navtoggle,.navsearch{min-width:44px;min-height:44px}
+  nav .logo,.wordmark,a.logo{display:inline-block;padding-block:7px}
+  nav a.btn,.cta{display:inline-flex;align-items:center;justify-content:center;
+    min-width:44px;min-height:44px;padding-block:10px}
+  .skip{padding:12px 16px}
+}
+</style>
 <style>/* титры */
 /* обычный раздел прозы держит текст в правой колонке, таблице там тесно:
    название лицензии переносилось на три строки */
@@ -982,17 +992,8 @@ table.credits code{font-family:var(--mono);font-size:.8rem;opacity:.75}
   table.credits td{padding-block:4px}
 }
 </style>
-<style>/* цели нажатия */
-@media (max-width:760px){
-  footer a{display:inline-flex;align-items:center;min-height:44px;
-    padding-block:6px;line-height:1.25}
-  .crumbs a{display:inline-block;padding-block:15px}
-  nav .navtoggle,nav .navsearch,.navtoggle,.navsearch{min-width:44px;min-height:44px}
-  nav .logo,.wordmark,a.logo{display:inline-block;padding-block:7px}
-  nav a.btn,.cta{display:inline-flex;align-items:center;justify-content:center;
-    min-width:44px;min-height:44px;padding-block:10px}
-  .skip{padding:12px 16px}
-}
-</style>
+<!-- formwork -->
+<link rel="preload" href="/css/formwork.css" as="style">
+<link rel="stylesheet" href="/css/formwork.css">
 </body>
 </html>
