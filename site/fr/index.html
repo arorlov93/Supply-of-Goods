@@ -21,13 +21,6 @@
 <meta property="og:image" content="https://ispgroupgc.com/media/port-noir.jpg">
 <meta property="og:image:alt" content="Container terminal cranes silhouetted under a heavy sky">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/brand/icon.svg" type="image/svg+xml">
-<link rel="icon" href="/brand/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#0f1216">
-
-
 <link rel="preload" as="image" href="/media/port-noir.webp" type="image/webp" fetchpriority="high">
 <style>
 :root{
@@ -155,7 +148,10 @@ nav.top-nav a:hover{opacity:1}
 
 /* 01 opening */
 #s-open{height:190svh}
-#s-open .media{transform:scale(calc(1.18 - var(--p,0)*.18));transform-origin:50% 42%}
+/* кадр героя сам по себе почти весь небо, краны стоят у нижнего края,
+   поэтому кадрирование смещено вниз: иначе на первом экране остаётся туча */
+#s-open .media{transform:scale(calc(1.18 - var(--p,0)*.18));transform-origin:50% 42%;
+  object-position:50% 78%}
 #s-open .content{transform:translateY(calc(var(--p,0)*-7vh));opacity:calc(1 - max(0, var(--p,0) - .46) * 1.85)}
 .hero-grid{display:grid;gap:clamp(22px,3vw,48px);grid-template-columns:minmax(0,1fr) minmax(0,.62fr);align-items:end}
 @media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
@@ -201,7 +197,11 @@ nav.top-nav a:hover{opacity:1}
   transform:translate3d(calc(var(--p,0) * var(--shift,0px) * -1),0,0);will-change:transform;
 }
 .card{
-  position:relative;flex:0 0 auto;height:min(60vh,540px);aspect-ratio:3/4;border-radius:3px;
+  /* заголовок раздела стоит над полосой отдельным слоем, и при трёх строках
+     подзаголовка карточки наезжали на текст. Высота ограничена ещё и тем,
+     что осталось от экрана под заголовком. */
+  position:relative;flex:0 0 auto;height:min(60vh,540px,calc(100svh - 430px));
+  aspect-ratio:3/4;border-radius:3px;
   overflow:hidden;background:var(--graphite);text-decoration:none;color:var(--paper);
 }
 .card img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.16,1,.3,1);}
@@ -286,7 +286,7 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
 .foot{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:34px}
 .foot a{text-decoration:none;color:var(--steel);display:block;padding:3px 0;font-size:14px}
 .foot a:hover{color:var(--paper)}
-.foot h4{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--paper);margin:0 0 14px;font-weight:400}
+.foot h3,.foot h4{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--paper);margin:0 0 14px;font-weight:400}
 .foot-note{max-width:var(--maxw);margin:44px auto 0;padding-top:22px;border-top:1px solid rgba(244,243,239,.1);color:var(--steel);font-size:12.5px;display:flex;flex-wrap:wrap;gap:8px 22px}
 
 /* reduced motion: keep the story, drop the camera */
@@ -371,6 +371,11 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
 <noscript><style>.fade,.ln>span,[data-reveal],.svc-list li,.steps li,.content{opacity:1!important;transform:none!important}</style></noscript>
 <link rel="preload" href="/fonts/fonts.css" as="style">
 <link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="icon" href="/brand/icon.svg" type="image/svg+xml">
+<link rel="icon" href="/brand/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0f1216">
 </head>
 <body>
 <a class="skip" href="#main">Aller au contenu</a>
@@ -439,43 +444,43 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
     </div>
     <ol class="jsteps">
       <li>
-        <figure><picture><source srcset="/media/machinery.webp" type="image/webp">
-          <img src="/media/machinery.jpg" alt="Production floor at a supplying works" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/media/j-works.webp" type="image/webp">
+          <img src="/media/j-works.jpg" alt="Production floor at a supplying works" loading="lazy" decoding="async"></picture></figure>
         <div><span class="k">01</span><h3>At the works</h3>
           <p>The producer is found, verified and put under a specification before a price is quoted.
              Admissibility for your country is settled here, not at the border.</p></div>
       </li>
       <li>
-        <figure><picture><source srcset="/media/loading-truck.webp" type="image/webp">
-          <img src="/media/loading-truck.jpg" alt="Goods loaded into a container at the works" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/media/j-stuffing.webp" type="image/webp">
+          <img src="/media/j-stuffing.jpg" alt="Goods loaded into a container at the works" loading="lazy" decoding="async"></picture></figure>
         <div><span class="k">02</span><h3>Into the box</h3>
           <p>Stuffing, dunnage, weight distribution and the packing list are agreed in advance.
              A container loaded badly is a claim that arrives three weeks later.</p></div>
       </li>
       <li>
-        <figure><picture><source srcset="/media/truck-road.webp" type="image/webp">
-          <img src="/media/truck-road.jpg" alt="Container moving by road to the port" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/media/j-road.webp" type="image/webp">
+          <img src="/media/j-road.jpg" alt="Container moving by road to the port" loading="lazy" decoding="async"></picture></figure>
         <div><span class="k">03</span><h3>By road to the port</h3>
           <p>The inland leg is booked against the sailing, not after it. Detention and demurrage
              are quoted as lines, not discovered as invoices.</p></div>
       </li>
       <li>
-        <figure><picture><source srcset="/media/terminal.webp" type="image/webp">
-          <img src="/media/terminal.jpg" alt="Ship-to-shore cranes working a container vessel" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/media/j-quay.webp" type="image/webp">
+          <img src="/media/j-quay.jpg" alt="Ship-to-shore cranes working a container vessel" loading="lazy" decoding="async"></picture></figure>
         <div><span class="k">04</span><h3>At the quay</h3>
           <p>Cut-off, documents and the bill of lading line up on the same date.
              One missing certificate here holds the whole consignment.</p></div>
       </li>
       <li>
-        <figure><picture><source srcset="/media/vessel.webp" type="image/webp">
-          <img src="/media/vessel.jpg" alt="Container vessel under way at sea" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/media/j-sea.webp" type="image/webp">
+          <img src="/media/j-sea.jpg" alt="Container vessel under way at sea" loading="lazy" decoding="async"></picture></figure>
         <div><span class="k">05</span><h3>At sea</h3>
           <p>Transit is tracked and transhipment is named in advance. You are told a twelve week
              lead time when it is twelve, not six.</p></div>
       </li>
       <li>
-        <figure><picture><source srcset="/media/straddle.webp" type="image/webp">
-          <img src="/media/straddle.jpg" alt="Container handled in the yard at the destination port" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/media/j-arrival.webp" type="image/webp">
+          <img src="/media/j-arrival.jpg" alt="Container handled in the yard at the destination port" loading="lazy" decoding="async"></picture></figure>
         <div><span class="k">06</span><h3>At your port</h3>
           <p>Discharge, customs and release on the agreed Incoterm, with the document set
              arriving with the goods rather than after them.</p></div>
@@ -498,7 +503,7 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
     </div>
     <div class="rail">
       <a class="card" href="/building-materials">
-        <picture><source srcset="/media/quarry-cut.webp" type="image/webp"><img src="/media/quarry-cut.jpg" alt="Cut stone at a quarry" loading="lazy" decoding="async"></picture>
+        <picture><source srcset="/media/timber.webp" type="image/webp"><img src="/media/timber.jpg" alt="Sawn timber stacked at a builders' yard" loading="lazy" decoding="async"></picture>
         <span class="n">01</span>
         <span class="cap"><b>Matériaux de construction et de finition</b><span>Pierre · carrelage · ciment · câble</span></span>
       </a>
@@ -616,26 +621,26 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
 <footer>
   <div class="foot">
     <div>
-      <h4>ISP Group LLC</h4>
+      <h3>ISP Group LLC</h3>
       <p class="muted" style="margin:0;font-size:14px;line-height:1.7">16395 Biscayne Blvd<br>North Miami Beach, FL 33160<br>États-Unis</p>
       <p style="margin:14px 0 0"><a href="mailto:info@ispgroupgc.com">info@ispgroupgc.com</a>
       <a href="tel:+19298300038">+1 929 830 0038</a></p>
     </div>
-    <div><h4>Fournitures</h4>
+    <div><h3>Fournitures</h3>
       <a href="/building-materials">Matériaux de construction</a><a href="/industrial-equipment">Équipements industriels</a>
       <a href="/tools-hardware">Outillage et quincaillerie</a><a href="/metals-pipe">Métaux et tubes</a>
       <a href="/paper-packaging">Papier et emballage</a><a href="/food-agricultural">Alimentaire et boissons</a>
     </div>
-    <div><h4>Société</h4>
+    <div><h3>Société</h3>
       <a href="/about">À propos</a><a href="/services">Notre méthode</a><a href="/experience">Expérience</a><a href="/verify-supplier">Vérifier un fournisseur</a>
     </div>
-    <div><h4>Guides</h4>
+    <div><h3>Guides</h3>
       <a href="/incoterms">Incoterms</a><a href="/landed-price">Prix rendu</a><a href="/hs-code">Codes SH</a><a href="/guides">Tous les guides</a>
     </div>
   </div>
   <div class="foot-note">
     <span>&copy; ISP GROUP LLC</span><a href="/privacy" style="display:inline">Confidentialité</a><a href="/terms" style="display:inline">Conditions</a>
-    <span>Photographies sous licence CC0 ou domaine public ; voir les crédits.</span>
+    <span>Photography by third parties, used under CC0, public domain and CC BY licences; <a href="/credits">author, source and licence for each image</a>.</span>
   </div>
 </footer>
 

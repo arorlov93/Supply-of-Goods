@@ -53,24 +53,6 @@
   "author": "gabrielkaplan",
   "source": "https://www.flickr.com/photos/48884609@N07/10218708715"
  },
- "miami-bay.jpg": {
-  "title": "Aerial view Miami Beach, bony-finger-like",
-  "license": "cc0",
-  "author": "Carol M Highsmith",
-  "source": "https://www.rawpixel.com/image/3094336/free-photo-image-miami-sea-view-beach"
- },
- "robots.jpg": {
-  "title": "Tesla Motors Assembly Line",
-  "license": "by",
-  "author": "jurvetson",
-  "source": "https://www.flickr.com/photos/44124348109@N01/6858583426"
- },
- "robots-wide.jpg": {
-  "title": "Stamp and Repeat",
-  "license": "by",
-  "author": "jurvetson",
-  "source": "https://www.flickr.com/photos/44124348109@N01/6858564222"
- },
  "port-cma.jpg": {
   "title": "ANL WANGARATTA",
   "license": "by",
@@ -94,18 +76,6 @@
   "license": "CC0",
   "author": null,
   "source": "https://commons.wikimedia.org/wiki/File%3AContainer_cranes_in_Tokyo_Bay_2.jpg"
- },
- "quarry-stone.jpg": {
-  "title": "Marble quarry",
-  "license": "by",
-  "author": "runneralan2004",
-  "source": "https://www.flickr.com/photos/90029322@N00/17240251696"
- },
- "quarry-cut.jpg": {
-  "title": "Bringing Marble Quarries Carrara (1911)",
-  "license": "cc0",
-  "author": "themet",
-  "source": "https://www.rawpixel.com/image/2930130/free-illustration-image-marble-labor-blocks"
  },
  "pallets-wall.jpg": {
   "title": "Wooden pallets",
@@ -184,12 +154,6 @@
   "license": "cc0",
   "author": "U.S. Department of Agriculture",
   "source": "https://www.rawpixel.com/image/3259550/free-photo-image-butchery-butcher-warehouse"
- },
- "stamp.jpg": {
-  "title": "Officers U.S. Customs Border Protection",
-  "license": "cc0",
-  "author": null,
-  "source": "https://www.rawpixel.com/image/8723835/photo-image-public-domain-person-stamp"
  },
  "signing.jpg": {
   "title": "Signing Paperwork",
@@ -286,5 +250,11 @@
   "license": "CC0",
   "author": null,
   "source": "https://commons.wikimedia.org/wiki/File%3AAlesatrice_a_Montante_Mobile_marca_LAZZATI_modello_HB_160MM_Evo4.0.jpg"
+ },
+ "ops.jpg": {
+  "title": "Port of Shanghai, Yangshan Deep-water Harbour Zone, 02",
+  "license": "CC0",
+  "author": null,
+  "source": "https://commons.wikimedia.org/wiki/File%3APort_of_Shanghai%2C_Yangshan_Deep-water_Harbour_Zone%2C_02.jpg"
  }
 }
