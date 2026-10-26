@@ -14,7 +14,16 @@ const LABEL = {
   dest: "Destination", spec: "Specification",
 };
 
-export async function onRequestPost({ request, env }) {
+export async function onRequestPost(ctx) {
+  try {
+    return await handle(ctx);
+  } catch (e) {
+    console.log("quote handler threw", String(e && e.stack || e).slice(0, 400));
+    return json({ ok: false, code: "server_error" }, 500);
+  }
+}
+
+async function handle({ request, env }) {
   let d;
   try {
     d = await request.json();
@@ -78,7 +87,8 @@ export async function onRequestPost({ request, env }) {
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
-          Origin: "https://ispgroupgc.com",
+          // Origin ставить нельзя: среда Worker запрещает этот заголовок и
+          // бросает исключение. Ретранслятору достаточно Referer.
           Referer: "https://ispgroupgc.com/",
         },
         body: JSON.stringify({

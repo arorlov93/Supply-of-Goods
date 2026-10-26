@@ -35,15 +35,22 @@ SLOTS = {
 
 LAST = [0.0]
 
-def get(url, binary=False, pause=1.2):
+def get(url, binary=False, pause=4.5):
     gap = pause - (time.time() - LAST[0])
     if gap > 0:
         time.sleep(gap)
     LAST[0] = time.time()
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=90) as r:
-        data = r.read()
-    return data if binary else data.decode("utf-8", "replace")
+    for attempt in range(5):
+        req = urllib.request.Request(url, headers={"User-Agent": UA})
+        try:
+            with urllib.request.urlopen(req, timeout=90) as r:
+                data = r.read()
+            return data if binary else data.decode("utf-8", "replace")
+        except urllib.error.HTTPError as e:
+            if e.code != 429 or attempt == 4:
+                raise
+            time.sleep(25 * (attempt + 1))
+    raise RuntimeError("limit")
 
 
 def files_in(cat):
@@ -56,7 +63,7 @@ def files_in(cat):
         n = urllib.parse.unquote(m.group(1))
         if n not in seen:
             seen.add(n); names.append(n)
-    return names[:18]
+    return names[:8]
 
 
 def info(name):
@@ -89,7 +96,7 @@ def info(name):
 
 def grab(slot, name, meta):
     from PIL import Image
-    raw = get(f"{BASE}/wiki/Special:FilePath/{urllib.parse.quote(name[5:])}", binary=True, pause=2.0)
+    raw = get(f"{BASE}/wiki/Special:FilePath/{urllib.parse.quote(name[5:])}", binary=True, pause=6.0)
     im = Image.open(io.BytesIO(raw)).convert("RGB")
     if im.width > 2400:
         im = im.resize((2400, round(im.height * 2400 / im.width)), Image.LANCZOS)

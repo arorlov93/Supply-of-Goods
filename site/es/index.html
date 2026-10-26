@@ -355,6 +355,7 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
     <div class="langsw" aria-label="Language"><a href="/" hreflang="en" title="English">EN</a><a href="/fr/" hreflang="fr" title="Français">FR</a><span aria-current="true">ES</span><a href="/de/" hreflang="de" title="Deutsch">DE</a></div>
     <div class="langsw" aria-label="Language"><a href="/" hreflang="en" title="English">EN</a><a href="/fr/" hreflang="fr" title="Français">FR</a><span aria-current="true">ES</span><a href="/de/" hreflang="de" title="Deutsch">DE</a></div>
     <div class="langsw" aria-label="Language"><a href="/" hreflang="en" title="English">EN</a><a href="/fr/" hreflang="fr" title="Français">FR</a><span aria-current="true">ES</span><a href="/de/" hreflang="de" title="Deutsch">DE</a></div>
+    <div class="langsw" aria-label="Language"><a href="/" hreflang="en" title="English">EN</a><a href="/fr/" hreflang="fr" title="Français">FR</a><span aria-current="true">ES</span><a href="/de/" hreflang="de" title="Deutsch">DE</a></div>
     <a class="cta" href="#request">Solicitar precio</a>
   </nav>
 </header>
@@ -711,10 +712,28 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
       ta.addEventListener('focus', function(){ ta.select(); });
     }
 
+
+    function relay(){
+      /* Запасной путь: отправка прямо из браузера. Он сам передаёт Referer,
+         которого не может выставить серверная функция. */
+      var body = {_subject:'Quote request: '+(data.co||data.name)+(data.country?' / '+data.country:''),
+        _replyto:data.mail, _template:'table', _captcha:'false',
+        Name:data.name, 'Work e-mail':data.mail, Company:data.co, Country:data.country,
+        Category:data.cat, Quantity:data.qty, Destination:data.dest,
+        'Terms to quote':data.terms, Specification:data.spec, Page:data.page};
+      return fetch('https://formsubmit.co/ajax/info@ispgroupgc.com',{method:'POST',
+        headers:{'Content-Type':'application/json',Accept:'application/json'},
+        body:JSON.stringify(body)})
+        .then(function(r){return r.json();})
+        .then(function(j){ if(String(j && j.success)!=='true') throw 0; });
+    }
+
     fetch('/api/quote', {
       method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data)
     }).then(function(r){ return r.json().catch(function(){ return {ok:false}; }); })
-      .then(function(j){ if(j && j.ok) done(); else fallback(); })
+      .then(function(j){ if(j && j.ok) return; throw 0; })
+      .catch(function(){ return relay(); })
+      .then(done)
       .catch(fallback);
   });
 })();
