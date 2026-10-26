@@ -204,7 +204,11 @@ nav.top-nav a:hover{opacity:1}
   transform:translate3d(calc(var(--p,0) * var(--shift,0px) * -1),0,0);will-change:transform;
 }
 .card{
-  position:relative;flex:0 0 auto;height:min(60vh,540px);aspect-ratio:3/4;border-radius:3px;
+  /* заголовок раздела стоит над полосой отдельным слоем, и при трёх строках
+     подзаголовка карточки наезжали на текст. Высота ограничена ещё и тем,
+     что осталось от экрана под заголовком. */
+  position:relative;flex:0 0 auto;height:min(60vh,540px,calc(100svh - 430px));
+  aspect-ratio:3/4;border-radius:3px;
   overflow:hidden;background:var(--graphite);text-decoration:none;color:var(--paper);
 }
 .card img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.16,1,.3,1);}
@@ -501,7 +505,7 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
     </div>
     <div class="rail">
       <a class="card" href="building-materials">
-        <picture><source srcset="media/quarry-cut.webp" type="image/webp"><img src="media/quarry-cut.jpg" alt="Cut stone at a quarry" loading="lazy" decoding="async"></picture>
+        <picture><source srcset="media/timber.webp" type="image/webp"><img src="media/timber.jpg" alt="Sawn timber stacked at a builders' yard" loading="lazy" decoding="async"></picture>
         <span class="n">01</span>
         <span class="cap"><b>Building and finishing materials</b><span>Stone &middot; tile &middot; cement &middot; cable</span></span>
       </a>
@@ -516,7 +520,7 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
         <span class="cap"><b>Tools, hardware and fasteners</b><span>Power tools &middot; abrasives &middot; fixings</span></span>
       </a>
       <a class="card" href="metals-pipe">
-        <picture><source srcset="media/steel-tubes.webp" type="image/webp"><img src="media/steel-tubes.jpg" alt="Steel sections and tube stacked at a mill" loading="lazy" decoding="async"></picture>
+        <picture><source srcset="media/steel-tubes.webp" type="image/webp"><img src="media/steel-tubes.jpg" alt="Steel pipe stacked in rows at a yard" loading="lazy" decoding="async"></picture>
         <span class="n">04</span>
         <span class="cap"><b>Metals and pipe</b><span>Sections &middot; sheet &middot; line pipe</span></span>
       </a>
