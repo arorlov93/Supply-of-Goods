@@ -60,12 +60,12 @@ h1,h2,h3{margin:0;font-family:var(--fs);font-weight:400;line-height:1.1;
 p{margin:0}
 a{color:inherit}
 .wrap{max-width:var(--maxw);margin:0 auto;padding-inline:22px}
-.eyebrow{font-family:var(--fm);font-size:.62rem;letter-spacing:.17em;text-transform:uppercase;
+.eyebrow{font-family:var(--sans);font-size:0.8rem;
   color:var(--brand);display:block;margin-bottom:16px}
 
 /* buttons */
 .btn{position:relative;overflow:hidden;display:inline-block;border:0;cursor:pointer;
-  font-family:var(--fm);font-size:.64rem;letter-spacing:.13em;text-transform:uppercase;
+  font-family:var(--sans);font-size:0.8rem;
   padding:13px 22px;text-decoration:none;white-space:nowrap;color:var(--paper);border-radius:1px;
   background:linear-gradient(142deg,var(--brand-2) 0%,var(--brand-deep) 100%);
   box-shadow:0 9px 22px -11px rgba(11,74,64,.9), inset 0 1px 0 rgba(255,255,255,.2);
@@ -97,7 +97,7 @@ nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;
 .navlinks a:hover{color:var(--ink)}
 .navlinks a:hover::after{transform:scaleX(1)}
 @media(max-width:940px){.navlinks{display:none}
-  .navin{gap:12px}.navin .btn{margin-left:auto;padding:10px 15px;font-size:.62rem}
+  .navin{gap:12px}.navin .btn{margin-left:auto;padding:10px 15px;font-size:0.8rem}
   .logo{font-size:1.08rem}}
 @media(max-width:560px){.btn-long{display:none}}
 
@@ -118,7 +118,7 @@ section h2{font-size:clamp(1.85rem,3.7vw,2.8rem);max-width:20ch;line-height:1.1}
 figure:hover .shot img,.band:hover .shot img{transform:scale(1.035)}
 figure{margin:0}
 figure .shot{aspect-ratio:4/3;border:1px solid var(--rule)}
-figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;
+figcaption{font-family:var(--sans);font-size:0.8rem;
   color:var(--ink-3);padding-top:11px}
 .mediafig .shot{aspect-ratio:16/9;border:1px solid var(--rule)}
 .figrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:38px}
@@ -164,7 +164,7 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 .skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:var(--paper);
-  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  font-family:var(--sans);font-size:0.8rem;
   padding:13px 20px;text-decoration:none}
 .skip:focus{left:12px;top:12px}
 .navlinks a[aria-current]{color:var(--ink)}
@@ -188,8 +188,8 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .chero h1 em{font-style:normal;color:var(--gold)}
 .chero .sub{max-width:44ch;font-size:clamp(1rem,1.25vw,1.26rem);color:var(--on-shot)}
 .chero .crumbs,.chero .chips,.chero .ctarow{position:relative;z-index:3}
-.chero .scroll-cue{position:absolute;left:0;bottom:16px;z-index:4;font-family:var(--fm);
-  font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-3);
+.chero .scroll-cue{position:absolute;left:0;bottom:16px;z-index:4;font-family:var(--sans);
+  font-size:12px;color:var(--ink-3);
   display:flex;align-items:center;gap:10px;opacity:calc(1 - var(--p,0)*3)}
 .chero .scroll-cue::before{content:"";width:34px;height:1px;background:currentColor}
 
@@ -250,7 +250,7 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .hero h1 em{font-style:italic;color:var(--brand)}
 .hero .sub{margin-top:24px;max-width:44ch;font-size:clamp(1.04rem,2vw,1.2rem);color:var(--ink-2)}
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
-.chip{font-family:var(--fm);font-size:.62rem;letter-spacing:.04em;border:1px solid var(--rule);
+.chip{font-family:var(--sans);font-size:0.8rem;border:1px solid var(--rule);
   background:var(--surface);padding:9px 13px;color:var(--ink-2);box-shadow:var(--shadow-s)}
 .chip b{color:var(--brand);font-weight:500}
 .ask{margin-top:36px;max-width:37rem;background:var(--surface);border:1px solid var(--rule);
@@ -280,13 +280,11 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .cat:hover{transform:translateY(-4px);box-shadow:var(--shadow-l)}
 .cat h3{font-size:1.42rem;margin-bottom:11px}
 .cat p{color:var(--ink-2);font-size:.94rem}
-.cat ul{margin:15px 0 0;padding:0;list-style:none;font-family:var(--fm);font-size:.58rem;
-  letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3);display:flex;flex-wrap:wrap;gap:6px}
+.cat ul{margin:15px 0 0;padding:0;list-style:none;font-family:var(--sans);font-size:0.8rem;color:var(--ink-3);display:flex;flex-wrap:wrap;gap:6px}
 .cat li{border:1px solid var(--rule);padding:4px 9px;background:var(--surface-2)}
 /* table */
 .lanes{width:100%;border-collapse:collapse;margin-top:36px;font-size:.96rem}
-.lanes th{text-align:left;font-family:var(--fm);font-weight:500;font-size:.58rem;letter-spacing:.13em;
-  text-transform:uppercase;color:var(--ink-3);border-bottom:1px solid var(--rule);
+.lanes th{text-align:left;font-family:var(--sans);font-weight:500;font-size:0.8rem;color:var(--ink-3);border-bottom:1px solid var(--rule);
   padding:0 16px 11px 0;white-space:nowrap}
 .lanes td{border-bottom:1px solid var(--rule);padding:16px 16px 16px 0;vertical-align:top;color:var(--ink-2)}
 .lanes tr:hover td{background:var(--surface-2)}
@@ -298,7 +296,7 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .step{display:grid;grid-template-columns:5rem 1fr;gap:22px;padding:26px 0;
   border-top:1px solid var(--rule);align-items:start}
 .step:last-child{border-bottom:1px solid var(--rule)}
-.step .k{font-family:var(--fm);font-size:.6rem;color:var(--gold-ink);letter-spacing:.12em;padding-top:7px}
+.step .k{font-family:var(--sans);font-size:0.8rem;color:var(--gold-ink);padding-top:7px}
 .step h3{font-size:1.4rem;margin-bottom:8px}
 .step p{color:var(--ink-2);font-size:.96rem;max-width:62ch}
 @media(max-width:560px){.step{grid-template-columns:1fr;gap:6px}}
@@ -320,7 +318,7 @@ details p{color:var(--ink-2);font-size:.97rem;padding-bottom:24px;max-width:70ch
 .ctarow{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px;align-items:center}
 footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:26px}
-.fgrid dt{font-family:var(--fm);font-size:.57rem;letter-spacing:.15em;text-transform:uppercase;
+.fgrid dt{font-family:var(--sans);font-size:0.8rem;
   color:var(--ink-3);margin-bottom:8px}
 .fgrid dd{margin:0;color:var(--ink)}
 .todo{color:var(--gold-ink);font-family:var(--fm);font-size:.78rem}
@@ -332,7 +330,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .teaser .shot{aspect-ratio:3/2;border:1px solid var(--rule)}
 .yrs{font-family:var(--fs);font-size:clamp(3.4rem,9vw,6rem);line-height:.9;color:var(--brand);
   display:block;margin-bottom:8px}
-.yrs small{font-family:var(--fm);font-size:.6rem;letter-spacing:.17em;text-transform:uppercase;
+.yrs small{font-family:var(--sans);font-size:0.8rem;
   color:var(--ink-3);display:block;margin-top:14px}
 
 /* заголовок и вводный абзац в две колонки: правая половина полосы больше не пустует */
@@ -343,7 +341,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 @media(max-width:860px){.lede{grid-template-columns:1fr;align-items:start}
   .lede .intro{margin-top:18px}}
 /* третья колонка шага: что покупатель получает на выходе */
-.step .out{font-family:var(--fm);font-size:.57rem;letter-spacing:.09em;text-transform:uppercase;
+.step .out{font-family:var(--sans);font-size:0.8rem;
   line-height:1.75;color:var(--ink-3);border-left:2px solid var(--gold-soft);
   padding:2px 0 2px 14px;align-self:start;margin-top:9px}
 @media(min-width:861px){.step{grid-template-columns:5rem minmax(0,1.55fr) minmax(0,1fr);gap:26px}}
@@ -389,15 +387,13 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   margin:clamp(-86px,-7vw,-48px) clamp(-16px,-1.4vw,0px) 0 clamp(16px,3.4vw,46px);
   background:rgba(20,25,34,.88);border:1px solid var(--rule);backdrop-filter:blur(9px);
   -webkit-backdrop-filter:blur(9px);box-shadow:var(--shadow-l)}
-.heroside .caption{display:block;font-family:var(--fm);font-size:.57rem;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--ink-3);padding-top:11px}
+.heroside .caption{display:block;font-family:var(--sans);font-size:0.8rem;color:var(--ink-3);padding-top:11px}
 @media(max-width:900px){
   .heroside{order:2;margin-top:34px}
   .heroside .shot{aspect-ratio:16/10}
   .heroside .factcard{margin:-44px 0 0 clamp(14px,5vw,40px)}}
 .facts{width:100%;border-collapse:collapse;font-size:.92rem;margin-top:4px}
-.facts th{text-align:left;font-family:var(--fm);font-weight:500;font-size:.56rem;
-  letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);
+.facts th{text-align:left;font-family:var(--sans);font-weight:500;font-size:0.8rem;color:var(--ink-3);
   padding:14px 14px 14px 0;vertical-align:top;width:9.5rem}
 .facts td{padding:14px 0;color:var(--ink-2);vertical-align:top}
 .facts tr+tr th,.facts tr+tr td{border-top:1px solid var(--rule)}
@@ -405,7 +401,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .pblock{display:grid;grid-template-columns:4.4rem minmax(0,.92fr) minmax(0,1.28fr);
   gap:0 30px;padding:34px 0;border-top:1px solid var(--rule);align-items:start}
 .pblock:last-child{border-bottom:1px solid var(--rule)}
-.pblock .k{font-family:var(--fm);font-size:.6rem;color:var(--gold-ink);letter-spacing:.12em;padding-top:10px}
+.pblock .k{font-family:var(--sans);font-size:0.8rem;color:var(--gold-ink);padding-top:10px}
 .pblock h2{font-size:clamp(1.5rem,2.3vw,1.92rem);max-width:20ch}
 .pblock .ptext p{color:var(--ink-2);font-size:1rem}
 .pblock .ptext p+p{margin-top:15px}
@@ -434,8 +430,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num{border-top:1px solid var(--rule);padding-top:17px}
 .num b{display:block;font-family:var(--fs);font-weight:400;letter-spacing:-.02em;
   font-size:clamp(2.5rem,5vw,4rem);line-height:.9;color:var(--brand)}
-.num span{display:block;margin-top:11px;font-family:var(--fm);font-size:.57rem;
-  letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);line-height:1.85}
+.num span{display:block;margin-top:11px;font-family:var(--sans);font-size:0.8rem;color:var(--ink-3);line-height:1.85}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
@@ -462,8 +457,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   color:var(--ink);font-family:var(--fs);font-size:clamp(1.3rem,2.6vw,1.9rem);
   padding:14px 16px;transition:border-color .18s,box-shadow .18s}
 .searchpanel input:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-wash)}
-.searchhint{margin-top:10px;font-family:var(--fm);font-size:.55rem;letter-spacing:.12em;
-  text-transform:uppercase;color:var(--ink-3)}
+.searchhint{margin-top:10px;font-family:var(--sans);font-size:0.8rem;color:var(--ink-3)}
 .searchres{list-style:none;margin:16px 0 0;padding:0;max-height:52vh;overflow:auto}
 .searchres li{border-top:1px solid var(--rule)}
 .searchres a{display:block;padding:14px 0;text-decoration:none;color:var(--ink)}
@@ -476,7 +470,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 
 <style>
 /* страницы коридоров */
-.crumbs{font-family:var(--fm);font-size:.57rem;letter-spacing:.13em;text-transform:uppercase;
+.crumbs{font-family:var(--sans);font-size:0.8rem;
   color:var(--ink-3);margin-bottom:18px;
   /* сбрасываем глобальные правила для nav: это крошки, а не шапка */
   position:static;z-index:auto;background:none;backdrop-filter:none;border:0;top:auto}
@@ -494,8 +488,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .factcard{background:var(--surface);border:1px solid var(--rule);padding:26px 24px;
   box-shadow:var(--shadow-m)}
 .facts{width:100%;border-collapse:collapse;font-size:.92rem;margin-top:4px}
-.facts th{text-align:left;font-family:var(--fm);font-weight:500;font-size:.56rem;
-  letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);
+.facts th{text-align:left;font-family:var(--sans);font-weight:500;font-size:0.8rem;color:var(--ink-3);
   padding:14px 14px 14px 0;vertical-align:top;width:9.5rem}
 .facts td{padding:14px 0;color:var(--ink-2);vertical-align:top}
 .facts tr+tr th,.facts tr+tr td{border-top:1px solid var(--rule)}
@@ -509,7 +502,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .pblock{display:grid;grid-template-columns:4.4rem minmax(0,.92fr) minmax(0,1.28fr);
   gap:0 30px;padding:34px 0;border-top:1px solid var(--rule);align-items:start}
 .pblock:last-child{border-bottom:1px solid var(--rule)}
-.pblock .k{font-family:var(--fm);font-size:.6rem;color:var(--gold-ink);letter-spacing:.12em;padding-top:10px}
+.pblock .k{font-family:var(--sans);font-size:0.8rem;color:var(--gold-ink);padding-top:10px}
 .pblock h2{font-size:clamp(1.5rem,2.3vw,1.92rem);max-width:20ch}
 .pblock .ptext p{color:var(--ink-2);font-size:1rem}
 .pblock .ptext p+p{margin-top:15px}
@@ -547,8 +540,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   box-shadow:var(--shadow-s)}
 /* таблица в тексте */
 .ptable{width:100%;border-collapse:collapse;margin-top:20px;font-size:.95rem}
-.ptable th{text-align:left;font-family:var(--fm);font-weight:500;font-size:.56rem;
-  letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);
+.ptable th{text-align:left;font-family:var(--sans);font-weight:500;font-size:0.8rem;color:var(--ink-3);
   border-bottom:1px solid var(--rule);padding:0 14px 10px 0}
 .ptable td{border-bottom:1px solid var(--rule);padding:13px 14px 13px 0;
   vertical-align:top;color:var(--ink-2)}
@@ -558,8 +550,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 /* контакты */
 .cform{position:relative;z-index:3;background:var(--surface);border:1px solid var(--rule);padding:26px 24px;
   box-shadow:var(--shadow-m)}
-.cform label{display:block;font-family:var(--fm);font-size:.56rem;letter-spacing:.13em;
-  text-transform:uppercase;color:var(--ink-3);margin:16px 0 7px}
+.cform label{display:block;font-family:var(--sans);font-size:0.8rem;color:var(--ink-3);margin:16px 0 7px}
 .cform label:first-of-type{margin-top:10px}
 .cform input,.cform textarea,.cform select{width:100%;background:var(--paper);
   border:1px solid var(--rule);color:var(--ink);font:inherit;font-size:.95rem;padding:12px;
@@ -576,7 +567,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .twocol h3{font-size:1.3rem;margin-bottom:10px}
 .twocol p{color:var(--ink-2);font-size:.97rem}
 /* языковой переключатель */
-.langsw{font-family:var(--fm);font-size:.57rem;letter-spacing:.13em;text-transform:uppercase}
+.langsw{font-family:var(--sans);font-size:0.8rem}
 .langsw a{color:var(--ink-3);text-decoration:none;padding:0 5px}
 .langsw a[aria-current]{color:var(--brand)}
 
@@ -586,15 +577,14 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .num{border-top:1px solid var(--rule);padding-top:17px}
 .num b{display:block;font-family:var(--fs);font-weight:400;letter-spacing:-.02em;
   font-size:clamp(2.5rem,5vw,4rem);line-height:.9;color:var(--brand)}
-.num span{display:block;margin-top:11px;font-family:var(--fm);font-size:.57rem;
-  letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);line-height:1.85}
+.num span{display:block;margin-top:11px;font-family:var(--sans);font-size:0.8rem;color:var(--ink-3);line-height:1.85}
 .num a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;
   transition:border-color .2s,color .2s}
 .num a:hover{color:var(--brand);border-color:var(--gold)}
 
 /* ссылка для клавиатуры: видна только при фокусе */
 .skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--brand-deep);color:var(--paper);
-  font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  font-family:var(--sans);font-size:0.8rem;
   padding:13px 20px;text-decoration:none}
 .skip:focus{left:12px;top:12px}
 .navlinks a[aria-current]{color:var(--ink)}
@@ -617,7 +607,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .pblock h2{scroll-margin-top:96px}
 
 /* дата обновления материала */
-.upd{font-family:var(--fm);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;
+.upd{font-family:var(--sans);font-size:0.8rem;
   color:var(--ink-3);margin:-8px 0 16px}
 
 /* поиск */
@@ -634,8 +624,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   color:var(--ink);font-family:var(--fs);font-size:clamp(1.3rem,2.6vw,1.9rem);
   padding:14px 16px;transition:border-color .18s,box-shadow .18s}
 .searchpanel input:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-wash)}
-.searchhint{margin-top:10px;font-family:var(--fm);font-size:.55rem;letter-spacing:.12em;
-  text-transform:uppercase;color:var(--ink-3)}
+.searchhint{margin-top:10px;font-family:var(--sans);font-size:0.8rem;color:var(--ink-3)}
 .searchres{list-style:none;margin:16px 0 0;padding:0;max-height:52vh;overflow:auto}
 .searchres li{border-top:1px solid var(--rule)}
 .searchres a{display:block;padding:14px 0;text-decoration:none;color:var(--ink)}
@@ -691,27 +680,26 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 
       <h1>Paper, packaging <em>and consumables</em></h1>
       <p class="sub">Newsprint, kraft and containerboard in reels, corrugated packaging, cleaning and facility consumables, workwear and protective equipment. Bought on grammage and strength, handled on reel weight.</p>
-      <div class="chips"><span class="chip">Reels and sheets</span><span class="chip">Grammage &middot; ECT &middot; burst</span><span class="chip">Schedule supply</span><span class="chip">Durban &middot; EU &middot; Americas</span></div>
+      <div class="chips"><span class="chip">Reels and sheets</span><span class="chip">Grammage</span><span class="chip">ECT</span><span class="chip">burst</span><span class="chip">Schedule supply</span><span class="chip">Durban</span><span class="chip">EU</span><span class="chip">Americas</span></div>
       <div class="ctarow" style="margin-top:28px"><a class="btn" href="contact#enquiry">Request a quote</a></div>
     </div>
     <div class="heroside"><div class="shot"><span class="pz"><img src="media/pallets-wall.webp" width="1040" height="1300" alt="Palletised cartons on racking in a distribution warehouse" fetchpriority="high" decoding="async"></span></div></div>
   </div>
   <span class="scroll-cue" aria-hidden="true">Scroll</span>
 </header>
-<section class="glance"><div class="wrap"><aside class="factcard"><span class="eyebrow">Category at a glance</span><table class="facts"><tbody><tr><th scope="row">Typical cargo</th><td>Newsprint, kraft and containerboard in reels, corrugated packaging, cleaning and facility consumables, workwear and PPE</td></tr><tr><th scope="row">Specified by</th><td>Grammage, burst strength or edge crush, Cobb, flute and board combination</td></tr><tr><th scope="row">Reels</th><td>Width, core diameter, reel diameter and weight matched to the receiving equipment</td></tr><tr><th scope="row">Handling</th><td>Clamp or pallet, confirmed before quoting, with dunnage in the loading plan</td></tr><tr><th scope="row">Moisture</th><td>Liner or desiccant, product off the walls and floor, loading photographed</td></tr><tr><th scope="row">Corridors</th><td>Durban into SADC, European Union, Americas</td></tr></tbody></table></aside></div></section>
+<section class="glance"><div class="wrap"><aside class="factcard"><table class="facts"><tbody><tr><th scope="row">Typical cargo</th><td>Newsprint, kraft and containerboard in reels, corrugated packaging, cleaning and facility consumables, workwear and PPE</td></tr><tr><th scope="row">Specified by</th><td>Grammage, burst strength or edge crush, Cobb, flute and board combination</td></tr><tr><th scope="row">Reels</th><td>Width, core diameter, reel diameter and weight matched to the receiving equipment</td></tr><tr><th scope="row">Handling</th><td>Clamp or pallet, confirmed before quoting, with dunnage in the loading plan</td></tr><tr><th scope="row">Moisture</th><td>Liner or desiccant, product off the walls and floor, loading photographed</td></tr><tr><th scope="row">Corridors</th><td>Durban into SADC, European Union, Americas</td></tr></tbody></table></aside></div></section>
 
 <main id="main" tabindex="-1">
 <section data-reveal><div class="wrap"><figure class="mediafig" style="margin-bottom:44px"><div class="shot"><span class="pz"><img src="media/crane.webp" width="834" height="625" loading="lazy" alt="Quayside crane against an open sky"></span></div><figcaption>Paper is bought by the tonne and lost on the edge of a reel</figcaption></figure>
 <div class="lede"><h2>Reels are a handling specification before they are a product</h2><p class="intro">A reel with a crushed edge is downgraded or scrapped, and most of that damage happens in handling rather than in transit. Which means the right questions are about the receiving end, not about the mill.</p></div>
-<nav class="toc" aria-label="On this page"><span class="eyebrow">On this page</span><ol><li><a href="#s1"><span>01</span>What the grade actually means</a></li><li><a href="#s2"><span>02</span>Reel diameter, core and weight</a></li><li><a href="#s3"><span>03</span>Moisture is the whole risk in transit</a></li><li><a href="#s4"><span>04</span>Consumables are a schedule, not a purchase</a></li></ol></nav>
-<div class="prose"><div class="pblock"><span class="k">01</span><h2 id="s1">What the grade actually means</h2><div class="ptext"><p>Paper is specified by grammage in grams per square metre and by the strength property that matters for its use. For containerboard that is usually burst strength or edge crush resistance, measured to ISO methods, and for anything that will be printed or glued it is also the surface sizing, measured by the Cobb test.</p><p>A quotation that gives only the grammage is giving one of three numbers. Two reels at the same grammage with different edge crush values make boxes with different stacking strength, and the box is where the customer notices.</p><ul class="plist"><li><b>Newsprint</b> by grammage and brightness.</li><li><b>Kraft and containerboard</b> by grammage, burst or edge crush, and Cobb.</li><li><b>Corrugated packaging</b> by flute, board combination and box compression, with a sample board specified rather than described.</li><li><b>Cleaning and facility consumables</b> on a schedule, because they fail on stockout rather than on price.</li><li><b>Workwear and protective equipment</b> on a standard mark, which is worthless without a traceable test report.</li></ul></div></div><div class="pblock"><span class="k">02</span><h2 id="s2">Reel diameter, core and weight</h2><div class="ptext"><p>Three dimensions decide whether a reel can be used at all: the width, which has to match the machine; the core diameter, which has to match the shaft; and the reel diameter and weight, which have to match the lifting equipment at the receiving end.</p><p>The last one is the one that gets missed. A mill will happily supply a reel at its standard diameter, and a buyer whose site has no clamp truck will then be unable to move it off the vehicle. Clamp handling also needs a reel that can take clamp pressure without ovalising, and a facility without clamps needs reels on pallets, which changes both the price and the loading plan.</p><p class="pnote">We ask three questions before quoting reels: what lifts it at your end, what is the maximum weight that equipment handles, and is there a dock or is it a ground level discharge.</p></div></div><div class="pblock"><span class="k">03</span><h2 id="s3">Moisture is the whole risk in transit</h2><div class="ptext"><p>Paper is hygroscopic and a container crossing the tropics condenses on its roof at night. Reels loaded against a bare steel wall arrive with a wet edge. The pack has to include a liner or desiccant and the loading plan has to keep product off the walls and the floor, which means dunnage and a loading photograph showing it.</p><p>Corrugated packaging arrives flat and is ruined by the same mechanism, with the added problem that nobody discovers it until the boxes are being erected weeks later. The inspection window in the contract has to be long enough to be real and short enough to be provable.</p></div></div><div class="pblock"><span class="k">04</span><h2 id="s4">Consumables are a schedule, not a purchase</h2><div class="ptext"><p>Cleaning and facility supply has a different failure mode from everything else on this page: the cost of being out of stock is far higher than any price difference. The useful structure is a standing programme with an agreed call-off and a safety stock held either at origin or at destination, priced accordingly.</p><p>On the <a href="southern-africa">Durban corridor</a> we usually quote this category DAP at the buyer's own gate, because on a long inland leg the port price tells the buyer very little.</p></div></div></div>
+<nav class="toc" aria-label="On this page"><ol><li><a href="#s1"><span>01</span>What the grade actually means</a></li><li><a href="#s2"><span>02</span>Reel diameter, core and weight</a></li><li><a href="#s3"><span>03</span>Moisture is the whole risk in transit</a></li><li><a href="#s4"><span>04</span>Consumables are a schedule, not a purchase</a></li></ol></nav>
+<div class="prose"><div class="pblock"><h2 id="s1"><span class="k">01</span>What the grade actually means</h2><div class="ptext"><p>Paper is specified by grammage in grams per square metre and by the strength property that matters for its use. For containerboard that is usually burst strength or edge crush resistance, measured to ISO methods, and for anything that will be printed or glued it is also the surface sizing, measured by the Cobb test.</p><p>A quotation that gives only the grammage is giving one of three numbers. Two reels at the same grammage with different edge crush values make boxes with different stacking strength, and the box is where the customer notices.</p><ul class="plist"><li><b>Newsprint</b> by grammage and brightness.</li><li><b>Kraft and containerboard</b> by grammage, burst or edge crush, and Cobb.</li><li><b>Corrugated packaging</b> by flute, board combination and box compression, with a sample board specified rather than described.</li><li><b>Cleaning and facility consumables</b> on a schedule, because they fail on stockout rather than on price.</li><li><b>Workwear and protective equipment</b> on a standard mark, which is worthless without a traceable test report.</li></ul></div></div><div class="pblock"><h2 id="s2"><span class="k">02</span>Reel diameter, core and weight</h2><div class="ptext"><p>Three dimensions decide whether a reel can be used at all: the width, which has to match the machine; the core diameter, which has to match the shaft; and the reel diameter and weight, which have to match the lifting equipment at the receiving end.</p><p>The last one is the one that gets missed. A mill will happily supply a reel at its standard diameter, and a buyer whose site has no clamp truck will then be unable to move it off the vehicle. Clamp handling also needs a reel that can take clamp pressure without ovalising, and a facility without clamps needs reels on pallets, which changes both the price and the loading plan.</p><p class="pnote">We ask three questions before quoting reels: what lifts it at your end, what is the maximum weight that equipment handles, and is there a dock or is it a ground level discharge.</p></div></div><div class="pblock"><h2 id="s3"><span class="k">03</span>Moisture is the whole risk in transit</h2><div class="ptext"><p>Paper is hygroscopic and a container crossing the tropics condenses on its roof at night. Reels loaded against a bare steel wall arrive with a wet edge. The pack has to include a liner or desiccant and the loading plan has to keep product off the walls and the floor, which means dunnage and a loading photograph showing it.</p><p>Corrugated packaging arrives flat and is ruined by the same mechanism, with the added problem that nobody discovers it until the boxes are being erected weeks later. The inspection window in the contract has to be long enough to be real and short enough to be provable.</p></div></div><div class="pblock"><h2 id="s4"><span class="k">04</span>Consumables are a schedule, not a purchase</h2><div class="ptext"><p>Cleaning and facility supply has a different failure mode from everything else on this page: the cost of being out of stock is far higher than any price difference. The useful structure is a standing programme with an agreed call-off and a safety stock held either at origin or at destination, priced accordingly.</p><p>On the <a href="southern-africa">Durban corridor</a> we usually quote this category DAP at the buyer's own gate, because on a long inland leg the port price tells the buyer very little.</p></div></div></div>
 
 </div></section>
-<section data-reveal id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>What buyers ask about this category</h2><p class="intro">The three that come up before a first order.</p></div><div style="margin-top:34px"><details><summary>What do you need to know before quoting reels?</summary><p>The machine width, the core diameter, and what lifts the reel at your end with its maximum weight. The third question is the one most often skipped, and it is the one that strands a container on a vehicle.</p></details><details><summary>How is moisture damage prevented?</summary><p>A liner or desiccant in the container, product kept off the walls and the floor with dunnage, and a loading photograph that shows it. The mechanism is condensation on the container roof at night, not rain.</p></details><details><summary>Can you hold stock for a consumables programme?</summary><p>Yes, either at origin or at destination, with an agreed call-off. On consumables the cost of a stockout is usually larger than any price difference, so the safety stock is worth paying for and we price it openly.</p></details></div></div></section>
-<section data-reveal><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Other categories</h2><p class="intro">The same method, applied to different goods.</p></div><div class="lanelinks"><a class="lanelink" href="food-agricultural"><b>Food and agricultural goods</b><span>Frozen and chilled protein, bulk staples, ingredients and branded beverages.</span></a><a class="lanelink" href="building-materials"><b>Building and finishing materials</b><span>Stone, tile, cement products, insulation, dry mixes, sanitary ware, cable.</span></a><a class="lanelink" href="industrial-equipment"><b>Industrial equipment and machinery</b><span>Production lines, compressors, pumps, generators, material handling.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
+<section data-reveal id="faq"><div class="wrap"><div class="lede"><h2>What buyers ask about this category</h2><p class="intro">The three that come up before a first order.</p></div><div style="margin-top:34px"><details><summary>What do you need to know before quoting reels?</summary><p>The machine width, the core diameter, and what lifts the reel at your end with its maximum weight. The third question is the one most often skipped, and it is the one that strands a container on a vehicle.</p></details><details><summary>How is moisture damage prevented?</summary><p>A liner or desiccant in the container, product kept off the walls and the floor with dunnage, and a loading photograph that shows it. The mechanism is condensation on the container roof at night, not rain.</p></details><details><summary>Can you hold stock for a consumables programme?</summary><p>Yes, either at origin or at destination, with an agreed call-off. On consumables the cost of a stockout is usually larger than any price difference, so the safety stock is worth paying for and we price it openly.</p></details></div></div></section>
+<section data-reveal><div class="wrap"><div class="lede"><h2>Other categories</h2><p class="intro">The same method, applied to different goods.</p></div><div class="lanelinks"><a class="lanelink" href="food-agricultural"><b>Food and agricultural goods</b><span>Frozen and chilled protein, bulk staples, ingredients and branded beverages.</span></a><a class="lanelink" href="building-materials"><b>Building and finishing materials</b><span>Stone, tile, cement products, insulation, dry mixes, sanitary ware, cable.</span></a><a class="lanelink" href="industrial-equipment"><b>Industrial equipment and machinery</b><span>Production lines, compressors, pumps, generators, material handling.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
 <section data-reveal class="cta">
   <div class="wrap">
-    <span class="eyebrow">Get started</span>
     <div class="lede">
       <h2>Send a specification. Get a landed price.</h2>
       <p class="intro">Product, quantity and destination port is enough to start. If you only
@@ -736,10 +724,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     </dl>
     <p class="credits">Photography: pipe by JWPhotowerks; straddle carrier by Lars K. Jensen (CC BY).
       All other images CC0 or public domain. Full list with links in media/CREDITS.json.</p>
-    <p class="fbottom">ISP GROUP LLC &middot; Global Commerce &middot; International sourcing,
-      trading and supply of materials, products and industrial equipment.
-      &nbsp;&middot;&nbsp; <a href="privacy">Privacy</a>
-      &nbsp;&middot;&nbsp; <a href="terms">Terms of use</a></p>
+    <p class="fbottom"><span class="fname">ISP GROUP LLC Global Commerce</span><span class="fdesc">International sourcing, trading and supply of materials, products and industrial equipment.</span><span class="flinks"><a href="privacy">Privacy</a><a href="terms">Terms of use</a></span></p>
   </div>
 </footer>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Paper, packaging and consumables", "description": "Newsprint, kraft and containerboard in reels, corrugated packaging, cleaning and facility consumables, workwear and protective equipment.", "provider": {"@type": "Organization", "telephone": "+1-929-830-0038", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "url": "https://ispgroupgc.com/paper-packaging", "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Paper, packaging and consumables", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Newsprint, kraft and containerboard in reels, corrugated packaging, cleaning and facility consumables, workwear and PPE"}}]}}</script>
@@ -889,7 +874,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   btn.addEventListener('click',function(){ panel.hidden?open_():close_(); });
   input.addEventListener('input',run);
   document.addEventListener('keydown',function(e){
-    if(e.key==='Escape'&&!panel.hidden){ close_(); return; }
+    if(e.key==='Escape'&&!panel.hidden){close_(); return;}
     if(e.key==='/'&&panel.hidden){
       var a=document.activeElement, tag=a?a.tagName:'';
       if(tag==='INPUT'||tag==='TEXTAREA'||tag==='SELECT'||(a&&a.isContentEditable)) return;
@@ -951,6 +936,11 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   .chero .heroside{order:-1}
   .chero .heroside .shot{aspect-ratio:16/10}
 }
+</style>
+<style>/* подвал без точек-разделителей */
+.fbottom{display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+.fbottom .fdesc{max-width:62ch}
+.fbottom .flinks{display:flex;gap:22px;margin-top:4px}
 </style>
 <style>/* цели нажатия */
 @media (max-width:760px){
