@@ -248,6 +248,7 @@ def switcher(cur):
 SW_CSS = """
 .langsw{display:flex;gap:9px;align-items:center;font-family:var(--mono);font-size:11px;
   letter-spacing:.1em;margin-left:18px}
+.langsw{padding-left:18px;border-left:1px solid rgba(244,243,239,.22)}
 .langsw a{text-decoration:none;opacity:.55}
 .langsw a:hover{opacity:1}
 .langsw [aria-current]{color:var(--gold);opacity:1}
@@ -294,6 +295,8 @@ def build():
                     '<link rel="canonical" href="https://ispgroupgc.com/">\n' + hreflang("en"))
     if ".langsw{" not in en:
         en = en.replace("</style>", SW_CSS + "</style>", 1)
+    # вставка должна быть идемпотентной: иначе каждый запуск добавляет ещё один
+    en = re.sub(r'<div class="langsw" aria-label="Language">.*?</div>\s*', '', en, flags=re.S)
     en = en.replace('<a class="cta" href="#request">', switcher("en") + '\n    <a class="cta" href="#request">')
     (ROOT / "index.html").write_text(en)
 

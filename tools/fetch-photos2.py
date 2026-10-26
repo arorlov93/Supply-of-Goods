@@ -19,19 +19,40 @@ FREE = re.compile(r"(cc0|public domain|cc[ -]by(-sa)?[ -]\d|no known copyright)"
 
 # слот -> категории Викисклада, от более подходящих к менее
 SLOTS = {
-    "quarry-cut":      ["Quality_images_of_ceramic_tiles", "Ceramic_tile_factories", "Tile_manufacturing"],
+    # строительные материалы: не карьер и не ручная добыча
+    "quarry-cut":      ["Building_materials", "Bricks", "Concrete_blocks", "Tiles", "Cement_bags"],
     "quarry-stone":    ["Cement_plants", "Concrete_plants", "Building_material_shops"],
-    "port-noir":       ["Quality_images_of_container_terminals", "Container_terminals_at_night", "Container_cranes"],
-    "steel-tubes":     ["Steel_pipes", "Steel_products", "Pipe_stacks"],
-    "machinery":       ["Quality_images_of_machine_tools", "Industrial_machinery", "Machine_tools"],
+    "port-noir":       ["Container_cranes", "Container_terminals_at_night", "Gantry_cranes"],
+    "steel-tubes":     ["Steel_pipes", "Steel_products", "Rolled_steel"],
+    "machinery":       ["Machine_tools", "Industrial_machinery", "Metalworking_machinery"],
     "silos":           ["Industrial_plants", "Chemical_plants", "Factories"],
     "tools-flat":      ["Hand_tools", "Tool_shops", "Hardware_stores"],
-    "pallets-wall":    ["Corrugated_fiberboard", "Packaging_materials", "Warehouses"],
+    "pallets-wall":    ["Corrugated_fiberboard", "Packaging_materials", "Cardboard_boxes"],
     "coldstore":       ["Cold_storage", "Refrigerated_warehouses", "Food_warehouses"],
-    "loading-truck":   ["Loading_of_trucks", "Cargo_trucks", "Logistics_centres"],
-    "ship-aerial":     ["Aerial_photographs_of_container_ships", "Container_ships", "Cargo_ships"],
-    "crane-dusk":      ["Container_cranes_at_sunset", "Ports_at_sunset", "Harbour_cranes"],
+    "loading-truck":   ["Loading_docks", "Forklifts", "Container_trucks", "Cargo_trucks"],
+    "ship-aerial":     ["Container_ships", "Cargo_ships", "Ships_from_above"],
+    "crane-dusk":      ["Harbour_cranes", "Ports_at_night", "Container_cranes"],
+    # второй круг: остальная часть библиотеки
+    "containers-wall": ["Stacked_containers", "Shipping_containers", "Container_yards"],
+    "terminal":        ["Container_terminals", "Ports", "Harbours"],
+    "vessel":          ["Container_ships_at_sea", "Cargo_ships", "Ships"],
+    "truck-road":      ["Semi-trailer_trucks", "Trucks_on_roads", "Road_freight"],
+    "pallets-stack":   ["Pallets", "Wooden_pallets", "Warehouses"],
+    "yard-dusk":       ["Container_yards", "Ports_at_sunset", "Container_terminals"],
+    "signing":         ["Signing_documents", "Contracts", "Business_meetings"],
+    "stamp":           ["Rubber_stamps", "Documents", "Customs"],
+    "robots":          ["Industrial_robots", "Assembly_lines", "Manufacturing"],
+    "crane-lift":      ["Cranes_(machine)", "Lifting_equipment", "Port_operations"],
+    "crane-red":       ["Gantry_cranes", "Container_cranes", "Harbour_cranes"],
+    "port-wide":       ["Ports", "Harbours", "Container_terminals"],
+    "ship-sea":        ["Ships_at_sea", "Cargo_ships", "Container_ships"],
+    "ship-dusk":       ["Ships_at_sunset", "Ports_at_sunset", "Cargo_ships"],
+    "straddle":        ["Straddle_carriers", "Container_handling_equipment", "Container_yards"],
+    "container-gold":  ["Refrigerated_containers", "Shipping_containers", "Reefer_containers"],
+    "port-cma":        ["Container_ships_in_ports", "Container_terminals", "Ports"],
+    "aerial":          ["Aerial_photographs_of_ports", "Ports", "Harbours"],
 }
+
 
 LAST = [0.0]
 
