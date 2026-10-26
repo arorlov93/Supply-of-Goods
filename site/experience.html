@@ -10,7 +10,7 @@
 <meta property="og:description" content="China, the Russian north and the European Union: three supply regimes and one method.">
 <meta property="og:image" content="https://ispgroupgc.com/media/terminal.jpg">
 <meta name="robots" content="index,follow,max-image-preview:large">
-<meta name="theme-color" content="#eef1ef">
+<meta name="theme-color" content="#0b0e12">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%230b4a40'/><text x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='400' fill='%23e8d9b4' text-anchor='middle'>IG</text></svg>">
 <meta property="og:url" content="https://ispgroupgc.com/experience">
 <meta property="og:site_name" content="ISP Group Global Commerce">
@@ -24,28 +24,28 @@
    Pine green and warm gold on a cool bone ground; Instrument Serif over Hanken Grotesk,
    Martian Mono for anything that behaves like data. */
 :root{
-  --paper:#eef1ef; --surface:#ffffff; --surface-2:#e4eae7; --surface-3:#d8e1dd;
-  --ink:#0e2a26; --ink-2:#4a635d; --ink-3:#738a84; --rule:#ccd8d3;
-  --brand:#116b5c; --brand-2:#0f766e; --brand-deep:#0b4a40; --brand-wash:rgba(17,107,92,.09);
-  --gold:#b8862b; --gold-soft:#e8d9b4;
+  --paper:#0b0e12; --surface:#141922; --surface-2:#1b212b; --surface-3:#232b36;
+  --ink:#f2f3f5; --ink-2:#aab2bc; --ink-3:#8a929c; --rule:rgba(242,243,245,.15);
+  --brand:#36a68f; --brand-2:#2f9c88; --brand-deep:#0f6153; --brand-wash:rgba(54,166,143,.13);
+  --gold:#d9a441; --gold-soft:#eedcb4; --gold-ink:#f2cd86;
   --on-shot:#f4f6f4; --on-shot-2:#cbd8d3;
-  --g-ocean1:#dfe9e5; --g-ocean2:#bfd1cb; --g-ocean3:#9bb2ab;
-  --g-land:#0f5a4d; --g-line:rgba(14,42,38,.26); --g-glow:rgba(17,107,92,.22);
-  --shadow-s:0 1px 2px rgba(14,42,38,.06);
-  --shadow-m:0 1px 2px rgba(14,42,38,.05), 0 10px 28px -18px rgba(14,42,38,.35);
-  --shadow-l:0 2px 6px rgba(14,42,38,.07), 0 24px 48px -28px rgba(11,74,64,.55);
-  --fs:"Instrument Serif",Georgia,"Times New Roman",serif;
-  --fd:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
-  --fm:"Martian Mono",ui-monospace,Menlo,monospace;
+  --g-ocean1:#101c24; --g-ocean2:#16303a; --g-ocean3:#1d4350;
+  --g-land:#2f9c88; --g-line:rgba(200,220,215,.22); --g-glow:rgba(54,166,143,.30);
+  --shadow-s:0 1px 2px rgba(0,0,0,.45);
+  --shadow-m:0 1px 2px rgba(0,0,0,.4), 0 12px 30px -18px rgba(0,0,0,.85);
+  --shadow-l:0 2px 6px rgba(0,0,0,.5), 0 26px 52px -28px rgba(0,0,0,.95);
+  --fs:"Newsreader",Georgia,"Times New Roman",serif;
+  --fd:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;
+  --fm:"IBM Plex Mono",ui-monospace,Menlo,monospace;
   --maxw:74rem;
-  color-scheme:light;
+  color-scheme:dark;
 }
 *{box-sizing:border-box}
 body{margin:0;color:var(--ink);font-family:var(--fd);font-size:16.5px;line-height:1.66;
   font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden;
   background:
-    radial-gradient(1200px 680px at 92% -10%, var(--brand-wash), transparent 60%),
-    radial-gradient(760px 460px at -8% 104%, rgba(184,134,43,.10), transparent 58%),
+    radial-gradient(1200px 680px at 92% -10%, rgba(54,166,143,.055), transparent 62%),
+    radial-gradient(760px 460px at -8% 104%, rgba(217,164,65,.04), transparent 58%),
     var(--paper);
   background-attachment:fixed}
 h1,h2,h3{margin:0;font-family:var(--fs);font-weight:400;line-height:1.06;
@@ -70,7 +70,7 @@ a{color:inherit}
   box-shadow:0 16px 30px -13px rgba(11,74,64,.95), inset 0 1px 0 rgba(255,255,255,.28)}
 .btn:hover::after{transform:translateX(135%)}
 .btn:active{transform:translateY(0)}
-.btn-ghost{background:transparent;color:var(--brand-deep);
+.btn-ghost{background:transparent;color:var(--brand);
   box-shadow:inset 0 0 0 1.5px var(--brand)}
 .btn-ghost:hover{background:var(--brand);color:#fff;
   box-shadow:inset 0 0 0 1.5px var(--brand), 0 14px 28px -16px rgba(11,74,64,.9)}
@@ -78,7 +78,7 @@ a{color:inherit}
 
 /* nav */
 nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;
-  background:rgba(238,241,239,.86);backdrop-filter:blur(16px) saturate(1.4);
+  background:rgba(11,14,18,.82);backdrop-filter:blur(16px) saturate(1.4);
   border-bottom:1px solid var(--rule)}
 .navin{display:flex;align-items:center;gap:26px;height:68px}
 .logo{font-family:var(--fs);font-size:1.3rem;letter-spacing:-.01em;white-space:nowrap;text-decoration:none}
@@ -125,6 +125,7 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .band .eyebrow{color:var(--gold-soft)}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.shot img,.heroside .shot img{filter:saturate(.8) contrast(1.06) brightness(.95)}
 </style>
 </head>
 <body>

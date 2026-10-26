@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%230b4a40'/><text x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23e8d9b4' text-anchor='middle'>IG</text></svg>">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;1,400&family=Schibsted+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="preload" as="image" href="media/port-noir.webp" type="image/webp" fetchpriority="high">
 <style>
 :root{
@@ -75,14 +75,19 @@ a{color:inherit}
 .skip:focus{left:12px;top:12px;z-index:99;background:var(--paper);color:var(--black);padding:10px 16px;border-radius:6px}
 header.top{
   position:fixed;inset:0 0 auto;z-index:40;display:flex;align-items:center;gap:18px;
-  padding:16px var(--gut);mix-blend-mode:difference;
+  padding:16px var(--gut);
 }
-.wordmark{font-weight:700;letter-spacing:-.02em;font-size:15px;text-decoration:none;white-space:nowrap}
-.wordmark i{font-style:normal;color:var(--gold)}
+header.top::before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(8,10,13,.78) 0%,rgba(8,10,13,.42) 55%,rgba(8,10,13,0) 100%);
+}
+.wordmark{font-family:"Newsreader",Georgia,serif;font-size:1.3rem;letter-spacing:-.01em;
+  white-space:nowrap;text-decoration:none}
+.wordmark em{font-style:italic;color:var(--brand-lite)}
 nav.top-nav{margin-left:auto;display:flex;gap:26px;align-items:center}
 nav.top-nav a{font-size:13px;text-decoration:none;opacity:.78}
 nav.top-nav a:hover{opacity:1}
-@media (max-width:860px){nav.top-nav a:not(.cta){display:none}}
+@media (max-width:1080px){nav.top-nav a:not(.cta){display:none}}
 .cta{
   border:1px solid currentColor;border-radius:100px;padding:9px 18px;
   font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:1!important;
@@ -282,12 +287,14 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="top">
-  <a class="wordmark" href="/">ISP<i>&nbsp;/&nbsp;</i>GROUP</a>
+  <a class="wordmark" href="/">ISP Group <em>Global Commerce</em></a>
   <nav class="top-nav" aria-label="Primary">
+    <a href="services">What we do</a>
     <a href="supply">What we supply</a>
-    <a href="services">How we work</a>
-    <a href="experience">Experience</a>
+    <a href="corridors">Corridors</a>
     <a href="guides">Guides</a>
+    <a href="about">About</a>
+    <a href="contact">Contact</a>
     <a class="cta" href="#request">Request a quote</a>
   </nav>
 </header>
