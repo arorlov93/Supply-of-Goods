@@ -16,19 +16,30 @@
 
 Запуск: python3.13 tools/grade.py [слот ...]   (без имён: вся библиотека)
 """
-import pathlib, shutil, sys
+import pathlib, re, shutil, sys
 from PIL import Image, ImageEnhance
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 MEDIA = ROOT / "site" / "media"
 SRC = ROOT / "media-src"
+# имена в media версионированы хэшем содержимого, см. tools/media-version.py;
+# слот (имя мастера в media-src) это имя без хэша
+VERSIONED = re.compile(r"^(.+)\.[0-9a-f]{8}$")
 
 # Доля холода в тенях и тепла в светах. Больше - и кадр отдаёт синевой,
 # что на порту читается как дешёвый фильтр.
 SHADOW = (0, 0, 0)
 HIGH = (0, 0, 0)
-SAT = 0.0          # тема Formwork: только чёрно-белое
-CONTRAST = 1.35    # жёсткое: белые чистые, чёрные глубокие
+# Цвет остаётся в файле, а обесцвечивает его CSS: по наведению на снимок
+# фильтр снимается и кадр оживает. Держать для этого второй, цветной
+# комплект файлов не нужно, и по наведению ничего не догружается.
+SAT = 0.88
+# Контраст 1.35 был рассчитан на чёрно-белый кадр. В цвете он же вытягивает
+# цветную засветку: натриевые лампы на складе дают едкую желтизну, и кадр
+# читается как дешёвый фильтр. Поэтому в файл кладётся мягкая градация, а
+# жёсткость Formwork добавляет CSS там же, где обесцвечивает, и уходит
+# вместе с обесцвечиванием при наведении.
+CONTRAST = 1.12
 GAMMA = 0.93       # экспозиция чуть выше
 
 
@@ -64,11 +75,18 @@ def grade(im):
     return im
 
 
+def slot_of(path):
+    m = VERSIONED.match(path.stem)
+    return m.group(1) if m else path.stem
+
+
 def main(only=None):
     SRC.mkdir(exist_ok=True)
+    # webp лежит под своим хэшем, отличным от хэша jpg: собираем по слоту
+    webp = {slot_of(f): f for f in MEDIA.glob("*.webp")}
     done = 0
     for jpg in sorted(MEDIA.glob("*.jpg")):
-        slot = jpg.stem
+        slot = slot_of(jpg)
         if only and slot not in only:
             continue
         master = SRC / f"{slot}.jpg"
@@ -76,7 +94,7 @@ def main(only=None):
             shutil.copyfile(jpg, master)       # первый прогон: кадр как пришёл
         im = grade(Image.open(master))
         im.save(jpg, "JPEG", quality=84, optimize=True, progressive=True)
-        im.save(MEDIA / f"{slot}.webp", "WEBP", quality=82, method=5)
+        im.save(webp.get(slot, MEDIA / f"{slot}.webp"), "WEBP", quality=82, method=5)
         done += 1
     print(f"кадров приведено к общему виду: {done}")
     print(f"оригиналы лежат в {SRC}")

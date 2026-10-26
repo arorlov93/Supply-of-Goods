@@ -167,6 +167,24 @@ figure img, .shot img, .card img, .jsteps img, .media, .teaser img {
   outline-offset: -2px;
   box-shadow: none;
 }
+
+/* Цвет теперь снимается фильтром, а не вытравлен из файла: по наведению на
+   снимок фильтр уходит и кадр оживает в настоящих красках. Второго,
+   цветного комплекта файлов для этого не нужно, и при наведении ничего не
+   догружается, переход мгновенный. Контраст и экспозиция по-прежнему
+   запечены в файле, см. tools/grade.py, поэтому серия держится заодно и в
+   цвете. */
+img { filter: saturate(0) contrast(1.22); transition: filter .5s ease; }
+
+/* Оживают снимки в рамке, карточки-ссылки и шаги маршрута. Фоновые кадры
+   сцен остаются серыми: поверх них лежит текст, и затемнение под него
+   рассчитано на серый кадр, в цвете читаемость падает. */
+@media (hover: hover) {
+  .shot:hover img,
+  a.card:hover img,
+  .jsteps figure:hover img { filter: none; }
+}
+a.card:focus-visible img, figure:focus-within img { filter: none; }
 /* Снимок стоит в рамке без тени: «depth is cast, never soft». Страничные
    правила .chero .heroside .shot старше по специфичности, отсюда important */
 .shot, .heroside .shot, .chero .heroside .shot {
