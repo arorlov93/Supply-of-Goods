@@ -50,7 +50,7 @@ body{margin:0;color:var(--ink);font-family:var(--fd);font-size:16.5px;line-heigh
     radial-gradient(1200px 680px at 92% -10%, rgba(54,166,143,.055), transparent 62%),
     radial-gradient(760px 460px at -8% 104%, rgba(217,164,65,.04), transparent 58%),
     var(--paper);
-  background-attachment:fixed}
+}
 h1,h2,h3{margin:0;font-family:var(--fs);font-weight:400;line-height:1.1;
   letter-spacing:-.008em;text-wrap:balance;font-optical-sizing:auto}
 /* IBM Plex Mono уже уже Martian Mono, поэтому межбуквенное чуть шире */
@@ -84,7 +84,7 @@ a{color:inherit}
 
 /* nav */
 nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;
-  background:rgba(11,14,18,.82);backdrop-filter:blur(16px) saturate(1.4);
+  background:rgba(11,14,18,.82);backdrop-filter:blur(8px);
   border-bottom:1px solid var(--rule)}
 .navin{display:flex;align-items:center;gap:26px;height:68px}
 .logo{font-family:var(--fs);font-size:1.3rem;letter-spacing:-.01em;white-space:nowrap;text-decoration:none}
@@ -209,6 +209,19 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
   [data-reveal]{opacity:1!important;transform:none!important;transition:none!important}
 }
 
+
+/* Исходники фотобиблиотеки малы и на полный экран растягиваются. Плотное
+   затемнение и тонкое зерно переводят мягкость из «плохого качества» в
+   «плёнку»: это не заменяет нормальные кадры, но убирает дешёвый вид. */
+.scene .stage::before,.hero.chero::before{
+  content:"";position:absolute;inset:0;z-index:2;pointer-events:none;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.38'/%3E%3C/svg%3E");
+  mix-blend-mode:overlay;
+}
+.media,.chero .shot img{filter:saturate(.72) contrast(1.12) brightness(.8)}
+
+/* цели нажатия в подвале были ниже 40 пикселей */
+.foot a{padding:9px 0}
 </style>
 <style>
 /* hero */
@@ -541,7 +554,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   white-space:nowrap}
 .ptable td:last-child,.ptable th:last-child{padding-right:0}
 /* контакты */
-.cform{background:var(--surface);border:1px solid var(--rule);padding:26px 24px;
+.cform{position:relative;z-index:3;background:var(--surface);border:1px solid var(--rule);padding:26px 24px;
   box-shadow:var(--shadow-m)}
 .cform label{display:block;font-family:var(--fm);font-size:.56rem;letter-spacing:.13em;
   text-transform:uppercase;color:var(--ink-3);margin:16px 0 7px}
@@ -630,6 +643,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .searchres mark{background:var(--gold-soft);color:inherit;padding:0 2px}
 @media(max-width:940px){.searchpanel{top:68px}}
 </style>
+<noscript><style>.fade,.ln>span,[data-reveal],.svc-list li,.steps li,.content{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
 <!--email_off-->
@@ -724,7 +738,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   <div class="wrap">
     <dl class="fgrid">
       <div><dt>Soci&eacute;t&eacute;</dt><dd>ISP GROUP LLC<br><span style="color:var(--ink-2)">&Eacute;tats-Unis</span></dd></div>
-      <div><dt>Courriel</dt><dd><a href="mailto:info@ispgroupgc.com">info@ispgroupgc.com</a></dd></div>
+      <div><dt>Courriel</dt><dd><a href="mailto:info@ispgroupgc.com">info@ispgroupgc.com</a> <span aria-hidden="true">&middot;</span> <a href="tel:+19298300038">+1 929 830 0038</a></dd></div>
       <div><dt>Si&egrave;ge</dt><dd>16395 Biscayne Blvd<br><span style="color:var(--ink-2)">North Miami Beach, FL 33160<br>&Eacute;tats-Unis</span></dd></div>
       <div><dt>Pages</dt><dd style="line-height:1.95"><a href="afrique-ouest" style="display:block">Afrique de l&rsquo;Ouest</a><a href="decoupes-volaille" style="display:block">D&eacute;coupes de volaille</a><a href="certificat-veterinaire" style="display:block">Certificat v&eacute;t&eacute;rinaire</a></dd></div>
       <div><dt>English</dt><dd style="line-height:1.95"><a href="/" style="display:block">Full site in English</a><a href="guides" style="display:block">Guides</a></dd></div>
@@ -735,7 +749,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
       &nbsp;&middot;&nbsp; <a href="terms">Terms of use</a></p>
   </div>
 </footer>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ContactPage", "url": "https://ispgroupgc.com/contact-fr", "inLanguage": "fr", "mainEntity": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ContactPage", "url": "https://ispgroupgc.com/contact-fr", "inLanguage": "fr", "mainEntity": {"@type": "Organization", "telephone": "+1-929-830-0038", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "email": "info@ispgroupgc.com", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "La cotation est-elle payante ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Aucun frais de cotation et aucune commission sur la facture du producteur. Nous achetons en notre nom propre et revendons, donc le prix coté est le prix payé."}}, {"@type": "Question", "name": "Quelle est la commande minimale ?", "acceptedAnswer": {"@type": "Answer", "text": "Nous travaillons en conteneurs complets. Pour une première commande, un ou deux conteneurs à conditions commerciales complètes avant le démarrage d’un programme mensuel."}}, {"@type": "Question", "name": "En combien de temps répondez-vous ?", "acceptedAnswer": {"@type": "Answer", "text": "Un accusé de réception avec les questions ouvertes sous un jour ouvré. Un prix rendu sous une dizaine de jours ouvrés sur une ligne que nous exploitons déjà."}}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ISP Group", "item": "https://ispgroupgc.com/index-fr"}, {"@type": "ListItem", "position": 2, "name": "Contact", "item": "https://ispgroupgc.com/contact-fr"}]}</script>
 <script>

@@ -51,7 +51,7 @@ body{margin:0;color:var(--ink);font-family:var(--fd);font-size:16.5px;line-heigh
     radial-gradient(1200px 680px at 92% -10%, rgba(54,166,143,.055), transparent 62%),
     radial-gradient(760px 460px at -8% 104%, rgba(217,164,65,.04), transparent 58%),
     var(--paper);
-  background-attachment:fixed}
+}
 h1,h2,h3{margin:0;font-family:var(--fs);font-weight:400;line-height:1.1;
   letter-spacing:-.008em;text-wrap:balance;font-optical-sizing:auto}
 /* IBM Plex Mono уже уже Martian Mono, поэтому межбуквенное чуть шире */
@@ -85,7 +85,7 @@ a{color:inherit}
 
 /* nav */
 nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;
-  background:rgba(11,14,18,.82);backdrop-filter:blur(16px) saturate(1.4);
+  background:rgba(11,14,18,.82);backdrop-filter:blur(8px);
   border-bottom:1px solid var(--rule)}
 .navin{display:flex;align-items:center;gap:26px;height:68px}
 .logo{font-family:var(--fs);font-size:1.3rem;letter-spacing:-.01em;white-space:nowrap;text-decoration:none}
@@ -210,6 +210,19 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
   [data-reveal]{opacity:1!important;transform:none!important;transition:none!important}
 }
 
+
+/* Исходники фотобиблиотеки малы и на полный экран растягиваются. Плотное
+   затемнение и тонкое зерно переводят мягкость из «плохого качества» в
+   «плёнку»: это не заменяет нормальные кадры, но убирает дешёвый вид. */
+.scene .stage::before,.hero.chero::before{
+  content:"";position:absolute;inset:0;z-index:2;pointer-events:none;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.38'/%3E%3C/svg%3E");
+  mix-blend-mode:overlay;
+}
+.media,.chero .shot img{filter:saturate(.72) contrast(1.12) brightness(.8)}
+
+/* цели нажатия в подвале были ниже 40 пикселей */
+.foot a{padding:9px 0}
 </style>
 <style>
 /* hero */
@@ -544,6 +557,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .searchres mark{background:var(--gold-soft);color:inherit;padding:0 2px}
 @media(max-width:940px){.searchpanel{top:68px}}
 </style>
+<noscript><style>.fade,.ln>span,[data-reveal],.svc-list li,.steps li,.content{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
 <!--email_off-->
@@ -672,7 +686,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   <div class="wrap">
     <dl class="fgrid">
       <div><dt>Entity</dt><dd>ISP GROUP LLC<br><span style="color:var(--ink-2)">United States</span></dd></div>
-      <div><dt>Email</dt><dd><a href="mailto:info@ispgroupgc.com">info@ispgroupgc.com</a></dd></div>
+      <div><dt>Email</dt><dd><a href="mailto:info@ispgroupgc.com">info@ispgroupgc.com</a> <span aria-hidden="true">&middot;</span> <a href="tel:+19298300038">+1 929 830 0038</a></dd></div>
       <div><dt>Registered office</dt><dd>16395 Biscayne Blvd<br><span style="color:var(--ink-2)">North Miami Beach, FL 33160<br>United States</span></dd></div>
       <div><dt>Corridors</dt><dd style="line-height:1.95"><a href="china" style="display:block">China &rarr; worldwide</a><a href="turkiye" style="display:block">T&uuml;rkiye &rarr; United States</a><a href="west-africa" style="display:block">Americas &amp; EU &rarr; West Africa</a><a href="southern-africa" style="display:block">Intra-Africa</a></dd></div>
       <div><dt>Reading</dt><dd style="line-height:1.95"><a href="guides" style="display:block">Guides</a><a href="experience" style="display:block">Twenty years of supply work</a><a href="supply" style="display:block">What we supply</a></dd></div>
@@ -685,7 +699,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
       &nbsp;&middot;&nbsp; <a href="terms">Terms of use</a></p>
   </div>
 </footer>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "West Africa: frozen food and consumables into Lomé and Cotonou", "serviceType": "International sourcing, trading and supply", "description": "Shipping frozen poultry, bulk staples and consumables into Togo and Benin: veterinary admissibility, cut nomenclature, reefer cold chain and what the buyer's payment terms do to the cash cycle.", "provider": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "areaServed": [{"@type": "Place", "name": "frozen poultry West Africa"}], "url": "https://ispgroupgc.com/west-africa"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "West Africa: frozen food and consumables into Lomé and Cotonou", "serviceType": "International sourcing, trading and supply", "description": "Shipping frozen poultry, bulk staples and consumables into Togo and Benin: veterinary admissibility, cut nomenclature, reefer cold chain and what the buyer's payment terms do to the cash cycle.", "provider": {"@type": "Organization", "telephone": "+1-929-830-0038", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "areaServed": [{"@type": "Place", "name": "frozen poultry West Africa"}], "url": "https://ispgroupgc.com/west-africa"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What has to be checked before a frozen meat offer is real?", "acceptedAnswer": {"@type": "Answer", "text": "The producing establishment has to be admissible in the destination country. Frozen meat enters on a veterinary health certificate issued for a specific establishment, in a form the destination accepts, and approval for one West African country does not carry to its neighbour. We ask for the establishment number and written confirmation before discussing price."}}, {"@type": "Question", "name": "Why can two poultry offers not be compared?", "acceptedAnswer": {"@type": "Answer", "text": "Because they are usually not the same product. A whole wing with three joints, a two joint wing, a drumette and a mid joint flat are four products with four prices. Turkey is sold as tom or hen and the lines are not interchangeable. Every enquiry has to name the anatomy, the pack and the Incoterm for each line separately."}}, {"@type": "Question", "name": "What is the standard pack and container for this lane?", "acceptedAnswer": {"@type": "Answer", "text": "Block frozen product in 10 kg cartons, in a 40ft reefer carrying about 25 tonnes net. That is not the standard pack in the United States or the European Union, so we ask for the price in the producer's own pack as well; the difference is what the non-standard format really costs."}}, {"@type": "Question", "name": "How do the buyer's payment terms change the economics?", "acceptedAnswer": {"@type": "Answer", "text": "A letter of credit payable at sight against shipping documents releases the cash while the vessel is still at sea. Thirty day terms after arrival add the voyage plus a month to the cycle, which on a multi container programme is the difference between financing one shipment and financing four at once. Extended terms are a credit facility and are priced as one."}}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ISP Group Global Commerce", "item": "https://ispgroupgc.com/"}, {"@type": "ListItem", "position": 2, "name": "Corridors", "item": "https://ispgroupgc.com/#corridors"}, {"@type": "ListItem", "position": 3, "name": "Americas and EU to West Africa", "item": "https://ispgroupgc.com/west-africa"}]}</script>
 <script>

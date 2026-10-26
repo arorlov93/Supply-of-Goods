@@ -1,0 +1,3037 @@
+{
+ "pages": {
+  "404.html": {
+   "desktop": {
+    "height": 2401,
+    "dom": 135,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "ship-dusk.webp",
+      "nat": 567,
+      "css": 1658,
+      "ratio": 2.92,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 18,
+    "title": 26,
+    "desc": 83,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 0,
+    "tel": 0,
+    "navLinks": 9,
+    "errors": [],
+    "bytes": 108280
+   },
+   "mobile": {
+    "height": 3155,
+    "dom": 135,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "ship-dusk.webp",
+      "nat": 567,
+      "css": 449,
+      "ratio": 0.79,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 14,
+    "title": 26,
+    "desc": 83,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 0,
+    "tel": 0,
+    "navLinks": 3,
+    "errors": [],
+    "bytes": 108280
+   }
+  },
+  "about.html": {
+   "desktop": {
+    "height": 5792,
+    "dom": 236,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "miami-dusk.webp",
+      "nat": 546,
+      "css": 1658,
+      "ratio": 3.04,
+      "alt": true
+     },
+     {
+      "src": "terminal.webp",
+      "nat": 1023,
+      "css": 1138,
+      "ratio": 1.11,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 24,
+    "title": 52,
+    "desc": 119,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 15,
+    "errors": [],
+    "bytes": 123168
+   },
+   "mobile": {
+    "height": 7607,
+    "dom": 236,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "miami-dusk.webp",
+      "nat": 546,
+      "css": 449,
+      "ratio": 0.82,
+      "alt": true
+     },
+     {
+      "src": "terminal.webp",
+      "nat": 1023,
+      "css": 344,
+      "ratio": 0.34,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 19,
+    "title": 52,
+    "desc": 119,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 9,
+    "errors": [],
+    "bytes": 123168
+   }
+  },
+  "afrique-ouest.html": {
+   "desktop": {
+    "height": 5800,
+    "dom": 222,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "chart-west.webp",
+      "nat": 628,
+      "css": 1658,
+      "ratio": 2.64,
+      "alt": true
+     },
+     {
+      "src": "vessel2.webp",
+      "nat": 774,
+      "css": 1138,
+      "ratio": 1.47,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 18,
+    "title": 55,
+    "desc": 117,
+    "canonical": true,
+    "og": true,
+    "hreflang": 3,
+    "ld": 2,
+    "tel": 0,
+    "navLinks": 14,
+    "errors": [],
+    "bytes": 108280
+   },
+   "mobile": {
+    "height": 7868,
+    "dom": 222,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "chart-west.webp",
+      "nat": 628,
+      "css": 449,
+      "ratio": 0.72,
+      "alt": true
+     },
+     {
+      "src": "vessel2.webp",
+      "nat": 774,
+      "css": 344,
+      "ratio": 0.44,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 14,
+    "title": 55,
+    "desc": 117,
+    "canonical": true,
+    "og": true,
+    "hreflang": 3,
+    "ld": 2,
+    "tel": 0,
+    "navLinks": 9,
+    "errors": [],
+    "bytes": 108280
+   }
+  },
+  "antidumping-check.html": {
+   "desktop": {
+    "height": 5063,
+    "dom": 224,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "quarry-cut.webp",
+      "nat": 632,
+      "css": 1658,
+      "ratio": 2.62,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 20,
+    "title": 53,
+    "desc": 144,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 16,
+    "errors": [],
+    "bytes": 108280
+   },
+   "mobile": {
+    "height": 7313,
+    "dom": 224,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "quarry-cut.webp",
+      "nat": 632,
+      "css": 449,
+      "ratio": 0.71,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 16,
+    "title": 53,
+    "desc": 144,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 10,
+    "errors": [],
+    "bytes": 108280
+   }
+  },
+  "bill-of-lading.html": {
+   "desktop": {
+    "height": 5464,
+    "dom": 242,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "ship-dusk.webp",
+      "nat": 567,
+      "css": 1658,
+      "ratio": 2.92,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 20,
+    "title": 44,
+    "desc": 158,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 17,
+    "errors": [],
+    "bytes": 108280
+   },
+   "mobile": {
+    "height": 8257,
+    "dom": 242,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "ship-dusk.webp",
+      "nat": 567,
+      "css": 449,
+      "ratio": 0.79,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 16,
+    "title": 44,
+    "desc": 158,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 11,
+    "errors": [],
+    "bytes": 108280
+   }
+  },
+  "building-materials.html": {
+   "desktop": {
+    "height": 6545,
+    "dom": 256,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "quarry-stone.webp",
+      "nat": 546,
+      "css": 1658,
+      "ratio": 3.04,
+      "alt": true
+     },
+     {
+      "src": "pipe.webp",
+      "nat": 922,
+      "css": 1138,
+      "ratio": 1.23,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 21,
+    "title": 52,
+    "desc": 116,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 16,
+    "errors": [],
+    "bytes": 125052
+   },
+   "mobile": {
+    "height": 8831,
+    "dom": 256,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "quarry-stone.webp",
+      "nat": 546,
+      "css": 449,
+      "ratio": 0.82,
+      "alt": true
+     },
+     {
+      "src": "pipe.webp",
+      "nat": 922,
+      "css": 344,
+      "ratio": 0.37,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 17,
+    "title": 52,
+    "desc": 116,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 10,
+    "errors": [],
+    "bytes": 123168
+   }
+  },
+  "certificat-veterinaire.html": {
+   "desktop": {
+    "height": 4861,
+    "dom": 220,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "stamp.webp",
+      "nat": 546,
+      "css": 1658,
+      "ratio": 3.04,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 16,
+    "title": 52,
+    "desc": 138,
+    "canonical": true,
+    "og": true,
+    "hreflang": 3,
+    "ld": 2,
+    "tel": 0,
+    "navLinks": 14,
+    "errors": [],
+    "bytes": 108280
+   },
+   "mobile": {
+    "height": 6991,
+    "dom": 220,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "stamp.webp",
+      "nat": 546,
+      "css": 449,
+      "ratio": 0.82,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 13,
+    "title": 52,
+    "desc": 138,
+    "canonical": true,
+    "og": true,
+    "hreflang": 3,
+    "ld": 2,
+    "tel": 0,
+    "navLinks": 9,
+    "errors": [],
+    "bytes": 110164
+   }
+  },
+  "certificate-of-origin.html": {
+   "desktop": {
+    "height": 5435,
+    "dom": 241,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "chart-old.webp",
+      "nat": 554,
+      "css": 1658,
+      "ratio": 2.99,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 21,
+    "title": 58,
+    "desc": 153,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 16,
+    "errors": [],
+    "bytes": 108280
+   },
+   "mobile": {
+    "height": 8074,
+    "dom": 241,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "chart-old.webp",
+      "nat": 554,
+      "css": 449,
+      "ratio": 0.81,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 17,
+    "title": 58,
+    "desc": 153,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 10,
+    "errors": [],
+    "bytes": 108280
+   }
+  },
+  "china.html": {
+   "desktop": {
+    "height": 6920,
+    "dom": 256,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "port-cma.webp",
+      "nat": 552,
+      "css": 1658,
+      "ratio": 3,
+      "alt": true
+     },
+     {
+      "src": "machinery.webp",
+      "nat": 910,
+      "css": 1138,
+      "ratio": 1.25,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 25,
+    "title": 49,
+    "desc": 150,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 17,
+    "errors": [],
+    "bytes": 125052
+   },
+   "mobile": {
+    "height": 9593,
+    "dom": 256,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "port-cma.webp",
+      "nat": 552,
+      "css": 449,
+      "ratio": 0.81,
+      "alt": true
+     },
+     {
+      "src": "machinery.webp",
+      "nat": 910,
+      "css": 344,
+      "ratio": 0.38,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 17,
+    "title": 49,
+    "desc": 150,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 11,
+    "errors": [],
+    "bytes": 123168
+   }
+  },
+  "contact-fr.html": {
+   "desktop": {
+    "height": 4899,
+    "dom": 233,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "miami-bay.webp",
+      "nat": 546,
+      "css": 1658,
+      "ratio": 3.04,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 17,
+    "title": 40,
+    "desc": 139,
+    "canonical": true,
+    "og": true,
+    "hreflang": 3,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 13,
+    "errors": [],
+    "bytes": 123168
+   },
+   "mobile": {
+    "height": 6718,
+    "dom": 233,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "miami-bay.webp",
+      "nat": 546,
+      "css": 449,
+      "ratio": 0.82,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 14,
+    "title": 40,
+    "desc": 139,
+    "canonical": true,
+    "og": true,
+    "hreflang": 3,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 8,
+    "errors": [],
+    "bytes": 123168
+   }
+  },
+  "contact.html": {
+   "desktop": {
+    "height": 5467,
+    "dom": 251,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "miami-bay.webp",
+      "nat": 546,
+      "css": 1658,
+      "ratio": 3.04,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 21,
+    "title": 38,
+    "desc": 154,
+    "canonical": true,
+    "og": true,
+    "hreflang": 3,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 14,
+    "errors": [],
+    "bytes": 123168
+   },
+   "mobile": {
+    "height": 7466,
+    "dom": 251,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "miami-bay.webp",
+      "nat": 546,
+      "css": 449,
+      "ratio": 0.82,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 17,
+    "title": 38,
+    "desc": 154,
+    "canonical": true,
+    "og": true,
+    "hreflang": 3,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 8,
+    "errors": [],
+    "bytes": 123168
+   }
+  },
+  "container-loading.html": {
+   "desktop": {
+    "height": 5320,
+    "dom": 231,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "loading-truck.webp",
+      "nat": 546,
+      "css": 1658,
+      "ratio": 3.04,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 20,
+    "title": 56,
+    "desc": 124,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 16,
+    "errors": [],
+    "bytes": 108280
+   },
+   "mobile": {
+    "height": 7943,
+    "dom": 231,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "loading-truck.webp",
+      "nat": 546,
+      "css": 449,
+      "ratio": 0.82,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 16,
+    "title": 56,
+    "desc": 124,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 10,
+    "errors": [],
+    "bytes": 108280
+   }
+  },
+  "corridors.html": {
+   "desktop": {
+    "height": 4118,
+    "dom": 178,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "ship-aerial.webp",
+      "nat": 460,
+      "css": 1658,
+      "ratio": 3.6,
+      "alt": true
+     },
+     {
+      "src": "vessel.webp",
+      "nat": 1023,
+      "css": 1138,
+      "ratio": 1.11,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 19,
+    "title": 58,
+    "desc": 123,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 1,
+    "tel": 0,
+    "navLinks": 10,
+    "errors": [],
+    "bytes": 108280
+   },
+   "mobile": {
+    "height": 5311,
+    "dom": 178,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "ship-aerial.webp",
+      "nat": 460,
+      "css": 449,
+      "ratio": 0.98,
+      "alt": true
+     },
+     {
+      "src": "vessel.webp",
+      "nat": 1023,
+      "css": 344,
+      "ratio": 0.34,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 15,
+    "title": 58,
+    "desc": 123,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 1,
+    "tel": 0,
+    "navLinks": 4,
+    "errors": [],
+    "bytes": 108280
+   }
+  },
+  "customs-data-pricing.html": {
+   "desktop": {
+    "height": 4862,
+    "dom": 221,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "containers-wall.webp",
+      "nat": 546,
+      "css": 1658,
+      "ratio": 3.04,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 20,
+    "title": 49,
+    "desc": 147,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 15,
+    "errors": [],
+    "bytes": 108280
+   },
+   "mobile": {
+    "height": 7083,
+    "dom": 221,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "containers-wall.webp",
+      "nat": 546,
+      "css": 449,
+      "ratio": 0.82,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 16,
+    "title": 49,
+    "desc": 147,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 9,
+    "errors": [],
+    "bytes": 108280
+   }
+  },
+  "decoupes-volaille.html": {
+   "desktop": {
+    "height": 4983,
+    "dom": 229,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "coldstore.webp",
+      "nat": 693,
+      "css": 1658,
+      "ratio": 2.39,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 16,
+    "title": 45,
+    "desc": 143,
+    "canonical": true,
+    "og": true,
+    "hreflang": 3,
+    "ld": 2,
+    "tel": 0,
+    "navLinks": 14,
+    "errors": [],
+    "bytes": 108280
+   },
+   "mobile": {
+    "height": 7326,
+    "dom": 229,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "coldstore.webp",
+      "nat": 693,
+      "css": 449,
+      "ratio": 0.65,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 13,
+    "title": 45,
+    "desc": 143,
+    "canonical": true,
+    "og": true,
+    "hreflang": 3,
+    "ld": 2,
+    "tel": 0,
+    "navLinks": 9,
+    "errors": [],
+    "bytes": 108280
+   }
+  },
+  "demurrage-detention.html": {
+   "desktop": {
+    "height": 5356,
+    "dom": 240,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "truck-road.webp",
+      "nat": 544,
+      "css": 1658,
+      "ratio": 3.05,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 21,
+    "title": 54,
+    "desc": 154,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 16,
+    "errors": [],
+    "bytes": 108280
+   },
+   "mobile": {
+    "height": 7718,
+    "dom": 240,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "truck-road.webp",
+      "nat": 544,
+      "css": 449,
+      "ratio": 0.83,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 16,
+    "title": 54,
+    "desc": 154,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 10,
+    "errors": [],
+    "bytes": 108280
+   }
+  },
+  "experience.html": {
+   "desktop": {
+    "height": 7048,
+    "dom": 168,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "terminal.webp",
+      "nat": 1023,
+      "css": 1138,
+      "ratio": 1.11,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 20,
+    "title": 39,
+    "desc": 149,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 2,
+    "tel": 0,
+    "navLinks": 9,
+    "errors": [],
+    "bytes": 0
+   },
+   "mobile": {
+    "height": 9282,
+    "dom": 168,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "terminal.webp",
+      "nat": 1023,
+      "css": 344,
+      "ratio": 0.34,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 16,
+    "title": 39,
+    "desc": 149,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 2,
+    "tel": 0,
+    "navLinks": 3,
+    "errors": [],
+    "bytes": 0
+   }
+  },
+  "food-agricultural.html": {
+   "desktop": {
+    "height": 6991,
+    "dom": 259,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "silos.webp",
+      "nat": 551,
+      "css": 1658,
+      "ratio": 3.01,
+      "alt": true
+     },
+     {
+      "src": "vessel2.webp",
+      "nat": 774,
+      "css": 1138,
+      "ratio": 1.47,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 24,
+    "title": 56,
+    "desc": 186,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 17,
+    "errors": [],
+    "bytes": 123168
+   },
+   "mobile": {
+    "height": 9542,
+    "dom": 259,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "silos.webp",
+      "nat": 551,
+      "css": 449,
+      "ratio": 0.81,
+      "alt": true
+     },
+     {
+      "src": "vessel2.webp",
+      "nat": 774,
+      "css": 344,
+      "ratio": 0.44,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 17,
+    "title": 56,
+    "desc": 186,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 11,
+    "errors": [],
+    "bytes": 123168
+   }
+  },
+  "guides.html": {
+   "desktop": {
+    "height": 3548,
+    "dom": 206,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "crane-dusk.webp",
+      "nat": 543,
+      "css": 1658,
+      "ratio": 3.05,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 25,
+    "title": 58,
+    "desc": 123,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 2,
+    "tel": 0,
+    "navLinks": 10,
+    "errors": [],
+    "bytes": 108280
+   },
+   "mobile": {
+    "height": 6259,
+    "dom": 206,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "crane-dusk.webp",
+      "nat": 543,
+      "css": 449,
+      "ratio": 0.83,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 20,
+    "title": 58,
+    "desc": 123,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 2,
+    "tel": 0,
+    "navLinks": 4,
+    "errors": [],
+    "bytes": 108280
+   }
+  },
+  "hs-code.html": {
+   "desktop": {
+    "height": 4906,
+    "dom": 226,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "yard-dusk.webp",
+      "nat": 614,
+      "css": 1658,
+      "ratio": 2.7,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 20,
+    "title": 55,
+    "desc": 135,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 16,
+    "errors": [],
+    "bytes": 108280
+   },
+   "mobile": {
+    "height": 7181,
+    "dom": 226,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "yard-dusk.webp",
+      "nat": 614,
+      "css": 449,
+      "ratio": 0.73,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 16,
+    "title": 55,
+    "desc": 135,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 10,
+    "errors": [],
+    "bytes": 108280
+   }
+  },
+  "incoterms.html": {
+   "desktop": {
+    "height": 6064,
+    "dom": 306,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "ship-sea.webp",
+      "nat": 544,
+      "css": 1658,
+      "ratio": 3.05,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 22,
+    "title": 44,
+    "desc": 152,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 16,
+    "errors": [],
+    "bytes": 123168
+   },
+   "mobile": {
+    "height": 9142,
+    "dom": 306,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "ship-sea.webp",
+      "nat": 544,
+      "css": 449,
+      "ratio": 0.83,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 17,
+    "title": 44,
+    "desc": 152,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 10,
+    "errors": [],
+    "bytes": 123168
+   }
+  },
+  "index.html": {
+   "desktop": {
+    "height": 16376,
+    "dom": 355,
+    "h1count": 1,
+    "headingJumps": 1,
+    "imgs": [
+     {
+      "src": "port-noir.webp",
+      "nat": 546,
+      "css": 1699,
+      "ratio": 3.11,
+      "alt": true
+     },
+     {
+      "src": "containers-wall.webp",
+      "nat": 546,
+      "css": 1440,
+      "ratio": 2.64,
+      "alt": true
+     },
+     {
+      "src": "quarry-stone.webp",
+      "nat": 546,
+      "css": 1872,
+      "ratio": 3.43,
+      "alt": true
+     },
+     {
+      "src": "pipe.jpg",
+      "nat": 0,
+      "css": 1526,
+      "ratio": null,
+      "alt": true
+     },
+     {
+      "src": "silos.webp",
+      "nat": 551,
+      "css": 2208,
+      "ratio": 4.01,
+      "alt": true
+     },
+     {
+      "src": "quarry-cut.jpg",
+      "nat": 0,
+      "css": 405,
+      "ratio": null,
+      "alt": true
+     },
+     {
+      "src": "machinery.jpg",
+      "nat": 0,
+      "css": 405,
+      "ratio": null,
+      "alt": true
+     },
+     {
+      "src": "tools-flat.jpg",
+      "nat": 0,
+      "css": 405,
+      "ratio": null,
+      "alt": true
+     },
+     {
+      "src": "steel-tubes.jpg",
+      "nat": 0,
+      "css": 405,
+      "ratio": null,
+      "alt": true
+     },
+     {
+      "src": "pallets-wall.jpg",
+      "nat": 0,
+      "css": 405,
+      "ratio": null,
+      "alt": true
+     },
+     {
+      "src": "coldstore.jpg",
+      "nat": 0,
+      "css": 405,
+      "ratio": null,
+      "alt": true
+     },
+     {
+      "src": "ship-aerial.jpg",
+      "nat": 0,
+      "css": 1757,
+      "ratio": null,
+      "alt": true
+     },
+     {
+      "src": "loading-truck.jpg",
+      "nat": 0,
+      "css": 1642,
+      "ratio": null,
+      "alt": true
+     },
+     {
+      "src": "crane-dusk.jpg",
+      "nat": 0,
+      "css": 1872,
+      "ratio": null,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 33,
+    "title": 57,
+    "desc": 186,
+    "canonical": true,
+    "og": true,
+    "hreflang": 5,
+    "ld": 3,
+    "tel": 1,
+    "navLinks": 14,
+    "errors": [],
+    "bytes": 108280
+   },
+   "mobile": {
+    "height": 16613,
+    "dom": 355,
+    "h1count": 1,
+    "headingJumps": 1,
+    "imgs": [
+     {
+      "src": "port-noir.webp",
+      "nat": 546,
+      "css": 460,
+      "ratio": 0.84,
+      "alt": true
+     },
+     {
+      "src": "containers-wall.webp",
+      "nat": 546,
+      "css": 390,
+      "ratio": 0.71,
+      "alt": true
+     },
+     {
+      "src": "quarry-stone.webp",
+      "nat": 546,
+      "css": 507,
+      "ratio": 0.93,
+      "alt": true
+     },
+     {
+      "src": "pipe.jpg",
+      "nat": 0,
+      "css": 413,
+      "ratio": null,
+      "alt": true
+     },
+     {
+      "src": "silos.webp",
+      "nat": 551,
+      "css": 847,
+      "ratio": 1.54,
+      "alt": true
+     },
+     {
+      "src": "quarry-cut.jpg",
+      "nat": 0,
+      "css": 380,
+      "ratio": null,
+      "alt": true
+     },
+     {
+      "src": "machinery.jpg",
+      "nat": 0,
+      "css": 380,
+      "ratio": null,
+      "alt": true
+     },
+     {
+      "src": "tools-flat.jpg",
+      "nat": 0,
+      "css": 380,
+      "ratio": null,
+      "alt": true
+     },
+     {
+      "src": "steel-tubes.jpg",
+      "nat": 0,
+      "css": 380,
+      "ratio": null,
+      "alt": true
+     },
+     {
+      "src": "pallets-wall.jpg",
+      "nat": 0,
+      "css": 380,
+      "ratio": null,
+      "alt": true
+     },
+     {
+      "src": "coldstore.jpg",
+      "nat": 0,
+      "css": 380,
+      "ratio": null,
+      "alt": true
+     },
+     {
+      "src": "ship-aerial.jpg",
+      "nat": 0,
+      "css": 476,
+      "ratio": null,
+      "alt": true
+     },
+     {
+      "src": "loading-truck.jpg",
+      "nat": 0,
+      "css": 445,
+      "ratio": null,
+      "alt": true
+     },
+     {
+      "src": "crane-dusk.jpg",
+      "nat": 0,
+      "css": 507,
+      "ratio": null,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 21,
+    "title": 57,
+    "desc": 186,
+    "canonical": true,
+    "og": true,
+    "hreflang": 5,
+    "ld": 3,
+    "tel": 1,
+    "navLinks": 2,
+    "errors": [],
+    "bytes": 108280
+   }
+  },
+  "industrial-equipment.html": {
+   "desktop": {
+    "height": 6676,
+    "dom": 258,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "robots.webp",
+      "nat": 504,
+      "css": 1658,
+      "ratio": 3.29,
+      "alt": true
+     },
+     {
+      "src": "machinery.webp",
+      "nat": 910,
+      "css": 1138,
+      "ratio": 1.25,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 20,
+    "title": 56,
+    "desc": 112,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 16,
+    "errors": [],
+    "bytes": 123168
+   },
+   "mobile": {
+    "height": 8811,
+    "dom": 258,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "robots.webp",
+      "nat": 504,
+      "css": 449,
+      "ratio": 0.89,
+      "alt": true
+     },
+     {
+      "src": "machinery.webp",
+      "nat": 910,
+      "css": 344,
+      "ratio": 0.38,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 16,
+    "title": 56,
+    "desc": 112,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 10,
+    "errors": [],
+    "bytes": 123168
+   }
+  },
+  "ispm-15.html": {
+   "desktop": {
+    "height": 4919,
+    "dom": 222,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "pallets-stack.webp",
+      "nat": 542,
+      "css": 1658,
+      "ratio": 3.06,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 20,
+    "title": 56,
+    "desc": 146,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 16,
+    "errors": [],
+    "bytes": 108280
+   },
+   "mobile": {
+    "height": 7228,
+    "dom": 222,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "pallets-stack.webp",
+      "nat": 542,
+      "css": 449,
+      "ratio": 0.83,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 16,
+    "title": 56,
+    "desc": 146,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 10,
+    "errors": [],
+    "bytes": 108280
+   }
+  },
+  "landed-price.html": {
+   "desktop": {
+    "height": 5186,
+    "dom": 243,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "crane-red.webp",
+      "nat": 531,
+      "css": 1658,
+      "ratio": 3.12,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 20,
+    "title": 44,
+    "desc": 130,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 16,
+    "errors": [],
+    "bytes": 108280
+   },
+   "mobile": {
+    "height": 7568,
+    "dom": 243,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "crane-red.webp",
+      "nat": 531,
+      "css": 449,
+      "ratio": 0.85,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 16,
+    "title": 44,
+    "desc": 130,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 10,
+    "errors": [],
+    "bytes": 108280
+   }
+  },
+  "letter-of-credit.html": {
+   "desktop": {
+    "height": 5451,
+    "dom": 234,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "signing.webp",
+      "nat": 612,
+      "css": 1658,
+      "ratio": 2.71,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 20,
+    "title": 60,
+    "desc": 157,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 17,
+    "errors": [],
+    "bytes": 108280
+   },
+   "mobile": {
+    "height": 8157,
+    "dom": 234,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "signing.webp",
+      "nat": 612,
+      "css": 449,
+      "ratio": 0.73,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 16,
+    "title": 60,
+    "desc": 157,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 11,
+    "errors": [],
+    "bytes": 108280
+   }
+  },
+  "metals-pipe.html": {
+   "desktop": {
+    "height": 6424,
+    "dom": 254,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "steel-tubes.webp",
+      "nat": 544,
+      "css": 1658,
+      "ratio": 3.05,
+      "alt": true
+     },
+     {
+      "src": "pipe.webp",
+      "nat": 922,
+      "css": 1138,
+      "ratio": 1.23,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 20,
+    "title": 54,
+    "desc": 138,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 16,
+    "errors": [],
+    "bytes": 123168
+   },
+   "mobile": {
+    "height": 8603,
+    "dom": 254,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "steel-tubes.webp",
+      "nat": 544,
+      "css": 449,
+      "ratio": 0.83,
+      "alt": true
+     },
+     {
+      "src": "pipe.webp",
+      "nat": 922,
+      "css": 344,
+      "ratio": 0.37,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 16,
+    "title": 54,
+    "desc": 138,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 10,
+    "errors": [],
+    "bytes": 123168
+   }
+  },
+  "paper-packaging.html": {
+   "desktop": {
+    "height": 6301,
+    "dom": 249,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "pallets-wall.webp",
+      "nat": 546,
+      "css": 1658,
+      "ratio": 3.04,
+      "alt": true
+     },
+     {
+      "src": "crane.webp",
+      "nat": 834,
+      "css": 1138,
+      "ratio": 1.36,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 21,
+    "title": 55,
+    "desc": 137,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 15,
+    "errors": [],
+    "bytes": 123168
+   },
+   "mobile": {
+    "height": 8383,
+    "dom": 249,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "pallets-wall.webp",
+      "nat": 546,
+      "css": 449,
+      "ratio": 0.82,
+      "alt": true
+     },
+     {
+      "src": "crane.webp",
+      "nat": 834,
+      "css": 344,
+      "ratio": 0.41,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 17,
+    "title": 55,
+    "desc": 137,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 9,
+    "errors": [],
+    "bytes": 123168
+   }
+  },
+  "poultry-cuts.html": {
+   "desktop": {
+    "height": 5093,
+    "dom": 239,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "coldstore.webp",
+      "nat": 693,
+      "css": 1658,
+      "ratio": 2.39,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 20,
+    "title": 60,
+    "desc": 152,
+    "canonical": true,
+    "og": true,
+    "hreflang": 3,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 16,
+    "errors": [],
+    "bytes": 108280
+   },
+   "mobile": {
+    "height": 7473,
+    "dom": 239,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "coldstore.webp",
+      "nat": 693,
+      "css": 449,
+      "ratio": 0.65,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 16,
+    "title": 60,
+    "desc": 152,
+    "canonical": true,
+    "og": true,
+    "hreflang": 3,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 10,
+    "errors": [],
+    "bytes": 108280
+   }
+  },
+  "privacy.html": {
+   "desktop": {
+    "height": 5016,
+    "dom": 237,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "crane-lift.webp",
+      "nat": 544,
+      "css": 1658,
+      "ratio": 3.05,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 19,
+    "title": 19,
+    "desc": 148,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 1,
+    "tel": 0,
+    "navLinks": 18,
+    "errors": [],
+    "bytes": 108280
+   },
+   "mobile": {
+    "height": 7854,
+    "dom": 237,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "crane-lift.webp",
+      "nat": 544,
+      "css": 449,
+      "ratio": 0.83,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 15,
+    "title": 19,
+    "desc": 148,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 1,
+    "tel": 0,
+    "navLinks": 12,
+    "errors": [],
+    "bytes": 108280
+   }
+  },
+  "proforma-invoice.html": {
+   "desktop": {
+    "height": 5512,
+    "dom": 257,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "signing.webp",
+      "nat": 612,
+      "css": 1658,
+      "ratio": 2.71,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 21,
+    "title": 45,
+    "desc": 161,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 16,
+    "errors": [],
+    "bytes": 108280
+   },
+   "mobile": {
+    "height": 8039,
+    "dom": 257,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "signing.webp",
+      "nat": 612,
+      "css": 449,
+      "ratio": 0.73,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 17,
+    "title": 45,
+    "desc": 161,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 10,
+    "errors": [],
+    "bytes": 108280
+   }
+  },
+  "reefer-cold-chain.html": {
+   "desktop": {
+    "height": 5010,
+    "dom": 226,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "container-gold.webp",
+      "nat": 546,
+      "css": 1658,
+      "ratio": 3.04,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 20,
+    "title": 59,
+    "desc": 145,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 16,
+    "errors": [],
+    "bytes": 108280
+   },
+   "mobile": {
+    "height": 7393,
+    "dom": 226,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "container-gold.webp",
+      "nat": 546,
+      "css": 449,
+      "ratio": 0.82,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 16,
+    "title": 59,
+    "desc": 145,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 10,
+    "errors": [],
+    "bytes": 108280
+   }
+  },
+  "services.html": {
+   "desktop": {
+    "height": 5976,
+    "dom": 234,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "robots-wide.webp",
+      "nat": 576,
+      "css": 1658,
+      "ratio": 2.88,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 19,
+    "title": 51,
+    "desc": 155,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 16,
+    "errors": [],
+    "bytes": 108280
+   },
+   "mobile": {
+    "height": 8620,
+    "dom": 234,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "robots-wide.webp",
+      "nat": 576,
+      "css": 449,
+      "ratio": 0.78,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 15,
+    "title": 51,
+    "desc": 155,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 10,
+    "errors": [],
+    "bytes": 108280
+   }
+  },
+  "southern-africa.html": {
+   "desktop": {
+    "height": 6494,
+    "dom": 245,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "durban-sunset.webp",
+      "nat": 546,
+      "css": 1658,
+      "ratio": 3.04,
+      "alt": true
+     },
+     {
+      "src": "crane.webp",
+      "nat": 834,
+      "css": 1138,
+      "ratio": 1.36,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 24,
+    "title": 46,
+    "desc": 141,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 16,
+    "errors": [],
+    "bytes": 123168
+   },
+   "mobile": {
+    "height": 8955,
+    "dom": 245,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "durban-sunset.webp",
+      "nat": 546,
+      "css": 449,
+      "ratio": 0.82,
+      "alt": true
+     },
+     {
+      "src": "crane.webp",
+      "nat": 834,
+      "css": 344,
+      "ratio": 0.41,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 17,
+    "title": 46,
+    "desc": 141,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 10,
+    "errors": [],
+    "bytes": 123168
+   }
+  },
+  "supply.html": {
+   "desktop": {
+    "height": 4219,
+    "dom": 174,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "port-wide.webp",
+      "nat": 500,
+      "css": 1658,
+      "ratio": 3.32,
+      "alt": true
+     },
+     {
+      "src": "pipe.webp",
+      "nat": 922,
+      "css": 1138,
+      "ratio": 1.23,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 19,
+    "title": 43,
+    "desc": 161,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 1,
+    "tel": 0,
+    "navLinks": 10,
+    "errors": [],
+    "bytes": 108280
+   },
+   "mobile": {
+    "height": 5255,
+    "dom": 174,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "port-wide.webp",
+      "nat": 500,
+      "css": 449,
+      "ratio": 0.9,
+      "alt": true
+     },
+     {
+      "src": "pipe.webp",
+      "nat": 922,
+      "css": 344,
+      "ratio": 0.37,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 15,
+    "title": 43,
+    "desc": 161,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 1,
+    "tel": 0,
+    "navLinks": 4,
+    "errors": [],
+    "bytes": 108280
+   }
+  },
+  "terms.html": {
+   "desktop": {
+    "height": 4836,
+    "dom": 224,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "stamp.webp",
+      "nat": 546,
+      "css": 1658,
+      "ratio": 3.04,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 20,
+    "title": 24,
+    "desc": 157,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 1,
+    "tel": 0,
+    "navLinks": 18,
+    "errors": [],
+    "bytes": 108280
+   },
+   "mobile": {
+    "height": 7539,
+    "dom": 224,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "stamp.webp",
+      "nat": 546,
+      "css": 449,
+      "ratio": 0.82,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 16,
+    "title": 24,
+    "desc": 157,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 1,
+    "tel": 0,
+    "navLinks": 12,
+    "errors": [],
+    "bytes": 108280
+   }
+  },
+  "tools-hardware.html": {
+   "desktop": {
+    "height": 6307,
+    "dom": 244,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "tools-flat.webp",
+      "nat": 614,
+      "css": 1658,
+      "ratio": 2.7,
+      "alt": true
+     },
+     {
+      "src": "machinery.webp",
+      "nat": 910,
+      "css": 1138,
+      "ratio": 1.25,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 20,
+    "title": 49,
+    "desc": 120,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 15,
+    "errors": [],
+    "bytes": 123168
+   },
+   "mobile": {
+    "height": 8551,
+    "dom": 244,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "tools-flat.webp",
+      "nat": 614,
+      "css": 449,
+      "ratio": 0.73,
+      "alt": true
+     },
+     {
+      "src": "machinery.webp",
+      "nat": 910,
+      "css": 344,
+      "ratio": 0.38,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 16,
+    "title": 49,
+    "desc": 120,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 9,
+    "errors": [],
+    "bytes": 123168
+   }
+  },
+  "turkiye.html": {
+   "desktop": {
+    "height": 6650,
+    "dom": 253,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "bosphorus.webp",
+      "nat": 1040,
+      "css": 1658,
+      "ratio": 1.59,
+      "alt": true
+     },
+     {
+      "src": "pipe.webp",
+      "nat": 922,
+      "css": 1125,
+      "ratio": 1.22,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 25,
+    "title": 53,
+    "desc": 154,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 17,
+    "errors": [],
+    "bytes": 123168
+   },
+   "mobile": {
+    "height": 9082,
+    "dom": 253,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "bosphorus.webp",
+      "nat": 1040,
+      "css": 449,
+      "ratio": 0.43,
+      "alt": true
+     },
+     {
+      "src": "pipe.webp",
+      "nat": 922,
+      "css": 344,
+      "ratio": 0.37,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 17,
+    "title": 53,
+    "desc": 154,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 11,
+    "errors": [],
+    "bytes": 123168
+   }
+  },
+  "verify-supplier.html": {
+   "desktop": {
+    "height": 4976,
+    "dom": 219,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "machinery.webp",
+      "nat": 910,
+      "css": 1658,
+      "ratio": 1.82,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 20,
+    "title": 49,
+    "desc": 126,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 16,
+    "errors": [],
+    "bytes": 108280
+   },
+   "mobile": {
+    "height": 7344,
+    "dom": 219,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "machinery.webp",
+      "nat": 910,
+      "css": 449,
+      "ratio": 0.49,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 16,
+    "title": 49,
+    "desc": 126,
+    "canonical": true,
+    "og": true,
+    "hreflang": 0,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 10,
+    "errors": [],
+    "bytes": 110164
+   }
+  },
+  "veterinary-certificate.html": {
+   "desktop": {
+    "height": 4988,
+    "dom": 231,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "stamp.webp",
+      "nat": 546,
+      "css": 1658,
+      "ratio": 3.04,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 21,
+    "title": 51,
+    "desc": 157,
+    "canonical": true,
+    "og": true,
+    "hreflang": 3,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 16,
+    "errors": [],
+    "bytes": 108280
+   },
+   "mobile": {
+    "height": 7346,
+    "dom": 231,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "stamp.webp",
+      "nat": 546,
+      "css": 449,
+      "ratio": 0.82,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 17,
+    "title": 51,
+    "desc": 157,
+    "canonical": true,
+    "og": true,
+    "hreflang": 3,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 10,
+    "errors": [],
+    "bytes": 108280
+   }
+  },
+  "west-africa.html": {
+   "desktop": {
+    "height": 6992,
+    "dom": 259,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "chart-west.webp",
+      "nat": 628,
+      "css": 1658,
+      "ratio": 2.64,
+      "alt": true
+     },
+     {
+      "src": "vessel2.webp",
+      "nat": 774,
+      "css": 1138,
+      "ratio": 1.47,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 25,
+    "title": 45,
+    "desc": 143,
+    "canonical": true,
+    "og": true,
+    "hreflang": 3,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 17,
+    "errors": [],
+    "bytes": 144092
+   },
+   "mobile": {
+    "height": 9546,
+    "dom": 259,
+    "h1count": 1,
+    "headingJumps": 0,
+    "imgs": [
+     {
+      "src": "chart-west.webp",
+      "nat": 628,
+      "css": 449,
+      "ratio": 0.72,
+      "alt": true
+     },
+     {
+      "src": "vessel2.webp",
+      "nat": 774,
+      "css": 344,
+      "ratio": 0.44,
+      "alt": true
+     }
+    ],
+    "lowContrast": [],
+    "smallTargets": 18,
+    "title": 45,
+    "desc": 143,
+    "canonical": true,
+    "og": true,
+    "hreflang": 3,
+    "ld": 3,
+    "tel": 0,
+    "navLinks": 11,
+    "errors": [],
+    "bytes": 144092
+   }
+  }
+ },
+ "images": {
+  "ship-dusk.webp": {
+   "nat": 567,
+   "worst": 2.92,
+   "pages": [
+    "404.html",
+    "bill-of-lading.html"
+   ]
+  },
+  "miami-dusk.webp": {
+   "nat": 546,
+   "worst": 3.04,
+   "pages": [
+    "about.html"
+   ]
+  },
+  "terminal.webp": {
+   "nat": 1023,
+   "worst": 1.11,
+   "pages": [
+    "about.html",
+    "experience.html"
+   ]
+  },
+  "chart-west.webp": {
+   "nat": 628,
+   "worst": 2.64,
+   "pages": [
+    "afrique-ouest.html",
+    "west-africa.html"
+   ]
+  },
+  "vessel2.webp": {
+   "nat": 774,
+   "worst": 1.47,
+   "pages": [
+    "afrique-ouest.html",
+    "food-agricultural.html",
+    "west-africa.html"
+   ]
+  },
+  "quarry-cut.webp": {
+   "nat": 632,
+   "worst": 2.62,
+   "pages": [
+    "antidumping-check.html"
+   ]
+  },
+  "quarry-stone.webp": {
+   "nat": 546,
+   "worst": 3.43,
+   "pages": [
+    "building-materials.html",
+    "index.html"
+   ]
+  },
+  "pipe.webp": {
+   "nat": 922,
+   "worst": 1.23,
+   "pages": [
+    "building-materials.html",
+    "metals-pipe.html",
+    "supply.html",
+    "turkiye.html"
+   ]
+  },
+  "stamp.webp": {
+   "nat": 546,
+   "worst": 3.04,
+   "pages": [
+    "certificat-veterinaire.html",
+    "terms.html",
+    "veterinary-certificate.html"
+   ]
+  },
+  "chart-old.webp": {
+   "nat": 554,
+   "worst": 2.99,
+   "pages": [
+    "certificate-of-origin.html"
+   ]
+  },
+  "port-cma.webp": {
+   "nat": 552,
+   "worst": 3,
+   "pages": [
+    "china.html"
+   ]
+  },
+  "machinery.webp": {
+   "nat": 910,
+   "worst": 1.82,
+   "pages": [
+    "china.html",
+    "industrial-equipment.html",
+    "tools-hardware.html",
+    "verify-supplier.html"
+   ]
+  },
+  "miami-bay.webp": {
+   "nat": 546,
+   "worst": 3.04,
+   "pages": [
+    "contact-fr.html",
+    "contact.html"
+   ]
+  },
+  "loading-truck.webp": {
+   "nat": 546,
+   "worst": 3.04,
+   "pages": [
+    "container-loading.html"
+   ]
+  },
+  "ship-aerial.webp": {
+   "nat": 460,
+   "worst": 3.6,
+   "pages": [
+    "corridors.html"
+   ]
+  },
+  "vessel.webp": {
+   "nat": 1023,
+   "worst": 1.11,
+   "pages": [
+    "corridors.html"
+   ]
+  },
+  "containers-wall.webp": {
+   "nat": 546,
+   "worst": 3.04,
+   "pages": [
+    "customs-data-pricing.html",
+    "index.html"
+   ]
+  },
+  "coldstore.webp": {
+   "nat": 693,
+   "worst": 2.39,
+   "pages": [
+    "decoupes-volaille.html",
+    "poultry-cuts.html"
+   ]
+  },
+  "truck-road.webp": {
+   "nat": 544,
+   "worst": 3.05,
+   "pages": [
+    "demurrage-detention.html"
+   ]
+  },
+  "silos.webp": {
+   "nat": 551,
+   "worst": 4.01,
+   "pages": [
+    "food-agricultural.html",
+    "index.html"
+   ]
+  },
+  "crane-dusk.webp": {
+   "nat": 543,
+   "worst": 3.05,
+   "pages": [
+    "guides.html"
+   ]
+  },
+  "yard-dusk.webp": {
+   "nat": 614,
+   "worst": 2.7,
+   "pages": [
+    "hs-code.html"
+   ]
+  },
+  "ship-sea.webp": {
+   "nat": 544,
+   "worst": 3.05,
+   "pages": [
+    "incoterms.html"
+   ]
+  },
+  "port-noir.webp": {
+   "nat": 546,
+   "worst": 3.11,
+   "pages": [
+    "index.html"
+   ]
+  },
+  "pipe.jpg": {
+   "nat": 0,
+   "worst": 0,
+   "pages": [
+    "index.html"
+   ]
+  },
+  "quarry-cut.jpg": {
+   "nat": 0,
+   "worst": 0,
+   "pages": [
+    "index.html"
+   ]
+  },
+  "machinery.jpg": {
+   "nat": 0,
+   "worst": 0,
+   "pages": [
+    "index.html"
+   ]
+  },
+  "tools-flat.jpg": {
+   "nat": 0,
+   "worst": 0,
+   "pages": [
+    "index.html"
+   ]
+  },
+  "steel-tubes.jpg": {
+   "nat": 0,
+   "worst": 0,
+   "pages": [
+    "index.html"
+   ]
+  },
+  "pallets-wall.jpg": {
+   "nat": 0,
+   "worst": 0,
+   "pages": [
+    "index.html"
+   ]
+  },
+  "coldstore.jpg": {
+   "nat": 0,
+   "worst": 0,
+   "pages": [
+    "index.html"
+   ]
+  },
+  "ship-aerial.jpg": {
+   "nat": 0,
+   "worst": 0,
+   "pages": [
+    "index.html"
+   ]
+  },
+  "loading-truck.jpg": {
+   "nat": 0,
+   "worst": 0,
+   "pages": [
+    "index.html"
+   ]
+  },
+  "crane-dusk.jpg": {
+   "nat": 0,
+   "worst": 0,
+   "pages": [
+    "index.html"
+   ]
+  },
+  "robots.webp": {
+   "nat": 504,
+   "worst": 3.29,
+   "pages": [
+    "industrial-equipment.html"
+   ]
+  },
+  "pallets-stack.webp": {
+   "nat": 542,
+   "worst": 3.06,
+   "pages": [
+    "ispm-15.html"
+   ]
+  },
+  "crane-red.webp": {
+   "nat": 531,
+   "worst": 3.12,
+   "pages": [
+    "landed-price.html"
+   ]
+  },
+  "signing.webp": {
+   "nat": 612,
+   "worst": 2.71,
+   "pages": [
+    "letter-of-credit.html",
+    "proforma-invoice.html"
+   ]
+  },
+  "steel-tubes.webp": {
+   "nat": 544,
+   "worst": 3.05,
+   "pages": [
+    "metals-pipe.html"
+   ]
+  },
+  "pallets-wall.webp": {
+   "nat": 546,
+   "worst": 3.04,
+   "pages": [
+    "paper-packaging.html"
+   ]
+  },
+  "crane.webp": {
+   "nat": 834,
+   "worst": 1.36,
+   "pages": [
+    "paper-packaging.html",
+    "southern-africa.html"
+   ]
+  },
+  "crane-lift.webp": {
+   "nat": 544,
+   "worst": 3.05,
+   "pages": [
+    "privacy.html"
+   ]
+  },
+  "container-gold.webp": {
+   "nat": 546,
+   "worst": 3.04,
+   "pages": [
+    "reefer-cold-chain.html"
+   ]
+  },
+  "robots-wide.webp": {
+   "nat": 576,
+   "worst": 2.88,
+   "pages": [
+    "services.html"
+   ]
+  },
+  "durban-sunset.webp": {
+   "nat": 546,
+   "worst": 3.04,
+   "pages": [
+    "southern-africa.html"
+   ]
+  },
+  "port-wide.webp": {
+   "nat": 500,
+   "worst": 3.32,
+   "pages": [
+    "supply.html"
+   ]
+  },
+  "tools-flat.webp": {
+   "nat": 614,
+   "worst": 2.7,
+   "pages": [
+    "tools-hardware.html"
+   ]
+  },
+  "bosphorus.webp": {
+   "nat": 1040,
+   "worst": 1.59,
+   "pages": [
+    "turkiye.html"
+   ]
+  }
+ },
+ "totals": {}
+}

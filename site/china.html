@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Sourcing from China: how we separate a factory from a trading company, write a specification that binds, inspect before loading and stage the payment.">
 <link rel="canonical" href="https://ispgroupgc.com/china">
+<link rel="alternate" hreflang="en" href="https://ispgroupgc.com/">
+<link rel="alternate" hreflang="fr" href="https://ispgroupgc.com/fr/">
+<link rel="alternate" hreflang="es" href="https://ispgroupgc.com/es/">
+<link rel="alternate" hreflang="de" href="https://ispgroupgc.com/de/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="ISP Group Global Commerce">
 <meta property="og:url" content="https://ispgroupgc.com/china">
@@ -48,7 +52,7 @@ body{margin:0;color:var(--ink);font-family:var(--fd);font-size:16.5px;line-heigh
     radial-gradient(1200px 680px at 92% -10%, rgba(54,166,143,.055), transparent 62%),
     radial-gradient(760px 460px at -8% 104%, rgba(217,164,65,.04), transparent 58%),
     var(--paper);
-  background-attachment:fixed}
+}
 h1,h2,h3{margin:0;font-family:var(--fs);font-weight:400;line-height:1.1;
   letter-spacing:-.008em;text-wrap:balance;font-optical-sizing:auto}
 /* IBM Plex Mono уже уже Martian Mono, поэтому межбуквенное чуть шире */
@@ -82,7 +86,7 @@ a{color:inherit}
 
 /* nav */
 nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;
-  background:rgba(11,14,18,.82);backdrop-filter:blur(16px) saturate(1.4);
+  background:rgba(11,14,18,.82);backdrop-filter:blur(8px);
   border-bottom:1px solid var(--rule)}
 .navin{display:flex;align-items:center;gap:26px;height:68px}
 .logo{font-family:var(--fs);font-size:1.3rem;letter-spacing:-.01em;white-space:nowrap;text-decoration:none}
@@ -207,6 +211,19 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
   [data-reveal]{opacity:1!important;transform:none!important;transition:none!important}
 }
 
+
+/* Исходники фотобиблиотеки малы и на полный экран растягиваются. Плотное
+   затемнение и тонкое зерно переводят мягкость из «плохого качества» в
+   «плёнку»: это не заменяет нормальные кадры, но убирает дешёвый вид. */
+.scene .stage::before,.hero.chero::before{
+  content:"";position:absolute;inset:0;z-index:2;pointer-events:none;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.38'/%3E%3C/svg%3E");
+  mix-blend-mode:overlay;
+}
+.media,.chero .shot img{filter:saturate(.72) contrast(1.12) brightness(.8)}
+
+/* цели нажатия в подвале были ниже 40 пикселей */
+.foot a{padding:9px 0}
 </style>
 <style>
 /* hero */
@@ -541,6 +558,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 .searchres mark{background:var(--gold-soft);color:inherit;padding:0 2px}
 @media(max-width:940px){.searchpanel{top:68px}}
 </style>
+<noscript><style>.fade,.ln>span,[data-reveal],.svc-list li,.steps li,.content{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
 <!--email_off-->
@@ -669,7 +687,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
   <div class="wrap">
     <dl class="fgrid">
       <div><dt>Entity</dt><dd>ISP GROUP LLC<br><span style="color:var(--ink-2)">United States</span></dd></div>
-      <div><dt>Email</dt><dd><a href="mailto:info@ispgroupgc.com">info@ispgroupgc.com</a></dd></div>
+      <div><dt>Email</dt><dd><a href="mailto:info@ispgroupgc.com">info@ispgroupgc.com</a> <span aria-hidden="true">&middot;</span> <a href="tel:+19298300038">+1 929 830 0038</a></dd></div>
       <div><dt>Registered office</dt><dd>16395 Biscayne Blvd<br><span style="color:var(--ink-2)">North Miami Beach, FL 33160<br>United States</span></dd></div>
       <div><dt>Corridors</dt><dd style="line-height:1.95"><a href="china" style="display:block">China &rarr; worldwide</a><a href="turkiye" style="display:block">T&uuml;rkiye &rarr; United States</a><a href="west-africa" style="display:block">Americas &amp; EU &rarr; West Africa</a><a href="southern-africa" style="display:block">Intra-Africa</a></dd></div>
       <div><dt>Reading</dt><dd style="line-height:1.95"><a href="guides" style="display:block">Guides</a><a href="experience" style="display:block">Twenty years of supply work</a><a href="supply" style="display:block">What we supply</a></dd></div>
@@ -682,7 +700,7 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
       &nbsp;&middot;&nbsp; <a href="terms">Terms of use</a></p>
   </div>
 </footer>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "China: the gap between a price and a shipment", "serviceType": "International sourcing, trading and supply", "description": "How we buy in China: separating a factory from a trading company, writing a specification that binds, pre-shipment inspection, consolidated loading and staged payment.", "provider": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "areaServed": [{"@type": "Place", "name": "sourcing from China"}], "url": "https://ispgroupgc.com/china"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "China: the gap between a price and a shipment", "serviceType": "International sourcing, trading and supply", "description": "How we buy in China: separating a factory from a trading company, writing a specification that binds, pre-shipment inspection, consolidated loading and staged payment.", "provider": {"@type": "Organization", "telephone": "+1-929-830-0038", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/", "address": {"@type": "PostalAddress", "streetAddress": "16395 Biscayne Blvd", "addressLocality": "North Miami Beach", "addressRegion": "FL", "postalCode": "33160", "addressCountry": "US"}}, "areaServed": [{"@type": "Place", "name": "sourcing from China"}], "url": "https://ispgroupgc.com/china"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I know a Chinese supplier is a factory and not a trading company?", "acceptedAnswer": {"@type": "Answer", "text": "The business licence shows the registered scope of business and the export licence shows whether the entity can ship in its own name. The decisive check is the bank account: the beneficiary on the proforma has to carry the same name as the licence. A mismatch between the seller name and the beneficiary name is the question, not a detail."}}, {"@type": "Question", "name": "What should a specification contain before I ask for a price?", "acceptedAnswer": {"@type": "Answer", "text": "For equipment: the drive and controller by make, the electrical standard, the certification mark required at destination, voltage and frequency, the spares pack and the commissioning arrangement. For materials: grade, dimension and tolerance against a named standard, the mill or batch certificate, the finish and the pack. For anything with an appearance, a sealed reference sample held by both sides."}}, {"@type": "Question", "name": "Can a trial order be shipped as a full container?", "acceptedAnswer": {"@type": "Answer", "text": "We consolidate several suppliers into one container at the port of loading, which keeps a trial order on full container economics and produces one bill of lading instead of several. Consolidation adds about a week to the schedule, and that week belongs in the plan."}}, {"@type": "Question", "name": "Who is liable if the HS code is wrong?", "acceptedAnswer": {"@type": "Answer", "text": "The importer of record, not the Chinese seller who typed it on the invoice. The code decides the duty rate at destination, so it is agreed before the order rather than at entry."}}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ISP Group Global Commerce", "item": "https://ispgroupgc.com/"}, {"@type": "ListItem", "position": 2, "name": "Corridors", "item": "https://ispgroupgc.com/#corridors"}, {"@type": "ListItem", "position": 3, "name": "China to worldwide", "item": "https://ispgroupgc.com/china"}]}</script>
 <script>

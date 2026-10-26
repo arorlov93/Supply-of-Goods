@@ -40,9 +40,6 @@ export async function onRequestPost({ request, env }) {
   // ловушка для ботов: поле скрыто стилями, человек его не заполняет
   if (d.website) return json({ ok: true });
 
-  if (!env.RESEND_KEY) {
-    return json({ ok: false, code: "not_configured" }, 503);
-  }
 
   const esc = (s) =>
     String(s ?? "").replace(/[<>&"]/g, (c) =>
@@ -67,6 +64,44 @@ export async function onRequestPost({ request, env }) {
     `Received: ${new Date().toISOString()}`,
   ].join("\n");
 
+  const TO = env.QUOTE_TO || "info@ispgroupgc.com";
+
+  /* Без ключа Resend письмо уходит через ретранслятор, которому не нужна ни
+     регистрация, ни DNS: адрес получателя остаётся на сервере и в браузер не
+     попадает. Как только в переменных окружения появится RESEND_KEY, письма
+     пойдут с собственного домена, и эта ветка перестанет использоваться. */
+  if (!env.RESEND_KEY) {
+    let rr;
+    try {
+      rr = await fetch("https://formsubmit.co/ajax/" + encodeURIComponent(TO), {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          Origin: "https://ispgroupgc.com",
+          Referer: "https://ispgroupgc.com/",
+        },
+        body: JSON.stringify({
+          _subject: `Quote request: ${d.co || d.name}${d.country ? " / " + d.country : ""}`,
+          _replyto: String(d.mail).trim(),
+          _template: "table",
+          _captcha: "false",
+          ...Object.fromEntries(
+            FIELDS.filter((k) => d[k] && String(d[k]).trim()).map((k) => [LABEL[k], String(d[k])])
+          ),
+          Origin_page: String(d.page || "/"),
+          Visitor_country: request.headers.get("cf-ipcountry") || "unknown",
+        }),
+      });
+    } catch {
+      return json({ ok: false, code: "upstream_unreachable" }, 502);
+    }
+    const body = await rr.json().catch(() => ({}));
+    if (rr.ok && String(body.success) === "true") return json({ ok: true, via: "relay" });
+    console.log("relay failed", rr.status, JSON.stringify(body).slice(0, 200));
+    return json({ ok: false, code: "mail_failed", status: rr.status }, 502);
+  }
+
   let r;
   try {
     r = await fetch("https://api.resend.com/emails", {
@@ -77,7 +112,7 @@ export async function onRequestPost({ request, env }) {
       },
       body: JSON.stringify({
         from: env.QUOTE_FROM || "ISP Group Site <quotes@ispgroupgc.com>",
-        to: [env.QUOTE_TO || "info@ispgroupgc.com"],
+        to: [TO],
         reply_to: String(d.mail).trim(),
         subject: `Quote request: ${d.co || d.name}${d.country ? " / " + d.country : ""}`,
         html: `<h3 style="font:600 16px system-ui">New quote request</h3>

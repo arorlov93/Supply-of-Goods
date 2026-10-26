@@ -58,6 +58,9 @@ a{color:inherit}
   letter-spacing:.22em;text-transform:uppercase;color:var(--steel);
   display:block;margin:0 0 18px;
 }
+.scene .content .eyebrow{color:#cdd4db;text-shadow:0 1px 10px rgba(8,10,13,.85)}
+.scene .content h1,.scene .content h2{text-shadow:0 2px 24px rgba(8,10,13,.55)}
+.scene .content .lead,.scene .content .svc-list b{text-shadow:0 1px 12px rgba(8,10,13,.8)}
 .lead{font-size:clamp(1.02rem,1.45vw,1.4rem);line-height:1.5;color:var(--paper);max-width:46ch;margin:0}
 .muted{color:var(--steel)}
 .on-light .muted{color:var(--steel-2)}
@@ -89,7 +92,25 @@ header.top::before{
 nav.top-nav{margin-left:auto;display:flex;gap:26px;align-items:center}
 nav.top-nav a{font-size:13px;text-decoration:none;opacity:.78}
 nav.top-nav a:hover{opacity:1}
-@media (max-width:1080px){nav.top-nav a:not(.cta){display:none}}
+@media (max-width:1080px){
+  nav.top-nav a:not(.cta){display:none}
+  .menubtn{display:inline-flex}
+  nav.top-nav.open{position:fixed;inset:0;z-index:60;flex-direction:column;
+    justify-content:center;gap:4px;background:rgba(8,10,13,.97);margin:0}
+  nav.top-nav.open a{display:block;font-size:1.45rem;padding:12px 0;opacity:1}
+  nav.top-nav.open .langsw{margin:22px 0 0}
+}
+.menubtn{display:none;align-items:center;justify-content:center;width:42px;height:42px;
+  margin-left:auto;background:none;border:1px solid currentColor;border-radius:100px;
+  color:inherit;cursor:pointer;padding:0}
+.menubtn span,.menubtn span::before,.menubtn span::after{content:"";display:block;
+  width:16px;height:1.5px;background:currentColor;transition:transform .25s}
+.menubtn span::before{transform:translateY(-5px)}
+.menubtn span::after{transform:translateY(3.5px)}
+.menubtn[aria-expanded=true]{position:fixed;right:var(--gut);top:16px;z-index:61}
+.menubtn[aria-expanded=true] span{background:transparent}
+.menubtn[aria-expanded=true] span::before{transform:rotate(45deg)}
+.menubtn[aria-expanded=true] span::after{transform:rotate(-45deg) translateY(0)}
 .cta{
   border:1px solid currentColor;border-radius:100px;padding:9px 18px;
   font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:1!important;
@@ -122,13 +143,14 @@ nav.top-nav a:hover{opacity:1}
   max-width:var(--maxw);width:100%;margin:0 auto;
 }
 .scene .stage::after{
-  content:"";position:absolute;inset:auto 0 0;height:72%;z-index:2;pointer-events:none;
-  background:linear-gradient(180deg,rgba(8,10,13,0) 0%,rgba(8,10,13,.55) 46%,rgba(8,10,13,.93) 100%);
+  content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:linear-gradient(180deg,rgba(8,10,13,.25) 0%,rgba(8,10,13,.12) 26%,
+    rgba(8,10,13,.68) 62%,rgba(8,10,13,.96) 100%);
 }
 #s-cats .stage::after{display:none}
 
 /* 01 opening */
-#s-open{height:230svh}
+#s-open{height:190svh}
 #s-open .media{transform:scale(calc(1.18 - var(--p,0)*.18));transform-origin:50% 42%}
 #s-open .content{transform:translateY(calc(var(--p,0)*-7vh));opacity:calc(1 - max(0, var(--p,0) - .46) * 1.85)}
 .hero-grid{display:grid;gap:clamp(22px,3vw,48px);grid-template-columns:minmax(0,1fr) minmax(0,.62fr);align-items:end}
@@ -142,14 +164,14 @@ nav.top-nav a:hover{opacity:1}
 @keyframes slide{0%{transform:scaleX(.2);transform-origin:left}50%{transform:scaleX(1);transform-origin:left}50.1%{transform-origin:right}100%{transform:scaleX(.2);transform-origin:right}}
 
 /* 02 source: mask reveal + push */
-#s-source{height:240svh}
+#s-source{height:190svh}
 #s-source .layer-b{clip-path:inset(calc((1 - var(--p,0)*1.6) * 50%) 0);transition:none}
 #s-source .layer-b img{transform:scale(calc(1.3 - var(--p,0)*.3))}
 #s-source .layer-a img{transform:scale(calc(1 + var(--p,0)*.35));filter:brightness(calc(1 - var(--p,0)*.45))}
 #s-source .content{opacity:calc(min(1, max(0, (var(--p,0) - .28) * 3.4)))}
 
 /* 03 match cut */
-#s-match{height:250svh}
+#s-match{height:195svh}
 #s-match .layer-b{clip-path:circle(calc(var(--p,0)*112%) at 50% 50%)}
 #s-match .layer-a img{transform:rotate(calc(var(--p,0)*22deg)) scale(calc(1.06 + var(--p,0)*.2))}
 #s-match .layer-b img{transform:rotate(calc(-18deg + var(--p,0)*18deg)) scale(calc(1.34 - var(--p,0)*.3))}
@@ -166,7 +188,7 @@ nav.top-nav a:hover{opacity:1}
 .svc-list i{font-family:var(--mono);font-style:normal;font-size:11px;color:var(--gold);letter-spacing:.14em}
 
 /* 04 horizontal categories */
-#s-cats{height:400svh;background:var(--paper);color:var(--black)}
+#s-cats{height:330svh;background:var(--paper);color:var(--black)}
 #s-cats .stage{align-content:center}
 .rail-head{position:absolute;top:0;left:0;right:0;padding:clamp(86px,13vh,140px) var(--gut) 0;z-index:5;pointer-events:none}
 .rail{
@@ -189,7 +211,7 @@ nav.top-nav a:hover{opacity:1}
 .card .n{position:absolute;top:18px;left:20px;z-index:2;font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:rgba(244,243,239,.75)}
 
 /* 05 movement */
-#s-move{height:260svh}
+#s-move{height:200svh}
 #s-move .layer-a img{transform:translate3d(calc(var(--p,0)*-14%),0,0) scale(1.22)}
 #s-move .layer-b{clip-path:inset(0 calc((1 - min(1, var(--p,0)*1.75)) * 100%) 0 0)}
 #s-move .layer-b img{transform:translate3d(calc((1 - min(1, var(--p,0)*1.75))*16%),0,0) scale(1.14)}
@@ -226,7 +248,7 @@ nav.top-nav a:hover{opacity:1}
 .why-grid p{margin:0;color:var(--steel);font-size:.95rem}
 
 /* 08 final */
-#s-end{height:200svh}
+#s-end{height:170svh}
 #s-end .media{transform:scale(calc(1.3 - var(--p,0)*.3))}
 #s-end .content{justify-content:center;align-items:flex-start}
 .form-card{
@@ -263,6 +285,10 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
 .foot-note{max-width:var(--maxw);margin:44px auto 0;padding-top:22px;border-top:1px solid rgba(244,243,239,.1);color:var(--steel);font-size:12.5px;display:flex;flex-wrap:wrap;gap:8px 22px}
 
 /* reduced motion: keep the story, drop the camera */
+@media (max-width:760px){
+  #s-open{height:150svh}#s-source{height:150svh}#s-match{height:155svh}
+  #s-cats{height:260svh}#s-move{height:160svh}#s-end{height:140svh}
+}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .scene{height:auto!important}
@@ -284,6 +310,19 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
 .langsw a{text-decoration:none;opacity:.55}
 .langsw a:hover{opacity:1}
 .langsw [aria-current]{color:var(--gold);opacity:1}
+
+/* Исходники фотобиблиотеки малы и на полный экран растягиваются. Плотное
+   затемнение и тонкое зерно переводят мягкость из «плохого качества» в
+   «плёнку»: это не заменяет нормальные кадры, но убирает дешёвый вид. */
+.scene .stage::before,.hero.chero::before{
+  content:"";position:absolute;inset:0;z-index:2;pointer-events:none;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.38'/%3E%3C/svg%3E");
+  mix-blend-mode:overlay;
+}
+.media,.chero .shot img{filter:saturate(.72) contrast(1.12) brightness(.8)}
+
+/* цели нажатия в подвале были ниже 40 пикселей */
+.foot a{padding:9px 0}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"ISP GROUP LLC",
@@ -294,21 +333,27 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
 "knowsAbout":["international trade","commodity sourcing","supplier verification","import and export","landed cost","Incoterms","letter of credit","container shipping","sourcing from China","delivery to unequipped shorelines","European Union import certification"],
 "areaServed":[{"@type":"Place","name":"United States"},{"@type":"Place","name":"China"},{"@type":"Place","name":"Russia"},{"@type":"Place","name":"European Union"},{"@type":"Place","name":"West Africa"},{"@type":"Place","name":"Türkiye"}]}
 </script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "ISP Group Global Commerce", "url": "https://ispgroupgc.com/", "publisher": {"@type": "Organization", "name": "ISP GROUP LLC"}, "inLanguage": "en"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "ISP Group Global Commerce", "url": "https://ispgroupgc.com/", "publisher": {"@type": "Organization", "telephone": "+1-929-830-0038", "name": "ISP GROUP LLC"}, "inLanguage": "en"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "serviceType": "International sourcing, trading and supply", "provider": {"@type": "Organization", "name": "ISP GROUP LLC", "url": "https://ispgroupgc.com/"}, "areaServed": [{"@type": "Place", "name": "United States"}, {"@type": "Place", "name": "European Union"}, {"@type": "Place", "name": "China"}, {"@type": "Place", "name": "Türkiye"}, {"@type": "Place", "name": "West Africa"}, {"@type": "Place", "name": "Russia"}, {"@type": "Place", "name": "Southern Africa"}], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "What we supply", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Building and finishing materials"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Industrial equipment and machinery"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tools, hardware and fasteners"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Metals and pipe"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Paper, packaging and consumables"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Food and agricultural goods"}}]}}</script>
+<noscript><style>.fade,.ln>span,[data-reveal],.svc-list li,.steps li,.content{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="top">
   <a class="wordmark" href="/">ISP Group <em>Global Commerce</em></a>
-  <nav class="top-nav" aria-label="Primary">
+  <button class="menubtn" id="menubtn" type="button" aria-expanded="false"
+    aria-controls="topnav" aria-label="Menu"><span></span></button>
+  <nav class="top-nav" id="topnav" aria-label="Primary">
     <a href="services">What we do</a>
     <a href="supply">What we supply</a>
     <a href="corridors">Corridors</a>
     <a href="guides">Guides</a>
     <a href="about">About</a>
     <a href="contact">Contact</a>
+    <div class="langsw" aria-label="Language"><span aria-current="true">EN</span><a href="/fr/" hreflang="fr" title="Français">FR</a><a href="/es/" hreflang="es" title="Español">ES</a><a href="/de/" hreflang="de" title="Deutsch">DE</a></div>
+    <div class="langsw" aria-label="Language"><span aria-current="true">EN</span><a href="/fr/" hreflang="fr" title="Français">FR</a><a href="/es/" hreflang="es" title="Español">ES</a><a href="/de/" hreflang="de" title="Deutsch">DE</a></div>
+    <div class="langsw" aria-label="Language"><span aria-current="true">EN</span><a href="/fr/" hreflang="fr" title="Français">FR</a><a href="/es/" hreflang="es" title="Español">ES</a><a href="/de/" hreflang="de" title="Deutsch">DE</a></div>
     <div class="langsw" aria-label="Language"><span aria-current="true">EN</span><a href="/fr/" hreflang="fr" title="Français">FR</a><a href="/es/" hreflang="es" title="Español">ES</a><a href="/de/" hreflang="de" title="Deutsch">DE</a></div>
     <a class="cta" href="#request">Request a quote</a>
   </nav>
@@ -327,15 +372,15 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
     <div class="content">
       <div class="hero-grid">
         <div>
-          <span class="eyebrow fade">ISP GROUP LLC &middot; Aventura, Florida</span>
+          <span class="eyebrow fade">ISP GROUP LLC &middot; International sourcing and supply</span>
           <h1 class="display" id="h-open">
-            <span class="ln"><span>WE BUY</span></span>
-            <span class="ln"><span>IN OUR OWN</span></span>
-            <span class="ln"><span>NAME.</span></span>
+            <span class="ln"><span>NAME THE</span></span>
+            <span class="ln"><span>PRODUCT.</span></span>
+            <span class="ln"><span>WE DELIVER IT.</span></span>
           </h1>
         </div>
         <div>
-          <p class="lead fade">We find the producer, confirm it can legally ship to your country, buy the goods ourselves and deliver them to your port. Principal, not a broker.</p>
+          <p class="lead fade">Industrial goods, building materials, equipment, packaging and food. We find the producer, verify it, buy in our own name and deliver to your port. Principal, not a broker.</p>
           <p class="fade" style="margin:26px 0 0"><a class="btn-lg" href="#request">Discuss your requirements</a></p>
         </div>
       </div>
@@ -375,8 +420,8 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
       <img class="media" src="media/pipe.jpg" alt="Looking down the bore of a large steel pipe" loading="lazy" decoding="async"></picture>
     </div>
     <div class="layer-b">
-      <picture><source srcset="media/machinery.webp" type="image/webp">
-      <img class="media" src="media/machinery.jpg" alt="Industrial machinery on a production floor" loading="lazy" decoding="async"></picture>
+      <picture><source srcset="media/silos.webp" type="image/webp">
+      <img class="media" src="media/silos.jpg" alt="Industrial silos and plant structures" loading="lazy" decoding="async"></picture>
     </div>
     <div class="scrim"></div>
     <div class="content">
@@ -401,9 +446,9 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
     <div class="rail-head" data-reveal>
       <span class="eyebrow fade">03 &mdash; What we supply</span>
       <h2 class="display sm" id="h-cats" style="color:var(--black)">
-        <span class="ln"><span>SIX CATEGORIES.</span></span>
+        <span class="ln"><span>WHAT WE SUPPLY.</span></span>
       </h2>
-      <p class="lead muted fade" style="margin-top:18px;color:var(--steel-2)">Where we already have producer relationships and a documented lane.</p>
+      <p class="lead muted fade" style="margin-top:18px;color:var(--steel-2)">These are the lanes we already run, food among them. They are where we start, not where we stop: name a product outside this list and we will source it the same way.</p>
     </div>
     <div class="rail">
       <a class="card" href="building-materials">
@@ -412,7 +457,7 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
         <span class="cap"><b>Building and finishing materials</b><span>Stone &middot; tile &middot; cement &middot; cable</span></span>
       </a>
       <a class="card" href="industrial-equipment">
-        <picture><source srcset="media/robots.webp" type="image/webp"><img src="media/robots.jpg" alt="Robotic arms on an assembly line" loading="lazy" decoding="async"></picture>
+        <picture><source srcset="media/machinery.webp" type="image/webp"><img src="media/machinery.jpg" alt="Industrial machinery on a production floor" loading="lazy" decoding="async"></picture>
         <span class="n">02</span>
         <span class="cap"><b>Industrial equipment and machinery</b><span>Lines &middot; compressors &middot; pumps</span></span>
       </a>
@@ -422,7 +467,7 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
         <span class="cap"><b>Tools, hardware and fasteners</b><span>Power tools &middot; abrasives &middot; fixings</span></span>
       </a>
       <a class="card" href="metals-pipe">
-        <picture><source srcset="media/robots-wide.webp" type="image/webp"><img src="media/robots-wide.jpg" alt="Formed metal sections on a factory floor" loading="lazy" decoding="async"></picture>
+        <picture><source srcset="media/steel-tubes.webp" type="image/webp"><img src="media/steel-tubes.jpg" alt="Steel sections and tube stacked at a mill" loading="lazy" decoding="async"></picture>
         <span class="n">04</span>
         <span class="cap"><b>Metals and pipe</b><span>Sections &middot; sheet &middot; line pipe</span></span>
       </a>
@@ -510,14 +555,14 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
         <span class="ln"><span>SEND A SPECIFICATION.</span></span>
         <span class="ln"><span>GET A LANDED PRICE.</span></span>
       </h2>
-      <form class="form-card fade" id="rq" novalidate>
+      <form class="form-card fade" id="rq">
         <div class="fgrid">
-          <div><label for="q-name">Name</label><input id="q-name" type="text" autocomplete="name"></div>
-          <div><label for="q-mail">Work e-mail</label><input id="q-mail" type="email" autocomplete="email"></div>
-          <div><label for="q-co">Company</label><input id="q-co" type="text" autocomplete="organization"></div>
-          <div><label for="q-country">Country</label><input id="q-country" type="text" autocomplete="country-name"></div>
+          <div><label for="q-name">Name</label><input id="q-name" name="name" required type="text" autocomplete="name"></div>
+          <div><label for="q-mail">Work e-mail</label><input id="q-mail" name="mail" required type="email" autocomplete="email"></div>
+          <div><label for="q-co">Company</label><input id="q-co" name="co" type="text" autocomplete="organization"></div>
+          <div><label for="q-country">Country</label><input id="q-country" name="country" type="text" autocomplete="country-name"></div>
           <div><label for="q-cat">Category</label>
-            <select id="q-cat">
+            <select id="q-cat" name="cat">
               <option>Building and finishing materials</option>
               <option>Industrial equipment and machinery</option>
               <option>Tools, hardware and fasteners</option>
@@ -528,11 +573,11 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
             </select>
           </div>
           <div><label for="q-terms">Terms to quote</label>
-            <select id="q-terms"><option>Not sure, advise</option><option>EXW</option><option>FCA</option><option>FOB</option><option>CFR</option><option>CIF</option><option>DAP</option><option>DDP</option></select>
+            <select id="q-terms" name="terms"><option>Not sure, advise</option><option>EXW</option><option>FCA</option><option>FOB</option><option>CFR</option><option>CIF</option><option>DAP</option><option>DDP</option></select>
           </div>
-          <div><label for="q-qty">Quantity</label><input id="q-qty" type="text" placeholder="Containers, tonnes, pieces"></div>
-          <div><label for="q-dest">Destination port or city</label><input id="q-dest" type="text"></div>
-          <div class="f-full"><label for="q-spec">Specification</label><textarea id="q-spec" placeholder="Standard, grade, dimensions, certification, deadline"></textarea></div>
+          <div><label for="q-qty">Quantity</label><input id="q-qty" name="qty" type="text" placeholder="Containers, tonnes, pieces"></div>
+          <div><label for="q-dest">Destination port or city</label><input id="q-dest" name="dest" type="text"></div>
+          <div class="f-full"><label for="q-spec">Specification</label><textarea id="q-spec" name="spec" required placeholder="Standard, grade, dimensions, certification, deadline"></textarea></div>
         </div>
         <div class="hp" aria-hidden="true"><label for="q-website">Website</label><input id="q-website" type="text" tabindex="-1" autocomplete="off"></div>
         <p style="margin:20px 0 0"><button class="btn-lg" type="submit">Start a trade request</button></p>
@@ -549,7 +594,8 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
     <div>
       <h4>ISP Group LLC</h4>
       <p class="muted" style="margin:0;font-size:14px;line-height:1.7">16395 Biscayne Blvd<br>North Miami Beach, FL 33160<br>United States</p>
-      <p style="margin:14px 0 0"><a href="mailto:info@ispgroupgc.com">info@ispgroupgc.com</a></p>
+      <p style="margin:14px 0 0"><a href="mailto:info@ispgroupgc.com">info@ispgroupgc.com</a>
+      <a href="tel:+19298300038">+1 929 830 0038</a></p>
     </div>
     <div><h4>Supply</h4>
       <a href="building-materials">Building materials</a><a href="industrial-equipment">Industrial equipment</a>
@@ -612,6 +658,13 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
   /* hero reveals immediately */
   var first = document.querySelector('#s-open .content');
   if(first) requestAnimationFrame(function(){ first.classList.add('in'); });
+
+  var mb = document.getElementById('menubtn'), nv = document.getElementById('topnav');
+  if(mb && nv) mb.addEventListener('click', function(){
+    var open = nv.classList.toggle('open');
+    mb.setAttribute('aria-expanded', open ? 'true' : 'false');
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
 
   /* the request is posted to our own endpoint; if that cannot send, the
      visitor still gets the text and the address instead of silence */
