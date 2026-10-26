@@ -166,6 +166,46 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .navlinks a[aria-current]{color:var(--ink)}
 .navlinks a[aria-current]::after{right:0}
 .shot img,.heroside .shot img{filter:saturate(.8) contrast(1.06) brightness(.95)}
+
+/* ---- cinematic hero: the page opens on a full screen, as the home page does ---- */
+.hero.chero{position:relative;min-height:100svh;display:flex;align-items:flex-end;
+  overflow:hidden;isolation:isolate;padding:clamp(96px,14vh,150px) 0 clamp(44px,8vh,96px)}
+.chero .wrap.chero-g{display:block;width:100%;position:static}
+.chero .heroside{position:static;display:contents}
+.chero .chero-g>div{position:relative;z-index:3}
+.chero .heroside .shot{position:absolute;inset:0;z-index:0;aspect-ratio:auto;border:0;
+  transform:scale(calc(1.14 - var(--p,0)*.14));transform-origin:50% 44%;will-change:transform}
+.chero .heroside .shot img{filter:saturate(.7) contrast(1.09) brightness(.8)}
+.chero .heroside .shot .pz{position:absolute;inset:0;display:block}
+.chero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(8,10,13,.88) 0%,rgba(8,10,13,.34) 40%,rgba(8,10,13,.95) 100%)}
+.chero h1{font-family:var(--fd);font-weight:700;text-transform:uppercase;
+  letter-spacing:-.035em;line-height:.9;font-size:clamp(2.4rem,7.4vw,7rem);margin:.18em 0 0}
+.chero h1 em{font-style:normal;color:var(--gold)}
+.chero .sub{max-width:44ch;font-size:clamp(1rem,1.25vw,1.26rem);color:var(--on-shot)}
+.chero .crumbs,.chero .chips,.chero .ctarow{position:relative;z-index:3}
+.chero .scroll-cue{position:absolute;left:0;bottom:16px;z-index:4;font-family:var(--fm);
+  font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-3);
+  display:flex;align-items:center;gap:10px;opacity:calc(1 - var(--p,0)*3)}
+.chero .scroll-cue::before{content:"";width:34px;height:1px;background:currentColor}
+
+/* the facts table now opens the page body instead of crowding the picture */
+.glance{border-bottom:1px solid var(--rule);background:var(--surface)}
+.glance .wrap{padding:clamp(26px,4vh,46px) 0}
+.glance .factcard{background:transparent;border:0;backdrop-filter:none;margin:0;box-shadow:none}
+
+/* content enters as the reader reaches it */
+[data-reveal]{opacity:0;transform:translateY(26px);
+  transition:opacity .8s ease,transform .8s cubic-bezier(.16,1,.3,1)}
+[data-reveal].in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  .hero.chero{min-height:62svh}
+  .chero .heroside .shot{transform:none!important}
+  .chero .scroll-cue{display:none}
+  [data-reveal]{opacity:1!important;transform:none!important;transition:none!important}
+}
+
 </style>
 <style>
 /* hero */
@@ -630,17 +670,18 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     </div>
     <div class="heroside"><div class="shot"><span class="pz"><img src="media/crane-lift.webp" width="1040" height="1300" alt="Cargo being lifted on a quayside" fetchpriority="high" decoding="async"></span></div></div>
   </div>
+  <span class="scroll-cue" aria-hidden="true">Scroll</span>
 </header>
 
 <main id="main" tabindex="-1">
-<section><div class="wrap">
+<section data-reveal><div class="wrap">
 <div class="lede"><h2>Verified, not claimed</h2><p class="intro">The statements on this page describe what the site actually does, checked by loading it in a browser and reading what it stores and what it requests. If you want to confirm it yourself, open your browser's developer tools on any page here and look.</p></div>
 <nav class="toc" aria-label="On this page"><span class="eyebrow">On this page</span><ol><li><a href="#s1"><span>01</span>What the site stores on your device</a></li><li><a href="#s2"><span>02</span>What is loaded from other companies, and what they can see</a></li><li><a href="#s3"><span>03</span>The enquiry form</a></li><li><a href="#s4"><span>04</span>Email you send us</a></li><li><a href="#s5"><span>05</span>If you are in the European Union or the United Kingdom</a></li><li><a href="#s6"><span>06</span>If you are in California</a></li><li><a href="#s7"><span>07</span>Children</a></li><li><a href="#s8"><span>08</span>Changes, and who to write to</a></li></ol></nav>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2 id="s1">What the site stores on your device</h2><div class="ptext"><p>Nothing. There are no cookies of any kind, no local storage and no session storage. Closing the tab leaves nothing behind. Because nothing is stored, there is no cookie banner, no consent to manage and no preference to remember.</p></div></div><div class="pblock"><span class="k">02</span><h2 id="s2">What is loaded from other companies, and what they can see</h2><div class="ptext"><p>Like almost any website, these pages load a few files from other providers. Those providers necessarily see your IP address and the usual request information, because that is how the internet delivers a file. They are:</p><ul class="plist"><li><b>Cloudflare</b>, which hosts the site and serves every page, image and document.</li><li><b>Google Fonts</b> (fonts.googleapis.com and fonts.gstatic.com), which serves the three typefaces used here.</li><li><b>Cloudflare Web Analytics</b>, which counts page views without cookies and without building a profile of you.</li><li><b>jsDelivr</b>, on the home page only, which serves the graphics library that draws the globe.</li></ul><p>We do not place advertising, we do not use remarketing pixels, and we do not run any third-party tracker beyond the cookieless page counter named above.</p></div></div><div class="pblock"><span class="k">03</span><h2 id="s3">The enquiry form</h2><div class="ptext"><p>The form on the contact page does not send anything to us or to anyone else. It assembles the text you typed into a draft message and opens it in your own email program. Nothing leaves your computer unless you press send there, and you keep a copy in your own sent items.</p><p>Practically, that means that if you fill in the form and change your mind, we never saw it. There is no partial submission, no abandoned-form capture and nothing to delete.</p></div></div><div class="pblock"><span class="k">04</span><h2 id="s4">Email you send us</h2><div class="ptext"><p>When you write to info@ispgroupgc.com the message arrives in our mailbox, which is hosted on Google Workspace. We use what you send to answer you and to carry out the business you are asking about: finding producers, requesting quotations, arranging shipment and settlement.</p><ul class="plist"><li><b>Who else sees it.</b> Where the enquiry requires it, the relevant parts are shared with producers, freight forwarders, customs brokers, inspection companies and banks. Only what the task needs, and only with parties engaged on that task.</li><li><b>What we do not do.</b> We do not sell correspondence, we do not add you to a marketing list because you asked a commercial question, and we do not pass your details to anyone who is not involved in your shipment.</li><li><b>How long we keep it.</b> Correspondence relating to a transaction is kept for as long as commercial and tax record-keeping requires. Enquiries that do not lead to a transaction are kept while the conversation is live and then deleted on request.</li></ul></div></div><div class="pblock"><span class="k">05</span><h2 id="s5">If you are in the European Union or the United Kingdom</h2><div class="ptext"><p>Where that law applies to a given exchange, you may ask us for a copy of the correspondence we hold about you, ask us to correct it, ask us to delete it, or object to our holding it. Write to info@ispgroupgc.com and say which of those you want. We will answer within a month, and we will not charge for it.</p><p>Where we process correspondence it is on the basis of taking steps at your request before entering a contract, performing a contract, or our legitimate interest in answering a business enquiry addressed to us.</p></div></div><div class="pblock"><span class="k">06</span><h2 id="s6">If you are in California</h2><div class="ptext"><p>We do not sell or share personal information as those terms are used in California law, and we do not use it for cross-context behavioural advertising. You may ask what we hold and ask us to delete it, at the same address, and we will not treat you differently for asking.</p></div></div><div class="pblock"><span class="k">07</span><h2 id="s7">Children</h2><div class="ptext"><p>This is a business-to-business site about international trade. It is not directed at children and we do not knowingly collect anything from them.</p></div></div><div class="pblock"><span class="k">08</span><h2 id="s8">Changes, and who to write to</h2><div class="ptext"><p>If this page changes we will change the date at the top of it. Questions about anything here go to info@ispgroupgc.com, or by post to ISP GROUP LLC, 16395 Biscayne Blvd, North Miami Beach, Florida 33160, United States.</p><p class="pnote">This page describes our practice in plain language. It is not legal advice, and it has not been reviewed by counsel. If you need a formal assessment for your own compliance, ask your lawyer.</p></div></div></div>
 
 </div></section>
-<section><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Also here</h2><p class="intro">The other pages people look for.</p></div><div class="lanelinks"><a class="lanelink" href="terms"><b>Terms of use</b><span>What the content on this site is and is not.</span></a><a class="lanelink" href="contact"><b>Contact</b><span>Send a requirement and get a landed price.</span></a><a class="lanelink" href="about"><b>About ISP Group</b><span>Who we are and how we work.</span></a><a class="lanelink" href="guides"><b>Guides</b><span>Sixteen answers to what comes up before a first order.</span></a></div></div></section>
-<section class="cta">
+<section data-reveal><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Also here</h2><p class="intro">The other pages people look for.</p></div><div class="lanelinks"><a class="lanelink" href="terms"><b>Terms of use</b><span>What the content on this site is and is not.</span></a><a class="lanelink" href="contact"><b>Contact</b><span>Send a requirement and get a landed price.</span></a><a class="lanelink" href="about"><b>About ISP Group</b><span>Who we are and how we work.</span></a><a class="lanelink" href="guides"><b>Guides</b><span>Sixteen answers to what comes up before a first order.</span></a></div></div></section>
+<section data-reveal class="cta">
   <div class="wrap">
     <span class="eyebrow">Get started</span>
     <div class="lede">
@@ -828,5 +869,29 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 })();
 </script>
 <!--/email_off-->
+
+<script>
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hero = document.querySelector('.hero.chero');
+  if(hero && !reduce){
+    var tick=false;
+    function upd(){
+      var r=hero.getBoundingClientRect(), h=hero.offsetHeight||1;
+      var p=(-r.top)/h; p=p<0?0:p>1?1:p;
+      hero.style.setProperty('--p', p.toFixed(4));
+      tick=false;
+    }
+    addEventListener('scroll',function(){ if(!tick){tick=true;requestAnimationFrame(upd);} },{passive:true});
+    addEventListener('resize',upd,{passive:true});
+    upd();
+  }
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{rootMargin:'0px 0px -10% 0px',threshold:0.06});
+  document.querySelectorAll('[data-reveal]').forEach(function(n){ io.observe(n); });
+})();
+</script>
+
 </body>
 </html>

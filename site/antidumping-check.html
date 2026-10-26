@@ -166,6 +166,46 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .navlinks a[aria-current]{color:var(--ink)}
 .navlinks a[aria-current]::after{right:0}
 .shot img,.heroside .shot img{filter:saturate(.8) contrast(1.06) brightness(.95)}
+
+/* ---- cinematic hero: the page opens on a full screen, as the home page does ---- */
+.hero.chero{position:relative;min-height:100svh;display:flex;align-items:flex-end;
+  overflow:hidden;isolation:isolate;padding:clamp(96px,14vh,150px) 0 clamp(44px,8vh,96px)}
+.chero .wrap.chero-g{display:block;width:100%;position:static}
+.chero .heroside{position:static;display:contents}
+.chero .chero-g>div{position:relative;z-index:3}
+.chero .heroside .shot{position:absolute;inset:0;z-index:0;aspect-ratio:auto;border:0;
+  transform:scale(calc(1.14 - var(--p,0)*.14));transform-origin:50% 44%;will-change:transform}
+.chero .heroside .shot img{filter:saturate(.7) contrast(1.09) brightness(.8)}
+.chero .heroside .shot .pz{position:absolute;inset:0;display:block}
+.chero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(8,10,13,.88) 0%,rgba(8,10,13,.34) 40%,rgba(8,10,13,.95) 100%)}
+.chero h1{font-family:var(--fd);font-weight:700;text-transform:uppercase;
+  letter-spacing:-.035em;line-height:.9;font-size:clamp(2.4rem,7.4vw,7rem);margin:.18em 0 0}
+.chero h1 em{font-style:normal;color:var(--gold)}
+.chero .sub{max-width:44ch;font-size:clamp(1rem,1.25vw,1.26rem);color:var(--on-shot)}
+.chero .crumbs,.chero .chips,.chero .ctarow{position:relative;z-index:3}
+.chero .scroll-cue{position:absolute;left:0;bottom:16px;z-index:4;font-family:var(--fm);
+  font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-3);
+  display:flex;align-items:center;gap:10px;opacity:calc(1 - var(--p,0)*3)}
+.chero .scroll-cue::before{content:"";width:34px;height:1px;background:currentColor}
+
+/* the facts table now opens the page body instead of crowding the picture */
+.glance{border-bottom:1px solid var(--rule);background:var(--surface)}
+.glance .wrap{padding:clamp(26px,4vh,46px) 0}
+.glance .factcard{background:transparent;border:0;backdrop-filter:none;margin:0;box-shadow:none}
+
+/* content enters as the reader reaches it */
+[data-reveal]{opacity:0;transform:translateY(26px);
+  transition:opacity .8s ease,transform .8s cubic-bezier(.16,1,.3,1)}
+[data-reveal].in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  .hero.chero{min-height:62svh}
+  .chero .heroside .shot{transform:none!important}
+  .chero .scroll-cue{display:none}
+  [data-reveal]{opacity:1!important;transform:none!important;transition:none!important}
+}
+
 </style>
 <style>
 /* hero */
@@ -630,18 +670,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     </div>
     <div class="heroside"><div class="shot"><span class="pz"><img src="media/quarry-cut.webp" width="1040" height="1300" alt="Cut stone at a marble quarry" fetchpriority="high" decoding="async"></span></div></div>
   </div>
+  <span class="scroll-cue" aria-hidden="true">Scroll</span>
 </header>
 
 <main id="main" tabindex="-1">
-<section><div class="wrap">
+<section data-reveal><div class="wrap">
 <div class="lede"><h2>Why this deserves its own check</h2><p class="intro">An ordinary duty rate of a few per cent is a line in a cost model. A trade remedy rate in the hundreds of per cent is not a line in a cost model, it is the end of the transaction, and it attaches to the importer.</p></div>
 <nav class="toc" aria-label="On this page"><span class="eyebrow">On this page</span><ol><li><a href="#s1"><span>01</span>What the two remedies are</a></li><li><a href="#s2"><span>02</span>Scope is a description, not a code</a></li><li><a href="#s3"><span>03</span>In the United States the deposit is not the bill</a></li><li><a href="#s4"><span>04</span>Rates change, so the check has a date on it</a></li><li><a href="#s5"><span>05</span>How we run the check</a></li></ol></nav>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2 id="s1">What the two remedies are</h2><div class="ptext"><p>An <b>antidumping</b> duty answers a finding that goods were sold into the market below their normal value. A <b>countervailing</b> duty answers a finding that the production was subsidised. They are imposed per country of origin and usually per producer, so two factories in the same country can carry very different rates and one can carry none.</p><p>They sit on top of the ordinary tariff, not instead of it, and they are collected from the importer of record.</p></div></div><div class="pblock"><span class="k">02</span><h2 id="s2">Scope is a description, not a code</h2><div class="ptext"><p>This is the part that catches people. An order defines the subject merchandise in words: what it is made of, how it is processed, what it is used for, and what is expressly excluded. Commodity codes are listed for convenience and the text says so; goods outside the listed codes can still be in scope and goods inside them can be out of it.</p><p>A worked example from a lane we run: quartz surface products from a particular origin carry orders, while quarried stone such as granite, marble, soapstone and quartzite is expressly excluded from that scope. Two slabs that a buyer would describe the same way sit on opposite sides of the line, and the difference is in the material and the processing, not in the appearance.</p><p class="pnote">Where the answer is genuinely unclear, administrations issue scope rulings. Asking for one before a programme starts costs a fraction of discovering the answer at entry.</p></div></div><div class="pblock"><span class="k">03</span><h2 id="s3">In the United States the deposit is not the bill</h2><div class="ptext"><p>Most systems assess the final duty at entry. The United States operates retrospectively: the amount paid at entry is a cash deposit at the current rate, and the final liability is determined later in an administrative review covering that period, which can take years.</p><p>The consequence is uncomfortable and frequently missed. If the review sets a higher rate than the deposit, the importer owes the difference with interest, long after the goods were sold and the margin was spent. A buyer running a programme under an order has an open liability on the books, and should know that before the first container, not during an audit.</p></div></div><div class="pblock"><span class="k">04</span><h2 id="s4">Rates change, so the check has a date on it</h2><div class="ptext"><p>Rates are revised in administrative reviews, new producers can obtain their own rates, and the orders themselves are reviewed periodically to decide whether they continue. A rate confirmed six months ago is not a rate confirmed today, and the only date that matters is the date of entry.</p></div></div><div class="pblock"><span class="k">05</span><h2 id="s5">How we run the check</h2><div class="ptext"><ul class="plist"><li>Identify the classification and read the scope text of any order touching that product and origin, rather than relying on the code alone.</li><li>Identify the specific producer, because rates are producer-specific and a company-specific rate can be zero where the country-wide rate is not.</li><li>Confirm the live rate as at the planned entry date, not as at the enquiry date.</li><li>Where the product sits near a scope boundary, recommend a scope ruling and say what the delay costs against what the exposure is.</li><li>Show any deposit as a separate line in the landed price, flagged as a deposit rather than as a duty, so nobody treats it as final.</li></ul></div></div></div>
 
 </div></section>
-<section id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>Questions on this</h2><p class="intro">The ones we are asked most often.</p></div><div style="margin-top:34px"><details><summary>Does an antidumping duty apply to the product or to the supplier?</summary><p>To both. Scope defines the product and the origin; rates are then set per producer, so the same goods from two factories in one country can carry very different rates and one of them may carry none.</p></details><details><summary>Can I avoid it by shipping through another country?</summary><p>No, and attempting it is circumvention, which carries its own penalties and reaches back to the importer. Origin for these purposes is where the goods were produced, not where they were last loaded.</p></details><details><summary>Is the duty I pay at entry final?</summary><p>Not in every system. The United States assesses retrospectively: what you pay at entry is a deposit, and the final rate is set later in a review, with the difference payable with interest. That open liability belongs in the decision before the first order.</p></details></div></div></section>
-<section><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Related guides</h2><p class="intro">The ones that usually get read next.</p></div><div class="lanelinks"><a class="lanelink" href="bill-of-lading"><b>Bill of lading and telex release</b><span>Receipt, contract and title in one document, and how to release cargo.</span></a><a class="lanelink" href="demurrage-detention"><b>Demurrage and detention</b><span>The two clocks that run after arrival, and who stops them.</span></a><a class="lanelink" href="certificate-of-origin"><b>Certificates of origin</b><span>Preferential and non-preferential, who issues them, what breaks them.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
-<section class="cta">
+<section data-reveal id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>Questions on this</h2><p class="intro">The ones we are asked most often.</p></div><div style="margin-top:34px"><details><summary>Does an antidumping duty apply to the product or to the supplier?</summary><p>To both. Scope defines the product and the origin; rates are then set per producer, so the same goods from two factories in one country can carry very different rates and one of them may carry none.</p></details><details><summary>Can I avoid it by shipping through another country?</summary><p>No, and attempting it is circumvention, which carries its own penalties and reaches back to the importer. Origin for these purposes is where the goods were produced, not where they were last loaded.</p></details><details><summary>Is the duty I pay at entry final?</summary><p>Not in every system. The United States assesses retrospectively: what you pay at entry is a deposit, and the final rate is set later in a review, with the difference payable with interest. That open liability belongs in the decision before the first order.</p></details></div></div></section>
+<section data-reveal><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Related guides</h2><p class="intro">The ones that usually get read next.</p></div><div class="lanelinks"><a class="lanelink" href="bill-of-lading"><b>Bill of lading and telex release</b><span>Receipt, contract and title in one document, and how to release cargo.</span></a><a class="lanelink" href="demurrage-detention"><b>Demurrage and detention</b><span>The two clocks that run after arrival, and who stops them.</span></a><a class="lanelink" href="certificate-of-origin"><b>Certificates of origin</b><span>Preferential and non-preferential, who issues them, what breaks them.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
+<section data-reveal class="cta">
   <div class="wrap">
     <span class="eyebrow">Get started</span>
     <div class="lede">
@@ -831,5 +872,29 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 })();
 </script>
 <!--/email_off-->
+
+<script>
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hero = document.querySelector('.hero.chero');
+  if(hero && !reduce){
+    var tick=false;
+    function upd(){
+      var r=hero.getBoundingClientRect(), h=hero.offsetHeight||1;
+      var p=(-r.top)/h; p=p<0?0:p>1?1:p;
+      hero.style.setProperty('--p', p.toFixed(4));
+      tick=false;
+    }
+    addEventListener('scroll',function(){ if(!tick){tick=true;requestAnimationFrame(upd);} },{passive:true});
+    addEventListener('resize',upd,{passive:true});
+    upd();
+  }
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{rootMargin:'0px 0px -10% 0px',threshold:0.06});
+  document.querySelectorAll('[data-reveal]').forEach(function(n){ io.observe(n); });
+})();
+</script>
+
 </body>
 </html>

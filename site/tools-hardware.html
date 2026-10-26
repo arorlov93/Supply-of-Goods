@@ -166,6 +166,46 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .navlinks a[aria-current]{color:var(--ink)}
 .navlinks a[aria-current]::after{right:0}
 .shot img,.heroside .shot img{filter:saturate(.8) contrast(1.06) brightness(.95)}
+
+/* ---- cinematic hero: the page opens on a full screen, as the home page does ---- */
+.hero.chero{position:relative;min-height:100svh;display:flex;align-items:flex-end;
+  overflow:hidden;isolation:isolate;padding:clamp(96px,14vh,150px) 0 clamp(44px,8vh,96px)}
+.chero .wrap.chero-g{display:block;width:100%;position:static}
+.chero .heroside{position:static;display:contents}
+.chero .chero-g>div{position:relative;z-index:3}
+.chero .heroside .shot{position:absolute;inset:0;z-index:0;aspect-ratio:auto;border:0;
+  transform:scale(calc(1.14 - var(--p,0)*.14));transform-origin:50% 44%;will-change:transform}
+.chero .heroside .shot img{filter:saturate(.7) contrast(1.09) brightness(.8)}
+.chero .heroside .shot .pz{position:absolute;inset:0;display:block}
+.chero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(8,10,13,.88) 0%,rgba(8,10,13,.34) 40%,rgba(8,10,13,.95) 100%)}
+.chero h1{font-family:var(--fd);font-weight:700;text-transform:uppercase;
+  letter-spacing:-.035em;line-height:.9;font-size:clamp(2.4rem,7.4vw,7rem);margin:.18em 0 0}
+.chero h1 em{font-style:normal;color:var(--gold)}
+.chero .sub{max-width:44ch;font-size:clamp(1rem,1.25vw,1.26rem);color:var(--on-shot)}
+.chero .crumbs,.chero .chips,.chero .ctarow{position:relative;z-index:3}
+.chero .scroll-cue{position:absolute;left:0;bottom:16px;z-index:4;font-family:var(--fm);
+  font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-3);
+  display:flex;align-items:center;gap:10px;opacity:calc(1 - var(--p,0)*3)}
+.chero .scroll-cue::before{content:"";width:34px;height:1px;background:currentColor}
+
+/* the facts table now opens the page body instead of crowding the picture */
+.glance{border-bottom:1px solid var(--rule);background:var(--surface)}
+.glance .wrap{padding:clamp(26px,4vh,46px) 0}
+.glance .factcard{background:transparent;border:0;backdrop-filter:none;margin:0;box-shadow:none}
+
+/* content enters as the reader reaches it */
+[data-reveal]{opacity:0;transform:translateY(26px);
+  transition:opacity .8s ease,transform .8s cubic-bezier(.16,1,.3,1)}
+[data-reveal].in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  .hero.chero{min-height:62svh}
+  .chero .heroside .shot{transform:none!important}
+  .chero .scroll-cue{display:none}
+  [data-reveal]{opacity:1!important;transform:none!important;transition:none!important}
+}
+
 </style>
 <style>
 /* hero */
@@ -628,20 +668,22 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
       <div class="chips"><span class="chip">To spec or to brand</span><span class="chip">IEC &middot; EN &middot; ISO</span><span class="chip">Own-brand packaging</span><span class="chip">China &middot; T&uuml;rkiye</span></div>
       <div class="ctarow" style="margin-top:28px"><a class="btn" href="contact#enquiry">Request a quote</a></div>
     </div>
-    <div class="heroside"><div class="shot"><span class="pz"><img src="media/tools-flat.webp" width="1040" height="1300" alt="Hand tools laid out on a work surface" fetchpriority="high" decoding="async"></span></div><aside class="factcard"><span class="eyebrow">Category at a glance</span><table class="facts"><tbody><tr><th scope="row">Typical cargo</th><td>Power and hand tools, abrasives, measuring instruments, fixings and fasteners, PPE and consumables</td></tr><tr><th scope="row">Bought as</th><td>Named brand through an authorised channel, to specification unbranded, or own brand</td></tr><tr><th scope="row">Standards</th><td>IEC 62841 for power tools, EN 12413 for bonded abrasives, property class for fasteners</td></tr><tr><th scope="row">PPE</th><td>Test report from a named laboratory, standard checked against the destination</td></tr><tr><th scope="row">Load</th><td>Consolidated LCL into one FCL, packing list reconciled at the warehouse</td></tr><tr><th scope="row">Corridors</th><td>China to worldwide, Tükiye</td></tr></tbody></table></aside></div>
+    <div class="heroside"><div class="shot"><span class="pz"><img src="media/tools-flat.webp" width="1040" height="1300" alt="Hand tools laid out on a work surface" fetchpriority="high" decoding="async"></span></div></div>
   </div>
+  <span class="scroll-cue" aria-hidden="true">Scroll</span>
 </header>
+<section class="glance"><div class="wrap"><aside class="factcard"><span class="eyebrow">Category at a glance</span><table class="facts"><tbody><tr><th scope="row">Typical cargo</th><td>Power and hand tools, abrasives, measuring instruments, fixings and fasteners, PPE and consumables</td></tr><tr><th scope="row">Bought as</th><td>Named brand through an authorised channel, to specification unbranded, or own brand</td></tr><tr><th scope="row">Standards</th><td>IEC 62841 for power tools, EN 12413 for bonded abrasives, property class for fasteners</td></tr><tr><th scope="row">PPE</th><td>Test report from a named laboratory, standard checked against the destination</td></tr><tr><th scope="row">Load</th><td>Consolidated LCL into one FCL, packing list reconciled at the warehouse</td></tr><tr><th scope="row">Corridors</th><td>China to worldwide, Tükiye</td></tr></tbody></table></aside></div></section>
 
 <main id="main" tabindex="-1">
-<section><div class="wrap"><figure class="mediafig" style="margin-bottom:44px"><div class="shot"><span class="pz"><img src="media/machinery.webp" width="910" height="683" loading="lazy" alt="Workshop tooling and drive components"></span></div><figcaption>Tooling is bought on the grade of its consumable, not on the body</figcaption></figure>
+<section data-reveal><div class="wrap"><figure class="mediafig" style="margin-bottom:44px"><div class="shot"><span class="pz"><img src="media/machinery.webp" width="910" height="683" loading="lazy" alt="Workshop tooling and drive components"></span></div><figcaption>Tooling is bought on the grade of its consumable, not on the body</figcaption></figure>
 <div class="lede"><h2>The cheap part of the tool is the tool</h2><p class="intro">On almost everything in this category the purchase price is a small fraction of the running cost. An abrasive that lasts two thirds as long is not thirty per cent cheaper, it is fifty per cent more expensive, and nothing in a product photograph shows which one you are being offered.</p></div>
 <nav class="toc" aria-label="On this page"><span class="eyebrow">On this page</span><ol><li><a href="#s1"><span>01</span>Three different ways to buy the same box</a></li><li><a href="#s2"><span>02</span>What makes a tool specification measurable</a></li><li><a href="#s3"><span>03</span>Personal protective equipment is a legal product</a></li><li><a href="#s4"><span>04</span>Assortment, minimums and the consolidated container</a></li></ol></nav>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2 id="s1">Three different ways to buy the same box</h2><div class="ptext"><ul class="plist"><li><b>To a named brand.</b> You know what you are getting and you pay for it. Our job is authenticity and landed cost, and the first check is whether the seller is an authorised channel.</li><li><b>To specification, unbranded.</b> A factory builds to your written specification and your packaging. Cheaper per unit, slower to set up, and only works if the specification is real.</li><li><b>Own brand.</b> The same as above with your mark, your carton and your manual. Minimum quantities rise, and the artwork and the safety text become part of the order.</li></ul><p>Most disappointments in this category come from buying the second while thinking about the first: a specification that says “equivalent to” a brand, with nothing measurable after it.</p></div></div><div class="pblock"><span class="k">02</span><h2 id="s2">What makes a tool specification measurable</h2><div class="ptext"><p>For power tools: input power and, more usefully, output power; no-load speed; the bearing type; the switch and brush assembly by make; the cable length and plug type for the destination; the voltage and frequency; the insulation class; and the electrical safety standard the destination enforces, which for most of the world is the IEC 62841 family.</p><p>For abrasives: the grit, the bond, the maximum operating speed and the safety standard, because a cutting disc is a safety-critical product and EN 12413 exists for a reason. For measuring instruments: the accuracy class and whether a calibration certificate is supplied and traceable.</p><p>For fixings: the grade and the coating, which together decide both the strength and the service life. A property class 8.8 bolt and a 4.6 bolt look identical in a photograph and are not interchangeable in a structure.</p></div></div><div class="pblock"><span class="k">03</span><h2 id="s3">Personal protective equipment is a legal product</h2><div class="ptext"><p>Gloves, footwear, eye protection and hearing protection are not ordinary consumables. They are sold against harmonised standards, they carry a mark, and in most destinations supplying them without valid conformity documentation is an offence rather than a commercial problem.</p><p>We ask for the test report from a named laboratory, not a certificate image, and we check the standard cited is the one in force at the destination. This is the single most counterfeited document category in the hardware trade.</p></div></div><div class="pblock"><span class="k">04</span><h2 id="s4">Assortment, minimums and the consolidated container</h2><div class="ptext"><p>Hardware is bought as an assortment, and an assortment rarely fills a container from one factory. We consolidate several producers into one container at the port of loading, which keeps a mixed order on full container economics and produces one bill of lading instead of six.</p><p>Consolidation adds about a week to the schedule and it has to be in the plan rather than discovered. It also means one packing list has to reconcile against several suppliers' cartons, which is exactly the kind of discrepancy customs resolves by inspecting, so the counting is done at the consolidation warehouse and photographed.</p><p class="pnote">Deliverable on this category: a written specification per line, the conformity documents checked against the destination's standard, and a consolidated packing list reconciled carton by carton before the container is sealed.</p></div></div></div>
 
 </div></section>
-<section id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>What buyers ask about this category</h2><p class="intro">The three that come up before a first order.</p></div><div style="margin-top:34px"><details><summary>Can you make it under our own brand?</summary><p>Yes. Minimum quantities rise and the artwork, the manual and the safety text become part of the order rather than an afterthought. We ask for a pre-production sample of the printed carton, not just of the product.</p></details><details><summary>How do we know PPE certificates are genuine?</summary><p>By asking for the test report from the named laboratory and checking the laboratory exists and issued it, rather than accepting an image of a certificate. This category is the most counterfeited in the trade.</p></details><details><summary>Our order is small and mixed. Is that a problem?</summary><p>No, it is the normal case. We consolidate several producers into one container at the port of loading. It adds roughly a week to the schedule and keeps the economics of a full container.</p></details></div></div></section>
-<section><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Other categories</h2><p class="intro">The same method, applied to different goods.</p></div><div class="lanelinks"><a class="lanelink" href="metals-pipe"><b>Metals and pipe</b><span>Sections, sheet and plate, seamless and welded pipe, fittings and flanges.</span></a><a class="lanelink" href="paper-packaging"><b>Paper, packaging and consumables</b><span>Newsprint, kraft and containerboard in reels, corrugated, PPE and workwear.</span></a><a class="lanelink" href="food-agricultural"><b>Food and agricultural goods</b><span>Frozen and chilled protein, bulk staples, ingredients and branded beverages.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
-<section class="cta">
+<section data-reveal id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>What buyers ask about this category</h2><p class="intro">The three that come up before a first order.</p></div><div style="margin-top:34px"><details><summary>Can you make it under our own brand?</summary><p>Yes. Minimum quantities rise and the artwork, the manual and the safety text become part of the order rather than an afterthought. We ask for a pre-production sample of the printed carton, not just of the product.</p></details><details><summary>How do we know PPE certificates are genuine?</summary><p>By asking for the test report from the named laboratory and checking the laboratory exists and issued it, rather than accepting an image of a certificate. This category is the most counterfeited in the trade.</p></details><details><summary>Our order is small and mixed. Is that a problem?</summary><p>No, it is the normal case. We consolidate several producers into one container at the port of loading. It adds roughly a week to the schedule and keeps the economics of a full container.</p></details></div></div></section>
+<section data-reveal><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Other categories</h2><p class="intro">The same method, applied to different goods.</p></div><div class="lanelinks"><a class="lanelink" href="metals-pipe"><b>Metals and pipe</b><span>Sections, sheet and plate, seamless and welded pipe, fittings and flanges.</span></a><a class="lanelink" href="paper-packaging"><b>Paper, packaging and consumables</b><span>Newsprint, kraft and containerboard in reels, corrugated, PPE and workwear.</span></a><a class="lanelink" href="food-agricultural"><b>Food and agricultural goods</b><span>Frozen and chilled protein, bulk staples, ingredients and branded beverages.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
+<section data-reveal class="cta">
   <div class="wrap">
     <span class="eyebrow">Get started</span>
     <div class="lede">
@@ -831,5 +873,29 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 })();
 </script>
 <!--/email_off-->
+
+<script>
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hero = document.querySelector('.hero.chero');
+  if(hero && !reduce){
+    var tick=false;
+    function upd(){
+      var r=hero.getBoundingClientRect(), h=hero.offsetHeight||1;
+      var p=(-r.top)/h; p=p<0?0:p>1?1:p;
+      hero.style.setProperty('--p', p.toFixed(4));
+      tick=false;
+    }
+    addEventListener('scroll',function(){ if(!tick){tick=true;requestAnimationFrame(upd);} },{passive:true});
+    addEventListener('resize',upd,{passive:true});
+    upd();
+  }
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{rootMargin:'0px 0px -10% 0px',threshold:0.06});
+  document.querySelectorAll('[data-reveal]').forEach(function(n){ io.observe(n); });
+})();
+</script>
+
 </body>
 </html>

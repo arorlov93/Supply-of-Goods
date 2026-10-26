@@ -166,6 +166,46 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .navlinks a[aria-current]{color:var(--ink)}
 .navlinks a[aria-current]::after{right:0}
 .shot img,.heroside .shot img{filter:saturate(.8) contrast(1.06) brightness(.95)}
+
+/* ---- cinematic hero: the page opens on a full screen, as the home page does ---- */
+.hero.chero{position:relative;min-height:100svh;display:flex;align-items:flex-end;
+  overflow:hidden;isolation:isolate;padding:clamp(96px,14vh,150px) 0 clamp(44px,8vh,96px)}
+.chero .wrap.chero-g{display:block;width:100%;position:static}
+.chero .heroside{position:static;display:contents}
+.chero .chero-g>div{position:relative;z-index:3}
+.chero .heroside .shot{position:absolute;inset:0;z-index:0;aspect-ratio:auto;border:0;
+  transform:scale(calc(1.14 - var(--p,0)*.14));transform-origin:50% 44%;will-change:transform}
+.chero .heroside .shot img{filter:saturate(.7) contrast(1.09) brightness(.8)}
+.chero .heroside .shot .pz{position:absolute;inset:0;display:block}
+.chero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(8,10,13,.88) 0%,rgba(8,10,13,.34) 40%,rgba(8,10,13,.95) 100%)}
+.chero h1{font-family:var(--fd);font-weight:700;text-transform:uppercase;
+  letter-spacing:-.035em;line-height:.9;font-size:clamp(2.4rem,7.4vw,7rem);margin:.18em 0 0}
+.chero h1 em{font-style:normal;color:var(--gold)}
+.chero .sub{max-width:44ch;font-size:clamp(1rem,1.25vw,1.26rem);color:var(--on-shot)}
+.chero .crumbs,.chero .chips,.chero .ctarow{position:relative;z-index:3}
+.chero .scroll-cue{position:absolute;left:0;bottom:16px;z-index:4;font-family:var(--fm);
+  font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-3);
+  display:flex;align-items:center;gap:10px;opacity:calc(1 - var(--p,0)*3)}
+.chero .scroll-cue::before{content:"";width:34px;height:1px;background:currentColor}
+
+/* the facts table now opens the page body instead of crowding the picture */
+.glance{border-bottom:1px solid var(--rule);background:var(--surface)}
+.glance .wrap{padding:clamp(26px,4vh,46px) 0}
+.glance .factcard{background:transparent;border:0;backdrop-filter:none;margin:0;box-shadow:none}
+
+/* content enters as the reader reaches it */
+[data-reveal]{opacity:0;transform:translateY(26px);
+  transition:opacity .8s ease,transform .8s cubic-bezier(.16,1,.3,1)}
+[data-reveal].in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  .hero.chero{min-height:62svh}
+  .chero .heroside .shot{transform:none!important}
+  .chero .scroll-cue{display:none}
+  [data-reveal]{opacity:1!important;transform:none!important;transition:none!important}
+}
+
 </style>
 <style>
 /* hero */
@@ -630,18 +670,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     </div>
     <div class="heroside"><div class="shot"><span class="pz"><img src="media/loading-truck.webp" width="1040" height="1300" alt="A twenty foot container loaded on a truck" fetchpriority="high" decoding="async"></span></div></div>
   </div>
+  <span class="scroll-cue" aria-hidden="true">Scroll</span>
 </header>
 
 <main id="main" tabindex="-1">
-<section><div class="wrap">
+<section data-reveal><div class="wrap">
 <div class="lede"><h2>The question to answer before asking for a freight rate</h2><p class="intro">Is this cargo heavy or bulky. Steel, tile, cement and paper reach the weight limit with the box half empty. Packaging, insulation and finished consumer goods run out of space with tonnes to spare. The two are priced in opposite directions.</p></div>
 <nav class="toc" aria-label="On this page"><span class="eyebrow">On this page</span><ol><li><a href="#s1"><span>01</span>What the boxes hold</a></li><li><a href="#s2"><span>02</span>Verified gross mass is not optional</a></li><li><a href="#s3"><span>03</span>When LCL is false economy</a></li><li><a href="#s4"><span>04</span>Consolidation: a middle option most buyers do not ask for</a></li><li><a href="#s5"><span>05</span>Loading practice that prevents claims</a></li></ol></nav>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2 id="s1">What the boxes hold</h2><div class="ptext"><p>Approximate working figures, which vary by operator, by equipment age and by the road weight limits at each end. Confirm them against the actual booking rather than planning to the last kilogram.</p><ul class="plist"><li><b>20ft general purpose</b>: roughly 33 cubic metres of space. Dense cargo normally reaches its weight limit well before that, which is why a 20ft box that looks half empty is often the correct and cheaper choice for steel or tile.</li><li><b>40ft general purpose</b>: roughly twice the volume of a 20ft, and not twice the payload. For heavy cargo two 20ft boxes usually beat one 40ft.</li><li><b>40ft high cube</b>: around nine or ten cubic metres more than a standard 40ft, for the same payload. The right box for light, bulky cargo.</li><li><b>40ft reefer</b>: less internal volume than a dry box because of the insulation and the machinery, and about 25 tonnes net on a typical frozen food loading plan.</li></ul><p class="pnote">Road weight limits at origin and destination often bind before the container's own rating does. A box that is legal at sea can be illegal on the road at one end, and that is discovered by the haulier, not by the carrier.</p></div></div><div class="pblock"><span class="k">02</span><h2 id="s2">Verified gross mass is not optional</h2><div class="ptext"><p>Under the international convention on safety of life at sea, the shipper must declare a verified gross mass for every packed container before it is loaded on a vessel, obtained either by weighing the packed container or by weighing the cargo and adding the certified tare. A container without a declared VGM does not get loaded.</p><p>In practice this is handled by the forwarder, and in practice it occasionally is not, with a container rolled to the next vessel as the result. On a new lane we confirm who is producing the VGM figure before the booking rather than on the cut-off day.</p></div></div><div class="pblock"><span class="k">03</span><h2 id="s3">When LCL is false economy</h2><div class="ptext"><p>Less than container load looks cheaper because you pay for a share. The problem is what is attached to that share: destination charges on LCL are per cubic metre and they are high, the consignment is handled at a deconsolidation warehouse at both ends, and the transit time is longer because the box waits for other cargo.</p><p>The rough rule is that below about a third of a container, LCL wins. Above about half, a full container usually wins even if some of it is air. In between it depends entirely on the destination charges at that specific port, and those are worth asking for by name rather than assuming.</p></div></div><div class="pblock"><span class="k">04</span><h2 id="s4">Consolidation: a middle option most buyers do not ask for</h2><div class="ptext"><p>Several suppliers in the same region can be loaded into one container at the port of loading. The buyer gets full container economics and one bill of lading instead of four, which also means one customs entry instead of four.</p><p>Two costs come with it. Consolidation adds roughly a week to the schedule, because the box waits for the slowest supplier. And one packing list has to reconcile against several suppliers' cartons, which is exactly the kind of discrepancy a customs authority resolves by inspecting, so the counting and the photography at the consolidation warehouse are not optional.</p></div></div><div class="pblock"><span class="k">05</span><h2 id="s5">Loading practice that prevents claims</h2><div class="ptext"><ul class="plist"><li>Dunnage so the load cannot shift, and a photograph showing it in place.</li><li>Product off the walls and the floor on anything hygroscopic, because the mechanism for wet cargo is condensation on the container roof at night, not rain.</li><li>Heavy items low and evenly distributed, not all against one wall; an unbalanced container is a road safety problem at the far end.</li><li>Wood packaging treated and marked, checked and photographed before sealing.</li><li>The seal number recorded and photographed, and matched against the bill of lading.</li></ul></div></div></div>
 
 </div></section>
-<section id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>Questions on this</h2><p class="intro">The ones we are asked most often.</p></div><div style="margin-top:34px"><details><summary>Should I use a 20ft or a 40ft container?</summary><p>If the cargo is dense, two 20ft boxes usually beat one 40ft, because payload does not double with volume. If the cargo is light and bulky, a 40ft high cube is the cheapest cubic metre you can buy.</p></details><details><summary>Is LCL cheaper for a small order?</summary><p>Below roughly a third of a container, usually yes. Above roughly half, usually no, because LCL destination charges are per cubic metre and high. In between, ask for the destination charges at that specific port before deciding.</p></details><details><summary>Can you combine several of our suppliers into one container?</summary><p>Yes, that is consolidation, and it is how most trial orders should ship. It adds about a week while the box waits for the slowest supplier, and it needs careful counting at the warehouse so the packing list reconciles.</p></details></div></div></section>
-<section><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Related guides</h2><p class="intro">The ones that usually get read next.</p></div><div class="lanelinks"><a class="lanelink" href="veterinary-certificate"><b>Veterinary certificates for frozen meat</b><span>Establishment approval, the certificate form and who issues it.</span></a><a class="lanelink" href="poultry-cuts"><b>Wing, drumette, flat: four different products</b><span>The cut nomenclature that makes two offers incomparable.</span></a><a class="lanelink" href="reefer-cold-chain"><b>What a reefer programme requires</b><span>Temperature, recorders, plug time and the pack nobody checks.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
-<section class="cta">
+<section data-reveal id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>Questions on this</h2><p class="intro">The ones we are asked most often.</p></div><div style="margin-top:34px"><details><summary>Should I use a 20ft or a 40ft container?</summary><p>If the cargo is dense, two 20ft boxes usually beat one 40ft, because payload does not double with volume. If the cargo is light and bulky, a 40ft high cube is the cheapest cubic metre you can buy.</p></details><details><summary>Is LCL cheaper for a small order?</summary><p>Below roughly a third of a container, usually yes. Above roughly half, usually no, because LCL destination charges are per cubic metre and high. In between, ask for the destination charges at that specific port before deciding.</p></details><details><summary>Can you combine several of our suppliers into one container?</summary><p>Yes, that is consolidation, and it is how most trial orders should ship. It adds about a week while the box waits for the slowest supplier, and it needs careful counting at the warehouse so the packing list reconciles.</p></details></div></div></section>
+<section data-reveal><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Related guides</h2><p class="intro">The ones that usually get read next.</p></div><div class="lanelinks"><a class="lanelink" href="veterinary-certificate"><b>Veterinary certificates for frozen meat</b><span>Establishment approval, the certificate form and who issues it.</span></a><a class="lanelink" href="poultry-cuts"><b>Wing, drumette, flat: four different products</b><span>The cut nomenclature that makes two offers incomparable.</span></a><a class="lanelink" href="reefer-cold-chain"><b>What a reefer programme requires</b><span>Temperature, recorders, plug time and the pack nobody checks.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
+<section data-reveal class="cta">
   <div class="wrap">
     <span class="eyebrow">Get started</span>
     <div class="lede">
@@ -831,5 +872,29 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 })();
 </script>
 <!--/email_off-->
+
+<script>
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hero = document.querySelector('.hero.chero');
+  if(hero && !reduce){
+    var tick=false;
+    function upd(){
+      var r=hero.getBoundingClientRect(), h=hero.offsetHeight||1;
+      var p=(-r.top)/h; p=p<0?0:p>1?1:p;
+      hero.style.setProperty('--p', p.toFixed(4));
+      tick=false;
+    }
+    addEventListener('scroll',function(){ if(!tick){tick=true;requestAnimationFrame(upd);} },{passive:true});
+    addEventListener('resize',upd,{passive:true});
+    upd();
+  }
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{rootMargin:'0px 0px -10% 0px',threshold:0.06});
+  document.querySelectorAll('[data-reveal]').forEach(function(n){ io.observe(n); });
+})();
+</script>
+
 </body>
 </html>

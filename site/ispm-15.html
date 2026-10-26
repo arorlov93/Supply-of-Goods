@@ -166,6 +166,46 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .navlinks a[aria-current]{color:var(--ink)}
 .navlinks a[aria-current]::after{right:0}
 .shot img,.heroside .shot img{filter:saturate(.8) contrast(1.06) brightness(.95)}
+
+/* ---- cinematic hero: the page opens on a full screen, as the home page does ---- */
+.hero.chero{position:relative;min-height:100svh;display:flex;align-items:flex-end;
+  overflow:hidden;isolation:isolate;padding:clamp(96px,14vh,150px) 0 clamp(44px,8vh,96px)}
+.chero .wrap.chero-g{display:block;width:100%;position:static}
+.chero .heroside{position:static;display:contents}
+.chero .chero-g>div{position:relative;z-index:3}
+.chero .heroside .shot{position:absolute;inset:0;z-index:0;aspect-ratio:auto;border:0;
+  transform:scale(calc(1.14 - var(--p,0)*.14));transform-origin:50% 44%;will-change:transform}
+.chero .heroside .shot img{filter:saturate(.7) contrast(1.09) brightness(.8)}
+.chero .heroside .shot .pz{position:absolute;inset:0;display:block}
+.chero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(8,10,13,.88) 0%,rgba(8,10,13,.34) 40%,rgba(8,10,13,.95) 100%)}
+.chero h1{font-family:var(--fd);font-weight:700;text-transform:uppercase;
+  letter-spacing:-.035em;line-height:.9;font-size:clamp(2.4rem,7.4vw,7rem);margin:.18em 0 0}
+.chero h1 em{font-style:normal;color:var(--gold)}
+.chero .sub{max-width:44ch;font-size:clamp(1rem,1.25vw,1.26rem);color:var(--on-shot)}
+.chero .crumbs,.chero .chips,.chero .ctarow{position:relative;z-index:3}
+.chero .scroll-cue{position:absolute;left:0;bottom:16px;z-index:4;font-family:var(--fm);
+  font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-3);
+  display:flex;align-items:center;gap:10px;opacity:calc(1 - var(--p,0)*3)}
+.chero .scroll-cue::before{content:"";width:34px;height:1px;background:currentColor}
+
+/* the facts table now opens the page body instead of crowding the picture */
+.glance{border-bottom:1px solid var(--rule);background:var(--surface)}
+.glance .wrap{padding:clamp(26px,4vh,46px) 0}
+.glance .factcard{background:transparent;border:0;backdrop-filter:none;margin:0;box-shadow:none}
+
+/* content enters as the reader reaches it */
+[data-reveal]{opacity:0;transform:translateY(26px);
+  transition:opacity .8s ease,transform .8s cubic-bezier(.16,1,.3,1)}
+[data-reveal].in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  .hero.chero{min-height:62svh}
+  .chero .heroside .shot{transform:none!important}
+  .chero .scroll-cue{display:none}
+  [data-reveal]{opacity:1!important;transform:none!important;transition:none!important}
+}
+
 </style>
 <style>
 /* hero */
@@ -630,18 +670,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     </div>
     <div class="heroside"><div class="shot"><span class="pz"><img src="media/pallets-stack.webp" width="1040" height="1300" alt="Stacks of wooden pallets" fetchpriority="high" decoding="async"></span></div></div>
   </div>
+  <span class="scroll-cue" aria-hidden="true">Scroll</span>
 </header>
 
 <main id="main" tabindex="-1">
-<section><div class="wrap">
+<section data-reveal><div class="wrap">
 <div class="lede"><h2>A rule about insects that behaves like a rule about money</h2><p class="intro">Solid wood carries pests between continents. The international standard that addresses it is adopted by most trading nations, and enforcement is at the border, where the only available remedies are expensive.</p></div>
 <nav class="toc" aria-label="On this page"><span class="eyebrow">On this page</span><ol><li><a href="#s1"><span>01</span>What is covered</a></li><li><a href="#s2"><span>02</span>The treatments and the mark</a></li><li><a href="#s3"><span>03</span>What happens when it fails</a></li><li><a href="#s4"><span>04</span>Where the check belongs</a></li><li><a href="#s5"><span>05</span>Who actually gets caught</a></li></ol></nav>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2 id="s1">What is covered</h2><div class="ptext"><p>Wood packaging material: pallets, crates, cases, boxes, drums, dunnage, blocking and bracing. If it is solid wood and it is holding your cargo in place, it is in scope.</p><p>Processed wood-based materials are out of scope, because the manufacturing process already destroys pests. That includes plywood, oriented strand board, particle board and veneer, and in general thin wood below the thickness threshold the standard sets. Wood that has been fully stripped of bark and processed into panels is not the problem the rule addresses.</p></div></div><div class="pblock"><span class="k">02</span><h2 id="s2">The treatments and the mark</h2><div class="ptext"><p>Approved treatments are heat treatment to a specified core temperature and duration, dielectric heating, and fumigation, with the fumigant in question being phased out in many jurisdictions on environmental grounds. Heat treatment is the normal commercial answer.</p><p>Treated material carries a stamp with four elements: the IPPC wheat symbol, the two-letter country code, a unique number identifying the treatment provider, and the treatment code. The mark must be legible, permanent and on at least two opposite sides of the item.</p><p class="pnote">A hand-written stamp, a mark on one side only, a mark that is illegible, or a pallet that has been repaired with untreated timber after being marked: each of these fails, and each is common.</p></div></div><div class="pblock"><span class="k">03</span><h2 id="s3">What happens when it fails</h2><div class="ptext"><p>The options at the border are all bad and all at the importer's cost: treatment at the port where that is available, re-export of the packaging, destruction of the packaging, or in the worst case refusal of the whole consignment. On top of the direct cost the container sits, and demurrage accrues from the day it lands.</p><p>The timing is what makes this expensive. A non-compliant pallet costs a few tens of dollars to replace at the factory and several thousand to resolve at the destination.</p></div></div><div class="pblock"><span class="k">04</span><h2 id="s4">Where the check belongs</h2><div class="ptext"><ul class="plist"><li>At loading, before the container is sealed, not at arrival.</li><li>Photograph the mark on the pallets actually used, not on a sample pallet in the corner of the warehouse.</li><li>Photograph the dunnage and the bracing too, because loose timber used to chock a machine is wood packaging and is caught by the same rule.</li><li>Where a factory repairs pallets in house, confirm that repair timber is also treated and that the pallet is re-marked.</li><li>Put the requirement in the purchase order in writing, with the treatment and the mark named, so a failure is a breach rather than a misunderstanding.</li></ul></div></div><div class="pblock"><span class="k">05</span><h2 id="s5">Who actually gets caught</h2><div class="ptext"><p>Not usually the exporters who ship every week on standard pallets. It is first-time shippers, factories that normally sell domestically, out-of-gauge machinery crated specially for one shipment, and consolidated loads where one of six suppliers used its own timber. All four are situations we see at the start of a new lane, which is exactly when nobody is looking for it.</p></div></div></div>
 
 </div></section>
-<section id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>Questions on this</h2><p class="intro">The ones we are asked most often.</p></div><div style="margin-top:34px"><details><summary>Does this apply to plywood pallets?</summary><p>No. Processed wood-based materials such as plywood, OSB and particle board are out of scope because the manufacturing process destroys pests. The rule targets solid wood.</p></details><details><summary>Our supplier says the pallets are treated. Is that enough?</summary><p>No, because the mark is the evidence and only the mark counts at the border. Ask for photographs of the stamp on the pallets going into your container, taken at loading. It costs nothing and it is the only proof that travels.</p></details><details><summary>What if the container arrives and the pallets are not marked?</summary><p>The options are treatment at the port where available, re-export or destruction of the packaging, or refusal of the consignment, all at the importer's cost, with demurrage running throughout. There is no version of this that is cheap.</p></details></div></div></section>
-<section><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Related guides</h2><p class="intro">The ones that usually get read next.</p></div><div class="lanelinks"><a class="lanelink" href="container-loading"><b>FCL, LCL and consolidation</b><span>What fits, what it costs, and when to share a box.</span></a><a class="lanelink" href="veterinary-certificate"><b>Veterinary certificates for frozen meat</b><span>Establishment approval, the certificate form and who issues it.</span></a><a class="lanelink" href="poultry-cuts"><b>Wing, drumette, flat: four different products</b><span>The cut nomenclature that makes two offers incomparable.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
-<section class="cta">
+<section data-reveal id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>Questions on this</h2><p class="intro">The ones we are asked most often.</p></div><div style="margin-top:34px"><details><summary>Does this apply to plywood pallets?</summary><p>No. Processed wood-based materials such as plywood, OSB and particle board are out of scope because the manufacturing process destroys pests. The rule targets solid wood.</p></details><details><summary>Our supplier says the pallets are treated. Is that enough?</summary><p>No, because the mark is the evidence and only the mark counts at the border. Ask for photographs of the stamp on the pallets going into your container, taken at loading. It costs nothing and it is the only proof that travels.</p></details><details><summary>What if the container arrives and the pallets are not marked?</summary><p>The options are treatment at the port where available, re-export or destruction of the packaging, or refusal of the consignment, all at the importer's cost, with demurrage running throughout. There is no version of this that is cheap.</p></details></div></div></section>
+<section data-reveal><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Related guides</h2><p class="intro">The ones that usually get read next.</p></div><div class="lanelinks"><a class="lanelink" href="container-loading"><b>FCL, LCL and consolidation</b><span>What fits, what it costs, and when to share a box.</span></a><a class="lanelink" href="veterinary-certificate"><b>Veterinary certificates for frozen meat</b><span>Establishment approval, the certificate form and who issues it.</span></a><a class="lanelink" href="poultry-cuts"><b>Wing, drumette, flat: four different products</b><span>The cut nomenclature that makes two offers incomparable.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
+<section data-reveal class="cta">
   <div class="wrap">
     <span class="eyebrow">Get started</span>
     <div class="lede">
@@ -831,5 +872,29 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 })();
 </script>
 <!--/email_off-->
+
+<script>
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hero = document.querySelector('.hero.chero');
+  if(hero && !reduce){
+    var tick=false;
+    function upd(){
+      var r=hero.getBoundingClientRect(), h=hero.offsetHeight||1;
+      var p=(-r.top)/h; p=p<0?0:p>1?1:p;
+      hero.style.setProperty('--p', p.toFixed(4));
+      tick=false;
+    }
+    addEventListener('scroll',function(){ if(!tick){tick=true;requestAnimationFrame(upd);} },{passive:true});
+    addEventListener('resize',upd,{passive:true});
+    upd();
+  }
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{rootMargin:'0px 0px -10% 0px',threshold:0.06});
+  document.querySelectorAll('[data-reveal]').forEach(function(n){ io.observe(n); });
+})();
+</script>
+
 </body>
 </html>

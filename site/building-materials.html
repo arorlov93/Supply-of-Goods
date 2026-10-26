@@ -166,6 +166,46 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .navlinks a[aria-current]{color:var(--ink)}
 .navlinks a[aria-current]::after{right:0}
 .shot img,.heroside .shot img{filter:saturate(.8) contrast(1.06) brightness(.95)}
+
+/* ---- cinematic hero: the page opens on a full screen, as the home page does ---- */
+.hero.chero{position:relative;min-height:100svh;display:flex;align-items:flex-end;
+  overflow:hidden;isolation:isolate;padding:clamp(96px,14vh,150px) 0 clamp(44px,8vh,96px)}
+.chero .wrap.chero-g{display:block;width:100%;position:static}
+.chero .heroside{position:static;display:contents}
+.chero .chero-g>div{position:relative;z-index:3}
+.chero .heroside .shot{position:absolute;inset:0;z-index:0;aspect-ratio:auto;border:0;
+  transform:scale(calc(1.14 - var(--p,0)*.14));transform-origin:50% 44%;will-change:transform}
+.chero .heroside .shot img{filter:saturate(.7) contrast(1.09) brightness(.8)}
+.chero .heroside .shot .pz{position:absolute;inset:0;display:block}
+.chero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(8,10,13,.88) 0%,rgba(8,10,13,.34) 40%,rgba(8,10,13,.95) 100%)}
+.chero h1{font-family:var(--fd);font-weight:700;text-transform:uppercase;
+  letter-spacing:-.035em;line-height:.9;font-size:clamp(2.4rem,7.4vw,7rem);margin:.18em 0 0}
+.chero h1 em{font-style:normal;color:var(--gold)}
+.chero .sub{max-width:44ch;font-size:clamp(1rem,1.25vw,1.26rem);color:var(--on-shot)}
+.chero .crumbs,.chero .chips,.chero .ctarow{position:relative;z-index:3}
+.chero .scroll-cue{position:absolute;left:0;bottom:16px;z-index:4;font-family:var(--fm);
+  font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-3);
+  display:flex;align-items:center;gap:10px;opacity:calc(1 - var(--p,0)*3)}
+.chero .scroll-cue::before{content:"";width:34px;height:1px;background:currentColor}
+
+/* the facts table now opens the page body instead of crowding the picture */
+.glance{border-bottom:1px solid var(--rule);background:var(--surface)}
+.glance .wrap{padding:clamp(26px,4vh,46px) 0}
+.glance .factcard{background:transparent;border:0;backdrop-filter:none;margin:0;box-shadow:none}
+
+/* content enters as the reader reaches it */
+[data-reveal]{opacity:0;transform:translateY(26px);
+  transition:opacity .8s ease,transform .8s cubic-bezier(.16,1,.3,1)}
+[data-reveal].in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  .hero.chero{min-height:62svh}
+  .chero .heroside .shot{transform:none!important}
+  .chero .scroll-cue{display:none}
+  [data-reveal]{opacity:1!important;transform:none!important;transition:none!important}
+}
+
 </style>
 <style>
 /* hero */
@@ -628,20 +668,22 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
       <div class="chips"><span class="chip">EN &middot; ISO &middot; ASTM &middot; GOST</span><span class="chip">FCL and consolidated LCL</span><span class="chip">T&uuml;rkiye &middot; China &middot; EU</span></div>
       <div class="ctarow" style="margin-top:28px"><a class="btn" href="contact#enquiry">Request a quote</a></div>
     </div>
-    <div class="heroside"><div class="shot"><span class="pz"><img src="media/quarry-stone.webp" width="1040" height="1300" alt="Working face of a stone quarry" fetchpriority="high" decoding="async"></span></div><aside class="factcard"><span class="eyebrow">Category at a glance</span><table class="facts"><tbody><tr><th scope="row">Typical cargo</th><td>Stone, porcelain and ceramic tile, cement products, dry mixes, insulation, sanitary ware, cable</td></tr><tr><th scope="row">Standards</th><td>EN 14411 and ISO 13006 for tile, EN 197-1 for cement, EN 13162 to 13171 for insulation</td></tr><tr><th scope="row">Bought by</th><td>Water absorption group, abrasion class, calibre and shade batch, declared conductivity</td></tr><tr><th scope="row">Pack</th><td>Pallets strapped and corner protected; stone on A-frames or bundled by block</td></tr><tr><th scope="row">Corridors</th><td>Tükiye to the United States, China to worldwide, EU</td></tr><tr><th scope="row">Terms</th><td>FOB, CIF, DAP</td></tr></tbody></table></aside></div>
+    <div class="heroside"><div class="shot"><span class="pz"><img src="media/quarry-stone.webp" width="1040" height="1300" alt="Working face of a stone quarry" fetchpriority="high" decoding="async"></span></div></div>
   </div>
+  <span class="scroll-cue" aria-hidden="true">Scroll</span>
 </header>
+<section class="glance"><div class="wrap"><aside class="factcard"><span class="eyebrow">Category at a glance</span><table class="facts"><tbody><tr><th scope="row">Typical cargo</th><td>Stone, porcelain and ceramic tile, cement products, dry mixes, insulation, sanitary ware, cable</td></tr><tr><th scope="row">Standards</th><td>EN 14411 and ISO 13006 for tile, EN 197-1 for cement, EN 13162 to 13171 for insulation</td></tr><tr><th scope="row">Bought by</th><td>Water absorption group, abrasion class, calibre and shade batch, declared conductivity</td></tr><tr><th scope="row">Pack</th><td>Pallets strapped and corner protected; stone on A-frames or bundled by block</td></tr><tr><th scope="row">Corridors</th><td>Tükiye to the United States, China to worldwide, EU</td></tr><tr><th scope="row">Terms</th><td>FOB, CIF, DAP</td></tr></tbody></table></aside></div></section>
 
 <main id="main" tabindex="-1">
-<section><div class="wrap"><figure class="mediafig" style="margin-bottom:44px"><div class="shot"><span class="pz"><img src="media/pipe.webp" width="922" height="691" loading="lazy" alt="Stacked construction material seen end on"></span></div><figcaption>Materials bought to a named standard, with the certificate attached</figcaption></figure>
+<section data-reveal><div class="wrap"><figure class="mediafig" style="margin-bottom:44px"><div class="shot"><span class="pz"><img src="media/pipe.webp" width="922" height="691" loading="lazy" alt="Stacked construction material seen end on"></span></div><figcaption>Materials bought to a named standard, with the certificate attached</figcaption></figure>
 <div class="lede"><h2>Finishing materials fail on tolerance, not on price</h2><p class="intro">A tile that is two millimetres out of square, a batch of slabs from three different blocks, a cable that does not carry the reaction-to-fire class the building needs. None of these shows in a quotation, and all of them are discovered on site.</p></div>
 <nav class="toc" aria-label="On this page"><span class="eyebrow">On this page</span><ol><li><a href="#s1"><span>01</span>What we buy in this category</a></li><li><a href="#s2"><span>02</span>The specification that makes offers comparable</a></li><li><a href="#s3"><span>03</span>Natural stone is three different purchases</a></li><li><a href="#s4"><span>04</span>Packing decides what arrives saleable</a></li><li><a href="#s5"><span>05</span>What the destination will ask for</a></li></ol></nav>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2 id="s1">What we buy in this category</h2><div class="ptext"><ul class="plist"><li><b>Natural stone</b> in blocks, slabs cut to 2 cm or 3 cm, and finished pieces. Polished, honed or brushed, bundled by block so a run matches.</li><li><b>Porcelain and ceramic tile</b> to ISO 13006 and EN 14411, specified by water absorption group and by abrasion class rather than by trade name.</li><li><b>Cement products and dry mixes</b>, cement to EN 197-1 class, adhesives and screeds with the batch certificate.</li><li><b>Insulation</b> to the EN 13162 to 13171 family, specified by declared thermal conductivity and by thickness, not by brand.</li><li><b>Sanitary ware</b>, ceramics and fittings, with the pressure and flush tests stated.</li><li><b>Cable and electrical goods</b>, with the reaction-to-fire classification the destination building code requires.</li></ul></div></div><div class="pblock"><span class="k">02</span><h2 id="s2">The specification that makes offers comparable</h2><div class="ptext"><p>Tile is the clearest example. “600 by 600 porcelain, grey” is not a specification: it leaves out the water absorption group, which decides whether the tile can go outside; the abrasion class, which decides whether it survives a commercial floor; the rectification, which decides the joint width; the surface slip rating; and the calibre and shade batch, which decide whether two pallets laid side by side look like one floor.</p><p>We write those into the order before asking for a price, and we ask for the shade and calibre batch to be held across the whole quantity. A second shipment from the same factory in a different batch will not match the first, and no discount fixes it.</p></div></div><div class="pblock"><span class="k">03</span><h2 id="s3">Natural stone is three different purchases</h2><div class="ptext"><p>A quarry sells blocks by the cubic metre. A factory sells slabs by the square metre, bundled by block. A fabricator sells pieces cut to a drawing. Different prices, different packing, different waste and different people to argue with.</p><p>If the buyer intends to fabricate, bundle integrity matters more than the unit price, because slabs from different blocks will not match across a run. Most commercial travertine and much marble is resin treated and often mesh backed, which is normal and has to be declared. Stone sold as unfilled that arrives resin filled is a claim. The detail is on the <a href="turkiye">Türkiye corridor page</a>.</p></div></div><div class="pblock"><span class="k">04</span><h2 id="s4">Packing decides what arrives saleable</h2><div class="ptext"><p>Tile travels on pallets and is lost to corner damage; the pallet has to be strapped and corner-protected and the stretch wrap has to be real wrap, not three turns. Stone travels on A-frames or in wooden bundles with the faces separated, and a sealed crate that cannot breathe marks light material with trapped moisture.</p><p>Cement products and dry mixes are hygroscopic: they want a liner and they want to be loaded last and discharged first. We write the breakage and moisture allowance into both contracts in the same words, with the same inspection window and the same evidence standard.</p></div></div><div class="pblock"><span class="k">05</span><h2 id="s5">What the destination will ask for</h2><div class="ptext"><p>Which certificates matter depends entirely on where the goods are going, and this is settled before the order rather than at the border. In the European Union, construction products in scope carry a declaration of performance and CE marking. In the Eurasian customs union the equivalent is the EAC conformity regime. In the United States the question is usually the HTS classification and whether a trade remedy order touches the product.</p><p class="pnote">We agree the classification in writing before the order is placed, because the importer of record is liable for a wrong one and the seller is not.</p></div></div></div>
 
 </div></section>
-<section id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>What buyers ask about this category</h2><p class="intro">The three that come up before a first order.</p></div><div style="margin-top:34px"><details><summary>Can you match a tile we already have?</summary><p>Usually, from a sample or from the original manufacturer's reference. What cannot be promised is a shade match across batches, because shade is a batch property. If matching matters, the whole quantity has to come from one batch and that has to be in the order.</p></details><details><summary>Do you supply stone by the block or by the slab?</summary><p>Both, but they are different purchases with different economics. If you are not running your own saw, buy slabs bundled by block. If you are, blocks can be cheaper per square metre and you carry the yield risk.</p></details><details><summary>Who certifies that the material meets the standard?</summary><p>The producer issues the test report or declaration; we check that the document names the standard the destination actually requires, which is not always the one the producer is used to issuing. Where the value justifies it we add third-party testing before shipment.</p></details></div></div></section>
-<section><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Other categories</h2><p class="intro">The same method, applied to different goods.</p></div><div class="lanelinks"><a class="lanelink" href="industrial-equipment"><b>Industrial equipment and machinery</b><span>Production lines, compressors, pumps, generators, material handling.</span></a><a class="lanelink" href="tools-hardware"><b>Tools, hardware and fasteners</b><span>Power and hand tools, abrasives, measuring instruments, fixings.</span></a><a class="lanelink" href="metals-pipe"><b>Metals and pipe</b><span>Sections, sheet and plate, seamless and welded pipe, fittings and flanges.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
-<section class="cta">
+<section data-reveal id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>What buyers ask about this category</h2><p class="intro">The three that come up before a first order.</p></div><div style="margin-top:34px"><details><summary>Can you match a tile we already have?</summary><p>Usually, from a sample or from the original manufacturer's reference. What cannot be promised is a shade match across batches, because shade is a batch property. If matching matters, the whole quantity has to come from one batch and that has to be in the order.</p></details><details><summary>Do you supply stone by the block or by the slab?</summary><p>Both, but they are different purchases with different economics. If you are not running your own saw, buy slabs bundled by block. If you are, blocks can be cheaper per square metre and you carry the yield risk.</p></details><details><summary>Who certifies that the material meets the standard?</summary><p>The producer issues the test report or declaration; we check that the document names the standard the destination actually requires, which is not always the one the producer is used to issuing. Where the value justifies it we add third-party testing before shipment.</p></details></div></div></section>
+<section data-reveal><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Other categories</h2><p class="intro">The same method, applied to different goods.</p></div><div class="lanelinks"><a class="lanelink" href="industrial-equipment"><b>Industrial equipment and machinery</b><span>Production lines, compressors, pumps, generators, material handling.</span></a><a class="lanelink" href="tools-hardware"><b>Tools, hardware and fasteners</b><span>Power and hand tools, abrasives, measuring instruments, fixings.</span></a><a class="lanelink" href="metals-pipe"><b>Metals and pipe</b><span>Sections, sheet and plate, seamless and welded pipe, fittings and flanges.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
+<section data-reveal class="cta">
   <div class="wrap">
     <span class="eyebrow">Get started</span>
     <div class="lede">
@@ -831,5 +873,29 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 })();
 </script>
 <!--/email_off-->
+
+<script>
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hero = document.querySelector('.hero.chero');
+  if(hero && !reduce){
+    var tick=false;
+    function upd(){
+      var r=hero.getBoundingClientRect(), h=hero.offsetHeight||1;
+      var p=(-r.top)/h; p=p<0?0:p>1?1:p;
+      hero.style.setProperty('--p', p.toFixed(4));
+      tick=false;
+    }
+    addEventListener('scroll',function(){ if(!tick){tick=true;requestAnimationFrame(upd);} },{passive:true});
+    addEventListener('resize',upd,{passive:true});
+    upd();
+  }
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{rootMargin:'0px 0px -10% 0px',threshold:0.06});
+  document.querySelectorAll('[data-reveal]').forEach(function(n){ io.observe(n); });
+})();
+</script>
+
 </body>
 </html>

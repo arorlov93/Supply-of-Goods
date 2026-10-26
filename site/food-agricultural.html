@@ -166,6 +166,46 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .navlinks a[aria-current]{color:var(--ink)}
 .navlinks a[aria-current]::after{right:0}
 .shot img,.heroside .shot img{filter:saturate(.8) contrast(1.06) brightness(.95)}
+
+/* ---- cinematic hero: the page opens on a full screen, as the home page does ---- */
+.hero.chero{position:relative;min-height:100svh;display:flex;align-items:flex-end;
+  overflow:hidden;isolation:isolate;padding:clamp(96px,14vh,150px) 0 clamp(44px,8vh,96px)}
+.chero .wrap.chero-g{display:block;width:100%;position:static}
+.chero .heroside{position:static;display:contents}
+.chero .chero-g>div{position:relative;z-index:3}
+.chero .heroside .shot{position:absolute;inset:0;z-index:0;aspect-ratio:auto;border:0;
+  transform:scale(calc(1.14 - var(--p,0)*.14));transform-origin:50% 44%;will-change:transform}
+.chero .heroside .shot img{filter:saturate(.7) contrast(1.09) brightness(.8)}
+.chero .heroside .shot .pz{position:absolute;inset:0;display:block}
+.chero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(8,10,13,.88) 0%,rgba(8,10,13,.34) 40%,rgba(8,10,13,.95) 100%)}
+.chero h1{font-family:var(--fd);font-weight:700;text-transform:uppercase;
+  letter-spacing:-.035em;line-height:.9;font-size:clamp(2.4rem,7.4vw,7rem);margin:.18em 0 0}
+.chero h1 em{font-style:normal;color:var(--gold)}
+.chero .sub{max-width:44ch;font-size:clamp(1rem,1.25vw,1.26rem);color:var(--on-shot)}
+.chero .crumbs,.chero .chips,.chero .ctarow{position:relative;z-index:3}
+.chero .scroll-cue{position:absolute;left:0;bottom:16px;z-index:4;font-family:var(--fm);
+  font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-3);
+  display:flex;align-items:center;gap:10px;opacity:calc(1 - var(--p,0)*3)}
+.chero .scroll-cue::before{content:"";width:34px;height:1px;background:currentColor}
+
+/* the facts table now opens the page body instead of crowding the picture */
+.glance{border-bottom:1px solid var(--rule);background:var(--surface)}
+.glance .wrap{padding:clamp(26px,4vh,46px) 0}
+.glance .factcard{background:transparent;border:0;backdrop-filter:none;margin:0;box-shadow:none}
+
+/* content enters as the reader reaches it */
+[data-reveal]{opacity:0;transform:translateY(26px);
+  transition:opacity .8s ease,transform .8s cubic-bezier(.16,1,.3,1)}
+[data-reveal].in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  .hero.chero{min-height:62svh}
+  .chero .heroside .shot{transform:none!important}
+  .chero .scroll-cue{display:none}
+  [data-reveal]{opacity:1!important;transform:none!important;transition:none!important}
+}
+
 </style>
 <style>
 /* hero */
@@ -628,20 +668,22 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
       <div class="chips"><span class="chip">40ft reefer, 25 t net</span><span class="chip">Block frozen, 10 kg cartons</span><span class="chip">Establishment approval first</span><span class="chip">CIF &middot; CFR</span></div>
       <div class="ctarow" style="margin-top:28px"><a class="btn" href="contact#enquiry">Request a quote</a></div>
     </div>
-    <div class="heroside"><div class="shot"><span class="pz"><img src="media/silos.webp" width="1040" height="1300" alt="Grain terminal silos" fetchpriority="high" decoding="async"></span></div><aside class="factcard"><span class="eyebrow">Category at a glance</span><table class="facts"><tbody><tr><th scope="row">Typical cargo</th><td>Frozen and chilled poultry and protein, bulk staples, food ingredients</td></tr><tr><th scope="row">First question</th><td>Establishment number and written confirmation of admissibility at the destination</td></tr><tr><th scope="row">Equipment</th><td>40ft reefer, about 25 t net, temperature recorded and read at discharge</td></tr><tr><th scope="row">Pack</th><td>Block frozen in 10 kg cartons where the market needs it, producer pack priced in parallel</td></tr><tr><th scope="row">Specification</th><td>Anatomy named per line, tom or hen for turkey, grading agreed for staples</td></tr><tr><th scope="row">Corridors</th><td>Americas and EU into West Africa, with Lomé and Cotonou priced separately</td></tr></tbody></table></aside></div>
+    <div class="heroside"><div class="shot"><span class="pz"><img src="media/silos.webp" width="1040" height="1300" alt="Grain terminal silos" fetchpriority="high" decoding="async"></span></div></div>
   </div>
+  <span class="scroll-cue" aria-hidden="true">Scroll</span>
 </header>
+<section class="glance"><div class="wrap"><aside class="factcard"><span class="eyebrow">Category at a glance</span><table class="facts"><tbody><tr><th scope="row">Typical cargo</th><td>Frozen and chilled poultry and protein, bulk staples, food ingredients</td></tr><tr><th scope="row">First question</th><td>Establishment number and written confirmation of admissibility at the destination</td></tr><tr><th scope="row">Equipment</th><td>40ft reefer, about 25 t net, temperature recorded and read at discharge</td></tr><tr><th scope="row">Pack</th><td>Block frozen in 10 kg cartons where the market needs it, producer pack priced in parallel</td></tr><tr><th scope="row">Specification</th><td>Anatomy named per line, tom or hen for turkey, grading agreed for staples</td></tr><tr><th scope="row">Corridors</th><td>Americas and EU into West Africa, with Lomé and Cotonou priced separately</td></tr></tbody></table></aside></div></section>
 
 <main id="main" tabindex="-1">
-<section><div class="wrap"><figure class="mediafig" style="margin-bottom:44px"><div class="shot"><span class="pz"><img src="media/vessel2.webp" width="774" height="581" loading="lazy" alt="Container vessel alongside with boxes loaded"></span></div><figcaption>Reefer programmes run to a schedule, not to a spot booking</figcaption></figure>
+<section data-reveal><div class="wrap"><figure class="mediafig" style="margin-bottom:44px"><div class="shot"><span class="pz"><img src="media/vessel2.webp" width="774" height="581" loading="lazy" alt="Container vessel alongside with boxes loaded"></span></div><figcaption>Reefer programmes run to a schedule, not to a spot booking</figcaption></figure>
 <div class="lede"><h2>Admissibility, nomenclature, cold chain, then price</h2><p class="intro">Those four, in that order. Most of the cheap offers in this trade fail one of the first three, and a buyer who starts at the fourth will spend a month discovering it.</p></div>
 <nav class="toc" aria-label="On this page"><span class="eyebrow">On this page</span><ol><li><a href="#s1"><span>01</span>Admissibility comes before price</a></li><li><a href="#s2"><span>02</span>Specify the cut by anatomy, not by category</a></li><li><a href="#s3"><span>03</span>Pack and cold chain are part of the specification</a></li><li><a href="#s4"><span>04</span>Bulk staples and ingredients</a></li><li><a href="#s5"><span>05</span>Branded beverages</a></li><li><a href="#s6"><span>06</span>Compare the market, not the quotations</a></li></ol></nav>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2 id="s1">Admissibility comes before price</h2><div class="ptext"><p>Frozen meat does not enter a country on a commercial invoice. It enters on a veterinary health certificate issued for a specific producing establishment, in a form the destination accepts. An establishment approved for one country is not automatically approved for its neighbour, and the requirements change.</p><p>The first question to any seller is the establishment number and written confirmation that it is cleared for the destination, before price is discussed. How certification works for United States and European Union origin, which form is issued and who signs it, is in the <a href="veterinary-certificate">veterinary certificate guide</a>, and the lane itself on the <a href="west-africa">West Africa corridor page</a>.</p></div></div><div class="pblock"><span class="k">02</span><h2 id="s2">Specify the cut by anatomy, not by category</h2><div class="ptext"><p>Every enquiry we send names the anatomy explicitly, names the pack and asks for the price per line on the same Incoterm, because a category name covers several products at several prices. The same discipline applies to grading on staples and to piece weight on anything portioned.</p><p>The full nomenclature, and why two offers using the same word are not comparable, is in <a href="poultry-cuts">the cuts guide</a>.</p></div></div><div class="pblock"><span class="k">03</span><h2 id="s3">Pack and cold chain are part of the specification</h2><div class="ptext"><p>Many destination markets buy block frozen product in 10 kg cartons, which is not the standard pack in the United States or in the European Union. Repacking is possible and it costs money, so the price has to be asked for in the producer's own pack as well; the difference is what the non-standard format is actually worth.</p><p>A 40ft reefer carries about 25 tonnes net. The temperature is set at loading, recorded throughout and read at discharge, and the recorder tape belongs in the document set rather than in a drawer. Plug time at the transhipment port and at the destination is the part of the chain nobody books and everybody assumes.</p></div></div><div class="pblock"><span class="k">04</span><h2 id="s4">Bulk staples and ingredients</h2><div class="ptext"><p>Rice, sugar, pulses, flour and oils move on specification and on sanitary documentation rather than on veterinary certification, which makes them simpler to originate and no simpler to land. The lines that decide a claim are moisture, broken percentage or equivalent grading, foreign matter, packing weight tolerance and the sampling method at discharge. Those are agreed in the contract or they are argued about afterwards.</p></div></div><div class="pblock"><span class="k">05</span><h2 id="s5">Branded beverages</h2><div class="ptext"><p>A brand name is not an article. The same brand covers recipes that differ by region, carbonated and still, in formats that are not interchangeable, and they do not trade at the same price. We identify the article by its EAN and ask the seller to confirm it against the production, because a low price is usually a different product rather than a better deal.</p><p>Remaining shelf life at dispatch decides whether the lot can be sold at all. Retail chains commonly require between 45 and 67 per cent of total life still to run, so a cheap lot with three months left is somebody else's dead stock. We ask for the production date and the batch numbers of the actual pallets, not of the article in general.</p><p>Two things belong in the landed cost and are routinely left out of quotations. Container deposit schemes: in Germany the one-way deposit is EUR 0.25 per can and is charged to a customer abroad as well, which is most of the gap between a surprising offer and a real one. And proof of lawful acquisition, including where the goods were first placed on the market, because trademark rights are exhausted regionally in several destinations and a consignment can be stopped at the border on that ground alone.</p><p class="pnote">A standard 13.6 m truck takes 33 euro pallets. At 108 cases of 24 cans that is 85,536 cans, and we ask every seller for their own packing figures rather than applying ours to their pallet.</p></div></div><div class="pblock"><span class="k">06</span><h2 id="s6">Compare the market, not the quotations</h2><div class="ptext"><p>A quotation is what a seller would like to receive. Customs statistics show what the goods actually crossed a border at, because the declared value is divided by the declared net weight and every discount the seller really gave is already inside that number. Before we negotiate a lane we pull the destination's import values by origin and by commodity code for the most recent full periods and negotiate against that.</p><p class="pnote">On this category that exercise regularly moves the target by a fifth or more, and it changes which origin we approach first. The method is set out in <a href="customs-data-pricing">how customs data shows the real price</a>.</p></div></div></div>
 
 </div></section>
-<section id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>What buyers ask about this category</h2><p class="intro">The three that come up before a first order.</p></div><div style="margin-top:34px"><details><summary>Why do you ask for the establishment number before discussing price?</summary><p>Because an establishment that is not approved for the destination cannot ship, whatever it quotes. Approval for one country does not carry to its neighbour, and the requirements change, so we want the number and written confirmation before anything else.</p></details><details><summary>Can you supply in our own pack format?</summary><p>Usually, but ask for both prices. Repacking from the producer's standard format costs money, and seeing the two numbers side by side tells you what the non-standard pack is really worth.</p></details><details><summary>How is the cold chain evidenced?</summary><p>The temperature is set at loading, recorded throughout and read at discharge, and the recorder output is part of the document set. Plug time at transhipment and at the destination is booked rather than assumed.</p></details></div></div></section>
-<section><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Other categories</h2><p class="intro">The same method, applied to different goods.</p></div><div class="lanelinks"><a class="lanelink" href="building-materials"><b>Building and finishing materials</b><span>Stone, tile, cement products, insulation, dry mixes, sanitary ware, cable.</span></a><a class="lanelink" href="industrial-equipment"><b>Industrial equipment and machinery</b><span>Production lines, compressors, pumps, generators, material handling.</span></a><a class="lanelink" href="tools-hardware"><b>Tools, hardware and fasteners</b><span>Power and hand tools, abrasives, measuring instruments, fixings.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
-<section class="cta">
+<section data-reveal id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>What buyers ask about this category</h2><p class="intro">The three that come up before a first order.</p></div><div style="margin-top:34px"><details><summary>Why do you ask for the establishment number before discussing price?</summary><p>Because an establishment that is not approved for the destination cannot ship, whatever it quotes. Approval for one country does not carry to its neighbour, and the requirements change, so we want the number and written confirmation before anything else.</p></details><details><summary>Can you supply in our own pack format?</summary><p>Usually, but ask for both prices. Repacking from the producer's standard format costs money, and seeing the two numbers side by side tells you what the non-standard pack is really worth.</p></details><details><summary>How is the cold chain evidenced?</summary><p>The temperature is set at loading, recorded throughout and read at discharge, and the recorder output is part of the document set. Plug time at transhipment and at the destination is booked rather than assumed.</p></details></div></div></section>
+<section data-reveal><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Other categories</h2><p class="intro">The same method, applied to different goods.</p></div><div class="lanelinks"><a class="lanelink" href="building-materials"><b>Building and finishing materials</b><span>Stone, tile, cement products, insulation, dry mixes, sanitary ware, cable.</span></a><a class="lanelink" href="industrial-equipment"><b>Industrial equipment and machinery</b><span>Production lines, compressors, pumps, generators, material handling.</span></a><a class="lanelink" href="tools-hardware"><b>Tools, hardware and fasteners</b><span>Power and hand tools, abrasives, measuring instruments, fixings.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
+<section data-reveal class="cta">
   <div class="wrap">
     <span class="eyebrow">Get started</span>
     <div class="lede">
@@ -831,5 +873,29 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 })();
 </script>
 <!--/email_off-->
+
+<script>
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hero = document.querySelector('.hero.chero');
+  if(hero && !reduce){
+    var tick=false;
+    function upd(){
+      var r=hero.getBoundingClientRect(), h=hero.offsetHeight||1;
+      var p=(-r.top)/h; p=p<0?0:p>1?1:p;
+      hero.style.setProperty('--p', p.toFixed(4));
+      tick=false;
+    }
+    addEventListener('scroll',function(){ if(!tick){tick=true;requestAnimationFrame(upd);} },{passive:true});
+    addEventListener('resize',upd,{passive:true});
+    upd();
+  }
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{rootMargin:'0px 0px -10% 0px',threshold:0.06});
+  document.querySelectorAll('[data-reveal]').forEach(function(n){ io.observe(n); });
+})();
+</script>
+
 </body>
 </html>

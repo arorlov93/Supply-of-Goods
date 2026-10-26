@@ -166,6 +166,46 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .navlinks a[aria-current]{color:var(--ink)}
 .navlinks a[aria-current]::after{right:0}
 .shot img,.heroside .shot img{filter:saturate(.8) contrast(1.06) brightness(.95)}
+
+/* ---- cinematic hero: the page opens on a full screen, as the home page does ---- */
+.hero.chero{position:relative;min-height:100svh;display:flex;align-items:flex-end;
+  overflow:hidden;isolation:isolate;padding:clamp(96px,14vh,150px) 0 clamp(44px,8vh,96px)}
+.chero .wrap.chero-g{display:block;width:100%;position:static}
+.chero .heroside{position:static;display:contents}
+.chero .chero-g>div{position:relative;z-index:3}
+.chero .heroside .shot{position:absolute;inset:0;z-index:0;aspect-ratio:auto;border:0;
+  transform:scale(calc(1.14 - var(--p,0)*.14));transform-origin:50% 44%;will-change:transform}
+.chero .heroside .shot img{filter:saturate(.7) contrast(1.09) brightness(.8)}
+.chero .heroside .shot .pz{position:absolute;inset:0;display:block}
+.chero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(8,10,13,.88) 0%,rgba(8,10,13,.34) 40%,rgba(8,10,13,.95) 100%)}
+.chero h1{font-family:var(--fd);font-weight:700;text-transform:uppercase;
+  letter-spacing:-.035em;line-height:.9;font-size:clamp(2.4rem,7.4vw,7rem);margin:.18em 0 0}
+.chero h1 em{font-style:normal;color:var(--gold)}
+.chero .sub{max-width:44ch;font-size:clamp(1rem,1.25vw,1.26rem);color:var(--on-shot)}
+.chero .crumbs,.chero .chips,.chero .ctarow{position:relative;z-index:3}
+.chero .scroll-cue{position:absolute;left:0;bottom:16px;z-index:4;font-family:var(--fm);
+  font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-3);
+  display:flex;align-items:center;gap:10px;opacity:calc(1 - var(--p,0)*3)}
+.chero .scroll-cue::before{content:"";width:34px;height:1px;background:currentColor}
+
+/* the facts table now opens the page body instead of crowding the picture */
+.glance{border-bottom:1px solid var(--rule);background:var(--surface)}
+.glance .wrap{padding:clamp(26px,4vh,46px) 0}
+.glance .factcard{background:transparent;border:0;backdrop-filter:none;margin:0;box-shadow:none}
+
+/* content enters as the reader reaches it */
+[data-reveal]{opacity:0;transform:translateY(26px);
+  transition:opacity .8s ease,transform .8s cubic-bezier(.16,1,.3,1)}
+[data-reveal].in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  .hero.chero{min-height:62svh}
+  .chero .heroside .shot{transform:none!important}
+  .chero .scroll-cue{display:none}
+  [data-reveal]{opacity:1!important;transform:none!important;transition:none!important}
+}
+
 </style>
 <style>
 /* hero */
@@ -630,18 +670,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     </div>
     <div class="heroside"><div class="shot"><span class="pz"><img src="media/machinery.webp" width="1040" height="1300" alt="Industrial drive assembly in a workshop" fetchpriority="high" decoding="async"></span></div></div>
   </div>
+  <span class="scroll-cue" aria-hidden="true">Scroll</span>
 </header>
 
 <main id="main" tabindex="-1">
-<section><div class="wrap">
+<section data-reveal><div class="wrap">
 <div class="lede"><h2>Why it matters, in one sentence</h2><p class="intro">A factory can re-run a batch. A trading company has to persuade someone else to re-run it, at its own cost, with no leverage, which is why the difference shows up only when something has already gone wrong.</p></div>
 <nav class="toc" aria-label="On this page"><span class="eyebrow">On this page</span><ol><li><a href="#s1"><span>01</span>Check one: the registration document</a></li><li><a href="#s2"><span>02</span>Check two: the right to export</a></li><li><a href="#s3"><span>03</span>Check three: the beneficiary name on the proforma</a></li><li><a href="#s4"><span>04</span>Check four: something only a factory can answer</a></li><li><a href="#s5"><span>05</span>What an audit adds, and when it is worth it</a></li></ol></nav>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2 id="s1">Check one: the registration document</h2><div class="ptext"><p>Every registered company has one, and it names the legal entity, the registration number, the registered capital and the scope of business. In China that is the business licence with its unified social credit code; elsewhere it has a different name and the same function.</p><p>Read the scope of business rather than the letterhead. A company whose registered scope is wholesale and import-export is not a manufacturer, whatever the website says. This is not a hidden fact, it is printed on the document they will send you if you ask.</p></div></div><div class="pblock"><span class="k">02</span><h2 id="s2">Check two: the right to export</h2><div class="ptext"><p>Manufacturing and exporting are separate permissions in many jurisdictions. A real factory may have no export right at all and may ship through an agent, which is legitimate and changes who your contract is with, who issues the invoice and who is named on the bill of lading.</p><p>If the entity that signs your contract is not the entity that manufactures and not the entity that exports, there are three parties and you are relying on the relationships between two of them that you cannot see.</p></div></div><div class="pblock"><span class="k">03</span><h2 id="s3">Check three: the beneficiary name on the proforma</h2><div class="ptext"><p>This is the one that catches almost everything. The bank account on the proforma invoice has to carry the same name as the registration document. Not a similar name, not the trading name, not the name of a director, not an account in a third country “because of currency controls”.</p><p class="pnote">A mismatch between the seller name and the beneficiary name is not an administrative detail to be smoothed over. It is the whole question. Every payment-diversion fraud in this trade runs through exactly that gap.</p><p>The related problem is the lookalike domain. Around well-known exporters there is a layer of sites that copy the name and offer their own sales addresses. The rule is simple: write only to the domain published on the company's own official site, and treat any address on a different domain as unverified until proven otherwise.</p></div></div><div class="pblock"><span class="k">04</span><h2 id="s4">Check four: something only a factory can answer</h2><div class="ptext"><p>Ask a production question that a trader cannot answer without a phone call: the cycle time on the line that would make your item, the changeover time between sizes, the name of the controller on the main machine, how many shifts run in a normal week, and what the minimum run is before a changeover stops being worth it.</p><p>A factory answers in one message. A trader answers tomorrow, in different words from the ones they used yesterday.</p></div></div><div class="pblock"><span class="k">05</span><h2 id="s5">What an audit adds, and when it is worth it</h2><div class="ptext"><p>A physical factory audit by a third party adds what documents cannot: that the plant exists at the registered address, that the equipment matches the claim, and that the quality system is operated rather than framed. It costs a fraction of a container and it is worth it on a first order of any size, on anything safety-critical, and on any supplier found through a marketplace rather than through a reference.</p><p>We do these checks before quoting rather than before ordering, because a price from a counterparty that will not survive the check is not information.</p></div></div></div>
 
 </div></section>
-<section id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>Questions on this</h2><p class="intro">The ones we are asked most often.</p></div><div style="margin-top:34px"><details><summary>Is it wrong to buy through a trading company?</summary><p>No. For a small quantity or an assortment across several plants a trading company is often the right answer and costs less than dealing with five factories. What is wrong is a trading company presenting itself as a manufacturer, because then you are pricing a risk you do not know you are carrying.</p></details><details><summary>The supplier wants payment to an account in another country. Is that normal?</summary><p>It is a stop sign. There are legitimate reasons a group banks offshore, and they can all be evidenced in writing on company letterhead with the group structure. Until that evidence exists, treat it as the most common pattern in payment fraud.</p></details><details><summary>How long do these checks take?</summary><p>The document checks take a day or two. A third-party factory audit takes one to two weeks to schedule and a day to perform. Both are shorter than the delay caused by a failed first shipment.</p></details></div></div></section>
-<section><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Related guides</h2><p class="intro">The ones that usually get read next.</p></div><div class="lanelinks"><a class="lanelink" href="letter-of-credit"><b>A letter of credit at sight</b><span>What it protects, what it costs and where it fails.</span></a><a class="lanelink" href="customs-data-pricing"><b>How customs data shows the real price</b><span>Why a quotation and a transacted value are different numbers.</span></a><a class="lanelink" href="hs-code"><b>Who is liable for the HS code</b><span>The importer of record, and what that means in money.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
-<section class="cta">
+<section data-reveal id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>Questions on this</h2><p class="intro">The ones we are asked most often.</p></div><div style="margin-top:34px"><details><summary>Is it wrong to buy through a trading company?</summary><p>No. For a small quantity or an assortment across several plants a trading company is often the right answer and costs less than dealing with five factories. What is wrong is a trading company presenting itself as a manufacturer, because then you are pricing a risk you do not know you are carrying.</p></details><details><summary>The supplier wants payment to an account in another country. Is that normal?</summary><p>It is a stop sign. There are legitimate reasons a group banks offshore, and they can all be evidenced in writing on company letterhead with the group structure. Until that evidence exists, treat it as the most common pattern in payment fraud.</p></details><details><summary>How long do these checks take?</summary><p>The document checks take a day or two. A third-party factory audit takes one to two weeks to schedule and a day to perform. Both are shorter than the delay caused by a failed first shipment.</p></details></div></div></section>
+<section data-reveal><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Related guides</h2><p class="intro">The ones that usually get read next.</p></div><div class="lanelinks"><a class="lanelink" href="letter-of-credit"><b>A letter of credit at sight</b><span>What it protects, what it costs and where it fails.</span></a><a class="lanelink" href="customs-data-pricing"><b>How customs data shows the real price</b><span>Why a quotation and a transacted value are different numbers.</span></a><a class="lanelink" href="hs-code"><b>Who is liable for the HS code</b><span>The importer of record, and what that means in money.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
+<section data-reveal class="cta">
   <div class="wrap">
     <span class="eyebrow">Get started</span>
     <div class="lede">
@@ -831,5 +872,29 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 })();
 </script>
 <!--/email_off-->
+
+<script>
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hero = document.querySelector('.hero.chero');
+  if(hero && !reduce){
+    var tick=false;
+    function upd(){
+      var r=hero.getBoundingClientRect(), h=hero.offsetHeight||1;
+      var p=(-r.top)/h; p=p<0?0:p>1?1:p;
+      hero.style.setProperty('--p', p.toFixed(4));
+      tick=false;
+    }
+    addEventListener('scroll',function(){ if(!tick){tick=true;requestAnimationFrame(upd);} },{passive:true});
+    addEventListener('resize',upd,{passive:true});
+    upd();
+  }
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{rootMargin:'0px 0px -10% 0px',threshold:0.06});
+  document.querySelectorAll('[data-reveal]').forEach(function(n){ io.observe(n); });
+})();
+</script>
+
 </body>
 </html>

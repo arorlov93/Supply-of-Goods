@@ -169,6 +169,46 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 .navlinks a[aria-current]{color:var(--ink)}
 .navlinks a[aria-current]::after{right:0}
 .shot img,.heroside .shot img{filter:saturate(.8) contrast(1.06) brightness(.95)}
+
+/* ---- cinematic hero: the page opens on a full screen, as the home page does ---- */
+.hero.chero{position:relative;min-height:100svh;display:flex;align-items:flex-end;
+  overflow:hidden;isolation:isolate;padding:clamp(96px,14vh,150px) 0 clamp(44px,8vh,96px)}
+.chero .wrap.chero-g{display:block;width:100%;position:static}
+.chero .heroside{position:static;display:contents}
+.chero .chero-g>div{position:relative;z-index:3}
+.chero .heroside .shot{position:absolute;inset:0;z-index:0;aspect-ratio:auto;border:0;
+  transform:scale(calc(1.14 - var(--p,0)*.14));transform-origin:50% 44%;will-change:transform}
+.chero .heroside .shot img{filter:saturate(.7) contrast(1.09) brightness(.8)}
+.chero .heroside .shot .pz{position:absolute;inset:0;display:block}
+.chero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(8,10,13,.88) 0%,rgba(8,10,13,.34) 40%,rgba(8,10,13,.95) 100%)}
+.chero h1{font-family:var(--fd);font-weight:700;text-transform:uppercase;
+  letter-spacing:-.035em;line-height:.9;font-size:clamp(2.4rem,7.4vw,7rem);margin:.18em 0 0}
+.chero h1 em{font-style:normal;color:var(--gold)}
+.chero .sub{max-width:44ch;font-size:clamp(1rem,1.25vw,1.26rem);color:var(--on-shot)}
+.chero .crumbs,.chero .chips,.chero .ctarow{position:relative;z-index:3}
+.chero .scroll-cue{position:absolute;left:0;bottom:16px;z-index:4;font-family:var(--fm);
+  font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-3);
+  display:flex;align-items:center;gap:10px;opacity:calc(1 - var(--p,0)*3)}
+.chero .scroll-cue::before{content:"";width:34px;height:1px;background:currentColor}
+
+/* the facts table now opens the page body instead of crowding the picture */
+.glance{border-bottom:1px solid var(--rule);background:var(--surface)}
+.glance .wrap{padding:clamp(26px,4vh,46px) 0}
+.glance .factcard{background:transparent;border:0;backdrop-filter:none;margin:0;box-shadow:none}
+
+/* content enters as the reader reaches it */
+[data-reveal]{opacity:0;transform:translateY(26px);
+  transition:opacity .8s ease,transform .8s cubic-bezier(.16,1,.3,1)}
+[data-reveal].in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  .hero.chero{min-height:62svh}
+  .chero .heroside .shot{transform:none!important}
+  .chero .scroll-cue{display:none}
+  [data-reveal]{opacity:1!important;transform:none!important;transition:none!important}
+}
+
 </style>
 <style>
 /* hero */
@@ -633,18 +673,19 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     </div>
     <div class="heroside"><div class="shot"><span class="pz"><img src="media/stamp.webp" width="1040" height="1300" alt="A health certificate being stamped" fetchpriority="high" decoding="async"></span></div></div>
   </div>
+  <span class="scroll-cue" aria-hidden="true">Scroll</span>
 </header>
 
 <main id="main" tabindex="-1">
-<section><div class="wrap">
+<section data-reveal><div class="wrap">
 <div class="lede"><h2>The cheapest offer in this trade is usually the one that cannot ship</h2><p class="intro">Approval is granted plant by plant and destination by destination. An establishment cleared for one West African country is not automatically cleared for its neighbour, and the lists change.</p></div>
 <nav class="toc" aria-label="On this page"><span class="eyebrow">On this page</span><ol><li><a href="#s1"><span>01</span>What the certificate is</a></li><li><a href="#s2"><span>02</span>United States origin</a></li><li><a href="#s3"><span>03</span>European Union origin</a></li><li><a href="#s4"><span>04</span>What to ask a seller, in this order</a></li><li><a href="#s5"><span>05</span>Why this is the first question and not the fifth</a></li></ol></nav>
 <div class="prose"><div class="pblock"><span class="k">01</span><h2 id="s1">What the certificate is</h2><div class="ptext"><p>A veterinary health certificate is an official document issued by the competent authority of the exporting country, attesting that the consignment comes from an approved establishment, was produced under official inspection and meets the animal and public health conditions the importing country has set.</p><p>It is not a commercial document and the seller cannot issue it. It travels with the consignment, it is presented at the border post of entry, and without it the cargo does not clear, whatever the invoice says.</p></div></div><div class="pblock"><span class="k">02</span><h2 id="s2">United States origin</h2><div class="ptext"><p>Export certification runs through the federal food safety inspection service. The requirements for each destination country, including the certificate form and any additional attestations, are published in an export library maintained for that purpose and updated as destinations change their rules.</p><p>Two practical points follow. Some destinations are handled through the electronic system and some still require a paper certificate, which changes the lead time at the loading end. And a destination that is not listed is not necessarily closed, but it does mean the requirements have to be established in writing before anything is loaded rather than assumed.</p></div></div><div class="pblock"><span class="k">03</span><h2 id="s3">European Union origin</h2><div class="ptext"><p>The equivalent is the competent authority of the member state, with certificates issued through the Union's own trade control system. The establishment has to hold the relevant approval, and for third-country export the certificate model is the one agreed between the Union and the destination.</p></div></div><div class="pblock"><span class="k">04</span><h2 id="s4">What to ask a seller, in this order</h2><div class="ptext"><ul class="plist"><li><b>The establishment number</b>, as registered, not the company's trading name.</li><li><b>Written confirmation that the establishment is approved for the destination</b>, not for the region and not for a neighbouring country.</li><li><b>Which certificate form will be issued</b>, and whether it is electronic or paper, because that sets the lead time.</li><li><b>Who signs it</b> and how long signature normally takes at that plant.</li><li><b>What happens if the destination changes its requirements</b> between the contract and the loading date, which on some corridors is a live possibility.</li></ul><p class="pnote">We do not treat a seller's verbal assurance on admissibility as an answer. The number is checked, and where the destination is ambiguous the certificate form is identified in writing before any money moves.</p></div></div><div class="pblock"><span class="k">05</span><h2 id="s5">Why this is the first question and not the fifth</h2><div class="ptext"><p>Because it is the only one of the commercial variables that cannot be fixed later. A price can be renegotiated, a pack can be changed, a shipment date can slip. An inadmissible establishment cannot be made admissible inside a shipment cycle, and a container of frozen product sitting at a border post while someone investigates is the most expensive single failure available on this lane.</p><p>The rest of what matters on this corridor, from cut nomenclature to the cold chain, is on the <a href="west-africa">West Africa corridor page</a>.</p></div></div></div>
 
 </div></section>
-<section id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>Questions on this</h2><p class="intro">The ones we are asked most often.</p></div><div style="margin-top:34px"><details><summary>Can a seller export to any country once it has an export licence?</summary><p>No. Approval is per establishment and per destination. A plant cleared for one country may not be cleared for its neighbour, and the lists are revised. That is why the question is about the specific destination, not about export in general.</p></details><details><summary>How long does it take to get a plant approved for a new destination?</summary><p>It is a government-to-government process and it is measured in months or longer, not weeks. For a shipment you need now, the answer is to find an already-approved establishment rather than to wait.</p></details><details><summary>Who pays if the consignment is rejected at the border?</summary><p>That depends entirely on how the contract allocates it, which is why it is written down before the first shipment. We mirror the condition on both legs so the risk does not land in the gap between the supply contract and the sale.</p></details></div></div></section>
-<section><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Related guides</h2><p class="intro">The ones that usually get read next.</p></div><div class="lanelinks"><a class="lanelink" href="poultry-cuts"><b>Wing, drumette, flat: four different products</b><span>The cut nomenclature that makes two offers incomparable.</span></a><a class="lanelink" href="reefer-cold-chain"><b>What a reefer programme requires</b><span>Temperature, recorders, plug time and the pack nobody checks.</span></a><a class="lanelink" href="antidumping-check"><b>The trade remedy check before you order</b><span>Why a deposit can exceed the value of the goods.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
-<section class="cta">
+<section data-reveal id="faq"><div class="wrap"><span class="eyebrow">Questions</span><div class="lede"><h2>Questions on this</h2><p class="intro">The ones we are asked most often.</p></div><div style="margin-top:34px"><details><summary>Can a seller export to any country once it has an export licence?</summary><p>No. Approval is per establishment and per destination. A plant cleared for one country may not be cleared for its neighbour, and the lists are revised. That is why the question is about the specific destination, not about export in general.</p></details><details><summary>How long does it take to get a plant approved for a new destination?</summary><p>It is a government-to-government process and it is measured in months or longer, not weeks. For a shipment you need now, the answer is to find an already-approved establishment rather than to wait.</p></details><details><summary>Who pays if the consignment is rejected at the border?</summary><p>That depends entirely on how the contract allocates it, which is why it is written down before the first shipment. We mirror the condition on both legs so the risk does not land in the gap between the supply contract and the sale.</p></details></div></div></section>
+<section data-reveal><div class="wrap"><span class="eyebrow">Keep reading</span><div class="lede"><h2>Related guides</h2><p class="intro">The ones that usually get read next.</p></div><div class="lanelinks"><a class="lanelink" href="poultry-cuts"><b>Wing, drumette, flat: four different products</b><span>The cut nomenclature that makes two offers incomparable.</span></a><a class="lanelink" href="reefer-cold-chain"><b>What a reefer programme requires</b><span>Temperature, recorders, plug time and the pack nobody checks.</span></a><a class="lanelink" href="antidumping-check"><b>The trade remedy check before you order</b><span>Why a deposit can exceed the value of the goods.</span></a><a class="lanelink" href="contact"><b>Send a requirement</b><span>Product, quantity and destination port is enough to start.</span></a></div></div></section>
+<section data-reveal class="cta">
   <div class="wrap">
     <span class="eyebrow">Get started</span>
     <div class="lede">
@@ -834,5 +875,29 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 })();
 </script>
 <!--/email_off-->
+
+<script>
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hero = document.querySelector('.hero.chero');
+  if(hero && !reduce){
+    var tick=false;
+    function upd(){
+      var r=hero.getBoundingClientRect(), h=hero.offsetHeight||1;
+      var p=(-r.top)/h; p=p<0?0:p>1?1:p;
+      hero.style.setProperty('--p', p.toFixed(4));
+      tick=false;
+    }
+    addEventListener('scroll',function(){ if(!tick){tick=true;requestAnimationFrame(upd);} },{passive:true});
+    addEventListener('resize',upd,{passive:true});
+    upd();
+  }
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{rootMargin:'0px 0px -10% 0px',threshold:0.06});
+  document.querySelectorAll('[data-reveal]').forEach(function(n){ io.observe(n); });
+})();
+</script>
+
 </body>
 </html>
