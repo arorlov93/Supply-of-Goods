@@ -2,16 +2,16 @@
  "pages": {
   "404.html": {
    "desktop": {
-    "height": 2401,
-    "dom": 135,
+    "height": 2294,
+    "dom": 142,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "ship-dusk.webp",
       "nat": 567,
-      "css": 1658,
-      "ratio": 2.92,
+      "css": 507,
+      "ratio": 0.89,
       "alt": true
      }
     ],
@@ -21,36 +21,36 @@
     "desc": 83,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 0,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 9,
     "errors": [],
     "bytes": 108280
    },
    "mobile": {
-    "height": 3155,
-    "dom": 135,
+    "height": 3009,
+    "dom": 142,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "ship-dusk.webp",
       "nat": 567,
-      "css": 449,
-      "ratio": 0.79,
+      "css": 347,
+      "ratio": 0.61,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 14,
+    "smallTargets": 15,
     "title": 26,
     "desc": 83,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 0,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 3,
     "errors": [],
     "bytes": 108280
@@ -58,16 +58,16 @@
   },
   "about.html": {
    "desktop": {
-    "height": 5792,
-    "dom": 236,
+    "height": 5685,
+    "dom": 243,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "miami-dusk.webp",
       "nat": 546,
-      "css": 1658,
-      "ratio": 3.04,
+      "css": 507,
+      "ratio": 0.93,
       "alt": true
      },
      {
@@ -84,24 +84,24 @@
     "desc": 119,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 15,
     "errors": [],
     "bytes": 123168
    },
    "mobile": {
-    "height": 7607,
-    "dom": 236,
+    "height": 7679,
+    "dom": 243,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "miami-dusk.webp",
       "nat": 546,
-      "css": 449,
-      "ratio": 0.82,
+      "css": 347,
+      "ratio": 0.64,
       "alt": true
      },
      {
@@ -113,14 +113,14 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 19,
+    "smallTargets": 20,
     "title": 52,
     "desc": 119,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 9,
     "errors": [],
     "bytes": 123168
@@ -128,16 +128,16 @@
   },
   "afrique-ouest.html": {
    "desktop": {
-    "height": 5800,
-    "dom": 222,
+    "height": 5679,
+    "dom": 225,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "chart-west.webp",
       "nat": 628,
-      "css": 1658,
-      "ratio": 2.64,
+      "css": 507,
+      "ratio": 0.81,
       "alt": true
      },
      {
@@ -156,22 +156,22 @@
     "og": true,
     "hreflang": 3,
     "ld": 2,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 14,
     "errors": [],
     "bytes": 108280
    },
    "mobile": {
-    "height": 7868,
-    "dom": 222,
+    "height": 7931,
+    "dom": 225,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "chart-west.webp",
       "nat": 628,
-      "css": 449,
-      "ratio": 0.72,
+      "css": 347,
+      "ratio": 0.55,
       "alt": true
      },
      {
@@ -183,14 +183,14 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 14,
+    "smallTargets": 15,
     "title": 55,
     "desc": 117,
     "canonical": true,
     "og": true,
     "hreflang": 3,
     "ld": 2,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 9,
     "errors": [],
     "bytes": 108280
@@ -198,16 +198,16 @@
   },
   "antidumping-check.html": {
    "desktop": {
-    "height": 5063,
-    "dom": 224,
+    "height": 4950,
+    "dom": 231,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "quarry-cut.webp",
       "nat": 632,
-      "css": 1658,
-      "ratio": 2.62,
+      "css": 507,
+      "ratio": 0.8,
       "alt": true
      }
     ],
@@ -217,36 +217,36 @@
     "desc": 144,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 16,
     "errors": [],
     "bytes": 108280
    },
    "mobile": {
-    "height": 7313,
-    "dom": 224,
+    "height": 7415,
+    "dom": 231,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "quarry-cut.webp",
       "nat": 632,
-      "css": 449,
-      "ratio": 0.71,
+      "css": 347,
+      "ratio": 0.55,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 16,
+    "smallTargets": 17,
     "title": 53,
     "desc": 144,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 10,
     "errors": [],
     "bytes": 108280
@@ -254,55 +254,55 @@
   },
   "bill-of-lading.html": {
    "desktop": {
-    "height": 5464,
-    "dom": 242,
+    "height": 5357,
+    "dom": 249,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "ship-dusk.webp",
       "nat": 567,
-      "css": 1658,
-      "ratio": 2.92,
+      "css": 507,
+      "ratio": 0.89,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 20,
+    "smallTargets": 21,
     "title": 44,
     "desc": 158,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 17,
     "errors": [],
     "bytes": 108280
    },
    "mobile": {
-    "height": 8257,
-    "dom": 242,
+    "height": 8273,
+    "dom": 249,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "ship-dusk.webp",
       "nat": 567,
-      "css": 449,
-      "ratio": 0.79,
+      "css": 347,
+      "ratio": 0.61,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 16,
+    "smallTargets": 17,
     "title": 44,
     "desc": 158,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 11,
     "errors": [],
     "bytes": 108280
@@ -310,16 +310,16 @@
   },
   "building-materials.html": {
    "desktop": {
-    "height": 6545,
-    "dom": 256,
+    "height": 6438,
+    "dom": 263,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "quarry-stone.webp",
       "nat": 546,
-      "css": 1658,
-      "ratio": 3.04,
+      "css": 507,
+      "ratio": 0.93,
       "alt": true
      },
      {
@@ -331,29 +331,29 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 21,
+    "smallTargets": 22,
     "title": 52,
     "desc": 116,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 16,
     "errors": [],
-    "bytes": 125052
+    "bytes": 123168
    },
    "mobile": {
-    "height": 8831,
-    "dom": 256,
+    "height": 8883,
+    "dom": 263,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "quarry-stone.webp",
       "nat": 546,
-      "css": 449,
-      "ratio": 0.82,
+      "css": 347,
+      "ratio": 0.64,
       "alt": true
      },
      {
@@ -365,14 +365,14 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 17,
+    "smallTargets": 18,
     "title": 52,
     "desc": 116,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 10,
     "errors": [],
     "bytes": 123168
@@ -380,16 +380,16 @@
   },
   "certificat-veterinaire.html": {
    "desktop": {
-    "height": 4861,
-    "dom": 220,
+    "height": 4724,
+    "dom": 223,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "stamp.webp",
       "nat": 546,
-      "css": 1658,
-      "ratio": 3.04,
+      "css": 507,
+      "ratio": 0.93,
       "alt": true
      }
     ],
@@ -401,51 +401,51 @@
     "og": true,
     "hreflang": 3,
     "ld": 2,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 14,
     "errors": [],
     "bytes": 108280
    },
    "mobile": {
-    "height": 6991,
-    "dom": 220,
+    "height": 7042,
+    "dom": 223,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "stamp.webp",
       "nat": 546,
-      "css": 449,
-      "ratio": 0.82,
+      "css": 347,
+      "ratio": 0.64,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 13,
+    "smallTargets": 14,
     "title": 52,
     "desc": 138,
     "canonical": true,
     "og": true,
     "hreflang": 3,
     "ld": 2,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 9,
     "errors": [],
-    "bytes": 110164
+    "bytes": 108280
    }
   },
   "certificate-of-origin.html": {
    "desktop": {
-    "height": 5435,
-    "dom": 241,
+    "height": 5361,
+    "dom": 248,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "chart-old.webp",
       "nat": 554,
-      "css": 1658,
-      "ratio": 2.99,
+      "css": 507,
+      "ratio": 0.92,
       "alt": true
      }
     ],
@@ -455,36 +455,36 @@
     "desc": 153,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 16,
     "errors": [],
     "bytes": 108280
    },
    "mobile": {
-    "height": 8074,
-    "dom": 241,
+    "height": 8137,
+    "dom": 248,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "chart-old.webp",
       "nat": 554,
-      "css": 449,
-      "ratio": 0.81,
+      "css": 347,
+      "ratio": 0.63,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 17,
+    "smallTargets": 18,
     "title": 58,
     "desc": 153,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 10,
     "errors": [],
     "bytes": 108280
@@ -492,16 +492,16 @@
   },
   "china.html": {
    "desktop": {
-    "height": 6920,
-    "dom": 256,
+    "height": 6782,
+    "dom": 263,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "port-cma.webp",
       "nat": 552,
-      "css": 1658,
-      "ratio": 3,
+      "css": 507,
+      "ratio": 0.92,
       "alt": true
      },
      {
@@ -518,24 +518,24 @@
     "desc": 150,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 17,
     "errors": [],
-    "bytes": 125052
+    "bytes": 123168
    },
    "mobile": {
-    "height": 9593,
-    "dom": 256,
+    "height": 9645,
+    "dom": 263,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "port-cma.webp",
       "nat": 552,
-      "css": 449,
-      "ratio": 0.81,
+      "css": 347,
+      "ratio": 0.63,
       "alt": true
      },
      {
@@ -547,14 +547,14 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 17,
+    "smallTargets": 18,
     "title": 49,
     "desc": 150,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 11,
     "errors": [],
     "bytes": 123168
@@ -562,16 +562,16 @@
   },
   "contact-fr.html": {
    "desktop": {
-    "height": 4899,
-    "dom": 233,
+    "height": 4725,
+    "dom": 236,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "miami-bay.webp",
       "nat": 546,
-      "css": 1658,
-      "ratio": 3.04,
+      "css": 507,
+      "ratio": 0.93,
       "alt": true
      }
     ],
@@ -583,34 +583,34 @@
     "og": true,
     "hreflang": 3,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 13,
     "errors": [],
     "bytes": 123168
    },
    "mobile": {
-    "height": 6718,
-    "dom": 233,
+    "height": 6819,
+    "dom": 236,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "miami-bay.webp",
       "nat": 546,
-      "css": 449,
-      "ratio": 0.82,
+      "css": 347,
+      "ratio": 0.64,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 14,
+    "smallTargets": 15,
     "title": 40,
     "desc": 139,
     "canonical": true,
     "og": true,
     "hreflang": 3,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 8,
     "errors": [],
     "bytes": 123168
@@ -618,55 +618,55 @@
   },
   "contact.html": {
    "desktop": {
-    "height": 5467,
-    "dom": 251,
+    "height": 5361,
+    "dom": 254,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "miami-bay.webp",
       "nat": 546,
-      "css": 1658,
-      "ratio": 3.04,
+      "css": 507,
+      "ratio": 0.93,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 21,
+    "smallTargets": 22,
     "title": 38,
     "desc": 154,
     "canonical": true,
     "og": true,
     "hreflang": 3,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 14,
     "errors": [],
     "bytes": 123168
    },
    "mobile": {
-    "height": 7466,
-    "dom": 251,
+    "height": 7576,
+    "dom": 254,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "miami-bay.webp",
       "nat": 546,
-      "css": 449,
-      "ratio": 0.82,
+      "css": 347,
+      "ratio": 0.64,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 17,
+    "smallTargets": 18,
     "title": 38,
     "desc": 154,
     "canonical": true,
     "og": true,
     "hreflang": 3,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 8,
     "errors": [],
     "bytes": 123168
@@ -674,16 +674,16 @@
   },
   "container-loading.html": {
    "desktop": {
-    "height": 5320,
-    "dom": 231,
+    "height": 5213,
+    "dom": 238,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "loading-truck.webp",
       "nat": 546,
-      "css": 1658,
-      "ratio": 3.04,
+      "css": 507,
+      "ratio": 0.93,
       "alt": true
      }
     ],
@@ -693,36 +693,36 @@
     "desc": 124,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 16,
     "errors": [],
     "bytes": 108280
    },
    "mobile": {
-    "height": 7943,
-    "dom": 231,
+    "height": 7986,
+    "dom": 238,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "loading-truck.webp",
       "nat": 546,
-      "css": 449,
-      "ratio": 0.82,
+      "css": 347,
+      "ratio": 0.64,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 16,
+    "smallTargets": 17,
     "title": 56,
     "desc": 124,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 10,
     "errors": [],
     "bytes": 108280
@@ -730,16 +730,16 @@
   },
   "corridors.html": {
    "desktop": {
-    "height": 4118,
-    "dom": 178,
+    "height": 4011,
+    "dom": 185,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "ship-aerial.webp",
       "nat": 460,
-      "css": 1658,
-      "ratio": 3.6,
+      "css": 507,
+      "ratio": 1.1,
       "alt": true
      },
      {
@@ -756,24 +756,24 @@
     "desc": 123,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 1,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 10,
     "errors": [],
     "bytes": 108280
    },
    "mobile": {
-    "height": 5311,
-    "dom": 178,
+    "height": 5331,
+    "dom": 185,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "ship-aerial.webp",
       "nat": 460,
-      "css": 449,
-      "ratio": 0.98,
+      "css": 347,
+      "ratio": 0.76,
       "alt": true
      },
      {
@@ -785,14 +785,14 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 15,
+    "smallTargets": 16,
     "title": 58,
     "desc": 123,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 1,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 4,
     "errors": [],
     "bytes": 108280
@@ -800,16 +800,16 @@
   },
   "customs-data-pricing.html": {
    "desktop": {
-    "height": 4862,
-    "dom": 221,
+    "height": 4732,
+    "dom": 228,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "containers-wall.webp",
       "nat": 546,
-      "css": 1658,
-      "ratio": 3.04,
+      "css": 507,
+      "ratio": 0.93,
       "alt": true
      }
     ],
@@ -819,36 +819,36 @@
     "desc": 147,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 15,
     "errors": [],
     "bytes": 108280
    },
    "mobile": {
-    "height": 7083,
-    "dom": 221,
+    "height": 7131,
+    "dom": 228,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "containers-wall.webp",
       "nat": 546,
-      "css": 449,
-      "ratio": 0.82,
+      "css": 347,
+      "ratio": 0.64,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 16,
+    "smallTargets": 17,
     "title": 49,
     "desc": 147,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 9,
     "errors": [],
     "bytes": 108280
@@ -856,55 +856,55 @@
   },
   "decoupes-volaille.html": {
    "desktop": {
-    "height": 4983,
-    "dom": 229,
+    "height": 4876,
+    "dom": 232,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "coldstore.webp",
       "nat": 693,
-      "css": 1658,
-      "ratio": 2.39,
+      "css": 507,
+      "ratio": 0.73,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 16,
+    "smallTargets": 17,
     "title": 45,
     "desc": 143,
     "canonical": true,
     "og": true,
     "hreflang": 3,
     "ld": 2,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 14,
     "errors": [],
     "bytes": 108280
    },
    "mobile": {
-    "height": 7326,
-    "dom": 229,
+    "height": 7374,
+    "dom": 232,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "coldstore.webp",
       "nat": 693,
-      "css": 449,
-      "ratio": 0.65,
+      "css": 347,
+      "ratio": 0.5,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 13,
+    "smallTargets": 14,
     "title": 45,
     "desc": 143,
     "canonical": true,
     "og": true,
     "hreflang": 3,
     "ld": 2,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 9,
     "errors": [],
     "bytes": 108280
@@ -912,16 +912,16 @@
   },
   "demurrage-detention.html": {
    "desktop": {
-    "height": 5356,
-    "dom": 240,
+    "height": 5196,
+    "dom": 247,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "truck-road.webp",
       "nat": 544,
-      "css": 1658,
-      "ratio": 3.05,
+      "css": 507,
+      "ratio": 0.93,
       "alt": true
      }
     ],
@@ -931,36 +931,36 @@
     "desc": 154,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 16,
     "errors": [],
     "bytes": 108280
    },
    "mobile": {
-    "height": 7718,
-    "dom": 240,
+    "height": 7789,
+    "dom": 247,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "truck-road.webp",
       "nat": 544,
-      "css": 449,
-      "ratio": 0.83,
+      "css": 347,
+      "ratio": 0.64,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 16,
+    "smallTargets": 17,
     "title": 54,
     "desc": 154,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 10,
     "errors": [],
     "bytes": 108280
@@ -969,7 +969,7 @@
   "experience.html": {
    "desktop": {
     "height": 7048,
-    "dom": 168,
+    "dom": 175,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -982,21 +982,21 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 20,
+    "smallTargets": 21,
     "title": 39,
     "desc": 149,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 2,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 9,
     "errors": [],
     "bytes": 0
    },
    "mobile": {
-    "height": 9282,
-    "dom": 168,
+    "height": 9309,
+    "dom": 175,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
@@ -1014,9 +1014,9 @@
     "desc": 149,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 2,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 3,
     "errors": [],
     "bytes": 0
@@ -1024,16 +1024,16 @@
   },
   "food-agricultural.html": {
    "desktop": {
-    "height": 6991,
-    "dom": 259,
+    "height": 6854,
+    "dom": 266,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "silos.webp",
       "nat": 551,
-      "css": 1658,
-      "ratio": 3.01,
+      "css": 507,
+      "ratio": 0.92,
       "alt": true
      },
      {
@@ -1045,29 +1045,29 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 24,
+    "smallTargets": 25,
     "title": 56,
     "desc": 186,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 17,
     "errors": [],
     "bytes": 123168
    },
    "mobile": {
-    "height": 9542,
-    "dom": 259,
+    "height": 9651,
+    "dom": 266,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "silos.webp",
       "nat": 551,
-      "css": 449,
-      "ratio": 0.81,
+      "css": 347,
+      "ratio": 0.63,
       "alt": true
      },
      {
@@ -1079,14 +1079,14 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 17,
+    "smallTargets": 18,
     "title": 56,
     "desc": 186,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 11,
     "errors": [],
     "bytes": 123168
@@ -1094,16 +1094,16 @@
   },
   "guides.html": {
    "desktop": {
-    "height": 3548,
-    "dom": 206,
+    "height": 3441,
+    "dom": 213,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "crane-dusk.webp",
       "nat": 543,
-      "css": 1658,
-      "ratio": 3.05,
+      "css": 507,
+      "ratio": 0.93,
       "alt": true
      }
     ],
@@ -1113,36 +1113,36 @@
     "desc": 123,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 2,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 10,
     "errors": [],
     "bytes": 108280
    },
    "mobile": {
-    "height": 6259,
-    "dom": 206,
+    "height": 6284,
+    "dom": 213,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "crane-dusk.webp",
       "nat": 543,
-      "css": 449,
-      "ratio": 0.83,
+      "css": 347,
+      "ratio": 0.64,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 20,
+    "smallTargets": 21,
     "title": 58,
     "desc": 123,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 2,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 4,
     "errors": [],
     "bytes": 108280
@@ -1150,55 +1150,55 @@
   },
   "hs-code.html": {
    "desktop": {
-    "height": 4906,
-    "dom": 226,
+    "height": 4746,
+    "dom": 233,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "yard-dusk.webp",
       "nat": 614,
-      "css": 1658,
-      "ratio": 2.7,
+      "css": 507,
+      "ratio": 0.83,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 20,
+    "smallTargets": 21,
     "title": 55,
     "desc": 135,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 16,
     "errors": [],
     "bytes": 108280
    },
    "mobile": {
-    "height": 7181,
-    "dom": 226,
+    "height": 7255,
+    "dom": 233,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "yard-dusk.webp",
       "nat": 614,
-      "css": 449,
-      "ratio": 0.73,
+      "css": 347,
+      "ratio": 0.57,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 16,
+    "smallTargets": 17,
     "title": 55,
     "desc": 135,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 10,
     "errors": [],
     "bytes": 108280
@@ -1206,16 +1206,16 @@
   },
   "incoterms.html": {
    "desktop": {
-    "height": 6064,
-    "dom": 306,
+    "height": 5944,
+    "dom": 313,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "ship-sea.webp",
       "nat": 544,
-      "css": 1658,
-      "ratio": 3.05,
+      "css": 507,
+      "ratio": 0.93,
       "alt": true
      }
     ],
@@ -1225,36 +1225,36 @@
     "desc": 152,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 16,
     "errors": [],
     "bytes": 123168
    },
    "mobile": {
-    "height": 9142,
-    "dom": 306,
+    "height": 9190,
+    "dom": 313,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "ship-sea.webp",
       "nat": 544,
-      "css": 449,
-      "ratio": 0.83,
+      "css": 347,
+      "ratio": 0.64,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 17,
+    "smallTargets": 18,
     "title": 44,
     "desc": 152,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 10,
     "errors": [],
     "bytes": 123168
@@ -1262,8 +1262,8 @@
   },
   "index.html": {
    "desktop": {
-    "height": 16376,
-    "dom": 355,
+    "height": 12575,
+    "dom": 346,
     "h1count": 1,
     "headingJumps": 1,
     "imgs": [
@@ -1275,31 +1275,45 @@
       "alt": true
      },
      {
-      "src": "containers-wall.webp",
-      "nat": 546,
-      "css": 1440,
-      "ratio": 2.64,
+      "src": "machinery.webp",
+      "nat": 910,
+      "css": 730,
+      "ratio": 0.8,
       "alt": true
      },
      {
-      "src": "quarry-stone.webp",
+      "src": "loading-truck.webp",
       "nat": 546,
-      "css": 1872,
-      "ratio": 3.43,
+      "css": 730,
+      "ratio": 1.34,
       "alt": true
      },
      {
-      "src": "pipe.jpg",
+      "src": "truck-road.webp",
+      "nat": 544,
+      "css": 730,
+      "ratio": 1.34,
+      "alt": true
+     },
+     {
+      "src": "terminal.webp",
+      "nat": 1023,
+      "css": 730,
+      "ratio": 0.71,
+      "alt": true
+     },
+     {
+      "src": "vessel.jpg",
       "nat": 0,
-      "css": 1526,
+      "css": 730,
       "ratio": null,
       "alt": true
      },
      {
-      "src": "silos.webp",
-      "nat": 551,
-      "css": 2208,
-      "ratio": 4.01,
+      "src": "straddle.jpg",
+      "nat": 0,
+      "css": 730,
+      "ratio": null,
       "alt": true
      },
      {
@@ -1310,10 +1324,10 @@
       "alt": true
      },
      {
-      "src": "machinery.jpg",
-      "nat": 0,
+      "src": "machinery.webp",
+      "nat": 910,
       "css": 405,
-      "ratio": null,
+      "ratio": 0.45,
       "alt": true
      },
      {
@@ -1345,20 +1359,6 @@
       "alt": true
      },
      {
-      "src": "ship-aerial.jpg",
-      "nat": 0,
-      "css": 1757,
-      "ratio": null,
-      "alt": true
-     },
-     {
-      "src": "loading-truck.jpg",
-      "nat": 0,
-      "css": 1642,
-      "ratio": null,
-      "alt": true
-     },
-     {
       "src": "crane-dusk.jpg",
       "nat": 0,
       "css": 1872,
@@ -1367,7 +1367,7 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 33,
+    "smallTargets": 14,
     "title": 57,
     "desc": 186,
     "canonical": true,
@@ -1375,13 +1375,13 @@
     "hreflang": 5,
     "ld": 3,
     "tel": 1,
-    "navLinks": 14,
+    "navLinks": 11,
     "errors": [],
     "bytes": 108280
    },
    "mobile": {
-    "height": 16613,
-    "dom": 355,
+    "height": 11211,
+    "dom": 346,
     "h1count": 1,
     "headingJumps": 1,
     "imgs": [
@@ -1393,31 +1393,45 @@
       "alt": true
      },
      {
-      "src": "containers-wall.webp",
-      "nat": 546,
-      "css": 390,
-      "ratio": 0.71,
+      "src": "machinery.webp",
+      "nat": 910,
+      "css": 349,
+      "ratio": 0.38,
       "alt": true
      },
      {
-      "src": "quarry-stone.webp",
+      "src": "loading-truck.webp",
       "nat": 546,
-      "css": 507,
-      "ratio": 0.93,
+      "css": 349,
+      "ratio": 0.64,
       "alt": true
      },
      {
-      "src": "pipe.jpg",
+      "src": "truck-road.webp",
+      "nat": 544,
+      "css": 349,
+      "ratio": 0.64,
+      "alt": true
+     },
+     {
+      "src": "terminal.webp",
+      "nat": 1023,
+      "css": 349,
+      "ratio": 0.34,
+      "alt": true
+     },
+     {
+      "src": "vessel.webp",
+      "nat": 1023,
+      "css": 349,
+      "ratio": 0.34,
+      "alt": true
+     },
+     {
+      "src": "straddle.jpg",
       "nat": 0,
-      "css": 413,
+      "css": 349,
       "ratio": null,
-      "alt": true
-     },
-     {
-      "src": "silos.webp",
-      "nat": 551,
-      "css": 847,
-      "ratio": 1.54,
       "alt": true
      },
      {
@@ -1428,10 +1442,10 @@
       "alt": true
      },
      {
-      "src": "machinery.jpg",
-      "nat": 0,
+      "src": "machinery.webp",
+      "nat": 910,
       "css": 380,
-      "ratio": null,
+      "ratio": 0.42,
       "alt": true
      },
      {
@@ -1463,20 +1477,6 @@
       "alt": true
      },
      {
-      "src": "ship-aerial.jpg",
-      "nat": 0,
-      "css": 476,
-      "ratio": null,
-      "alt": true
-     },
-     {
-      "src": "loading-truck.jpg",
-      "nat": 0,
-      "css": 445,
-      "ratio": null,
-      "alt": true
-     },
-     {
       "src": "crane-dusk.jpg",
       "nat": 0,
       "css": 507,
@@ -1485,7 +1485,7 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 21,
+    "smallTargets": 5,
     "title": 57,
     "desc": 186,
     "canonical": true,
@@ -1500,16 +1500,16 @@
   },
   "industrial-equipment.html": {
    "desktop": {
-    "height": 6676,
-    "dom": 258,
+    "height": 6538,
+    "dom": 265,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "robots.webp",
       "nat": 504,
-      "css": 1658,
-      "ratio": 3.29,
+      "css": 507,
+      "ratio": 1.01,
       "alt": true
      },
      {
@@ -1526,24 +1526,24 @@
     "desc": 112,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 16,
     "errors": [],
     "bytes": 123168
    },
    "mobile": {
-    "height": 8811,
-    "dom": 258,
+    "height": 8878,
+    "dom": 265,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "robots.webp",
       "nat": 504,
-      "css": 449,
-      "ratio": 0.89,
+      "css": 347,
+      "ratio": 0.69,
       "alt": true
      },
      {
@@ -1555,14 +1555,14 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 16,
+    "smallTargets": 17,
     "title": 56,
     "desc": 112,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 10,
     "errors": [],
     "bytes": 123168
@@ -1570,16 +1570,16 @@
   },
   "ispm-15.html": {
    "desktop": {
-    "height": 4919,
-    "dom": 222,
+    "height": 4759,
+    "dom": 229,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "pallets-stack.webp",
       "nat": 542,
-      "css": 1658,
-      "ratio": 3.06,
+      "css": 507,
+      "ratio": 0.94,
       "alt": true
      }
     ],
@@ -1589,36 +1589,36 @@
     "desc": 146,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 16,
     "errors": [],
     "bytes": 108280
    },
    "mobile": {
-    "height": 7228,
-    "dom": 222,
+    "height": 7298,
+    "dom": 229,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "pallets-stack.webp",
       "nat": 542,
-      "css": 449,
-      "ratio": 0.83,
+      "css": 347,
+      "ratio": 0.64,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 16,
+    "smallTargets": 17,
     "title": 56,
     "desc": 146,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 10,
     "errors": [],
     "bytes": 108280
@@ -1626,16 +1626,16 @@
   },
   "landed-price.html": {
    "desktop": {
-    "height": 5186,
-    "dom": 243,
+    "height": 5056,
+    "dom": 250,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "crane-red.webp",
       "nat": 531,
-      "css": 1658,
-      "ratio": 3.12,
+      "css": 507,
+      "ratio": 0.95,
       "alt": true
      }
     ],
@@ -1645,36 +1645,36 @@
     "desc": 130,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 16,
     "errors": [],
     "bytes": 108280
    },
    "mobile": {
-    "height": 7568,
-    "dom": 243,
+    "height": 7615,
+    "dom": 250,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "crane-red.webp",
       "nat": 531,
-      "css": 449,
-      "ratio": 0.85,
+      "css": 347,
+      "ratio": 0.65,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 16,
+    "smallTargets": 17,
     "title": 44,
     "desc": 130,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 10,
     "errors": [],
     "bytes": 108280
@@ -1682,16 +1682,16 @@
   },
   "letter-of-credit.html": {
    "desktop": {
-    "height": 5451,
-    "dom": 234,
+    "height": 5263,
+    "dom": 241,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "signing.webp",
       "nat": 612,
-      "css": 1658,
-      "ratio": 2.71,
+      "css": 507,
+      "ratio": 0.83,
       "alt": true
      }
     ],
@@ -1701,36 +1701,36 @@
     "desc": 157,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 17,
     "errors": [],
     "bytes": 108280
    },
    "mobile": {
-    "height": 8157,
-    "dom": 234,
+    "height": 8220,
+    "dom": 241,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "signing.webp",
       "nat": 612,
-      "css": 449,
-      "ratio": 0.73,
+      "css": 347,
+      "ratio": 0.57,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 16,
+    "smallTargets": 17,
     "title": 60,
     "desc": 157,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 11,
     "errors": [],
     "bytes": 108280
@@ -1738,16 +1738,16 @@
   },
   "metals-pipe.html": {
    "desktop": {
-    "height": 6424,
-    "dom": 254,
+    "height": 6317,
+    "dom": 261,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "steel-tubes.webp",
       "nat": 544,
-      "css": 1658,
-      "ratio": 3.05,
+      "css": 507,
+      "ratio": 0.93,
       "alt": true
      },
      {
@@ -1764,24 +1764,24 @@
     "desc": 138,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 16,
     "errors": [],
     "bytes": 123168
    },
    "mobile": {
-    "height": 8603,
-    "dom": 254,
+    "height": 8566,
+    "dom": 261,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "steel-tubes.webp",
       "nat": 544,
-      "css": 449,
-      "ratio": 0.83,
+      "css": 347,
+      "ratio": 0.64,
       "alt": true
      },
      {
@@ -1793,14 +1793,14 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 16,
+    "smallTargets": 17,
     "title": 54,
     "desc": 138,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 10,
     "errors": [],
     "bytes": 123168
@@ -1808,16 +1808,16 @@
   },
   "paper-packaging.html": {
    "desktop": {
-    "height": 6301,
-    "dom": 249,
+    "height": 6194,
+    "dom": 256,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "pallets-wall.webp",
       "nat": 546,
-      "css": 1658,
-      "ratio": 3.04,
+      "css": 507,
+      "ratio": 0.93,
       "alt": true
      },
      {
@@ -1834,24 +1834,24 @@
     "desc": 137,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 15,
     "errors": [],
     "bytes": 123168
    },
    "mobile": {
-    "height": 8383,
-    "dom": 249,
+    "height": 8419,
+    "dom": 256,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "pallets-wall.webp",
       "nat": 546,
-      "css": 449,
-      "ratio": 0.82,
+      "css": 347,
+      "ratio": 0.64,
       "alt": true
      },
      {
@@ -1863,14 +1863,14 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 17,
+    "smallTargets": 18,
     "title": 55,
     "desc": 137,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 9,
     "errors": [],
     "bytes": 123168
@@ -1878,16 +1878,16 @@
   },
   "poultry-cuts.html": {
    "desktop": {
-    "height": 5093,
-    "dom": 239,
+    "height": 4986,
+    "dom": 242,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "coldstore.webp",
       "nat": 693,
-      "css": 1658,
-      "ratio": 2.39,
+      "css": 507,
+      "ratio": 0.73,
       "alt": true
      }
     ],
@@ -1899,34 +1899,34 @@
     "og": true,
     "hreflang": 3,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 16,
     "errors": [],
     "bytes": 108280
    },
    "mobile": {
-    "height": 7473,
-    "dom": 239,
+    "height": 7517,
+    "dom": 242,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "coldstore.webp",
       "nat": 693,
-      "css": 449,
-      "ratio": 0.65,
+      "css": 347,
+      "ratio": 0.5,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 16,
+    "smallTargets": 17,
     "title": 60,
     "desc": 152,
     "canonical": true,
     "og": true,
     "hreflang": 3,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 10,
     "errors": [],
     "bytes": 108280
@@ -1934,55 +1934,55 @@
   },
   "privacy.html": {
    "desktop": {
-    "height": 5016,
-    "dom": 237,
+    "height": 4909,
+    "dom": 244,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "crane-lift.webp",
       "nat": 544,
-      "css": 1658,
-      "ratio": 3.05,
+      "css": 507,
+      "ratio": 0.93,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 19,
+    "smallTargets": 20,
     "title": 19,
     "desc": 148,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 1,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 18,
     "errors": [],
     "bytes": 108280
    },
    "mobile": {
-    "height": 7854,
-    "dom": 237,
+    "height": 7871,
+    "dom": 244,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "crane-lift.webp",
       "nat": 544,
-      "css": 449,
-      "ratio": 0.83,
+      "css": 347,
+      "ratio": 0.64,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 15,
+    "smallTargets": 16,
     "title": 19,
     "desc": 148,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 1,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 12,
     "errors": [],
     "bytes": 108280
@@ -1990,55 +1990,55 @@
   },
   "proforma-invoice.html": {
    "desktop": {
-    "height": 5512,
-    "dom": 257,
+    "height": 5383,
+    "dom": 264,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "signing.webp",
       "nat": 612,
-      "css": 1658,
-      "ratio": 2.71,
+      "css": 507,
+      "ratio": 0.83,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 21,
+    "smallTargets": 22,
     "title": 45,
     "desc": 161,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 16,
     "errors": [],
     "bytes": 108280
    },
    "mobile": {
-    "height": 8039,
-    "dom": 257,
+    "height": 8087,
+    "dom": 264,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "signing.webp",
       "nat": 612,
-      "css": 449,
-      "ratio": 0.73,
+      "css": 347,
+      "ratio": 0.57,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 17,
+    "smallTargets": 18,
     "title": 45,
     "desc": 161,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 10,
     "errors": [],
     "bytes": 108280
@@ -2046,55 +2046,55 @@
   },
   "reefer-cold-chain.html": {
    "desktop": {
-    "height": 5010,
-    "dom": 226,
+    "height": 4880,
+    "dom": 233,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "container-gold.webp",
       "nat": 546,
-      "css": 1658,
-      "ratio": 3.04,
+      "css": 507,
+      "ratio": 0.93,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 20,
+    "smallTargets": 21,
     "title": 59,
     "desc": 145,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 16,
     "errors": [],
     "bytes": 108280
    },
    "mobile": {
-    "height": 7393,
-    "dom": 226,
+    "height": 7440,
+    "dom": 233,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "container-gold.webp",
       "nat": 546,
-      "css": 449,
-      "ratio": 0.82,
+      "css": 347,
+      "ratio": 0.64,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 16,
+    "smallTargets": 17,
     "title": 59,
     "desc": 145,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 10,
     "errors": [],
     "bytes": 108280
@@ -2102,16 +2102,16 @@
   },
   "services.html": {
    "desktop": {
-    "height": 5976,
-    "dom": 234,
+    "height": 5836,
+    "dom": 241,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "robots-wide.webp",
       "nat": 576,
-      "css": 1658,
-      "ratio": 2.88,
+      "css": 507,
+      "ratio": 0.88,
       "alt": true
      }
     ],
@@ -2121,36 +2121,36 @@
     "desc": 155,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 16,
     "errors": [],
     "bytes": 108280
    },
    "mobile": {
-    "height": 8620,
-    "dom": 234,
+    "height": 8649,
+    "dom": 241,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "robots-wide.webp",
       "nat": 576,
-      "css": 449,
-      "ratio": 0.78,
+      "css": 347,
+      "ratio": 0.6,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 15,
+    "smallTargets": 16,
     "title": 51,
     "desc": 155,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 10,
     "errors": [],
     "bytes": 108280
@@ -2158,16 +2158,16 @@
   },
   "southern-africa.html": {
    "desktop": {
-    "height": 6494,
-    "dom": 245,
+    "height": 6336,
+    "dom": 252,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "durban-sunset.webp",
       "nat": 546,
-      "css": 1658,
-      "ratio": 3.04,
+      "css": 507,
+      "ratio": 0.93,
       "alt": true
      },
      {
@@ -2184,24 +2184,24 @@
     "desc": 141,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 16,
     "errors": [],
     "bytes": 123168
    },
    "mobile": {
-    "height": 8955,
-    "dom": 245,
+    "height": 8987,
+    "dom": 252,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "durban-sunset.webp",
       "nat": 546,
-      "css": 449,
-      "ratio": 0.82,
+      "css": 347,
+      "ratio": 0.64,
       "alt": true
      },
      {
@@ -2213,14 +2213,14 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 17,
+    "smallTargets": 18,
     "title": 46,
     "desc": 141,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 10,
     "errors": [],
     "bytes": 123168
@@ -2228,16 +2228,16 @@
   },
   "supply.html": {
    "desktop": {
-    "height": 4219,
-    "dom": 174,
+    "height": 4081,
+    "dom": 181,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "port-wide.webp",
       "nat": 500,
-      "css": 1658,
-      "ratio": 3.32,
+      "css": 507,
+      "ratio": 1.01,
       "alt": true
      },
      {
@@ -2254,24 +2254,24 @@
     "desc": 161,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 1,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 10,
     "errors": [],
     "bytes": 108280
    },
    "mobile": {
-    "height": 5255,
-    "dom": 174,
+    "height": 5306,
+    "dom": 181,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "port-wide.webp",
       "nat": 500,
-      "css": 449,
-      "ratio": 0.9,
+      "css": 347,
+      "ratio": 0.69,
       "alt": true
      },
      {
@@ -2283,14 +2283,14 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 15,
+    "smallTargets": 16,
     "title": 43,
     "desc": 161,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 1,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 4,
     "errors": [],
     "bytes": 108280
@@ -2298,55 +2298,55 @@
   },
   "terms.html": {
    "desktop": {
-    "height": 4836,
-    "dom": 224,
+    "height": 4729,
+    "dom": 231,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "stamp.webp",
       "nat": 546,
-      "css": 1658,
-      "ratio": 3.04,
+      "css": 507,
+      "ratio": 0.93,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 20,
+    "smallTargets": 21,
     "title": 24,
     "desc": 157,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 1,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 18,
     "errors": [],
     "bytes": 108280
    },
    "mobile": {
-    "height": 7539,
-    "dom": 224,
+    "height": 7556,
+    "dom": 231,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "stamp.webp",
       "nat": 546,
-      "css": 449,
-      "ratio": 0.82,
+      "css": 347,
+      "ratio": 0.64,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 16,
+    "smallTargets": 17,
     "title": 24,
     "desc": 157,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 1,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 12,
     "errors": [],
     "bytes": 108280
@@ -2354,16 +2354,16 @@
   },
   "tools-hardware.html": {
    "desktop": {
-    "height": 6307,
-    "dom": 244,
+    "height": 6200,
+    "dom": 251,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "tools-flat.webp",
       "nat": 614,
-      "css": 1658,
-      "ratio": 2.7,
+      "css": 507,
+      "ratio": 0.83,
       "alt": true
      },
      {
@@ -2375,29 +2375,29 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 20,
+    "smallTargets": 21,
     "title": 49,
     "desc": 120,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 15,
     "errors": [],
     "bytes": 123168
    },
    "mobile": {
-    "height": 8551,
-    "dom": 244,
+    "height": 8571,
+    "dom": 251,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "tools-flat.webp",
       "nat": 614,
-      "css": 449,
-      "ratio": 0.73,
+      "css": 347,
+      "ratio": 0.57,
       "alt": true
      },
      {
@@ -2409,14 +2409,14 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 16,
+    "smallTargets": 17,
     "title": 49,
     "desc": 120,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 9,
     "errors": [],
     "bytes": 123168
@@ -2424,23 +2424,23 @@
   },
   "turkiye.html": {
    "desktop": {
-    "height": 6650,
-    "dom": 253,
+    "height": 6575,
+    "dom": 260,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "bosphorus.webp",
       "nat": 1040,
-      "css": 1658,
-      "ratio": 1.59,
+      "css": 507,
+      "ratio": 0.49,
       "alt": true
      },
      {
       "src": "pipe.webp",
       "nat": 922,
-      "css": 1125,
-      "ratio": 1.22,
+      "css": 1138,
+      "ratio": 1.23,
       "alt": true
      }
     ],
@@ -2450,24 +2450,24 @@
     "desc": 154,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 17,
     "errors": [],
     "bytes": 123168
    },
    "mobile": {
-    "height": 9082,
-    "dom": 253,
+    "height": 9145,
+    "dom": 260,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "bosphorus.webp",
       "nat": 1040,
-      "css": 449,
-      "ratio": 0.43,
+      "css": 347,
+      "ratio": 0.33,
       "alt": true
      },
      {
@@ -2479,14 +2479,14 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 17,
+    "smallTargets": 18,
     "title": 53,
     "desc": 154,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 11,
     "errors": [],
     "bytes": 123168
@@ -2494,72 +2494,72 @@
   },
   "verify-supplier.html": {
    "desktop": {
-    "height": 4976,
-    "dom": 219,
+    "height": 4779,
+    "dom": 226,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "machinery.webp",
       "nat": 910,
-      "css": 1658,
-      "ratio": 1.82,
+      "css": 507,
+      "ratio": 0.56,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 20,
+    "smallTargets": 21,
     "title": 49,
     "desc": 126,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 16,
     "errors": [],
     "bytes": 108280
    },
    "mobile": {
-    "height": 7344,
-    "dom": 219,
+    "height": 7446,
+    "dom": 226,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "machinery.webp",
       "nat": 910,
-      "css": 449,
-      "ratio": 0.49,
+      "css": 347,
+      "ratio": 0.38,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 16,
+    "smallTargets": 17,
     "title": 49,
     "desc": 126,
     "canonical": true,
     "og": true,
-    "hreflang": 0,
+    "hreflang": 4,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 10,
     "errors": [],
-    "bytes": 110164
+    "bytes": 108280
    }
   },
   "veterinary-certificate.html": {
    "desktop": {
-    "height": 4988,
-    "dom": 231,
+    "height": 4846,
+    "dom": 234,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "stamp.webp",
       "nat": 546,
-      "css": 1658,
-      "ratio": 3.04,
+      "css": 507,
+      "ratio": 0.93,
       "alt": true
      }
     ],
@@ -2571,34 +2571,34 @@
     "og": true,
     "hreflang": 3,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 16,
     "errors": [],
     "bytes": 108280
    },
    "mobile": {
-    "height": 7346,
-    "dom": 231,
+    "height": 7448,
+    "dom": 234,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "stamp.webp",
       "nat": 546,
-      "css": 449,
-      "ratio": 0.82,
+      "css": 347,
+      "ratio": 0.64,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 17,
+    "smallTargets": 18,
     "title": 51,
     "desc": 157,
     "canonical": true,
     "og": true,
     "hreflang": 3,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 10,
     "errors": [],
     "bytes": 108280
@@ -2606,16 +2606,16 @@
   },
   "west-africa.html": {
    "desktop": {
-    "height": 6992,
-    "dom": 259,
+    "height": 6851,
+    "dom": 262,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "chart-west.webp",
       "nat": 628,
-      "css": 1658,
-      "ratio": 2.64,
+      "css": 507,
+      "ratio": 0.81,
       "alt": true
      },
      {
@@ -2627,29 +2627,29 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 25,
+    "smallTargets": 26,
     "title": 45,
     "desc": 143,
     "canonical": true,
     "og": true,
     "hreflang": 3,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 17,
     "errors": [],
     "bytes": 144092
    },
    "mobile": {
-    "height": 9546,
-    "dom": 259,
+    "height": 9609,
+    "dom": 262,
     "h1count": 1,
     "headingJumps": 0,
     "imgs": [
      {
       "src": "chart-west.webp",
       "nat": 628,
-      "css": 449,
-      "ratio": 0.72,
+      "css": 347,
+      "ratio": 0.55,
       "alt": true
      },
      {
@@ -2661,14 +2661,14 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 18,
+    "smallTargets": 19,
     "title": 45,
     "desc": 143,
     "canonical": true,
     "og": true,
     "hreflang": 3,
     "ld": 3,
-    "tel": 0,
+    "tel": 1,
     "navLinks": 11,
     "errors": [],
     "bytes": 144092
@@ -2678,7 +2678,7 @@
  "images": {
   "ship-dusk.webp": {
    "nat": 567,
-   "worst": 2.92,
+   "worst": 0.89,
    "pages": [
     "404.html",
     "bill-of-lading.html"
@@ -2686,7 +2686,7 @@
   },
   "miami-dusk.webp": {
    "nat": 546,
-   "worst": 3.04,
+   "worst": 0.93,
    "pages": [
     "about.html"
    ]
@@ -2696,12 +2696,13 @@
    "worst": 1.11,
    "pages": [
     "about.html",
-    "experience.html"
+    "experience.html",
+    "index.html"
    ]
   },
   "chart-west.webp": {
    "nat": 628,
-   "worst": 2.64,
+   "worst": 0.81,
    "pages": [
     "afrique-ouest.html",
     "west-africa.html"
@@ -2718,17 +2719,16 @@
   },
   "quarry-cut.webp": {
    "nat": 632,
-   "worst": 2.62,
+   "worst": 0.8,
    "pages": [
     "antidumping-check.html"
    ]
   },
   "quarry-stone.webp": {
    "nat": 546,
-   "worst": 3.43,
+   "worst": 0.93,
    "pages": [
-    "building-materials.html",
-    "index.html"
+    "building-materials.html"
    ]
   },
   "pipe.webp": {
@@ -2743,7 +2743,7 @@
   },
   "stamp.webp": {
    "nat": 546,
-   "worst": 3.04,
+   "worst": 0.93,
    "pages": [
     "certificat-veterinaire.html",
     "terms.html",
@@ -2752,23 +2752,24 @@
   },
   "chart-old.webp": {
    "nat": 554,
-   "worst": 2.99,
+   "worst": 0.92,
    "pages": [
     "certificate-of-origin.html"
    ]
   },
   "port-cma.webp": {
    "nat": 552,
-   "worst": 3,
+   "worst": 0.92,
    "pages": [
     "china.html"
    ]
   },
   "machinery.webp": {
    "nat": 910,
-   "worst": 1.82,
+   "worst": 1.25,
    "pages": [
     "china.html",
+    "index.html",
     "industrial-equipment.html",
     "tools-hardware.html",
     "verify-supplier.html"
@@ -2776,7 +2777,7 @@
   },
   "miami-bay.webp": {
    "nat": 546,
-   "worst": 3.04,
+   "worst": 0.93,
    "pages": [
     "contact-fr.html",
     "contact.html"
@@ -2784,14 +2785,15 @@
   },
   "loading-truck.webp": {
    "nat": 546,
-   "worst": 3.04,
+   "worst": 1.34,
    "pages": [
-    "container-loading.html"
+    "container-loading.html",
+    "index.html"
    ]
   },
   "ship-aerial.webp": {
    "nat": 460,
-   "worst": 3.6,
+   "worst": 1.1,
    "pages": [
     "corridors.html"
    ]
@@ -2800,20 +2802,20 @@
    "nat": 1023,
    "worst": 1.11,
    "pages": [
-    "corridors.html"
+    "corridors.html",
+    "index.html"
    ]
   },
   "containers-wall.webp": {
    "nat": 546,
-   "worst": 3.04,
+   "worst": 0.93,
    "pages": [
-    "customs-data-pricing.html",
-    "index.html"
+    "customs-data-pricing.html"
    ]
   },
   "coldstore.webp": {
    "nat": 693,
-   "worst": 2.39,
+   "worst": 0.73,
    "pages": [
     "decoupes-volaille.html",
     "poultry-cuts.html"
@@ -2821,36 +2823,36 @@
   },
   "truck-road.webp": {
    "nat": 544,
-   "worst": 3.05,
+   "worst": 1.34,
    "pages": [
-    "demurrage-detention.html"
+    "demurrage-detention.html",
+    "index.html"
    ]
   },
   "silos.webp": {
    "nat": 551,
-   "worst": 4.01,
+   "worst": 0.92,
    "pages": [
-    "food-agricultural.html",
-    "index.html"
+    "food-agricultural.html"
    ]
   },
   "crane-dusk.webp": {
    "nat": 543,
-   "worst": 3.05,
+   "worst": 0.93,
    "pages": [
     "guides.html"
    ]
   },
   "yard-dusk.webp": {
    "nat": 614,
-   "worst": 2.7,
+   "worst": 0.83,
    "pages": [
     "hs-code.html"
    ]
   },
   "ship-sea.webp": {
    "nat": 544,
-   "worst": 3.05,
+   "worst": 0.93,
    "pages": [
     "incoterms.html"
    ]
@@ -2862,7 +2864,14 @@
     "index.html"
    ]
   },
-  "pipe.jpg": {
+  "vessel.jpg": {
+   "nat": 0,
+   "worst": 0,
+   "pages": [
+    "index.html"
+   ]
+  },
+  "straddle.jpg": {
    "nat": 0,
    "worst": 0,
    "pages": [
@@ -2870,13 +2879,6 @@
    ]
   },
   "quarry-cut.jpg": {
-   "nat": 0,
-   "worst": 0,
-   "pages": [
-    "index.html"
-   ]
-  },
-  "machinery.jpg": {
    "nat": 0,
    "worst": 0,
    "pages": [
@@ -2911,20 +2913,6 @@
     "index.html"
    ]
   },
-  "ship-aerial.jpg": {
-   "nat": 0,
-   "worst": 0,
-   "pages": [
-    "index.html"
-   ]
-  },
-  "loading-truck.jpg": {
-   "nat": 0,
-   "worst": 0,
-   "pages": [
-    "index.html"
-   ]
-  },
   "crane-dusk.jpg": {
    "nat": 0,
    "worst": 0,
@@ -2934,28 +2922,28 @@
   },
   "robots.webp": {
    "nat": 504,
-   "worst": 3.29,
+   "worst": 1.01,
    "pages": [
     "industrial-equipment.html"
    ]
   },
   "pallets-stack.webp": {
    "nat": 542,
-   "worst": 3.06,
+   "worst": 0.94,
    "pages": [
     "ispm-15.html"
    ]
   },
   "crane-red.webp": {
    "nat": 531,
-   "worst": 3.12,
+   "worst": 0.95,
    "pages": [
     "landed-price.html"
    ]
   },
   "signing.webp": {
    "nat": 612,
-   "worst": 2.71,
+   "worst": 0.83,
    "pages": [
     "letter-of-credit.html",
     "proforma-invoice.html"
@@ -2963,14 +2951,14 @@
   },
   "steel-tubes.webp": {
    "nat": 544,
-   "worst": 3.05,
+   "worst": 0.93,
    "pages": [
     "metals-pipe.html"
    ]
   },
   "pallets-wall.webp": {
    "nat": 546,
-   "worst": 3.04,
+   "worst": 0.93,
    "pages": [
     "paper-packaging.html"
    ]
@@ -2985,49 +2973,49 @@
   },
   "crane-lift.webp": {
    "nat": 544,
-   "worst": 3.05,
+   "worst": 0.93,
    "pages": [
     "privacy.html"
    ]
   },
   "container-gold.webp": {
    "nat": 546,
-   "worst": 3.04,
+   "worst": 0.93,
    "pages": [
     "reefer-cold-chain.html"
    ]
   },
   "robots-wide.webp": {
    "nat": 576,
-   "worst": 2.88,
+   "worst": 0.88,
    "pages": [
     "services.html"
    ]
   },
   "durban-sunset.webp": {
    "nat": 546,
-   "worst": 3.04,
+   "worst": 0.93,
    "pages": [
     "southern-africa.html"
    ]
   },
   "port-wide.webp": {
    "nat": 500,
-   "worst": 3.32,
+   "worst": 1.01,
    "pages": [
     "supply.html"
    ]
   },
   "tools-flat.webp": {
    "nat": 614,
-   "worst": 2.7,
+   "worst": 0.83,
    "pages": [
     "tools-hardware.html"
    ]
   },
   "bosphorus.webp": {
    "nat": 1040,
-   "worst": 1.59,
+   "worst": 0.49,
    "pages": [
     "turkiye.html"
    ]

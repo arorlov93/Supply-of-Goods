@@ -223,6 +223,7 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
 
 /* цели нажатия в подвале были ниже 40 пикселей */
 .foot a{padding:9px 0}
+
 </style>
 <style>
 /* hero */
@@ -914,5 +915,34 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 })();
 </script>
 
+<style>
+/* ---- герой внутренней страницы: разворот, а не растянутое фото ----
+   Полноэкранная подложка растягивала кадр 546px на 1700 и давала мыло.
+   Здесь кадр стоит в колонке шириной около 560px и остаётся резким,
+   а масштаб держит типографика. */
+.hero.chero{position:relative;min-height:auto;display:block;overflow:visible;
+  padding:clamp(88px,11vh,126px) 0 clamp(46px,7vh,86px);isolation:auto}
+.chero .wrap.chero-g{display:grid;position:static;width:100%;
+  grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+  gap:clamp(28px,4vw,72px);align-items:center;padding-top:0;padding-bottom:0}
+.chero .heroside{display:block;position:relative}
+.chero .heroside .shot{position:relative;inset:auto;z-index:1;aspect-ratio:4/5;
+  max-height:min(70vh,660px);margin-left:auto;width:auto;
+  border:1px solid var(--rule);transform:none;box-shadow:var(--shadow-l)}
+.chero .heroside .shot .pz{position:absolute;inset:0;display:block}
+.chero .heroside .shot img{filter:saturate(.78) contrast(1.06) brightness(.94)}
+.chero::after{display:none}
+.chero .stage::before,.hero.chero::before{display:none}
+.chero h1{font-family:var(--fd);font-weight:700;text-transform:uppercase;
+  letter-spacing:-.035em;line-height:.92;font-size:clamp(2.1rem,5.2vw,4.6rem);margin:.2em 0 0}
+.chero h1 em{font-style:normal}
+.chero .sub{max-width:46ch;font-size:clamp(1rem,1.2vw,1.2rem);color:var(--ink-2)}
+.chero .scroll-cue{display:none}
+@media (max-width:900px){
+  .chero .wrap.chero-g{grid-template-columns:1fr}
+  .chero .heroside{order:-1}
+  .chero .heroside .shot{aspect-ratio:16/10}
+}
+</style>
 </body>
 </html>
