@@ -54,6 +54,9 @@ SLOTS = {
     "tools":      ["Hand_tools", "Toolboxes", "Hardware_stores"],
     # общий кадр для страницы «что мы делаем»: порт, а не автомобильный завод
     "ops":        ["Container_terminals", "Ports", "Harbours"],
+    # бумага и упаковка: нужен товар, а не деревянные паллеты с чайками
+    "pack":       ["Paper_industry", "Distribution_centers", "Warehouse_interiors",
+                   "Paper_mills", "Pallet_racking"],
     # прочее
     "docs":       ["Documents", "Business_documents", "Signatures"],
     "agri":       ["Grain_elevators", "Silos", "Grain_storage"],

@@ -18,10 +18,10 @@
 <meta property="og:url" content="https://ispgroupgc.com/">
 <meta property="og:title" content="We buy in our own name. ISP Group LLC">
 <meta property="og:description" content="We find the producer, confirm it can legally ship to your country, buy the goods ourselves and deliver them to your port. Principal, not a broker.">
-<meta property="og:image" content="https://ispgroupgc.com/media/port-noir.jpg">
+<meta property="og:image" content="https://ispgroupgc.com/media/ops.jpg">
 <meta property="og:image:alt" content="Container terminal cranes silhouetted under a heavy sky">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preload" as="image" href="media/port-noir.webp" type="image/webp" fetchpriority="high">
+<link rel="preload" as="image" href="media/ops.webp" type="image/webp" fetchpriority="high">
 <style>
 :root{
   --black:#080a0d; --graphite:#15191e; --graphite-2:#1e242b;
@@ -157,10 +157,13 @@ nav.top-nav a:hover{opacity:1}
 
 /* 01 opening */
 #s-open{height:190svh}
-/* кадр героя сам по себе почти весь небо, краны стоят у нижнего края,
-   поэтому кадрирование смещено вниз: иначе на первом экране остаётся туча */
-#s-open .media{transform:scale(calc(1.18 - var(--p,0)*.18));transform-origin:50% 42%;
-  object-position:50% 78%}
+#s-open .media{transform:scale(calc(1.18 - var(--p,0)*.18));transform-origin:50% 42%}
+/* Герой это светлый дневной кадр терминала. Общая подложка рассчитана на
+   тёмный снимок и в середине почти прозрачна, из-за чего служебная строка
+   над заголовком тонула в контейнерах. Здесь она плотнее по всей высоте. */
+#s-open .scrim{background:linear-gradient(180deg,
+  rgba(8,10,13,.82) 0%,rgba(8,10,13,.54) 32%,
+  rgba(8,10,13,.74) 64%,rgba(8,10,13,.93) 100%)}
 #s-open .content{transform:translateY(calc(var(--p,0)*-7vh));opacity:calc(1 - max(0, var(--p,0) - .46) * 1.85)}
 .hero-grid{display:grid;gap:clamp(22px,3vw,48px);grid-template-columns:minmax(0,1fr) minmax(0,.62fr);align-items:end}
 @media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
@@ -416,8 +419,8 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
 <section class="scene" id="s-open" data-scene aria-labelledby="h-open">
   <div class="stage">
     <picture>
-      <source srcset="media/port-noir.webp" type="image/webp">
-      <img class="media" src="media/port-noir.jpg" alt="Container terminal cranes silhouetted under a heavy sky" fetchpriority="high" decoding="async" width="2400" height="1600">
+      <source srcset="media/ops.webp" type="image/webp">
+      <img class="media" src="media/ops.jpg" alt="Deep-water container terminal working at full stretch" fetchpriority="high" decoding="async" width="2400" height="1600">
     </picture>
     <div class="scrim"></div>
     <div class="content">
@@ -532,7 +535,7 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
         <span class="cap"><b>Metals and pipe</b><span>Sections &middot; sheet &middot; line pipe</span></span>
       </a>
       <a class="card" href="paper-packaging">
-        <picture><source srcset="media/pallets-wall.webp" type="image/webp"><img src="media/pallets-wall.jpg" alt="Palletised packaging stacked in a warehouse" loading="lazy" decoding="async"></picture>
+        <picture><source srcset="media/pallets-wall.webp" type="image/webp"><img src="media/pallets-wall.jpg" alt="Palletised cartons on racking in a distribution warehouse" loading="lazy" decoding="async"></picture>
         <span class="n">05</span>
         <span class="cap"><b>Paper, packaging and consumables</b><span>Board &middot; film &middot; facility supply</span></span>
       </a>

@@ -149,7 +149,7 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 17,
+    "smallTargets": 18,
     "title": 55,
     "desc": 117,
     "canonical": true,
@@ -268,7 +268,7 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 20,
+    "smallTargets": 21,
     "title": 44,
     "desc": 158,
     "canonical": true,
@@ -394,7 +394,7 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 16,
+    "smallTargets": 17,
     "title": 52,
     "desc": 138,
     "canonical": true,
@@ -632,7 +632,7 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 22,
+    "smallTargets": 21,
     "title": 38,
     "desc": 154,
     "canonical": true,
@@ -827,7 +827,7 @@
     "bytes": 0
    },
    "mobile": {
-    "height": 8752,
+    "height": 7733,
     "dom": 535,
     "h1count": 1,
     "headingJumps": 0,
@@ -841,7 +841,7 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 57,
+    "smallTargets": 0,
     "title": 42,
     "desc": 66,
     "canonical": true,
@@ -926,7 +926,7 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 17,
+    "smallTargets": 16,
     "title": 45,
     "desc": 143,
     "canonical": true,
@@ -1101,7 +1101,7 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 24,
+    "smallTargets": 25,
     "title": 56,
     "desc": 186,
     "canonical": true,
@@ -1164,7 +1164,7 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 25,
+    "smallTargets": 26,
     "title": 58,
     "desc": 123,
     "canonical": true,
@@ -1220,7 +1220,7 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 21,
+    "smallTargets": 20,
     "title": 55,
     "desc": 135,
     "canonical": true,
@@ -1324,10 +1324,10 @@
     "headingJumps": 0,
     "imgs": [
      {
-      "src": "port-noir.webp",
-      "nat": 1600,
+      "src": "ops.webp",
+      "nat": 2400,
       "css": 1699,
-      "ratio": 1.06,
+      "ratio": 0.71,
       "alt": true
      },
      {
@@ -1442,10 +1442,10 @@
     "headingJumps": 0,
     "imgs": [
      {
-      "src": "port-noir.webp",
-      "nat": 1600,
+      "src": "ops.webp",
+      "nat": 2400,
       "css": 460,
-      "ratio": 0.29,
+      "ratio": 0.19,
       "alt": true
      },
      {
@@ -1640,7 +1640,7 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 21,
+    "smallTargets": 20,
     "title": 56,
     "desc": 146,
     "canonical": true,
@@ -1752,7 +1752,7 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 20,
+    "smallTargets": 21,
     "title": 60,
     "desc": 157,
     "canonical": true,
@@ -1871,9 +1871,9 @@
     "imgs": [
      {
       "src": "pallets-wall.webp",
-      "nat": 546,
+      "nat": 1280,
       "css": 507,
-      "ratio": 0.93,
+      "ratio": 0.4,
       "alt": true
      },
      {
@@ -1905,9 +1905,9 @@
     "imgs": [
      {
       "src": "pallets-wall.webp",
-      "nat": 546,
+      "nat": 1280,
       "css": 347,
-      "ratio": 0.64,
+      "ratio": 0.27,
       "alt": true
      },
      {
@@ -2060,7 +2060,7 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 21,
+    "smallTargets": 22,
     "title": 45,
     "desc": 161,
     "canonical": true,
@@ -2164,10 +2164,10 @@
     "headingJumps": 0,
     "imgs": [
      {
-      "src": "ops.webp",
-      "nat": 2400,
+      "src": "port-noir.webp",
+      "nat": 1600,
       "css": 507,
-      "ratio": 0.21,
+      "ratio": 0.32,
       "alt": true
      }
     ],
@@ -2191,10 +2191,10 @@
     "headingJumps": 0,
     "imgs": [
      {
-      "src": "ops.webp",
-      "nat": 2400,
+      "src": "port-noir.webp",
+      "nat": 1600,
       "css": 347,
-      "ratio": 0.14,
+      "ratio": 0.22,
       "alt": true
      }
     ],
@@ -2368,7 +2368,7 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 21,
+    "smallTargets": 20,
     "title": 24,
     "desc": 157,
     "canonical": true,
@@ -2431,7 +2431,7 @@
      }
     ],
     "lowContrast": [],
-    "smallTargets": 21,
+    "smallTargets": 20,
     "title": 49,
     "desc": 120,
     "canonical": true,
@@ -2495,8 +2495,8 @@
      {
       "src": "pipe.webp",
       "nat": 922,
-      "css": 1119,
-      "ratio": 1.21,
+      "css": 1138,
+      "ratio": 1.23,
       "alt": true
      }
     ],
@@ -2677,13 +2677,13 @@
      {
       "src": "vessel2.webp",
       "nat": 2000,
-      "css": 1119,
-      "ratio": 0.56,
+      "css": 1138,
+      "ratio": 0.57,
       "alt": true
      }
     ],
     "lowContrast": [],
-    "smallTargets": 26,
+    "smallTargets": 25,
     "title": 45,
     "desc": 143,
     "canonical": true,
@@ -2897,9 +2897,9 @@
     "incoterms.html"
    ]
   },
-  "port-noir.webp": {
-   "nat": 1600,
-   "worst": 1.06,
+  "ops.webp": {
+   "nat": 2400,
+   "worst": 0.71,
    "pages": [
     "index.html"
    ]
@@ -3033,8 +3033,8 @@
    ]
   },
   "pallets-wall.webp": {
-   "nat": 546,
-   "worst": 0.93,
+   "nat": 1280,
+   "worst": 0.4,
    "pages": [
     "paper-packaging.html"
    ]
@@ -3054,9 +3054,9 @@
     "reefer-cold-chain.html"
    ]
   },
-  "ops.webp": {
-   "nat": 2400,
-   "worst": 0.21,
+  "port-noir.webp": {
+   "nat": 1600,
+   "worst": 0.32,
    "pages": [
     "services.html"
    ]
