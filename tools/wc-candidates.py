@@ -43,18 +43,20 @@ SLOTS = {
     # герой главной
     "port-noir":  ["Ports_at_night", "Container_terminals_at_night", "Harbours_at_night"],
     # стройматериалы: склад и товар, а не карьер и не ручная добыча
-    "build-mat":  ["Bricks_on_pallets", "Bricks", "Concrete_blocks"],
-    "build-site": ["Lumber_yards", "Timber_stacks", "Building_material_shops"],
+    "build-mat":  ["Cement_bags", "Building_materials", "Concrete_blocks"],
+    "build-site": ["Lumber_yards", "Timber_yards", "Sawn_timber"],
     # металл и труба
-    "steel":      ["Steel_pipes", "Steel_tubes", "Pipes_(steel)"],
-    "steel2":     ["Steel_coils", "Rebar", "Steel_products"],
+    "steel":      ["Steel_pipes", "Steel_tubes", "Tubes_(metal)"],
+    "steel2":     ["Steel_coils", "Reinforcing_bars", "Steel_products"],
     # оборудование и инструмент
     "equipment":  ["Machine_tools", "Lathes", "Milling_machines"],
-    "equipment2": ["Industrial_valves", "Industrial_pumps", "Pipework"],
-    "tools":      ["Hand_tools", "Tool_walls", "Toolboxes"],
+    "equipment2": ["Industrial_valves", "Pumps", "Industrial_pipework"],
+    "tools":      ["Hand_tools", "Toolboxes", "Hardware_stores"],
+    # общий кадр для страницы «что мы делаем»: порт, а не автомобильный завод
+    "ops":        ["Container_terminals", "Ports", "Harbours"],
     # прочее
-    "docs":       ["Documents", "Paperwork", "Signing_of_documents"],
-    "agri":       ["Grain_elevators", "Silos", "Grain_terminals"],
+    "docs":       ["Documents", "Business_documents", "Signatures"],
+    "agri":       ["Grain_elevators", "Silos", "Grain_storage"],
     "cold":       ["Cold_storage_warehouses", "Refrigerated_warehouses", "Warehouses"],
 }
 
