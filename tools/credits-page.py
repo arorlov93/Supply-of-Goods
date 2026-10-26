@@ -128,7 +128,14 @@ table.credits th{text-align:left;font-family:var(--mono);font-size:10px;
 table.credits td{padding:11px 14px 11px 0;border-bottom:1px solid var(--rule);
   vertical-align:top}
 table.credits code{font-family:var(--mono);font-size:.8rem;opacity:.75}
-@media (max-width:760px){table.credits{font-size:.82rem}}
+@media (max-width:760px){
+  table.credits{font-size:.82rem}
+  /* ссылок в таблице много, и по умолчанию они высотой в строку текста:
+     пальцем в такое не попасть */
+  table.credits a{display:inline-flex;align-items:center;min-height:44px;
+    min-width:44px;line-height:1.3}
+  table.credits td{padding-block:4px}
+}
 </style>
 </body>""", 1)
 
