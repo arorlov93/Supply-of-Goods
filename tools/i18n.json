@@ -1,0 +1,235 @@
+{
+ "_note": "Ключ это английский оригинал ровно как в site/index.html. Пустая строка означает «не переводится»: коды Инкотермс, бренд, адрес, почта. Полноту проверяет сам make-languages.py и ругается на пропуски.",
+
+ "Skip to content": {"fr": "Aller au contenu", "es": "Ir al contenido", "de": "Zum Inhalt springen"},
+ "What we do": {"fr": "Notre métier", "es": "Qué hacemos", "de": "Was wir tun"},
+ "What we supply": {"fr": "Ce que nous fournissons", "es": "Qué suministramos", "de": "Was wir liefern"},
+ "Corridors": {"fr": "Corridors", "es": "Corredores", "de": "Korridore"},
+ "Guides": {"fr": "Guides", "es": "Guías", "de": "Leitfäden"},
+ "About": {"fr": "À propos", "es": "Quiénes somos", "de": "Über uns"},
+ "Contact": {"fr": "Contact", "es": "Contacto", "de": "Kontakt"},
+ "Request a quote": {"fr": "Demander un prix", "es": "Solicitar precio", "de": "Angebot anfordern"},
+
+ "NAME THE": {"fr": "DITES-NOUS", "es": "DÍGANOS QUÉ", "de": "NENNEN SIE"},
+ "PRODUCT.": {"fr": "LE PRODUIT.", "es": "PRODUCTO.", "de": "DIE WARE."},
+ "WE DELIVER IT.": {"fr": "NOUS LE LIVRONS.", "es": "SE LO ENTREGAMOS.", "de": "WIR LIEFERN SIE."},
+ "Industrial goods, building materials, equipment, packaging and food. We find the producer, verify it, buy in our own name and deliver to your port. Principal, not a broker.": {
+  "fr": "Biens industriels, matériaux de construction, équipements, emballages et denrées. Nous trouvons le producteur, le vérifions, achetons en notre propre nom et livrons à votre port. Négociant pour compte propre, pas courtier.",
+  "es": "Bienes industriales, materiales de construcción, equipos, envases y alimentos. Localizamos al productor, lo verificamos, compramos en nombre propio y entregamos en su puerto. Actuamos como principal, no como intermediario.",
+  "de": "Industriegüter, Baustoffe, Ausrüstung, Verpackung und Lebensmittel. Wir finden den Hersteller, prüfen ihn, kaufen auf eigene Rechnung und liefern an Ihren Hafen. Eigenhändler, kein Makler."},
+ "Discuss your requirements": {"fr": "Exposez votre besoin", "es": "Cuéntenos su necesidad", "de": "Bedarf besprechen"},
+ "Scroll": {"fr": "Défiler", "es": "Desplazar", "de": "Scrollen"},
+
+ "FROM THE": {"fr": "DE L’USINE", "es": "DE LA FÁBRICA", "de": "VOM WERK"},
+ "WORKS TO": {"fr": "JUSQU’À", "es": "HASTA", "de": "BIS AN"},
+ "YOUR PORT.": {"fr": "VOTRE PORT.", "es": "SU PUERTO.", "de": "IHREN HAFEN."},
+ "One consignment, six hand-overs. Each one is a place where a price becomes a delay, a claim or a cost. We hold all six, so you hold one contract.": {
+  "fr": "Un envoi, six transferts de responsabilité. Chacun est un endroit où un prix devient un retard, un litige ou un surcoût. Nous tenons les six, vous ne tenez qu’un contrat.",
+  "es": "Un envío, seis traspasos. En cada uno un precio puede convertirse en retraso, reclamación o sobrecoste. Nosotros asumimos los seis; usted, un solo contrato.",
+  "de": "Eine Sendung, sechs Übergaben. Jede ist ein Punkt, an dem aus einem Preis eine Verzögerung, eine Reklamation oder ein Mehraufwand wird. Wir halten alle sechs, Sie halten einen Vertrag."},
+ "Start a trade request": {"fr": "Lancer une demande", "es": "Iniciar una solicitud", "de": "Anfrage starten"},
+
+ "At the works": {"fr": "À l’usine", "es": "En la fábrica", "de": "Im Werk"},
+ "The producer is found, verified and put under a specification before a price is quoted. Admissibility for your country is settled here, not at the border.": {
+  "fr": "Le producteur est trouvé, vérifié et engagé sur un cahier des charges avant tout chiffrage. L’admissibilité dans votre pays se règle ici, pas à la frontière.",
+  "es": "Localizamos al productor, lo verificamos y lo sujetamos a una especificación antes de cotizar. La admisibilidad en su país se resuelve aquí, no en la aduana.",
+  "de": "Der Hersteller wird gefunden, geprüft und auf eine Spezifikation festgelegt, bevor ein Preis genannt wird. Die Einfuhrfähigkeit für Ihr Land klärt sich hier, nicht an der Grenze."},
+ "Into the box": {"fr": "Dans le conteneur", "es": "En el contenedor", "de": "In den Container"},
+ "Stuffing, dunnage, weight distribution and the packing list are agreed in advance. A container loaded badly is a claim that arrives three weeks later.": {
+  "fr": "L’empotage, le calage, la répartition des charges et la liste de colisage sont convenus à l’avance. Un conteneur mal chargé est un litige qui arrive trois semaines plus tard.",
+  "es": "La estiba, el calzado, el reparto de pesos y la lista de empaque se acuerdan por adelantado. Un contenedor mal cargado es una reclamación que llega tres semanas después.",
+  "de": "Stauung, Ladungssicherung, Gewichtsverteilung und Packliste werden vorab vereinbart. Ein schlecht beladener Container ist eine Reklamation, die drei Wochen später eintrifft."},
+ "By road to the port": {"fr": "Par la route jusqu’au port", "es": "Por carretera hasta el puerto", "de": "Per Lkw zum Hafen"},
+ "The inland leg is booked against the sailing, not after it. Detention and demurrage are quoted as lines, not discovered as invoices.": {
+  "fr": "Le pré-acheminement est réservé en fonction du départ du navire, pas après. Détention et surestaries sont chiffrées en lignes, pas découvertes en factures.",
+  "es": "El tramo terrestre se reserva contra la salida del buque, no después. Detention y demurrage se cotizan como partidas, no aparecen como facturas.",
+  "de": "Der Vorlauf wird auf die Abfahrt gebucht, nicht danach. Detention und Demurrage stehen als Positionen im Angebot, statt als Rechnung aufzutauchen."},
+ "At the quay": {"fr": "À quai", "es": "En el muelle", "de": "Am Kai"},
+ "Cut-off, documents and the bill of lading line up on the same date. One missing certificate here holds the whole consignment.": {
+  "fr": "Cut-off, documents et connaissement tombent à la même date. Un seul certificat manquant ici bloque tout l’envoi.",
+  "es": "Cut-off, documentos y conocimiento de embarque coinciden en la misma fecha. Un solo certificado que falte aquí retiene todo el envío.",
+  "de": "Cut-off, Dokumente und Konnossement fallen auf dasselbe Datum. Ein einziges fehlendes Zertifikat hält hier die ganze Sendung auf."},
+ "At sea": {"fr": "En mer", "es": "En el mar", "de": "Auf See"},
+ "Transit is tracked and transhipment is named in advance. You are told a twelve week lead time when it is twelve, not six.": {
+  "fr": "Le transit est suivi et le transbordement annoncé à l’avance. Quand le délai est de douze semaines, on vous dit douze, pas six.",
+  "es": "El tránsito se sigue y el transbordo se indica por adelantado. Si el plazo es de doce semanas, le decimos doce, no seis.",
+  "de": "Der Transit wird verfolgt, die Umladung vorab benannt. Wenn die Laufzeit zwölf Wochen beträgt, sagen wir zwölf, nicht sechs."},
+ "At your port": {"fr": "À votre port", "es": "En su puerto", "de": "An Ihrem Hafen"},
+ "Discharge, customs and release on the agreed Incoterm, with the document set arriving with the goods rather than after them.": {
+  "fr": "Déchargement, douane et mise à disposition selon l’Incoterm convenu, le jeu documentaire arrivant avec la marchandise et non après elle.",
+  "es": "Descarga, aduana y entrega según el Incoterm acordado, con el juego documental llegando junto a la mercancía y no después.",
+  "de": "Löschen, Zoll und Freistellung nach dem vereinbarten Incoterm, wobei der Dokumentensatz mit der Ware eintrifft und nicht danach."},
+
+ "WHAT WE SUPPLY.": {"fr": "CE QUE NOUS FOURNISSONS.", "es": "QUÉ SUMINISTRAMOS.", "de": "WAS WIR LIEFERN."},
+ "These are the lanes we already run, food among them. They are where we start, not where we stop: name a product outside this list and we will source it the same way.": {
+  "fr": "Voici les flux que nous opérons déjà, l’alimentaire compris. C’est notre point de départ, pas notre limite : nommez un produit hors de cette liste et nous le sourcerons de la même façon.",
+  "es": "Estas son las rutas que ya operamos, la alimentación entre ellas. Son el punto de partida, no el límite: nombre un producto fuera de esta lista y lo abasteceremos igual.",
+  "de": "Das sind die Verkehre, die wir bereits fahren, Lebensmittel eingeschlossen. Sie sind der Anfang, nicht die Grenze: Nennen Sie ein Produkt außerhalb dieser Liste, und wir beschaffen es genauso."},
+
+ "Building and finishing materials": {"fr": "Matériaux de construction et de finition", "es": "Materiales de construcción y acabado", "de": "Bau- und Ausbaustoffe"},
+ "Stone, tile, cement, cable": {"fr": "Pierre, carrelage, ciment, câble", "es": "Piedra, azulejo, cemento, cable", "de": "Stein, Fliesen, Zement, Kabel"},
+ "Industrial equipment and machinery": {"fr": "Équipements et machines industriels", "es": "Equipos y maquinaria industrial", "de": "Industrieausrüstung und Maschinen"},
+ "Lines, compressors, pumps": {"fr": "Lignes, compresseurs, pompes", "es": "Líneas, compresores, bombas", "de": "Anlagen, Kompressoren, Pumpen"},
+ "Tools, hardware and fasteners": {"fr": "Outillage, quincaillerie et fixations", "es": "Herramientas, ferretería y fijaciones", "de": "Werkzeuge, Beschläge und Befestiger"},
+ "Power tools, abrasives, fixings": {"fr": "Outillage électroportatif, abrasifs, fixations", "es": "Herramienta eléctrica, abrasivos, fijaciones", "de": "Elektrowerkzeug, Schleifmittel, Befestigung"},
+ "Metals and pipe": {"fr": "Métaux et tubes", "es": "Metales y tubería", "de": "Metalle und Rohre"},
+ "Sections, sheet, line pipe": {"fr": "Profilés, tôle, tubes de conduite", "es": "Perfiles, chapa, tubería de línea", "de": "Profile, Blech, Leitungsrohr"},
+ "Paper, packaging and consumables": {"fr": "Papier, emballage et consommables", "es": "Papel, envases y consumibles", "de": "Papier, Verpackung und Verbrauchsmaterial"},
+ "Board, film, facility supply": {"fr": "Carton, film, fournitures d’exploitation", "es": "Cartón, film, suministro de instalaciones", "de": "Karton, Folie, Betriebsbedarf"},
+ "Food, commodities and beverages": {"fr": "Denrées, matières premières et boissons", "es": "Alimentos, materias primas y bebidas", "de": "Lebensmittel, Rohwaren und Getränke"},
+ "Frozen, staples, branded drinks": {"fr": "Surgelés, produits de base, boissons de marque", "es": "Congelados, básicos, bebidas de marca", "de": "Tiefkühlware, Grundnahrungsmittel, Markengetränke"},
+
+ "ONE PROCESS,": {"fr": "UN PROCESSUS,", "es": "UN PROCESO,", "de": "EIN ABLAUF,"},
+ "FIVE STEPS.": {"fr": "CINQ ÉTAPES.", "es": "CINCO PASOS.", "de": "FÜNF SCHRITTE."},
+ "Understand": {"fr": "Comprendre", "es": "Entender", "de": "Verstehen"},
+ "You send the product, the quantity and the destination. We come back with the questions that decide the price, not with a brochure.": {
+  "fr": "Vous envoyez le produit, la quantité et la destination. Nous revenons avec les questions qui déterminent le prix, pas avec une plaquette.",
+  "es": "Usted envía el producto, la cantidad y el destino. Nosotros volvemos con las preguntas que deciden el precio, no con un folleto.",
+  "de": "Sie nennen Ware, Menge und Bestimmungsort. Wir kommen mit den Fragen zurück, die den Preis bestimmen, nicht mit einer Broschüre."},
+ "Source": {"fr": "Sourcer", "es": "Abastecer", "de": "Beschaffen"},
+ "We approach producers directly and establish that they can legally ship to your country before anything else is discussed.": {
+  "fr": "Nous abordons les producteurs en direct et établissons qu’ils peuvent légalement expédier vers votre pays avant toute autre discussion.",
+  "es": "Nos dirigimos directamente a los productores y comprobamos que pueden exportar legalmente a su país antes de hablar de nada más.",
+  "de": "Wir sprechen Hersteller direkt an und klären, ob sie rechtlich in Ihr Land liefern dürfen, bevor alles Weitere besprochen wird."},
+ "Structure": {"fr": "Structurer", "es": "Estructurar", "de": "Strukturieren"},
+ "Specification, pack, Incoterm, payment terms and the document set are agreed in writing, line by line, on one basis.": {
+  "fr": "Spécification, conditionnement, Incoterm, conditions de paiement et jeu documentaire sont convenus par écrit, ligne par ligne, sur une seule base.",
+  "es": "Especificación, embalaje, Incoterm, condiciones de pago y juego documental se acuerdan por escrito, línea por línea, sobre una única base.",
+  "de": "Spezifikation, Verpackung, Incoterm, Zahlungsbedingungen und Dokumentensatz werden schriftlich vereinbart, Position für Position, auf einer Basis."},
+ "Coordinate": {"fr": "Coordonner", "es": "Coordinar", "de": "Koordinieren"},
+ "Purchase, documents and transport are coordinated within the agreed scope, with a single point of contact on our side.": {
+  "fr": "Achat, documents et transport sont coordonnés dans le périmètre convenu, avec un interlocuteur unique de notre côté.",
+  "es": "Compra, documentos y transporte se coordinan dentro del alcance acordado, con un único interlocutor por nuestra parte.",
+  "de": "Einkauf, Dokumente und Transport werden im vereinbarten Umfang koordiniert, mit einem einzigen Ansprechpartner auf unserer Seite."},
+ "Deliver": {"fr": "Livrer", "es": "Entregar", "de": "Liefern"},
+ "The goods arrive at the agreed place on the agreed terms, and the paperwork arrives with them rather than after them.": {
+  "fr": "La marchandise arrive au lieu convenu dans les conditions convenues, et les documents arrivent avec elle, non après.",
+  "es": "La mercancía llega al lugar acordado en las condiciones acordadas, y la documentación llega con ella, no después.",
+  "de": "Die Ware kommt am vereinbarten Ort zu den vereinbarten Bedingungen an, und die Papiere kommen mit ihr, nicht danach."},
+
+ "A broker passes your enquiry on.": {"fr": "Un courtier transmet votre demande.", "es": "Un intermediario traslada su consulta.", "de": "Ein Makler reicht Ihre Anfrage weiter."},
+ "We take the position.": {"fr": "Nous prenons la position.", "es": "Nosotros asumimos la posición.", "de": "Wir übernehmen die Position."},
+ "Principal, not a broker": {"fr": "Négociant pour compte propre, pas courtier", "es": "Principal, no intermediario", "de": "Eigenhändler, kein Makler"},
+ "We buy in our own name, so the contract, the payment and the responsibility sit with one company.": {
+  "fr": "Nous achetons en notre propre nom : le contrat, le paiement et la responsabilité reposent sur une seule société.",
+  "es": "Compramos en nombre propio: el contrato, el pago y la responsabilidad recaen en una sola empresa.",
+  "de": "Wir kaufen im eigenen Namen, damit Vertrag, Zahlung und Verantwortung bei einem Unternehmen liegen."},
+ "Admissibility before price": {"fr": "L’admissibilité avant le prix", "es": "La admisibilidad antes que el precio", "de": "Einfuhrfähigkeit vor Preis"},
+ "An offer from a producer that cannot legally ship to your destination is not an offer, whatever the number on it.": {
+  "fr": "L’offre d’un producteur qui ne peut pas légalement livrer votre destination n’est pas une offre, quel que soit le chiffre inscrit dessus.",
+  "es": "La oferta de un productor que no puede exportar legalmente a su destino no es una oferta, diga lo que diga la cifra.",
+  "de": "Das Angebot eines Herstellers, der nicht rechtlich an Ihren Bestimmungsort liefern darf, ist kein Angebot, gleich welche Zahl darauf steht."},
+ "One basis for every quotation": {"fr": "Une seule base pour chaque offre", "es": "Una sola base para cada oferta", "de": "Eine Basis für jedes Angebot"},
+ "Same Incoterm, same pack, same line items, so the numbers you compare are actually comparable.": {
+  "fr": "Même Incoterm, même conditionnement, mêmes postes : les chiffres que vous comparez le sont réellement.",
+  "es": "Mismo Incoterm, mismo embalaje, mismas partidas: las cifras que compara son realmente comparables.",
+  "de": "Gleicher Incoterm, gleiche Verpackung, gleiche Positionen, damit die Zahlen, die Sie vergleichen, auch vergleichbar sind."},
+ "A single point of contact": {"fr": "Un interlocuteur unique", "es": "Un único interlocutor", "de": "Ein einziger Ansprechpartner"},
+ "One company answers for the goods, the documents and the lane, from first enquiry to arrival.": {
+  "fr": "Une seule société répond de la marchandise, des documents et du trajet, de la première demande jusqu’à l’arrivée.",
+  "es": "Una sola empresa responde de la mercancía, los documentos y la ruta, desde la primera consulta hasta la llegada.",
+  "de": "Ein Unternehmen haftet für Ware, Dokumente und Route, von der ersten Anfrage bis zur Ankunft."},
+
+ "SEND A SPECIFICATION.": {"fr": "ENVOYEZ UN CAHIER DES CHARGES.", "es": "ENVÍE UNA ESPECIFICACIÓN.", "de": "SENDEN SIE EINE SPEZIFIKATION."},
+ "GET A LANDED PRICE.": {"fr": "RECEVEZ UN PRIX RENDU.", "es": "RECIBA UN PRECIO PUESTO EN DESTINO.", "de": "ERHALTEN SIE EINEN ENDPREIS."},
+ "Name": {"fr": "Nom", "es": "Nombre", "de": "Name"},
+ "Work e-mail": {"fr": "E-mail professionnel", "es": "Correo de trabajo", "de": "Geschäftliche E-Mail"},
+ "Company": {"fr": "Société", "es": "Empresa", "de": "Unternehmen"},
+ "Country": {"fr": "Pays", "es": "País", "de": "Land"},
+ "Category": {"fr": "Catégorie", "es": "Categoría", "de": "Kategorie"},
+ "Other": {"fr": "Autre", "es": "Otra", "de": "Sonstiges"},
+ "Terms to quote": {"fr": "Conditions à chiffrer", "es": "Condiciones a cotizar", "de": "Zu kalkulierende Bedingungen"},
+ "Not sure, advise": {"fr": "Je ne sais pas, conseillez-moi", "es": "No estoy seguro, aconséjenme", "de": "Unklar, bitte beraten"},
+ "Quantity": {"fr": "Quantité", "es": "Cantidad", "de": "Menge"},
+ "Containers, tonnes, pieces": {"fr": "Conteneurs, tonnes, pièces", "es": "Contenedores, toneladas, piezas", "de": "Container, Tonnen, Stück"},
+ "Destination port or city": {"fr": "Port ou ville de destination", "es": "Puerto o ciudad de destino", "de": "Bestimmungshafen oder -stadt"},
+ "Specification": {"fr": "Spécification", "es": "Especificación", "de": "Spezifikation"},
+ "Standard, grade, dimensions, certification, deadline": {
+  "fr": "Norme, nuance, dimensions, certification, échéance",
+  "es": "Norma, grado, dimensiones, certificación, plazo",
+  "de": "Norm, Güte, Abmessungen, Zertifizierung, Termin"},
+ "Website": {"fr": "Site web", "es": "Sitio web", "de": "Website"},
+ "Sent straight to info@ispgroupgc.com. We reply within one working day.": {
+  "fr": "Envoyé directement à info@ispgroupgc.com. Nous répondons sous un jour ouvré.",
+  "es": "Se envía directamente a info@ispgroupgc.com. Respondemos en un día hábil.",
+  "de": "Geht direkt an info@ispgroupgc.com. Wir antworten innerhalb eines Werktags."},
+
+ "United States": {"fr": "États-Unis", "es": "Estados Unidos", "de": "Vereinigte Staaten"},
+ "Supply": {"fr": "Fournitures", "es": "Suministro", "de": "Lieferprogramm"},
+ "Building materials": {"fr": "Matériaux de construction", "es": "Materiales de construcción", "de": "Baustoffe"},
+ "Industrial equipment": {"fr": "Équipements industriels", "es": "Equipos industriales", "de": "Industrieausrüstung"},
+ "Tools and hardware": {"fr": "Outillage et quincaillerie", "es": "Herramientas y ferretería", "de": "Werkzeuge und Beschläge"},
+ "Paper and packaging": {"fr": "Papier et emballage", "es": "Papel y envases", "de": "Papier und Verpackung"},
+ "Food and beverages": {"fr": "Denrées et boissons", "es": "Alimentos y bebidas", "de": "Lebensmittel und Getränke"},
+ "How we work": {"fr": "Notre méthode", "es": "Cómo trabajamos", "de": "So arbeiten wir"},
+ "Experience": {"fr": "Expérience", "es": "Experiencia", "de": "Erfahrung"},
+ "Verify a supplier": {"fr": "Vérifier un fournisseur", "es": "Verificar a un proveedor", "de": "Lieferanten prüfen"},
+ "Incoterms": {"fr": "Incoterms", "es": "Incoterms", "de": "Incoterms"},
+ "Landed price": {"fr": "Prix rendu", "es": "Precio puesto en destino", "de": "Endpreis frei Haus"},
+ "HS codes": {"fr": "Codes SH", "es": "Códigos SA", "de": "HS-Codes"},
+ "All guides": {"fr": "Tous les guides", "es": "Todas las guías", "de": "Alle Leitfäden"},
+ "Privacy": {"fr": "Confidentialité", "es": "Privacidad", "de": "Datenschutz"},
+ "Terms": {"fr": "Conditions d’utilisation", "es": "Condiciones de uso", "de": "Nutzungsbedingungen"},
+ "Photography by third parties, used under CC0, public domain and CC BY licences;": {
+  "fr": "Photographies de tiers, utilisées sous licences CC0, domaine public et CC BY ;",
+  "es": "Fotografías de terceros, utilizadas bajo licencias CC0, dominio público y CC BY;",
+  "de": "Fotografien Dritter, verwendet unter CC0, Public Domain und CC BY;"},
+ "author, source and licence for each image": {
+  "fr": "auteur, source et licence de chaque image",
+  "es": "autor, fuente y licencia de cada imagen",
+  "de": "Urheber, Quelle und Lizenz je Bild"},
+ "Menu": {"fr": "Menu", "es": "Menú", "de": "Menü"},
+ "Primary": {"fr": "Navigation principale", "es": "Navegación principal", "de": "Hauptnavigation"},
+ "Language": {"fr": "Langue", "es": "Idioma", "de": "Sprache"},
+
+ "Deep-water container terminal working at full stretch": {
+  "fr": "Terminal à conteneurs en eau profonde en pleine activité",
+  "es": "Terminal de contenedores de aguas profundas a pleno rendimiento",
+  "de": "Tiefwasser-Containerterminal im vollen Betrieb"},
+ "Production floor at a supplying works": {
+  "fr": "Atelier de production chez un fournisseur",
+  "es": "Nave de producción en una fábrica proveedora",
+  "de": "Produktionshalle bei einem Lieferwerk"},
+ "Goods loaded into a container at the works": {
+  "fr": "Marchandise empotée en conteneur à l’usine",
+  "es": "Mercancía cargada en contenedor en la fábrica",
+  "de": "Ware wird im Werk in den Container geladen"},
+ "Container moving by road to the port": {
+  "fr": "Conteneur acheminé par la route vers le port",
+  "es": "Contenedor en ruta por carretera hacia el puerto",
+  "de": "Container auf dem Weg per Lkw zum Hafen"},
+ "Ship-to-shore cranes working a container vessel": {
+  "fr": "Portiques de quai opérant un porte-conteneurs",
+  "es": "Grúas de muelle operando un portacontenedores",
+  "de": "Containerbrücken bedienen ein Containerschiff"},
+ "Container vessel under way at sea": {
+  "fr": "Porte-conteneurs en route en mer",
+  "es": "Portacontenedores navegando en alta mar",
+  "de": "Containerschiff auf See"},
+ "Container handled in the yard at the destination port": {
+  "fr": "Conteneur manutentionné sur le parc du port de destination",
+  "es": "Contenedor manipulado en la campa del puerto de destino",
+  "de": "Container wird auf dem Yard des Bestimmungshafens umgeschlagen"},
+ "Sawn timber stacked at a builders' yard": {
+  "fr": "Bois de sciage empilé dans un dépôt de matériaux",
+  "es": "Madera aserrada apilada en un almacén de materiales",
+  "de": "Schnittholz gestapelt auf einem Baustoffhof"},
+ "Industrial machinery on a production floor": {
+  "fr": "Machines industrielles dans un atelier de production",
+  "es": "Maquinaria industrial en una nave de producción",
+  "de": "Industriemaschinen in einer Produktionshalle"},
+ "Hand tools laid out flat": {
+  "fr": "Outillage à main disposé à plat",
+  "es": "Herramienta manual dispuesta en plano",
+  "de": "Handwerkzeug flach ausgelegt"},
+ "Steel pipe stacked in rows at a yard": {
+  "fr": "Tubes d’acier empilés en rangées sur un parc",
+  "es": "Tubería de acero apilada en hileras en una campa",
+  "de": "Stahlrohre in Reihen auf einem Lagerplatz gestapelt"},
+ "Palletised cartons on racking in a distribution warehouse": {
+  "fr": "Cartons palettisés en rayonnage dans un entrepôt de distribution",
+  "es": "Cajas paletizadas en estanterías de un almacén de distribución",
+  "de": "Palettierte Kartons im Regal eines Distributionslagers"},
+ "Inside a cold store": {"fr": "À l’intérieur d’un entrepôt frigorifique", "es": "Interior de una cámara frigorífica", "de": "Im Kühlhaus"},
+ "Quay cranes at dusk": {"fr": "Portiques de quai au crépuscule", "es": "Grúas de muelle al anochecer", "de": "Containerbrücken in der Dämmerung"}
+}
