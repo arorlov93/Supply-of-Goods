@@ -90,10 +90,10 @@
   "source": "https://www.flickr.com/photos/9852972@N03/51954503364"
  },
  "port-noir.jpg": {
-  "title": "Durban Harbour",
-  "license": "by",
-  "author": "Axel Bührmann",
-  "source": "https://www.flickr.com/photos/9852972@N03/52046675824"
+  "title": "Container cranes in Tokyo Bay 2",
+  "license": "CC0",
+  "author": null,
+  "source": "https://commons.wikimedia.org/wiki/File%3AContainer_cranes_in_Tokyo_Bay_2.jpg"
  },
  "quarry-stone.jpg": {
   "title": "Marble quarry",
@@ -238,5 +238,11 @@
   "license": "by",
   "author": "Rab .",
   "source": "https://www.flickr.com/photos/58739232@N07/32477039283"
+ },
+ "j-works.jpg": {
+  "title": "100116-F-2442B-019 (4279955238)",
+  "license": "CC0",
+  "author": null,
+  "source": "https://commons.wikimedia.org/wiki/File%3A100116-F-2442B-019_%284279955238%29.jpg"
  }
 }

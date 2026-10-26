@@ -10,3 +10,4 @@ token*.json
 tender-system/**/cslb_master.csv
 *.raw.csv
 genealogy/
+__pycache__/
