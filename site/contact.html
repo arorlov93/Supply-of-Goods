@@ -209,6 +209,7 @@ figcaption{font-family:var(--fm);font-size:.6rem;letter-spacing:.14em;text-trans
   [data-reveal]{opacity:1!important;transform:none!important;transition:none!important}
 }
 
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 </style>
 <style>
 /* hero */
@@ -674,6 +675,12 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     <div class="heroside"><div class="shot"><span class="pz"><img src="media/miami-bay.webp" width="1040" height="1300" alt="North Miami Beach seen from Biscayne Bay" fetchpriority="high" decoding="async"></span></div><aside class="cform" id="enquiry">
   <span class="eyebrow">Send a requirement</span>
   <form id="cf" novalidate>
+    <label for="f-name">Your name</label>
+    <input id="f-name" type="text" autocomplete="name" placeholder="Who we are replying to">
+    <label for="f-mail">Work e-mail</label>
+    <input id="f-mail" type="email" autocomplete="email" placeholder="Where the quotation goes">
+    <label for="f-co">Company</label>
+    <input id="f-co" type="text" autocomplete="organization" placeholder="Optional">
     <label for="f-product">Product or equipment</label>
     <input id="f-product" type="text" autocomplete="off" placeholder="What you need, in your own words">
     <label for="f-qty">Quantity</label>
@@ -687,7 +694,8 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     </select>
     <label for="f-note">Anything else</label>
     <textarea id="f-note" placeholder="Specification, standard, certification, deadline"></textarea>
-    <button class="btn" type="submit">Compose the email</button>
+    <div class="hp" aria-hidden="true"><label for="f-website">Website</label><input id="f-website" type="text" tabindex="-1" autocomplete="off"></div>
+    <button class="btn" type="submit">Send the requirement</button>
     <p class="cresult" id="cf-out" hidden></p>
   </form>
 </aside></div>
@@ -830,25 +838,48 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 </script>
 <script>
 (function(){
-  /* Бэкенда нет, и это честнее: форма собирает письмо и открывает почтовый
-     клиент, поэтому у отправителя остаётся копия в «Отправленных». */
+  /* Заявка уходит на наш endpoint. Если он не отвечает, посетитель получает
+     готовый текст и адрес, а не молчание. */
   var f=document.getElementById('cf'); if(!f) return;
   function v(id){ var e=document.getElementById(id); return e?(e.value||'').trim():''; }
   f.addEventListener('submit',function(e){
     e.preventDefault();
-    var p=v('f-product'), q=v('f-qty'), po=v('f-port'), t=v('f-terms'), n=v('f-note');
-    var lines=['Product: '+(p||'(not stated)'),'Quantity: '+(q||'(not stated)'),
-               'Destination: '+(po||'(not stated)'),'Terms: '+t];
-    if(n) lines.push('','Notes:',n);
-    lines.push('','Sent from ispgroupgc.com');
-    var subj='Requirement'+(p?(': '+p):'')+(po?(' to '+po):'');
-    var href='mailto:info@ispgroupgc.com?subject='+encodeURIComponent(subj)+
-             '&body='+encodeURIComponent(lines.join('\n'));
+    var data={ name:v('f-name'), mail:v('f-mail'), co:v('f-co'),
+      spec:[v('f-product'), v('f-note')].filter(Boolean).join('\n\n'),
+      qty:v('f-qty'), dest:v('f-port'), terms:v('f-terms'),
+      website:v('f-website'), page:location.pathname };
     var out=document.getElementById('cf-out');
-    out.innerHTML='Opening your email client. If nothing happens, write to '+
-      '<span class="mail">info@ispgroupgc.com</span> with the same details.';
-    out.hidden=false;
-    window.location.href=href;
+    if(!data.name || !data.mail || !data.spec){
+      out.textContent='Please give your name, a work e-mail and what you need.';
+      out.hidden=false; return;
+    }
+    var btn=f.querySelector('button[type=submit]'); var label=btn.textContent;
+    btn.disabled=true; btn.textContent='Sending';
+    function plain(){
+      return ['Name: '+data.name,'Company: '+data.co,'Work e-mail: '+data.mail,'',
+        'Product: '+v('f-product'),'Quantity: '+data.qty,'Destination: '+data.dest,
+        'Terms: '+data.terms,'','Notes:',v('f-note')].join('\n');
+    }
+    fetch('/api/quote',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(data)})
+      .then(function(r){ return r.json().catch(function(){return {ok:false};}); })
+      .then(function(j){
+        if(j && j.ok){
+          f.innerHTML='<p class="cresult" style="margin:0"><b>Requirement received.</b> '+
+            'We reply within one working day.</p>';
+          if(window.gtag) gtag('event','quote_submit',{page:'contact'});
+          return;
+        }
+        throw 0;
+      })
+      .catch(function(){
+        btn.disabled=false; btn.textContent=label;
+        var subj='Requirement'+(v('f-product')?(': '+v('f-product')):'');
+        out.innerHTML='We could not send this from the page. Please e-mail it to '+
+          '<a class="mail" href="mailto:info@ispgroupgc.com?subject='+encodeURIComponent(subj)+
+          '&body='+encodeURIComponent(plain())+'">info@ispgroupgc.com</a>.';
+        out.hidden=false;
+      });
   });
 })();
 </script>

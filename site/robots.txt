@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://ispgroupgc.com/sitemap.xml
+
+# Plain-text map of this site for language models
+# https://ispgroupgc.com/llms.txt

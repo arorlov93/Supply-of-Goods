@@ -140,14 +140,14 @@ nav.top-nav a:hover{opacity:1}
 @keyframes slide{0%{transform:scaleX(.2);transform-origin:left}50%{transform:scaleX(1);transform-origin:left}50.1%{transform-origin:right}100%{transform:scaleX(.2);transform-origin:right}}
 
 /* 02 source: mask reveal + push */
-#s-source{height:300svh}
+#s-source{height:240svh}
 #s-source .layer-b{clip-path:inset(calc((1 - var(--p,0)*1.6) * 50%) 0);transition:none}
 #s-source .layer-b img{transform:scale(calc(1.3 - var(--p,0)*.3))}
 #s-source .layer-a img{transform:scale(calc(1 + var(--p,0)*.35));filter:brightness(calc(1 - var(--p,0)*.45))}
 #s-source .content{opacity:calc(min(1, max(0, (var(--p,0) - .28) * 3.4)))}
 
 /* 03 match cut */
-#s-match{height:300svh}
+#s-match{height:250svh}
 #s-match .layer-b{clip-path:circle(calc(var(--p,0)*112%) at 50% 50%)}
 #s-match .layer-a img{transform:rotate(calc(var(--p,0)*22deg)) scale(calc(1.06 + var(--p,0)*.2))}
 #s-match .layer-b img{transform:rotate(calc(-18deg + var(--p,0)*18deg)) scale(calc(1.34 - var(--p,0)*.3))}
@@ -164,7 +164,7 @@ nav.top-nav a:hover{opacity:1}
 .svc-list i{font-family:var(--mono);font-style:normal;font-size:11px;color:var(--gold);letter-spacing:.14em}
 
 /* 04 horizontal categories */
-#s-cats{height:460svh;background:var(--paper);color:var(--black)}
+#s-cats{height:400svh;background:var(--paper);color:var(--black)}
 #s-cats .stage{align-content:center}
 .rail-head{position:absolute;top:0;left:0;right:0;padding:clamp(86px,13vh,140px) var(--gut) 0;z-index:5;pointer-events:none}
 .rail{
@@ -187,7 +187,7 @@ nav.top-nav a:hover{opacity:1}
 .card .n{position:absolute;top:18px;left:20px;z-index:2;font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:rgba(244,243,239,.75)}
 
 /* 05 movement */
-#s-move{height:320svh}
+#s-move{height:260svh}
 #s-move .layer-a img{transform:translate3d(calc(var(--p,0)*-14%),0,0) scale(1.22)}
 #s-move .layer-b{clip-path:inset(0 calc((1 - min(1, var(--p,0)*1.75)) * 100%) 0 0)}
 #s-move .layer-b img{transform:translate3d(calc((1 - min(1, var(--p,0)*1.75))*16%),0,0) scale(1.14)}
@@ -224,7 +224,7 @@ nav.top-nav a:hover{opacity:1}
 .why-grid p{margin:0;color:var(--steel);font-size:.95rem}
 
 /* 08 final */
-#s-end{height:230svh}
+#s-end{height:200svh}
 #s-end .media{transform:scale(calc(1.3 - var(--p,0)*.3))}
 #s-end .content{justify-content:center;align-items:flex-start}
 .form-card{
@@ -245,6 +245,12 @@ select{color:var(--paper)}
 select option{background:var(--graphite)}
 input::placeholder,textarea::placeholder{color:rgba(133,140,148,.8)}
 .form-note{font-size:12px;color:var(--steel);margin:16px 0 0}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form-ok{font-size:1.05rem;line-height:1.6;margin:0}
+.form-ok b{display:block;font-size:1.5rem;letter-spacing:-.02em;margin-bottom:8px}
+.form-fallback{font-size:.95rem;line-height:1.6}
+.form-fallback textarea{margin-top:12px;min-height:150px;font-family:var(--mono);font-size:12.5px}
+.form-fallback a{color:var(--gold)}
 
 /* footer */
 footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;border-top:1px solid rgba(244,243,239,.12)}
@@ -519,8 +525,9 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
           <div><label for="q-dest">Destination port or city</label><input id="q-dest" type="text"></div>
           <div class="f-full"><label for="q-spec">Specification</label><textarea id="q-spec" placeholder="Standard, grade, dimensions, certification, deadline"></textarea></div>
         </div>
+        <div class="hp" aria-hidden="true"><label for="q-website">Website</label><input id="q-website" type="text" tabindex="-1" autocomplete="off"></div>
         <p style="margin:20px 0 0"><button class="btn-lg" type="submit">Start a trade request</button></p>
-        <p class="form-note">This opens your mail client with the request filled in, addressed to info@ispgroupgc.com. Nothing is sent from this page and nothing is stored here.</p>
+        <p class="form-note">Sent straight to info@ispgroupgc.com. We reply within one working day.</p>
       </form>
     </div>
   </div>
@@ -597,27 +604,56 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
   var first = document.querySelector('#s-open .content');
   if(first) requestAnimationFrame(function(){ first.classList.add('in'); });
 
-  /* request form -> mail client, same mechanism as the contact page */
+  /* the request is posted to our own endpoint; if that cannot send, the
+     visitor still gets the text and the address instead of silence */
   var f = document.getElementById('rq');
   if(f) f.addEventListener('submit', function(ev){
     ev.preventDefault();
     function v(id){ var el=document.getElementById(id); return el ? el.value.trim() : ''; }
-    var lines = [
-      'Name: '            + v('q-name'),
-      'Company: '         + v('q-co'),
-      'Country: '         + v('q-country'),
-      'Work e-mail: '     + v('q-mail'),
-      '',
-      'Category: '        + v('q-cat'),
-      'Quantity: '        + v('q-qty'),
-      'Destination: '     + v('q-dest'),
-      'Terms to quote: '  + v('q-terms'),
-      '',
-      'Specification:',
-      v('q-spec')
-    ].join('\n');
-    var subj = 'Trade request: ' + (v('q-cat') || 'enquiry') + (v('q-dest') ? ' to ' + v('q-dest') : '');
-    location.href = 'mailto:info@ispgroupgc.com?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(lines);
+    var data = {
+      name:v('q-name'), mail:v('q-mail'), co:v('q-co'), country:v('q-country'),
+      cat:v('q-cat'), terms:v('q-terms'), qty:v('q-qty'), dest:v('q-dest'),
+      spec:v('q-spec'), website:v('q-website'), page: location.pathname
+    };
+    if(!data.name || !data.mail || !data.spec){
+      alert('Please give your name, a work e-mail and what you need.');
+      return;
+    }
+    var btn = f.querySelector('button[type=submit]');
+    var label = btn.textContent;
+    btn.disabled = true; btn.textContent = 'Sending';
+
+    function plain(){
+      return ['Name: '+data.name,'Company: '+data.co,'Country: '+data.country,
+        'Work e-mail: '+data.mail,'','Category: '+data.cat,'Quantity: '+data.qty,
+        'Destination: '+data.dest,'Terms to quote: '+data.terms,'',
+        'Specification:',data.spec].join('\n');
+    }
+    function done(){
+      f.innerHTML = '<p class="form-ok"><b>Request received.</b>' +
+        'We reply within one working day, to ' + data.mail.replace(/[<>&]/g,'') + '.</p>';
+      if(window.gtag) gtag('event','quote_submit',{category:data.cat||'',country:data.country||''});
+    }
+    function fallback(){
+      var body = plain();
+      var subj = 'Trade request: ' + (data.cat || 'enquiry') + (data.dest ? ' to ' + data.dest : '');
+      f.innerHTML = '<div class="form-fallback"><p><b>We could not send this from the page.</b> ' +
+        'Please e-mail it to <a href="mailto:info@ispgroupgc.com">info@ispgroupgc.com</a>. ' +
+        'Your request is below, ready to copy.</p>' +
+        '<p><a class="btn-lg" href="mailto:info@ispgroupgc.com?subject=' +
+        encodeURIComponent(subj) + '&body=' + encodeURIComponent(body) +
+        '">Open in mail client</a></p>' +
+        '<textarea readonly></textarea></div>';
+      var ta = f.querySelector('textarea');
+      ta.value = body;
+      ta.addEventListener('focus', function(){ ta.select(); });
+    }
+
+    fetch('/api/quote', {
+      method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data)
+    }).then(function(r){ return r.json().catch(function(){ return {ok:false}; }); })
+      .then(function(j){ if(j && j.ok) done(); else fallback(); })
+      .catch(fallback);
   });
 })();
 </script>
