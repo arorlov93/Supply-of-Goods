@@ -50,9 +50,10 @@ OUT = os.path.join(SITE, SLUG + ".html")
 
 TITLE = "Supply references: steel, formwork and plant from China"
 OG_TITLE = "Goods we bought, and the sites they went into"
-DESC = ("Projects our team supplied into: structural steel, formwork, inert materials "
-        "and the machinery fleet from China, bridge equipment from the European Union, "
-        "finishes and pool plant to Bali.")
+# Выдача обрезает описание около 160 знаков, поэтому оно считается, а не
+# пишется на глаз. Тут 157.
+DESC = ("Projects our team supplied: steel, formwork and the machinery fleet from China, "
+        "bridge equipment from the European Union, finishes and pool plant to Bali.")
 OG_IMG = "ref-bridge.jpg"
 OG_ALT = "Steel truss railway bridge standing on new concrete abutments"
 

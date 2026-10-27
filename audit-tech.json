@@ -1,6 +1,6 @@
 {
  "base": "https://ispgroupgc.com",
- "when": "2026-10-27T16:19:22.519Z",
+ "when": "2026-10-27T18:58:19.322Z",
  "problems": [
   {
    "page": "/404",
@@ -76,6 +76,11 @@
    "page": "/corridors",
    "kind": "картинка",
    "detail": "vessel.e6da5deb.webp: растянута в 2.23 раза при DPR 2"
+  },
+  {
+   "page": "/credits",
+   "kind": "мета",
+   "detail": "description всего 66 знаков"
   },
   {
    "page": "/credits",
@@ -233,6 +238,16 @@
    "detail": "signing.0235b8d7.webp: растянута в 1.66 раза при DPR 2"
   },
   {
+   "page": "/projects",
+   "kind": "мета",
+   "detail": "description 187 знаков"
+  },
+  {
+   "page": "/projects",
+   "kind": "картинка",
+   "detail": "ref-bridge.de18ef1e.webp: растянута в 1.95 раза при DPR 2"
+  },
+  {
    "page": "/reefer-cold-chain",
    "kind": "картинка",
    "detail": "container-gold.a83f788e.webp: растянута в 1.86 раза при DPR 2"
@@ -326,6 +341,21 @@
    "page": "/de/",
    "kind": "скорость",
    "detail": "вес 2.09 МБ"
+  },
+  {
+   "page": "(ссылки)",
+   "kind": "ссылка",
+   "detail": "0 /"
+  },
+  {
+   "page": "(ссылки)",
+   "kind": "ссылка",
+   "detail": "0 /west-africa"
+  },
+  {
+   "page": "(ссылки)",
+   "kind": "ссылка",
+   "detail": "0 /contact-fr#enquiry"
   }
  ]
 }

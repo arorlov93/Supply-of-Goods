@@ -102,7 +102,8 @@ def main():
                "<title>Photo credits and licences | ISP Group LLC</title>", s, count=1)
     s = re.sub(r'<meta name="description" content="[^"]*"',
                '<meta name="description" content="Author, source and licence for every '
-               'photograph used on this site."', s, count=1)
+               'photograph on this site: CC0, public domain, CC BY, and project '
+               'photographs owned by the project owners."', s, count=1)
     s = re.sub(r'<link rel="canonical" href="[^"]*"',
                '<link rel="canonical" href="https://ispgroupgc.com/credits"', s, count=1)
     # заголовок страницы и хлебные крошки. Сплошная замена слова Privacy
