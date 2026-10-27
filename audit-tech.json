@@ -1,31 +1,11 @@
 {
  "base": "https://ispgroupgc.com",
- "when": "2026-10-27T02:27:41.638Z",
+ "when": "2026-10-27T03:22:18.198Z",
  "problems": [
   {
    "page": "/404",
    "kind": "картинка",
    "detail": "ship-dusk.986f89be.webp: растянута в 1.80 раза при DPR 2"
-  },
-  {
-   "page": "/404",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/404",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/404",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/404",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.132"
   },
   {
    "page": "/about",
@@ -38,124 +18,9 @@
    "detail": "terminal.ce8c5291.webp: растянута в 2.23 раза при DPR 2"
   },
   {
-   "page": "/about",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/about",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: twenty years of supply 187x16"
-  },
-  {
-   "page": "/about",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: corridor 53x16"
-  },
-  {
-   "page": "/about",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: services page 93x16"
-  },
-  {
-   "page": "/about",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: corridor pages 97x16"
-  },
-  {
-   "page": "/about",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: guides 46x16"
-  },
-  {
-   "page": "/about",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/about",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/about",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/about",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.482"
-  },
-  {
    "page": "/afrique-ouest",
    "kind": "картинка",
    "detail": "chart-west.f174d594.webp: растянута в 1.62 раза при DPR 2"
-  },
-  {
-   "page": "/afrique-ouest",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/afrique-ouest",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: certificat vétérinaire 133x16"
-  },
-  {
-   "page": "/afrique-ouest",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: découpes de volaille 139x16"
-  },
-  {
-   "page": "/afrique-ouest",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/afrique-ouest",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/afrique-ouest",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/afrique-ouest",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.383"
-  },
-  {
-   "page": "/antidumping-check",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/antidumping-check",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Guides 42x15"
-  },
-  {
-   "page": "/antidumping-check",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/antidumping-check",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/antidumping-check",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/antidumping-check",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.296"
   },
   {
    "page": "/bill-of-lading",
@@ -163,69 +28,9 @@
    "detail": "ship-dusk.986f89be.webp: растянута в 1.80 раза при DPR 2"
   },
   {
-   "page": "/bill-of-lading",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/bill-of-lading",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Guides 42x15"
-  },
-  {
-   "page": "/bill-of-lading",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/bill-of-lading",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/bill-of-lading",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
    "page": "/building-materials",
    "kind": "картинка",
-   "detail": "pipe.5ffeea4c.webp: растянута в 2.43 раза при DPR 2"
-  },
-  {
-   "page": "/building-materials",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/building-materials",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: What we supply 91x15"
-  },
-  {
-   "page": "/building-materials",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Türkiye corridor page 143x16"
-  },
-  {
-   "page": "/building-materials",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/building-materials",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/building-materials",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/building-materials",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.28"
+   "detail": "pipe.5ffeea4c.webp: растянута в 2.47 раза при DPR 2"
   },
   {
    "page": "/certificat-veterinaire",
@@ -233,69 +38,9 @@
    "detail": "coldstore.43a54595.webp: растянута в 1.47 раза при DPR 2"
   },
   {
-   "page": "/certificat-veterinaire",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/certificat-veterinaire",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/certificat-veterinaire",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/certificat-veterinaire",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/certificat-veterinaire",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.367"
-  },
-  {
    "page": "/certificate-of-origin",
    "kind": "картинка",
    "detail": "chart-old.2117b17c.webp: растянута в 1.84 раза при DPR 2"
-  },
-  {
-   "page": "/certificate-of-origin",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/certificate-of-origin",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Guides 42x15"
-  },
-  {
-   "page": "/certificate-of-origin",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: trade remedy guide 131x16"
-  },
-  {
-   "page": "/certificate-of-origin",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/certificate-of-origin",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/certificate-of-origin",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/certificate-of-origin",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.491"
   },
   {
    "page": "/china",
@@ -305,62 +50,7 @@
   {
    "page": "/china",
    "kind": "картинка",
-   "detail": "machinery.dde201b7.webp: растянута в 2.46 раза при DPR 2"
-  },
-  {
-   "page": "/china",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/china",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Corridors 55x15"
-  },
-  {
-   "page": "/china",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: 01The supplier is a fa 270x19"
-  },
-  {
-   "page": "/china",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: 02The specification is 344x19"
-  },
-  {
-   "page": "/china",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: 03Inspection is cheap  502x19"
-  },
-  {
-   "page": "/china",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: 04Consolidation, docum 375x19"
-  },
-  {
-   "page": "/china",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: 05Payment is staged ag 349x19"
-  },
-  {
-   "page": "/china",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/china",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/china",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/china",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.368"
+   "detail": "machinery.dde201b7.webp: растянута в 2.51 раза при DPR 2"
   },
   {
    "page": "/contact-fr",
@@ -368,94 +58,14 @@
    "detail": "miami-dusk.2d54e606.webp: растянута в 1.86 раза при DPR 2"
   },
   {
-   "page": "/contact-fr",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/contact-fr",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/contact-fr",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/contact-fr",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/contact-fr",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.415"
-  },
-  {
    "page": "/contact",
    "kind": "картинка",
    "detail": "miami-dusk.2d54e606.webp: растянута в 1.86 раза при DPR 2"
-  },
-  {
-   "page": "/contact",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/contact",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/contact",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/contact",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/contact",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.48"
   },
   {
    "page": "/container-loading",
    "kind": "картинка",
    "detail": "loading-truck.1294f153.webp: растянута в 1.86 раза при DPR 2"
-  },
-  {
-   "page": "/container-loading",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/container-loading",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Guides 42x15"
-  },
-  {
-   "page": "/container-loading",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/container-loading",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/container-loading",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/container-loading",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.242"
   },
   {
    "page": "/corridors",
@@ -468,394 +78,9 @@
    "detail": "vessel.e6da5deb.webp: растянута в 2.23 раза при DPR 2"
   },
   {
-   "page": "/corridors",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/corridors",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/corridors",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/corridors",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/corridors",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.254"
-  },
-  {
    "page": "/credits",
    "kind": "картинка",
    "detail": "crane-lift.dfda92a9.webp: растянута в 1.87 раза при DPR 2"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: 20201119-TFAA-LSC-0124 192x12"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Public Domain Mark 112x12"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: big ship, small ship 105x12"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: CC BY 38x12"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Portuguese nautical ch 216x12"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: CC0 1.0 46x12"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Nautical chart Portugu 261x13"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: CC0 1.0 46x13"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: U.S. Department of Agr 219x13"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: container-gold.jpg 102x13"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Multicolored container 132x13"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: CC BY 39x13"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Night sky crane 87x13"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: CC0 1.0 47x13"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: CEB_9293 63x13"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Public Domain Mark 115x13"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: big-ass gantry crane 116x13"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Genova terminal konten 181x13"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: durban-harbour van gog 146x13"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Public Domain Mark 116x13"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Alesatrice a Montante  422x13"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: CC0 1.0 48x13"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Van carrier ct bremerh 156x14"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: CC0 1.0 48x14"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Container crane at the 229x14"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: 2017-03-29 Truck Spott 579x14"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Container Schiff (5312 181x14"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: 2012 06 05 Santa Lucia 341x14"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: CC0 1.0 49x14"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: 100116-F-2442B-019 (42 216x14"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: 20ft container loaded  530x14"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: CC BY 41x14"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Metalworking equipment 147x14"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Miami Skyline 2 94x14"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Port of Shanghai, Yang 346x15"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: CC0 1.0 49x15"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Stacks wood pallets 120x15"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: CC0 1.0 50x15"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Warehouse interior sho 392x15"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Staring down the barre 140x15"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: CC BY 42x15"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ANL WANGARATTA 126x15"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Container cranes in To 196x15"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: CC0 1.0 51x15"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Spirit Shanghai 94x15"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Free cargo ship ocean  178x15"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Free cargo ship ocean 138x16"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: CC0 1.0 51x16"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Container Ship 93x16"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: CC BY 43x16"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Signing Paperwork 118x16"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Grain Terminal. Gibson 189x16"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Isoplus fernwärme Tech 587x16"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: CC0 1.0 52x16"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Straddle carriers i No 176x16"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: CC BY 44x16"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Container terminal. Po 242x16"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: 009-Chob یک کارگاه نجا 300x16"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: CC0 1.0 53x16"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Free work hardware too 203x17"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: CC0 1.0 53x17"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Container trucks on an 266x17"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: CC BY 44x17"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ARUNA IPSA (Container  198x17"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Container cranes at Wa 249x17"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: CC0 1.0 54x17"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Sepangar Port Containe 193x17"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: CC BY 45x17"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/credits",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
   },
   {
    "page": "/customs-data-pricing",
@@ -863,119 +88,14 @@
    "detail": "containers-wall.17942d5c.webp: растянута в 1.86 раза при DPR 2"
   },
   {
-   "page": "/customs-data-pricing",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/customs-data-pricing",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Guides 42x15"
-  },
-  {
-   "page": "/customs-data-pricing",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/customs-data-pricing",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/customs-data-pricing",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/customs-data-pricing",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.144"
-  },
-  {
    "page": "/decoupes-volaille",
    "kind": "картинка",
    "detail": "coldstore.43a54595.webp: растянута в 1.47 раза при DPR 2"
   },
   {
-   "page": "/decoupes-volaille",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/decoupes-volaille",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/decoupes-volaille",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/decoupes-volaille",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/decoupes-volaille",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.216"
-  },
-  {
    "page": "/demurrage-detention",
    "kind": "картинка",
    "detail": "truck-road.01f52d2a.webp: растянута в 1.87 раза при DPR 2"
-  },
-  {
-   "page": "/demurrage-detention",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/demurrage-detention",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Guides 42x15"
-  },
-  {
-   "page": "/demurrage-detention",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Durban corridor 106x17"
-  },
-  {
-   "page": "/demurrage-detention",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/demurrage-detention",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/demurrage-detention",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/demurrage-detention",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.163"
-  },
-  {
-   "page": "/experience",
-   "kind": "разметка",
-   "detail": "id \"searchpanel\" встречается 2 раза"
-  },
-  {
-   "page": "/experience",
-   "kind": "разметка",
-   "detail": "id \"searchinput\" встречается 2 раза"
-  },
-  {
-   "page": "/experience",
-   "kind": "разметка",
-   "detail": "id \"searchres\" встречается 2 раза"
   },
   {
    "page": "/experience",
@@ -985,22 +105,12 @@
   {
    "page": "/experience",
    "kind": "доступность",
-   "detail": "мелкая цель нажатия: Skip to content 113x19"
+   "detail": "мелкая цель нажатия: Skip to content 121x20"
   },
   {
    "page": "/experience",
    "kind": "доступность",
-   "detail": "мелкая цель нажатия: ← ISP Group 74x14"
-  },
-  {
-   "page": "/experience",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 160x18"
-  },
-  {
-   "page": "/experience",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: +1 929 830 0038 122x18"
+   "detail": "мелкая цель нажатия: ← ISP Group 77x15"
   },
   {
    "page": "/food-agricultural",
@@ -1008,119 +118,9 @@
    "detail": "silos.51ba2076.webp: растянута в 1.85 раза при DPR 2"
   },
   {
-   "page": "/food-agricultural",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/food-agricultural",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: What we supply 91x15"
-  },
-  {
-   "page": "/food-agricultural",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: veterinary certificate 178x16"
-  },
-  {
-   "page": "/food-agricultural",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: the cuts guide 95x16"
-  },
-  {
-   "page": "/food-agricultural",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/food-agricultural",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/food-agricultural",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/food-agricultural",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.291"
-  },
-  {
    "page": "/guides",
    "kind": "картинка",
    "detail": "crane-dusk.6028a9f0.webp: растянута в 1.87 раза при DPR 2"
-  },
-  {
-   "page": "/guides",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/guides",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Incoterms 68x16"
-  },
-  {
-   "page": "/guides",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: what a landed price mu 219x16"
-  },
-  {
-   "page": "/guides",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: how to verify a suppli 228x16"
-  },
-  {
-   "page": "/guides",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: the letter of credit a 168x16"
-  },
-  {
-   "page": "/guides",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: veterinary certificate 144x16"
-  },
-  {
-   "page": "/guides",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: cut nomenclature 118x16"
-  },
-  {
-   "page": "/guides",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/guides",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/guides",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/guides",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.133"
-  },
-  {
-   "page": "/home-classic",
-   "kind": "разметка",
-   "detail": "id \"searchpanel\" встречается 2 раза"
-  },
-  {
-   "page": "/home-classic",
-   "kind": "разметка",
-   "detail": "id \"searchinput\" встречается 2 раза"
-  },
-  {
-   "page": "/home-classic",
-   "kind": "разметка",
-   "detail": "id \"searchres\" встречается 2 раза"
   },
   {
    "page": "/home-classic",
@@ -1135,12 +135,12 @@
   {
    "page": "/home-classic",
    "kind": "картинка",
-   "detail": "aerial.dea03d61.webp: растянута в 1.25 раза при DPR 2"
+   "detail": "aerial.dea03d61.webp: растянута в 1.29 раза при DPR 2"
   },
   {
    "page": "/home-classic",
    "kind": "картинка",
-   "detail": "vessel.e6da5deb.webp: растянута в 2.19 раза при DPR 2"
+   "detail": "vessel.e6da5deb.webp: растянута в 2.23 раза при DPR 2"
   },
   {
    "page": "/home-classic",
@@ -1150,22 +150,22 @@
   {
    "page": "/home-classic",
    "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
+   "detail": "мелкая цель нажатия: China → worldwide 163x22"
   },
   {
    "page": "/home-classic",
    "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
+   "detail": "мелкая цель нажатия: Türkiye → United State 202x22"
   },
   {
    "page": "/home-classic",
    "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
+   "detail": "мелкая цель нажатия: Americas & EU → West A 250x22"
   },
   {
    "page": "/home-classic",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.228"
+   "kind": "доступность",
+   "detail": "мелкая цель нажатия: Intra-Africa 100x22"
   },
   {
    "page": "/hs-code",
@@ -1173,79 +173,9 @@
    "detail": "yard-dusk.d668842b.webp: растянута в 1.66 раза при DPR 2"
   },
   {
-   "page": "/hs-code",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/hs-code",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Guides 42x15"
-  },
-  {
-   "page": "/hs-code",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/hs-code",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/hs-code",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/hs-code",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.181"
-  },
-  {
    "page": "/incoterms",
    "kind": "картинка",
    "detail": "ship-sea.3810f785.webp: растянута в 1.87 раза при DPR 2"
-  },
-  {
-   "page": "/incoterms",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/incoterms",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Guides 42x15"
-  },
-  {
-   "page": "/incoterms",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: reefer programmes into 238x16"
-  },
-  {
-   "page": "/incoterms",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: China 41x16"
-  },
-  {
-   "page": "/incoterms",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/incoterms",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/incoterms",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/incoterms",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.156"
   },
   {
    "page": "/",
@@ -1255,177 +185,17 @@
   {
    "page": "/",
    "kind": "картинка",
-   "detail": "j-works.83b3ff54.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/",
-   "kind": "картинка",
-   "detail": "j-stuffing.4b1e2bbb.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/",
-   "kind": "картинка",
-   "detail": "j-road.bc3452d2.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/",
-   "kind": "картинка",
-   "detail": "j-quay.a15ac726.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/",
-   "kind": "картинка",
-   "detail": "j-sea.c62cff19.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/",
-   "kind": "картинка",
-   "detail": "j-arrival.d6509814.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/",
-   "kind": "картинка",
-   "detail": "timber.3eef91ad.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/",
-   "kind": "картинка",
-   "detail": "machinery.dde201b7.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/",
-   "kind": "картинка",
-   "detail": "tools-flat.a370d6b5.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/",
-   "kind": "картинка",
-   "detail": "steel-tubes.87f3af0e.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/",
-   "kind": "картинка",
-   "detail": "pallets-wall.e09c1210.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/",
-   "kind": "картинка",
-   "detail": "coldstore.43a54595.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/",
-   "kind": "картинка",
-   "detail": "crane-dusk.6028a9f0.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/",
-   "kind": "картинка",
    "detail": "crane-dusk.6028a9f0.webp: растянута в 5.30 раза при DPR 2"
   },
   {
    "page": "/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: What we do 67x20"
-  },
-  {
-   "page": "/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: What we supply 90x20"
-  },
-  {
-   "page": "/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Corridors 54x20"
-  },
-  {
-   "page": "/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Guides 42x20"
-  },
-  {
-   "page": "/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: About 35x20"
-  },
-  {
-   "page": "/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Contact 46x20"
-  },
-  {
-   "page": "/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: FR 17x20"
-  },
-  {
-   "page": "/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ES 17x20"
-  },
-  {
-   "page": "/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: DE 18x20"
-  },
-  {
-   "page": "/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 41x19"
-  },
-  {
-   "page": "/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms 35x19"
-  },
-  {
-   "page": "/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: author, source and lic 228x14"
-  },
-  {
-   "page": "/",
    "kind": "скорость",
-   "detail": "сдвиг макета 0.183"
-  },
-  {
-   "page": "/",
-   "kind": "скорость",
-   "detail": "вес 2.92 МБ"
+   "detail": "вес 2.09 МБ"
   },
   {
    "page": "/industrial-equipment",
    "kind": "картинка",
-   "detail": "machinery.dde201b7.webp: растянута в 2.46 раза при DPR 2"
-  },
-  {
-   "page": "/industrial-equipment",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/industrial-equipment",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: What we supply 91x15"
-  },
-  {
-   "page": "/industrial-equipment",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/industrial-equipment",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/industrial-equipment",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/industrial-equipment",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.322"
+   "detail": "machinery.dde201b7.webp: растянута в 2.51 раза при DPR 2"
   },
   {
    "page": "/ispm-15",
@@ -1433,69 +203,9 @@
    "detail": "pallets-stack.08bfec87.webp: растянута в 1.88 раза при DPR 2"
   },
   {
-   "page": "/ispm-15",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/ispm-15",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Guides 42x15"
-  },
-  {
-   "page": "/ispm-15",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/ispm-15",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/ispm-15",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/ispm-15",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.235"
-  },
-  {
    "page": "/landed-price",
    "kind": "картинка",
    "detail": "crane-red.03cec0d1.webp: растянута в 1.92 раза при DPR 2"
-  },
-  {
-   "page": "/landed-price",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/landed-price",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Guides 42x15"
-  },
-  {
-   "page": "/landed-price",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/landed-price",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/landed-price",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/landed-price",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.104"
   },
   {
    "page": "/letter-of-credit",
@@ -1503,104 +213,9 @@
    "detail": "signing.0235b8d7.webp: растянута в 1.66 раза при DPR 2"
   },
   {
-   "page": "/letter-of-credit",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/letter-of-credit",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Guides 42x15"
-  },
-  {
-   "page": "/letter-of-credit",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/letter-of-credit",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/letter-of-credit",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/letter-of-credit",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.447"
-  },
-  {
    "page": "/metals-pipe",
    "kind": "картинка",
-   "detail": "pipe.5ffeea4c.webp: растянута в 2.43 раза при DPR 2"
-  },
-  {
-   "page": "/metals-pipe",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/metals-pipe",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: What we supply 91x15"
-  },
-  {
-   "page": "/metals-pipe",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/metals-pipe",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/metals-pipe",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/metals-pipe",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.321"
-  },
-  {
-   "page": "/paper-packaging",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/paper-packaging",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: What we supply 91x15"
-  },
-  {
-   "page": "/paper-packaging",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Durban corridor 106x16"
-  },
-  {
-   "page": "/paper-packaging",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/paper-packaging",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/paper-packaging",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/paper-packaging",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.431"
+   "detail": "pipe.5ffeea4c.webp: растянута в 2.47 раза при DPR 2"
   },
   {
    "page": "/poultry-cuts",
@@ -1608,64 +223,9 @@
    "detail": "coldstore.43a54595.webp: растянута в 1.47 раза при DPR 2"
   },
   {
-   "page": "/poultry-cuts",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/poultry-cuts",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Guides 42x15"
-  },
-  {
-   "page": "/poultry-cuts",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/poultry-cuts",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/poultry-cuts",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/poultry-cuts",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.348"
-  },
-  {
    "page": "/privacy",
    "kind": "картинка",
    "detail": "crane-lift.dfda92a9.webp: растянута в 1.87 раза при DPR 2"
-  },
-  {
-   "page": "/privacy",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/privacy",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/privacy",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/privacy",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/proforma-invoice",
-   "kind": "мета",
-   "detail": "description 161 знаков"
   },
   {
    "page": "/proforma-invoice",
@@ -1673,154 +233,14 @@
    "detail": "signing.0235b8d7.webp: растянута в 1.66 раза при DPR 2"
   },
   {
-   "page": "/proforma-invoice",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/proforma-invoice",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Guides 42x15"
-  },
-  {
-   "page": "/proforma-invoice",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: verifying a supplier 128x17"
-  },
-  {
-   "page": "/proforma-invoice",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/proforma-invoice",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/proforma-invoice",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
    "page": "/reefer-cold-chain",
    "kind": "картинка",
    "detail": "container-gold.a83f788e.webp: растянута в 1.86 раза при DPR 2"
   },
   {
-   "page": "/reefer-cold-chain",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/reefer-cold-chain",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Guides 42x15"
-  },
-  {
-   "page": "/reefer-cold-chain",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/reefer-cold-chain",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/reefer-cold-chain",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/reefer-cold-chain",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.13"
-  },
-  {
-   "page": "/services",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/services",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/services",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/services",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/services",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.322"
-  },
-  {
    "page": "/southern-africa",
    "kind": "картинка",
    "detail": "durban-sunset.7e09726d.webp: растянута в 1.86 раза при DPR 2"
-  },
-  {
-   "page": "/southern-africa",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/southern-africa",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Corridors 55x15"
-  },
-  {
-   "page": "/southern-africa",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: 01SACU is not SADC, an 483x19"
-  },
-  {
-   "page": "/southern-africa",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: 02The transit declarat 338x19"
-  },
-  {
-   "page": "/southern-africa",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: 03Paper reels are a ha 418x19"
-  },
-  {
-   "page": "/southern-africa",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: 04Why we quote this la 230x19"
-  },
-  {
-   "page": "/southern-africa",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/southern-africa",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/southern-africa",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/southern-africa",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.232"
-  },
-  {
-   "page": "/supply",
-   "kind": "мета",
-   "detail": "description 161 знаков"
   },
   {
    "page": "/supply",
@@ -1833,64 +253,9 @@
    "detail": "pipe.5ffeea4c.webp: растянута в 2.47 раза при DPR 2"
   },
   {
-   "page": "/supply",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/supply",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/supply",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/supply",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/supply",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.172"
-  },
-  {
    "page": "/terms",
    "kind": "картинка",
    "detail": "signing.0235b8d7.webp: растянута в 1.66 раза при DPR 2"
-  },
-  {
-   "page": "/terms",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/terms",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: media/CREDITS.json 147x16"
-  },
-  {
-   "page": "/terms",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/terms",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/terms",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/terms",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.258"
   },
   {
    "page": "/tools-hardware",
@@ -1900,127 +265,12 @@
   {
    "page": "/tools-hardware",
    "kind": "картинка",
-   "detail": "machinery.dde201b7.webp: растянута в 2.46 раза при DPR 2"
-  },
-  {
-   "page": "/tools-hardware",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/tools-hardware",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: What we supply 91x15"
-  },
-  {
-   "page": "/tools-hardware",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/tools-hardware",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/tools-hardware",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/tools-hardware",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.572"
+   "detail": "machinery.dde201b7.webp: растянута в 2.51 раза при DPR 2"
   },
   {
    "page": "/turkiye",
    "kind": "картинка",
-   "detail": "pipe.5ffeea4c.webp: растянута в 2.43 раза при DPR 2"
-  },
-  {
-   "page": "/turkiye",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/turkiye",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Corridors 55x15"
-  },
-  {
-   "page": "/turkiye",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: 01Block, slab or finis 377x19"
-  },
-  {
-   "page": "/turkiye",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: 02Grading and resin ar 358x19"
-  },
-  {
-   "page": "/turkiye",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: 03Crating decides whet 418x19"
-  },
-  {
-   "page": "/turkiye",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: 04Classify before you  335x19"
-  },
-  {
-   "page": "/turkiye",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: 05What the short ocean 267x19"
-  },
-  {
-   "page": "/turkiye",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/turkiye",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/turkiye",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/turkiye",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.409"
-  },
-  {
-   "page": "/verify-supplier",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/verify-supplier",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Guides 42x15"
-  },
-  {
-   "page": "/verify-supplier",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/verify-supplier",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/verify-supplier",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/verify-supplier",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.428"
+   "detail": "pipe.5ffeea4c.webp: растянута в 2.47 раза при DPR 2"
   },
   {
    "page": "/veterinary-certificate",
@@ -2028,101 +278,11 @@
    "detail": "coldstore.43a54595.webp: растянута в 1.47 раза при DPR 2"
   },
   {
-   "page": "/veterinary-certificate",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/veterinary-certificate",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Guides 42x15"
-  },
-  {
-   "page": "/veterinary-certificate",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: West Africa corridor p 170x16"
-  },
-  {
-   "page": "/veterinary-certificate",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/veterinary-certificate",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/veterinary-certificate",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/veterinary-certificate",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.483"
-  },
-  {
    "page": "/west-africa",
    "kind": "картинка",
    "detail": "chart-west.f174d594.webp: растянута в 1.62 раза при DPR 2"
   },
   {
-   "page": "/west-africa",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ISP Group 59x15"
-  },
-  {
-   "page": "/west-africa",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Corridors 55x15"
-  },
-  {
-   "page": "/west-africa",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: 01Admissibility comes  261x19"
-  },
-  {
-   "page": "/west-africa",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: 02A cut is three produ 251x19"
-  },
-  {
-   "page": "/west-africa",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: 03Pack and cold chain  374x19"
-  },
-  {
-   "page": "/west-africa",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: 04Compare the market,  316x19"
-  },
-  {
-   "page": "/west-africa",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: 05The payment terms de 411x19"
-  },
-  {
-   "page": "/west-africa",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: info@ispgroupgc.com 134x15"
-  },
-  {
-   "page": "/west-africa",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacy 44x20"
-  },
-  {
-   "page": "/west-africa",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Terms of use 76x20"
-  },
-  {
-   "page": "/west-africa",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.33"
-  },
-  {
    "page": "/fr/",
    "kind": "картинка",
    "detail": "ops.d8256e58.webp: растянута в 1.20 раза при DPR 2"
@@ -2130,137 +290,7 @@
   {
    "page": "/fr/",
    "kind": "картинка",
-   "detail": "j-works.83b3ff54.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/fr/",
-   "kind": "картинка",
-   "detail": "j-stuffing.4b1e2bbb.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/fr/",
-   "kind": "картинка",
-   "detail": "j-road.bc3452d2.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/fr/",
-   "kind": "картинка",
-   "detail": "j-quay.a15ac726.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/fr/",
-   "kind": "картинка",
-   "detail": "j-sea.c62cff19.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/fr/",
-   "kind": "картинка",
-   "detail": "j-arrival.d6509814.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/fr/",
-   "kind": "картинка",
-   "detail": "timber.3eef91ad.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/fr/",
-   "kind": "картинка",
-   "detail": "machinery.dde201b7.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/fr/",
-   "kind": "картинка",
-   "detail": "tools-flat.a370d6b5.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/fr/",
-   "kind": "картинка",
-   "detail": "steel-tubes.87f3af0e.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/fr/",
-   "kind": "картинка",
-   "detail": "pallets-wall.e09c1210.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/fr/",
-   "kind": "картинка",
-   "detail": "coldstore.43a54595.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/fr/",
-   "kind": "картинка",
-   "detail": "crane-dusk.6028a9f0.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/fr/",
-   "kind": "картинка",
    "detail": "crane-dusk.6028a9f0.webp: растянута в 5.30 раза при DPR 2"
-  },
-  {
-   "page": "/fr/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Notre métier 71x20"
-  },
-  {
-   "page": "/fr/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Ce que nous fournisson 143x20"
-  },
-  {
-   "page": "/fr/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Corridors 54x20"
-  },
-  {
-   "page": "/fr/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Guides 42x20"
-  },
-  {
-   "page": "/fr/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: À propos 52x20"
-  },
-  {
-   "page": "/fr/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Contact 46x20"
-  },
-  {
-   "page": "/fr/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: EN 18x20"
-  },
-  {
-   "page": "/fr/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ES 17x20"
-  },
-  {
-   "page": "/fr/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: DE 18x20"
-  },
-  {
-   "page": "/fr/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Confidentialité 80x19"
-  },
-  {
-   "page": "/fr/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Conditions d’utilisati 126x19"
-  },
-  {
-   "page": "/fr/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: auteur, source et lice 231x14"
-  },
-  {
-   "page": "/fr/",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.135"
   },
   {
    "page": "/fr/",
@@ -2275,137 +305,7 @@
   {
    "page": "/es/",
    "kind": "картинка",
-   "detail": "j-works.83b3ff54.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/es/",
-   "kind": "картинка",
-   "detail": "j-stuffing.4b1e2bbb.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/es/",
-   "kind": "картинка",
-   "detail": "j-road.bc3452d2.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/es/",
-   "kind": "картинка",
-   "detail": "j-quay.a15ac726.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/es/",
-   "kind": "картинка",
-   "detail": "j-sea.c62cff19.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/es/",
-   "kind": "картинка",
-   "detail": "j-arrival.d6509814.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/es/",
-   "kind": "картинка",
-   "detail": "timber.3eef91ad.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/es/",
-   "kind": "картинка",
-   "detail": "machinery.dde201b7.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/es/",
-   "kind": "картинка",
-   "detail": "tools-flat.a370d6b5.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/es/",
-   "kind": "картинка",
-   "detail": "steel-tubes.87f3af0e.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/es/",
-   "kind": "картинка",
-   "detail": "pallets-wall.e09c1210.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/es/",
-   "kind": "картинка",
-   "detail": "coldstore.43a54595.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/es/",
-   "kind": "картинка",
-   "detail": "crane-dusk.6028a9f0.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/es/",
-   "kind": "картинка",
    "detail": "crane-dusk.6028a9f0.webp: растянута в 5.30 раза при DPR 2"
-  },
-  {
-   "page": "/es/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Qué hacemos 81x20"
-  },
-  {
-   "page": "/es/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Qué suministramos 113x20"
-  },
-  {
-   "page": "/es/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Corredores 65x20"
-  },
-  {
-   "page": "/es/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Guías 34x20"
-  },
-  {
-   "page": "/es/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Quiénes somos 91x20"
-  },
-  {
-   "page": "/es/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Contacto 53x20"
-  },
-  {
-   "page": "/es/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: EN 18x20"
-  },
-  {
-   "page": "/es/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: FR 17x20"
-  },
-  {
-   "page": "/es/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: DE 18x20"
-  },
-  {
-   "page": "/es/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Privacidad 59x19"
-  },
-  {
-   "page": "/es/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Condiciones de uso 110x19"
-  },
-  {
-   "page": "/es/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: autor, fuente y licenc 212x14"
-  },
-  {
-   "page": "/es/",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.121"
   },
   {
    "page": "/es/",
@@ -2420,137 +320,7 @@
   {
    "page": "/de/",
    "kind": "картинка",
-   "detail": "j-works.83b3ff54.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/de/",
-   "kind": "картинка",
-   "detail": "j-stuffing.4b1e2bbb.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/de/",
-   "kind": "картинка",
-   "detail": "j-road.bc3452d2.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/de/",
-   "kind": "картинка",
-   "detail": "j-quay.a15ac726.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/de/",
-   "kind": "картинка",
-   "detail": "j-sea.c62cff19.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/de/",
-   "kind": "картинка",
-   "detail": "j-arrival.d6509814.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/de/",
-   "kind": "картинка",
-   "detail": "timber.3eef91ad.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/de/",
-   "kind": "картинка",
-   "detail": "machinery.dde201b7.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/de/",
-   "kind": "картинка",
-   "detail": "tools-flat.a370d6b5.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/de/",
-   "kind": "картинка",
-   "detail": "steel-tubes.87f3af0e.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/de/",
-   "kind": "картинка",
-   "detail": "pallets-wall.e09c1210.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/de/",
-   "kind": "картинка",
-   "detail": "coldstore.43a54595.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/de/",
-   "kind": "картинка",
-   "detail": "crane-dusk.6028a9f0.webp: нет width/height, это сдвиг макета"
-  },
-  {
-   "page": "/de/",
-   "kind": "картинка",
    "detail": "crane-dusk.6028a9f0.webp: растянута в 5.30 раза при DPR 2"
-  },
-  {
-   "page": "/de/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Was wir tun 65x20"
-  },
-  {
-   "page": "/de/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Was wir liefern 82x20"
-  },
-  {
-   "page": "/de/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Korridore 53x20"
-  },
-  {
-   "page": "/de/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Leitfäden 53x20"
-  },
-  {
-   "page": "/de/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Über uns 52x20"
-  },
-  {
-   "page": "/de/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Kontakt 45x20"
-  },
-  {
-   "page": "/de/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: EN 18x20"
-  },
-  {
-   "page": "/de/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: FR 17x20"
-  },
-  {
-   "page": "/de/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: ES 17x20"
-  },
-  {
-   "page": "/de/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Datenschutz 70x19"
-  },
-  {
-   "page": "/de/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Nutzungsbedingungen 126x19"
-  },
-  {
-   "page": "/de/",
-   "kind": "доступность",
-   "detail": "мелкая цель нажатия: Urheber, Quelle und Li 185x14"
-  },
-  {
-   "page": "/de/",
-   "kind": "скорость",
-   "detail": "сдвиг макета 0.132"
   },
   {
    "page": "/de/",

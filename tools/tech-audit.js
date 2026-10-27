@@ -68,7 +68,19 @@ const add = (page, kind, detail) => problems.push({ page, kind, detail });
     await pg.evaluate(() =>
       document.querySelectorAll('img[loading="lazy"]').forEach((i) => (i.loading = "eager"))
     );
-    await pg.waitForTimeout(700);
+    /* Появление блоков идёт с преобразованием, которое сжимает их по
+       пути. Замер в этот момент даёт не размеры вёрстки, а размеры
+       кадра анимации: ссылки высотой 26 точек показываются как 21.
+       Один раз на этом и обжёгся. Поэтому прокручиваем страницу
+       целиком и ждём, пока всё встанет на место. */
+    await pg.evaluate(async () => {
+      for (let y = 0; y < document.body.scrollHeight; y += 600) {
+        scrollTo(0, y);
+        await new Promise((r) => setTimeout(r, 80));
+      }
+      scrollTo(0, 0);
+    });
+    await pg.waitForTimeout(1400);
 
     const data = await pg.evaluate(() => {
       const out = {
@@ -87,10 +99,22 @@ const add = (page, kind, detail) => problems.push({ page, kind, detail });
       document.querySelectorAll("[id]").forEach((e) => {
         out.ids[e.id] = (out.ids[e.id] || 0) + 1;
       });
+      /* naturalWidth у снимка с набором srcset возвращает не настоящий
+         размер файла, а приведённый к плотности, которую браузер для
+         него вычислил. Сравнивать с ним бессмысленно: получается ровно
+         та кратность, которую ищешь. Настоящий размер берём отдельной
+         загрузкой того же файла без набора. */
+      window.__trueW = async (url) => await new Promise((res) => {
+        const im = new Image();
+        im.onload = () => res(im.naturalWidth);
+        im.onerror = () => res(0);
+        im.src = url;
+      });
       document.querySelectorAll("img").forEach((i) => {
         const r = i.getBoundingClientRect();
         out.imgs.push({
           src: (i.currentSrc || i.src || "").split("/").pop(),
+          url: i.currentSrc || i.src || "",
           nat: [i.naturalWidth, i.naturalHeight],
           box: [Math.round(r.width), Math.round(r.height)],
           alt: i.alt,
@@ -113,15 +137,33 @@ const add = (page, kind, detail) => problems.push({ page, kind, detail });
           f.getAttribute("aria-labelledby");
         if (!ok) out.labels++;
       });
+      /* Правило о размере цели не касается ссылок, стоящих внутри
+         строки текста: растянуть их значит разорвать строку. Проверяем
+         по соседям: если рядом с ссылкой в том же абзаце или ячейке
+         есть ещё текст, это ссылка в предложении. */
+      const inSentence = (e) => {
+        const par = e.parentElement;
+        if (!par) return false;
+        if (!/^(P|TD|LI|SPAN|DD|FIGCAPTION|SMALL)$/.test(par.tagName)) return false;
+        const own = (e.textContent || "").trim().length;
+        return (par.textContent || "").trim().length > own + 3;
+      };
       document.querySelectorAll("a, button, input, select").forEach((e) => {
         const r = e.getBoundingClientRect();
         if (r.width === 0 || r.height === 0) return;
+        if (e.tagName === "A" && inSentence(e)) return;
         if (r.height < 24 || r.width < 24)
           out.small.push(((e.textContent || e.tagName).trim() || e.tagName).slice(0, 22) +
             ` ${Math.round(r.width)}x${Math.round(r.height)}`);
       });
       return out;
     });
+
+    // настоящая ширина выбранного файла, см. пояснение выше
+    for (const im of data.imgs) {
+      if (!im.url) continue;
+      im.real = await pg.evaluate((u) => window.__trueW(u), im.url);
+    }
 
     const vitals = await pg.evaluate(
       () =>
@@ -178,8 +220,9 @@ const add = (page, kind, detail) => problems.push({ page, kind, detail });
     data.imgs.forEach((i) => {
       if (!i.hasAlt) add(p, "картинка", `${i.src}: нет alt`);
       if (!i.dims) add(p, "картинка", `${i.src}: нет width/height, это сдвиг макета`);
-      if (i.box[0] && i.nat[0]) {
-        const k = (i.box[0] * 2) / i.nat[0];
+      const real = i.real || i.nat[0];
+      if (i.box[0] && real) {
+        const k = (i.box[0] * 2) / real;
         if (k > 1.15) add(p, "картинка", `${i.src}: растянута в ${k.toFixed(2)} раза при DPR 2`);
       }
       if (i.nat[0] === 0) add(p, "картинка", `${i.src}: не загрузилась`);
