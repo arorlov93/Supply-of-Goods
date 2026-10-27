@@ -554,3 +554,27 @@ nav.crumbs span, .crumbs span, .crumbs i { color: color-mix(in oklab, var(--colo
    вниз сохраняется. */
 .jsteps { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(28px, 3vw, 48px); }
 .jsteps figure { margin: 0; }
+
+/* ------------------------------------------- карточка заявки на страницах
+
+   На главной форма размечена как .form-card и получает плиту вместе со
+   всеми плитами темы. На контактах и на всех внутренних страницах та же
+   форма размечена как .cform, и плиты ей никто не выдавал: страничный CSS
+   брал фон из старого токена --surface, а он в мосте стал почти тем же
+   серым, что и фон страницы. Замер: карточка к фону 1.20, подпись поля к
+   карточке 4.67 при кегле 0.8rem. То есть карточка растворялась, а буквы
+   возле полей читались с трудом.
+
+   Правится там же, где заданы остальные плиты, одним правилом на все
+   тридцать семь страниц: та же плита, тот же жирный кант, чернильные
+   подписи. */
+.cform {
+  background: var(--color-plate) !important;
+  border: var(--rule-bar) solid var(--color-ink) !important;
+  box-shadow: var(--shadow-card);
+}
+.cform label,
+.cform legend,
+.cform h2,
+.cform p { color: var(--color-ink) !important; }
+.cform .cresult { color: var(--color-ink) !important; }

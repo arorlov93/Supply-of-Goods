@@ -397,6 +397,31 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#0f1216">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8HDRVVXJFF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  /* Без cookie и без хранения на устройстве: политика сайта обещает
+     посетителю, что cookie не ставятся, и нарушать это ради статистики
+     нельзя. Посещения, источники и события при этом считаются, теряется
+     только узнавание вернувшегося человека. Заодно не нужен баннер
+     согласия на европейских страницах. */
+  gtag('config', 'G-8HDRVVXJFF', { client_storage: 'none', anonymize_ip: true });
+  /* Нажатие на призыв к действию. Посещения без этого события не
+     показывают главного: сколько человек дошло до намерения оставить
+     заявку. Само отправление заявки считается отдельно, в обработчике
+     формы. */
+  addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('.btn, .btn-lg, .cta, a[href*="contact"], a[href*="#request"]');
+    if (!a) return;
+    gtag('event', 'cta_click', {
+      label: (a.textContent || '').trim().slice(0, 48),
+      page: location.pathname
+    });
+  }, {passive: true});
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
