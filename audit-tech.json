@@ -1,6 +1,6 @@
 {
  "base": "https://ispgroupgc.com",
- "when": "2026-10-27T03:22:18.198Z",
+ "when": "2026-10-27T03:34:22.516Z",
  "problems": [
   {
    "page": "/404",
@@ -105,7 +105,7 @@
   {
    "page": "/experience",
    "kind": "доступность",
-   "detail": "мелкая цель нажатия: Skip to content 121x20"
+   "detail": "мелкая цель нажатия: Skip to content 113x19"
   },
   {
    "page": "/experience",
@@ -295,7 +295,7 @@
   {
    "page": "/fr/",
    "kind": "скорость",
-   "detail": "вес 2.92 МБ"
+   "detail": "вес 2.09 МБ"
   },
   {
    "page": "/es/",
@@ -310,7 +310,7 @@
   {
    "page": "/es/",
    "kind": "скорость",
-   "detail": "вес 2.92 МБ"
+   "detail": "вес 2.09 МБ"
   },
   {
    "page": "/de/",
@@ -325,7 +325,7 @@
   {
    "page": "/de/",
    "kind": "скорость",
-   "detail": "вес 2.92 МБ"
+   "detail": "вес 2.09 МБ"
   }
  ]
 }
