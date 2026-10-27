@@ -12,7 +12,16 @@
  *
  * 301, а не 302: редирект постоянный, и поисковик должен перенести вес на
  * апекс, а не держать обе версии в индексе.
+ *
+ * Здесь же висит дожим писем по заявкам, см. _queue.js. Место неочевидное,
+ * но единственное доступное: Pages Functions не умеют работать по
+ * расписанию, а заявка, по которой письмо не ушло с первой попытки, должна
+ * уйти сама, без человека. Дожим цепляется только к запросам страниц, не к
+ * картинкам и стилям, и работает после ответа, поэтому посетитель его не
+ * ждёт ни на миллисекунду.
  */
+import { drainOne } from "./_queue.js";
+
 export async function onRequest(context) {
   const url = new URL(context.request.url);
 
@@ -26,6 +35,23 @@ export async function onRequest(context) {
         "Cache-Control": "public, max-age=3600",
       },
     });
+  }
+
+  /* Только страницы: на одну страницу приходится десяток запросов к
+     статике, и дёргать очередь на каждый значит просто биться в предел
+     частоты ретранслятора. Проверка по Accept, а не по расширению: так
+     попадают и адреса без расширения, которыми у нас набрана вся
+     навигация. */
+  const wantsPage =
+    context.request.method === "GET" &&
+    (context.request.headers.get("accept") || "").includes("text/html");
+
+  if (wantsPage && context.env.DB && typeof context.waitUntil === "function") {
+    context.waitUntil(
+      drainOne(context.env).catch((e) =>
+        console.log("дожим упал:", String((e && e.message) || e).slice(0, 160))
+      )
+    );
   }
 
   return context.next();

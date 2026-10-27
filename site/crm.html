@@ -41,6 +41,7 @@
        padding:3px 8px;border:2px solid var(--ink)}
   .tag.new{background:var(--accent);border-color:var(--accent);color:#fff}
   .tag.won{background:var(--ink);color:var(--paper2)}
+  .tag.wait{background:transparent;border-color:var(--accent-deep);color:var(--accent-deep)}
   .empty{padding:40px 0;color:var(--ink2)}
   .gate{max-width:380px;margin:12vh auto;padding:22px;border:2px solid var(--ink);background:var(--paper2)}
   .gate input{width:100%;margin:10px 0}
@@ -104,8 +105,11 @@
                   ['Страница',l.page],['Из страны',l.ip_country]]
         .filter(function(r){ return r[1]; })
         .map(function(r){ return '<div><span>' + r[0] + ':</span> ' + esc(r[1]) + '</div>'; }).join('');
+      // заявка, по которой письмо ещё не ушло, должна бросаться в глаза
+      var post = (l.mailed === 0 || l.mailed === '0')
+        ? ' <span class="tag wait">письмо в очереди</span>' : '';
       return '<article class="lead" data-id="' + l.id + '">' +
-        '<h2>' + esc(l.name||'без имени') + ' <span class="tag ' + esc(l.status) + '">' + RU[l.status] + '</span></h2>' +
+        '<h2>' + esc(l.name||'без имени') + ' <span class="tag ' + esc(l.status) + '">' + RU[l.status] + '</span>' + post + '</h2>' +
         '<p class="meta">' + when + ' · <a href="mailto:' + esc(l.mail) + '">' + esc(l.mail) + '</a></p>' +
         (rows ? '<div class="grid">' + rows + '</div>' : '') +
         (l.spec ? '<div class="spec">' + esc(l.spec) + '</div>' : '') +

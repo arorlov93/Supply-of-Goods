@@ -12,6 +12,11 @@
 
 const STATUSES = ["new", "qualified", "quoted", "won", "lost"];
 const COLS = "id,created,name,mail,co,country,cat,terms,qty,dest,spec,page,ip_country,status,note,updated";
+/* Отметка об отправке письма показывается в списке: заявка, по которой
+   письмо ещё не ушло, должна быть видна человеку, а не только журналу.
+   Колонка заводится очередью (см. _queue.js) и на старой базе может
+   отсутствовать, поэтому запрос с ней идёт первым, а без неё запасным. */
+const COLS_MAILED = COLS + ",COALESCE(mailed,0) AS mailed";
 
 function json(body, status = 200) {
   return new Response(JSON.stringify(body), {
@@ -42,11 +47,18 @@ export async function onRequestGet(ctx) {
   if (stop) return stop;
   const url = new URL(ctx.request.url);
   const status = url.searchParams.get("status");
+  const pick = (cols) =>
+    status && STATUSES.includes(status)
+      ? ctx.env.DB.prepare(`SELECT ${cols} FROM leads WHERE status = ? ORDER BY created DESC LIMIT 500`).bind(status)
+      : ctx.env.DB.prepare(`SELECT ${cols} FROM leads ORDER BY created DESC LIMIT 500`);
+
   try {
-    const q = status && STATUSES.includes(status)
-      ? ctx.env.DB.prepare(`SELECT ${COLS} FROM leads WHERE status = ? ORDER BY created DESC LIMIT 500`).bind(status)
-      : ctx.env.DB.prepare(`SELECT ${COLS} FROM leads ORDER BY created DESC LIMIT 500`);
-    const { results } = await q.all();
+    let results;
+    try {
+      ({ results } = await pick(COLS_MAILED).all());
+    } catch {
+      ({ results } = await pick(COLS).all());
+    }
     const counts = await ctx.env.DB
       .prepare("SELECT status, COUNT(*) AS n FROM leads GROUP BY status").all();
     return json({ ok: true, leads: results || [], counts: counts.results || [] });

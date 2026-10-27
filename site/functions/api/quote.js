@@ -10,6 +10,8 @@
  * которого есть предел частоты, см. ниже.
  */
 
+import { relay, markMailed, payloadFor } from "../_queue.js";
+
 const FIELDS = ["name", "mail", "co", "country", "cat", "terms", "qty", "dest", "spec"];
 const LABEL = {
   name: "Name", mail: "Work e-mail", co: "Company", country: "Country",
@@ -33,6 +35,23 @@ async function handle(ctx) {
     d = await request.json();
   } catch {
     return json({ ok: false, code: "bad_json" }, 400);
+  }
+
+  /* Подтверждение от браузера: «я уведомление отправил».
+     Ретранслятор принимает письма только из настоящего браузера, запросы
+     с серверов Cloudflare он отбивает кодом 429 (проверено: в ту же
+     секунду с обычной машины отвечает 200). Поэтому письмо шлёт
+     страница, а сюда возвращает отметку, чтобы в CRM было видно
+     действительное положение дел, а не «в очереди» навсегда.
+
+     Отметка подписана: иначе любой мог бы пометить чужие заявки
+     отправленными и спрятать их от дожима. Подпись короткая, её цена
+     ошибки невелика: максимум не уйдёт одно повторное уведомление. */
+  if (d && d.confirm) {
+    const ok = await signOk(env, d.confirm, d.token);
+    if (!ok) return json({ ok: false, code: "bad_token" }, 403);
+    await markMailed(env, parseInt(d.confirm, 10));
+    return json({ ok: true, confirmed: true });
   }
 
   // обязательный минимум: кто пишет, куда отвечать и что нужно
@@ -82,9 +101,10 @@ async function handle(ctx) {
      Ошибка записи не должна ронять ответ посетителю, поэтому она только
      попадает в журнал, а человек получает обычное подтверждение. */
   let saved = false;
+  let leadId = null;
   if (env.DB) {
     try {
-      await env.DB.prepare(
+      const res = await env.DB.prepare(
         `INSERT INTO leads (created,name,mail,co,country,cat,terms,qty,dest,spec,page,ip_country,status)
          VALUES (?,?,?,?,?,?,?,?,?,?,?,?,'new')`
       ).bind(
@@ -94,6 +114,7 @@ async function handle(ctx) {
         request.headers.get("cf-ipcountry") || null
       ).run();
       saved = true;
+      leadId = (res && res.meta && res.meta.last_row_id) || null;
     } catch (e) {
       console.log("d1 insert failed", String(e && e.message || e).slice(0, 200));
     }
@@ -106,36 +127,32 @@ async function handle(ctx) {
      попадает. Как только в переменных окружения появится RESEND_KEY, письма
      пойдут с собственного домена, и эта ветка перестанет использоваться. */
   if (!env.RESEND_KEY) {
-    const payload = {
-      _subject: `Quote request: ${d.co || d.name}${d.country ? " / " + d.country : ""}`,
-      _replyto: String(d.mail).trim(),
-      _template: "table",
-      _captcha: "false",
-      ...Object.fromEntries(
-        FIELDS.filter((k) => d[k] && String(d[k]).trim()).map((k) => [LABEL[k], String(d[k])])
-      ),
-      Origin_page: String(d.page || "/"),
-      Visitor_country: request.headers.get("cf-ipcountry") || "unknown",
-    };
+    const payload = payloadFor({
+      ...d,
+      page: String(d.page || "/"),
+      ip_country: request.headers.get("cf-ipcountry") || "unknown",
+    });
 
     const first = await relay(TO, payload);
-    if (first.ok) return json({ ok: true, via: "relay", saved });
+    if (first.ok) {
+      await markMailed(env, leadId);
+      return json({ ok: true, via: "relay", saved });
+    }
     console.log("relay failed", first.status, first.detail);
 
     /* Ретранслятор пропускает примерно одну заявку в сорок секунд, на
        вторую подряд отвечает 429. Замерено тремя попытками с шагом в
-       двадцать секунд: 200, 429, 200. Две заявки, пришедшие в одну
-       минуту, по-старому стоили бы нам письма о второй.
+       двадцать секунд: 200, 429, 200.
 
-       Посетителю ждать этого незачем: заявка уже в базе и видна в /crm,
-       поэтому ответ уходит сразу, а повтор доживает в фоне. Если фон
-       оборвётся, хуже, чем было, не станет: заявка всё равно у нас. */
-    if (saved && typeof ctx.waitUntil === "function") {
-      ctx.waitUntil(relayWithRetries(TO, payload));
-      return json({ ok: true, saved: true, mail: "retrying" });
-    }
-    return saved ? json({ ok: true, saved: true, mail: false })
-                 : json({ ok: false, code: "mail_failed", status: first.status }, 502);
+       Повтор прямо здесь не работает: среда не держит фоновую задачу с
+       длинной паузой, это тоже проверено на живом сайте, письмо так и
+       не уходило. Поэтому заявка просто остаётся в базе с отметкой
+       mailed = 0, а добирает её отдельный Worker раз в минуту, см.
+       mailer/worker.js. Для посетителя это успех, потому что заявка у
+       нас, и письмо придёт с опозданием максимум на минуту. */
+    return saved
+      ? json({ ok: true, saved: true, mail: "queued", id: leadId, token: await sign(env, leadId) })
+      : json({ ok: false, code: "mail_failed", status: first.status }, 502);
   }
 
   let r;
@@ -165,10 +182,15 @@ async function handle(ctx) {
   if (!r.ok) {
     const detail = (await r.text().catch(() => "")).slice(0, 300);
     console.log("resend failed", r.status, detail);
-    return saved ? json({ ok: true, saved: true, mail: false })
-                 : json({ ok: false, code: "mail_failed", status: r.status }, 502);
+    /* Как и с ретранслятором: отметка остаётся в нуле, заявку доберёт
+       mailer/worker.js. Сетка нужна любому отправителю, не только
+       бесплатному. */
+    return saved
+      ? json({ ok: true, saved: true, mail: "queued", id: leadId, token: await sign(env, leadId) })
+      : json({ ok: false, code: "mail_failed", status: r.status }, 502);
   }
 
+  await markMailed(env, leadId);
   return json({ ok: true, saved });
 }
 
@@ -176,45 +198,26 @@ export async function onRequestGet() {
   return json({ ok: false, code: "post_only" }, 405);
 }
 
-/* Одна попытка отправки через ретранслятор. Заголовок Origin ставить
-   нельзя: среда Worker его запрещает и бросает исключение. Ретранслятору
-   достаточно Referer. */
-async function relay(to, payload) {
-  try {
-    const r = await fetch("https://formsubmit.co/ajax/" + encodeURIComponent(to), {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        Referer: "https://ispgroupgc.com/",
-      },
-      body: JSON.stringify(payload),
-    });
-    const body = await r.json().catch(() => ({}));
-    return {
-      ok: r.ok && String(body.success) === "true",
-      status: r.status,
-      detail: JSON.stringify(body).slice(0, 200),
-    };
-  } catch (e) {
-    return { ok: false, status: 0, detail: String((e && e.message) || e).slice(0, 200) };
-  }
+/* Подпись к номеру заявки. Ключ тот же, что у CRM: отдельный заводить
+   незачем, оба служат одному, не пускать посторонних к чужим заявкам. */
+async function sign(env, id) {
+  const secret = env.CRM_SECRET || "";
+  if (!secret) return null;
+  const key = await crypto.subtle.importKey(
+    "raw", new TextEncoder().encode(secret),
+    { name: "HMAC", hash: "SHA-256" }, false, ["sign"]
+  );
+  const mac = await crypto.subtle.sign("HMAC", key, new TextEncoder().encode("lead:" + id));
+  return [...new Uint8Array(mac)].slice(0, 12).map((b) => b.toString(16).padStart(2, "0")).join("");
 }
 
-/* Повторы после отказа по частоте. Паузы с запасом над замеренными сорока
-   секундами, потому что отказ мог прийти и от чужой заявки, пришедшей
-   секундой раньше нашей. */
-async function relayWithRetries(to, payload) {
-  for (const wait of [25000, 30000, 35000]) {
-    await new Promise((r) => setTimeout(r, wait));
-    const r = await relay(to, payload);
-    if (r.ok) {
-      console.log("relay ok after retry");
-      return;
-    }
-    console.log("relay retry failed", r.status, r.detail);
-  }
-  console.log("relay gave up; заявка остаётся в базе и видна в /crm");
+/* Сравнение без ранних выходов: по времени ответа подпись не подбирается. */
+async function signOk(env, id, given) {
+  const want = await sign(env, id);
+  if (!want || typeof given !== "string" || given.length !== want.length) return false;
+  let diff = 0;
+  for (let i = 0; i < want.length; i++) diff |= want.charCodeAt(i) ^ given.charCodeAt(i);
+  return diff === 0;
 }
 
 function json(body, status = 200) {
