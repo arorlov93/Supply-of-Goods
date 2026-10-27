@@ -419,6 +419,23 @@ def main():
                 touched += 1
     print("   ссылка в подвале добавлена на страницах:", touched)
 
+    #    У главной подвал свой, собранный вручную, и правило выше его не
+    #    задевает. Там же стоит своя строка про фотографии, и она после этой
+    #    страницы перестала быть полной.
+    ip = os.path.join(SITE, "index.html")
+    t = open(ip, encoding="utf-8").read()
+    before = t
+    a = '<a href="experience">Experience</a>'
+    if a in t and '<a href="projects">' not in t:
+        t = t.replace(a, a + '<a href="projects">Projects</a>', 1)
+    t = t.replace(
+        "Photography by third parties, used under CC0, public domain and CC BY licences;",
+        "Photography by third parties under CC0, public domain and CC BY licences, "
+        "plus project photographs belonging to the owners of those projects;", 1)
+    if t != before:
+        open(ip, "w", encoding="utf-8").write(t)
+        print("   подвал главной обновлён")
+
     # 5. карта сайта и индекс поиска
     sm = os.path.join(SITE, "sitemap.xml")
     t = open(sm, encoding="utf-8").read()
