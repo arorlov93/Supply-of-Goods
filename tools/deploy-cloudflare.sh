@@ -48,6 +48,31 @@ print('    создан' if d.get('success') else '    ОШИБКА: %s' % d.get
 sys.exit(0 if d.get('success') else 1)"
 fi
 
+say "3a. Проверяю, что все снимки на страницах существуют"
+# Имена файлов снимков версионные, хэш в имени ставит tools/media-version.py
+# уже после того, как страница собрана. Забыть этот шаг легко, а наружу это
+# выходит страницей вообще без картинок: браузер получает 404 и показывает
+# пустые рамки. Так уже случилось со страницей референсов. Дешевле проверить
+# здесь за полсекунды, чем увидеть на живом сайте.
+python3 - "$DIR" <<'PYCHECK'
+import pathlib, re, sys
+site = pathlib.Path(sys.argv[1])
+bad = {}
+for page in sorted(site.rglob("*.html")):
+    for ref in set(re.findall(r'(?:src|href)="(media/[^"]+)"', page.read_text())) | \
+               set(re.findall(r'(media/[A-Za-z0-9_.\-]+\.(?:webp|jpg|png|svg))', page.read_text())):
+        if not (site / ref).is_file():
+            bad.setdefault(page.name, set()).add(ref)
+if bad:
+    for name in sorted(bad):
+        print("    НЕТ ФАЙЛА на %s:" % name)
+        for r in sorted(bad[name]):
+            print("       ", r)
+    print("    выкладка остановлена: запустите python3 tools/media-version.py")
+    sys.exit(1)
+print("    все ссылки на снимки живы")
+PYCHECK
+
 say "4. Загружаю $(ls "$DIR"/*.html | wc -l) страниц и $(find "$DIR/functions" -name '*.js' 2>/dev/null | wc -l) функций"
 # Запускать обязательно из самого каталога сайта. Wrangler ищет папку
 # functions рядом с собой, а не внутри того каталога, что ему передали.

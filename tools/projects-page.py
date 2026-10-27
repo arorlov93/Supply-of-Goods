@@ -33,7 +33,7 @@ about.html, а меняется только голова и содержимо�
 Запуск: python3.13 tools/projects-page.py
 Повторный запуск перезаписывает страницу тем же содержимым.
 """
-import json, os, re, sys
+import json, os, re, runpy, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -448,6 +448,12 @@ def main():
 
     credits()
     llms()
+
+    # Версионирование имён снимков. Раньше это был отдельный шаг, который
+    # нужно было помнить, и один раз его не вспомнили: страница уехала на
+    # сайт со ссылками на безверсионные файлы и показала десять пустых
+    # рамок. Шаг дешёвый и идемпотентный, поэтому он здесь, а не в памяти.
+    runpy.run_path(os.path.join(HERE, "media-version.py"), run_name="__main__")
 
     n, size = SRCH.build_index()
     print(f"   индекс поиска пересобран: {n} страниц, {size/1024:.0f} КБ")
