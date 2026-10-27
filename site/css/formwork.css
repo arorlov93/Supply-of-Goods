@@ -453,7 +453,7 @@ input.bad, textarea.bad, select.bad { outline: 2px solid var(--color-accent-deep
    одном месте вместо сорока двух страниц. Фоновые токены --paper и
    --black не трогаем: они в разметке служат и фоном, и текстом, и их
    переназначение здесь ломает подложки. */
-footer, #s-journey, .on-dark {
+footer, #s-journey, .on-dark, nav.toc {
   --ink: var(--color-plate-ink);
   --ink-2: color-mix(in oklab, var(--color-plate-ink) 82%, transparent);
   --steel: color-mix(in oklab, var(--color-plate-ink) 82%, transparent);
@@ -492,4 +492,30 @@ section.cta {
 section.cta a:not(.btn):not(.btn-lg) { color: var(--color-accent-ink); text-decoration-color: var(--color-accent-ink); }
 section.cta .btn, section.cta .btn-lg, section.cta button {
   background: var(--color-ink); color: var(--color-plate-ink); box-shadow: none;
+}
+
+/* Оглавление страницы стоит на чернильной подложке, но ссылки в нём
+   красились тёмным токеном: замер давал 1,19:1, то есть оглавления на
+   странице фактически не было видно. Номера в нём были акцентными на
+   тёмном, 2,45:1. Оба случая закрываются переназначением токенов выше,
+   здесь только номер, которому мы глобально назначили чернильный цвет. */
+/* Акцент на чернильной подложке оглавления даёт 4,11, чуть ниже нормы
+   для мелкого шрифта. Номер светлый и приглушённый: контраст высокий,
+   иерархия между номером и текстом сохраняется. */
+nav.toc .k, nav.toc .n, nav.toc span { color: color-mix(in oklab, var(--color-plate-ink) 72%, transparent) !important; }
+nav.toc a { color: var(--color-plate-ink); }
+
+/* Разделитель в хлебных крошках красился цветом линейки и давал 1,45:1.
+   Он всё-таки текст, а не линия. */
+nav.crumbs span, .crumbs span, .crumbs i { color: color-mix(in oklab, var(--color-ink) 75%, transparent); }
+
+/* Переключатель языков. Текущий язык был помечен только цветом, и именно
+   акцентным: на светлой шапке это 1,47:1, то есть метка не читалась.
+   Плюс пометка одним цветом не доходит до тех, кто его не различает.
+   Теперь текущий язык чернильный и жирный, а акцент ушёл в подчёркивание. */
+.langsw [aria-current] {
+  color: var(--color-ink);
+  font-weight: 700;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 2px;
 }
