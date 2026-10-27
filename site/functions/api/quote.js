@@ -1,10 +1,13 @@
 /* Приём заявок с сайта. Cloudflare Pages Function, адрес /api/quote.
  *
- * Письмо уходит через Resend. Ключ берётся из переменной окружения RESEND_KEY,
- * заданной в настройках проекта Pages. Ключа в репозитории нет и быть не должно.
+ * Порядок такой: сначала заявка пишется в базу D1, потом уходит письмо.
+ * Запись раньше письма не случайна: письмо зависит от чужой службы, а база
+ * нет, и потерять обращение из-за чужого сбоя нельзя.
  *
- * Если ключ не задан, функция отвечает 503 и кодом "not_configured": фронтенд
- * показывает посетителю готовый текст заявки и адрес почты, а не молчит.
+ * Письмо уходит через Resend, ключ из переменной окружения RESEND_KEY,
+ * заданной в настройках проекта Pages. Ключа в репозитории нет и быть не
+ * должно. Пока ключа нет, письмо идёт через бесплатный ретранслятор, у
+ * которого есть предел частоты, см. ниже.
  */
 
 const FIELDS = ["name", "mail", "co", "country", "cat", "terms", "qty", "dest", "spec"];
@@ -23,7 +26,8 @@ export async function onRequestPost(ctx) {
   }
 }
 
-async function handle({ request, env }) {
+async function handle(ctx) {
+  const { request, env } = ctx;
   let d;
   try {
     d = await request.json();
@@ -102,41 +106,36 @@ async function handle({ request, env }) {
      попадает. Как только в переменных окружения появится RESEND_KEY, письма
      пойдут с собственного домена, и эта ветка перестанет использоваться. */
   if (!env.RESEND_KEY) {
-    let rr;
-    try {
-      rr = await fetch("https://formsubmit.co/ajax/" + encodeURIComponent(TO), {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-          // Origin ставить нельзя: среда Worker запрещает этот заголовок и
-          // бросает исключение. Ретранслятору достаточно Referer.
-          Referer: "https://ispgroupgc.com/",
-        },
-        body: JSON.stringify({
-          _subject: `Quote request: ${d.co || d.name}${d.country ? " / " + d.country : ""}`,
-          _replyto: String(d.mail).trim(),
-          _template: "table",
-          _captcha: "false",
-          ...Object.fromEntries(
-            FIELDS.filter((k) => d[k] && String(d[k]).trim()).map((k) => [LABEL[k], String(d[k])])
-          ),
-          Origin_page: String(d.page || "/"),
-          Visitor_country: request.headers.get("cf-ipcountry") || "unknown",
-        }),
-      });
-    } catch {
-      return saved ? json({ ok: true, saved: true, mail: false })
-                   : json({ ok: false, code: "upstream_unreachable" }, 502);
+    const payload = {
+      _subject: `Quote request: ${d.co || d.name}${d.country ? " / " + d.country : ""}`,
+      _replyto: String(d.mail).trim(),
+      _template: "table",
+      _captcha: "false",
+      ...Object.fromEntries(
+        FIELDS.filter((k) => d[k] && String(d[k]).trim()).map((k) => [LABEL[k], String(d[k])])
+      ),
+      Origin_page: String(d.page || "/"),
+      Visitor_country: request.headers.get("cf-ipcountry") || "unknown",
+    };
+
+    const first = await relay(TO, payload);
+    if (first.ok) return json({ ok: true, via: "relay", saved });
+    console.log("relay failed", first.status, first.detail);
+
+    /* Ретранслятор пропускает примерно одну заявку в сорок секунд, на
+       вторую подряд отвечает 429. Замерено тремя попытками с шагом в
+       двадцать секунд: 200, 429, 200. Две заявки, пришедшие в одну
+       минуту, по-старому стоили бы нам письма о второй.
+
+       Посетителю ждать этого незачем: заявка уже в базе и видна в /crm,
+       поэтому ответ уходит сразу, а повтор доживает в фоне. Если фон
+       оборвётся, хуже, чем было, не станет: заявка всё равно у нас. */
+    if (saved && typeof ctx.waitUntil === "function") {
+      ctx.waitUntil(relayWithRetries(TO, payload));
+      return json({ ok: true, saved: true, mail: "retrying" });
     }
-    const body = await rr.json().catch(() => ({}));
-    if (rr.ok && String(body.success) === "true") return json({ ok: true, via: "relay", saved });
-    console.log("relay failed", rr.status, JSON.stringify(body).slice(0, 200));
-    /* Заявка уже в базе и видна в /crm, значит для посетителя это успех.
-       Показывать ему «не отправилось» и просить писать вручную значит
-       терять обращение там, где терять нечего. */
     return saved ? json({ ok: true, saved: true, mail: false })
-                 : json({ ok: false, code: "mail_failed", status: rr.status }, 502);
+                 : json({ ok: false, code: "mail_failed", status: first.status }, 502);
   }
 
   let r;
@@ -175,6 +174,47 @@ async function handle({ request, env }) {
 
 export async function onRequestGet() {
   return json({ ok: false, code: "post_only" }, 405);
+}
+
+/* Одна попытка отправки через ретранслятор. Заголовок Origin ставить
+   нельзя: среда Worker его запрещает и бросает исключение. Ретранслятору
+   достаточно Referer. */
+async function relay(to, payload) {
+  try {
+    const r = await fetch("https://formsubmit.co/ajax/" + encodeURIComponent(to), {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        Referer: "https://ispgroupgc.com/",
+      },
+      body: JSON.stringify(payload),
+    });
+    const body = await r.json().catch(() => ({}));
+    return {
+      ok: r.ok && String(body.success) === "true",
+      status: r.status,
+      detail: JSON.stringify(body).slice(0, 200),
+    };
+  } catch (e) {
+    return { ok: false, status: 0, detail: String((e && e.message) || e).slice(0, 200) };
+  }
+}
+
+/* Повторы после отказа по частоте. Паузы с запасом над замеренными сорока
+   секундами, потому что отказ мог прийти и от чужой заявки, пришедшей
+   секундой раньше нашей. */
+async function relayWithRetries(to, payload) {
+  for (const wait of [25000, 30000, 35000]) {
+    await new Promise((r) => setTimeout(r, wait));
+    const r = await relay(to, payload);
+    if (r.ok) {
+      console.log("relay ok after retry");
+      return;
+    }
+    console.log("relay retry failed", r.status, r.detail);
+  }
+  console.log("relay gave up; заявка остаётся в базе и видна в /crm");
 }
 
 function json(body, status = 200) {

@@ -48,9 +48,27 @@ print('    создан' if d.get('success') else '    ОШИБКА: %s' % d.get
 sys.exit(0 if d.get('success') else 1)"
 fi
 
-say "4. Загружаю $(ls "$DIR"/*.html | wc -l) страниц"
-npx --yes wrangler@3 pages deploy "$DIR" \
-    --project-name="$PROJECT" --branch=main --commit-dirty=true
+say "4. Загружаю $(ls "$DIR"/*.html | wc -l) страниц и $(find "$DIR/functions" -name '*.js' 2>/dev/null | wc -l) функций"
+# Запускать обязательно из самого каталога сайта. Wrangler ищет папку
+# functions рядом с собой, а не внутри того каталога, что ему передали.
+# Выкладка из корня репозитория молча уносит все функции: форма заявки
+# начинает отвечать 405, CRM 404, редирект www перестаёт работать. Это
+# уже случалось, поэтому здесь cd, а ниже проверка.
+( cd "$DIR" && npx --yes wrangler@3 pages deploy . \
+    --project-name="$PROJECT" --branch=main --commit-dirty=true )
+
+say "4a. Проверяю, что функции живы"
+for i in 1 2 3 4 5 6; do
+  code=$(curl -sS -o /dev/null -w "%{http_code}" --max-time 20 "https://$DOMAIN/api/leads" || echo 000)
+  case "$code" in
+    403|503) echo "    /api/leads отвечает $code, функции работают"; break ;;
+    *) if [ "$i" = 6 ]; then
+         echo "    /api/leads отвечает $code. Функции НЕ выложены, форма заявки в базу писать не будет."
+         exit 1
+       fi
+       sleep 5 ;;
+  esac
+done
 
 say "5. Привязываю домены"
 for d in "$DOMAIN" "www.$DOMAIN"; do
