@@ -34,6 +34,9 @@ LIC = {
     "cc by-sa 2.0": ("CC BY-SA 2.0", "https://creativecommons.org/licenses/by-sa/2.0/"),
     "cc by-sa 3.0": ("CC BY-SA 3.0", "https://creativecommons.org/licenses/by-sa/3.0/"),
     "cc by-sa 4.0": ("CC BY-SA 4.0", "https://creativecommons.org/licenses/by-sa/4.0/"),
+    # снимки объектов с страницы референсов: лицензии нет, есть
+    # разрешение владельца проекта
+    "all rights reserved": ("All rights reserved", ""),
 }
 
 
@@ -69,10 +72,12 @@ def main():
         "author is named. This page names them. It is generated from the same file that "
         "records the licence of each image, so it cannot drift out of date while the "
         "pictures change.</p>"
-        "<p>No photograph here shows our own goods, our own premises or our own staff. "
-        "They illustrate the kind of trade described in the text, nothing more. Nothing "
-        "on this page should be read as a claim that we own, operate or are connected to "
-        "anything shown.</p></div></div>"
+        "<p>Most of them are stock. They illustrate the kind of trade described in the "
+        "text and nothing more: on those pages nothing should be read as a claim that we "
+        "own, operate or are connected to anything shown. The exception is the "
+        "<a href=\"projects\">references page</a>. Those pictures are of real projects "
+        "our team supplied into, and they belong to the owners of those projects rather "
+        "than to us.</p></div></div>"
         '<div class="pblock wide"><span class="k">02</span>'
         f'<h2 id="s2">The photographs, {len(rows)} in all</h2><div class="ptext">'
         '<div class="tablewrap"><table class="credits"><thead><tr>'
@@ -112,7 +117,8 @@ def main():
     s = re.sub(r'<div class="chips">.*?</div>',
                '<div class="chips"><span class="chip">CC0</span>'
                '<span class="chip">Public domain</span><span class="chip">CC BY</span>'
-               '<span class="chip">Author named</span></div>', s, count=1, flags=re.S)
+               '<span class="chip">Author named</span>'
+               '<span class="chip">Project owner</span></div>', s, count=1, flags=re.S)
 
     # таблица титров: в оформлении сайта её нет, она нужна только здесь
     s = s.replace("</body>", """<style>/* титры */

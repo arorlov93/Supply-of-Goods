@@ -66,7 +66,7 @@ FOOT_FR = """<footer>
       <div><dt>Courriel</dt><dd><a href="mailto:info@ispgroupgc.com">info@ispgroupgc.com</a></dd></div>
       <div><dt>Si&egrave;ge</dt><dd>16395 Biscayne Blvd<br><span style="color:var(--ink-2)">North Miami Beach, FL 33160<br>&Eacute;tats-Unis</span></dd></div>
       <div><dt>Pages</dt><dd style="line-height:1.95"><a href="afrique-ouest.html" style="display:block">Afrique de l&rsquo;Ouest</a><a href="decoupes-volaille.html" style="display:block">D&eacute;coupes de volaille</a><a href="certificat-veterinaire.html" style="display:block">Certificat v&eacute;t&eacute;rinaire</a></dd></div>
-      <div><dt>English</dt><dd style="line-height:1.95"><a href="index.html" style="display:block">Full site in English</a><a href="guides.html" style="display:block">Guides</a></dd></div>
+      <div><dt>English</dt><dd style="line-height:1.95"><a href="index.html" style="display:block">Full site in English</a><a href="guides.html" style="display:block">Guides</a><a href="projects.html" style="display:block">Projects we supplied</a></dd></div>
     </dl>
     <p class="fbottom">ISP GROUP LLC &middot; Global Commerce &middot; Sourcing, n&eacute;goce et
       approvisionnement international en mati&eacute;riaux, produits et &eacute;quipements industriels.
