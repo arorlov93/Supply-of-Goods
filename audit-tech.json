@@ -1,6 +1,6 @@
 {
  "base": "https://ispgroupgc.com",
- "when": "2026-10-27T03:34:22.516Z",
+ "when": "2026-10-27T12:15:18.171Z",
  "problems": [
   {
    "page": "/404",
@@ -58,6 +58,11 @@
    "detail": "miami-dusk.2d54e606.webp: растянута в 1.86 раза при DPR 2"
   },
   {
+   "page": "/contact-fr",
+   "kind": "скорость",
+   "detail": "сдвиг макета 0.29"
+  },
+  {
    "page": "/contact",
    "kind": "картинка",
    "detail": "miami-dusk.2d54e606.webp: растянута в 1.86 раза при DPR 2"
@@ -105,7 +110,7 @@
   {
    "page": "/experience",
    "kind": "доступность",
-   "detail": "мелкая цель нажатия: Skip to content 113x19"
+   "detail": "мелкая цель нажатия: Skip to content 121x20"
   },
   {
    "page": "/experience",
