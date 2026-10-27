@@ -75,6 +75,17 @@ def grade(im):
     return im
 
 
+# Предельная ширина по слоту. Кадр крупнее, чем нужно на экране, это не
+# запас качества, а лишние байты и лишняя работа по раскодированию прямо во
+# время прокрутки. Значения взяты по замеру самой широкой выдачи на сайте
+# при двойной плотности пикселей, с запасом около 1,15.
+# Замер: tools/ (см. отчёт по избыточности), пересчитывать при смене вёрстки.
+MAXW = {
+    "j-quay": 1700, "j-road": 1700, "j-arrival": 1700,
+    "timber": 1200, "steel-tubes": 1200, "equipment": 1200, "port-noir": 1200,
+}
+
+
 def slot_of(path):
     m = VERSIONED.match(path.stem)
     return m.group(1) if m else path.stem
@@ -93,6 +104,9 @@ def main(only=None):
         if not master.exists():
             shutil.copyfile(jpg, master)       # первый прогон: кадр как пришёл
         im = grade(Image.open(master))
+        cap = MAXW.get(slot)
+        if cap and im.width > cap:
+            im = im.resize((cap, round(im.height * cap / im.width)), Image.LANCZOS)
         im.save(jpg, "JPEG", quality=84, optimize=True, progressive=True)
         im.save(webp.get(slot, MEDIA / f"{slot}.webp"), "WEBP", quality=82, method=5)
         done += 1

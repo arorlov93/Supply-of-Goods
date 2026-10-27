@@ -474,14 +474,14 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
           <p>Stauung, Ladungssicherung, Gewichtsverteilung und Packliste werden vorab vereinbart. Ein schlecht beladener Container ist eine Reklamation, die drei Wochen später eintrifft.</p></div>
       </li>
       <li>
-        <figure><picture><source srcset="/media/j-road.c5386461.webp" type="image/webp">
-          <img src="/media/j-road.8b527b48.jpg" alt="Container auf dem Weg per Lkw zum Hafen" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/media/j-road.bc3452d2.webp" type="image/webp">
+          <img src="/media/j-road.8570d14c.jpg" alt="Container auf dem Weg per Lkw zum Hafen" loading="lazy" decoding="async"></picture></figure>
         <div><h3><span class="k">03</span>Per Lkw zum Hafen</h3>
           <p>Der Vorlauf wird auf die Abfahrt gebucht, nicht danach. Detention und Demurrage stehen als Positionen im Angebot, statt als Rechnung aufzutauchen.</p></div>
       </li>
       <li>
-        <figure><picture><source srcset="/media/j-quay.652d5015.webp" type="image/webp">
-          <img src="/media/j-quay.fa0163f2.jpg" alt="Containerbrücken bedienen ein Containerschiff" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/media/j-quay.a15ac726.webp" type="image/webp">
+          <img src="/media/j-quay.c9e53c32.jpg" alt="Containerbrücken bedienen ein Containerschiff" loading="lazy" decoding="async"></picture></figure>
         <div><h3><span class="k">04</span>Am Kai</h3>
           <p>Cut-off, Dokumente und Konnossement fallen auf dasselbe Datum. Ein einziges fehlendes Zertifikat hält hier die ganze Sendung auf.</p></div>
       </li>
@@ -492,8 +492,8 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
           <p>Der Transit wird verfolgt, die Umladung vorab benannt. Wenn die Laufzeit zwölf Wochen beträgt, sagen wir zwölf, nicht sechs.</p></div>
       </li>
       <li>
-        <figure><picture><source srcset="/media/j-arrival.d0e60757.webp" type="image/webp">
-          <img src="/media/j-arrival.ba542f32.jpg" alt="Container wird auf dem Yard des Bestimmungshafens umgeschlagen" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/media/j-arrival.d6509814.webp" type="image/webp">
+          <img src="/media/j-arrival.d1f35c13.jpg" alt="Container wird auf dem Yard des Bestimmungshafens umgeschlagen" loading="lazy" decoding="async"></picture></figure>
         <div><h3><span class="k">06</span>An Ihrem Hafen</h3>
           <p>Löschen, Zoll und Freistellung nach dem vereinbarten Incoterm, wobei der Dokumentensatz mit der Ware eintrifft und nicht danach.</p></div>
       </li>
@@ -514,7 +514,7 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
     </div>
     <div class="rail">
       <a class="card" href="/building-materials">
-        <picture><source srcset="/media/timber.d64f62ed.webp" type="image/webp"><img src="/media/timber.89804656.jpg" alt="Schnittholz gestapelt auf einem Baustoffhof" loading="lazy" decoding="async"></picture>
+        <picture><source srcset="/media/timber.3eef91ad.webp" type="image/webp"><img src="/media/timber.5fc4ca44.jpg" alt="Schnittholz gestapelt auf einem Baustoffhof" loading="lazy" decoding="async"></picture>
         <span class="n">01</span>
         <span class="cap"><b>Bau- und Ausbaustoffe</b><span>Stein, Fliesen, Zement, Kabel</span></span>
       </a>
@@ -529,7 +529,7 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
         <span class="cap"><b>Werkzeuge, Beschläge und Befestiger</b><span>Elektrowerkzeug, Schleifmittel, Befestigung</span></span>
       </a>
       <a class="card" href="/metals-pipe">
-        <picture><source srcset="/media/steel-tubes.c383d982.webp" type="image/webp"><img src="/media/steel-tubes.801f888e.jpg" alt="Stahlrohre in Reihen auf einem Lagerplatz gestapelt" loading="lazy" decoding="async"></picture>
+        <picture><source srcset="/media/steel-tubes.87f3af0e.webp" type="image/webp"><img src="/media/steel-tubes.a03e3b65.jpg" alt="Stahlrohre in Reihen auf einem Lagerplatz gestapelt" loading="lazy" decoding="async"></picture>
         <span class="n">04</span>
         <span class="cap"><b>Metalle und Rohre</b><span>Profile, Blech, Leitungsrohr</span></span>
       </a>
@@ -660,13 +660,20 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
   var scenes = [].slice.call(document.querySelectorAll('[data-scene]'));
   var ticking = false;
   function measure(){
-    var vh = innerHeight;
-    for (var i=0;i<scenes.length;i++){
+    /* Чтение геометрии и запись стиля разнесены по двум проходам.
+       Раньше они шли вперемешку: getBoundingClientRect, затем
+       setProperty, затем снова getBoundingClientRect. Каждая запись
+       помечает раскладку грязной, и следующее чтение заставляет браузер
+       пересчитать её принудительно, то есть на кадр приходилось столько
+       пересчётов, сколько сцен. Теперь пересчёт один. */
+    var vh = innerHeight, n = scenes.length, vals = new Array(n), i;
+    for (i = 0; i < n; i++){
       var s = scenes[i], r = s.getBoundingClientRect();
       var span = s.offsetHeight - vh;
       var p = span > 0 ? (-r.top)/span : (vh - r.top)/(vh + r.height);
-      s.style.setProperty('--p', (p<0?0:p>1?1:p).toFixed(4));
+      vals[i] = (p < 0 ? 0 : p > 1 ? 1 : p).toFixed(4);
     }
+    for (i = 0; i < n; i++) scenes[i].style.setProperty('--p', vals[i]);
     ticking = false;
   }
   function onScroll(){ if(!ticking && !reduce){ ticking = true; requestAnimationFrame(measure); } }
