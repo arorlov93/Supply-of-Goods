@@ -599,33 +599,38 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
         <span class="ln"><span>SEND A SPECIFICATION.</span></span>
         <span class="ln"><span>GET A LANDED PRICE.</span></span>
       </h2>
-      <form class="form-card fade" id="rq">
+      <form class="form-card fade" id="rq" novalidate>
         <div class="fgrid">
           <div><label for="q-name">Name</label><input id="q-name" name="name" required type="text" autocomplete="name"></div>
           <div><label for="q-mail">Work e-mail</label><input id="q-mail" name="mail" required type="email" autocomplete="email"></div>
-          <div><label for="q-co">Company</label><input id="q-co" name="co" type="text" autocomplete="organization"></div>
-          <div><label for="q-country">Country</label><input id="q-country" name="country" type="text" autocomplete="country-name"></div>
-          <div><label for="q-cat">Category</label>
-            <select id="q-cat" name="cat">
-              <option>Building and finishing materials</option>
-              <option>Industrial equipment and machinery</option>
-              <option>Tools, hardware and fasteners</option>
-              <option>Metals and pipe</option>
-              <option>Paper, packaging and consumables</option>
-              <option>Food, commodities and beverages</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div><label for="q-terms">Terms to quote</label>
-            <select id="q-terms" name="terms"><option>Not sure, advise</option><option>EXW</option><option>FCA</option><option>FOB</option><option>CFR</option><option>CIF</option><option>DAP</option><option>DDP</option></select>
-          </div>
-          <div><label for="q-qty">Quantity</label><input id="q-qty" name="qty" type="text" placeholder="Containers, tonnes, pieces"></div>
-          <div><label for="q-dest">Destination port or city</label><input id="q-dest" name="dest" type="text"></div>
-          <div class="f-full"><label for="q-spec">Specification</label><textarea id="q-spec" name="spec" required placeholder="Standard, grade, dimensions, certification, deadline"></textarea></div>
+          <div><label for="q-dest">Destination port or city</label><input id="q-dest" name="dest" type="text" autocomplete="address-level2"></div>
+          <div class="f-full"><label for="q-spec">What do you need?</label><textarea id="q-spec" name="spec" required placeholder="For example: 2,000 m2 porcelain tile 600x600 rectified, PEI 4, EN 14411, delivered Miami, needed by March. A rough description is enough to start."></textarea></div>
+          <details class="f-full f-more">
+            <summary>Add details so we can quote faster</summary>
+            <div class="fgrid">
+              <div><label for="q-co">Company</label><input id="q-co" name="co" type="text" autocomplete="organization"></div>
+              <div><label for="q-country">Country</label><input id="q-country" name="country" type="text" autocomplete="country-name"></div>
+              <div><label for="q-cat">Category</label>
+                <select id="q-cat" name="cat">
+                  <option>Building and finishing materials</option>
+                  <option>Industrial equipment and machinery</option>
+                  <option>Tools, hardware and fasteners</option>
+                  <option>Metals and pipe</option>
+                  <option>Paper, packaging and consumables</option>
+                  <option>Food, commodities and beverages</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div><label for="q-terms">Terms to quote</label>
+                <select id="q-terms" name="terms"><option>Not sure, advise</option><option>EXW</option><option>FCA</option><option>FOB</option><option>CFR</option><option>CIF</option><option>DAP</option><option>DDP</option></select>
+              </div>
+              <div><label for="q-qty">Quantity</label><input id="q-qty" name="qty" type="text" placeholder="Containers, tonnes, pieces"></div>
+            </div>
+          </details>
         </div>
         <div class="hp" aria-hidden="true"><label for="q-website">Website</label><input id="q-website" type="text" tabindex="-1" autocomplete="off"></div>
-        <p style="margin:20px 0 0"><button class="btn-lg" type="submit">Start a trade request</button></p>
-        <p class="form-note">Sent straight to info@ispgroupgc.com. We reply within one working day.</p>
+        <p style="margin:20px 0 0"><button class="btn-lg" type="submit">Get a landed price</button></p>
+        <p class="form-note">Goes straight to info@ispgroupgc.com. Within one working day you get either a price, or the questions that decide it. No brochure, no mailing list.</p>
       </form>
     </div>
   </div>
@@ -736,10 +741,27 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
       cat:v('q-cat'), terms:v('q-terms'), qty:v('q-qty'), dest:v('q-dest'),
       spec:v('q-spec'), website:v('q-website'), page: location.pathname
     };
-    if(!data.name || !data.mail || !data.spec){
-      alert('Please give your name, a work e-mail and what you need.');
-      return;
+    /* Ошибка показывается у поля, а не системным окном: человек сразу
+       видит, что именно исправить, и не теряет уже введённое. */
+    Array.prototype.forEach.call(f.querySelectorAll('.f-err'), function(e){ e.remove(); });
+    Array.prototype.forEach.call(f.querySelectorAll('.bad'), function(e){ e.classList.remove('bad'); });
+    var first = null;
+    function err(id, msg){
+      var el = document.getElementById(id);
+      if(!el) return null;
+      el.classList.add('bad');
+      var s = document.createElement('span');
+      s.className = 'f-err';
+      s.textContent = msg;
+      el.parentNode.appendChild(s);
+      if(!first) first = el;
+      return el;
     }
+    if(!data.name) err('q-name', 'Tell us who is writing.');
+    if(!data.mail) err('q-mail', 'We need an address to reply to.');
+    else if(!/^[^@\s]+@[^@\s.]+\.[^@\s]+$/.test(data.mail)) err('q-mail', 'That address does not look right.');
+    if(!data.spec) err('q-spec', 'A rough description is enough to start.');
+    if(first){ first.focus(); return; }
     var btn = f.querySelector('button[type=submit]');
     var label = btn.textContent;
     btn.disabled = true; btn.textContent = 'Sending';

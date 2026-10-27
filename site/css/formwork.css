@@ -392,3 +392,104 @@ footer .fdesc, footer .credits, .foot-note { color: var(--color-paper-3); }
    системно-синими и выпадают из темы (F16). */
 ::selection { background: color-mix(in oklab, var(--color-accent) 35%, transparent); }
 html { scrollbar-color: var(--color-ink) var(--color-paper-2); }
+
+/* Форма заявки: короткая по умолчанию, подробности по раскрытию.
+   Каждое лишнее видимое поле роняет долю дошедших до отправки, но
+   выбрасывать поля нельзя: тот, кто готов дать спецификацию, экономит нам
+   переписку. Поэтому они не убраны, а свёрнуты. */
+.f-more { grid-column: 1 / -1; border-top: var(--rule-hair) solid var(--color-paper-3); padding-top: 16px; }
+.f-more > summary {
+  cursor: pointer; list-style: none;
+  font: 600 .78rem/1.3 var(--font-body);
+  letter-spacing: .08em; text-transform: uppercase;
+  color: var(--color-accent-deep);
+}
+.f-more > summary::-webkit-details-marker { display: none; }
+.f-more > summary::before { content: "+ "; }
+.f-more[open] > summary::before { content: "\2212 "; }
+.f-more > .fgrid { margin-top: 18px; }
+
+/* Ошибка у поля, а не в системном окне */
+.f-err { display: block; margin-top: 6px; font: .78rem/1.35 var(--font-body); color: var(--color-accent-deep); }
+input.bad, textarea.bad, select.bad { outline: 2px solid var(--color-accent-deep) !important; outline-offset: -2px; }
+
+/* Закрытое раскрытие обязано прятать поля. У .fgrid собственный
+   display:grid, и он перебивает скрытие из таблицы стилей браузера. */
+.f-more:not([open]) > .fgrid { display: none; }
+
+/* Карточка заявки стоит внутри сцены, но у неё собственная светлая
+   подложка. Правила сцены рассчитаны на текст поверх фотографии и делают
+   его светлым, отчего внутри карточки получалось светлое по светлому.
+   Замер по пикселям: главная кнопка 1,51:1 при норме 4,5, то есть она
+   была практически не видна. Внутри карточки возвращаем обычные цвета, а
+   кнопке её акцентный вид, как у «Request a quote» в шапке. */
+.scene .content .form-card .btn-lg,
+.scene .content .form-card button[type="submit"] {
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+  border: none;
+  box-shadow: 0 3px 0 var(--color-accent-deep);
+}
+.scene .content .form-card .btn-lg:hover,
+.scene .content .form-card button[type="submit"]:hover {
+  background: var(--color-accent-deep);
+  color: var(--color-plate-ink);
+}
+.scene .content .form-card,
+.scene .content .form-card label,
+.scene .content .form-card .form-note { color: var(--color-ink); }
+
+/* Подпись раскрытия: акцент на тексте давал 4,07:1, чуть ниже нормы.
+   Текст чернильный, акцент остаётся на знаке плюс. */
+.f-more > summary { color: var(--color-ink); }
+.f-more > summary::before { color: var(--color-accent-deep); }
+
+/* Тёмные полосы: подвал и чернильные секции.
+   Страничный CSS красит там текст старыми токенами --ink-2, --steel и
+   --gold-soft, которые в мосте Formwork стали тёмными. Замер по пикселям
+   на чернильном фоне: от 1,00 до 1,45 при норме 4,5, то есть текст, и в
+   том числе наш собственный адрес почты в подвале, был не виден вовсе.
+   Переопределяем сами токены внутри тёмного контекста: правка живёт в
+   одном месте вместо сорока двух страниц. Фоновые токены --paper и
+   --black не трогаем: они в разметке служат и фоном, и текстом, и их
+   переназначение здесь ломает подложки. */
+footer, #s-journey, .on-dark {
+  --ink: var(--color-plate-ink);
+  --ink-2: color-mix(in oklab, var(--color-plate-ink) 82%, transparent);
+  --steel: color-mix(in oklab, var(--color-plate-ink) 82%, transparent);
+  --steel-2: color-mix(in oklab, var(--color-plate-ink) 82%, transparent);
+  --gold-soft: var(--color-accent);
+}
+
+/* Номера разделов: акцент на бумаге давал 4,07 при норме 4,5. Притемняем
+   его чернилами, оранжевый при этом остаётся узнаваемым. */
+/* Страничные правила вида .pblock .k задают номеру свой цвет и по весу
+   селектора сильнее, поэтому здесь important: иначе правка не доходит. */
+/* Номер раздела оранжевым давал 4,07, притемнённым 4,08, то есть ниже
+   нормы в обоих вариантах: шрифт мелкий, и порог 4,5 на него строгий.
+   Делать его крупнее ради смягчённого порога значит менять вёрстку, а
+   делать коричневым значит портить акцент. Поэтому номер чернильный, а
+   оранжевый остаётся там, где он и должен быть: на кнопках и ссылках.
+   На тёмных полосах номер акцентный, там контраста хватает. */
+.k, .n, .num span { color: var(--color-ink) !important; }
+#s-journey .k, footer .k, .on-dark .k { color: var(--color-accent) !important; }
+
+/* Оранжевая полоса призыва. Фон у неё акцентный, а текст красился теми же
+   старыми токенами: на china.html адрес почты измерялся как 1,00:1, то
+   есть оранжевым по оранжевому. На акценте текст всегда чернильный, это
+   даёт 5,5:1. Скоупим по section.cta: класс .cta носят ещё и кнопки. */
+section.cta {
+  --ink: var(--color-accent-ink);
+  --ink-2: var(--color-accent-ink);
+  --steel: var(--color-accent-ink);
+  --steel-2: var(--color-accent-ink);
+  --gold-soft: var(--color-accent-ink);
+  --gold: var(--color-accent-ink);
+  --gold-ink: var(--color-accent-ink);
+  --brand: var(--color-accent-ink);
+  color: var(--color-accent-ink);
+}
+section.cta a:not(.btn):not(.btn-lg) { color: var(--color-accent-ink); text-decoration-color: var(--color-accent-ink); }
+section.cta .btn, section.cta .btn-lg, section.cta button {
+  background: var(--color-ink); color: var(--color-plate-ink); box-shadow: none;
+}
