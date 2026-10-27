@@ -70,6 +70,14 @@ for i in 1 2 3 4 5 6; do
   esac
 done
 
+say "4b. Подаю адреса в поисковые индексы"
+# IndexNow: Bing, Yandex, Seznam, Naver принимают подачу одним запросом.
+# Без этого новые и изменённые страницы ждут, пока поисковик придёт сам,
+# а это недели. За поиском ChatGPT и DuckDuckGo стоит индекс Bing, то
+# есть это ещё и условие, при котором нас вообще способна процитировать
+# языковая модель. Google так не умеет, ему нужна Search Console.
+python3 "$(dirname "$0")/indexnow.py" || echo "    подача не прошла, выкладке это не мешает"
+
 say "5. Привязываю домены"
 for d in "$DOMAIN" "www.$DOMAIN"; do
   if cf -X POST "$API/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects/$PROJECT/domains" \

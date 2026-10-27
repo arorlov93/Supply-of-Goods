@@ -802,3 +802,43 @@ nav#topnav a {
   align-items: center;
   min-height: 26px;
 }
+
+/* ------------------------------------------------------- прямой ответ
+
+   Руководства написаны подробно и по делу, но ответ на вопрос из
+   заголовка собирается только после пяти разделов. Человеку, который
+   ищет этот ответ, и машине, которая подбирает, что процитировать,
+   нужен он целиком и сразу, в нескольких строках.
+
+   Это не выжимка ради поисковика: тот же блок экономит время живому
+   читателю, а подробности ниже никуда не деваются. Поэтому он набран
+   как часть страницы, а не как врезка-объявление. */
+.answer {
+  margin: 0 0 clamp(28px, 4vh, 44px);
+  padding: clamp(22px, 3vw, 30px) clamp(22px, 3vw, 32px);
+  background: var(--color-paper-2);
+  /* Подложка отличается от фона страницы всего в 1.20, на глаз это не
+     край блока. Оранжевая полоса слева держит только одну сторону,
+     поэтому остальные три получают волосяной кант. */
+  border: var(--rule-hair) solid var(--color-rule);
+  border-left: var(--rule-bar) solid var(--color-accent);
+}
+.answer > h2 {
+  margin: 0 0 16px;
+  font-size: clamp(1rem, .9rem + .4vw, 1.2rem);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+.answer .alist { margin: 0; padding: 0 0 0 1.35em; }
+.answer .alist li { margin: 0 0 12px; line-height: 1.55; }
+.answer .alist li:last-child { margin-bottom: 0; }
+.answer .alist b { color: var(--color-ink) !important; font-weight: 700; }
+.answer .anote {
+  margin: 16px 0 0;
+  padding-top: 14px;
+  border-top: var(--rule-hair) solid var(--color-rule);
+  font: .9rem/1.5 var(--font-body);
+  /* Приглушённый серый давал к подложке 4.67 при кегле 0.9rem, это на
+     грани. Берём вторую чернильную ступень. */
+  color: var(--color-ink-2);
+}
