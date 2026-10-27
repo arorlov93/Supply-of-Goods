@@ -43,7 +43,7 @@ SOURCES = {
     "ref-moles":     RU / "p10-007.png",    # тетраподы, молы порта Холмск
     "ref-moscow":    RU / "p13-005.png",    # Мясницкая 21с8, Москва
     "ref-plant":     RU / "p20-005.png",    # рыбозавод, Петропавловск-Камчатский
-    "ref-villa":     BALI / "i-027.jpg",    # вилла снаружи, остекление и бассейн
+    "ref-villa":     BALI / "i-000.jpg",    # вилла снаружи, вывеска, улица
     "ref-villa-pool": BALI / "i-030.jpg",   # гостиная с видом на бассейн
     "ref-villa-in":  BALI / "i-026.jpg",    # внутренняя отделка
 }
@@ -53,18 +53,27 @@ SOURCES = {
 WIDTHS = [390, 760, 1240]
 RATIO = 16 / 10
 QUALITY = 82
+# Кадры, которым нужен ещё и JPEG: он уходит в og:image
+OG = {"ref-bridge"}
 
 
-def crop_to_ratio(im):
+# Доля высоты, с которой начинается полоса кадра. По умолчанию 0.38: на
+# стройке небо сверху пустое, а низ кадра это то, ради чего снимок и взят.
+# Где кадр устроен иначе, доля задаётся отдельно.
+CROP_Y = {
+    # Вертикальный рендер улицы: дом, вывеска и вход внизу, сверху одни пальмы.
+    "ref-villa": 0.72,
+}
+
+
+def crop_to_ratio(im, frac=0.38):
     w, h = im.size
     if w / h > RATIO:
         new_w = int(round(h * RATIO))
         off = (w - new_w) // 2
         return im.crop((off, 0, off + new_w, h))
     new_h = int(round(w / RATIO))
-    # Срезаем сверху меньше, чем снизу: на стройке небо пустое, а низ кадра
-    # это то, ради чего снимок и взят.
-    off = int((h - new_h) * 0.38)
+    off = int((h - new_h) * frac)
     return im.crop((0, off, w, off + new_h))
 
 
@@ -80,7 +89,7 @@ def main():
     made = 0
     for name, src in SOURCES.items():
         im = Image.open(src).convert("RGB")
-        im = crop_to_ratio(im)
+        im = crop_to_ratio(im, CROP_Y.get(name, 0.38))
         nat_w = im.size[0]
         # Верхняя ступень это сам исходник, но не крупнее последней из
         # WIDTHS: кадр на 1724 точки показывать негде, а весит он вдвое.
@@ -92,8 +101,11 @@ def main():
             stem = name if w == top else f"{name}-{w}"
             frame.save(MEDIA / f"{stem}.webp", quality=QUALITY, method=6)
             made += 1
-            if w == top:
-                # JPEG нужен только верхней ступени: на него смотрят соцсети
+            if w == top and name in OG:
+                # JPEG нужен только тому кадру, который уходит в карточку
+                # соцсетей: WebP там до сих пор понимают не все. Остальным
+                # девяти он не нужен ни разу, а это полтора мегабайта
+                # файлов, на которые никто никогда не сошлётся.
                 frame.save(MEDIA / f"{stem}.jpg", quality=QUALITY,
                            optimize=True, progressive=True)
                 made += 1

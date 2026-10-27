@@ -128,9 +128,9 @@ RUSSIA = [
 
 BALI = [
  ("ref-villa", 1240, 775,
-  "Villa exterior with full height glazing and a pool",
-  "<b>Sun on the Hill, Nusa Dua.</b> Six villas. Glazing, external finishes and the "
-  "pools."),
+  "Street frontage of the villas with the project sign and planting",
+  "<b>Sun on the Hill, Nusa Dua.</b> Six villas. The glazing and the external finishes "
+  "were shipped in from China."),
  ("ref-villa-pool", 1240, 775,
   "Double height living space glazed onto a pool",
   "<b>Living space and pool.</b> The pool plant was bought from European manufacturers "
