@@ -272,10 +272,16 @@ a:hover { color: var(--color-accent-deep); }
 /* Заголовок героя набран строчными обёртками <span class="ln">, и общее
    правило «один цвет на заголовок» через h1 span красило его чернильным
    поверх тёмного снимка. Здесь оно перекрывается обратно на светлое. */
-.scene .content h1, .hero .content h1,
-.scene .content h1 span, .scene .content h1 em,
-.hero .content h1 span, .hero .content h1 em {
+.scene .content :is(h1, h2, h3, p, li, b, .display),
+.hero .content :is(h1, h2, h3, p, li, b, .display),
+.scene .content :is(h1, h2, h3, .display) :is(span, em, b),
+.hero .content :is(h1, h2, h3, .display) :is(span, em, b) {
   color: var(--color-plate-ink) !important;
+}
+/* Карточка заявки стоит внутри сцены, но у неё своя светлая подложка:
+   правило выше её не касается. */
+.scene .content .form-card :is(h1, h2, h3, p, li, b, label, span, em) {
+  color: var(--color-ink) !important;
 }
 .scene .content a:not(.btn):not(.cta):not(.btn-lg) { color: var(--color-plate-ink); }
 .scrim {
@@ -519,3 +525,32 @@ nav.crumbs span, .crumbs span, .crumbs i { color: color-mix(in oklab, var(--colo
   border-bottom: 2px solid var(--color-accent);
   padding-bottom: 2px;
 }
+
+/* Разгон под прокрутку убран.
+   Formwork не предполагает движения от прокрутки, и трансформации сцен и
+   ленты категорий я выключил раньше. Но разгон под них остался: #s-cats
+   занимал 330 высот экрана, по которым ничего не происходило, и секция
+   съедала три-четыре прокрутки впустую.
+   Ниже тот же статичный макет, который в странице уже написан для тех,
+   кто отключил анимации в системе. Единственное отличие: обесцвечивание
+   фонов сохраняется, иначе кадры вернулись бы в цвет и сломали тему. */
+.scene { height: auto !important; }
+.stage { position: relative; display: block; height: auto; min-height: 62svh; }
+#s-open .stage, #s-end .stage { min-height: 82svh; }
+#s-cats .stage { min-height: 0; }
+.stage > * { grid-area: auto; }
+.layer-b { display: none; }
+.media { position: absolute; inset: 0; transform: none !important; }
+.content { padding-top: clamp(70px, 12vh, 120px); transform: none !important; opacity: 1 !important; }
+.rail { transform: none !important; flex-wrap: wrap; height: auto; padding-block: clamp(70px, 10vh, 120px); }
+.rail-head { position: static; padding: clamp(70px, 10vh, 110px) var(--gut) 0; }
+.ln > span, .fade, .svc-list li, .steps li { transform: none !important; opacity: 1 !important; transition: none !important; }
+.scroll-hint, .scroll-cue { display: none; }
+#s-end .content { justify-content: flex-start; }
+
+/* Маршрут из шести кадров тоже был горизонтальной лентой. Без движения он
+   вытянулся в столбик почти на четыре экрана: прокрутки много, нового
+   мало. Собираем сеткой, порядок шагов при чтении слева направо и сверху
+   вниз сохраняется. */
+.jsteps { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(28px, 3vw, 48px); }
+.jsteps figure { margin: 0; }
