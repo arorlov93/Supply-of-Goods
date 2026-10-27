@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Заявки | ISP Group</title>
+<style>
+  /* Страница служебная, поэтому стили свои и короткие: она не должна
+     ломаться от правок темы сайта. Вид тот же, бетонная бумага и
+     оранжевый акцент. */
+  :root{
+    --paper:#c6c4bf; --paper2:#d2d0cb; --ink:#111214; --ink2:#2a2926;
+    --accent:#f65311; --accent-deep:#a72900; --rule:#8f8c85;
+    --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  }
+  *{box-sizing:border-box;border-radius:0}
+  body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.5 var(--sans)}
+  header{background:var(--ink);color:var(--paper2);padding:16px 22px;display:flex;
+         gap:18px;align-items:baseline;flex-wrap:wrap}
+  header b{font-size:17px;letter-spacing:.04em;text-transform:uppercase}
+  header span{opacity:.75;font-size:13px}
+  main{max-width:1180px;margin:0 auto;padding:22px}
+  .bar{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+  button,select,input,textarea{font:inherit;color:var(--ink);background:var(--paper2);
+         border:2px solid var(--ink);padding:7px 11px}
+  button{cursor:pointer;font-weight:700}
+  button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+  button.go{background:var(--ink);color:var(--paper2);border-color:var(--ink)}
+  .lead{border:2px solid var(--ink);background:var(--paper2);padding:16px 18px;margin:0 0 14px}
+  .lead h2{margin:0 0 4px;font-size:17px}
+  .lead .meta{font-size:13px;color:var(--ink2);margin:0 0 10px}
+  .lead .meta a{color:var(--accent-deep)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:4px 18px;
+        font-size:13.5px;margin:0 0 10px}
+  .grid div span{color:var(--ink2)}
+  .spec{white-space:pre-wrap;border-left:3px solid var(--accent);padding-left:12px;margin:10px 0}
+  .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+  textarea{width:100%;min-height:56px;margin-top:8px}
+  .tag{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;
+       padding:3px 8px;border:2px solid var(--ink)}
+  .tag.new{background:var(--accent);border-color:var(--accent);color:#fff}
+  .tag.won{background:var(--ink);color:var(--paper2)}
+  .empty{padding:40px 0;color:var(--ink2)}
+  .gate{max-width:380px;margin:12vh auto;padding:22px;border:2px solid var(--ink);background:var(--paper2)}
+  .gate input{width:100%;margin:10px 0}
+  .err{color:var(--accent-deep);font-weight:700}
+</style>
+</head>
+<body>
+<header><b>ISP Group · заявки</b><span id="sum"></span></header>
+<main>
+  <div id="gate" class="gate">
+    <b>Доступ</b>
+    <p style="font-size:13.5px;color:var(--ink2);margin:8px 0 0">
+      Пароль хранится только в этой вкладке и пропадает вместе с ней.</p>
+    <input id="key" type="password" autocomplete="current-password" placeholder="Пароль">
+    <button class="go" id="enter">Войти</button>
+    <p id="gerr" class="err" hidden>Пароль не подошёл.</p>
+  </div>
+
+  <div id="app" hidden>
+    <div class="bar" id="filters"></div>
+    <div id="list"></div>
+  </div>
+</main>
+<script>
+(function(){
+  var S = ['new','qualified','quoted','won','lost'];
+  var RU = {new:'новая', qualified:'квалифицирована', quoted:'отправлено предложение',
+            won:'выиграна', lost:'проиграна'};
+  var key = sessionStorage.getItem('crmKey') || '';
+  var filter = '';
+
+  var $ = function(id){ return document.getElementById(id); };
+  function esc(s){ return String(s==null?'':s).replace(/[<>&"]/g,function(c){
+    return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]; }); }
+
+  function api(path, opts){
+    opts = opts || {};
+    opts.headers = Object.assign({'x-crm-key': key, 'content-type':'application/json'}, opts.headers||{});
+    return fetch('/api/leads' + (path||''), opts).then(function(r){
+      if (r.status === 403) { throw new Error('forbidden'); }
+      return r.json();
+    });
+  }
+
+  function draw(d){
+    var counts = {}; (d.counts||[]).forEach(function(c){ counts[c.status] = c.n; });
+    var total = Object.keys(counts).reduce(function(s,k){ return s + counts[k]; }, 0);
+    $('sum').textContent = 'всего ' + total + (counts.new ? ' · новых ' + counts.new : '');
+
+    $('filters').innerHTML = ['<button data-f="" class="' + (filter===''?'on':'') + '">все ' + total + '</button>']
+      .concat(S.map(function(s){
+        return '<button data-f="' + s + '" class="' + (filter===s?'on':'') + '">' +
+               RU[s] + ' ' + (counts[s]||0) + '</button>'; })).join('');
+
+    var L = d.leads || [];
+    if (!L.length) { $('list').innerHTML = '<p class="empty">Пока ничего нет.</p>'; return; }
+    $('list').innerHTML = L.map(function(l){
+      var when = (l.created||'').replace('T',' ').slice(0,16);
+      var rows = [['Компания',l.co],['Страна',l.country],['Категория',l.cat],
+                  ['Базис',l.terms],['Количество',l.qty],['Куда',l.dest],
+                  ['Страница',l.page],['Из страны',l.ip_country]]
+        .filter(function(r){ return r[1]; })
+        .map(function(r){ return '<div><span>' + r[0] + ':</span> ' + esc(r[1]) + '</div>'; }).join('');
+      return '<article class="lead" data-id="' + l.id + '">' +
+        '<h2>' + esc(l.name||'без имени') + ' <span class="tag ' + esc(l.status) + '">' + RU[l.status] + '</span></h2>' +
+        '<p class="meta">' + when + ' · <a href="mailto:' + esc(l.mail) + '">' + esc(l.mail) + '</a></p>' +
+        (rows ? '<div class="grid">' + rows + '</div>' : '') +
+        (l.spec ? '<div class="spec">' + esc(l.spec) + '</div>' : '') +
+        '<div class="row"><select>' + S.map(function(s){
+            return '<option value="' + s + '"' + (s===l.status?' selected':'') + '>' + RU[s] + '</option>'; }).join('') +
+        '</select><button class="go save">Сохранить</button></div>' +
+        '<textarea placeholder="Заметка">' + esc(l.note) + '</textarea>' +
+      '</article>';
+    }).join('');
+  }
+
+  function load(){
+    api(filter ? '?status=' + filter : '').then(function(d){
+      if (!d.ok) { $('list').innerHTML = '<p class="empty">Ошибка: ' + esc(d.code) + '</p>'; return; }
+      $('gate').hidden = true; $('app').hidden = false;
+      sessionStorage.setItem('crmKey', key);
+      draw(d);
+    }).catch(function(){
+      $('gate').hidden = false; $('app').hidden = true; $('gerr').hidden = false;
+      sessionStorage.removeItem('crmKey');
+    });
+  }
+
+  $('enter').addEventListener('click', function(){ key = $('key').value.trim(); $('gerr').hidden = true; load(); });
+  $('key').addEventListener('keydown', function(e){ if (e.key === 'Enter') $('enter').click(); });
+
+  document.addEventListener('click', function(e){
+    var f = e.target.closest('[data-f]');
+    if (f) { filter = f.getAttribute('data-f'); load(); return; }
+    var b = e.target.closest('.save');
+    if (!b) return;
+    var card = b.closest('.lead');
+    b.disabled = true; b.textContent = 'Сохраняю';
+    api('', { method:'POST', body: JSON.stringify({
+        id: +card.getAttribute('data-id'),
+        status: card.querySelector('select').value,
+        note: card.querySelector('textarea').value }) })
+      .then(function(){ load(); })
+      .catch(function(){ b.disabled = false; b.textContent = 'Не вышло'; });
+  });
+
+  if (key) load();
+})();
+</script>
+</body>
+</html>

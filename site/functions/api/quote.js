@@ -73,6 +73,28 @@ async function handle({ request, env }) {
     `Received: ${new Date().toISOString()}`,
   ].join("\n");
 
+  /* Заявка кладётся в базу раньше письма: если почта почему-либо не
+     уйдёт, сама заявка всё равно не потеряется и будет видна в /crm.
+     Ошибка записи не должна ронять ответ посетителю, поэтому она только
+     попадает в журнал, а человек получает обычное подтверждение. */
+  let saved = false;
+  if (env.DB) {
+    try {
+      await env.DB.prepare(
+        `INSERT INTO leads (created,name,mail,co,country,cat,terms,qty,dest,spec,page,ip_country,status)
+         VALUES (?,?,?,?,?,?,?,?,?,?,?,?,'new')`
+      ).bind(
+        new Date().toISOString(),
+        ...FIELDS.map((k) => (d[k] != null && String(d[k]).trim() ? String(d[k]) : null)),
+        String(d.page || ""),
+        request.headers.get("cf-ipcountry") || null
+      ).run();
+      saved = true;
+    } catch (e) {
+      console.log("d1 insert failed", String(e && e.message || e).slice(0, 200));
+    }
+  }
+
   const TO = env.QUOTE_TO || "info@ispgroupgc.com";
 
   /* Без ключа Resend письмо уходит через ретранслятор, которому не нужна ни
@@ -104,12 +126,17 @@ async function handle({ request, env }) {
         }),
       });
     } catch {
-      return json({ ok: false, code: "upstream_unreachable" }, 502);
+      return saved ? json({ ok: true, saved: true, mail: false })
+                   : json({ ok: false, code: "upstream_unreachable" }, 502);
     }
     const body = await rr.json().catch(() => ({}));
-    if (rr.ok && String(body.success) === "true") return json({ ok: true, via: "relay" });
+    if (rr.ok && String(body.success) === "true") return json({ ok: true, via: "relay", saved });
     console.log("relay failed", rr.status, JSON.stringify(body).slice(0, 200));
-    return json({ ok: false, code: "mail_failed", status: rr.status }, 502);
+    /* Заявка уже в базе и видна в /crm, значит для посетителя это успех.
+       Показывать ему «не отправилось» и просить писать вручную значит
+       терять обращение там, где терять нечего. */
+    return saved ? json({ ok: true, saved: true, mail: false })
+                 : json({ ok: false, code: "mail_failed", status: rr.status }, 502);
   }
 
   let r;
@@ -132,16 +159,18 @@ async function handle({ request, env }) {
       }),
     });
   } catch {
-    return json({ ok: false, code: "upstream_unreachable" }, 502);
+    return saved ? json({ ok: true, saved: true, mail: false })
+                 : json({ ok: false, code: "upstream_unreachable" }, 502);
   }
 
   if (!r.ok) {
     const detail = (await r.text().catch(() => "")).slice(0, 300);
     console.log("resend failed", r.status, detail);
-    return json({ ok: false, code: "mail_failed", status: r.status }, 502);
+    return saved ? json({ ok: true, saved: true, mail: false })
+                 : json({ ok: false, code: "mail_failed", status: r.status }, 502);
   }
 
-  return json({ ok: true });
+  return json({ ok: true, saved });
 }
 
 export async function onRequestGet() {
