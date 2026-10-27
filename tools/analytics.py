@@ -28,7 +28,11 @@ SNIPPET = f"""<!-- Google tag (gtag.js) -->
   window.dataLayer = window.dataLayer || [];
   function gtag(){{dataLayer.push(arguments);}}
   gtag('js', new Date());
-  gtag('config', '{GA}');
+  /* Без cookie. Запрет хранилища объявляется до config, иначе тег успевает
+     его поставить. Настройка client_storage в GA4 не действует, проверено
+     замером, подробности в tools/analytics-consent.py. */
+  gtag('consent', 'default', {{ analytics_storage: 'denied', ad_storage: 'denied' }});
+  gtag('config', '{GA}', {{ anonymize_ip: true }});
   /* Нажатие на призыв к действию. Посещения без этого события не
      показывают главного: сколько человек дошло до намерения оставить
      заявку. Само отправление заявки считается отдельно, в обработчике
