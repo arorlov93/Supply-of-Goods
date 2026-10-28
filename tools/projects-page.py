@@ -70,23 +70,35 @@ SIZES_GRID = "(max-width: 620px) 92vw, (max-width: 1040px) 46vw, 390px"
 SIZES_WIDE = "(max-width: 900px) 94vw, 1180px"
 
 
-def shot(name, w, h, alt, sizes, eager=False):
+def shot(name, w, h, alt, sizes, eager=False, full=True):
     """Снимок с набором ширин и жёстко заданными размерами.
 
     Размеры в разметке стоят обязательно: без них браузер не знает высоту
     до загрузки файла и страница прыгает. Сдвиг макета на сайте сведён к
-    нулю замером, терять это из-за галереи не хочется."""
+    нулю замером, терять это из-за галереи не хочется.
+
+    full=False снимает с набора верхнюю ступень. Это не экономия ради
+    экономии, а замер: плитка сетки показывается на 346 точках, телефон с
+    тройной плотностью просит 1038 и берёт файл на 1240, то есть 150 КБ
+    вместо 60 ради разницы, которой на такой плитке не видно. Девять
+    плиток превращали страницу в 1.8 МБ на телефоне. Ступень 760 даёт на
+    той же плитке запас 2.2, этого хватает любому экрану.
+
+    У кадра в шапке верхняя ступень остаётся: он показывается во всю
+    полосу, и там разница видна."""
+    steps = list(STEPS) + ([w] if full else [])
     srcset = ", ".join([f"media/{name}-{s}.webp {s}w" for s in STEPS]
-                       + [f"media/{name}.webp {w}w"])
+                       + ([f"media/{name}.webp {w}w"] if full else []))
+    src = f"media/{name}.webp" if full else f"media/{name}-{STEPS[-1]}.webp"
     load = ('fetchpriority="high" decoding="async"' if eager
             else 'loading="lazy" decoding="async"')
     return (f'<div class="shot"><span class="pz">'
-            f'<img src="media/{name}.webp" srcset="{srcset}" sizes="{sizes}" '
+            f'<img src="{src}" srcset="{srcset}" sizes="{sizes}" '
             f'width="{w}" height="{h}" alt="{alt}" {load}></span></div>')
 
 
 def figure(name, w, h, alt, cap):
-    return (f'<figure>{shot(name, w, h, alt, SIZES_GRID)}'
+    return (f'<figure>{shot(name, w, h, alt, SIZES_GRID, full=False)}'
             f"<figcaption>{cap}</figcaption></figure>")
 
 
@@ -479,7 +491,7 @@ def credits():
     path = os.path.join(SITE, "media", "CREDITS.json")
     data = json.load(open(path, encoding="utf-8"))
     for name, _w, _h, _alt, cap in [HERO] + RUSSIA + BALI:
-        data[name + ".jpg"] = {
+        data[name + ".webp"] = {
             "title": plain(cap.split("</b>")[0]).split(". ")[0],
             "license": "all rights reserved",
             # source это адрес, из которого страница титров делает ссылку.

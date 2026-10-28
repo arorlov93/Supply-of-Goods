@@ -55,6 +55,10 @@ RATIO = 16 / 10
 QUALITY = 82
 # Кадры, которым нужен ещё и JPEG: он уходит в og:image
 OG = {"ref-bridge"}
+# Кадры, которым нужна верхняя ступень. Только шапка: плитки сетки
+# показываются на 346 точках, крупный файл там никто не увидит, а
+# телефон с тройной плотностью его честно скачает.
+FULL = {"ref-bridge"}
 
 
 # Доля высоты, с которой начинается полоса кадра. По умолчанию 0.38: на
@@ -94,7 +98,8 @@ def main():
         # Верхняя ступень это сам исходник, но не крупнее последней из
         # WIDTHS: кадр на 1724 точки показывать негде, а весит он вдвое.
         top = min(nat_w, WIDTHS[-1])
-        widths = [w for w in WIDTHS if w < top] + [top]
+        widths = [w for w in WIDTHS if w < top] + ([top] if name in FULL else [])
+        widths = widths or [min(nat_w, WIDTHS[-2])]
         for w in widths:
             h = int(round(w / RATIO))
             frame = im.resize((w, h), Image.LANCZOS)
