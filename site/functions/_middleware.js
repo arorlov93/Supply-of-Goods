@@ -30,6 +30,7 @@
  * ждёт ни на миллисекунду.
  */
 import { drainOne } from "./_queue.js";
+import { fxCached, withFx } from "./_fx.js";
 
 export async function onRequest(context) {
   const url = new URL(context.request.url);
@@ -66,5 +67,26 @@ export async function onRequest(context) {
     );
   }
 
-  return context.next();
+  const res = await context.next();
+
+  /* Ежедневная часть страницы индекса подставляется здесь, в ответе, а не
+     при сборке. Причина простая: сборка требует выкладки, выкладка требует
+     токена, а токен живёт не дольше той сессии, которой его дали. Так
+     страница обновляется сама, и нажимать некому не нужно.
+
+     Ответ при этом никогда не ждёт Европейский центробанк: если свежих
+     курсов в кэше нет, уходит то, что запечено при сборке, а за новыми
+     идём после ответа. Чужая служба не должна уметь замедлить наш сайт. */
+  if (wantsPage && /^\/landed-price-index(\.html)?$/.test(url.pathname)) {
+    try {
+      const fx = await fxCached(context);
+      if (fx && (res.headers.get("content-type") || "").includes("text/html")) {
+        return withFx(res, fx);
+      }
+    } catch (e) {
+      console.log("fx: подстановка не вышла,", String((e && e.message) || e).slice(0, 160));
+    }
+  }
+
+  return res;
 }

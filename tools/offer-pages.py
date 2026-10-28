@@ -61,15 +61,19 @@ def fx_block(fx):
      ("p", "The table above is an annual picture. This part changes every working day, "
            "and on a contract it moves real money: an offer written in euros and paid "
            "thirty days later is a different price in dollars from the one you agreed."),
-     ("raw", '<div class="tablewrap"><table class="lpi"><thead><tr>'
+     # Обёртка с опознавательным id: содержимое этого блока подменяет на
+     # свежее функция site/functions/_fx.js прямо в ответе сервера. То, что
+     # собрано здесь, остаётся запасным вариантом на случай, когда источник
+     # недоступен, и показывается оно с той датой, с которой собрано.
+     ("raw", '<div id="fx-live"><div class="tablewrap"><table class="lpi"><thead><tr>'
              '<th>Currency</th><th>Sellers who invoice in it</th>'
              '<th>One unit, in dollars</th><th>Change over a month</th>'
-             '</tr></thead><tbody>%s</tbody></table></div>' % rows),
-     ("note", "European Central Bank reference rates for %s, against %s. The bank "
-              "publishes on working days only, so over a weekend this shows the last "
-              "published day rather than today: the date here is the date of the "
-              "figures, not the date we fetched them."
-              % (fx["date"], fx["compared_to"])),
+             '</tr></thead><tbody>%s</tbody></table></div>'
+             '<p class="pnote">European Central Bank reference rates for %s, against '
+             '%s. The bank publishes on working days only, so over a weekend this '
+             'shows the last published day rather than today: the date here is the '
+             'date of the figures, not the date we fetched them.</p></div>'
+             % (rows, fx["date"], fx["compared_to"])),
      ("p", "Read it next to the freight column. On a cheap, heavy cargo the freight "
            "share decides the deal and a two per cent currency move is noise. On "
            "machinery the freight share is small and the same two per cent is the whole "
