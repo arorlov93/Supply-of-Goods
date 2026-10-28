@@ -342,6 +342,16 @@ def body_html():
      'the site.</p></div><div class="lanelinks">%s</div></div></section>'
      % "".join('<a class="lanelink" href="%s"><b>%s</b><span>%s</span></a>' % r
                for r in RELATED),
+     # Призыв и закрытие main: на всех прочих страницах они есть, здесь их
+     # не было, то есть страница теряла единственную кнопку внизу.
+     '<section data-reveal class="cta"><div class="wrap"><div class="lede">'
+     '<h2>Send a specification. Get a landed price.</h2>'
+     '<p class="intro">Product, quantity and destination port is enough to start. '
+     'If you only have a problem, describe it and we will write the specification '
+     'with you.</p></div><div class="ctarow">'
+     '<a class="btn" href="/contact#enquiry">Request a quote</a>'
+     '<span class="mail">info@ispgroupgc.com</span></div></div></section>',
+     "</main>",
     ]
     return "\n".join(out)
 

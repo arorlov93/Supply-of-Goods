@@ -1,0 +1,1201 @@
+{
+ "source": "UN Comtrade",
+ "source_url": "https://comtradeplus.un.org/",
+ "reporter": "United States",
+ "period": "2024",
+ "flow": "imports",
+ "built": "2026-10-28",
+ "dropped": 7,
+ "rows": [
+  {
+   "group": "Building and finishing materials",
+   "hs": "2523",
+   "product": "Cement",
+   "origin": "China",
+   "cif_kg": 0.536,
+   "fob_kg": 0.39,
+   "uplift": 37.3,
+   "tonnes": 1334
+  },
+  {
+   "group": "Building and finishing materials",
+   "hs": "2523",
+   "product": "Cement",
+   "origin": "Germany",
+   "cif_kg": 0.973,
+   "fob_kg": 0.857,
+   "uplift": 13.6,
+   "tonnes": 336
+  },
+  {
+   "group": "Building and finishing materials",
+   "hs": "2523",
+   "product": "Cement",
+   "origin": "Italy",
+   "cif_kg": 0.107,
+   "fob_kg": 0.077,
+   "uplift": 39.1,
+   "tonnes": 116653
+  },
+  {
+   "group": "Building and finishing materials",
+   "hs": "2523",
+   "product": "Cement",
+   "origin": "Korea, Rep.",
+   "cif_kg": 0.081,
+   "fob_kg": 0.054,
+   "uplift": 48.2,
+   "tonnes": 590219
+  },
+  {
+   "group": "Building and finishing materials",
+   "hs": "2523",
+   "product": "Cement",
+   "origin": "Poland",
+   "cif_kg": 1.204,
+   "fob_kg": 1.075,
+   "uplift": 12.0,
+   "tonnes": 11803
+  },
+  {
+   "group": "Building and finishing materials",
+   "hs": "2523",
+   "product": "Cement",
+   "origin": "Türkiye",
+   "cif_kg": 0.083,
+   "fob_kg": 0.064,
+   "uplift": 29.2,
+   "tonnes": 7159838
+  },
+  {
+   "group": "Building and finishing materials",
+   "hs": "2523",
+   "product": "Cement",
+   "origin": "Viet Nam",
+   "cif_kg": 0.081,
+   "fob_kg": 0.051,
+   "uplift": 59.5,
+   "tonnes": 4170866
+  },
+  {
+   "group": "Building and finishing materials",
+   "hs": "6802",
+   "product": "Worked stone",
+   "origin": "China",
+   "cif_kg": 0.943,
+   "fob_kg": 0.805,
+   "uplift": 17.2,
+   "tonnes": 490259
+  },
+  {
+   "group": "Building and finishing materials",
+   "hs": "6802",
+   "product": "Worked stone",
+   "origin": "Germany",
+   "cif_kg": 2.053,
+   "fob_kg": 1.791,
+   "uplift": 14.6,
+   "tonnes": 2581
+  },
+  {
+   "group": "Building and finishing materials",
+   "hs": "6802",
+   "product": "Worked stone",
+   "origin": "India",
+   "cif_kg": 0.728,
+   "fob_kg": 0.624,
+   "uplift": 16.8,
+   "tonnes": 509323
+  },
+  {
+   "group": "Building and finishing materials",
+   "hs": "6802",
+   "product": "Worked stone",
+   "origin": "Italy",
+   "cif_kg": 3.125,
+   "fob_kg": 2.975,
+   "uplift": 5.0,
+   "tonnes": 190216
+  },
+  {
+   "group": "Building and finishing materials",
+   "hs": "6802",
+   "product": "Worked stone",
+   "origin": "Korea, Rep.",
+   "cif_kg": 3.142,
+   "fob_kg": 2.89,
+   "uplift": 8.7,
+   "tonnes": 65
+  },
+  {
+   "group": "Building and finishing materials",
+   "hs": "6802",
+   "product": "Worked stone",
+   "origin": "Poland",
+   "cif_kg": 2.24,
+   "fob_kg": 2.046,
+   "uplift": 9.5,
+   "tonnes": 315
+  },
+  {
+   "group": "Building and finishing materials",
+   "hs": "6802",
+   "product": "Worked stone",
+   "origin": "Türkiye",
+   "cif_kg": 0.713,
+   "fob_kg": 0.61,
+   "uplift": 16.9,
+   "tonnes": 593629
+  },
+  {
+   "group": "Building and finishing materials",
+   "hs": "6802",
+   "product": "Worked stone",
+   "origin": "Viet Nam",
+   "cif_kg": 0.948,
+   "fob_kg": 0.791,
+   "uplift": 19.9,
+   "tonnes": 44085
+  },
+  {
+   "group": "Building and finishing materials",
+   "hs": "6907",
+   "product": "Ceramic and porcelain tile",
+   "origin": "China",
+   "cif_kg": 0.66,
+   "fob_kg": 0.581,
+   "uplift": 13.6,
+   "tonnes": 1977
+  },
+  {
+   "group": "Building and finishing materials",
+   "hs": "6907",
+   "product": "Ceramic and porcelain tile",
+   "origin": "Germany",
+   "cif_kg": 0.556,
+   "fob_kg": 0.501,
+   "uplift": 10.9,
+   "tonnes": 18482
+  },
+  {
+   "group": "Building and finishing materials",
+   "hs": "6907",
+   "product": "Ceramic and porcelain tile",
+   "origin": "India",
+   "cif_kg": 0.553,
+   "fob_kg": 0.455,
+   "uplift": 21.7,
+   "tonnes": 410177
+  },
+  {
+   "group": "Building and finishing materials",
+   "hs": "6907",
+   "product": "Ceramic and porcelain tile",
+   "origin": "Italy",
+   "cif_kg": 0.583,
+   "fob_kg": 0.515,
+   "uplift": 13.1,
+   "tonnes": 1125875
+  },
+  {
+   "group": "Building and finishing materials",
+   "hs": "6907",
+   "product": "Ceramic and porcelain tile",
+   "origin": "Korea, Rep.",
+   "cif_kg": 0.703,
+   "fob_kg": 0.636,
+   "uplift": 10.6,
+   "tonnes": 438
+  },
+  {
+   "group": "Building and finishing materials",
+   "hs": "6907",
+   "product": "Ceramic and porcelain tile",
+   "origin": "Poland",
+   "cif_kg": 0.568,
+   "fob_kg": 0.45,
+   "uplift": 26.3,
+   "tonnes": 15066
+  },
+  {
+   "group": "Building and finishing materials",
+   "hs": "6907",
+   "product": "Ceramic and porcelain tile",
+   "origin": "Türkiye",
+   "cif_kg": 0.575,
+   "fob_kg": 0.473,
+   "uplift": 21.6,
+   "tonnes": 225078
+  },
+  {
+   "group": "Building and finishing materials",
+   "hs": "6907",
+   "product": "Ceramic and porcelain tile",
+   "origin": "Viet Nam",
+   "cif_kg": 0.551,
+   "fob_kg": 0.437,
+   "uplift": 26.0,
+   "tonnes": 145651
+  },
+  {
+   "group": "Food and agricultural goods",
+   "hs": "0303",
+   "product": "Frozen fish",
+   "origin": "China",
+   "cif_kg": 2.536,
+   "fob_kg": 2.259,
+   "uplift": 12.3,
+   "tonnes": 65530
+  },
+  {
+   "group": "Food and agricultural goods",
+   "hs": "0303",
+   "product": "Frozen fish",
+   "origin": "India",
+   "cif_kg": 5.995,
+   "fob_kg": 5.761,
+   "uplift": 4.1,
+   "tonnes": 1724
+  },
+  {
+   "group": "Food and agricultural goods",
+   "hs": "0303",
+   "product": "Frozen fish",
+   "origin": "Korea, Rep.",
+   "cif_kg": 18.433,
+   "fob_kg": 17.869,
+   "uplift": 3.2,
+   "tonnes": 4341
+  },
+  {
+   "group": "Food and agricultural goods",
+   "hs": "0303",
+   "product": "Frozen fish",
+   "origin": "Türkiye",
+   "cif_kg": 6.857,
+   "fob_kg": 6.619,
+   "uplift": 3.6,
+   "tonnes": 1105
+  },
+  {
+   "group": "Food and agricultural goods",
+   "hs": "0303",
+   "product": "Frozen fish",
+   "origin": "Viet Nam",
+   "cif_kg": 4.461,
+   "fob_kg": 4.248,
+   "uplift": 5.0,
+   "tonnes": 13396
+  },
+  {
+   "group": "Industrial equipment and machinery",
+   "hs": "8413",
+   "product": "Pumps for liquids",
+   "origin": "China",
+   "cif_kg": 13.833,
+   "fob_kg": 13.126,
+   "uplift": 5.4,
+   "tonnes": 152610
+  },
+  {
+   "group": "Industrial equipment and machinery",
+   "hs": "8413",
+   "product": "Pumps for liquids",
+   "origin": "Germany",
+   "cif_kg": 32.248,
+   "fob_kg": 31.594,
+   "uplift": 2.1,
+   "tonnes": 45865
+  },
+  {
+   "group": "Industrial equipment and machinery",
+   "hs": "8413",
+   "product": "Pumps for liquids",
+   "origin": "India",
+   "cif_kg": 12.32,
+   "fob_kg": 11.779,
+   "uplift": 4.6,
+   "tonnes": 35348
+  },
+  {
+   "group": "Industrial equipment and machinery",
+   "hs": "8413",
+   "product": "Pumps for liquids",
+   "origin": "Italy",
+   "cif_kg": 27.831,
+   "fob_kg": 27.224,
+   "uplift": 2.2,
+   "tonnes": 18034
+  },
+  {
+   "group": "Industrial equipment and machinery",
+   "hs": "8413",
+   "product": "Pumps for liquids",
+   "origin": "Korea, Rep.",
+   "cif_kg": 26.822,
+   "fob_kg": 26.05,
+   "uplift": 3.0,
+   "tonnes": 16870
+  },
+  {
+   "group": "Industrial equipment and machinery",
+   "hs": "8413",
+   "product": "Pumps for liquids",
+   "origin": "Poland",
+   "cif_kg": 18.927,
+   "fob_kg": 18.654,
+   "uplift": 1.5,
+   "tonnes": 7141
+  },
+  {
+   "group": "Industrial equipment and machinery",
+   "hs": "8413",
+   "product": "Pumps for liquids",
+   "origin": "Türkiye",
+   "cif_kg": 21.937,
+   "fob_kg": 21.123,
+   "uplift": 3.9,
+   "tonnes": 6516
+  },
+  {
+   "group": "Industrial equipment and machinery",
+   "hs": "8413",
+   "product": "Pumps for liquids",
+   "origin": "Viet Nam",
+   "cif_kg": 26.092,
+   "fob_kg": 25.418,
+   "uplift": 2.6,
+   "tonnes": 3341
+  },
+  {
+   "group": "Industrial equipment and machinery",
+   "hs": "8414",
+   "product": "Compressors, fans, air pumps",
+   "origin": "China",
+   "cif_kg": 11.044,
+   "fob_kg": 10.364,
+   "uplift": 6.6,
+   "tonnes": 343741
+  },
+  {
+   "group": "Industrial equipment and machinery",
+   "hs": "8414",
+   "product": "Compressors, fans, air pumps",
+   "origin": "Germany",
+   "cif_kg": 24.27,
+   "fob_kg": 23.727,
+   "uplift": 2.3,
+   "tonnes": 54189
+  },
+  {
+   "group": "Industrial equipment and machinery",
+   "hs": "8414",
+   "product": "Compressors, fans, air pumps",
+   "origin": "India",
+   "cif_kg": 14.254,
+   "fob_kg": 13.761,
+   "uplift": 3.6,
+   "tonnes": 24326
+  },
+  {
+   "group": "Industrial equipment and machinery",
+   "hs": "8414",
+   "product": "Compressors, fans, air pumps",
+   "origin": "Italy",
+   "cif_kg": 24.829,
+   "fob_kg": 24.349,
+   "uplift": 2.0,
+   "tonnes": 25323
+  },
+  {
+   "group": "Industrial equipment and machinery",
+   "hs": "8414",
+   "product": "Compressors, fans, air pumps",
+   "origin": "Korea, Rep.",
+   "cif_kg": 18.877,
+   "fob_kg": 18.383,
+   "uplift": 2.7,
+   "tonnes": 41703
+  },
+  {
+   "group": "Industrial equipment and machinery",
+   "hs": "8414",
+   "product": "Compressors, fans, air pumps",
+   "origin": "Poland",
+   "cif_kg": 24.434,
+   "fob_kg": 23.433,
+   "uplift": 4.3,
+   "tonnes": 3477
+  },
+  {
+   "group": "Industrial equipment and machinery",
+   "hs": "8414",
+   "product": "Compressors, fans, air pumps",
+   "origin": "Türkiye",
+   "cif_kg": 15.015,
+   "fob_kg": 14.453,
+   "uplift": 3.9,
+   "tonnes": 3370
+  },
+  {
+   "group": "Industrial equipment and machinery",
+   "hs": "8414",
+   "product": "Compressors, fans, air pumps",
+   "origin": "Viet Nam",
+   "cif_kg": 24.256,
+   "fob_kg": 23.514,
+   "uplift": 3.2,
+   "tonnes": 24468
+  },
+  {
+   "group": "Industrial equipment and machinery",
+   "hs": "8428",
+   "product": "Lifting and handling machinery",
+   "origin": "China",
+   "cif_kg": 14.217,
+   "fob_kg": 13.263,
+   "uplift": 7.2,
+   "tonnes": 41262
+  },
+  {
+   "group": "Industrial equipment and machinery",
+   "hs": "8428",
+   "product": "Lifting and handling machinery",
+   "origin": "Germany",
+   "cif_kg": 15.722,
+   "fob_kg": 15.294,
+   "uplift": 2.8,
+   "tonnes": 86543
+  },
+  {
+   "group": "Industrial equipment and machinery",
+   "hs": "8428",
+   "product": "Lifting and handling machinery",
+   "origin": "India",
+   "cif_kg": 15.668,
+   "fob_kg": 15.039,
+   "uplift": 4.2,
+   "tonnes": 5972
+  },
+  {
+   "group": "Industrial equipment and machinery",
+   "hs": "8428",
+   "product": "Lifting and handling machinery",
+   "origin": "Italy",
+   "cif_kg": 16.12,
+   "fob_kg": 15.721,
+   "uplift": 2.5,
+   "tonnes": 23843
+  },
+  {
+   "group": "Industrial equipment and machinery",
+   "hs": "8428",
+   "product": "Lifting and handling machinery",
+   "origin": "Korea, Rep.",
+   "cif_kg": 15.747,
+   "fob_kg": 15.457,
+   "uplift": 1.9,
+   "tonnes": 67562
+  },
+  {
+   "group": "Industrial equipment and machinery",
+   "hs": "8428",
+   "product": "Lifting and handling machinery",
+   "origin": "Poland",
+   "cif_kg": 17.774,
+   "fob_kg": 17.47,
+   "uplift": 1.7,
+   "tonnes": 6251
+  },
+  {
+   "group": "Industrial equipment and machinery",
+   "hs": "8428",
+   "product": "Lifting and handling machinery",
+   "origin": "Türkiye",
+   "cif_kg": 17.622,
+   "fob_kg": 17.012,
+   "uplift": 3.6,
+   "tonnes": 1539
+  },
+  {
+   "group": "Industrial equipment and machinery",
+   "hs": "8428",
+   "product": "Lifting and handling machinery",
+   "origin": "Viet Nam",
+   "cif_kg": 13.756,
+   "fob_kg": 13.538,
+   "uplift": 1.6,
+   "tonnes": 1610
+  },
+  {
+   "group": "Metals and pipe",
+   "hs": "7304",
+   "product": "Seamless tube and pipe",
+   "origin": "China",
+   "cif_kg": 2.646,
+   "fob_kg": 2.495,
+   "uplift": 6.0,
+   "tonnes": 89607
+  },
+  {
+   "group": "Metals and pipe",
+   "hs": "7304",
+   "product": "Seamless tube and pipe",
+   "origin": "Germany",
+   "cif_kg": 3.483,
+   "fob_kg": 3.348,
+   "uplift": 4.0,
+   "tonnes": 34660
+  },
+  {
+   "group": "Metals and pipe",
+   "hs": "7304",
+   "product": "Seamless tube and pipe",
+   "origin": "India",
+   "cif_kg": 2.24,
+   "fob_kg": 2.071,
+   "uplift": 8.1,
+   "tonnes": 26667
+  },
+  {
+   "group": "Metals and pipe",
+   "hs": "7304",
+   "product": "Seamless tube and pipe",
+   "origin": "Italy",
+   "cif_kg": 3.466,
+   "fob_kg": 3.326,
+   "uplift": 4.2,
+   "tonnes": 81626
+  },
+  {
+   "group": "Metals and pipe",
+   "hs": "7304",
+   "product": "Seamless tube and pipe",
+   "origin": "Korea, Rep.",
+   "cif_kg": 2.345,
+   "fob_kg": 2.231,
+   "uplift": 5.1,
+   "tonnes": 51535
+  },
+  {
+   "group": "Metals and pipe",
+   "hs": "7304",
+   "product": "Seamless tube and pipe",
+   "origin": "Poland",
+   "cif_kg": 1.981,
+   "fob_kg": 1.87,
+   "uplift": 5.9,
+   "tonnes": 2182
+  },
+  {
+   "group": "Metals and pipe",
+   "hs": "7304",
+   "product": "Seamless tube and pipe",
+   "origin": "Viet Nam",
+   "cif_kg": 4.168,
+   "fob_kg": 3.913,
+   "uplift": 6.5,
+   "tonnes": 1714
+  },
+  {
+   "group": "Metals and pipe",
+   "hs": "7306",
+   "product": "Welded tube and pipe",
+   "origin": "China",
+   "cif_kg": 2.326,
+   "fob_kg": 2.181,
+   "uplift": 6.7,
+   "tonnes": 47148
+  },
+  {
+   "group": "Metals and pipe",
+   "hs": "7306",
+   "product": "Welded tube and pipe",
+   "origin": "Germany",
+   "cif_kg": 1.94,
+   "fob_kg": 1.812,
+   "uplift": 7.1,
+   "tonnes": 33517
+  },
+  {
+   "group": "Metals and pipe",
+   "hs": "7306",
+   "product": "Welded tube and pipe",
+   "origin": "India",
+   "cif_kg": 1.848,
+   "fob_kg": 1.684,
+   "uplift": 9.8,
+   "tonnes": 94101
+  },
+  {
+   "group": "Metals and pipe",
+   "hs": "7306",
+   "product": "Welded tube and pipe",
+   "origin": "Italy",
+   "cif_kg": 1.938,
+   "fob_kg": 1.775,
+   "uplift": 9.2,
+   "tonnes": 36139
+  },
+  {
+   "group": "Metals and pipe",
+   "hs": "7306",
+   "product": "Welded tube and pipe",
+   "origin": "Korea, Rep.",
+   "cif_kg": 1.194,
+   "fob_kg": 1.103,
+   "uplift": 8.3,
+   "tonnes": 788873
+  },
+  {
+   "group": "Metals and pipe",
+   "hs": "7306",
+   "product": "Welded tube and pipe",
+   "origin": "Poland",
+   "cif_kg": 3.758,
+   "fob_kg": 3.571,
+   "uplift": 5.2,
+   "tonnes": 275
+  },
+  {
+   "group": "Metals and pipe",
+   "hs": "7306",
+   "product": "Welded tube and pipe",
+   "origin": "Türkiye",
+   "cif_kg": 1.32,
+   "fob_kg": 1.269,
+   "uplift": 4.0,
+   "tonnes": 108074
+  },
+  {
+   "group": "Metals and pipe",
+   "hs": "7306",
+   "product": "Welded tube and pipe",
+   "origin": "Viet Nam",
+   "cif_kg": 1.086,
+   "fob_kg": 0.969,
+   "uplift": 12.1,
+   "tonnes": 159975
+  },
+  {
+   "group": "Metals and pipe",
+   "hs": "7308",
+   "product": "Structures of iron or steel",
+   "origin": "China",
+   "cif_kg": 1.76,
+   "fob_kg": 1.548,
+   "uplift": 13.7,
+   "tonnes": 550443
+  },
+  {
+   "group": "Metals and pipe",
+   "hs": "7308",
+   "product": "Structures of iron or steel",
+   "origin": "Germany",
+   "cif_kg": 3.84,
+   "fob_kg": 3.641,
+   "uplift": 5.5,
+   "tonnes": 234096
+  },
+  {
+   "group": "Metals and pipe",
+   "hs": "7308",
+   "product": "Structures of iron or steel",
+   "origin": "India",
+   "cif_kg": 1.679,
+   "fob_kg": 1.538,
+   "uplift": 9.1,
+   "tonnes": 391106
+  },
+  {
+   "group": "Metals and pipe",
+   "hs": "7308",
+   "product": "Structures of iron or steel",
+   "origin": "Italy",
+   "cif_kg": 10.109,
+   "fob_kg": 9.624,
+   "uplift": 5.0,
+   "tonnes": 19515
+  },
+  {
+   "group": "Metals and pipe",
+   "hs": "7308",
+   "product": "Structures of iron or steel",
+   "origin": "Korea, Rep.",
+   "cif_kg": 4.974,
+   "fob_kg": 4.701,
+   "uplift": 5.8,
+   "tonnes": 141026
+  },
+  {
+   "group": "Metals and pipe",
+   "hs": "7308",
+   "product": "Structures of iron or steel",
+   "origin": "Poland",
+   "cif_kg": 7.802,
+   "fob_kg": 7.274,
+   "uplift": 7.3,
+   "tonnes": 7812
+  },
+  {
+   "group": "Metals and pipe",
+   "hs": "7308",
+   "product": "Structures of iron or steel",
+   "origin": "Türkiye",
+   "cif_kg": 1.699,
+   "fob_kg": 1.568,
+   "uplift": 8.4,
+   "tonnes": 145385
+  },
+  {
+   "group": "Metals and pipe",
+   "hs": "7308",
+   "product": "Structures of iron or steel",
+   "origin": "Viet Nam",
+   "cif_kg": 1.94,
+   "fob_kg": 1.724,
+   "uplift": 12.5,
+   "tonnes": 104324
+  },
+  {
+   "group": "Paper, packaging and consumables",
+   "hs": "4804",
+   "product": "Kraft paper and paperboard",
+   "origin": "China",
+   "cif_kg": 1.914,
+   "fob_kg": 1.712,
+   "uplift": 11.8,
+   "tonnes": 4201
+  },
+  {
+   "group": "Paper, packaging and consumables",
+   "hs": "4804",
+   "product": "Kraft paper and paperboard",
+   "origin": "Germany",
+   "cif_kg": 2.298,
+   "fob_kg": 2.221,
+   "uplift": 3.5,
+   "tonnes": 12968
+  },
+  {
+   "group": "Paper, packaging and consumables",
+   "hs": "4804",
+   "product": "Kraft paper and paperboard",
+   "origin": "India",
+   "cif_kg": 1.446,
+   "fob_kg": 1.286,
+   "uplift": 12.5,
+   "tonnes": 6470
+  },
+  {
+   "group": "Paper, packaging and consumables",
+   "hs": "4804",
+   "product": "Kraft paper and paperboard",
+   "origin": "Italy",
+   "cif_kg": 2.653,
+   "fob_kg": 2.498,
+   "uplift": 6.2,
+   "tonnes": 1836
+  },
+  {
+   "group": "Paper, packaging and consumables",
+   "hs": "4804",
+   "product": "Kraft paper and paperboard",
+   "origin": "Korea, Rep.",
+   "cif_kg": 6.426,
+   "fob_kg": 6.347,
+   "uplift": 1.2,
+   "tonnes": 450
+  },
+  {
+   "group": "Paper, packaging and consumables",
+   "hs": "4804",
+   "product": "Kraft paper and paperboard",
+   "origin": "Türkiye",
+   "cif_kg": 1.105,
+   "fob_kg": 1.032,
+   "uplift": 7.1,
+   "tonnes": 539
+  },
+  {
+   "group": "Paper, packaging and consumables",
+   "hs": "4804",
+   "product": "Kraft paper and paperboard",
+   "origin": "Viet Nam",
+   "cif_kg": 1.908,
+   "fob_kg": 1.717,
+   "uplift": 11.1,
+   "tonnes": 345
+  },
+  {
+   "group": "Paper, packaging and consumables",
+   "hs": "4810",
+   "product": "Coated paper and paperboard",
+   "origin": "China",
+   "cif_kg": 1.705,
+   "fob_kg": 1.567,
+   "uplift": 8.8,
+   "tonnes": 24417
+  },
+  {
+   "group": "Paper, packaging and consumables",
+   "hs": "4810",
+   "product": "Coated paper and paperboard",
+   "origin": "Germany",
+   "cif_kg": 1.703,
+   "fob_kg": 1.601,
+   "uplift": 6.4,
+   "tonnes": 170311
+  },
+  {
+   "group": "Paper, packaging and consumables",
+   "hs": "4810",
+   "product": "Coated paper and paperboard",
+   "origin": "India",
+   "cif_kg": 1.283,
+   "fob_kg": 1.171,
+   "uplift": 9.6,
+   "tonnes": 34387
+  },
+  {
+   "group": "Paper, packaging and consumables",
+   "hs": "4810",
+   "product": "Coated paper and paperboard",
+   "origin": "Italy",
+   "cif_kg": 1.909,
+   "fob_kg": 1.78,
+   "uplift": 7.3,
+   "tonnes": 39284
+  },
+  {
+   "group": "Paper, packaging and consumables",
+   "hs": "4810",
+   "product": "Coated paper and paperboard",
+   "origin": "Korea, Rep.",
+   "cif_kg": 1.358,
+   "fob_kg": 1.272,
+   "uplift": 6.7,
+   "tonnes": 286533
+  },
+  {
+   "group": "Paper, packaging and consumables",
+   "hs": "4810",
+   "product": "Coated paper and paperboard",
+   "origin": "Poland",
+   "cif_kg": 1.141,
+   "fob_kg": 1.028,
+   "uplift": 10.9,
+   "tonnes": 348
+  },
+  {
+   "group": "Paper, packaging and consumables",
+   "hs": "4810",
+   "product": "Coated paper and paperboard",
+   "origin": "Türkiye",
+   "cif_kg": 0.794,
+   "fob_kg": 0.703,
+   "uplift": 12.9,
+   "tonnes": 1085
+  },
+  {
+   "group": "Paper, packaging and consumables",
+   "hs": "4810",
+   "product": "Coated paper and paperboard",
+   "origin": "Viet Nam",
+   "cif_kg": 2.426,
+   "fob_kg": 2.075,
+   "uplift": 16.9,
+   "tonnes": 9431
+  },
+  {
+   "group": "Paper, packaging and consumables",
+   "hs": "4819",
+   "product": "Cartons, boxes and cases",
+   "origin": "China",
+   "cif_kg": 3.595,
+   "fob_kg": 3.148,
+   "uplift": 14.2,
+   "tonnes": 226447
+  },
+  {
+   "group": "Paper, packaging and consumables",
+   "hs": "4819",
+   "product": "Cartons, boxes and cases",
+   "origin": "Germany",
+   "cif_kg": 3.513,
+   "fob_kg": 3.238,
+   "uplift": 8.5,
+   "tonnes": 17855
+  },
+  {
+   "group": "Paper, packaging and consumables",
+   "hs": "4819",
+   "product": "Cartons, boxes and cases",
+   "origin": "India",
+   "cif_kg": 2.013,
+   "fob_kg": 1.768,
+   "uplift": 13.8,
+   "tonnes": 72353
+  },
+  {
+   "group": "Paper, packaging and consumables",
+   "hs": "4819",
+   "product": "Cartons, boxes and cases",
+   "origin": "Italy",
+   "cif_kg": 4.531,
+   "fob_kg": 4.137,
+   "uplift": 9.5,
+   "tonnes": 9717
+  },
+  {
+   "group": "Paper, packaging and consumables",
+   "hs": "4819",
+   "product": "Cartons, boxes and cases",
+   "origin": "Korea, Rep.",
+   "cif_kg": 2.804,
+   "fob_kg": 2.504,
+   "uplift": 12.0,
+   "tonnes": 15411
+  },
+  {
+   "group": "Paper, packaging and consumables",
+   "hs": "4819",
+   "product": "Cartons, boxes and cases",
+   "origin": "Poland",
+   "cif_kg": 4.715,
+   "fob_kg": 4.301,
+   "uplift": 9.6,
+   "tonnes": 1342
+  },
+  {
+   "group": "Paper, packaging and consumables",
+   "hs": "4819",
+   "product": "Cartons, boxes and cases",
+   "origin": "Türkiye",
+   "cif_kg": 1.97,
+   "fob_kg": 1.745,
+   "uplift": 12.9,
+   "tonnes": 49185
+  },
+  {
+   "group": "Paper, packaging and consumables",
+   "hs": "4819",
+   "product": "Cartons, boxes and cases",
+   "origin": "Viet Nam",
+   "cif_kg": 2.558,
+   "fob_kg": 2.274,
+   "uplift": 12.5,
+   "tonnes": 98255
+  },
+  {
+   "group": "Tools, hardware and fasteners",
+   "hs": "7318",
+   "product": "Screws, bolts and fasteners",
+   "origin": "China",
+   "cif_kg": 2.337,
+   "fob_kg": 2.107,
+   "uplift": 10.9,
+   "tonnes": 566014
+  },
+  {
+   "group": "Tools, hardware and fasteners",
+   "hs": "7318",
+   "product": "Screws, bolts and fasteners",
+   "origin": "Germany",
+   "cif_kg": 10.141,
+   "fob_kg": 9.813,
+   "uplift": 3.3,
+   "tonnes": 39580
+  },
+  {
+   "group": "Tools, hardware and fasteners",
+   "hs": "7318",
+   "product": "Screws, bolts and fasteners",
+   "origin": "India",
+   "cif_kg": 2.735,
+   "fob_kg": 2.491,
+   "uplift": 9.8,
+   "tonnes": 95393
+  },
+  {
+   "group": "Tools, hardware and fasteners",
+   "hs": "7318",
+   "product": "Screws, bolts and fasteners",
+   "origin": "Italy",
+   "cif_kg": 9.017,
+   "fob_kg": 8.743,
+   "uplift": 3.1,
+   "tonnes": 29652
+  },
+  {
+   "group": "Tools, hardware and fasteners",
+   "hs": "7318",
+   "product": "Screws, bolts and fasteners",
+   "origin": "Korea, Rep.",
+   "cif_kg": 5.309,
+   "fob_kg": 5.06,
+   "uplift": 4.9,
+   "tonnes": 59295
+  },
+  {
+   "group": "Tools, hardware and fasteners",
+   "hs": "7318",
+   "product": "Screws, bolts and fasteners",
+   "origin": "Poland",
+   "cif_kg": 12.37,
+   "fob_kg": 11.724,
+   "uplift": 5.5,
+   "tonnes": 1053
+  },
+  {
+   "group": "Tools, hardware and fasteners",
+   "hs": "7318",
+   "product": "Screws, bolts and fasteners",
+   "origin": "Türkiye",
+   "cif_kg": 5.367,
+   "fob_kg": 5.197,
+   "uplift": 3.3,
+   "tonnes": 10111
+  },
+  {
+   "group": "Tools, hardware and fasteners",
+   "hs": "7318",
+   "product": "Screws, bolts and fasteners",
+   "origin": "Viet Nam",
+   "cif_kg": 2.704,
+   "fob_kg": 2.481,
+   "uplift": 9.0,
+   "tonnes": 34160
+  },
+  {
+   "group": "Tools, hardware and fasteners",
+   "hs": "8207",
+   "product": "Interchangeable tool parts",
+   "origin": "China",
+   "cif_kg": 51.358,
+   "fob_kg": 49.226,
+   "uplift": 4.3,
+   "tonnes": 10336
+  },
+  {
+   "group": "Tools, hardware and fasteners",
+   "hs": "8207",
+   "product": "Interchangeable tool parts",
+   "origin": "Germany",
+   "cif_kg": 66.892,
+   "fob_kg": 65.862,
+   "uplift": 1.6,
+   "tonnes": 6900
+  },
+  {
+   "group": "Tools, hardware and fasteners",
+   "hs": "8207",
+   "product": "Interchangeable tool parts",
+   "origin": "India",
+   "cif_kg": 46.991,
+   "fob_kg": 45.414,
+   "uplift": 3.5,
+   "tonnes": 1672
+  },
+  {
+   "group": "Tools, hardware and fasteners",
+   "hs": "8207",
+   "product": "Interchangeable tool parts",
+   "origin": "Italy",
+   "cif_kg": 83.456,
+   "fob_kg": 81.619,
+   "uplift": 2.3,
+   "tonnes": 1306
+  },
+  {
+   "group": "Tools, hardware and fasteners",
+   "hs": "8207",
+   "product": "Interchangeable tool parts",
+   "origin": "Korea, Rep.",
+   "cif_kg": 69.784,
+   "fob_kg": 67.923,
+   "uplift": 2.7,
+   "tonnes": 5117
+  },
+  {
+   "group": "Tools, hardware and fasteners",
+   "hs": "8207",
+   "product": "Interchangeable tool parts",
+   "origin": "Viet Nam",
+   "cif_kg": 51.208,
+   "fob_kg": 49.604,
+   "uplift": 3.2,
+   "tonnes": 1265
+  },
+  {
+   "group": "Tools, hardware and fasteners",
+   "hs": "8467",
+   "product": "Hand tools, pneumatic and powered",
+   "origin": "China",
+   "cif_kg": 24.113,
+   "fob_kg": 23.285,
+   "uplift": 3.6,
+   "tonnes": 119225
+  },
+  {
+   "group": "Tools, hardware and fasteners",
+   "hs": "8467",
+   "product": "Hand tools, pneumatic and powered",
+   "origin": "Germany",
+   "cif_kg": 26.958,
+   "fob_kg": 26.601,
+   "uplift": 1.3,
+   "tonnes": 12635
+  },
+  {
+   "group": "Tools, hardware and fasteners",
+   "hs": "8467",
+   "product": "Hand tools, pneumatic and powered",
+   "origin": "India",
+   "cif_kg": 30.35,
+   "fob_kg": 29.207,
+   "uplift": 3.9,
+   "tonnes": 2330
+  },
+  {
+   "group": "Tools, hardware and fasteners",
+   "hs": "8467",
+   "product": "Hand tools, pneumatic and powered",
+   "origin": "Italy",
+   "cif_kg": 33.048,
+   "fob_kg": 32.313,
+   "uplift": 2.3,
+   "tonnes": 1461
+  },
+  {
+   "group": "Tools, hardware and fasteners",
+   "hs": "8467",
+   "product": "Hand tools, pneumatic and powered",
+   "origin": "Korea, Rep.",
+   "cif_kg": 31.486,
+   "fob_kg": 30.731,
+   "uplift": 2.5,
+   "tonnes": 662
+  },
+  {
+   "group": "Tools, hardware and fasteners",
+   "hs": "8467",
+   "product": "Hand tools, pneumatic and powered",
+   "origin": "Poland",
+   "cif_kg": 29.514,
+   "fob_kg": 28.863,
+   "uplift": 2.3,
+   "tonnes": 243
+  },
+  {
+   "group": "Tools, hardware and fasteners",
+   "hs": "8467",
+   "product": "Hand tools, pneumatic and powered",
+   "origin": "Viet Nam",
+   "cif_kg": 24.795,
+   "fob_kg": 24.508,
+   "uplift": 1.2,
+   "tonnes": 57829
+  }
+ ]
+}
