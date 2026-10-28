@@ -858,100 +858,73 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
 }</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do you charge for a quotation?", "acceptedAnswer": {"@type": "Answer", "text": "No. There is no fee for a quotation and no commission added on top of a producer's invoice. We buy the goods in our own name and resell them, so the price we quote is the price you pay."}}, {"@type": "Question", "name": "What is the smallest order you will handle?", "acceptedAnswer": {"@type": "Answer", "text": "We work in full container loads, because that is where the economics hold. A first order is normally one or two containers on full commercial terms before a monthly programme starts. For a trial we can consolidate several suppliers into one container."}}, {"@type": "Question", "name": "How fast can you reply?", "acceptedAnswer": {"@type": "Answer", "text": "An acknowledgement with the open questions within one working day. A landed price in about ten working days on a lane we already run. On a new lane it is longer, and we say how much longer at the start."}}, {"@type": "Question", "name": "Which languages do you work in?", "acceptedAnswer": {"@type": "Answer", "text": "English and Russian in correspondence. Our producer side also works in Chinese, Turkish, Portuguese and French through local partners, which is usually where a specification gets lost in translation."}}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ISP Group", "item": "https://ispgroupgc.com/"}, {"@type": "ListItem", "position": 2, "name": "Contact", "item": "https://ispgroupgc.com/contact"}]}</script>
-<script>
+<script>/* queue:v2 */
 (function(){
-  var nt=document.getElementById('navtoggle'), nm=document.getElementById('navmenu');
-  if(!nt||!nm) return;
-  nt.addEventListener('click',function(){
-    var open=nm.classList.toggle('open');
-    nt.setAttribute('aria-expanded', open?'true':'false');
-  });
-  nm.addEventListener('click',function(e){
-    if(e.target.tagName==='A'){ nm.classList.remove('open'); nt.setAttribute('aria-expanded','false'); }
-  });
-})();
-</script>
-<script>
-(function(){
-  /* Глубина при скролле. Всё делается инлайновыми стилями: без JS страница
-     остаётся полностью видимой, и поисковик видит обычный документ. */
-  if (!('IntersectionObserver' in window)) return;
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var EASE='cubic-bezier(.16,.74,.22,1)';
-  var SEL='.cap,.cat,.step,figure,.lede>*,.band .wrap>*,details,.scroller,.factcard,'+
-          '.pblock,.lanelink,.teaser>*,.ask,.steps,.fgrid>div';
-  var items=[].slice.call(document.querySelectorAll(SEL)).filter(function(e){
-    return !e.closest('.pz');
-  });
-  items.forEach(function(el){
-    var p=el.parentNode;
-    if(p.__g===undefined) p.__g=0;
-    el.__d=Math.min(p.__g++,5)*70;
-    el.style.willChange='transform,opacity';
-    el.style.opacity='0';
-    el.style.transform='perspective(1300px) rotateX(7deg) translate3d(0,36px,-70px)';
-  });
-  function show(el){
-    el.style.transition='opacity .75s '+EASE+' '+el.__d+'ms, transform .95s '+EASE+' '+el.__d+'ms';
-    el.style.opacity=''; el.style.transform='';
-    setTimeout(function(){ el.style.transition=''; el.style.willChange=''; }, el.__d+1200);
-  }
-  var io=new IntersectionObserver(function(es){
-    es.forEach(function(e){
-      if(!e.isIntersecting) return;
-      var el=e.target; io.unobserve(el); show(el);
-    });
-  },{rootMargin:'0px 0px -9% 0px', threshold:0.05});
-  items.forEach(function(el){ io.observe(el); });
+  var f=document.getElementById('cf');
+  var KEY='isp.queue';
 
-  /* Подстраховка. Наблюдатель изредка не срабатывает, и тогда блок остаётся
-     невидимым навсегда. Раз в полторы секунды показываем всё, что уже в кадре,
-     и прекращаем, когда скрытого не осталось. */
-  var sweeps=0;
-  var timer=setInterval(function(){
-    var left=0, h=window.innerHeight||0;
-    for(var i=0;i<items.length;i++){
-      var el=items[i];
-      if(el.style.opacity!=='0') continue;
-      left++;
-      if(el.getBoundingClientRect().top < h+140){ io.unobserve(el); show(el); }
-    }
-    if(!left || ++sweeps>40) clearInterval(timer);
-  },1500);
+  /* ---- очередь уведомлений -------------------------------------------
+     Живёт в localStorage, поэтому переживает закрытие вкладки. Каждый
+     элемент это то, что нужно для одной отправки: тело письма, номер
+     заявки и подпись, которой сервер поверит отметке «отправлено». */
+  function load(){ try{ return JSON.parse(localStorage.getItem(KEY)||'[]'); }catch(e){ return []; } }
+  function save(q){ try{ localStorage.setItem(KEY, JSON.stringify(q.slice(-20))); }catch(e){} }
+  function push(item){ var q=load(); q.push(item); save(q); }
+  function drop(stamp){ save(load().filter(function(x){ return x.stamp!==stamp; })); }
 
-  /* параллакс фотографий */
-  var live=[];
-  var pio=new IntersectionObserver(function(es){
-    es.forEach(function(e){
-      var i=live.indexOf(e.target);
-      if(e.isIntersecting){ if(i<0) live.push(e.target); }
-      else if(i>=0) live.splice(i,1);
-    });
-  },{rootMargin:'30% 0px 30% 0px'});
-  [].forEach.call(document.querySelectorAll('.pz'), function(e){ pio.observe(e); });
-  var queued=false;
-  function par(){
-    queued=false;
-    var h=window.innerHeight||1;
-    for(var i=0;i<live.length;i++){
-      var e=live[i], r=e.getBoundingClientRect();
-      var p=((r.top+r.height/2)-h/2)/h;
-      if(p>1.3)p=1.3; if(p<-1.3)p=-1.3;
-      e.style.transform='translate3d(0,'+(p*-5.6).toFixed(2)+'%,0)';
-    }
+  function send(item){
+    return fetch('https://formsubmit.co/ajax/info@ispgroupgc.com',{method:'POST',
+      headers:{'Content-Type':'application/json',Accept:'application/json'},
+      body:JSON.stringify(item.body)})
+      .then(function(r){ return r.json(); })
+      .then(function(j){ if(String(j&&j.success)!=='true') throw 0; return true; });
   }
-  function kick(){ if(!queued){ queued=true; requestAnimationFrame(par); } }
-  window.addEventListener('scroll',kick,{passive:true});
-  window.addEventListener('resize',kick,{passive:true});
-  par();
-})();
-</script>
-<script>
-(function(){
-  /* Заявка уходит на наш endpoint. Если он не отвечает, посетитель получает
-     готовый текст и адрес, а не молчание. */
-  var f=document.getElementById('cf'); if(!f) return;
+
+  function confirm(item){
+    if(!item.id || !item.token) return Promise.resolve();
+    return fetch('/api/quote',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({confirm:String(item.id), token:item.token})}).catch(function(){});
+  }
+
+  /* Три попытки с нарастающей паузой. Ретранслятор пропускает примерно
+     одну заявку в сорок секунд, поэтому паузы такого же порядка: более
+     частый повтор упирается в тот же отказ. */
+  function attempt(item, tries){
+    return send(item)
+      .then(function(){ drop(item.stamp); return confirm(item); })
+      .catch(function(){
+        if(tries<=1) return false;
+        return new Promise(function(res){ setTimeout(res, tries===3?4000:20000); })
+          .then(function(){ return attempt(item, tries-1); });
+      });
+  }
+
+  /* При открытии любой страницы сайта дожимаем то, что лежит в очереди.
+     Берём по одной: ретранслятор не любит очередей подряд. */
+  function drain(){
+    var q=load(); if(!q.length) return;
+    attempt(q[0], 2);
+  }
+
+  /* Вкладку закрывают. fetch в этот момент обрывается, sendBeacon нет:
+     браузер обязан его доставить уже после закрытия страницы. */
+  function flush(){
+    var q=load(); if(!q.length || !navigator.sendBeacon) return;
+    try{
+      navigator.sendBeacon('https://formsubmit.co/ajax/info@ispgroupgc.com',
+        new Blob([JSON.stringify(q[0].body)], {type:'application/json'}));
+    }catch(e){}
+  }
+  addEventListener('pagehide', flush);
+  addEventListener('visibilitychange', function(){ if(document.visibilityState==='hidden') flush(); });
+
+  if(document.readyState==='loading') addEventListener('DOMContentLoaded', drain);
+  else drain();
+
+  if(!f) return;
+
   function v(id){ var e=document.getElementById(id); return e?(e.value||'').trim():''; }
+
   f.addEventListener('submit',function(e){
     e.preventDefault();
     var data={ name:v('f-name'), mail:v('f-mail'), co:v('f-co'),
@@ -965,33 +938,43 @@ footer{padding-block:38px 60px;color:var(--ink-2);font-size:.9rem}
     }
     var btn=f.querySelector('button[type=submit]'); var label=btn.textContent;
     btn.disabled=true; btn.textContent='Sending';
+
     function plain(){return ['Name: '+data.name,'Company: '+data.co,'Work e-mail: '+data.mail,'',
         'Product: '+v('f-product'),'Quantity: '+data.qty,'Destination: '+data.dest,
         'Terms: '+data.terms,'','Notes:',v('f-note')].join('\n');}
-    function relay(){
-      var body={_subject:'Requirement: '+(data.co||data.name), _replyto:data.mail,
-        _template:'table', _captcha:'false', Name:data.name, 'Work e-mail':data.mail,
-        Company:data.co, Product:v('f-product'), Quantity:data.qty,
-        Destination:data.dest, Terms:data.terms, Notes:v('f-note')};
-      return fetch('https://formsubmit.co/ajax/info@ispgroupgc.com',{method:'POST',
-        headers:{'Content-Type':'application/json',Accept:'application/json'},
-        body:JSON.stringify(body)}).then(function(r){return r.json();})
-        .then(function(j){ if(String(j && j.success)!=='true') throw 0; return {ok:true}; });
+
+    function body(){ return {_subject:'Requirement: '+(data.co||data.name), _replyto:data.mail,
+      _template:'table', _captcha:'false', Name:data.name, 'Work e-mail':data.mail,
+      Company:data.co, Product:v('f-product'), Quantity:data.qty,
+      Destination:data.dest, Terms:data.terms, Notes:v('f-note')}; }
+
+    function done(ref){
+      var r = ref ? ' Your reference is <b>'+ref+'</b>.' : '';
+      f.innerHTML='<p class="cresult" style="margin:0"><b>Requirement received.</b>'+r+
+        ' We reply within one working day. If you have heard nothing by then, write to '+
+        '<a class="mail" href="mailto:info@ispgroupgc.com">info@ispgroupgc.com</a>'+
+        (ref?' quoting '+ref:'')+'.</p>';
+      if(window.gtag) gtag('event','quote_submit',{page:'contact'});
     }
+
     fetch('/api/quote',{method:'POST',headers:{'Content-Type':'application/json'},
       body:JSON.stringify(data)})
-      .then(function(r){ return r.json().catch(function(){return {ok:false};}); })
-      .then(function(j){ return (j && j.ok) ? j : relay(); })
+      .then(function(r){ return r.json().catch(function(){return null;}); })
       .then(function(j){
-        if(j && j.ok){
-          f.innerHTML='<p class="cresult" style="margin:0"><b>Requirement received.</b> '+
-            'We reply within one working day.</p>';
-          if(window.gtag) gtag('event','quote_submit',{page:'contact'});
-          return;
+        if(!j || !j.ok) throw 0;
+        /* Заявка у нас. Что бы дальше ни случилось с письмом, она не
+           потеряна, поэтому посетителю отвечаем сразу и честно. */
+        var ref = j.id ? ('#'+j.id) : '';
+        done(ref);
+        if(j.mail==='queued' || j.mail===false){
+          var item={stamp:Date.now(), id:j.id, token:j.token, body:body()};
+          push(item);
+          attempt(item, 3);
         }
-        throw 0;
       })
       .catch(function(){
+        /* Приёмник недоступен: заявки у нас нет. Единственный честный
+           выход это отдать человеку готовое письмо. */
         btn.disabled=false; btn.textContent=label;
         var subj='Requirement'+(v('f-product')?(': '+v('f-product')):'');
         out.innerHTML='We could not send this from the page. Please e-mail it to '+
