@@ -5,6 +5,15 @@
  * вес страницы делится надвое, а какая из версий попадёт в выдачу, решает
  * он, а не мы. Канонические ссылки это смягчают, но не отменяют.
  *
+ * Та же беда, и хуже, с адресами Pages. Проверено запросом: сайт целиком
+ * открывался на ispgroupgc.pages.dev с кодом 200 и с разрешением на
+ * индексацию. Вдобавок каждая выкладка заводит собственный адрес вида
+ * 79c1991b.ispgroupgc.pages.dev, и все они живут вечно. То есть копий
+ * сайта не две, а столько, сколько было выкладок, и ссылка на любую из
+ * них уводит вес с настоящего домена.
+ *
+ * Поэтому правило общее: всё, что не апекс, едет на апекс.
+ *
  * Настраивается это обычно правилом в зоне Cloudflare, но прав на зону у
  * нашего токена нет. Здесь то же самое делается на самом Pages: корневое
  * middleware получает каждый запрос, включая запросы к статике, и отдаёт
@@ -25,8 +34,11 @@ import { drainOne } from "./_queue.js";
 export async function onRequest(context) {
   const url = new URL(context.request.url);
 
-  if (url.hostname.toLowerCase().startsWith("www.")) {
-    url.hostname = url.hostname.slice(4);
+  const APEX = "ispgroupgc.com";
+  const host = url.hostname.toLowerCase();
+
+  if (host !== APEX) {
+    url.hostname = APEX;
     return new Response(null, {
       status: 301,
       headers: {
