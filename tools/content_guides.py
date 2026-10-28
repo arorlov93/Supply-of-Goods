@@ -209,10 +209,15 @@ GUIDES_PAGES = [
        "list written into it. A credit that calls for an inspection certificate issued by a "
        "named third party protects the buyer. A credit that calls only for an invoice and a "
        "bill of lading protects the seller."),
-  ("h2","Sight, usance and what each one costs the other side"),
-  ("p","A credit payable <b>at sight</b> pays on presentation of compliant documents, which "
-       "in practice is a few banking days after shipment. A <b>usance</b> credit pays a "
-       "stated number of days later, typically 30, 60 or 90 from the bill of lading date."),
+  ("h2","A letter of credit at sight, and what usance changes"),
+  ("p","A credit payable <b>at sight</b> pays against a compliant presentation. At sight does "
+       "not mean on the day. Under the ICC rules each bank in the chain has up to five "
+       "banking days following the day of presentation to decide whether the documents "
+       "comply, and payment follows that decision. So a sight credit funds the seller about "
+       "a week after the documents are lodged, not when the vessel sails, and a seller who "
+       "has promised a supplier payment on departure has mistimed it by that week."),
+  ("p","A <b>usance</b> credit pays a stated number of days later, typically 30, 60 or 90 "
+       "from the bill of lading date."),
   ("p","The difference is not a formality, it is the whole financing question. At sight, the "
        "seller is funded while the vessel is at sea. At 90 days, the seller is lending the "
        "buyer the value of the cargo for three months and will price that in, openly or "
@@ -224,9 +229,37 @@ GUIDES_PAGES = [
        "undertakes to pay independently. Confirmation costs a fee that scales with the "
        "perceived risk of the issuing bank, and on some corridors that fee is the honest "
        "market price of the country risk."),
+  ("p","On a confirmed credit payable at sight the undertaking to pay on that examination "
+       "sits with the confirming bank in the seller's own country. The five banking days are "
+       "the same. What changes is whose balance sheet and whose jurisdiction the seller is "
+       "waiting on, which on some corridors is the entire point of the exercise."),
   ("note","If a seller insists on confirmation and the buyer finds the cost unreasonable, "
           "the disagreement is not really about the fee. It is about what the market thinks "
           "of the issuing bank, and that is worth knowing before the first shipment."),
+  ("h2","What a letter of credit costs"),
+  ("p","The figure that catches people out is not the percentage, it is that the percentage "
+       "runs per period of validity rather than once. Published bank tariffs show the shape. "
+       "DBS in Singapore charges issuance at one eighth of one per cent per month, with a "
+       "minimum of two months and a floor of S$80, S$80 for an amendment, and US$80 for each "
+       "discrepant presentation. The Co-operative Bank of Kenya charges half a per cent per "
+       "quarter or part of a quarter, with a floor of KES 1,000. HSBC in Poland computes the "
+       "commission over the period of validity and takes a minimum of EUR 90 for each started "
+       "month on the deferred payment element."),
+  ("p","Three things follow from that shape. A credit valid for four months costs roughly "
+       "four times one valid for a month, so the cheapest saving available is a validity "
+       "window cut to the shipment rather than to the negotiation. Minimums dominate small "
+       "values: against an S$80 floor, a credit for twenty thousand dollars pays an effective "
+       "rate that appears in no tariff. And every discrepancy is charged separately on top, "
+       "which is why a presentation that goes back twice costs more than the amendment that "
+       "would have prevented it."),
+  ("p","Confirmation is the one line no tariff publishes. Every schedule we have read says "
+       "subject to quotation, because confirmation is the price of the issuing bank's country "
+       "risk on the day the quote is given. A bank that will not quote it has told you "
+       "something about the corridor."),
+  ("note","Charges land on both legs, the issuing side and the advising or negotiating side, "
+          "and the credit names which party carries which. When that allocation is left "
+          "vague, it does not disappear. It arrives as a deduction from the payment, and the "
+          "seller learns the answer at settlement."),
   ("h2","Discrepancies, which is where credits actually fail"),
   ("p","Compliance is strict. A spelling difference between the invoice and the credit, a "
        "bill of lading dated one day outside the shipment window, a certificate signed by "
@@ -268,7 +301,21 @@ GUIDES_PAGES = [
           "Under the current ICC rules every credit is irrevocable unless it says otherwise, "
           "and it cannot be amended or cancelled without the agreement of the beneficiary and "
           "any confirming bank. What it can be is discrepant on presentation, which is a "
-          "different and far more common problem.")],
+          "different and far more common problem."),
+         ("Does a letter of credit at sight pay immediately?",
+          "No. At sight means payment is due against a compliant presentation rather than at "
+          "a date in the future, but the banks have up to five banking days after the day of "
+          "presentation to examine the documents. In practice a sight credit funds the seller "
+          "about a week after documents are lodged, and longer if the first presentation is "
+          "discrepant."),
+         ("How much does a letter of credit cost?",
+          "Issuance commission is charged per period of validity, not once, and it is the "
+          "validity window rather than the rate that drives the bill. Published tariffs run "
+          "from about an eighth of a per cent per month to half a per cent per quarter, "
+          "always with a minimum that dominates small credits, plus a flat fee for each "
+          "amendment and each discrepant presentation, commonly around eighty dollars for "
+          "either. Confirmation is quoted separately because it prices the issuing bank's "
+          "country risk, and no bank publishes it.")],
 },
 {
  "slug": "customs-data-pricing",
@@ -920,7 +967,7 @@ GUIDES_PAGES = [
          "accepts. The strongest position for the bank and the most common under a credit.",
          "<b>Notify party</b> is not the consignee. It is who the carrier telephones on "
          "arrival, and it has no rights over the cargo at all."]),
-  ("h2","Telex release, which is not a telex"),
+  ("h2","Telex release and express release, which are not the same thing"),
   ("p","On a short voyage the vessel arrives before the paperwork, and originals posted from "
        "the origin will not be at the destination in time. A telex release solves it: the "
        "shipper surrenders all originals to the carrier at the origin, and the carrier "
@@ -930,8 +977,28 @@ GUIDES_PAGES = [
        "carrier process rather than a legal instrument, every line does it slightly "
        "differently, charges differently for it, and takes a different amount of time, which "
        "has to be asked about before the booking rather than during the crisis."),
-  ("p","An express release is the same idea built in from the start: the bill is issued "
-       "non-negotiable and no original is ever printed."),
+  ("p","An <b>express release</b> is the same idea built in from the start: the bill is "
+       "issued non-negotiable and no original is ever printed, so there is nothing to "
+       "surrender later. Telex release is a repair applied to a negotiable bill after it "
+       "exists. Express release is a decision taken at booking, before it exists. People use "
+       "the two names interchangeably and then argue at the discharge port about which one "
+       "they actually bought."),
+  ("ul",["<b>Original bills, presented.</b> Three originals are issued, couriered, and one "
+         "is surrendered at the destination. Full control, slowest, the only version a bank "
+         "can hold as security.",
+         "<b>Telex release.</b> Originals are issued and then surrendered at the origin, and "
+         "the carrier releases at the destination without presentation. Fast, costs a fee, "
+         "and the seller's control ends at surrender.",
+         "<b>Express release, also called a seaway bill.</b> No original is ever printed. "
+         "Nothing to courier and nothing to lose, no security for anyone, correct for "
+         "intra-group moves and for shipments already paid for.",
+         "<b>Bank release.</b> The bill is made out to the order of a bank, and the bank "
+         "endorses it to the buyer once the credit is satisfied. The only route that gives "
+         "the seller both speed and security, and it costs bank charges to get there."]),
+  ("note","Ask the line what it charges for a telex release and how long its own office at "
+          "the discharge port takes to act on one, before the booking. The answers differ by "
+          "carrier, by trade lane and sometimes by port, and nobody volunteers them while "
+          "the container is accruing demurrage."),
   ("h2","House and master bills"),
   ("p","When a freight forwarder consolidates, the ocean carrier issues a master bill to the "
        "forwarder, and the forwarder issues a house bill to each shipper. The house bill is "
@@ -972,7 +1039,15 @@ GUIDES_PAGES = [
          ("Can I get my cargo without the original bill of lading?",
           "Only with the carrier's agreement, normally against a bank guarantee for a "
           "multiple of the cargo value. It is expensive and the bank will want security. "
-          "Preventing the situation costs nothing by comparison.")],
+          "Preventing the situation costs nothing by comparison."),
+         ("What is the difference between a telex release and an express release?",
+          "Timing and intent. An express release is decided at booking: the bill is issued "
+          "non-negotiable, no original is ever printed, and there is nothing to surrender. A "
+          "telex release is applied afterwards to a bill that was issued as a negotiable "
+          "original: the shipper hands all the originals back at the origin and the carrier "
+          "tells its destination office to release without presentation. At the counter the "
+          "outcome looks the same. The difference is that with a telex release the originals "
+          "existed, and until they are surrendered the seller still holds control.")],
 },
 {
  "slug": "demurrage-detention",
@@ -1076,7 +1151,7 @@ GUIDES_PAGES = [
    "a reduced or zero duty under a trade agreement. The second is worth money and is "
    "therefore checked properly."),
  "body": [
-  ("h2","Non-preferential: who made it"),
+  ("h2","A non-preferential certificate of origin, and who issues it"),
   ("p","This is the ordinary certificate, usually issued by a chamber of commerce in the "
        "exporting country on the exporter's declaration. It is used for customs statistics, "
        "for government procurement rules, for labelling requirements, for quotas and for "
@@ -1084,6 +1159,22 @@ GUIDES_PAGES = [
   ("p","It carries no duty benefit by itself. It is still the document that decides whether "
        "an antidumping order reaches your consignment, which makes it quietly important on "
        "any lane where such an order exists."),
+  ("p","Worth being clear about what the chamber actually certifies. It stamps the "
+       "exporter's declaration of origin, not the origin itself. Nobody from the chamber "
+       "visits the plant. The real test happens at import, when customs decides whether the "
+       "declared origin survives the rules of origin, and the certificate is evidence in "
+       "that argument rather than the end of it."),
+  ("p","In the United States it is a chamber of commerce service and the price depends on "
+       "which chamber and whether you are a member, with most of them requiring the "
+       "affidavit to be notarised before they will sign. Published schedules run from three "
+       "dollars per impression for members at one California chamber to ninety dollars per "
+       "appointment for non-members at a Texas one; forty dollars for a non-member "
+       "certificate is a fair middle. Several chambers have dropped counter service and "
+       "issue only through an online system. In the United Kingdom a London chamber lists "
+       "twenty nine pounds for members and fifty eight for non-members before tax. Two "
+       "conclusions: membership roughly halves the cost on any exporter who files regularly, "
+       "and the price is small enough that the real cost of this document is the day lost "
+       "when the notarisation is missing."),
   ("h2","Preferential: why it is worth money"),
   ("p","A preferential certificate claims the reduced duty available under a specific trade "
        "agreement between the exporting and importing countries. Because it has a cash value "
@@ -1148,7 +1239,15 @@ GUIDES_PAGES = [
          ("What happens if the preference claim is rejected later?",
           "The importer pays the full duty with interest, usually on an audit years after "
           "the goods were sold. This is why we quote the landed cost both with and without "
-          "the preference when it materially changes the price.")],
+          "the preference when it materially changes the price."),
+         ("How much does a non-preferential certificate of origin cost?",
+          "It is a chamber of commerce fee and it varies by chamber and by whether the "
+          "exporter is a member. Published United States schedules run from a few dollars "
+          "per impression for members to around ninety dollars per appointment for "
+          "non-members, with forty dollars a fair middle for a non-member certificate. A "
+          "London chamber lists twenty nine pounds for members and fifty eight for "
+          "non-members before tax. Most chambers require the affidavit to be notarised "
+          "first, and the notarisation is usually what costs the day.")],
 },
 {
  "slug": "proforma-invoice",
@@ -1178,7 +1277,13 @@ GUIDES_PAGES = [
          "control it.",
          "<b>Customs valuation in advance</b>, for an estimate of duty before the order is "
          "placed."]),
-  ("h2","What has to be on it"),
+  ("h2","What an international proforma invoice has to contain"),
+  ("p","On a domestic sale a proforma can be two lines. Across a border it is read by four "
+       "parties who never meet: the buyer, who decides on it; the buyer's bank, which copies "
+       "it into the application for the credit; the importing customs authority, which may "
+       "accept it for a tariff classification ruling or an import licence before the goods "
+       "exist; and the insurer, which prices cover from the value and the Incoterm on it. "
+       "Each of them needs a different line, and the document has to carry all of them."),
   ("p","A proforma that is missing any of these will cost a round trip, and under a "
        "documentary credit it can cost a discrepancy."),
   ("ul",["Seller and buyer legal names and addresses, as registered, not trading names.",
@@ -1238,6 +1343,14 @@ GUIDES_PAGES = [
          ("What is the single most important line on it?",
           "The bank beneficiary name, which has to match the seller's registered name "
           "exactly. Every payment-diversion fraud in this trade runs through a mismatch "
-          "there.")],
+          "there."),
+         ("What makes a proforma invoice international rather than domestic?",
+          "The number of parties who read it. Across a border the same sheet is used by the "
+          "buyer to decide, by the buyer's bank to draft the credit, by the importing "
+          "customs authority for a classification ruling or a licence application, and by "
+          "the insurer to price cover. That is why an international proforma has to carry "
+          "the Incoterm with its named place and edition, the HS code, the country of "
+          "origin, the currency written out and a validity date for the price, none of "
+          "which a domestic quotation needs.")],
 },
 ]
