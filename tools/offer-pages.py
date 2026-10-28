@@ -251,9 +251,10 @@ def quote_check(doc):
      "slug": "quote-check",
      "crumb": "Quote check",
      "title": "Send the quotation you already have. We check it free",
+     # Выдача обрезает описание около 160 знаков, поэтому оно считается.
      "desc": ("Send a quotation you already hold. We rebuild it as a landed price, "
-              "benchmark it against customs data and say whether the seller is a "
-              "factory or a trader. Two working days, no obligation."),
+              "benchmark it against customs data and check the seller. Free, two "
+              "working days."),
      "og_title": "You already have a quotation. Send it to us",
      "og_img": "signing.jpg",
      "og_alt": "Signing paperwork across a desk",
@@ -378,9 +379,9 @@ def three_origins(doc):
      "slug": "three-origins",
      "crumb": "Three origins",
      "title": "One specification priced out of three origins, landed",
-     "desc": ("The same specification priced from three countries, delivered to your "
-              "gate, with lead time, certification and duty exposure named. A decision "
-              "document, not a quotation."),
+     "desc": ("The same specification priced from three countries, landed at your gate, "
+              "with lead time, certification and duty named. A decision document, not a "
+              "quotation."),
      "og_title": "One specification. Three origins. One comparison",
      "og_img": "containers-wall.jpg",
      "og_alt": "Wall of stacked shipping containers",
