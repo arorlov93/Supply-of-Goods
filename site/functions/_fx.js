@@ -30,6 +30,7 @@
 const URL_ECB = "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml";
 const KEY = "https://fx.internal/ecb-90d";
 const TTL = 6 * 3600;          // курсы меняются раз в сутки, шесть часов с запасом
+const WAIT = 1500;             // сколько готовы ждать ЕЦБ на промахе кэша, мс
 const BACK = 22;               // торговых дней в месяце, примерно
 
 // Валюты, в которых продавцы на наших коридорах выставляют счёт.
@@ -82,11 +83,30 @@ async function pull() {
   return fx;
 }
 
-/* Берём из кэша. Промах не ждём: возвращаем null, а поход за свежими
-   вешаем на waitUntil. */
+function store(cache, req, fx) {
+  return cache.put(
+    req,
+    new Response(JSON.stringify(fx), {
+      headers: {
+        "content-type": "application/json",
+        "cache-control": "public, max-age=" + TTL,
+      },
+    })
+  );
+}
+
+/* Ключ кэша включает сегодняшнюю дату по UTC. Это не украшение: без даты запись
+   живёт по сроку, и первый посетитель нового дня мог бы получить вчерашние
+   курсы просто потому, что срок ещё не вышел. С датой в ключе устаревание
+   не умеет пересечь границу суток. */
+function keyFor() {
+  return new Request(KEY + "?d=" + new Date().toISOString().slice(0, 10));
+}
+
 export async function fxCached(ctx) {
   const cache = caches.default;
-  const req = new Request(KEY);
+  const req = keyFor();
+
   const hit = await cache.match(req);
   if (hit) {
     try {
@@ -95,24 +115,27 @@ export async function fxCached(ctx) {
       /* битая запись, перезапишем ниже */
     }
   }
+
+  /* Промах. Ждём источник, но недолго: полторы секунды это заметно меньше,
+     чем разница между вчерашней и сегодняшней датой на странице, и заметно
+     меньше, чем терпение читателя. Не успел - отдаём запечённое, а запись
+     в кэш доделываем после ответа, и следующий посетитель получит свежее. */
+  const fetching = pull();
   if (typeof ctx.waitUntil === "function") {
     ctx.waitUntil(
-      pull()
-        .then((fx) =>
-          cache.put(
-            req,
-            new Response(JSON.stringify(fx), {
-              headers: {
-                "content-type": "application/json",
-                "cache-control": "public, max-age=" + TTL,
-              },
-            })
-          )
-        )
+      fetching
+        .then((fx) => store(cache, req, fx))
         .catch((e) => console.log("fx: не обновил,", String(e).slice(0, 120)))
     );
   }
-  return null;
+  try {
+    return await Promise.race([
+      fetching,
+      new Promise((res) => setTimeout(() => res(null), WAIT)),
+    ]);
+  } catch {
+    return null;
+  }
 }
 
 function esc(s) {
