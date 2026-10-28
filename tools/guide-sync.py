@@ -85,6 +85,11 @@ def pieces(spec):
     """Три куска страницы ровно в том виде, в каком они на ней лежат."""
     faq = spec.get("faq") or []
     out = {
+        # Описание стоит дважды, в обычном мета-теге и в og:description, и в
+        # обоих местах текст один. Поэтому кусок здесь не весь тег, а само
+        # значение, и меняется оно в обоих местах сразу.
+        "заголовок": "<title>%s</title>" % spec["title"],
+        "описание": 'content="%s">' % spec["desc"],
         "оглавление": (EYEBROW.sub("", G.toc(spec["body"])) if G.toc(spec["body"]) else ""),
         "текст": G.prose(spec["body"]),
         "вопросы": G.faq_html(faq) if faq else "",
@@ -113,7 +118,9 @@ def sync(slug, old, new, dry):
         if a[name] not in html:
             return ("%s: кусок «%s» на странице не найден дословно, "
                     "страница разошлась с источником, не трогаю" % (slug, name)), False
-        if html.count(a[name]) != 1:
+        # Описание повторяется в двух мета-тегах, всё остальное строго один раз.
+        allowed = 2 if name == "описание" else 1
+        if html.count(a[name]) > allowed:
             return ("%s: кусок «%s» встречается %d раза, не трогаю"
                     % (slug, name, html.count(a[name]))), False
         html = html.replace(a[name], b[name])

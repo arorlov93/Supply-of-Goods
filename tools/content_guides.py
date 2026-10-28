@@ -469,52 +469,99 @@ GUIDES_PAGES = [
 },
 {
  "slug": "ispm-15",
- "title": "ISPM 15: how a pallet stops a container | wood packaging",
- "desc": "What ISPM 15 covers, the treatment codes, how to read the mark, which wood is "
-         "exempt, and why the check belongs at loading rather than at arrival.",
+ "title": "ISPM 15 for pallets and crates | the mark, the treatments, the refusal",
+ "desc": "Which wood packaging is in scope and which is exempt, how to read the IPPC mark on "
+         "a pallet or crate, what HT, DH and MB mean, the hyphen enforced since January 2026, "
+         "and what a United States port does when the mark is wrong.",
  "trail": t("ISPM 15"),
  "h1": "How a pallet <em>stops a container</em>",
  "sub": "Untreated wood packaging is refused at the border of most countries in the world. "
-        "The cargo inside it is irrelevant, the cost falls on the importer, and the whole "
-        "thing is preventable with a photograph taken at loading.",
- "chips": ["IPPC mark", "HT &middot; DH &middot; MB", "6 mm exemption",
-           "Checked before sealing"],
+        "The cargo inside it is irrelevant, the cost falls on the importer, and in the "
+        "United States there is no option to fix it on arrival.",
+ "chips": ["Pallets, crates, dunnage", "HT &middot; DH &middot; MB", "6 mm exemption",
+           "Hyphen enforced since 2026"],
  "lede": ("A rule about insects that behaves like a rule about money",
    "Solid wood carries pests between continents. The international standard that addresses "
    "it is adopted by most trading nations, and enforcement is at the border, where the only "
    "available remedies are expensive."),
  "body": [
-  ("h2","What is covered"),
-  ("p","Wood packaging material: pallets, crates, cases, boxes, drums, dunnage, blocking and "
-       "bracing. If it is solid wood and it is holding your cargo in place, it is in scope."),
-  ("p","Processed wood-based materials are out of scope, because the manufacturing process "
-       "already destroys pests. That includes plywood, oriented strand board, particle board "
-       "and veneer, and in general thin wood below the thickness threshold the standard "
-       "sets. Wood that has been fully stripped of bark and processed into panels is not the "
-       "problem the rule addresses."),
-  ("h2","The treatments and the mark"),
-  ("p","Approved treatments are heat treatment to a specified core temperature and duration, "
-       "dielectric heating, and fumigation, with the fumigant in question being phased out in "
-       "many jurisdictions on environmental grounds. Heat treatment is the normal commercial "
-       "answer."),
-  ("p","Treated material carries a stamp with four elements: the IPPC wheat symbol, the "
-       "two-letter country code, a unique number identifying the treatment provider, and the "
-       "treatment code. The mark must be legible, permanent and on at least two opposite "
-       "sides of the item."),
-  ("note","A hand-written stamp, a mark on one side only, a mark that is illegible, or a "
-          "pallet that has been repaired with untreated timber after being marked: each of "
-          "these fails, and each is common."),
-  ("h2","What happens when it fails"),
-  ("p","The options at the border are all bad and all at the importer's cost: treatment at "
-       "the port where that is available, re-export of the packaging, destruction of the "
-       "packaging, or in the worst case refusal of the whole consignment. On top of the "
-       "direct cost the container sits, and demurrage accrues from the day it lands."),
-  ("p","The timing is what makes this expensive. A non-compliant pallet costs a few tens of "
-       "dollars to replace at the factory and several thousand to resolve at the destination."),
+  ("h2","Which wood packaging is in scope, and which is exempt"),
+  ("p","In scope is solid wood doing a packaging job: <b>pallets, crates, cases, boxes, "
+       "drums, skids, load boards, dunnage, blocking and bracing</b>. If it is sawn timber "
+       "and it is holding your cargo in place, the rule reaches it. The cargo itself is "
+       "irrelevant; a container of medical devices is stopped by the timber under it exactly "
+       "as a container of machinery is."),
+  ("p","Out of scope is wood that manufacturing has already sterilised, and wood too thin to "
+       "harbour the pests the rule targets:"),
+  ("ul",["<b>Processed panels.</b> Plywood, oriented strand board, particle board, hardboard "
+         "and veneer, because glue, heat and pressure have done the job.",
+         "<b>Raw wood 6 mm thick or less.</b> The thickness threshold in the standard.",
+         "<b>Presswood and moulded pallets, and composite blocks</b> made from chips, "
+         "shavings or sawdust bonded under heat.",
+         "<b>Plastic, corrugated and metal pallets.</b> Not wood, not in scope.",
+         "<b>Barrels for wine and spirits</b> that have been heated in manufacture."]),
+  ("note","The trap is the mixed item. A plywood case is exempt, but the solid wood frame or "
+          "skid under it is not, and that frame has to carry the mark. Inspectors look at the "
+          "frame, not at the panel."),
+  ("h2","How to read the mark on a pallet or crate"),
+  ("p","The stamp is not decoration, it is the entire evidence. It carries the IPPC wheat "
+       "symbol, a two-letter ISO country code, a unique number identifying the producer or "
+       "treatment provider registered with that country's plant protection organisation, and "
+       "a treatment code. <b>DB</b> may appear for debarked, and <b>DUN</b> for loose "
+       "dunnage rather than a made-up packaging unit."),
+  ("p","Form matters as much as content. The mark must be legible, permanent and not "
+       "transferable, and it should appear on at least two opposite sides so an inspector "
+       "can find one without unstacking the load. Red and orange are avoided because those "
+       "colours belong to dangerous goods labelling. A tag is not a mark unless it cannot be "
+       "removed without destroying it."),
+  ("note","Four marks fail routinely: hand-drawn, on one side only, illegible under the "
+          "shrink wrap, and correct but on a pallet that was repaired with untreated timber "
+          "after it was stamped. The last one is the hardest to catch and the most common in "
+          "a factory that fixes its own pallets."),
+  ("h2","The hyphen, and why it stopped shipments in 2026"),
+  ("p","The country code and the producer number are separated by a hyphen: <b>GB-1234</b>, "
+       "not GB 1234 and not GB1234. For years the United States let a missing hyphen pass. "
+       "That suspension ended on 31 December 2025, and from 1 January 2026 APHIS and Customs "
+       "treat a mark without the hyphen as non-compliant, with no grace period and no phased "
+       "rollout."),
+  ("p","It is worth saying plainly what that means, because it sounds too small to matter. A "
+       "consignment that is correctly treated, correctly stamped and genuinely free of pests "
+       "is refused over a typographic character in the stamp, and there is no approved way to "
+       "re-mark it on arrival. This rule has been suspended and reinstated before, so it is "
+       "worth confirming its current state with your broker rather than assuming either way."),
+  ("h2","The treatments, and what HT, DH and MB actually do"),
+  ("p","<b>HT</b> is heat treatment: the core of the wood, not its surface, held at 56 "
+       "degrees Celsius or above for at least thirty consecutive minutes. This is the normal "
+       "commercial answer and the one you will see on most pallets."),
+  ("p","<b>DH</b> is dielectric heating, microwave in practice, which reaches 60 degrees "
+       "through the whole profile for one minute. <b>MB</b> is methyl bromide fumigation. It "
+       "still appears, but the fumigant is being withdrawn on environmental grounds and some "
+       "countries will not accept wood marked with it, so an MB stamp is a question to ask "
+       "rather than an answer to accept."),
+  ("note","Heat treatment kills insects and nematodes. It does not kill fungi, and it does "
+          "not stop mould forming later on wood that was kilned wet or wrapped warm. An HT "
+          "stamp is a plant health document, not a promise about mould, and arguing otherwise "
+          "with a supplier after a mouldy container wastes a week."),
+  ("h2","What a United States port does when the mark is wrong"),
+  ("p","The widespread belief that the packaging can be treated at the port is wrong for the "
+       "United States. By regulation there is no approved treatment of wood packaging on "
+       "arrival. The remedy is immediate re-export under bond, and where the timber cannot be "
+       "separated from the cargo, the cargo is exported with it."),
+  ("p","Since November 2017 Customs can assess a monetary penalty on the first violation "
+       "rather than issuing a warning, under the statute covering false or negligent entry, "
+       "alongside liquidated damages under the importer's bond. Both can be petitioned, and "
+       "mitigation is refused where the importer hid the problem, falsified the mark, or "
+       "took no steps to prevent a repeat."),
+  ("p","Meanwhile the container sits and demurrage runs from the day it landed. That is what "
+       "makes the arithmetic absurd: a compliant pallet costs a few tens of dollars at the "
+       "factory, and the same pallet non-compliant costs several thousand at the destination, "
+       "most of it in time rather than in the pallet."),
   ("h2","Where the check belongs"),
   ("ul",["At loading, before the container is sealed, not at arrival.",
          "Photograph the mark on the pallets actually used, not on a sample pallet in the "
          "corner of the warehouse.",
+         "Read the hyphen in the photograph. It is the one defect that is invisible to "
+         "everyone who is checking that a stamp exists rather than checking what it says.",
          "Photograph the dunnage and the bracing too, because loose timber used to chock a "
          "machine is wood packaging and is caught by the same rule.",
          "Where a factory repairs pallets in house, confirm that repair timber is also "
@@ -527,19 +574,39 @@ GUIDES_PAGES = [
        "specially for one shipment, and consolidated loads where one of six suppliers used "
        "its own timber. All four are situations we see at the start of a new lane, which is "
        "exactly when nobody is looking for it."),
+  ("h2","What we do"),
+  ("p","We write the treatment and the mark into the purchase order rather than assuming "
+       "them, and we ask for photographs of the stamped timber actually going into the "
+       "container, read for the hyphen and for the country code, before the doors close. On "
+       "a first shipment from a factory that normally sells domestically we treat it as a "
+       "named risk and check it ourselves rather than taking the declaration."),
  ],
- "faq": [("Does this apply to plywood pallets?",
-          "No. Processed wood-based materials such as plywood, OSB and particle board are "
-          "out of scope because the manufacturing process destroys pests. The rule targets "
-          "solid wood."),
+ "faq": [("Does ISPM 15 apply to plywood pallets?",
+          "Not to the plywood itself. Processed panels such as plywood, OSB, particle board "
+          "and veneer are out of scope because the manufacturing process destroys pests. But "
+          "if the plywood case sits on a solid wood skid or has a sawn timber frame, that "
+          "timber is in scope and has to carry the mark, and that is where consignments are "
+          "caught."),
+         ("Does ISPM 15 apply to crates as well as pallets?",
+          "Yes. Pallets, crates, cases, boxes, drums, skids, dunnage, blocking and bracing "
+          "are all wood packaging material. Crates built one-off for out-of-gauge machinery "
+          "are among the most common failures, because they are made by a workshop that does "
+          "not normally export and has no registered treatment provider."),
+         ("What does HT mean on a pallet?",
+          "Heat treated: the core of the wood was held at 56 degrees Celsius or more for at "
+          "least thirty consecutive minutes. It is a plant health treatment aimed at insects "
+          "and nematodes. It is not a guarantee against mould, which forms on wood that was "
+          "wet when it was wrapped regardless of the stamp."),
          ("Our supplier says the pallets are treated. Is that enough?",
           "No, because the mark is the evidence and only the mark counts at the border. Ask "
           "for photographs of the stamp on the pallets going into your container, taken at "
           "loading. It costs nothing and it is the only proof that travels."),
-         ("What if the container arrives and the pallets are not marked?",
-          "The options are treatment at the port where available, re-export or destruction of "
-          "the packaging, or refusal of the consignment, all at the importer's cost, with "
-          "demurrage running throughout. There is no version of this that is cheap.")],
+         ("What if the container arrives in the United States and the pallets are not marked?",
+          "There is no approved treatment of wood packaging on arrival in the United States, "
+          "so the remedy is immediate re-export under bond, and where the timber cannot be "
+          "separated from the cargo the cargo goes with it. A monetary penalty can be "
+          "assessed on the first violation, with liquidated damages under the bond on top, "
+          "and demurrage runs throughout. There is no cheap version of this.")],
 },
 {
  "slug": "container-loading",
@@ -1051,15 +1118,17 @@ GUIDES_PAGES = [
 },
 {
  "slug": "demurrage-detention",
- "title": "Demurrage and detention | the two clocks after arrival",
- "desc": "Demurrage runs while the container sits in the terminal, detention while you have "
-         "it outside. Free time, reefer rates, who pays and how to stop the clock.",
+ "title": "Demurrage and detention charges | the two clocks after arrival",
+ "desc": "What demurrage charges are, how the daily rate escalates, why free time is "
+         "negotiated rather than fixed, and the United States billing rules that let you "
+         "refuse an invoice that is late or incomplete.",
  "trail": t("Demurrage and detention"),
  "h1": "Two clocks start <em>the day the vessel berths</em>",
  "sub": "Demurrage runs while the container is still in the terminal. Detention runs while "
         "you have the container outside it. They are different charges, from different "
         "parties, and almost nobody budgets for either.",
- "chips": ["Demurrage: inside", "Detention: outside", "Free time", "Reefer is shorter"],
+ "chips": ["Demurrage: inside", "Detention: outside", "Rates escalate",
+           "US billing rules since 2024"],
  "lede": ("The largest cost that never appears in a quotation",
    "Freight is negotiated to the dollar and these are discovered on an invoice weeks later. "
    "On a lane where clearance is slow they are not an edge case, they are a line in the "
@@ -1077,6 +1146,31 @@ GUIDES_PAGES = [
        "two offers."),
   ("note","A third charge, port storage, can run alongside demurrage and is billed by the "
           "terminal rather than the line. On congested ports it is the larger of the two."),
+  ("h2","What demurrage charges actually look like"),
+  ("p","There is no single rate, and anyone who quotes you one number is quoting one "
+       "carrier at one port on one day. Every line publishes a tariff, every tariff differs "
+       "by port and by equipment, and the lines revise them: two of the largest changed "
+       "their United States schedules in the first months of 2026. The same box, held the "
+       "same number of days at the same terminal, can cost several times more on one "
+       "carrier's tariff than on another's. This is a thing to read before booking, not "
+       "after berthing."),
+  ("p","What is predictable is the shape, and the shape is where the money is:"),
+  ("ul",["<b>It escalates in tiers.</b> The daily rate is not flat. It steps up after the "
+         "first few chargeable days, steps up again around the second week, and again after "
+         "that. A container stuck for three weeks does not cost three times a container "
+         "stuck for one. It costs considerably more.",
+         "<b>Free time is counted in working days or in calendar days, and the tariff says "
+         "which.</b> Four working days over a weekend and a holiday is eight calendar days. "
+         "Four calendar days is four. Comparing two offers without checking this compares "
+         "nothing.",
+         "<b>Reefer free time is a fraction of dry and the rate is a multiple of it</b>, "
+         "because the box is drawing power and is scarce.",
+         "<b>Terminal storage is a separate bill.</b> Some ports also levy their own dwell "
+         "charge after a set number of days, on top of the carrier's demurrage, from a "
+         "different party, on a different clock."]),
+  ("note","The practical consequence: the daily rate is the wrong number to negotiate. The "
+          "tier boundaries and the free time are the right ones, because they decide which "
+          "rate you ever reach."),
   ("h2","Free time is a negotiated number, not a fact"),
   ("p","Free time varies by carrier, by trade lane, by season and by how much volume you "
        "give the line. It is routinely extendable at the time of booking and almost never "
@@ -1098,6 +1192,33 @@ GUIDES_PAGES = [
          "<b>Receiving site cannot unload.</b> No forklift for the weight, no dock, nobody "
          "on site on Friday afternoon.",
          "<b>Port congestion.</b> Not your fault and still your invoice."]),
+  ("h2","In the United States the invoice itself has rules"),
+  ("p","Since 28 May 2024 demurrage and detention billing into the United States is governed "
+       "by a Federal Maritime Commission rule, and it is the most useful thing on this page, "
+       "because it turns an argument about fairness into a question of compliance. The "
+       "parts that matter to a buyer:"),
+  ("ul",["<b>Only one of two parties can be billed.</b> Either the party that contracted for "
+         "the transportation or storage, or the consignee, meaning the ultimate recipient of "
+         "the cargo. An invoice cannot be issued to several parties at once, so a bill "
+         "addressed to you because you were easiest to find is not necessarily a bill you "
+         "owe.",
+         "<b>Thirty days to invoice.</b> A vessel operator or marine terminal has thirty "
+         "calendar days from the day the charges stopped accruing. An invoice that arrives "
+         "months later, which is the normal experience, is late by the rule.",
+         "<b>Thirty days to dispute.</b> The billed party has at least thirty calendar days "
+         "to request mitigation, a refund or a waiver, and once that request is in, the "
+         "biller has thirty days to try to resolve it unless both sides agree to longer.",
+         "<b>A missing element voids the charge.</b> The invoice has to carry a defined set "
+         "of information, including why you are the party liable. Where a required element "
+         "is absent, the obligation to pay that charge is eliminated."]),
+  ("p","None of this makes demurrage go away, and none of it helps outside the United "
+       "States. What it does is change who has to be organised. Before the rule, disputing "
+       "an invoice meant asking a carrier for a favour. Now it means reading the invoice "
+       "against a list and answering within the window, which is work a buyer can actually "
+       "do."),
+  ("note","The window cuts both ways. Thirty days is not long, and an invoice that sits "
+          "unopened in a shared mailbox is an invoice you have agreed to. Route these to a "
+          "person, not to a folder."),
   ("h2","Merchant haulage and carrier haulage"),
   ("p","If the carrier arranges the inland leg, the free time and the charges sit inside its "
        "contract and it has an interest in moving the box. If you arrange your own haulier, "
@@ -1133,7 +1254,24 @@ GUIDES_PAGES = [
          ("Who pays if the port is congested?",
           "Normally the importer, which feels unfair and is how the contracts are written. "
           "The practical defences are a longer free time negotiated up front and a complete "
-          "document set lodged before arrival.")],
+          "document set lodged before arrival."),
+         ("How much are demurrage charges per day?",
+          "There is no single figure. Each carrier publishes a tariff that differs by port "
+          "and by equipment, and the rate escalates in tiers: it steps up after the first "
+          "few chargeable days and again around the second week, so three weeks costs far "
+          "more than three times one week. Reefer rates are a multiple of dry. The same "
+          "container held the same number of days can cost several times more on one "
+          "carrier's tariff than on another's at the same terminal, which is why the tariff "
+          "is worth reading before the booking."),
+         ("Can I dispute a demurrage invoice?",
+          "For shipments into the United States, yes, and on defined terms. Under the "
+          "Federal Maritime Commission rule in force since 28 May 2024 the invoice must "
+          "reach you within thirty calendar days of the charges ending, it can only be "
+          "issued to the contracting party or the consignee and not to both, you have at "
+          "least thirty calendar days to request mitigation, a refund or a waiver, and if a "
+          "required element is missing from the invoice the obligation to pay that charge is "
+          "eliminated. Outside the United States none of this applies and you are back to "
+          "the carrier's contract.")],
 },
 {
  "slug": "certificate-of-origin",
