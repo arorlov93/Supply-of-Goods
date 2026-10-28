@@ -38,6 +38,45 @@ def load():
         return json.load(f)
 
 
+def load_fx():
+    """Дневная часть: курсы ЕЦБ, см. tools/fx-daily.py. Если файла нет,
+    страница собирается без этого блока, а не падает."""
+    p = os.path.join("data", "fx.json")
+    if not os.path.isfile(p):
+        return None
+    with open(p, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def fx_block(fx):
+    if not fx or not fx.get("rows"):
+        return []
+    rows = "".join(
+        "<tr><td>%s</td><td>%s</td><td>$%s</td><td><b>%+.2f%%</b></td></tr>"
+        % (r["code"], r["who"],
+           ("%.6f" % r["usd"]).rstrip("0").rstrip("."), r["change"])
+        for r in fx["rows"])
+    return [
+     ("h2", "What the seller&rsquo;s currency is doing"),
+     ("p", "The table above is an annual picture. This part changes every working day, "
+           "and on a contract it moves real money: an offer written in euros and paid "
+           "thirty days later is a different price in dollars from the one you agreed."),
+     ("raw", '<div class="tablewrap"><table class="lpi"><thead><tr>'
+             '<th>Currency</th><th>Sellers who invoice in it</th>'
+             '<th>One unit, in dollars</th><th>Change over a month</th>'
+             '</tr></thead><tbody>%s</tbody></table></div>' % rows),
+     ("note", "European Central Bank reference rates for %s, against %s. The bank "
+              "publishes on working days only, so over a weekend this shows the last "
+              "published day rather than today: the date here is the date of the "
+              "figures, not the date we fetched them."
+              % (fx["date"], fx["compared_to"])),
+     ("p", "Read it next to the freight column. On a cheap, heavy cargo the freight "
+           "share decides the deal and a two per cent currency move is noise. On "
+           "machinery the freight share is small and the same two per cent is the whole "
+           "margin. Which of the two you are buying decides which number to watch."),
+    ]
+
+
 def medians(rows):
     by = collections.defaultdict(list)
     for r in rows:
@@ -72,7 +111,7 @@ def table(rows):
             % (head, body))
 
 
-def index_page(doc):
+def index_page(doc, fx=None):
     rows = doc["rows"]
     med = medians(rows)
     sp = spread(rows)
@@ -111,6 +150,8 @@ def index_page(doc):
                 dearest[0], cheapest[0], dearest[1], cheapest[1],
                 top[1]["product"], top[1]["uplift"], top[1]["origin"],
                 top[2]["uplift"], top[2]["origin"], top[0], PERIOD)),
+
+     ("__FX__", ""),
 
      ("h2", "Freight and insurance by origin"),
      ("p", "Median across all the product groups below. A median rather than an average, "
@@ -159,6 +200,14 @@ def index_page(doc):
               "would rather be corrected than quoted." % (doc["built"], PERIOD)),
     ]
 
+    out = []
+    for b in blocks:
+        if b[0] == "__FX__":
+            out.extend(fx_block(fx))
+        else:
+            out.append(b)
+    blocks = out
+
     ld = [{
         "@context": "https://schema.org",
         "@type": "Dataset",
@@ -168,6 +217,7 @@ def index_page(doc):
                         "customs declarations republished by UN Comtrade."),
         "url": PK.HOST + "landed-price-index",
         "temporalCoverage": PERIOD,
+        "dateModified": (fx or {}).get("date", doc["built"]),
         "license": "https://creativecommons.org/licenses/by/4.0/",
         "creator": {"@type": "Organization", "name": "ISP GROUP LLC", "url": PK.HOST},
         "isBasedOn": {"@type": "Dataset", "name": "UN Comtrade",
@@ -504,7 +554,9 @@ def csv_file(doc):
 
 def main():
     doc = load()
-    for fn in (index_page, quote_check, three_origins):
+    fx = load_fx()
+    print("   собрана:", index_page(doc, fx))
+    for fn in (quote_check, three_origins):
         print("   собрана:", fn(doc))
     print("   таблица:", csv_file(doc))
 
