@@ -22,10 +22,16 @@ ok()  { python3 -c "import json,sys; d=json.load(sys.stdin); sys.exit(0 if d.get
 [ -d "$DIR" ] || { echo "нет каталога $DIR"; exit 1; }
 
 say "1. Проверяю токен"
-cf "$API/user/tokens/verify" | python3 -c "
+# /user/tokens/verify отвечает только токену с правами на уровне пользователя.
+# Токен, выданный на аккаунт, этот запрос отбивает, хотя Pages и зону открывает
+# прекрасно. Поэтому отказ здесь не повод останавливаться: настоящая проверка
+# ниже, по доступу к списку проектов Pages, и она же нужна для работы.
+if cf "$API/user/tokens/verify" | python3 -c "
 import json,sys; d=json.load(sys.stdin)
-print('   ', d['result']['status'] if d.get('success') else d.get('errors'))
-sys.exit(0 if d.get('success') else 1)"
+print('   ', d['result']['status'] if d.get('success') else 'на уровне пользователя не проверяется')
+sys.exit(0 if d.get('success') else 1)"; then :; else
+  echo "    токен аккаунтный, проверяю по доступу к Pages"
+fi
 
 if [ -z "${CLOUDFLARE_ACCOUNT_ID:-}" ]; then
   say "2. Определяю аккаунт"
