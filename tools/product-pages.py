@@ -190,13 +190,20 @@ def page(doc, hs, rs):
         "temporalCoverage": PERIOD,
         "license": "https://creativecommons.org/licenses/by/4.0/",
         "creator": {"@type": "Organization", "name": "ISP GROUP LLC", "url": PK.HOST},
-        # см. offer-pages.py: у вложенного набора данных description тоже обязателен
+        # Search Console 29.10 добавила к description две рекомендации по тому же
+        # вложенному набору: creator и license. У внешнего Dataset они есть,
+        # у источника не было. Лицензия берётся не выдуманная, а собственные
+        # условия использования Comtrade.
         "isBasedOn": {"@type": "Dataset", "name": "UN Comtrade",
                       "description": "United Nations international trade statistics "
                                      "database, which republishes customs declarations "
                                      "reported by national statistical authorities, "
                                      "including United States imports valued both CIF "
                                      "and FOB.",
+                      "creator": {"@type": "Organization",
+                                  "name": "United Nations Statistics Division",
+                                  "url": "https://unstats.un.org/"},
+                      "license": "https://comtradeplus.un.org/TermsOfUse",
                       "url": "https://comtradeplus.un.org/"},
     }]
 

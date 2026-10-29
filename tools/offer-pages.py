@@ -226,13 +226,20 @@ def index_page(doc, fx=None):
         "creator": {"@type": "Organization", "name": "ISP GROUP LLC", "url": PK.HOST},
         # description обязателен и у вложенного набора данных тоже: Search Console
         # 29.10 отбила проверку «Отсутствует поле description», указав объект
-        # UN Comtrade, то есть именно этот isBasedOn, а не внешний Dataset.
+        # Search Console 29.10 добавила к description две рекомендации по тому же
+        # вложенному набору: creator и license. У внешнего Dataset они есть,
+        # у источника не было. Лицензия берётся не выдуманная, а собственные
+        # условия использования Comtrade.
         "isBasedOn": {"@type": "Dataset", "name": "UN Comtrade",
                       "description": "United Nations international trade statistics "
                                      "database, which republishes customs declarations "
                                      "reported by national statistical authorities, "
                                      "including United States imports valued both CIF "
                                      "and FOB.",
+                      "creator": {"@type": "Organization",
+                                  "name": "United Nations Statistics Division",
+                                  "url": "https://unstats.un.org/"},
+                      "license": "https://comtradeplus.un.org/TermsOfUse",
                       "url": "https://comtradeplus.un.org/"},
         "variableMeasured": [
             {"@type": "PropertyValue", "name": "CIF unit value", "unitText": "USD per kg"},
