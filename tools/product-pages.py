@@ -190,7 +190,13 @@ def page(doc, hs, rs):
         "temporalCoverage": PERIOD,
         "license": "https://creativecommons.org/licenses/by/4.0/",
         "creator": {"@type": "Organization", "name": "ISP GROUP LLC", "url": PK.HOST},
+        # см. offer-pages.py: у вложенного набора данных description тоже обязателен
         "isBasedOn": {"@type": "Dataset", "name": "UN Comtrade",
+                      "description": "United Nations international trade statistics "
+                                     "database, which republishes customs declarations "
+                                     "reported by national statistical authorities, "
+                                     "including United States imports valued both CIF "
+                                     "and FOB.",
                       "url": "https://comtradeplus.un.org/"},
     }]
 
