@@ -1022,35 +1022,5 @@ table.credits code{font-family:var(--mono);font-size:.8rem;opacity:.75}
   table.credits td{padding-block:4px}
 }
 </style>
-<script>
-/* nav:v1 */
-(function(){
-  var btn=document.getElementById('navtoggle'), menu=document.getElementById('navmenu');
-  if(!btn||!menu) return;
-  function set(open){
-    menu.classList.toggle('open', open);
-    btn.setAttribute('aria-expanded', open?'true':'false');
-  }
-  btn.addEventListener('click', function(){
-    set(btn.getAttribute('aria-expanded')!=='true');
-  });
-  menu.addEventListener('click', function(e){
-    if(e.target.closest('a')) set(false);
-  });
-  document.addEventListener('keydown', function(e){
-    if(e.key==='Escape' && btn.getAttribute('aria-expanded')==='true'){
-      set(false); btn.focus();
-    }
-  });
-  document.addEventListener('click', function(e){
-    if(btn.getAttribute('aria-expanded')!=='true') return;
-    if(!e.target.closest('nav')) set(false);
-  });
-  var wide=window.matchMedia('(min-width: 1091px)');
-  var onwide=function(){ if(wide.matches) set(false); };
-  if(wide.addEventListener) wide.addEventListener('change', onwide);
-  else if(wide.addListener) wide.addListener(onwide);
-})();
-</script>
 </body>
 </html>
