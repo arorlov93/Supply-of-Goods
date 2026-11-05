@@ -339,10 +339,13 @@ table.credits tr + tr, .steps li + li, .svc-list li + li,
   border-width: var(--rule-hair) !important;
 }
 
-/* Снимки. Референс оставляет фотографию ведущей, но просит холодную
-   лёгкую десатурацию, а не вытравленную черноту Formwork. Рамка в
-   2px чернилами снимается, остаётся радиус карточки. */
-img { filter: saturate(0.55) contrast(1.04); transition: filter .5s ease; }
+/* Снимки. Лёгкой десатурации в 0.55 оказалось мало: на странице стоят
+   жёлтые инструменты, красное мясо и синие краны, и рядом с графитом и
+   единственным кобальтом это читается как случайный набор, а не как
+   серия. Замер по карточкам категорий: подпись ash на светлом участке
+   снимка давала контраст 1.94, 2.54 и 2.81 при норме 3. Серия снимается
+   в серое, цвет возвращается при наведении на то, что кликается. */
+img { filter: saturate(0) contrast(1.18); transition: filter .5s ease; }
 figure img, .shot img, .card img, .jsteps img, .media, .teaser img {
   border: none !important;
   border-radius: var(--radius-card) !important;
@@ -352,8 +355,30 @@ figure img, .shot img, .card img, .jsteps img, .media, .teaser img {
   border-radius: var(--radius-card) !important;
   box-shadow: none !important;
 }
-a.card:hover img, a.card:focus-visible img, figure:focus-within img,
-.jsteps a:hover img { filter: saturate(0.9) contrast(1.02); }
+/* Цвет возвращается только там, где есть что нажать. Фоновые кадры сцен
+   остаются серыми: поверх них лежит текст, и затемнение под него
+   рассчитано на серый кадр. */
+@media (hover: hover) {
+  .shot:hover img, a.card:hover img, .jsteps figure:hover img { filter: none; }
+}
+a.card:focus-visible img, figure:focus-within img { filter: none; }
+
+/* Подпись карточки категории. Страничный градиент идёт от прозрачного в
+   самом верху подписи, а заголовок стоит именно там, то есть почти без
+   подложки. Градиент начинается раньше и плотнее, а сам заголовок
+   переводится из ash в ivory: это крупный текст на снимке, ему нужен
+   полный тон, а не приглушённый. */
+.card .cap {
+  background: linear-gradient(180deg,
+    rgb(var(--black-rgb) / 0) 0%,
+    rgb(var(--black-rgb) / .62) 30%,
+    rgb(var(--black-rgb) / .88) 68%,
+    rgb(var(--black-rgb) / .96) 100%) !important;
+  padding-top: 52px !important;
+}
+.card .cap b { color: var(--color-white) !important; }
+.card .cap span { color: var(--color-mist) !important; }
+.card .n { color: var(--color-mist) !important; }
 
 /* ------------------------------------------------------------- элементы */
 
@@ -517,6 +542,74 @@ a:hover { color: var(--color-white); }
   justify-content: center !important;
 }
 
+/* ------------------------------------------ главная: камера на прокрутке
+
+   Главная размечена под движение от прокрутки: сцены пришпилены, ленты
+   карточек едут вбок, а секциям выданы высоты в несколько экранов, по
+   которым это движение раскладывается. Прежняя тема это выключала, я при
+   переносе взял только цвета и формы, а правила вёрстки не взял, и
+   механика вернулась.
+
+   Чем это обошлось, замер на 1440: высота главной 12 271 px против
+   6 658 px на прежней теме при том же содержимом. Внутри #s-cats лента
+   доезжает до конца на 75 процентах секции, и дальше около 740 px
+   прокрутки не меняется ничего; пустые зоны 1 998 px в #s-cats, 558 px
+   в #s-end, 151 px в #s-why. На телефоне хуже: лента остаётся
+   горизонтальной, карточка сжимается до 176 px и режется обеими
+   кромками, под ней дыра в 1 022 px.
+
+   Ниже тот же статичный макет, который в самой странице уже написан для
+   тех, кто отключил анимации в системе. Обесцвечивание кадров при этом
+   сохраняется: страничное правило снимает с них filter, а серия должна
+   остаться серой. */
+.scene { height: auto !important; }
+.stage { position: relative; display: block; height: auto; min-height: 62svh; }
+#s-open .stage, #s-end .stage { min-height: 82svh; }
+#s-cats .stage { min-height: 0; }
+.stage > * { grid-area: auto; }
+.layer-b { display: none; }
+.media { position: absolute; inset: 0; transform: none !important; }
+.content {
+  padding-top: clamp(70px, 12vh, 120px);
+  transform: none !important;
+  opacity: 1 !important;
+}
+.rail-head { position: static; padding: clamp(70px, 10vh, 110px) var(--gut) 0; }
+.ln > span, .fade, .svc-list li, .steps li {
+  transform: none !important; opacity: 1 !important; transition: none !important;
+}
+.scroll-hint, .scroll-cue { display: none; }
+#s-end .content { justify-content: flex-start; }
+
+/* Лента из шести карточек без движения вытягивается в столбик почти на
+   четыре экрана. Поэтому сетка с явным числом колонок, которое делит
+   шесть нацело: три, две, одна. Сирот не бывает ни при какой ширине.
+   Ширина колонки ограничена сверху и сетка центрирована: без предела
+   на широком мониторе плитка раздувается и портрет 3:4 превращается в
+   полотно высотой в пол-экрана. */
+.rail {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 380px));
+  justify-content: center;
+  align-items: start;
+  transform: none !important;
+  height: auto !important;
+  padding-block: clamp(70px, 10vh, 120px);
+}
+.rail > .card { width: 100% !important; }
+@media (max-width: 1180px) {
+  .rail { grid-template-columns: repeat(2, minmax(0, 420px)); }
+}
+@media (max-width: 700px) {
+  .rail { grid-template-columns: minmax(0, 460px); }
+}
+/* Маршрут из шести кадров был такой же лентой. */
+.jsteps {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: clamp(28px, 3vw, 48px);
+}
+.jsteps figure { margin: 0; }
+
 
 /* --------------------------------------------------------------- полосы */
 
@@ -541,11 +634,30 @@ a:hover { color: var(--color-white); }
 
 /* Шапка Mercury прозрачна над снимком и уходит в морозное стекло на
    прокрутке. Жирная линейка Formwork снимается. */
+/* Плотность 72 процента со стеклом в 16 была взята на глаз и на светлых
+   кадрах не держала: при прокрутке строки текста просвечивали сквозь
+   шапку и наезжали на логотип. Стекло плотнее и глубже. Размытие само
+   по себе не спасает, потому что просвечивает именно тон, а не детали. */
 header.top, body > nav, nav.nav, .nav-wrap {
-  background: color-mix(in srgb, var(--color-onyx) 72%, transparent) !important;
+  background: color-mix(in srgb, var(--color-onyx) 90%, transparent) !important;
   border-bottom: 1px solid color-mix(in srgb, var(--color-slate) 32%, transparent) !important;
-  backdrop-filter: blur(16px) saturate(1.1);
-  -webkit-backdrop-filter: blur(16px) saturate(1.1);
+  backdrop-filter: blur(22px) saturate(1.1);
+  -webkit-backdrop-filter: blur(22px) saturate(1.1);
+}
+/* Ниже первого экрана страница сама вешает на шапку класс solid. Там
+   под ней идут кадры и карточки, и даже плотное стекло пропускало
+   строки текста. Над героем стекло остаётся, дальше шапка глухая. */
+header.top.solid {
+  background: var(--color-onyx) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+/* У браузера без backdrop-filter просвечивание остаётся, поэтому там
+   шапка просто непрозрачна. */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  header.top, body > nav, nav.nav, .nav-wrap {
+    background: var(--color-onyx) !important;
+  }
 }
 body > nav a, nav.nav a, header.top a { color: var(--color-ivory); }
 body > nav a:hover, nav.nav a:hover { color: var(--color-white); }
@@ -638,6 +750,62 @@ nav .cta, nav .btn, header.top .cta, header.top .btn {
   border: 1px solid color-mix(in srgb, var(--color-mist) 40%, transparent) !important;
   border-radius: var(--radius-nav) !important;
 }
+
+/* Кнопка меню на главной и на языковых главных.
+
+   У этих страниц своя шапка: nav.top-nav, кнопка #menubtn в header.top и
+   полноэкранное меню nav.top-nav.open. Разметка, оформление, крестик при
+   aria-expanded="true" и обработчик клика написаны все. Не работало это
+   из-за порядка правил: медиазапрос @media(max-width:1080px) со строкой
+   .menubtn{display:inline-flex} стоит в странице ВЫШЕ базового правила
+   .menubtn{display:none}, а при равной специфичности побеждает то, что
+   ниже. Кнопка оставалась скрытой на любой ширине, и на телефоне главная
+   жила вообще без навигации: логотип, переключатель языка и всё.
+   Прежняя тема это тоже не чинила, там пункты просто вылезали за правую
+   кромку и была видна одна первая ссылка.
+
+   Правило ниже стоит после обоих, поэтому порядок наконец правильный.
+   important нужен потому, что базовое правило перебивает и специфичность
+   у них одинаковая. */
+@media (max-width: 1080px) {
+  .menubtn, header.top .menubtn { display: inline-flex !important; }
+  /* Цель нажатия по рекомендации 44 на 44. */
+  .menubtn { min-width: 44px; min-height: 44px; }
+}
+@media (min-width: 1081px) {
+  .menubtn, header.top .menubtn { display: none !important; }
+}
+/* Меню размечено как position:fixed;inset:0, то есть должно лежать на
+   весь экран. Лежало оно на полосе шапки: backdrop-filter у header.top
+   делает из него блок-контейнер для потомков с position:fixed, и inset:0
+   считался от шапки, а не от окна. Пункты висели прозрачно поверх
+   первого экрана. Пока меню открыто, стекло снимается, и координаты
+   снова считаются от окна. */
+header.top:has(nav.top-nav.open) {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-bottom-color: transparent !important;
+}
+/* Полноэкранное меню: канва Mercury вместо прежней почти чёрной заливки,
+   и пункты в полный тон. */
+nav.top-nav.open {
+  background: var(--color-onyx) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+}
+nav.top-nav.open a { color: var(--color-ivory) !important; opacity: 1 !important; }
+nav.top-nav.open a:hover { color: var(--color-white) !important; }
+/* Текущий язык размечен не ссылкой, а span, и страничное правило для
+   крупного набора пунктов его не касалось: EN оставался в 12px рядом с
+   FR ES DE в 1.45rem. */
+nav.top-nav.open .langsw { font-size: 1.1rem; gap: 14px; }
+nav.top-nav.open .langsw a, nav.top-nav.open .langsw span {
+  font-size: 1.1rem !important;
+  padding: 0;
+}
+nav.top-nav.open .langsw [aria-current] { color: var(--color-white) !important; }
 
 /* Логотип: тот же дисплейный гротеск, вторая половина уходит в ash,
    а не в акцент. Кобальт держится только на действии. */
