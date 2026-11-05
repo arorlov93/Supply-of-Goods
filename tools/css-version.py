@@ -33,7 +33,7 @@ import hashlib, pathlib, re, shutil, sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = ROOT / "site"
 CSSDIR = SITE / "css"
-BASE = "formwork"
+BASE = "mercury"
 
 LINK = re.compile(r'href="/css/%s(?:\.[0-9a-f]{8})?\.css"' % BASE)
 

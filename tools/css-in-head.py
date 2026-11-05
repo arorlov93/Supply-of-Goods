@@ -29,10 +29,10 @@
 import pathlib, re, sys
 
 SITE = pathlib.Path(__file__).resolve().parent.parent / "site"
-SHEET = '<link rel="stylesheet" href="/css/formwork.css">'
+SHEET = '<link rel="stylesheet" href="/css/mercury.css">'
 MARK = "<!-- шрифты первого экрана -->"
 PRELOADS = [
-    "/fonts/oswald-700-latin.woff2",
+    "/fonts/schibsted-grotesk-500-latin.woff2",
     "/fonts/archivo-400-latin.woff2",
     "/fonts/archivo-500-latin.woff2",
 ]

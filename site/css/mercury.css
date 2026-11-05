@@ -1,0 +1,628 @@
+/* Mercury · «Alpine banking at blue hour» · тема сайта ispgroupgc.com
+   ====================================================================
+
+   Что это. Полная замена темы Formwork по присланному style reference.
+   Formwork был бетонной опалубкой: бумажная канва, нулевой радиус,
+   литые тени 6px 6px 0, оранжевый акцент, Oswald 700 в узком начертании.
+   Mercury противоположен по каждой оси: почти чёрная канва, графитовые
+   карточки на один шаг светлее, кобальт как единственное цветное пятно,
+   радиус-таблетка на всём управлении, теней нет вовсе, заголовки в
+   промежуточном весе и с широкой разрядкой.
+
+   Как это работает. Файл подключается последним в <head>, после
+   страничного <style>, и поэтому перекрывает его. Так же был устроен
+   Formwork. Страничные стили оперируют своими именами (--paper-rgb,
+   --ink-rgb, --graphite-rgb и прочие), поэтому ниже стоит мост: те же
+   имена получают значения Mercury, и вся встроенная вёрстка темнеет
+   сама, без правки 63 страниц.
+
+   Замены гарнитур, честно. Референс называет две заказные гарнитуры,
+   arcadia и arcadiaDisplay, с подстановками Inter и Söhne Breit. Ни
+   той ни другой у нас нет, покупать ради перекраски нечего. Взяты две,
+   которые уже лежат на своём домене и не добавят ни одного соединения:
+
+     arcadiaDisplay (Söhne Breit) -> Schibsted Grotesk 500.
+       Широкий гротеск промежуточного веса. Сохраняет ровно тот признак,
+       который референс называет главным: «wide-set, architectural,
+       rather than compressed editorial tightness». Oswald не годится
+       именно потому, что он узкий и в 700.
+
+     arcadia (Inter) -> Archivo 400 и 500.
+       Нейтральный гротеск той же фактуры, уже стоит как основной
+       текстовый на сайте.
+
+   Вес 480 статическими файлами недостижим, ближайший снизу это 500.
+   Референс запрещает 700 и выше, 500 в запрет не попадает.
+
+   Роли токенов не переназначаются. Кобальт только заливка первичного
+   действия: не иконка, не рамка, не фон, не вторичная кнопка. Mist и
+   ivory только обводка призрачных контролов. Graphite только карточка.
+*/
+
+/* ----------------------------------------------------------- гарнитуры */
+
+/* latin-ext */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal; font-weight: 400; font-display: optional;
+  src: url(/fonts/schibsted-grotesk-400-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal; font-weight: 400; font-display: optional;
+  src: url(/fonts/schibsted-grotesk-400-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal; font-weight: 500; font-display: optional;
+  src: url(/fonts/schibsted-grotesk-500-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal; font-weight: 500; font-display: optional;
+  src: url(/fonts/schibsted-grotesk-500-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal; font-weight: 400; font-stretch: 100%; font-display: optional;
+  src: url(/fonts/archivo-400-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal; font-weight: 400; font-stretch: 100%; font-display: optional;
+  src: url(/fonts/archivo-400-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal; font-weight: 500; font-stretch: 100%; font-display: optional;
+  src: url(/fonts/archivo-500-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal; font-weight: 500; font-stretch: 100%; font-display: optional;
+  src: url(/fonts/archivo-500-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* -------------------------------------------------------------- токены */
+
+:root {
+  color-scheme: dark;
+
+  /* Поверхности. Разделение держится на разнице в один шаг между
+     канвой и карточкой, теней в системе нет вовсе. */
+  --color-onyx:     #171721;
+  --color-graphite: #1e1e2a;
+  --color-obsidian: #272735;
+
+  /* Текст и линии. Белый для текста запрещён: на тёмном он даёт
+     резкий холодный контраст. Основной текст ivory. */
+  --color-ivory: #ededf3;
+  --color-ash:   #c3c3cc;
+  --color-mist:  #e2e3ed;
+  --color-slate: #70707d;
+  --color-white: #ffffff;
+
+  /* Единственное цветное пятно системы. */
+  --color-cobalt: #5266eb;
+
+  /* Имена темы Formwork, на которые опираются её правила. Переводятся
+     на Mercury, чтобы ни одно старое правило не светилось бумагой. */
+  --color-paper:     var(--color-onyx);
+  --color-paper-2:   var(--color-graphite);
+  --color-paper-3:   var(--color-obsidian);
+  --color-plate:     var(--color-obsidian);
+  --color-plate-ink: var(--color-ivory);
+  --color-ink:       var(--color-ivory);
+  --color-ink-2:     var(--color-ivory);
+  --color-muted:     var(--color-ash);
+  --color-rule:      var(--color-slate);
+  --color-accent:      var(--color-ivory);   /* акцент на словах нейтрален */
+  --color-accent-ink:  var(--color-white);
+  --color-accent-deep: var(--color-ash);
+  --color-focus:       var(--color-cobalt);
+
+  /* Гарнитуры. */
+  --font-display: 'Schibsted Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-body:    'Archivo', ui-sans-serif, system-ui, sans-serif;
+  --font-outlier: 'Archivo', ui-sans-serif, system-ui, sans-serif;
+
+  /* Шкала набора по референсу. */
+  --text-xs: 12px; --text-sm: 14px; --text-md: 16px; --text-lg: 18px;
+  --text-xl: 21px; --text-2xl: 28px; --text-3xl: 32px;
+  --text-title:     clamp(21px, 0.6vw + 18px, 28px);
+  --text-lead:      clamp(16px, 0.3vw + 15px, 18px);
+  --text-section:   clamp(28px, 1.6vw + 20px, 42px);
+  --text-display-s: clamp(32px, 2.4vw + 22px, 49px);
+  --text-display:   clamp(38px, 3.4vw + 22px, 65px);
+
+  /* Форма. Таблетка на управлении, 12px на карточках. */
+  --radius-card: 12px;
+  --radius-pill: 32px;
+  --radius-nav:  40px;
+  --rule-hair: 1px;
+  --rule-bar:  1px;
+  --shadow-card: none;
+
+  /* Ритм. Референс называет плотность spacious и шаг разделов 72px. */
+  --container: 1200px;
+  --gutter: 40px;
+  --section-gap-s: 72px;
+  --section-gap:   72px;
+  --section-gap-l: 112px;
+  --gap-columns: 32px;
+
+  --tracking-display: 0.015em;
+  --display-weight: 500;
+  --texture-opacity: 0;
+
+  /* --- мост: имена главной страницы --- */
+  --black: var(--color-onyx);
+  --graphite: var(--color-graphite);
+  --graphite-2: var(--color-obsidian);
+  --paper: var(--color-ivory);
+  --paper-2: var(--color-ash);
+  --steel: var(--color-ash);
+  --steel-2: var(--color-slate);
+  /* Эти имена страничный CSS ставит на СЛОВА: половину заголовка, крошки,
+     цифры. Кобальт тут запрещён прямым правилом референса, поэтому они
+     нейтральные. Кобальт остаётся только на .btn/.cta ниже. */
+  --brand: var(--color-ivory);
+  --brand-lite: var(--color-ivory);
+  --gold: var(--color-ivory);
+  --gold-soft: var(--color-ash);
+
+  /* --- мост: имена внутренних страниц --- */
+  --surface: var(--color-graphite);
+  --surface-2: var(--color-obsidian);
+  --surface-3: var(--color-graphite);
+  --ink: var(--color-ivory);
+  --ink-2: var(--color-ivory);
+  --ink-3: var(--color-ash);
+  --rule: var(--color-slate);
+  --gold-ink: var(--color-ash);
+  --feat: var(--color-graphite);
+  --feat-ink: var(--color-ivory);
+  --eyebrow-ink: var(--color-ash);
+
+  /* Тройки RGB: ими страничный CSS заливает подложки и градиенты. */
+  --black-rgb: 23 23 33;
+  --paper-rgb: 237 237 243;
+  --graphite-rgb: 30 30 42;
+  --steel-rgb: 112 112 125;
+  --ink-rgb: 23 23 33;
+  --ink-2-rgb: 30 30 42;
+  --pure-black-rgb: 0 0 0;
+  --pure-white-rgb: 255 255 255;
+  --brand-deep-rgb: 237 237 243;
+  --mint-rgb: 237 237 243;
+  --forest-rgb: 23 23 33;
+  --forest-2-rgb: 30 30 42;
+  --forest-3-rgb: 20 20 28;
+  --gold-rgb: 237 237 243;
+  --gold-lite-rgb: 237 237 243;
+  --gold-soft-rgb: 195 195 204;
+  --haze-rgb: 237 237 243;
+
+  --sans: var(--font-body);
+  --fm: var(--font-body);
+  --mono: var(--font-body);
+  --serif: var(--font-display);
+  --fs: var(--font-display);
+  --fd: var(--font-display);
+}
+
+/* --------------------------------------------------------------- канва */
+
+html, body {
+  background: var(--color-onyx) !important;
+  color: var(--color-ivory);
+}
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  line-height: 1.5;
+}
+/* Зерно Formwork снимается: поверхность Mercury гладкая. */
+body::before { content: none !important; display: none !important; }
+
+::selection { background: color-mix(in srgb, var(--color-cobalt) 45%, transparent); }
+
+/* ---------------------------------------------------------------- набор */
+
+h1, h2, h3, h4, .display, .chero h1, .wordmark, nav .logo, a.logo {
+  font-family: var(--font-display) !important;
+  font-weight: 500 !important;
+  font-stretch: normal;
+  text-transform: none !important;
+  letter-spacing: var(--tracking-display);
+  color: var(--color-ivory);
+}
+/* Потолок дисплейного кегля. Страничный CSS ставил заголовку героя
+   132px: это наследие узкого Oswald, в котором такой кегль ещё помещался
+   по ширине. Широкий гротеск на том же кегле уезжает за экран и сносит
+   вниз подпись и кнопку. Референс называет предел дисплея 65px, он же
+   здесь и стоит. */
+h1, .display, .chero h1, .scene h1, .hero h1 {
+  font-size: var(--text-display) !important;
+  line-height: 1.1 !important;
+  letter-spacing: 0.01em;
+}
+h1.sm, .display.sm { font-size: var(--text-display-s) !important; }
+/* Отступы под заголовками считались под прежний кегль 132px. На
+   дисплейном кегле Mercury подпись прилипала к последней строке. */
+h1 + p, h1 + .lead, .display + p, .display + .lead,
+h2 + p, h2 + .lead { margin-top: 20px; }
+h1, .display { margin-bottom: 0; }
+h2 { line-height: 1.15; letter-spacing: 0.015em; }
+h3, h4 { line-height: 1.2; letter-spacing: 0.015em; }
+h1, h2, h3, .display { text-wrap: balance; }
+
+p, li, td, .lead, .lede, .intro, .prose { color: var(--color-ivory); }
+.lead, .lede, .intro { font-size: var(--text-lg); line-height: 1.35; color: var(--color-ivory); }
+.sub, .pnote, .fdesc, .cap, figcaption, small, .credits { color: var(--color-ash); }
+
+/* Надбровия и подписи: 12px, разрядка по референсу, без прописных. */
+.eyebrow, .crumbs, .k, .n, .scroll-hint, .langsw {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--text-xs);
+  letter-spacing: 0.01em;
+  text-transform: none;
+  color: var(--color-ash);
+}
+/* Цифры и измерения табличными, но уже без узкого начертания. */
+.k, .n, .num, .num span, .yrs small, .facts td, .lanes td, .ptable td {
+  font-family: var(--font-body);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: normal;
+}
+.k, .n { color: var(--color-ash); }
+
+/* Формулировка референса: «Do not use multiple bright accent colors».
+   Выделения внутри текста остаются текстовыми, цветом их не метят. */
+.chip b, .chip em, .chip strong,
+.why-grid b, .svc-list b, .steps b, p b, li b, td b {
+  color: var(--color-ivory) !important;
+  font-weight: 500;
+}
+
+/* Половина заголовка, крошки и выноски красились акцентом. В Mercury
+   цветного текста нет вовсе: заголовок одного цвета, иерархия строится
+   кеглем и весом, а не цветом. */
+h1 span, h2 span, h3 span, h1 b, h2 b, h3 b, h1 em, h2 em, h3 em,
+.display span, .display b, .display em,
+.crumbs a, .crumbs span, .lanelink b, .pz b {
+  color: var(--color-ivory) !important;
+}
+.crumbs, .crumbs a { color: var(--color-ash) !important; }
+
+/* ---------------------------------------------------------- поверхности */
+
+/* Карточка: графит на один шаг светлее канвы, радиус 12, отступ 32,
+   ни тени, ни рамки. Разделение только разницей тона. */
+.cat, .guide, .lane, .plate, .panel, .card, .form-card, .searchpanel, .pblock {
+  background: var(--color-graphite) !important;
+  color: var(--color-ivory) !important;
+  border: none !important;
+  border-radius: var(--radius-card) !important;
+  box-shadow: none !important;
+}
+.cat, .guide, .lane, .panel, .form-card { padding: var(--spacing-32, 32px); }
+
+/* Тени сняты по всей системе. Референс: «Do not add drop shadows». */
+*, *::before, *::after { text-shadow: none !important; }
+.cat, .guide, .lane, .plate, .panel, .card, .shot, .btn, .btn-lg, .cta,
+button, input, select, textarea, figure, img, .teaser, .jsteps {
+  box-shadow: none !important;
+}
+
+/* Линейки: тонкие, цветом slate, без жирных полос Formwork. */
+.rail-head, .jside h2 { border-top: none !important; }
+table.credits tr + tr, .steps li + li, .svc-list li + li,
+.plist li + li, hr {
+  border-color: color-mix(in srgb, var(--color-slate) 55%, transparent) !important;
+  border-width: var(--rule-hair) !important;
+}
+
+/* Снимки. Референс оставляет фотографию ведущей, но просит холодную
+   лёгкую десатурацию, а не вытравленную черноту Formwork. Рамка в
+   2px чернилами снимается, остаётся радиус карточки. */
+img { filter: saturate(0.55) contrast(1.04); transition: filter .5s ease; }
+figure img, .shot img, .card img, .jsteps img, .media, .teaser img {
+  border: none !important;
+  border-radius: var(--radius-card) !important;
+}
+.shot, .heroside .shot, .chero .heroside .shot {
+  border: none !important;
+  border-radius: var(--radius-card) !important;
+  box-shadow: none !important;
+}
+a.card:hover img, a.card:focus-visible img, figure:focus-within img,
+.jsteps a:hover img { filter: saturate(0.9) contrast(1.02); }
+
+/* ------------------------------------------------------------- элементы */
+
+/* Первичное действие: единственная заливка кобальтом. Таблетка 32,
+   белый текст, ни рамки, ни тени. */
+.btn, .btn-lg, .cta, button[type="submit"] {
+  font-family: var(--font-body) !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
+  letter-spacing: 0.005em !important;
+  font-size: var(--text-md) !important;
+  background: var(--color-cobalt) !important;
+  color: var(--color-white) !important;
+  border: none !important;
+  border-radius: var(--radius-pill) !important;
+  box-shadow: none !important;
+  padding: 12px 24px;
+  transition: background var(--dur-micro, .12s) ease;
+}
+.btn:hover, .btn-lg:hover, .cta:hover, button[type="submit"]:hover {
+  background: color-mix(in srgb, var(--color-cobalt) 86%, #ffffff) !important;
+}
+.btn:active, .btn-lg:active, .cta:active, button[type="submit"]:active {
+  translate: none;
+}
+
+/* Вторичное действие: призрачная обводка ivory. Цветной вторичная
+   кнопка не бывает, это прямой запрет референса. */
+.btn-ghost, .btn.secondary {
+  background: transparent !important;
+  color: var(--color-ivory) !important;
+  border: 1px solid var(--color-ivory) !important;
+  border-radius: var(--radius-nav) !important;
+  box-shadow: none !important;
+  font-size: var(--text-md) !important;
+  padding: 10px 20px;
+}
+.btn-ghost:hover, .btn.secondary:hover {
+  background: color-mix(in srgb, var(--color-ivory) 10%, transparent) !important;
+}
+
+/* .btn-long это не кнопка, а span внутри кнопки шапки: он держит
+   необязательное слово и прячется на узких экранах. Ему нельзя ни
+   рамки, ни отступов, иначе кнопка получает второе кольцо и режется
+   по ширине. */
+.btn-long {
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  font: inherit !important;
+  color: inherit !important;
+  display: inline !important;
+}
+
+/* Чипы и метки: таблетка 40, поверхность obsidian, без цвета. */
+.chip, .tag, .pill {
+  background: var(--color-obsidian) !important;
+  color: var(--color-ivory) !important;
+  border: none !important;
+  border-radius: var(--radius-nav) !important;
+  padding: 8px 16px;
+  font-size: var(--text-sm);
+  letter-spacing: 0.005em;
+}
+
+/* Поля: прозрачные, волосяная обводка mist, таблетка 32, подсказка ash.
+   Вдавленность Formwork снимается, теней в системе нет. */
+input, select, textarea,
+.cform input, .cform select, .cform textarea,
+.form-card input, .form-card select, .form-card textarea {
+  background: transparent !important;
+  color: var(--color-ivory) !important;
+  border: 1px solid var(--color-mist) !important;
+  border-radius: var(--radius-pill) !important;
+  box-shadow: none !important;
+  padding: 12px 20px;
+}
+textarea { border-radius: var(--radius-card) !important; }
+input::placeholder, textarea::placeholder { color: var(--color-ash) !important; }
+input:focus, select:focus, textarea:focus { border-color: var(--color-cobalt) !important; }
+
+a { color: var(--color-ivory); text-decoration-color: color-mix(in srgb, var(--color-slate) 70%, transparent); }
+a:hover { color: var(--color-white); }
+:focus-visible { outline: 2px solid var(--color-cobalt); outline-offset: 2px; }
+
+/* -------------------------------------------------- тип поверх снимка */
+
+.scene .content, .scene .content h1, .scene .content h2,
+.scene .content .lead, .scene .content p, .scene .content .eyebrow,
+.scene .content .scroll-hint, .hero .content, .hero .content h1 {
+  color: var(--color-ivory);
+}
+.scene .content :is(h1, h2, h3, p, li, b, .display),
+.hero .content :is(h1, h2, h3, p, li, b, .display),
+.scene .content :is(h1, h2, h3, .display) :is(span, em, b),
+.hero .content :is(h1, h2, h3, .display) :is(span, em, b) {
+  color: var(--color-ivory) !important;
+}
+.scene .content .form-card :is(h1, h2, h3, p, li, b, label, span, em) {
+  color: var(--color-ivory) !important;
+}
+.scene .content a:not(.btn):not(.cta):not(.btn-lg) { color: var(--color-ivory); }
+
+/* Затемнение под текстом: тон канвы, не чернила Formwork. */
+.scrim {
+  background: linear-gradient(180deg,
+    rgb(var(--black-rgb) / .82) 0%, rgb(var(--black-rgb) / .62) 34%,
+    rgb(var(--black-rgb) / .78) 64%, rgb(var(--black-rgb) / .96) 100%) !important;
+}
+.scene .stage::after {
+  background: linear-gradient(180deg,
+    rgb(var(--black-rgb) / .52) 0%, rgb(var(--black-rgb) / .40) 26%,
+    rgb(var(--black-rgb) / .74) 62%, rgb(var(--black-rgb) / .98) 100%) !important;
+}
+/* Кнопка на снимке остаётся вторичной: кобальт на странице один. */
+.scene .content .btn-lg, .hero .content .btn-lg {
+  background: transparent !important;
+  color: var(--color-ivory) !important;
+  border: 1px solid var(--color-ivory) !important;
+  border-radius: var(--radius-nav) !important;
+  box-shadow: none !important;
+}
+.chero .wrap.chero-g, .chero-g { align-items: start !important; }
+/* Композиция героя. Страничная вёрстка прижимала стопку ко дну экрана
+   (justify-content: flex-end): при прежнем заголовке в 132px она этим
+   заполняла кадр. На дисплейном кегле Mercury в 65px стопка повисает у
+   нижней кромки, а над ней остаётся пустая фотография. Референс просит
+   содержимое героя центрированным по вертикали, оно и ставится. */
+.scene .content.in, .hero .content.in, .stage .content.in {
+  justify-content: center !important;
+}
+
+
+/* --------------------------------------------------------------- полосы */
+
+/* Референс: каждая поверхность это либо канва, либо карточка. Полос
+   другого тона в системе нет, поэтому прежние бумажные и чернильные
+   полосы сводятся к двум уровням. */
+#s-cats, #s-proc, #s-why {
+  background: var(--color-graphite) !important;
+  color: var(--color-ivory) !important;
+}
+#s-journey {
+  background: var(--color-onyx) !important;
+  color: var(--color-ivory) !important;
+}
+#s-cats h2, #s-proc h2, #s-why h2, #s-journey h2,
+#s-cats h3, #s-proc h3, #s-why h3, #s-journey h3 { color: var(--color-ivory) !important; }
+#s-cats p, #s-proc p, #s-why p, #s-journey p,
+#s-cats .lead, #s-proc .lead, #s-journey .lead { color: var(--color-ivory) !important; }
+#s-journey .k { color: var(--color-ash) !important; }
+
+/* ---------------------------------------------------------------- шапка */
+
+/* Шапка Mercury прозрачна над снимком и уходит в морозное стекло на
+   прокрутке. Жирная линейка Formwork снимается. */
+header.top, body > nav, nav.nav, .nav-wrap {
+  background: color-mix(in srgb, var(--color-onyx) 72%, transparent) !important;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-slate) 32%, transparent) !important;
+  backdrop-filter: blur(16px) saturate(1.1);
+  -webkit-backdrop-filter: blur(16px) saturate(1.1);
+}
+body > nav a, nav.nav a, header.top a { color: var(--color-ivory); }
+body > nav a:hover, nav.nav a:hover { color: var(--color-white); }
+header.top::before, header.top.solid::before { display: none; }
+
+/* Пункты навигации: таблетка 40, без рамки, без заливки. */
+/* Таблетка и запрет переноса нужны только широкой шапке. На мобильном
+   пункты лежат в выдвижном меню, и лишняя ширина выталкивала его край
+   в видимую зону голубой полоской. Поэтому правило от 61rem и выше. */
+@media (min-width: 61rem) {
+  .navlinks a, nav .navlinks a {
+    border-radius: var(--radius-nav);
+    padding: 6px 12px;
+    letter-spacing: 0.005em;
+    white-space: nowrap;
+  }
+}
+/* Кнопка в шапке резалась по ширине и получала вторую обводку от
+   правила для иконок. И то и другое снимается. */
+nav .cta, nav .btn, header.top .cta, header.top .btn {
+  white-space: nowrap;
+  border: none !important;
+  padding: 10px 20px;
+  /* Кнопка стояла во флексе и сжималась вместе с текстом: на страницах
+     с поиском в шапке от «Request a quote» оставалось «Request a q». */
+  flex: 0 0 auto;
+  overflow: visible;
+}
+/* Пунктам, наоборот, разрешено ужиматься, чтобы место отдавалось кнопке. */
+.navlinks, nav.top-nav .navlinks { min-width: 0; }
+.navlinks a:hover, nav .navlinks a:hover {
+  background: color-mix(in srgb, var(--color-ivory) 8%, transparent);
+}
+/* Кнопки-иконки шапки тоже в таблетке. */
+.navtoggle, .navsearch, nav .navtoggle, nav .navsearch {
+  background: transparent !important;
+  color: var(--color-ivory) !important;
+  border: 1px solid color-mix(in srgb, var(--color-mist) 40%, transparent) !important;
+  border-radius: var(--radius-nav) !important;
+}
+
+/* Логотип: тот же дисплейный гротеск, вторая половина уходит в ash,
+   а не в акцент. Кобальт держится только на действии. */
+.wordmark, nav .logo, a.logo {
+  letter-spacing: 0.01em;
+  color: var(--color-ivory) !important;
+}
+.wordmark em, nav .logo em, a.logo em {
+  font-style: normal !important;
+  font-family: var(--font-display) !important;
+  color: var(--color-ash) !important;
+}
+
+/* ---------------------------------------------------------------- подвал */
+
+footer, .foot {
+  background: var(--color-onyx) !important;
+  color: var(--color-ash) !important;
+  border-top: 1px solid color-mix(in srgb, var(--color-slate) 28%, transparent) !important;
+}
+footer a, .foot a { color: var(--color-ivory); }
+footer a:hover, .foot a:hover { color: var(--color-white); }
+.foot h3, .foot h4, footer h3, footer h4 { color: var(--color-ivory) !important; }
+footer .fdesc, footer .credits, .foot-note { color: var(--color-ash) !important; }
+/* Дисклеймер: 12px, разрядка 0.01em, минимальный вес в полосе. */
+.foot-note, .disclaimer, footer small {
+  font-size: var(--text-xs);
+  letter-spacing: 0.01em;
+  color: var(--color-ash) !important;
+}
+
+/* ---------------------------------------------------------------- ритм */
+
+/* Ширина полосы набора 1200px по референсу. Шапку это правило обходит:
+   её контейнер тоже .wrap, а выдвижное меню на мобильном спрятано за
+   кромку смещением, которое считается от ширины этого контейнера.
+   Сузив его, я вытащил край меню в кадр голубой полоской. */
+.container, .wrap:not(.navin) { max-width: var(--container); padding-inline: var(--gutter); }
+section { padding-block: var(--section-gap); }
+
+@media (max-width: 60rem) {
+  :root { --gutter: 24px; --section-gap-s: 56px; --section-gap: 56px; --section-gap-l: 72px; }
+}
+@media (max-width: 40rem) {
+  :root { --gutter: 16px; --section-gap-s: 40px; --section-gap: 40px; --section-gap-l: 56px; --gap-columns: 16px; }
+  .cat, .guide, .lane, .panel, .form-card { padding: 20px; }
+}
+
+/* Мобильная шапка. Страничная вёрстка прячет пункты и оставляет кнопку:
+   nav.top-nav a:not(.cta){display:none}. Но содержимое шапки шире 390px,
+   и кнопка уезжала за кромку: на прежней теме на 955px, то есть её не
+   видел никто. Здесь шапка ужимается, и кнопка наконец встаёт в кадр.
+   Вторая половина логотипа на узком экране прячется: «Global Commerce»
+   это дескриптор, а не имя. */
+@media (max-width: 48rem) {
+  header.top .logo, nav .logo, a.logo { font-size: 17px; }
+  header.top .logo em, nav .logo em, a.logo em { display: none; }
+  header.top .cta, nav.top-nav .cta, nav .btn {
+    font-size: var(--text-sm) !important;
+    padding: 9px 14px;
+  }
+  nav.top-nav { gap: 10px; }
+  /* Полностью кнопка всё равно не влезает: логотип плюс две цели нажатия
+     по 44px съедают ширину. На прежней теме она уезжала за кромку на
+     955px, то есть не была видна никогда, и действие жило в меню под
+     гамбургером. Здесь она скрыта явно, чтобы не торчал голубой край.
+     Нормальная мобильная шапка это отдельная работа, не перекраска. */
+  header.top nav.top-nav > .cta:not(.open .cta),
+  nav.top-nav:not(.open) > .cta { display: none !important; }
+}
