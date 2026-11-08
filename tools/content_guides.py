@@ -315,7 +315,23 @@ GUIDES_PAGES = [
           "always with a minimum that dominates small credits, plus a flat fee for each "
           "amendment and each discrepant presentation, commonly around eighty dollars for "
           "either. Confirmation is quoted separately because it prices the issuing bank's "
-          "country risk, and no bank publishes it.")],
+          "country risk, and no bank publishes it."),
+         ("What is the difference between an LC at sight and a usance LC?",
+          "Who finances the shipment. An LC at sight falls due against a compliant "
+          "presentation, so the buyer's bank pays within days of the documents being "
+          "lodged. A usance credit falls due a stated period after shipment or after "
+          "presentation, commonly thirty, sixty or ninety days, and for that period the "
+          "seller is lending the buyer the value of the cargo. Everything else about the "
+          "two instruments is the same, including the way they fail, which is on "
+          "discrepancies."),
+         ("Can a letter of credit at sight also be confirmed?",
+          "Yes, and the two settings answer different questions. At sight is about when "
+          "payment falls due. Confirmation is about who owes it: an unconfirmed credit "
+          "leaves the seller carrying the issuing bank and its country, while a confirmed "
+          "credit adds a second bank, usually in the seller's own country, which undertakes "
+          "to pay in its own right. A confirmed credit available at sight is the "
+          "combination a seller asks for when the issuing bank is unfamiliar, and the "
+          "confirmation is priced separately.")],
 },
 {
  "slug": "customs-data-pricing",
@@ -606,7 +622,16 @@ GUIDES_PAGES = [
           "so the remedy is immediate re-export under bond, and where the timber cannot be "
           "separated from the cargo the cargo goes with it. A monetary penalty can be "
           "assessed on the first violation, with liquidated damages under the bond on top, "
-          "and demurrage runs throughout. There is no cheap version of this.")],
+          "and demurrage runs throughout. There is no cheap version of this."),
+         ("What does the ISPM 15 mark on a pallet mean?",
+          "It means that piece of timber was treated by a facility authorised to do it, and "
+          "it says by whom and how. The stamp carries the IPPC symbol, the two letter "
+          "country code, the producer code assigned to that facility, and the treatment "
+          "code: HT for heat treatment, DH for dielectric heating, MB for methyl bromide. "
+          "The mark belongs on the wood itself, not on a label or a certificate, and it has "
+          "to be on every piece, dunnage and bracing included. Since 1 January 2026 the "
+          "United States enforces the full format, hyphen between the country code and the "
+          "producer code included, and a wrong mark is treated as no mark.")],
 },
 {
  "slug": "container-loading",
@@ -1114,7 +1139,15 @@ GUIDES_PAGES = [
           "original: the shipper hands all the originals back at the origin and the carrier "
           "tells its destination office to release without presentation. At the counter the "
           "outcome looks the same. The difference is that with a telex release the originals "
-          "existed, and until they are surrendered the seller still holds control.")],
+          "existed, and until they are surrendered the seller still holds control."),
+         ("What is a telex release on a bill of lading?",
+          "An instruction, not a document. The bill is issued as a negotiable original, the "
+          "shipper surrenders the full set back to the carrier at the port of loading, and "
+          "the carrier tells its office at the destination to release the cargo without any "
+          "original being presented. The name is a leftover from when that message went by "
+          "telex. It is used when the originals would not reach the buyer before the vessel "
+          "does, and the point to hold on to is that the seller gives up control at the "
+          "moment of surrender, not at the moment of payment.")],
 },
 {
  "slug": "demurrage-detention",
@@ -1385,7 +1418,25 @@ GUIDES_PAGES = [
           "non-members, with forty dollars a fair middle for a non-member certificate. A "
           "London chamber lists twenty nine pounds for members and fifty eight for "
           "non-members before tax. Most chambers require the affidavit to be notarised "
-          "first, and the notarisation is usually what costs the day.")],
+          "first, and the notarisation is usually what costs the day."),
+         ("What does a non-preferential certificate of origin mean?",
+          "It is a statement of where goods were made, for purposes that have nothing to do "
+          "with getting a lower duty. Customs uses it to apply the ordinary tariff for that "
+          "country, to run quotas, antidumping and countervailing measures, and sanctions "
+          "screening, and buyers and banks use it because a letter of credit or a tender "
+          "asks for it. A chamber of commerce normally issues it against the exporter's "
+          "declaration. It carries no duty benefit, which is also why it is checked less "
+          "carefully than a preferential form."),
+         ("What is the difference between a preferential and a non-preferential certificate "
+          "of origin?",
+          "What the document is for, and therefore how hard it is checked. A "
+          "non-preferential certificate records origin for ordinary customs purposes and is "
+          "usually issued by a chamber of commerce. A preferential certificate claims a "
+          "reduced or zero duty under a named trade agreement, so it is worth money, it "
+          "must satisfy that agreement's own origin rule, and it generally comes from one "
+          "competent authority per country or from an exporter registered for the purpose. "
+          "A chamber certificate will not substitute for a preferential form, and a "
+          "rejected preference claim is recovered from the importer with interest.")],
 },
 {
  "slug": "proforma-invoice",

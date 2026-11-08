@@ -33,9 +33,37 @@ NEW = {
  "southern-africa.html":      "Durban to Gaborone: SADC supply and SACU transit paperwork",
  "turkiye.html":              "Stone and tile from Turkey, Türkiye, to the United States",
  "verify-supplier.html":      "How to verify a supplier is a factory, not a trader",
- "veterinary-certificate.html":"Veterinary certificate for frozen meat: establishment approval",
+ "veterinary-certificate.html":"Frozen meat veterinary certificate: establishment approval",
  "west-africa.html":          "Frozen poultry into Lomé and Cotonou: admissibility and cuts",
+
+ # Вторая правка, 08.11. В выдаче заголовок обрезается не по числу
+ # знаков, а по ширине строки, примерно 600 точек, и это около
+ # шестидесяти знаков обычного текста. Семь заголовков были длиннее и
+ # теряли хвост, в том числе два на страницах, которые уже собирают
+ # показы: demurrage-detention даёт 90 показов за 28 дней, ispm-15
+ # стоит на 11,2 по запросу «ispm pallet meaning». Обрезанный хвост это
+ # не косметика: у ISPM 15 отрезалось слово refused, то есть ровно то,
+ # ради чего страницу открывают.
+ #
+ # Ключевые слова при сокращении не выбрасываются, а переставляются
+ # ближе к началу. У ветеринарного сертификата заголовок уже приносил
+ # клики, CTR 6,2 процента, поэтому слова те же самые и только порядок
+ # другой: frozen meat вперёд, фраза establishment approval цела.
+ "ispm-15.html":              "ISPM 15 pallet mark: what it means and when cargo is refused",
+ "demurrage-detention.html":  "Demurrage and detention: the two clocks after arrival",
+ "freight-cost-lifting-machinery.html":
+                              "Freight cost on lifting machinery: 2 to 7% of goods value",
+ "freight-cost-fasteners.html":
+                              "Freight cost on screws and bolts: 3 to 11% of goods value",
+ "freight-cost-ceramic-tile.html":
+                              "Freight cost on ceramic and porcelain tile: 11 to 26%",
+ "freight-cost-tool-parts.html":
+                              "Freight cost on interchangeable tool parts: 2 to 4%",
 }
+
+# Порог предупреждения. Был 65, то есть пропускал именно тот диапазон,
+# в котором заголовок уже режется.
+LIMIT = 60
 
 
 def main():
@@ -58,7 +86,7 @@ def main():
         if cur in seen:
             print(f"  ПОВТОР заголовка: {p.name} и {seen[cur]}")
         seen[cur] = p.name
-        if len(cur) > 65:
+        if len(cur) > LIMIT:
             print(f"  длинно ({len(cur)}): {p.name}: {cur}")
 
     print(f"заголовков переписано: {done}, уже было: {skipped}")

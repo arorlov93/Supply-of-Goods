@@ -17,10 +17,22 @@
 
 Французские страницы получают французский блок, заголовок «En bref».
 
+Заголовки блока на четырёх руководствах, 08.11. Было «The short
+answer» на всех. Это честно описывает блок, но в выдаче заголовок
+раздела работает как признак того, о чём страница, и общая формулировка
+этот признак не даёт. По данным Search Console за 28 дней четыре
+страницы стоят на второй странице выдачи по своим запросам: letter of
+credit at sight 34 показа на позиции 16,9, telex release bill of lading
+28 на 16,4, non preferential certificate of origin 23 на 23,3, ispm
+pallet meaning 4 на 11,2. Заголовок блока на этих четырёх теперь
+называет то, что в блоке и так написано, словами запроса. Содержание
+пунктов не менялось ни на одной странице: четыре пункта под новым
+заголовком это ровно те четыре вещи, которые он называет.
+
 Запуск: python3.13 tools/answer-blocks.py
 Повторный запуск ничего не дублирует.
 """
-import pathlib, sys
+import pathlib, re, sys
 
 SITE = pathlib.Path(__file__).resolve().parent.parent / "site"
 
@@ -41,7 +53,7 @@ DATA = {
  ("A rate has a date on it.", "Rates change in reviews and new producers obtain their own, so a figure confirmed six months ago is not a figure confirmed today."),
 ], "The check is run against the named producer and the exact origin, before the order rather than at the border."),
 
-"bill-of-lading.html": ("The short answer", [
+"bill-of-lading.html": ("Originals, consignee and telex release, in four lines", [
  ("A negotiable original is title to the cargo.", "It is issued in a set of three, any one of which releases the goods, and the other two then become void."),
  ("The consignee decides who can collect.", "Straight to a named buyer gives the seller no leverage after shipment. To order of the shipper keeps control until the bill is endorsed."),
  ("Telex release is not a telex.", "The shipper surrenders all originals to the carrier at the origin and the carrier releases at the destination without paper."),
@@ -55,7 +67,7 @@ DATA = {
  ("The destination decides the certificates.", "In the European Union a construction product in scope carries a declaration of performance, and that is settled before the order."),
 ], None),
 
-"certificate-of-origin.html": ("The short answer", [
+"certificate-of-origin.html": ("Preferential and non-preferential certificates, in four lines", [
  ("Two different documents under one name.", "A non-preferential certificate says who made the goods. A preferential one claims a reduced duty under a named agreement, which is why it is worth money."),
  ("Origin is not the shipping address.", "For anything made from imported inputs it is decided by substantial transformation, under the rule written into the agreement."),
  ("The wrong issuer voids it.", "Preferential forms generally have one competent authority per country, and a chamber of commerce certificate will not substitute."),
@@ -118,7 +130,7 @@ DATA = {
  ("Commissioning is where the disappointment lives.", "Who assembles it, who commissions it, whether the producer sends an engineer, is settled before the order and not after arrival."),
 ], "Heavy equipment is out of gauge more often than buyers expect, and that changes the freight cost by a multiple rather than a percentage."),
 
-"ispm-15.html": ("The short answer", [
+"ispm-15.html": ("The ISPM 15 pallet mark, in four lines", [
  ("It covers the wood holding your cargo.", "Pallets, crates, cases, boxes, drums, dunnage, blocking and bracing. Processed wood based materials are out of scope."),
  ("The mark on the wood is the proof.", "Heat treatment to a specified core temperature and duration, or fumigation, applied by an authorised facility and stamped on the timber itself."),
  ("Failure is at the importer's cost.", "Treatment at the port where that is available, re-export or destruction of the packaging, and in the worst case refusal of the whole consignment."),
@@ -132,7 +144,7 @@ DATA = {
  ("VAT belongs in cash flow, not in margin.", "It is recoverable by a registered importer, but it is paid at clearance and recovered weeks or months later."),
 ], None),
 
-"letter-of-credit.html": ("The short answer", [
+"letter-of-credit.html": ("A letter of credit at sight: the four things that decide it", [
  ("Banks deal in documents, not in goods.", "The bank never sees the cargo. It examines whether the presentation complies on its face with the credit."),
  ("Sight or usance decides who finances the shipment.", "A sight credit pays a few banking days after shipment. A usance credit pays thirty, sixty or ninety days later and the seller carries it."),
  ("Confirmation moves the risk.", "An unconfirmed credit carries the issuing bank and its country. A confirmed credit adds a second bank, usually in the seller's country, which undertakes to pay independently."),
@@ -257,7 +269,7 @@ def build(title, items, note):
 
 
 def main():
-    done = skipped = 0
+    done = skipped = retitled = 0
     missing = []
     for name, (title, items, note) in DATA.items():
         p = SITE / name
@@ -266,7 +278,16 @@ def main():
             continue
         s = p.read_text()
         if 'class="answer"' in s:
-            skipped += 1
+            # Блок уже стоит. Проверяем заголовок: раньше инструмент на
+            # этом просто выходил, и правка заголовка в DATA на страницу
+            # не попадала, то есть источник и страница молча расходились.
+            m = re.search(r'(<div class="answer">\s*<h2>)(.*?)(</h2>)', s, re.S)
+            if m and m.group(2).strip() != title:
+                s = s[:m.start(2)] + title + s[m.end(2):]
+                p.write_text(s)
+                retitled += 1
+            else:
+                skipped += 1
             continue
         i = s.find(ANCHOR)
         if i < 0:
@@ -277,7 +298,7 @@ def main():
         p.write_text(s[:i] + build(title, items, note) + s[i:])
         done += 1
 
-    print(f"блоков добавлено: {done}, уже было: {skipped}")
+    print(f"блоков добавлено: {done}, заголовков обновлено: {retitled}, без изменений: {skipped}")
     for m in missing:
         print("  пропущено:", m)
     return 0
