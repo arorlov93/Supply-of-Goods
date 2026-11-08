@@ -644,12 +644,28 @@ a:hover { color: var(--color-white); }
 .jsteps figure { margin: 0; }
 
 
+/* Строки крупного заголовка лежат в .ln с overflow:hidden: это нужно
+   анимации, строка выезжает снизу. Высота строки при этом ровно равна
+   высоте текста, поэтому у прописных с диакритикой срезается верх.
+   Замерено: .ln и её span оба 71,5 px, запаса нет. На английской
+   главной это незаметно, на французской «L’ADMISSIBILITÉ» и на
+   испанской «DÍGANOS QUÉ» акцент обрезан.
+   overflow:clip делает то же самое, что hidden, но допускает поле
+   отрисовки за границей блока, и 0,16em хватает на акцент, не открывая
+   соседнюю строку. */
+.display .ln { overflow: clip; overflow-clip-margin: 0.16em; }
+
 /* --------------------------------------------------------------- полосы */
 
 /* Референс: каждая поверхность это либо канва, либо карточка. Полос
    другого тона в системе нет, поэтому прежние бумажные и чернильные
    полосы сводятся к двум уровням. */
-#s-cats, #s-proc, #s-why {
+/* #s-lane это новая полоса стран ввоза на французской главной. Она
+   собрана по образцу #s-cats и несёт тот же inline-цвет заголовка
+   из исходной разметки, поэтому её надо перечислить здесь же: без
+   этого заголовок остаётся тёмным на тёмном, замерено 23,23,33 на
+   фоне 17,17,33. */
+#s-cats, #s-proc, #s-why, #s-lane {
   background: var(--color-graphite) !important;
   color: var(--color-ivory) !important;
 }
@@ -657,10 +673,10 @@ a:hover { color: var(--color-white); }
   background: var(--color-onyx) !important;
   color: var(--color-ivory) !important;
 }
-#s-cats h2, #s-proc h2, #s-why h2, #s-journey h2,
+#s-cats h2, #s-proc h2, #s-why h2, #s-journey h2, #s-lane h2,
 #s-cats h3, #s-proc h3, #s-why h3, #s-journey h3 { color: var(--color-ivory) !important; }
-#s-cats p, #s-proc p, #s-why p, #s-journey p,
-#s-cats .lead, #s-proc .lead, #s-journey .lead { color: var(--color-ivory) !important; }
+#s-cats p, #s-proc p, #s-why p, #s-journey p, #s-lane p,
+#s-lane .lead, #s-cats .lead, #s-proc .lead, #s-journey .lead { color: var(--color-ivory) !important; }
 #s-journey .k { color: var(--color-ash) !important; }
 
 /* ---------------------------------------------------------------- шапка */
