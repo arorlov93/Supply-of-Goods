@@ -37,12 +37,29 @@ FOOT_NEW = ('<dt>Entity</dt><dd>ISP GROUP LLC<br>'
             '<span style="color:var(--ink-2)">United States<br>'
             'UEI %s<br>CAGE %s</span></dd>' % (UEI, CAGE))
 
-# Подвал главной собран отдельно и выглядит иначе
-HOME_OLD = ('<p class="muted" style="margin:0;font-size:14px;line-height:1.7">'
-            '16395 Biscayne Blvd<br>North Miami Beach, FL 33160<br>United States</p>')
-HOME_NEW = ('<p class="muted" style="margin:0;font-size:14px;line-height:1.7">'
-            '16395 Biscayne Blvd<br>North Miami Beach, FL 33160<br>United States<br>'
-            'UEI %s &middot; CAGE %s</p>' % (UEI, CAGE))
+# Французский образец подвала. Он стоит на afrique-ouest,
+# decoupes-volaille и certificat-veterinaire, то есть ровно на трёх
+# страницах, которые по Search Console берут больше всего кликов:
+# afrique-ouest на позиции 1,0, decoupes-volaille с CTR 9,1 процента.
+# Реквизитов там не было, потому что прежний образец искал только
+# английское Entity.
+FOOT_FR_OLD = ('<dt>Soci&eacute;t&eacute;</dt><dd>ISP GROUP LLC<br>'
+               '<span style="color:var(--ink-2)">&Eacute;tats-Unis</span></dd>')
+FOOT_FR_NEW = ('<dt>Soci&eacute;t&eacute;</dt><dd>ISP GROUP LLC<br>'
+               '<span style="color:var(--ink-2)">&Eacute;tats-Unis<br>'
+               'UEI %s<br>CAGE %s</span></dd>' % (UEI, CAGE))
+
+# Подвал главной собран отдельно и выглядит иначе. Языковые главные
+# отличаются от английской только словом «Соединённые Штаты», поэтому
+# прежний образец их не находил, и на них UEI оставался только внутри
+# тега script, то есть для читателя и для языковой модели его не было.
+HOME_TPL = ('<p class="muted" style="margin:0;font-size:14px;line-height:1.7">'
+            '16395 Biscayne Blvd<br>North Miami Beach, FL 33160<br>%s')
+COUNTRY = ["United States", "&Eacute;tats-Unis", "États-Unis",
+           "Estados Unidos", "Vereinigte Staaten"]
+HOMES = [(HOME_TPL % c + "</p>",
+          HOME_TPL % c + "<br>UEI %s &middot; CAGE %s</p>" % (UEI, CAGE))
+         for c in COUNTRY]
 
 
 def main():
@@ -62,13 +79,21 @@ def main():
     ent = 0
     for p in sorted(SITE.rglob("*.html")):
         s = p.read_text()
-        if UEI in s and ("UEI %s" % UEI) in s:
+        # Проверяем видимый текст, а не весь файл: UEI внутри тега
+        # script есть почти везде, и прежняя проверка принимала его за
+        # выполненную работу.
+        if ("UEI %s" % UEI) in re.sub(r"(?s)<script.*?</script>", "", s):
             continue
         t = s
         if FOOT_OLD in t:
             t = t.replace(FOOT_OLD, FOOT_NEW, 1)
-        elif HOME_OLD in t:
-            t = t.replace(HOME_OLD, HOME_NEW, 1)
+        elif FOOT_FR_OLD in t:
+            t = t.replace(FOOT_FR_OLD, FOOT_FR_NEW, 1)
+        else:
+            for old, new in HOMES:
+                if old in t:
+                    t = t.replace(old, new, 1)
+                    break
         if t != s:
             p.write_text(t)
             ent += 1

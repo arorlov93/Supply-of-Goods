@@ -61,10 +61,10 @@
   "de": "Löschen, Zoll und Freistellung nach dem vereinbarten Incoterm, wobei der Dokumentensatz mit der Ware eintrifft und nicht danach."},
 
  "WHAT WE SUPPLY.": {"fr": "CE QUE NOUS FOURNISSONS.", "es": "QUÉ SUMINISTRAMOS.", "de": "WAS WIR LIEFERN."},
- "These are the lanes we already run, food among them. They are where we start, not where we stop: name a product outside this list and we will source it the same way.": {
-  "fr": "Voici les flux que nous opérons déjà, l’alimentaire compris. C’est notre point de départ, pas notre limite : nommez un produit hors de cette liste et nous le sourcerons de la même façon.",
-  "es": "Estas son las rutas que ya operamos, la alimentación entre ellas. Son el punto de partida, no el límite: nombre un producto fuera de esta lista y lo abasteceremos igual.",
-  "de": "Das sind die Verkehre, die wir bereits fahren, Lebensmittel eingeschlossen. Sie sind der Anfang, nicht die Grenze: Nennen Sie ein Produkt außerhalb dieser Liste, und wir beschaffen es genauso."},
+ "These are the lanes we already run, food among them.": {
+  "fr": "Voici les flux que nous opérons déjà, l’alimentaire compris.",
+  "es": "Estas son las rutas que ya operamos, la alimentación entre ellas.",
+  "de": "Das sind die Verkehre, die wir bereits fahren, Lebensmittel eingeschlossen."},
 
  "Building and finishing materials": {"fr": "Matériaux de construction et de finition", "es": "Materiales de construcción y acabado", "de": "Bau- und Ausbaustoffe"},
  "Stone, tile, cement, cable": {"fr": "Pierre, carrelage, ciment, câble", "es": "Piedra, azulejo, cemento, cable", "de": "Stein, Fliesen, Zement, Kabel"},
