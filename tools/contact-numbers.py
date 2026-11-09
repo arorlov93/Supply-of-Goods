@@ -31,7 +31,7 @@ CLAUDE.md тут работает буквально: нет проверенн�
 Запуск: python3.13 tools/contact-numbers.py
 Повторный запуск ничего не меняет.
 """
-import pathlib, sys
+import json, pathlib, re, sys
 
 SITE = pathlib.Path(__file__).resolve().parent.parent / "site"
 MERCURY = SITE / "css" / "mercury.css"
@@ -98,10 +98,13 @@ FAQ_COUNT = {
                      "Quatre points vérifiés avant un premier contact."),
 }
 
+# Якорь это хвост последней раскрывашки. Блок обязан начинаться с
+# закрывающего </details>, иначе новый вопрос встаёт ВНУТРЬ предыдущего:
+# замена съедает его закрывающий тег. Один раз так и вышло, починка ниже.
 FAQ_NEW = {
  "contact.html": (
    "</details></div></div></section>",
-   "<details><summary>When would it actually arrive?</summary><p>Honestly: "
+   "</details><details><summary>When would it actually arrive?</summary><p>Honestly: "
    "we quote a window, we do not promise a date, and we have no completed "
    "shipment behind us to point at. The quotation names the loading window "
    "the producer has confirmed, the sailing and its transit, and the date "
@@ -110,7 +113,7 @@ FAQ_NEW = {
    "than afterwards.</p></details></div></div></section>"),
  "contact-fr.html": (
    "</details></div></div></section>",
-   "<details><summary>Quand la marchandise arrive-t-elle vraiment ?</summary>"
+   "</details><details><summary>Quand la marchandise arrive-t-elle vraiment ?</summary>"
    "<p>Honnêtement : nous donnons une fenêtre, pas une date, et nous n’avons "
    "pas d’expédition menée à son terme à vous montrer. La cotation nomme la "
    "fenêtre de chargement confirmée par le producteur, le navire et son "
@@ -122,8 +125,13 @@ FAQ_NEW = {
 
 # Французский ответ про минимум был короче английского: в нём не было
 # оговорки про сборный контейнер, а именно она и снимает возражение.
+# Каждая тройка это (признак «уже сделано», что ищем, на что меняем).
+# Признак отдельным полем нужен потому, что текст ответа про минимум стоит
+# на странице дважды, в разметке и в JSON-LD, и одной проверкой «новое уже
+# есть» вторую правку не отличить от первой.
 FR_FIXES = [
- ("<p>Nous travaillons en conteneurs complets. Pour une première commande, "
+ ("fournisseurs dans un même conteneur.</p>",
+  "<p>Nous travaillons en conteneurs complets. Pour une première commande, "
   "un ou deux conteneurs à conditions commerciales complètes avant le "
   "démarrage d’un programme mensuel.</p>",
   "<p>Nous travaillons en conteneurs complets, parce que c’est là que "
@@ -131,7 +139,17 @@ FR_FIXES = [
   "conteneurs à conditions commerciales complètes avant le démarrage d’un "
   "programme mensuel. Pour un essai, nous pouvons grouper plusieurs "
   "fournisseurs dans un même conteneur.</p>"),
- ('<a class="lanelink" href="decoupes-volaille">',
+ ('fournisseurs dans un même conteneur."',
+  "Nous travaillons en conteneurs complets. Pour une première commande, un "
+  "ou deux conteneurs à conditions commerciales complètes avant le "
+  "démarrage d’un programme mensuel.",
+  "Nous travaillons en conteneurs complets, parce que c’est là que "
+  "l’économie du transport tient. Pour une première commande, un ou deux "
+  "conteneurs à conditions commerciales complètes avant le démarrage d’un "
+  "programme mensuel. Pour un essai, nous pouvons grouper plusieurs "
+  "fournisseurs dans un même conteneur."),
+ ('<a class="lanelink" href="admissibilite-cote-divoire">',
+  '<a class="lanelink" href="decoupes-volaille">',
   '<a class="lanelink" href="admissibilite-cote-divoire"><b>Côte d’Ivoire'
   '</b><span>Le dossier documentaire à l’import.</span></a>'
   '<a class="lanelink" href="admissibilite-senegal"><b>Sénégal</b>'
@@ -140,6 +158,55 @@ FR_FIXES = [
   '<span>Le dossier documentaire à l’import.</span></a>'
   '<a class="lanelink" href="decoupes-volaille">'),
 ]
+
+
+# Починка первого прогона: вопрос встал внутрь предыдущей раскрывашки.
+REPAIR = {
+ "contact.html":
+   ("</p><details><summary>When would it actually arrive?",
+    "</p></details><details><summary>When would it actually arrive?"),
+ "contact-fr.html":
+   ("</p><details><summary>Quand la marchandise arrive-t-elle vraiment ?",
+    "</p></details><details><summary>Quand la marchandise arrive-t-elle "
+    "vraiment ?"),
+}
+
+# Разметка FAQPage для поиска собирается полной сборкой, запускать которую
+# нельзя, поэтому новый вопрос дописывается в неё здесь же.
+LD = {
+ "contact.html": (
+   '"text": "English and Russian in correspondence.',
+   '{"@type": "Question", "name": "When would it actually arrive?", '
+   '"acceptedAnswer": {"@type": "Answer", "text": "Honestly: we quote a '
+   'window, we do not promise a date, and we have no completed shipment '
+   'behind us to point at. The quotation names the loading window the '
+   'producer has confirmed, the sailing and its transit, and the date the '
+   'document set has to be complete. Those three are what a delivery date '
+   'is made of, and you get them in writing before you commit rather than '
+   'afterwards."}}'),
+ "contact-fr.html": (
+   '"text": "Un accusé de réception avec les questions ouvertes',
+   '{"@type": "Question", "name": "Quand la marchandise arrive-t-elle '
+   'vraiment ?", "acceptedAnswer": {"@type": "Answer", "text": '
+   '"Honnêtement : nous donnons une fenêtre, pas une date, et nous n’avons '
+   'pas d’expédition menée à son terme à vous montrer. La cotation nomme la '
+   'fenêtre de chargement confirmée par le producteur, le navire et son '
+   'temps de transit, et la date à laquelle le jeu de documents doit être '
+   'complet. C’est de ces trois éléments qu’une date de livraison est '
+   'faite, et vous les avez par écrit avant de vous engager, pas après."}}'),
+}
+
+
+def ld_add(name, s):
+    """Добавляет вопрос в конец mainEntity, если разметка на странице есть."""
+    if name not in LD or LD[name][1] in s:
+        return s, False
+    m = re.search(r'(?s)("@type": "FAQPage", "mainEntity": \[.*?)\]\}', s)
+    if not m or LD[name][0] not in m.group(1):
+        return s, False
+    out = s[:m.end(1)] + ", " + LD[name][1] + "]}" + s[m.end():]
+    json.loads(re.search(r'(?s)\{"@context".*?\]\}', out).group(0))
+    return out, True
 
 
 def main():
@@ -192,9 +259,18 @@ def main():
                 s = s.replace(anchor, block, 1)
                 steps.append("вопрос про прибытие")
 
+        old, new = REPAIR[name]
+        if old in s:
+            s = s.replace(old, new, 1)
+            steps.append("вопрос вынут из соседней раскрывашки")
+
+        s, ok = ld_add(name, s)
+        if ok:
+            steps.append("разметка FAQPage")
+
         if name == "contact-fr.html":
-            for old, new in FR_FIXES:
-                if new in s:
+            for done, old, new in FR_FIXES:
+                if done in s:
                     continue
                 if old not in s:
                     print("  ВНИМАНИЕ: contact-fr.html, не найдено: %s"
