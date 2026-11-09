@@ -109,6 +109,47 @@ PAY = ("Le paiement contre documents", [
  "paiement que votre propre banque contrôle est la seule garantie qu’un "
  "vendeur sans historique chez vous puisse honnêtement offrir.</p>"])
 
+# Предотгрузочная инспекция внутри комплекта по аккредитиву.
+# Панель: аккредитив обсуждают 76 процентов и 100 процентов из 38 обожжённых
+# трейдером, но 26 процентов обожжённых говорят одно и то же: **аккредитив
+# платит против документов, а не против товара.** Комплект чистый, контейнер
+# не тот. Сами покупатели называют решение, 18 процентов панели назвали SGS,
+# Intertek или TÜV поимённо.
+# Правка стоит ноль, потому что инспекция уже в цепочке у всех трёх стран.
+# Органы названы поимённо только там, где это подтверждено первоисточником,
+# то есть по Камеруну. По Кот-д'Ивуару и Сенегалу названа программа и
+# обещано письменное подтверждение органа до открытия аккредитива.
+INSPECT_COMMON = (
+ "<p>Reste l’objection qui vient ensuite, et elle est juste : un crédit "
+ "documentaire paie contre des documents, pas contre la marchandise. Le "
+ "jeu peut être propre et le conteneur mauvais. C’est pourquoi nous "
+ "faisons figurer dans le jeu exigé par le crédit un certificat "
+ "d’inspection avant expédition délivré par un tiers nommé, et nous en "
+ "faisons une condition de paiement. L’organisme est désigné dans le "
+ "crédit avant le chargement, pas discuté après l’arrivée.</p>")
+
+INSPECT = {
+ "admissibilite-cote-divoire":
+   "<p>Cela ne rajoute pas une étape à votre dossier : le contrôle avant "
+   "embarquement décrit plus haut est déjà prévu pour les produits "
+   "réglementés. Nous ne faisons que l’attacher au paiement. L’organisme "
+   "mandaté et le champ exact du contrôle vous sont confirmés par écrit "
+   "pour votre expédition avant l’ouverture du crédit.</p>",
+ "admissibilite-senegal":
+   "<p>Cela ne rajoute pas une étape à votre dossier : la vérification des "
+   "importations décrite plus haut couvre déjà les conteneurs et les "
+   "cargaisons à partir du seuil FOB rappelé ci-dessus. Nous ne faisons que "
+   "l’attacher au paiement. L’organisme retenu et le champ exact du "
+   "contrôle vous sont confirmés par écrit pour votre expédition avant "
+   "l’ouverture du crédit.</p>",
+ "admissibilite-cameroun":
+   "<p>Cela ne rajoute pas une étape à votre dossier : l’évaluation de la "
+   "conformité avant embarquement est déjà obligatoire, et l’attestation "
+   "de conformité est délivrée par SGS, Intertek ou TÜV Rheinland. Nous ne "
+   "faisons que nommer l’organisme dans le crédit et attacher son "
+   "certificat au paiement.</p>",
+}
+
 PAGES = [
 {
  "slug": "admissibilite-cote-divoire",
@@ -386,6 +427,8 @@ def build_main(p):
 
     out.append('<div class="prose">')
     for i, (head, paras) in enumerate(p["prose"], 1):
+        if head == PAY[0]:
+            paras = paras[:2] + [INSPECT_COMMON, INSPECT[p["slug"]]] + paras[2:]
         out.append('<div class="pblock"><span class="k">%02d</span>'
                    '<h2 id="s%d">%s</h2><div class="ptext">%s</div></div>'
                    % (i, i, head, "".join(paras)))

@@ -10,13 +10,13 @@
  "Contact": {"fr": "Contact", "es": "Contacto", "de": "Kontakt"},
  "Request a quote": {"fr": "Demander un prix", "es": "Solicitar precio", "de": "Angebot anfordern"},
 
- "NAME THE": {"fr": "DITES-NOUS", "es": "DÍGANOS QUÉ", "de": "NENNEN SIE"},
- "PRODUCT.": {"fr": "LE PRODUIT.", "es": "PRODUCTO.", "de": "DIE WARE."},
- "WE DELIVER IT.": {"fr": "NOUS LE LIVRONS.", "es": "SE LO ENTREGAMOS.", "de": "WIR LIEFERN SIE."},
- "Industrial goods, building materials, equipment, packaging and food. We find the producer, verify it, buy in our own name and deliver to your port. Principal, not a broker.": {
-  "fr": "Biens industriels, matériaux de construction, équipements, emballages et denrées. Nous trouvons le producteur, le vérifions, achetons en notre propre nom et livrons à votre port. Négociant pour compte propre, pas courtier.",
-  "es": "Bienes industriales, materiales de construcción, equipos, envases y alimentos. Localizamos al productor, lo verificamos, compramos en nombre propio y entregamos en su puerto. Actuamos como principal, no como intermediario.",
-  "de": "Industriegüter, Baustoffe, Ausrüstung, Verpackung und Lebensmittel. Wir finden den Hersteller, prüfen ihn, kaufen auf eigene Rechnung und liefern an Ihren Hafen. Eigenhändler, kein Makler."},
+ "ADMISSIBILITY": {"fr": "L’ADMISSIBILITÉ", "es": "ADMISIBILIDAD", "de": "ZULÄSSIGKEIT"},
+ "BEFORE": {"fr": "AVANT", "es": "ANTES", "de": "VOR"},
+ "PRICE.": {"fr": "LE PRIX.", "es": "QUE EL PRECIO.", "de": "DEM PREIS."},
+ "An offer from a producer that cannot legally ship to your country is not an offer, whatever the number on it. We buy in our own name, we carry the document file through to your port, and where your bank requires it we work against documents. The document file is written out port by port for Abidjan, Dakar and Douala. Name another port and we will set out the same file for it.": {
+  "fr": "Une offre d’un producteur qui ne peut pas légalement expédier vers votre pays n’est pas une offre, quel que soit le chiffre dessus. Nous achetons en notre propre nom, nous portons le dossier documentaire jusqu’à votre port, et quand votre banque l’exige nous travaillons contre documents. Le dossier documentaire est écrit port par port pour Abidjan, Dakar et Douala. Nommez un autre port et nous établirons le même dossier pour lui.",
+  "es": "Una oferta de un productor que no puede enviar legalmente a su país no es una oferta, sea cual sea la cifra. Compramos en nombre propio, llevamos el expediente documental hasta su puerto y, cuando su banco lo exige, trabajamos contra documentos. El expediente documental está escrito puerto por puerto para Abiyán, Dakar y Duala. Indíquenos otro puerto y prepararemos el mismo expediente para él.",
+  "de": "Ein Angebot von einem Hersteller, der nicht legal in Ihr Land liefern darf, ist kein Angebot, gleich welche Zahl darauf steht. Wir kaufen im eigenen Namen, führen den Dokumentensatz bis zu Ihrem Hafen und arbeiten gegen Dokumente, wo Ihre Bank es verlangt. Der Dokumentensatz ist Hafen für Hafen für Abidjan, Dakar und Douala ausgeschrieben. Nennen Sie uns einen anderen Hafen, und wir erstellen denselben Satz dafür."},
  "Discuss your requirements": {"fr": "Exposez votre besoin", "es": "Cuéntenos su necesidad", "de": "Bedarf besprechen"},
  "Scroll": {"fr": "Défiler", "es": "Desplazar", "de": "Scrollen"},
 
