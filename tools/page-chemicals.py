@@ -35,28 +35,22 @@ URL = {"en": "https://ispgroupgc.com/chemicals",
        "de": "https://ispgroupgc.com/de/chemicals"}
 
 META = {
- "en": ("Water treatment and oilfield chemicals supplier | ISP Group LLC",
-        "Phosphonates, scale and corrosion inhibitors, demulsifiers, PAC "
-        "coagulant, ion exchange resins and molecular sieves, supplied as "
-        "principal from ISO-certified manufacturers to your port. FOB or "
-        "CIF, documents with the goods."),
- "fr": ("Fournisseur de produits chimiques pour l’eau et les champs pétroliers | ISP Group LLC",
+ "en": ("Oilfield and water treatment chemicals | ISP Group",
+        "Phosphonates, scale and corrosion inhibitors, demulsifiers, PAC, "
+        "ion exchange resins and molecular sieves from ISO-certified "
+        "plants."),
+ "fr": ("Produits chimiques pour l’eau et le pétrole | ISP Group",
         "Phosphonates, inhibiteurs d’entartrage et de corrosion, "
-        "désémulsifiants, coagulant PAC, résines échangeuses d’ions et "
-        "tamis moléculaires, fournis en notre propre nom depuis des usines "
-        "certifiées ISO jusqu’à votre port. FOB ou CIF, documents avec la "
-        "marchandise."),
- "es": ("Proveedor de químicos para tratamiento de agua y campos petroleros | ISP Group LLC",
+        "désémulsifiants, PAC, résines échangeuses d’ions et tamis "
+        "moléculaires."),
+ "es": ("Químicos para tratamiento de agua y petróleo | ISP Group",
         "Fosfonatos, inhibidores de incrustaciones y corrosión, "
-        "desemulsionantes, coagulante PAC, resinas de intercambio iónico y "
-        "tamices moleculares, suministrados en nombre propio desde plantas "
-        "certificadas ISO hasta su puerto. FOB o CIF, documentos con la "
-        "mercancía."),
- "de": ("Lieferant für Wasseraufbereitungs- und Ölfeldchemikalien | ISP Group LLC",
+        "desemulsionantes, PAC, resinas de intercambio iónico y tamices "
+        "moleculares."),
+ "de": ("Wasseraufbereitungs- und Ölfeldchemikalien | ISP Group",
         "Phosphonate, Scale- und Korrosionsinhibitoren, Demulgatoren, "
-        "PAC-Koagulationsmittel, Ionenaustauscherharze und Molekularsiebe, "
-        "im eigenen Namen aus ISO-zertifizierten Werken bis zu Ihrem Hafen. "
-        "FOB oder CIF, Dokumente mit der Ware."),
+        "PAC, Ionenaustauscherharze und Molekularsiebe aus "
+        "ISO-zertifizierten Werken."),
 }
 
 CRUMB = {"en": "Chemicals", "fr": "Chimie", "es": "Química", "de": "Chemie"}

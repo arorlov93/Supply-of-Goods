@@ -34,27 +34,20 @@ PDF = "/ISP_GROUP_COMPLIANCE_POLICY.pdf"
 
 META = {
  "en": ("Sanctions and export control compliance | ISP Group LLC",
-        "ISP Group LLC is a US company subject to US law, including OFAC "
-        "sanctions and export control regulations. Every counterparty, its "
-        "owners and the end user are screened before every quotation, "
-        "contract and payment."),
- "fr": ("Conformité aux sanctions et au contrôle des exportations | ISP Group LLC",
-        "ISP Group LLC est une société américaine soumise au droit des "
-        "États-Unis, y compris aux sanctions de l’OFAC et au contrôle des "
-        "exportations. Chaque contrepartie, ses propriétaires et "
-        "l’utilisateur final sont contrôlés avant chaque cotation, contrat "
-        "et paiement."),
- "es": ("Cumplimiento de sanciones y control de exportaciones | ISP Group LLC",
-        "ISP Group LLC es una empresa estadounidense sujeta a la legislación "
-        "de los Estados Unidos, incluidas las sanciones de la OFAC y el "
-        "control de exportaciones. Cada contraparte, sus propietarios y el "
-        "usuario final se verifican antes de cada cotización, contrato y "
-        "pago."),
+        "ISP Group LLC is a US company under OFAC sanctions and export "
+        "control law. Every counterparty and end user is screened before "
+        "payment."),
+ "fr": ("Sanctions et contrôle des exportations | ISP Group",
+        "ISP Group LLC est une société américaine soumise aux sanctions "
+        "de l’OFAC. Chaque contrepartie et utilisateur final est "
+        "contrôlé."),
+ "es": ("Sanciones y control de exportaciones | ISP Group",
+        "ISP Group LLC es una empresa estadounidense sujeta a las "
+        "sanciones de la OFAC. Verificamos cada contraparte y usuario "
+        "final."),
  "de": ("Sanktions- und Exportkontroll-Compliance | ISP Group LLC",
-        "ISP Group LLC ist ein US-Unternehmen und unterliegt US-Recht, "
-        "einschließlich OFAC-Sanktionen und Exportkontrolle. Jede "
-        "Gegenpartei, ihre Eigentümer und der Endverwender werden vor jedem "
-        "Angebot, Vertrag und jeder Zahlung geprüft."),
+        "ISP Group LLC ist ein US-Unternehmen unter OFAC-Sanktions- und "
+        "Exportkontrollrecht. Jede Gegenpartei wird vorab geprüft."),
 }
 
 CRUMB = {"en": "Compliance", "fr": "Conformité", "es": "Cumplimiento",

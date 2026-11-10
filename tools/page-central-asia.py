@@ -35,22 +35,20 @@ NAME = {"en": "Central Asia &amp; Caspian", "fr": "Asie centrale et Caspienne",
 META = {
  "en": ("Central Asia and Caspian corridor | ISP Group LLC",
         "Chemicals and equipment from China and India to Kazakhstan, "
-        "Uzbekistan, Turkmenistan, Azerbaijan, Kyrgyzstan and Mongolia, by "
-        "rail through Khorgos and by sea through Turkmenbashi and Aktau."),
+        "Uzbekistan, Turkmenistan and Azerbaijan, by rail via Khorgos and "
+        "by sea via Aktau."),
  "fr": ("Corridor Asie centrale et Caspienne | ISP Group LLC",
         "Produits chimiques et équipements de Chine et d’Inde vers le "
-        "Kazakhstan, l’Ouzbékistan, le Turkménistan, l’Azerbaïdjan, le "
-        "Kirghizistan et la Mongolie, par rail via Khorgos et par mer via "
-        "Turkmenbachi et Aktaou."),
+        "Kazakhstan, l’Ouzbékistan, le Turkménistan et l’Azerbaïdjan, par "
+        "rail."),
  "es": ("Corredor Asia Central y Caspio | ISP Group LLC",
-        "Productos químicos y equipos desde China e India hacia Kazajistán, "
-        "Uzbekistán, Turkmenistán, Azerbaiyán, Kirguistán y Mongolia, por "
-        "ferrocarril vía Khorgos y por mar vía Turkmenbashi y Aktau."),
+        "Productos químicos y equipos desde China e India hacia "
+        "Kazajistán, Uzbekistán, Turkmenistán y Azerbaiyán, por "
+        "ferrocarril vía Khorgos."),
  "de": ("Korridor Zentralasien und Kaspisches Meer | ISP Group LLC",
         "Chemikalien und Ausrüstung aus China und Indien nach Kasachstan, "
-        "Usbekistan, Turkmenistan, Aserbaidschan, Kirgisistan und der "
-        "Mongolei, per Bahn über Khorgos und per See über Turkmenbaschi und "
-        "Aktau."),
+        "Usbekistan, Turkmenistan und Aserbaidschan, per Bahn über "
+        "Khorgos."),
 }
 
 H1 = {
