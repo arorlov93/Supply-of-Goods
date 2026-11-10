@@ -8,12 +8,17 @@
 6. /about получает абзац об опыте руководителя в закупках крупных
    государственных и публичных компаний.
 
-Чего этот инструмент НЕ делает, и почему. Бриф требует проставить годы у
-каждого проекта и год поставки у поставок из ЕС. Годов нет: ни на сайте,
-ни в брифе, ни в материалах. Выдумывать даты нельзя, это прямое правило
-работы, поэтому годы не ставятся и вынесены в отчёт отдельным вопросом.
-Как только годы будут названы, они встают сюда списком и проставляются
-одним прогоном.
+Годы названы заказчиком 10.11.2026 и проставлены ниже, в YEARS. Названы
+они по регионам, а не по отдельным объектам, поэтому и ставятся по
+регионам: период поставок в регион. Приписать диапазон региона к
+конкретной стройке нельзя, это было бы уже не его датой. Подпись под
+фотографией курорта в Артёме остаётся как есть: даты 2017-2024 там взяты
+у подрядчика и так и помечены.
+
+Год поставок из ЕС отсюда же: оборудование бассейна на Бали входит в
+балийскую программу 2023-2026, мостовое оборудование в приморскую
+2017-2026. Отдельной даты отгрузки из ЕС заказчик не называл, поэтому
+стоит период программы, а не выдуманный месяц.
 
 Запуск: python3.13 tools/history-provenance.py
 Повторный запуск ничего не меняет.
@@ -36,11 +41,103 @@ CSS = """
   font-size:.93rem;line-height:1.55;color:var(--ink-2);max-width:72ch}
 """
 
+YEARS_CSS = """
+/* годы поставок по регионам */
+.pyears{margin:14px 0 0;font-size:.95rem;line-height:1.6;color:var(--ink-2);
+  max-width:68ch;letter-spacing:.005em}
+.pyears b{color:var(--ink);font-weight:600}
+"""
+
+# Регион -> период поставок. Названо заказчиком 10.11.2026.
+YEARS = (("Primorye", "2017 to 2026"),
+         ("Kamchatka", "2019 to 2026"),
+         ("Sakhalin", "2022 to 2026"),
+         ("Moscow", "2023 to 2025"))
+BALI = "2023 to 2026"
+
+RU_LINE = ('<p class="pyears">Supply ran into each region over a different '
+           'period. ' + " ".join("<b>%s</b> %s." % (r, y) for r, y in YEARS)
+           + "</p>")
+
+# Первая редакция строки с годами: запятые внутри запятых читались тяжело.
+# Правка одноразовая, нужна только для файлов, записанных до неё.
+REPAIR = [('<p class="pyears">Supply ran into each region over a different '
+           'period: <b>Primorye</b>, 2017 to 2026, <b>Kamchatka</b>, '
+           '2019 to 2026, <b>Sakhalin</b>, 2022 to 2026, <b>Moscow</b>, '
+           '2023 to 2025.</p>', RU_LINE)]
+
+BALI_LINE = ('<p class="pyears">Supply into the villa project ran from '
+             '<b>2023 to 2026</b>. The pool plant came out of the European '
+             'Union inside that period.</p>')
+
+EXP_LINE = ('<p class="pyears">The supply programmes behind this section ran '
+            'into Primorye from 2017 to 2026, Kamchatka from 2019 to 2026 and '
+            'Sakhalin from 2022 to 2026.</p>')
+
+# (куда дописать, что дописать) для страницы /projects
+PROJ = [
+    # 01: сколько шли сами программы
+    ("Three programmes: two running into Russia, one into Indonesia.",
+     "Three programmes: two running into Russia between 2017 and 2026, one "
+     "into Indonesia between 2023 and 2026."),
+    # 01: мостовое оборудование из ЕС
+    ("because the specification and the service life decided it rather than "
+     "the price.</li>",
+     "because the specification and the service life decided it rather than "
+     "the price. Supplied into the Primorye programme, 2017 to 2026.</li>"),
+    # 01: отделка и бассейн на Бали
+    ("shipped into Indonesia from two continents against one fit-out "
+     "programme.</li>",
+     "shipped into Indonesia from two continents against one fit-out "
+     "programme, 2023 to 2026.</li>"),
+    # 02: годы по регионам России
+    ("Different packages on one import channel.</p>",
+     "Different packages on one import channel.</p>" + RU_LINE),
+    # 03: годы по Бали
+    ("against the developer&rsquo;s fit-out programme.</p>",
+     "against the developer&rsquo;s fit-out programme.</p>" + BALI_LINE),
+]
+
+# то же для /experience
+EXP = [("infrastructure stops existing.</p>",
+        "infrastructure stops existing.</p>\n\n    " + EXP_LINE)]
+
 
 def add_css(s):
     if CSS.strip() in s:
         return s
     return s.replace("</head>", "<style>%s</style>\n</head>" % CSS, 1)
+
+
+def add_years_css(s):
+    if YEARS_CSS.strip() in s:
+        return s
+    return s.replace("</head>", "<style>%s</style>\n</head>" % YEARS_CSS, 1)
+
+
+def put_years(name, pairs):
+    """Проставить годы. Повторный запуск ничего не меняет."""
+    p = SITE / name
+    s = p.read_text()
+    before = s
+    s = add_years_css(s)
+    for old, new in REPAIR:
+        s = s.replace(old, new)
+    for old, new in pairs:
+        if new in s:
+            continue
+        if old not in s:
+            print("  ВНИМАНИЕ: %s, якорь не найден: %s" % (name, old[:46]))
+            continue
+        if s.count(old) != 1:
+            print("  ВНИМАНИЕ: %s, якорь встречается %d раз: %s"
+                  % (name, s.count(old), old[:46]))
+            continue
+        s = s.replace(old, new, 1)
+    if s != before:
+        p.write_text(s)
+        return True
+    return False
 
 
 def main():
@@ -83,7 +180,16 @@ def main():
             done.append("about.html")
 
     print("страниц поправлено: %d (%s)" % (len(done), ", ".join(done) or "нет"))
-    print("ГОДЫ НЕ ПРОСТАВЛЕНЫ: проверенных дат нет, нужен список от заказчика")
+
+    # --- 5, вторая часть: годы поставок по регионам
+    y = []
+    if put_years("projects.html", PROJ):
+        y.append("projects.html")
+    if put_years("experience.html", EXP):
+        y.append("experience.html")
+    print("годы проставлены: %s" % (", ".join(y) or "уже стояли"))
+    print("  Приморье 2017-2026, Камчатка 2019-2026, Сахалин 2022-2026,")
+    print("  Москва 2023-2025, Бали 2023-2026 (в т.ч. бассейн из ЕС)")
     return 0
 
 
