@@ -148,21 +148,21 @@ def icon(i):
 
 # ------------------------------------------------------------ 1.4 доверие
 TRUST = {
- "en": ["Authorized distributor of the manufacturers we quote",
+ "en": ["Payment at sight against documents, never in advance",
         "ISO-certified plants, COA, TDS and SDS for every batch",
-        "Free samples before the first order",
+        "Pre-shipment inspection by an agency you name",
         "Sanctions screening on every counterparty"],
- "fr": ["Distributeur agréé des fabricants que nous cotons",
+ "fr": ["Paiement à vue contre documents, jamais d’avance",
         "Usines certifiées ISO, COA, TDS et FDS pour chaque lot",
-        "Échantillons gratuits avant la première commande",
+        "Inspection avant expédition par un organisme que vous nommez",
         "Contrôle des sanctions sur chaque contrepartie"],
- "es": ["Distribuidor autorizado de los fabricantes que cotizamos",
+ "es": ["Pago a la vista contra documentos, nunca por adelantado",
         "Plantas certificadas ISO, COA, TDS y SDS en cada lote",
-        "Muestras gratuitas antes del primer pedido",
+        "Inspección previa al embarque por una entidad que usted nombre",
         "Control de sanciones sobre cada contraparte"],
- "de": ["Autorisierter Händler der Hersteller, die wir anbieten",
+ "de": ["Zahlung bei Sicht gegen Dokumente, nie im Voraus",
         "ISO-zertifizierte Werke, COA, TDS und SDB zu jeder Charge",
-        "Kostenlose Muster vor der ersten Bestellung",
+        "Vorversandinspektion durch eine von Ihnen benannte Stelle",
         "Sanktionsprüfung bei jeder Gegenpartei"],
 }
 

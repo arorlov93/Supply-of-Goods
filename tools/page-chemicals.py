@@ -100,27 +100,27 @@ LEDE = {
  "en": ("What we supply, and to whom",
         "We supply process chemicals to oil and gas producers, power plants, "
         "mining companies, water utilities and chemical distributors. We "
-        "quote from manufacturers we have verified, as their authorized "
-        "distributor, and deliver to your port or warehouse with the full "
+        "quote from manufacturers we have verified, and deliver to your port "
+        "or warehouse with the full "
         "document set."),
  "fr": ("Ce que nous fournissons, et à qui",
         "Nous fournissons des produits chimiques de procédé aux producteurs "
         "de pétrole et de gaz, aux centrales électriques, aux sociétés "
         "minières, aux services d’eau et aux distributeurs de produits "
         "chimiques. Nous cotons depuis des fabricants que nous avons "
-        "vérifiés, en qualité de distributeur agréé, et livrons à votre port "
+        "vérifiés, et livrons à votre port "
         "ou à votre entrepôt avec le jeu de documents complet."),
  "es": ("Qué suministramos y a quién",
         "Suministramos productos químicos de proceso a productores de "
         "petróleo y gas, centrales eléctricas, empresas mineras, servicios "
         "de agua y distribuidores químicos. Cotizamos desde fabricantes que "
-        "hemos verificado, como su distribuidor autorizado, y entregamos en "
+        "hemos verificado, y entregamos en "
         "su puerto o almacén con el juego de documentos completo."),
  "de": ("Was wir liefern, und an wen",
         "Wir liefern Prozesschemikalien an Öl- und Gasproduzenten, "
         "Kraftwerke, Bergbauunternehmen, Wasserversorger und "
         "Chemiedistributoren. Wir bieten aus Werken an, die wir geprüft "
-        "haben, als deren autorisierter Händler, und liefern an Ihren Hafen "
+        "haben, und liefern an Ihren Hafen "
         "oder Ihr Lager mit dem vollständigen Dokumentensatz."),
 }
 
@@ -221,28 +221,28 @@ STEPS_H = {
 STEPS = {
  "en": [
   ("Specification", "You send the grade, quantity, destination and your tender requirements."),
-  ("Documents first", "TDS, SDS and a sample COA before any price; free samples on request."),
+  ("Documents first", "TDS, SDS and a sample COA before any price."),
   ("Quotation", "One basis, covering Incoterm, pack, lead time and document set."),
   ("Production and inspection", "Batch COA from the plant; third-party inspection (SGS, Intertek or Bureau Veritas) where required."),
   ("Delivery", "By sea, rail or truck, FOB or CIF your port or delivered to site, documents with the goods."),
  ],
  "fr": [
   ("Spécification", "Vous indiquez la qualité, la quantité, la destination et les exigences de votre appel d’offres."),
-  ("Les documents d’abord", "TDS, FDS et un COA type avant tout prix ; échantillons gratuits sur demande."),
+  ("Les documents d’abord", "TDS, FDS et un COA type avant tout prix."),
   ("Cotation", "Une seule base, couvrant l’Incoterm, le conditionnement, le délai et le jeu de documents."),
   ("Production et inspection", "COA de lot délivré par l’usine ; inspection par tiers (SGS, Intertek ou Bureau Veritas) lorsque c’est exigé."),
   ("Livraison", "Par mer, rail ou route, FOB ou CIF votre port ou rendu sur site, documents avec la marchandise."),
  ],
  "es": [
   ("Especificación", "Usted indica el grado, la cantidad, el destino y los requisitos de su licitación."),
-  ("Primero los documentos", "TDS, SDS y un COA de muestra antes de cualquier precio; muestras gratuitas a solicitud."),
+  ("Primero los documentos", "TDS, SDS y un COA de muestra antes de cualquier precio."),
   ("Cotización", "Una sola base, con Incoterm, envase, plazo y juego de documentos."),
   ("Producción e inspección", "COA de lote emitido por la planta; inspección por tercero (SGS, Intertek o Bureau Veritas) cuando se exige."),
   ("Entrega", "Por mar, ferrocarril o camión, FOB o CIF su puerto o entregado en obra, documentos con la mercancía."),
  ],
  "de": [
   ("Spezifikation", "Sie nennen Qualität, Menge, Bestimmungsort und die Anforderungen Ihrer Ausschreibung."),
-  ("Zuerst die Dokumente", "TDS, SDB und ein Muster-COA vor jedem Preis; kostenlose Muster auf Anfrage."),
+  ("Zuerst die Dokumente", "TDS, SDB und ein Muster-COA vor jedem Preis."),
   ("Angebot", "Eine Basis, mit Incoterm, Gebinde, Lieferzeit und Dokumentensatz."),
   ("Produktion und Inspektion", "Chargen-COA vom Werk; Drittprüfung (SGS, Intertek oder Bureau Veritas), wo gefordert."),
   ("Lieferung", "Per See, Bahn oder Lkw, FOB oder CIF Ihr Hafen oder frei Baustelle, Dokumente mit der Ware."),
