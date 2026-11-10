@@ -58,6 +58,12 @@ LEDE = (r"Food and equipment into the European Union\.\s*Three very different\s*
 SECTION = (r"(?s)\n\s*<h2>Europe: the regime is the product</h2>.*?"
            r"(?=\n\s*<h2>Food, equipment and materials are not three businesses</h2>)")
 
+# "Четыре материка" держались на европейских поставках. Их нет, а значит
+# считать надо по тому, что осталось: Китай, российский север, Бали и
+# закупки в ЕС. Это Азия и Европа, два материка. Заказчик подтвердил
+# формулировку 10.11.2026.
+CONTINENTS = ("across four continents", "across Asia and Europe")
+
 # /about: перечисление того, что делала команда. После снятия третьего
 # пункта список стал из двух, поэтому перед вторым возвращается союз.
 ABOUT = [(", and food and equipment into the European Union under its own "
@@ -112,12 +118,12 @@ def main():
     if apply("about.html", ABOUT):
         changed.append("about.html")
 
-    # --- 4. тизер в блоке коридоров, по всем страницам
+    # --- 4. тизер в блоке коридоров и счёт материков, по всем страницам
     t = 0
     for q in sorted(SITE.rglob("*.html")):
         s = q.read_text()
         b = s
-        for old, new in TEASER:
+        for old, new in TEASER + [CONTINENTS]:
             s = s.replace(old, new)
         if s != b:
             q.write_text(s)
@@ -132,7 +138,7 @@ def main():
     for q in sorted(SITE.rglob("*.html")):
         s = q.read_text()
         for bad in ("into the European Union", "three regimes",
-                    "three supply regimes"):
+                    "three supply regimes", "four continents"):
             if bad in s:
                 left.append("%s: %s" % (q.relative_to(SITE), bad))
     print("страниц поправлено: %d" % len(changed))
