@@ -269,6 +269,26 @@ nav.top-nav a:hover{opacity:1}
 #s-pay .pay-wrap{max-width:var(--maxw);margin:0 auto}
 #s-pay .lead{max-width:60ch;margin:18px 0 0}
 
+/* 01b строка под заголовком, 04b who we supply, 08b строка доверия */
+.hero-sub{max-width:34ch;margin:clamp(18px,2.4vh,30px) 0 0;font-size:clamp(.98rem,1.08vw,1.1rem);
+  line-height:1.55;color:var(--on-shot)}
+@media (max-width:900px){.hero-sub{max-width:46ch}}
+#s-who{padding:clamp(70px,11vh,140px) var(--gut);background:var(--graphite)}
+#s-who .who-wrap{max-width:var(--maxw);margin:0 auto}
+#s-who .who-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:1px;background:rgb(var(--paper-rgb) / .14);margin-top:clamp(34px,5vh,64px)}
+#s-who .who-grid div{background:var(--graphite);padding:clamp(22px,2.6vw,34px)}
+#s-who svg{width:30px;height:30px;display:block;margin-bottom:16px;color:var(--gold)}
+#s-who b{display:block;font-weight:500;font-size:1.06rem;margin-bottom:9px}
+#s-who p{margin:0;color:var(--steel);font-size:.95rem}
+@media (max-width:860px){#s-who .who-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.trust-row{display:flex;flex-wrap:wrap;gap:10px 26px;margin:clamp(30px,4.5vh,52px) 0 26px;padding:0;list-style:none}
+.trust-row li{display:flex;align-items:flex-start;gap:9px;font-size:.92rem;
+  line-height:1.45;color:var(--on-shot);max-width:30ch}
+.trust-row li::before{content:"";flex:0 0 auto;width:7px;height:7px;margin-top:.45em;
+  border-radius:50%;background:var(--gold)}
+.trust-row a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+
 /* 07 why */
 #s-why{padding:clamp(90px,15vh,180px) var(--gut);background:var(--graphite)}
 .why-wrap{max-width:var(--maxw);margin:0 auto}
@@ -426,10 +446,6 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
   },
   {
    "@type": "Place",
-   "name": "Russia"
-  },
-  {
-   "@type": "Place",
    "name": "European Union"
   },
   {
@@ -581,10 +597,6 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
   },
   {
    "@type": "Place",
-   "name": "Russia"
-  },
-  {
-   "@type": "Place",
    "name": "Southern Africa"
   }
  ],
@@ -675,7 +687,7 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
 <link rel="preload" href="/fonts/oswald-700-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/archivo-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/archivo-500-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/css/mercury.73560517.css">
+<link rel="stylesheet" href="/css/mercury.911b16f4.css">
 </head>
 <body>
 <!--email_off-->
@@ -720,7 +732,8 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
             <span class="ln"><span>AVANT</span></span>
             <span class="ln"><span>LE PRIX.</span></span>
           </h1>
-        </div>
+                <p class="hero-sub fade">Produits chimiques industriels, équipements et matériaux pour le pétrole et le gaz, l’énergie, les mines et les services d’eau. Fournis en notre propre nom, de fabricants vérifiés jusqu’à votre port.</p>
+      </div>
         <div>
           <p class="lead fade">Une offre d’un producteur qui ne peut pas légalement expédier vers votre pays n’est pas une offre, quel que soit le chiffre dessus. Nous achetons en notre propre nom, nous portons le dossier documentaire jusqu’à votre port, et quand votre banque l’exige nous travaillons contre documents. Le dossier documentaire est écrit port par port pour Abidjan, Dakar et Douala. Nommez un autre port et nous établirons le même dossier pour lui.</p>
           <p class="fade" style="margin:26px 0 0"><a class="btn-lg" href="#request">Exposez votre besoin</a></p>
@@ -838,43 +851,63 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
       <h2 class="display sm" id="h-cats" style="color:var(--black)">
         <span class="ln"><span>CE QUE NOUS FOURNISSONS.</span></span>
       </h2>
-      <p class="lead muted fade" style="margin-top:18px;color:var(--steel-2)">Voici les catégories que nous cotons, l’alimentaire compris.</p>
+      <p class="lead muted fade" style="margin-top:18px;color:var(--steel-2)">Voici les catégories que nous cotons, la chimie et l’alimentaire compris.</p>
     </div>
     <div class="rail">
+      <a class="card" href="/fr/chemicals">
+        <picture><source srcset="/media/port-noir-349.2245b88e.webp 349w, /media/port-noir-509.0f2e3096.webp 509w, /media/port-noir-731.effa253f.webp 731w" sizes="(max-width: 480px) 351px, (max-width: 900px) 731px, 509px" type="image/webp"><img src="/media/port-noir.3ce31aa2.jpg" alt="Portiques au-dessus d’un poste à conteneurs en eau profonde" loading="lazy" decoding="async" width="1280" height="1920"></picture>
+        <span class="n">01</span>
+        <span class="cap"><b>Chimie de l’eau et des champs pétroliers</b><span>Inhibiteurs d’entartrage, coagulants, résines échangeuses d’ions</span></span>
+      </a>
       <a class="card" href="/building-materials">
         <picture><source srcset="/media/timber-351.15d1f697.webp 351w, /media/timber-509.f14fa9b7.webp 509w, /media/timber-731.5b430177.webp 731w" sizes="(max-width: 480px) 351px, (max-width: 900px) 731px, 509px" type="image/webp"><img srcset="/media/timber-351.15d1f697.webp 351w, /media/timber-509.f14fa9b7.webp 509w, /media/timber-731.5b430177.webp 731w" sizes="(max-width: 480px) 351px, (max-width: 900px) 731px, 509px" src="/media/timber-351.15d1f697.webp" alt="Bois de sciage empilé dans un dépôt de matériaux" loading="lazy" decoding="async" width="1200" height="900"></picture>
-        <span class="n">01</span>
+        <span class="n">02</span>
         <span class="cap"><b>Matériaux de construction et de finition</b><span>Pierre, carrelage, ciment, câble</span></span>
       </a>
       <a class="card" href="/industrial-equipment">
         <picture><source srcset="/media/machinery-351.208ed13a.webp 351w, /media/machinery.dde201b7.webp 910w" sizes="(max-width: 480px) 351px, (max-width: 900px) 731px, 1121px" type="image/webp"><img srcset="/media/machinery-351.208ed13a.webp 351w, /media/machinery.dde201b7.webp 910w" sizes="(max-width: 480px) 351px, (max-width: 900px) 731px, 1121px" src="/media/machinery-351.208ed13a.webp" alt="Machines industrielles dans un atelier de production" loading="lazy" decoding="async" width="910" height="683"></picture>
-        <span class="n">02</span>
+        <span class="n">03</span>
         <span class="cap"><b>Équipements et machines industriels</b><span>Lignes, compresseurs, pompes</span></span>
       </a>
       <a class="card" href="/tools-hardware">
         <picture><source srcset="/media/tools-flat-351.70f4fb4b.webp 351w, /media/tools-flat.a370d6b5.webp 614w" sizes="(max-width: 480px) 351px, (max-width: 900px) 731px, 509px" type="image/webp"><img srcset="/media/tools-flat-351.70f4fb4b.webp 351w, /media/tools-flat.a370d6b5.webp 614w" sizes="(max-width: 480px) 351px, (max-width: 900px) 731px, 509px" src="/media/tools-flat-351.70f4fb4b.webp" alt="Outillage à main disposé à plat" loading="lazy" decoding="async" width="614" height="767"></picture>
-        <span class="n">03</span>
+        <span class="n">04</span>
         <span class="cap"><b>Outillage, quincaillerie et fixations</b><span>Outillage électroportatif, abrasifs, fixations</span></span>
       </a>
       <a class="card" href="/metals-pipe">
         <picture><source srcset="/media/steel-tubes-351.cbeb29bc.webp 351w, /media/steel-tubes-509.dd4e5faf.webp 509w, /media/steel-tubes-731.09309470.webp 731w" sizes="(max-width: 480px) 351px, (max-width: 900px) 731px, 509px" type="image/webp"><img srcset="/media/steel-tubes-351.cbeb29bc.webp 351w, /media/steel-tubes-509.dd4e5faf.webp 509w, /media/steel-tubes-731.09309470.webp 731w" sizes="(max-width: 480px) 351px, (max-width: 900px) 731px, 509px" src="/media/steel-tubes-351.cbeb29bc.webp" alt="Tubes d’acier empilés en rangées sur un parc" loading="lazy" decoding="async" width="1200" height="675"></picture>
-        <span class="n">04</span>
+        <span class="n">05</span>
         <span class="cap"><b>Métaux et tubes</b><span>Profilés, tôle, tubes de conduite</span></span>
       </a>
       <a class="card" href="/paper-packaging">
         <picture><source srcset="/media/pallets-wall-351.6e8678a1.webp 351w, /media/pallets-wall-509.8a6efa9c.webp 509w, /media/pallets-wall-731.18a64f60.webp 731w" sizes="(max-width: 480px) 351px, (max-width: 900px) 731px, 509px" type="image/webp"><img srcset="/media/pallets-wall-351.6e8678a1.webp 351w, /media/pallets-wall-509.8a6efa9c.webp 509w, /media/pallets-wall-731.18a64f60.webp 731w" sizes="(max-width: 480px) 351px, (max-width: 900px) 731px, 509px" src="/media/pallets-wall-351.6e8678a1.webp" alt="Cartons palettisés en rayonnage dans un entrepôt de distribution" loading="lazy" decoding="async" width="1280" height="1920"></picture>
-        <span class="n">05</span>
+        <span class="n">06</span>
         <span class="cap"><b>Papier, emballage et consommables</b><span>Carton, film, fournitures d’exploitation</span></span>
       </a>
       <a class="card" href="/food-agricultural">
         <picture><source srcset="/media/coldstore-351.d01cfbb8.webp 351w, /media/coldstore-509.1c9b1749.webp 509w, /media/coldstore.43a54595.webp 693w" sizes="(max-width: 480px) 351px, (max-width: 900px) 731px, 509px" type="image/webp"><img srcset="/media/coldstore-351.d01cfbb8.webp 351w, /media/coldstore-509.1c9b1749.webp 509w, /media/coldstore.43a54595.webp 693w" sizes="(max-width: 480px) 351px, (max-width: 900px) 731px, 509px" src="/media/coldstore-351.d01cfbb8.webp" alt="À l’intérieur d’un entrepôt frigorifique" loading="lazy" decoding="async" width="693" height="866"></picture>
-        <span class="n">06</span>
+        <span class="n">07</span>
         <span class="cap"><b>Denrées, matières premières et boissons</b><span>Surgelés, produits de base, boissons de marque</span></span>
       </a>
     </div>
   </div>
 </section>
 
+
+<!-- ============ 04b КОМУ ПОСТАВЛЯЕМ ============ -->
+<section id="s-who" aria-labelledby="h-who" data-reveal>
+  <div class="who-wrap">
+    <h2 class="display sm" id="h-who">
+      <span class="ln"><span>À QUI NOUS FOURNISSONS.</span></span>
+    </h2>
+    <div class="who-grid">
+      <div class="fade"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M5 21l7-12 7 12M8 13h8"/></svg><b>Pétrole et gaz</b><p>Inhibiteurs d’entartrage et de corrosion, désémulsifiants, déshydratation du gaz.</p></div>
+      <div class="fade"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v5.5M12 15.5V21M3 12h5.5M15.5 12H21M6 6l3.5 3.5M14.5 14.5 18 18M18 6l-3.5 3.5M9.5 14.5 6 18"/></svg><b>Électricité et cogénération</b><p>Résines échangeuses d’ions et produits pour l’eau de chaudière et de refroidissement.</p></div>
+      <div class="fade"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.4 6 10.4A6 6 0 0 1 6 13.4C6 9.4 12 3 12 3Z"/></svg><b>Services d’eau</b><p>Coagulants pour l’eau potable et les eaux usées.</p></div>
+      <div class="fade"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20 14 9M9.5 4.5a9 9 0 0 1 10 10c-2.5-3.5-6.5-7.5-10-10Z"/></svg><b>Mines et métallurgie</b><p>Résines pour la récupération des métaux, produits pour l’eau de procédé.</p></div>
+    </div>
+  </div>
+</section>
 
 <!-- ============ 06 PROCESS ============ -->
 <section id="s-proc" class="on-light" aria-labelledby="h-proc" data-reveal>
@@ -920,6 +953,7 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
         <span class="ln"><span>ENVOYEZ UN CAHIER DES CHARGES.</span></span>
         <span class="ln"><span>RECEVEZ UN PRIX RENDU.</span></span>
       </h2>
+        <ul class="trust-row fade"><li>Distributeur agréé des fabricants que nous cotons</li><li>Usines certifiées ISO, COA, TDS et FDS pour chaque lot</li><li>Échantillons gratuits avant la première commande</li><li><a href="/fr/compliance">Contrôle des sanctions sur chaque contrepartie</a></li></ul>
       <form class="form-card fade" id="rq">
         <div class="fgrid">
           <div><label for="q-name">Nom</label><input id="q-name" name="name" required type="text" autocomplete="name"></div>
@@ -975,7 +1009,7 @@ footer{background:var(--black);padding:clamp(50px,8vh,90px) var(--gut) 40px;bord
     </div>
   </div>
   <div class="foot-note">
-    <span>&copy; ISP GROUP LLC</span><a href="/privacy" style="display:inline">Confidentialité</a><a href="/terms" style="display:inline">Conditions d’utilisation</a>
+    <span>&copy; ISP GROUP LLC</span><a href="/privacy" style="display:inline">Confidentialité</a><a href="/terms" style="display:inline">Conditions d’utilisation</a><a href="/fr/compliance" style="display:inline">Conformité</a>
     <span>Photographies de tiers, utilisées sous licences CC0, domaine public et CC BY ;<a href="/credits">auteur, source et licence de chaque image</a>.</span>
   </div>
 </footer>

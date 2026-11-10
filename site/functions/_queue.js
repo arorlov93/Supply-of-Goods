@@ -28,9 +28,20 @@ const LABEL = {
   dest: "Destination", spec: "Specification",
 };
 
+/* Тема письма. Заявки с /chemicals должны быть видны в ящике сразу: по
+   брифу от 10.11.2026 у них тема «Chemicals RFQ». Признак берётся из
+   страницы, с которой пришла заявка, а не из отдельного поля: страница
+   уже лежит в базе, а поле пришлось бы заводить колонкой в D1, и при
+   дожиме из базы оно всё равно потерялось бы. */
+export function subjectFor(row) {
+  const who = `${row.co || row.name}${row.country ? " / " + row.country : ""}`;
+  const chem = /chemicals/i.test(String(row.page || "")) || row.kind === "chemicals";
+  return `${chem ? "Chemicals RFQ" : "Quote request"}: ${who}`;
+}
+
 export function payloadFor(row) {
   return {
-    _subject: `Quote request: ${row.co || row.name}${row.country ? " / " + row.country : ""}`,
+    _subject: subjectFor(row),
     _replyto: row.mail || "",
     _template: "table",
     _captcha: "false",
@@ -223,7 +234,7 @@ async function viaResend(env, to, row) {
         from: env.QUOTE_FROM || "ISP Group Site <quotes@ispgroupgc.com>",
         to: [to],
         reply_to: row.mail || undefined,
-        subject: `Quote request: ${row.co || row.name}${row.country ? " / " + row.country : ""}`,
+        subject: subjectFor(row),
         text: `${text}\n\nPage: ${row.page || "/"}\nCountry: ${row.ip_country || "unknown"}\nReceived: ${row.created || ""}`,
       }),
     });

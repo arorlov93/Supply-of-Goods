@@ -665,7 +665,7 @@ a:hover { color: var(--color-white); }
    из исходной разметки, поэтому её надо перечислить здесь же: без
    этого заголовок остаётся тёмным на тёмном, замерено 23,23,33 на
    фоне 17,17,33. */
-#s-cats, #s-proc, #s-why, #s-lane, #s-pay {
+#s-cats, #s-proc, #s-why, #s-lane, #s-pay, #s-who {
   background: var(--color-graphite) !important;
   color: var(--color-ivory) !important;
 }
@@ -673,9 +673,9 @@ a:hover { color: var(--color-white); }
   background: var(--color-onyx) !important;
   color: var(--color-ivory) !important;
 }
-#s-cats h2, #s-proc h2, #s-why h2, #s-journey h2, #s-lane h2, #s-pay h2, #s-pay h3,
+#s-cats h2, #s-proc h2, #s-why h2, #s-journey h2, #s-lane h2, #s-pay h2, #s-pay h3, #s-who h2, #s-who b,
 #s-cats h3, #s-proc h3, #s-why h3, #s-journey h3 { color: var(--color-ivory) !important; }
-#s-cats p, #s-proc p, #s-why p, #s-journey p, #s-lane p, #s-pay p,
+#s-cats p, #s-proc p, #s-why p, #s-journey p, #s-lane p, #s-pay p, #s-who p,
 #s-lane .lead, #s-cats .lead, #s-proc .lead, #s-journey .lead { color: var(--color-ivory) !important; }
 #s-journey .k { color: var(--color-ash) !important; }
 

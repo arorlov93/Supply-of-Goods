@@ -10,7 +10,7 @@
  * которого есть предел частоты, см. ниже.
  */
 
-import { relay, markMailed, payloadFor } from "../_queue.js";
+import { relay, markMailed, payloadFor, subjectFor } from "../_queue.js";
 
 const FIELDS = ["name", "mail", "co", "country", "cat", "terms", "qty", "dest", "spec"];
 const LABEL = {
@@ -167,7 +167,7 @@ async function handle(ctx) {
         from: env.QUOTE_FROM || "ISP Group Site <quotes@ispgroupgc.com>",
         to: [TO],
         reply_to: String(d.mail).trim(),
-        subject: `Quote request: ${d.co || d.name}${d.country ? " / " + d.country : ""}`,
+        subject: subjectFor(d),
         html: `<h3 style="font:600 16px system-ui">New quote request</h3>
 <table style="font:14px/1.5 system-ui;border-collapse:collapse">${rows}</table>
 <pre style="font:12px/1.5 ui-monospace;color:#889;margin-top:18px">${esc(meta)}</pre>`,
