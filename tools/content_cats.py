@@ -16,8 +16,14 @@ def ld(name, desc, slug, items):
     return [{"@context": "https://schema.org", "@type": "Service", "name": name,
              "description": desc, "provider": ORG, "url": HOST + slug + ".html",
              "hasOfferCatalog": {"@type": "OfferCatalog", "name": name,
+               # Service, а не Product: Product без цены, отзыва или
+               # рейтинга Search Console считает критической ошибкой, а
+               # цены мы не публикуем. Мы и правда оказываем услугу
+               # поставки, а не производим этот товар.
                "itemListElement": [{"@type": "Offer", "itemOffered":
-                 {"@type": "Product", "name": i}} for i in items]}}]
+                 {"@type": "Service",
+                  "name": "Supply of " + i[0].lower() + i[1:]}}
+                 for i in items]}}]
 
 CATS = [
 {
